@@ -13,6 +13,7 @@
 #' library(dplyr)
 #'
 #' site_spp
+#'
 #' full_join(
 #'   full_join(site_spp, site_eqn),
 #'   spp_eqn
@@ -28,7 +29,12 @@
 #'   * `site_eqn`: A list of site-specific functions to calculate the biomass.
 #'
 #' @examples
+#' library(dplyr)
+#'
 #' site_eqn
+#'
+#' # Pull the FAKE allometric equation of bci.
+#' pull(filter(site_eqn, site == "bci"))
 "site_eqn"
 
 #' A dummy table of allometric equations by species in ForestGEO's network.

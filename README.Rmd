@@ -1,0 +1,55 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
+# allodb: A database of allometric equations for ForestGEO
+
+The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO's network.
+
+## Installation
+
+You can install allodb from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("forestgeo/allodb")
+```
+
+## Example
+
+```{r example}
+library(allodb)
+library(tibble)
+library(dplyr)
+
+
+
+# Table of FAKE allometric equations by site.
+allodb::site_eqn
+
+# Pull the FAKE allometric equation of bci.
+allodb::site_eqn[[1, 2]]
+
+# Table of FAKE allometric equations by species.
+spp_eqn
+
+# Combine FAKE allometric equations by site and species.
+(with_site_eqn <- full_join(site_spp, site_eqn))
+with_site_eqn
+with_site_and_spp_eqn <- full_join(with_site_eqn, spp_eqn)
+with_site_and_spp_eqn
+
+# Pull the FAKE allometric equation of species "abco".
+only_abco <- filter(with_site_and_spp_eqn, spp == "abco")
+pull(only_abco, spp_eqn)[[1]]
+```

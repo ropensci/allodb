@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What the Package Does (one line, title case) • allodb</title>
+<title>A Database of Allometric Equations for ForestGEO • allodb</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-home">
+    <div class="container template-vignette">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -42,11 +42,134 @@
 
       
       </header><div class="row">
-  <div class="contents col-md-9">
-    What the package does (one paragraph).
+  <div class="col-md-9">
+    
+
+    
+    
+<div class="contents">
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<div id="allodb-a-database-of-allometric-equations-for-forestgeo" class="section level1">
+<div class="page-header"><h1 class="hasAnchor">
+<a href="#allodb-a-database-of-allometric-equations-for-forestgeo" class="anchor"></a>allodb: A database of allometric equations for ForestGEO</h1></div>
+<p>The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO’s network.</p>
+<div id="installation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h2>
+<p>You can install allodb from github with:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("devtools")</span>
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"forestgeo/allodb"</span>)</code></pre></div>
+</div>
+<div id="example" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example" class="anchor"></a>Example</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(allodb)
+<span class="kw">library</span>(tibble)
+<span class="kw">library</span>(dplyr)
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Attaching package: 'dplyr'</span>
+<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     filter, lag</span>
+<span class="co">#&gt; The following objects are masked from 'package:base':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
+
+
+
+<span class="co"># Table of FAKE allometric equations by site.</span>
+allodb<span class="op">::</span>site_eqn
+<span class="co">#&gt; # A tibble: 2 x 2</span>
+<span class="co">#&gt;       site site_eqn</span>
+<span class="co">#&gt;      &lt;chr&gt;   &lt;list&gt;</span>
+<span class="co">#&gt; 1      bci    &lt;fun&gt;</span>
+<span class="co">#&gt; 2 yosemite    &lt;fun&gt;</span>
+
+<span class="co"># Pull the FAKE allometric equation of bci.</span>
+allodb<span class="op">::</span>site_eqn[[<span class="dv">1</span>, <span class="dv">2</span>]]
+<span class="co">#&gt; function(dbh) {1 * dbh}</span>
+
+<span class="co"># Table of FAKE allometric equations by species.</span>
+spp_eqn
+<span class="co">#&gt; # A tibble: 12 x 2</span>
+<span class="co">#&gt;       spp spp_eqn</span>
+<span class="co">#&gt;     &lt;chr&gt;  &lt;list&gt;</span>
+<span class="co">#&gt;  1 swars1   &lt;fun&gt;</span>
+<span class="co">#&gt;  2 hybapr   &lt;fun&gt;</span>
+<span class="co">#&gt;  3 aegipa   &lt;fun&gt;</span>
+<span class="co">#&gt;  4 beilpe   &lt;fun&gt;</span>
+<span class="co">#&gt;  5 faraoc   &lt;fun&gt;</span>
+<span class="co">#&gt;  6 tet2pa   &lt;fun&gt;</span>
+<span class="co">#&gt;  7   pila   &lt;fun&gt;</span>
+<span class="co">#&gt;  8   abco   &lt;fun&gt;</span>
+<span class="co">#&gt;  9   cade   &lt;fun&gt;</span>
+<span class="co">#&gt; 10   conu   &lt;fun&gt;</span>
+<span class="co">#&gt; 11   prvi   &lt;fun&gt;</span>
+<span class="co">#&gt; 12   quke   &lt;fun&gt;</span>
+
+<span class="co"># Combine FAKE allometric equations by site and species.</span>
+(with_site_eqn &lt;-<span class="st"> </span><span class="kw">full_join</span>(site_spp, site_eqn))
+<span class="co">#&gt; Joining, by = "site"</span>
+<span class="co">#&gt; # A tibble: 12 x 3</span>
+<span class="co">#&gt;        site    spp site_eqn</span>
+<span class="co">#&gt;       &lt;chr&gt;  &lt;chr&gt;   &lt;list&gt;</span>
+<span class="co">#&gt;  1      bci swars1    &lt;fun&gt;</span>
+<span class="co">#&gt;  2      bci hybapr    &lt;fun&gt;</span>
+<span class="co">#&gt;  3      bci aegipa    &lt;fun&gt;</span>
+<span class="co">#&gt;  4      bci beilpe    &lt;fun&gt;</span>
+<span class="co">#&gt;  5      bci faraoc    &lt;fun&gt;</span>
+<span class="co">#&gt;  6      bci tet2pa    &lt;fun&gt;</span>
+<span class="co">#&gt;  7 yosemite   pila    &lt;fun&gt;</span>
+<span class="co">#&gt;  8 yosemite   abco    &lt;fun&gt;</span>
+<span class="co">#&gt;  9 yosemite   cade    &lt;fun&gt;</span>
+<span class="co">#&gt; 10 yosemite   conu    &lt;fun&gt;</span>
+<span class="co">#&gt; 11 yosemite   prvi    &lt;fun&gt;</span>
+<span class="co">#&gt; 12 yosemite   quke    &lt;fun&gt;</span>
+with_site_eqn
+<span class="co">#&gt; # A tibble: 12 x 3</span>
+<span class="co">#&gt;        site    spp site_eqn</span>
+<span class="co">#&gt;       &lt;chr&gt;  &lt;chr&gt;   &lt;list&gt;</span>
+<span class="co">#&gt;  1      bci swars1    &lt;fun&gt;</span>
+<span class="co">#&gt;  2      bci hybapr    &lt;fun&gt;</span>
+<span class="co">#&gt;  3      bci aegipa    &lt;fun&gt;</span>
+<span class="co">#&gt;  4      bci beilpe    &lt;fun&gt;</span>
+<span class="co">#&gt;  5      bci faraoc    &lt;fun&gt;</span>
+<span class="co">#&gt;  6      bci tet2pa    &lt;fun&gt;</span>
+<span class="co">#&gt;  7 yosemite   pila    &lt;fun&gt;</span>
+<span class="co">#&gt;  8 yosemite   abco    &lt;fun&gt;</span>
+<span class="co">#&gt;  9 yosemite   cade    &lt;fun&gt;</span>
+<span class="co">#&gt; 10 yosemite   conu    &lt;fun&gt;</span>
+<span class="co">#&gt; 11 yosemite   prvi    &lt;fun&gt;</span>
+<span class="co">#&gt; 12 yosemite   quke    &lt;fun&gt;</span>
+with_site_and_spp_eqn &lt;-<span class="st"> </span><span class="kw">full_join</span>(with_site_eqn, spp_eqn)
+<span class="co">#&gt; Joining, by = "spp"</span>
+with_site_and_spp_eqn
+<span class="co">#&gt; # A tibble: 12 x 4</span>
+<span class="co">#&gt;        site    spp site_eqn spp_eqn</span>
+<span class="co">#&gt;       &lt;chr&gt;  &lt;chr&gt;   &lt;list&gt;  &lt;list&gt;</span>
+<span class="co">#&gt;  1      bci swars1    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt;  2      bci hybapr    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt;  3      bci aegipa    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt;  4      bci beilpe    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt;  5      bci faraoc    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt;  6      bci tet2pa    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt;  7 yosemite   pila    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt;  8 yosemite   abco    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt;  9 yosemite   cade    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt; 10 yosemite   conu    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt; 11 yosemite   prvi    &lt;fun&gt;   &lt;fun&gt;</span>
+<span class="co">#&gt; 12 yosemite   quke    &lt;fun&gt;   &lt;fun&gt;</span>
+
+<span class="co"># Pull the FAKE allometric equation of species "abco".</span>
+only_abco &lt;-<span class="st"> </span><span class="kw">filter</span>(with_site_and_spp_eqn, spp <span class="op">==</span><span class="st"> "abco"</span>)
+<span class="kw">pull</span>(only_abco, spp_eqn)[[<span class="dv">1</span>]]
+<span class="co">#&gt; function(dbh) {10 * dbh}</span></code></pre></div>
+</div>
+</div>
+</div>
   </div>
 
-  <div class="col-md-3" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>License</h2>
 <p>What license is it under?</p>
 <h2>Developers</h2>
@@ -54,6 +177,7 @@
 <li>First Last <br><small class="roles"> Author, maintainer </small> </li>
 </ul>
 </div>
+
 </div>
 
 

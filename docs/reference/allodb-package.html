@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A dummy table of allometric equations by site in ForestGEO's network. — site_eqn â€¢ allodb</title>
+<title>allodb: A Database of Allometric Equations for ForestGEO — allodb-package â€¢ allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -68,46 +68,25 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>A dummy table of allometric equations by site in ForestGEO's network.</h1>
+    <h1>allodb: A Database of Allometric Equations for ForestGEO</h1>
     </div>
 
     
-    <p>A dummy table of allometric equations by site in ForestGEO's network.</p>
+    <p>A database of allometric equations for ForestGEO.</p>
     
 
-    <pre class="usage"><span class='no'>site_eqn</span></pre>
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 2 rows and 2 variables:</p>
-<p>* `site`: A character vector giving site names -- in lowercase.</p>
-<p>* `site_eqn`: A list of site-specific functions to calculate the biomass.</p>
-    
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>dplyr</span>)
-
-<span class='no'>site_eqn</span></div><div class='output co'>#&gt; # A tibble: 2 x 2
-#&gt;       site site_eqn
-#&gt;      &lt;chr&gt;   &lt;list&gt;
-#&gt; 1      bci    &lt;fun&gt;
-#&gt; 2 yosemite    &lt;fun&gt;</div><div class='input'>
-<span class='co'># Pull the FAKE allometric equation of bci.</span>
-<span class='fu'>pull</span>(<span class='fu'>filter</span>(<span class='no'>site_eqn</span>, <span class='no'>site</span> <span class='kw'>==</span> <span class='st'>"bci"</span>))</div><div class='output co'>#&gt; [[1]]
-#&gt; function (dbh) 
-#&gt; {
-#&gt;     1 * dbh
-#&gt; }
-#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+                </ul>
+
+    <h2>Author</h2>
+    
+<strong>Maintainer</strong>: First Last <a href='mailto:first.last@example.com'>first.last@example.com</a>
+
 
   </div>
 </div>

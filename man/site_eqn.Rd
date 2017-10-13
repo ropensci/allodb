@@ -16,6 +16,11 @@ site_eqn
 A dummy table of allometric equations by site in ForestGEO's network.
 }
 \examples{
+library(dplyr)
+
 site_eqn
+
+# Pull the FAKE allometric equation of bci.
+pull(filter(site_eqn, site == "bci"))
 }
 \keyword{datasets}
