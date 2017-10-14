@@ -5,10 +5,10 @@
 \alias{site_eqn}
 \title{A dummy table of allometric equations by site in ForestGEO's network.}
 \format{A data frame with 2 rows and 2 variables:
-
-  * `site`: A character vector giving site names -- in lowercase.
-
-  * `site_eqn`: A list of site-specific functions to calculate the biomass.}
+\itemize{
+\item \code{site}: A character vector giving site names -- in lowercase.
+\item \code{site_eqn}: A list of site-specific functions to calculate the biomass.
+}}
 \usage{
 site_eqn
 }

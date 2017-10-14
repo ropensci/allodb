@@ -5,10 +5,10 @@
 \alias{site_spp}
 \title{A dummy table listing sites and species in ForestGEO's network.}
 \format{A data frame with 12 rows and 2 variables:
-
-  * `spp`: A character vector of species' names -- in lowercase.
-
-  * `site`: A character vector giving site names -- in lowercase.}
+\itemize{
+\item \code{spp}: A character vector of species' names -- in lowercase.
+\item \code{site}: A character vector giving site names -- in lowercase.
+}}
 \usage{
 site_spp
 }
