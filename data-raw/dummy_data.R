@@ -42,8 +42,6 @@ site_eqn <- tribble(
 )
 use_data(site_eqn, overwrite = TRUE)
 
-
-
 # Species equations.
 spp_eqn <- tribble(
   # ---------------------------------
@@ -62,6 +60,10 @@ spp_eqn <- tribble(
 use_data(spp_eqn, overwrite = TRUE)
 
 
+
+# Create fake user's data, with some species for which the user knows the
+# equations; some other for which the user lacks equations, and some rows
+# where dbh is NA.
 
 # User's equations.
 user_eqn <- tribble(
