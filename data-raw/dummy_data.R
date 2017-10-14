@@ -46,6 +46,11 @@ spp_eqn <- tribble(
   # ---------------------------------
   ~spp,     ~spp_eqn,
   # ------- -------------------------
+  "talipr", function(dbh) {15 * dbh},
+  "eugeoe", function(dbh) {16 * dbh},
+  "mourmy", function(dbh) {17 * dbh},
+  "xyl1ma", function(dbh) {18 * dbh},
+  "ingama", function(dbh) {19 * dbh},
   "swars1", function(dbh) {3 * dbh},
   "hybapr", function(dbh) {4 * dbh},
   "aegipa", function(dbh) {5 * dbh},
