@@ -4,7 +4,7 @@
 \name{spp_eqn}
 \alias{spp_eqn}
 \title{A dummy table of allometric equations by species in ForestGEO's network.}
-\format{A data frame  with 17 rows and two variables:
+\format{A data frame  with 8 rows and two variables:
 \itemize{
 \item \code{spp}: A character vector of species' names -- in lowercase.
 \item \code{spp_eqn}: A list of species-specific functions to calculate the biomass.

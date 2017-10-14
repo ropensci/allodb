@@ -3,7 +3,7 @@
 #' This table relates the table of allometric equations by species with the
 #' table of allometric equations by site.
 #'
-#' @format A data frame with 12 rows and 2 variables:
+#' @format A data frame with 327 rows and 2 variables:
 #'   * `spp`: A character vector of species' names -- in lowercase.
 #'   * `site`: A character vector giving site names -- in lowercase.
 #'
@@ -35,10 +35,30 @@
 
 #' A dummy table of allometric equations by species in ForestGEO's network.
 #'
-#' @format A data frame  with 17 rows and two variables:
+#' @format A data frame  with 8 rows and two variables:
 #' * `spp`: A character vector of species' names -- in lowercase.
 #' * `spp_eqn`: A list of species-specific functions to calculate the biomass.
 #'
 #' @examples
 #' spp_eqn
 "spp_eqn"
+
+
+
+
+
+#' A fake data set of dbh an equations pretended to come from a user.
+#'
+#' This fake data set is made to contain some species for which the user
+#' provides equations, some other species for which the user lacks equations,
+#' and some rows with missing values of stem diameter (`dbh`).
+#'
+#' @format  A tibble: 10 x 4:
+#' * `site` Site.
+#' * `spp` Species.
+#' * `dbh` Stem diameter.
+#' * `user_eqn` User's allometric-equation to calculate biomass by species.
+#'
+#' @examples
+#' user_eqn
+"user_eqn"

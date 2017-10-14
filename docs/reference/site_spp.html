@@ -23,7 +23,8 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -51,12 +52,23 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/forestgeo/allodb">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -80,47 +92,46 @@ table of allometric equations by site.</p>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 12 rows and 2 variables:</p>
-<p>* `spp`: A character vector of species' names -- in lowercase.</p>
-<p>* `site`: A character vector giving site names -- in lowercase.</p>
+    <p>A data frame with 327 rows and 2 variables:</p><ul>
+<li><p><code>spp</code>: A character vector of species' names -- in lowercase.</p></li>
+<li><p><code>site</code>: A character vector giving site names -- in lowercase.</p></li>
+</ul>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>dplyr</span>)
 
-<span class='no'>site_spp</span></div><div class='output co'>#&gt; # A tibble: 12 x 2
-#&gt;        site    spp
-#&gt;       &lt;chr&gt;  &lt;chr&gt;
-#&gt;  1      bci swars1
-#&gt;  2      bci hybapr
-#&gt;  3      bci aegipa
-#&gt;  4      bci beilpe
-#&gt;  5      bci faraoc
-#&gt;  6      bci tet2pa
-#&gt;  7 yosemite   pila
-#&gt;  8 yosemite   abco
-#&gt;  9 yosemite   cade
-#&gt; 10 yosemite   conu
-#&gt; 11 yosemite   prvi
-#&gt; 12 yosemite   quke</div><div class='input'>
-<span class='fu'>full_join</span>(
-  <span class='fu'>full_join</span>(<span class='no'>site_spp</span>, <span class='no'>site_eqn</span>),
+<span class='no'>site_spp</span></div><div class='output co'>#&gt; # A tibble: 337 x 2
+#&gt;     site    spp
+#&gt;    &lt;chr&gt;  &lt;chr&gt;
+#&gt;  1   bci acacme
+#&gt;  2   bci acaldi
+#&gt;  3   bci acalma
+#&gt;  4   bci ade1tr
+#&gt;  5   bci aegipa
+#&gt;  6   bci alchco
+#&gt;  7   bci alchla
+#&gt;  8   bci alibed
+#&gt;  9   bci allops
+#&gt; 10   bci alsebl
+#&gt; # ... with 327 more rows</div><div class='input'>
+<span class='fu'><a href='http://dplyr.tidyverse.org/reference/join.html'>full_join</a></span>(
+  <span class='fu'><a href='http://dplyr.tidyverse.org/reference/join.html'>full_join</a></span>(<span class='no'>site_spp</span>, <span class='no'>site_eqn</span>),
   <span class='no'>spp_eqn</span>
-)</div><div class='output co'>#&gt; <span class='message'>Joining, by = "site"</span></div><div class='output co'>#&gt; <span class='message'>Joining, by = "spp"</span></div><div class='output co'>#&gt; # A tibble: 12 x 4
-#&gt;        site    spp site_eqn spp_eqn
-#&gt;       &lt;chr&gt;  &lt;chr&gt;   &lt;list&gt;  &lt;list&gt;
-#&gt;  1      bci swars1    &lt;fun&gt;   &lt;fun&gt;
-#&gt;  2      bci hybapr    &lt;fun&gt;   &lt;fun&gt;
-#&gt;  3      bci aegipa    &lt;fun&gt;   &lt;fun&gt;
-#&gt;  4      bci beilpe    &lt;fun&gt;   &lt;fun&gt;
-#&gt;  5      bci faraoc    &lt;fun&gt;   &lt;fun&gt;
-#&gt;  6      bci tet2pa    &lt;fun&gt;   &lt;fun&gt;
-#&gt;  7 yosemite   pila    &lt;fun&gt;   &lt;fun&gt;
-#&gt;  8 yosemite   abco    &lt;fun&gt;   &lt;fun&gt;
-#&gt;  9 yosemite   cade    &lt;fun&gt;   &lt;fun&gt;
-#&gt; 10 yosemite   conu    &lt;fun&gt;   &lt;fun&gt;
-#&gt; 11 yosemite   prvi    &lt;fun&gt;   &lt;fun&gt;
-#&gt; 12 yosemite   quke    &lt;fun&gt;   &lt;fun&gt;</div></pre>
+)</div><div class='output co'>#&gt; <span class='message'>Joining, by = "site"</span></div><div class='output co'>#&gt; <span class='message'>Joining, by = "spp"</span></div><div class='output co'>#&gt; # A tibble: 337 x 4
+#&gt;     site    spp site_eqn spp_eqn
+#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;list&gt;  &lt;list&gt;
+#&gt;  1   bci acacme    &lt;fun&gt;  &lt;NULL&gt;
+#&gt;  2   bci acaldi    &lt;fun&gt;  &lt;NULL&gt;
+#&gt;  3   bci acalma    &lt;fun&gt;  &lt;NULL&gt;
+#&gt;  4   bci ade1tr    &lt;fun&gt;  &lt;NULL&gt;
+#&gt;  5   bci aegipa    &lt;fun&gt;   &lt;fun&gt;
+#&gt;  6   bci alchco    &lt;fun&gt;  &lt;NULL&gt;
+#&gt;  7   bci alchla    &lt;fun&gt;  &lt;NULL&gt;
+#&gt;  8   bci alibed    &lt;fun&gt;  &lt;NULL&gt;
+#&gt;  9   bci allops    &lt;fun&gt;  &lt;NULL&gt;
+#&gt; 10   bci alsebl    &lt;fun&gt;  &lt;NULL&gt;
+#&gt; # ... with 327 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

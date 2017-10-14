@@ -68,7 +68,7 @@ use_data(spp_eqn, overwrite = TRUE)
 # User's equations.
 user_eqn <- tribble(
   # ---------------------------------
-  ~site, ~spp,     ~spp_eqn,                 ~dbh,
+  ~site, ~spp,     ~user_eqn,                ~dbh,
   # ------- -------------------------
   "bci", "swars1", function(dbh) {11 * dbh}, 50,
   "bci", "hybapr", function(dbh) {12 * dbh}, 12,
@@ -82,4 +82,5 @@ user_eqn <- tribble(
   "bci", NA,       NA,                       NA
   # ---------------------------------
 )
+user_eqn <- select(user_eqn, site, spp, dbh, user_eqn)
 use_data(user_eqn, overwrite = TRUE)

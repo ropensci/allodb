@@ -47,74 +47,67 @@ allodb::site_eqn[[1, 2]]
 
 # Table of FAKE allometric equations by species.
 spp_eqn
-#> # A tibble: 12 x 2
-#>       spp spp_eqn
-#>     <chr>  <list>
-#>  1 swars1   <fun>
-#>  2 hybapr   <fun>
-#>  3 aegipa   <fun>
-#>  4 beilpe   <fun>
-#>  5 faraoc   <fun>
-#>  6 tet2pa   <fun>
-#>  7   pila   <fun>
-#>  8   abco   <fun>
-#>  9   cade   <fun>
-#> 10   conu   <fun>
-#> 11   prvi   <fun>
-#> 12   quke   <fun>
+#> # A tibble: 8 x 2
+#>      spp spp_eqn
+#>    <chr>  <list>
+#> 1 swars1   <fun>
+#> 2 hybapr   <fun>
+#> 3 aegipa   <fun>
+#> 4 beilpe   <fun>
+#> 5 faraoc   <fun>
+#> 6 tet2pa   <fun>
+#> 7   pila   <fun>
+#> 8   abco   <fun>
 
 # Combine FAKE allometric equations by site and species.
 (with_site_eqn <- full_join(site_spp, site_eqn))
 #> Joining, by = "site"
-#> # A tibble: 12 x 3
-#>        site    spp site_eqn
-#>       <chr>  <chr>   <list>
-#>  1      bci swars1    <fun>
-#>  2      bci hybapr    <fun>
-#>  3      bci aegipa    <fun>
-#>  4      bci beilpe    <fun>
-#>  5      bci faraoc    <fun>
-#>  6      bci tet2pa    <fun>
-#>  7 yosemite   pila    <fun>
-#>  8 yosemite   abco    <fun>
-#>  9 yosemite   cade    <fun>
-#> 10 yosemite   conu    <fun>
-#> 11 yosemite   prvi    <fun>
-#> 12 yosemite   quke    <fun>
+#> # A tibble: 337 x 3
+#>     site    spp site_eqn
+#>    <chr>  <chr>   <list>
+#>  1   bci acacme    <fun>
+#>  2   bci acaldi    <fun>
+#>  3   bci acalma    <fun>
+#>  4   bci ade1tr    <fun>
+#>  5   bci aegipa    <fun>
+#>  6   bci alchco    <fun>
+#>  7   bci alchla    <fun>
+#>  8   bci alibed    <fun>
+#>  9   bci allops    <fun>
+#> 10   bci alsebl    <fun>
+#> # ... with 327 more rows
 with_site_eqn
-#> # A tibble: 12 x 3
-#>        site    spp site_eqn
-#>       <chr>  <chr>   <list>
-#>  1      bci swars1    <fun>
-#>  2      bci hybapr    <fun>
-#>  3      bci aegipa    <fun>
-#>  4      bci beilpe    <fun>
-#>  5      bci faraoc    <fun>
-#>  6      bci tet2pa    <fun>
-#>  7 yosemite   pila    <fun>
-#>  8 yosemite   abco    <fun>
-#>  9 yosemite   cade    <fun>
-#> 10 yosemite   conu    <fun>
-#> 11 yosemite   prvi    <fun>
-#> 12 yosemite   quke    <fun>
+#> # A tibble: 337 x 3
+#>     site    spp site_eqn
+#>    <chr>  <chr>   <list>
+#>  1   bci acacme    <fun>
+#>  2   bci acaldi    <fun>
+#>  3   bci acalma    <fun>
+#>  4   bci ade1tr    <fun>
+#>  5   bci aegipa    <fun>
+#>  6   bci alchco    <fun>
+#>  7   bci alchla    <fun>
+#>  8   bci alibed    <fun>
+#>  9   bci allops    <fun>
+#> 10   bci alsebl    <fun>
+#> # ... with 327 more rows
 with_site_and_spp_eqn <- full_join(with_site_eqn, spp_eqn)
 #> Joining, by = "spp"
 with_site_and_spp_eqn
-#> # A tibble: 12 x 4
-#>        site    spp site_eqn spp_eqn
-#>       <chr>  <chr>   <list>  <list>
-#>  1      bci swars1    <fun>   <fun>
-#>  2      bci hybapr    <fun>   <fun>
-#>  3      bci aegipa    <fun>   <fun>
-#>  4      bci beilpe    <fun>   <fun>
-#>  5      bci faraoc    <fun>   <fun>
-#>  6      bci tet2pa    <fun>   <fun>
-#>  7 yosemite   pila    <fun>   <fun>
-#>  8 yosemite   abco    <fun>   <fun>
-#>  9 yosemite   cade    <fun>   <fun>
-#> 10 yosemite   conu    <fun>   <fun>
-#> 11 yosemite   prvi    <fun>   <fun>
-#> 12 yosemite   quke    <fun>   <fun>
+#> # A tibble: 337 x 4
+#>     site    spp site_eqn spp_eqn
+#>    <chr>  <chr>   <list>  <list>
+#>  1   bci acacme    <fun>  <NULL>
+#>  2   bci acaldi    <fun>  <NULL>
+#>  3   bci acalma    <fun>  <NULL>
+#>  4   bci ade1tr    <fun>  <NULL>
+#>  5   bci aegipa    <fun>   <fun>
+#>  6   bci alchco    <fun>  <NULL>
+#>  7   bci alchla    <fun>  <NULL>
+#>  8   bci alibed    <fun>  <NULL>
+#>  9   bci allops    <fun>  <NULL>
+#> 10   bci alsebl    <fun>  <NULL>
+#> # ... with 327 more rows
 
 # Pull the FAKE allometric equation of species "abco".
 only_abco <- filter(with_site_and_spp_eqn, spp == "abco")

@@ -23,7 +23,8 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-
+  
+  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -51,12 +52,23 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="..//index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/forestgeo/allodb">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -79,21 +91,26 @@
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 2 rows and 2 variables:</p>
-<p>* `site`: A character vector giving site names -- in lowercase.</p>
-<p>* `site_eqn`: A list of site-specific functions to calculate the biomass.</p>
+    <p>A data frame with 2 rows and 2 variables:</p><ul>
+<li><p><code>site</code>: A character vector giving site names -- in lowercase.</p></li>
+<li><p><code>site_eqn</code>: A list of site-specific functions to calculate the biomass.</p></li>
+</ul>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>dplyr</span>)
-
+    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>dplyr</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'dplyr'</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:stats':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    filter, lag</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:base':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='input'>
 <span class='no'>site_eqn</span></div><div class='output co'>#&gt; # A tibble: 2 x 2
 #&gt;       site site_eqn
 #&gt;      &lt;chr&gt;   &lt;list&gt;
 #&gt; 1      bci    &lt;fun&gt;
 #&gt; 2 yosemite    &lt;fun&gt;</div><div class='input'>
 <span class='co'># Pull the FAKE allometric equation of bci.</span>
-<span class='fu'>pull</span>(<span class='fu'>filter</span>(<span class='no'>site_eqn</span>, <span class='no'>site</span> <span class='kw'>==</span> <span class='st'>"bci"</span>))</div><div class='output co'>#&gt; [[1]]
+<span class='fu'><a href='http://dplyr.tidyverse.org/reference/pull.html'>pull</a></span>(<span class='fu'><a href='http://dplyr.tidyverse.org/reference/filter.html'>filter</a></span>(<span class='no'>site_eqn</span>, <span class='no'>site</span> <span class='kw'>==</span> <span class='st'>"bci"</span>))</div><div class='output co'>#&gt; [[1]]
 #&gt; function (dbh) 
 #&gt; {
 #&gt;     1 * dbh
