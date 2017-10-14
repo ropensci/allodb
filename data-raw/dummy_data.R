@@ -9,18 +9,32 @@ library(usethis)
 
 
 
-# Get a few species from three sites in ForestGEO's network
+# Get species from two sites in ForestGEO's network
 site <- list(bci = bci::bci12stem7, yosemite = yosemite::yosemite_s2_lao)
 
 # Link site with species
 site_spp <- site %>%
   map(., select, matches("sp")) %>%
   map(unique) %>%
-  map(head) %>%
+  # map(head) %>%
   enframe() %>%
   unnest() %>%
   set_names(c("site", "spp")) %>%
-  map_df(tolower)
+  map_df(tolower) %>%
+  arrange(site, spp)
+
+# # These additional spp I use to create dummy data in bmss.
+# add_these_spp <- some_bci_spp()
+# ensure_these_spp <- site %>%
+#   map(., select, matches("sp")) %>%
+#   map(unique) %>%
+#   map(filter, sp %in% add_these_spp) %>%
+#   enframe() %>%
+#   unnest() %>%
+#   set_names(c("site", "spp")) %>%
+#   map_df(tolower)
+# site_spp <- rbind(site_spp, ensure_these_spp) %>% arrange(site, spp)
+
 use_data(site_spp, overwrite = TRUE)
 
 
@@ -41,28 +55,54 @@ site_eqn <- tribble(
 )
 use_data(site_eqn, overwrite = TRUE)
 
+
+
 # Species equations.
 spp_eqn <- tribble(
   # ---------------------------------
   ~spp,     ~spp_eqn,
   # ------- -------------------------
-  "talipr", function(dbh) {15 * dbh},
-  "eugeoe", function(dbh) {16 * dbh},
-  "mourmy", function(dbh) {17 * dbh},
-  "xyl1ma", function(dbh) {18 * dbh},
-  "ingama", function(dbh) {19 * dbh},
+  # "sympgl", function(dbh) {15 * dbh},
+  # "des2pa", function(dbh) {16 * dbh},
+  # "alsebl", function(dbh) {17 * dbh},
+  # "tri2tu", function(dbh) {18 * dbh},
+
+    # "talipr", function(dbh) {15 * dbh},
+  # "eugeoe", function(dbh) {16 * dbh},
+  # "mourmy", function(dbh) {17 * dbh},
+  # "xyl1ma", function(dbh) {18 * dbh},
+  # "ingama", function(dbh) {19 * dbh},
   "swars1", function(dbh) {3 * dbh},
   "hybapr", function(dbh) {4 * dbh},
   "aegipa", function(dbh) {5 * dbh},
-  "beilpe", function(dbh) {6 * dbh},
+  "beilpe", function(dbh) {6 * dbh}
   "faraoc", function(dbh) {7 * dbh},
   "tet2pa", function(dbh) {8 * dbh},
   "pila",   function(dbh) {9 * dbh},
-  "abco",   function(dbh) {10 * dbh},
-  "cade",   function(dbh) {11 * dbh},
-  "conu",   function(dbh) {12 * dbh},
-  "prvi",   function(dbh) {13 * dbh},
-  "quke",   function(dbh) {14 * dbh}
+  "abco",   function(dbh) {10 * dbh}
+  # "cade",   function(dbh) {11 * dbh},
+  # "conu",   function(dbh) {12 * dbh},
+  # "prvi",   function(dbh) {13 * dbh},
+  # "quke",   function(dbh) {14 * dbh}
   # ---------------------------------
 )
 use_data(spp_eqn, overwrite = TRUE)
+
+
+
+# User's equations.
+user_eqn <- tribble(
+  # ---------------------------------
+  ~site, ~spp,     ~spp_eqn,                ~dbh
+  # ------- -------------------------
+  "bci", "swars1", function(dbh) {11 * dbh}, 50,
+  "bci", "hybapr", function(dbh) {12 * dbh}, 12,
+  "bci", "aegipa", function(dbh) {13 * dbh}, 26,
+  "bci", "beilpe", function(dbh) {14 * dbh}, 40,
+  "bci", "faraoc", function(dbh) {15 * dbh}, 88,
+  "bci", "tet2pa", function(dbh) {16 * dbh}, 58,
+  "bci", "pila",   function(dbh) {17 * dbh}, 124,
+  "bci", "abco",   function(dbh) {18 * dbh}, 20
+  # ---------------------------------
+)
+use_data(user_eqn, overwrite = TRUE)

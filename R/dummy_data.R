@@ -35,7 +35,7 @@
 
 #' A dummy table of allometric equations by species in ForestGEO's network.
 #'
-#' @format A data frame  with 12 rows and two variables:
+#' @format A data frame  with 17 rows and two variables:
 #' * `spp`: A character vector of species' names -- in lowercase.
 #' * `spp_eqn`: A list of species-specific functions to calculate the biomass.
 #'

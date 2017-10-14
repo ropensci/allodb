@@ -8,6 +8,14 @@
 \description{
 A database of allometric equations for ForestGEO.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/forestgeo/allodb}
+  \item Report bugs at \url{https://github.com/forestgeo/allodb/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: First Last \email{first.last@example.com}
 
