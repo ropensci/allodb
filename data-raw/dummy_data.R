@@ -22,7 +22,6 @@ site_spp <- site %>%
   set_names(c("site", "spp")) %>%
   map_df(tolower) %>%
   arrange(site, spp)
-
 use_data(site_spp, overwrite = TRUE)
 
 
@@ -41,7 +40,6 @@ site_eqn <- tribble(
   "yosemite", function(dbh) {2 * dbh}
   # ----------------------------------
 )
-
 use_data(site_eqn, overwrite = TRUE)
 
 
@@ -54,14 +52,13 @@ spp_eqn <- tribble(
   "swars1", function(dbh) {3 * dbh},
   "hybapr", function(dbh) {4 * dbh},
   "aegipa", function(dbh) {5 * dbh},
-  "beilpe", function(dbh) {6 * dbh}
+  "beilpe", function(dbh) {6 * dbh},
   "faraoc", function(dbh) {7 * dbh},
   "tet2pa", function(dbh) {8 * dbh},
   "pila",   function(dbh) {9 * dbh},
   "abco",   function(dbh) {10 * dbh}
   # ---------------------------------
 )
-
 use_data(spp_eqn, overwrite = TRUE)
 
 
@@ -75,10 +72,12 @@ user_eqn <- tribble(
   "bci", "hybapr", function(dbh) {12 * dbh}, 12,
   "bci", "aegipa", function(dbh) {13 * dbh}, 26,
   "bci", "beilpe", function(dbh) {14 * dbh}, 40,
-  "bci", "faraoc", function(dbh) {15 * dbh}, 88,
-  "bci", "tet2pa", function(dbh) {16 * dbh}, 58,
-  "bci", "pila",   function(dbh) {17 * dbh}, 124,
-  "bci", "abco",   function(dbh) {18 * dbh}, 20
+  "bci", "faraoc", NA,                       88,
+  "bci", "tet2pa", NA,                       58,
+  "bci", "pila",   NA,                       124,
+  "bci", "abco",   NA,                       20,
+  "bci", NA,       NA,                       NA,
+  "bci", NA,       NA,                       NA
   # ---------------------------------
 )
 use_data(user_eqn, overwrite = TRUE)
