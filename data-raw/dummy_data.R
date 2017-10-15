@@ -9,6 +9,11 @@ library(usethis)
 
 
 
+# Iteration 1. Separate tables. -------------------------------------------
+
+
+# This is replaced by the section below
+
 # Get species from two sites in ForestGEO's network
 site <- list(bci = bci::bci12stem7, yosemite = yosemite::yosemite_s2_lao)
 
@@ -84,3 +89,64 @@ user_eqn <- tribble(
 )
 user_eqn <- select(user_eqn, site, spp, dbh, user_eqn)
 use_data(user_eqn, overwrite = TRUE)
+
+
+
+
+
+
+
+
+
+
+# Iteration 2: Composite table. -------------------------------------------
+
+# User's equations.
+
+library(tidyverse)
+
+default_eqn <- tibble(
+  site = "bci",
+  sp = ,
+  eqn = ,
+  eqn_type = ,
+  eqn_source = "defaul"
+)
+
+# Some sp and dbh data from bciex
+some_ok_dbh <- bciex::bci12s7mini %>%
+  select(sp, dbh) %>%
+  filter(!is.na(dbh)) %>%
+  unique() %>%
+  sample_n(6)
+some_na_dbh <- bciex::bci12s7mini %>%
+  select(sp, dbh) %>%
+  filter(is.na(dbh)) %>%
+  unique() %>%
+  sample_n(2)
+all_na <- tibble(sp = rep(NA_character_, 2), dbh = rep(NA_real_, 2))
+sp_dbh <- reduce(list(some_ok_dbh, some_na_dbh, all_na), bind_rows)
+
+type <- c(rep("sp", nrow(sp_dbh) - nrow(some_na_dbh)),
+  rep("site", nrow(some_na_dbh)))
+add_to_user_eqn <- tibble(
+  site = "bci",
+  eqn = paste(sample(1:100, nrow(sp_dbh)), paste("*", "dbh")),
+  eqn_type = type,
+  eqn_source = "user")
+user_eqn <- bind_cols(sp_dbh, add_to_user_eqn) %>%
+  select(site, sp, dbh)
+
+
+
+
+# This replaces all of the above.
+
+# Write funcitons:
+# add_stem_eqn(x, stemid, dbh, eqn, , site, type = "stem", source = c("user", "default))
+# add_sp_eqn(x, eqn, sp, site, type = "sp", source =  c("user", "default))
+# add_site_eqn(x, eqn, site, type = "site", source =  c("user", "default))
+
+# With this buils both user and default equations.
+# Then join to make composite.
+
