@@ -89,3 +89,10 @@ tibble_stem_eqn <- function(x, eqn, sp, stemid, dbh, eqn_site, ...) {
   site <- tibble_eqn(eqn = x$eqn, eqn_site = eqn_site, eqn_type = "stem", ...)
   dplyr::bind_cols(site, dplyr::select(x, sp, stemid, dbh))
 }
+
+
+
+
+
+
+

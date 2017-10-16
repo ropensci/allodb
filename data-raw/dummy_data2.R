@@ -41,10 +41,10 @@ fake_spp_eqn_default
 
 # user's equations
 raw_spp_eqn_user <- fake_spp_eqn_default[1:5, ]
+# Pretend user does not know some equations
+raw_spp_eqn_user$eqn[1:2] <- NA
 fake_spp_eqn_user <- tibble_sp_eqn(x = raw_spp_eqn_user, eqn = "eqn", sp = "sp",
-  eqn_site = "bci", eqn_source = "user") %>%
-  # Change user's equation to make them different from default ones
-  mutate(eqn = paste0(21:25, " * dbh"))
+  eqn_site = "bci", eqn_source = "user")
 fake_spp_eqn_user
 
 
@@ -52,14 +52,28 @@ fake_spp_eqn_user
 # Stem equations ----
 
 raw_fake_stem_eqn_user <- fake_spp_eqn_default %>%
+  select(-eqn_source, -eqn_site) %>%
   left_join(some_bci) %>%
-  mutate(eqn = paste0(31:40, " * dbh")) %>%
-  rowid_to_column()
+  mutate(eqn = c(NA, NA, paste0(31:38, " * dbh"))) %>%
+  .[1:5, ] %>%
+  bind_cols(stemid = sample(200:300, 5))
 
-fake_stem_eqn_user <- tibble_stem_eqn(x = raw_fake_stem_eqn_user,
-  eqn = "eqn", sp = "sp", stemid = "rowid",
-dbh = "dbh", eqn_site = "bci")
+
+
+fake_stem_eqn_user <- tibble_stem_eqn(x = raw_fake_stem_eqn_user, eqn = "eqn",
+  sp = "sp", stemid = "stemid", dbh = "dbh", eqn_site = "bci")
 fake_stem_eqn_user
+
+# fake_stem_eqn_user <- tibble_stem_eqn(x = raw_fake_stem_eqn_user,
+#   eqn = "eqn", sp = "sp", stemid = "rowid",
+# dbh = "dbh", eqn_site = "bci")
+# fake_stem_eqn_user
+
+
+
+
+
+
 
 
 
@@ -72,4 +86,16 @@ usethis::use_data(fake_default_eqn, overwrite = TRUE)
 fake_user_eqn <- tibble_all_eqn(fake_bci_site_eqn_user, fake_spp_eqn_user,
   fake_stem_eqn_user)
 usethis::use_data(fake_user_eqn, overwrite = TRUE)
+
+
+
+
+
+
+
+
+# xxxcont redo user fake data with table_eqn(). Maybe don't do it here but in
+# __bmss__, to ensure that the result works.
+
+
 
