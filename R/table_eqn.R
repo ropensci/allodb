@@ -60,6 +60,7 @@ table_eqn <- function(x,
 #' Combine multiple tables of allometric equations.
 #'
 #' @param ... One or multiple tables of allometric equations.
+#'
 #' @seealso table_equations
 #'
 #' @return A dataframe.
