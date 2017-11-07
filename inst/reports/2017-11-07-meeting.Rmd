@@ -234,18 +234,38 @@ glimpse(WSG)
 ```
 
 
-# Notes during the meeting
+# Notes from the meeting itself
 
+## Tropical Forests
 
+* Making a table of `site` and `equaiton` -- based on `E` and `wood-density` -- is possible. Currently, such equaiton is in Ervan's code. Example from `comp.AGB()`:
 
+```r
+# more code
 
+AGB <- (0.0673 * (WD * H * (D/10)^2)^0.976)/1000
 
+# more code
 
+		E <- site.info$E[INDEX]
+		AGB <- exp(-2.023977 - 0.89563505 * E + 0.92023559 *
+				log(WD) + 2.79495823 * log(D/10) - 0.04606298 *
+				(log(D/10)^2))/1000
 
+# more code
+```
 
+* Ervan suggests that the `biomass()` function needs a parameter to input wood density because new wood density data becomes available frequently and users may want to incorporate it. That is why he prefers to compute biomass not with a fixed equation but as a function of wood density.
 
+## Temperate forests
 
+* Erika pushed her dataset Allometries_Temperate sites.xlsx. The format seems to be one I have been thinking about, with one variable giving `equation` and multiple variables giving categories -- such as site and several taxonomic-level categories.
 
+* I'll study the table and try it with the code I have. Erika offerred to answer questions any time. But she will start her new contract in December 1st.
 
+* Erika, Krista and I agreed to meet, at SCBI, some day during the first week of December.
 
+* Ervan suggested that the most specific equations (i.e. closer geographically or of higher taxonomic resolution) not always may be _the best_ equaiton. Instead, best might be one _generic_ ecuation. [Here _generic_ means not "of taxonomic genus level"; it means _general_ -- an equation that has been produced based on measuring many trees]. He said that there are _generic_ equations for three reigons: North America, Europe and China. For each region there may be multiple equaitons: one per each taxonomical group.
+
+* Those _generic_ equations seem to be a relatively easy first step. That is, I could use them to try and improve the prototype code I wrote.  Those equations may be tabled independently, or may be incorporated into Erika's table (some of those _generic_ equations already be in Erika's table, but we may need to check with Ervan that we are talking about the same equaitons).
 
