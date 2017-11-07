@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A Database of Allometric Equations for ForestGEO • allodb</title>
-<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="jquery.sticky-kit.min.js"></script><script src="pkgdown.js"></script><!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -29,13 +29,10 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="/index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
+  <a href="reference/index.html">Functions Index</a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="articles/index.html">Tutorials</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -60,110 +57,114 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#allodb-a-database-of-allometric-equations-for-forestgeo" class="anchor"></a>allodb: A database of allometric equations for ForestGEO</h1></div>
 <p>The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO’s network.</p>
+<div id="source" class="section level2">
+<h2 class="hasAnchor">
+<a href="#source" class="anchor"></a>Source</h2>
+<p>On Sat, Oct 28, 2017 at 4:05 AM, Ervan Rutishauser <a href="mailto:er.rutishauser@gmail.com">er.rutishauser@gmail.com</a> wrote:</p>
+<blockquote>
+<p>For now, you can use the R functions that I have developed to compute biomass at all tropical CTFS sites. It is based on Chave et al 2014 allometric models and some modified functions of the BIOMASS package. It computes biomass after having allocated wood density. The wood density database arise from CTFS and, I guess, isn’t aimed to be shared publicly.</p>
+</blockquote>
+</div>
+<div id="setup" class="section level2">
+<h2 class="hasAnchor">
+<a href="#setup" class="anchor"></a>Setup</h2>
+<p>Make data manipulation and visualization easier</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
+<span class="co">#&gt; + ggplot2 2.2.1        Date: 2017-11-06</span>
+<span class="co">#&gt; + tibble  1.3.4           R: 3.4.2</span>
+<span class="co">#&gt; + tidyr   0.7.2          OS: Windows 10 x64</span>
+<span class="co">#&gt; + readr   1.1.1         GUI: RTerm</span>
+<span class="co">#&gt; + purrr   0.2.4      Locale: English_Australia.1252</span>
+<span class="co">#&gt; + dplyr   0.7.4          TZ: America/New_York</span>
+<span class="co">#&gt; + stringr 1.2.0      </span>
+<span class="co">#&gt; + forcats 0.2.0</span>
+<span class="co">#&gt; -- Conflicts ----------------------------------------------------</span>
+<span class="co">#&gt; * filter(),  from dplyr, masks stats::filter()</span>
+<span class="co">#&gt; * lag(),     from dplyr, masks stats::lag()</span>
+<span class="co"># Print only few rows of dataframes to save space and time</span>
+<span class="kw">options</span>(<span class="dt">dplyr.print_min =</span> <span class="dv">3</span>, <span class="dt">dplyr.print_max =</span> <span class="dv">3</span>)</code></pre></div>
+<p>Load data objects and functions in <strong>allodb</strong> (from Ervan)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(allodb)</code></pre></div>
+<p><img src="https://i.imgur.com/O9rt33U.png"></p>
+</div>
+<div id="explore-data" class="section level2">
+<h2 class="hasAnchor">
+<a href="#explore-data" class="anchor"></a>Explore data</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glimpse</span>(ficus)
+<span class="co">#&gt; Observations: 67</span>
+<span class="co">#&gt; Variables: 8</span>
+<span class="co">#&gt; $ Mnemonic   &lt;fctr&gt; FICUAB, FICUAL, Ficuamaz, FICUAN, ficutr, FICUBJ, ...</span>
+<span class="co">#&gt; $ Genus      &lt;fctr&gt; Ficus, Ficus, Ficus, Ficus, Ficus, Ficus, Ficus, F...</span>
+<span class="co">#&gt; $ Species    &lt;fctr&gt; albipila, altissima, amazonica, annulata, aurea, b...</span>
+<span class="co">#&gt; $ Subgenus   &lt;fctr&gt; Pharmacosycea, Urostigma, Urostigma, Urostigma, Ur...</span>
+<span class="co">#&gt; $ Section    &lt;fctr&gt; Oreosycea, Urostigma, Americana, Urostigma, Americ...</span>
+<span class="co">#&gt; $ Subsection &lt;fctr&gt; Pedunculatae, Conosycea, , Conosycea, , Conosycea,...</span>
+<span class="co">#&gt; $ Strangler  &lt;fctr&gt; No, Yes, Yes, Yes, Yes, Yes, Yes, Yes, Yes, No, Ye...</span>
+<span class="co">#&gt; $ name       &lt;chr&gt; "Ficus albipila", "Ficus altissima", "Ficus amazoni...</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glimpse</span>(site.info)
+<span class="co">#&gt; Observations: 63</span>
+<span class="co">#&gt; Variables: 12</span>
+<span class="co">#&gt; $ id            &lt;dbl&gt; 42.0, 51.0, 52.0, 45.0, 18.0, 53.0, 46.0, 14.0, ...</span>
+<span class="co">#&gt; $ Site          &lt;fctr&gt; Amacayacu, Badagongshan, Baotianman, Barro Colo...</span>
+<span class="co">#&gt; $ site          &lt;fctr&gt; amacayacu, badagongshan, baotianman, barro colo...</span>
+<span class="co">#&gt; $ lat           &lt;dbl&gt; -3.81, 29.46, 33.50, 9.15, 1.35, 42.38, 8.99, 5....</span>
+<span class="co">#&gt; $ long          &lt;dbl&gt; -70.3, 110.5, 111.9, -79.8, 103.8, 128.1, -79.6,...</span>
+<span class="co">#&gt; $ UTM_Zone      &lt;int&gt; 19, 49, 49, 17, 48, 52, 17, 50, 49, 47, 50, 51, ...</span>
+<span class="co">#&gt; $ UTM_X         &lt;fctr&gt; 359223.7022, 453456.2453, 587323.8348, 626783.7...</span>
+<span class="co">#&gt; $ UTM_Y         &lt;fctr&gt; 9578870.297, 3259047.312, 3706005.813, 1012114....</span>
+<span class="co">#&gt; $ intertropical &lt;fctr&gt; Tropical, Other, Other, Tropical, Tropical, Oth...</span>
+<span class="co">#&gt; $ size.ha       &lt;dbl&gt; 25.0, 25.0, 25.0, 50.0, 4.0, 25.0, 4.0, 50.0, 20...</span>
+<span class="co">#&gt; $ E             &lt;dbl&gt; -0.07929, 1.01162, 1.19960, 0.04945, -0.08480, 1...</span>
+<span class="co">#&gt; $ wsg.site.name &lt;fctr&gt; amacayacu, , , bci, bukittimah, changbai, , , ,...</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glimpse</span>(WSG)
+<span class="co">#&gt; Observations: 16,558</span>
+<span class="co">#&gt; Variables: 9</span>
+<span class="co">#&gt; $ wsg     &lt;dbl&gt; 0.567, 0.585, 0.450, 0.300, 0.657, 0.657, 0.818, 0.819...</span>
+<span class="co">#&gt; $ idlevel &lt;chr&gt; "genus", "species", "genus", "genus", "genus", "genus"...</span>
+<span class="co">#&gt; $ site    &lt;chr&gt; "amacayacu", "amacayacu", "amacayacu", "amacayacu", "a...</span>
+<span class="co">#&gt; $ sp      &lt;chr&gt; "abarbarb", "abarjupu", "abutgran", "acalcune", "aegic...</span>
+<span class="co">#&gt; $ genus   &lt;chr&gt; "Abarema", "Abarema", "Abuta", "Acalypha", "Aegiphila"...</span>
+<span class="co">#&gt; $ species &lt;chr&gt; "barbouriana", "jupunba", "grandifolia", "cuneata", "c...</span>
+<span class="co">#&gt; $ genwood &lt;dbl&gt; 0.567, 0.567, 0.450, 0.300, 0.657, 0.657, 0.819, 0.819...</span>
+<span class="co">#&gt; $ famwood &lt;dbl&gt; 0.678, 0.678, 0.545, 0.509, 0.539, 0.539, 0.742, 0.742...</span>
+<span class="co">#&gt; $ spwood  &lt;dbl&gt; NA, 0.585, NA, NA, NA, NA, 0.818, NA, 0.427, NA, NA, N...</span></code></pre></div>
+<p>I’m particularly interested in these data. Can we add a variable <code>equation</code> – relating dbh with biomass based on <code>wsg</code> and <code>E</code>?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">left_join</span>(site.info, WSG) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(site, genus, species, wsg, E)
+<span class="co">#&gt; Joining, by = "site"</span>
+<span class="co">#&gt; Warning: Column `site` joining factor and character vector, coercing into</span>
+<span class="co">#&gt; character vector</span>
+<span class="co">#&gt; # A tibble: 8,600 x 5</span>
+<span class="co">#&gt;        site   genus     species   wsg       E</span>
+<span class="co">#&gt;       &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt; &lt;dbl&gt;   &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 amacayacu Abarema barbouriana 0.567 -0.0793</span>
+<span class="co">#&gt; 2 amacayacu Abarema     jupunba 0.585 -0.0793</span>
+<span class="co">#&gt; 3 amacayacu   Abuta grandifolia 0.450 -0.0793</span>
+<span class="co">#&gt; # ... with 8,597 more rows</span></code></pre></div>
+</div>
+<div id="explore-code" class="section level2">
+<h2 class="hasAnchor">
+<a href="#explore-code" class="anchor"></a>Explore code</h2>
+<p>Ervan, could you show some examples of how your funcitons work?</p>
+<p>Go to <a href="https://forestgeo.github.io/allodb/reference/index.html">function’s help files</a></p>
+</div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install allodb from github with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("devtools")</span>
-devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"forestgeo/allodb"</span>)</code></pre></div>
-</div>
-<div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(allodb)
-<span class="kw">library</span>(tibble)
-<span class="kw">library</span>(dplyr)
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'dplyr'</span>
-<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     filter, lag</span>
-<span class="co">#&gt; The following objects are masked from 'package:base':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># To install from a private repo, use auth_token # with a token from</span>
+<span class="co"># https://github.com/settings/tokens. You only need the repo # scope.</span>
 
+<span class="co"># install.packages("devtools")</span>
 
+<span class="co"># Install the master branch</span>
+devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"forestgeo/allodb"</span>, <span class="dt">auth_token =</span> <span class="st">"abc"</span>)
 
-<span class="co"># Table of FAKE allometric equations by site.</span>
-allodb<span class="op">::</span>site_eqn
-<span class="co">#&gt; # A tibble: 2 x 2</span>
-<span class="co">#&gt;       site site_eqn</span>
-<span class="co">#&gt;      &lt;chr&gt;   &lt;list&gt;</span>
-<span class="co">#&gt; 1      bci    &lt;fun&gt;</span>
-<span class="co">#&gt; 2 yosemite    &lt;fun&gt;</span>
+<span class="co"># Install an ISSUE-specific branch with</span>
+devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"forestgeo/allodb@ISSUE"</span>, <span class="dt">auth_token =</span> <span class="st">"abc"</span>)
 
-<span class="co"># Pull the FAKE allometric equation of bci.</span>
-allodb<span class="op">::</span>site_eqn[[<span class="dv">1</span>, <span class="dv">2</span>]]
-<span class="co">#&gt; function(dbh) {1 * dbh}</span>
-
-<span class="co"># Table of FAKE allometric equations by species.</span>
-spp_eqn
-<span class="co">#&gt; # A tibble: 8 x 2</span>
-<span class="co">#&gt;      spp spp_eqn</span>
-<span class="co">#&gt;    &lt;chr&gt;  &lt;list&gt;</span>
-<span class="co">#&gt; 1 swars1   &lt;fun&gt;</span>
-<span class="co">#&gt; 2 hybapr   &lt;fun&gt;</span>
-<span class="co">#&gt; 3 aegipa   &lt;fun&gt;</span>
-<span class="co">#&gt; 4 beilpe   &lt;fun&gt;</span>
-<span class="co">#&gt; 5 faraoc   &lt;fun&gt;</span>
-<span class="co">#&gt; 6 tet2pa   &lt;fun&gt;</span>
-<span class="co">#&gt; 7   pila   &lt;fun&gt;</span>
-<span class="co">#&gt; 8   abco   &lt;fun&gt;</span>
-
-<span class="co"># Combine FAKE allometric equations by site and species.</span>
-(with_site_eqn &lt;-<span class="st"> </span><span class="kw">full_join</span>(site_spp, site_eqn))
-<span class="co">#&gt; Joining, by = "site"</span>
-<span class="co">#&gt; # A tibble: 337 x 3</span>
-<span class="co">#&gt;     site    spp site_eqn</span>
-<span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;list&gt;</span>
-<span class="co">#&gt;  1   bci acacme    &lt;fun&gt;</span>
-<span class="co">#&gt;  2   bci acaldi    &lt;fun&gt;</span>
-<span class="co">#&gt;  3   bci acalma    &lt;fun&gt;</span>
-<span class="co">#&gt;  4   bci ade1tr    &lt;fun&gt;</span>
-<span class="co">#&gt;  5   bci aegipa    &lt;fun&gt;</span>
-<span class="co">#&gt;  6   bci alchco    &lt;fun&gt;</span>
-<span class="co">#&gt;  7   bci alchla    &lt;fun&gt;</span>
-<span class="co">#&gt;  8   bci alibed    &lt;fun&gt;</span>
-<span class="co">#&gt;  9   bci allops    &lt;fun&gt;</span>
-<span class="co">#&gt; 10   bci alsebl    &lt;fun&gt;</span>
-<span class="co">#&gt; # ... with 327 more rows</span>
-with_site_eqn
-<span class="co">#&gt; # A tibble: 337 x 3</span>
-<span class="co">#&gt;     site    spp site_eqn</span>
-<span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;list&gt;</span>
-<span class="co">#&gt;  1   bci acacme    &lt;fun&gt;</span>
-<span class="co">#&gt;  2   bci acaldi    &lt;fun&gt;</span>
-<span class="co">#&gt;  3   bci acalma    &lt;fun&gt;</span>
-<span class="co">#&gt;  4   bci ade1tr    &lt;fun&gt;</span>
-<span class="co">#&gt;  5   bci aegipa    &lt;fun&gt;</span>
-<span class="co">#&gt;  6   bci alchco    &lt;fun&gt;</span>
-<span class="co">#&gt;  7   bci alchla    &lt;fun&gt;</span>
-<span class="co">#&gt;  8   bci alibed    &lt;fun&gt;</span>
-<span class="co">#&gt;  9   bci allops    &lt;fun&gt;</span>
-<span class="co">#&gt; 10   bci alsebl    &lt;fun&gt;</span>
-<span class="co">#&gt; # ... with 327 more rows</span>
-with_site_and_spp_eqn &lt;-<span class="st"> </span><span class="kw">full_join</span>(with_site_eqn, spp_eqn)
-<span class="co">#&gt; Joining, by = "spp"</span>
-with_site_and_spp_eqn
-<span class="co">#&gt; # A tibble: 337 x 4</span>
-<span class="co">#&gt;     site    spp site_eqn spp_eqn</span>
-<span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;list&gt;  &lt;list&gt;</span>
-<span class="co">#&gt;  1   bci acacme    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt;  2   bci acaldi    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt;  3   bci acalma    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt;  4   bci ade1tr    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt;  5   bci aegipa    &lt;fun&gt;   &lt;fun&gt;</span>
-<span class="co">#&gt;  6   bci alchco    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt;  7   bci alchla    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt;  8   bci alibed    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt;  9   bci allops    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt; 10   bci alsebl    &lt;fun&gt;  &lt;NULL&gt;</span>
-<span class="co">#&gt; # ... with 327 more rows</span>
-
-<span class="co"># Pull the FAKE allometric equation of species "abco".</span>
-only_abco &lt;-<span class="st"> </span><span class="kw">filter</span>(with_site_and_spp_eqn, spp <span class="op">==</span><span class="st"> "abco"</span>)
-<span class="kw">pull</span>(only_abco, spp_eqn)[[<span class="dv">1</span>]]
-<span class="co">#&gt; function(dbh) {10 * dbh}</span></code></pre></div>
+<span class="co"># Then, load each time before using</span>
+<span class="kw">library</span>(allodb)</code></pre></div>
 </div>
 </div>
   </div>
@@ -174,6 +175,8 @@ only_abco &lt;-<span class="st"> </span><span class="kw">filter</span>(with_site
 <li>Browse source code at <br><a href="https://github.com/forestgeo/allodb">https://​github.com/​forestgeo/​allodb</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/forestgeo/allodb/issues">https://​github.com/​forestgeo/​allodb/​issues</a>
+</li>
+<li>Learn more at <br><a href="http://www.forestgeo.si.edu/">http://​www.forestgeo.si.edu/​</a>
 </li>
 </ul>
 <h2>License</h2>

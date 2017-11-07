@@ -6,13 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A dummy table of allometric equations by site in ForestGEO's network. — site_eqn â€¢ allodb</title>
+<title>Assign wood density — density.ind â€¢ allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
@@ -52,13 +52,10 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
+  <a href="../reference/index.html">Functions Index</a>
 </li>
 <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="../articles/index.html">Tutorials</a>
 </li>
       </ul>
       
@@ -80,51 +77,54 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>A dummy table of allometric equations by site in ForestGEO's network.</h1>
+    <h1>Assign wood density</h1>
     </div>
 
     
-    <p>A dummy table of allometric equations by site in ForestGEO's network.</p>
+    <p>Assign wood density using CTFS wood density data base (WSG)</p>
     
 
-    <pre class="usage"><span class='no'>site_eqn</span></pre>
-        
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <pre class="usage"><span class='co'># S3 method for ind</span>
+<span class='fu'>density</span>(<span class='no'>df</span>, <span class='no'>site</span>, <span class='no'>wsgdata</span>, <span class='kw'>denscol</span> <span class='kw'>=</span> <span class='st'>"wsg"</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>df</th>
+      <td><p>a data.table</p></td>
+    </tr>
+    <tr>
+      <th>site</th>
+      <td><p>provide the full name of your site (in lower case) i.e. 'barro colorado island'</p></td>
+    </tr>
+    <tr>
+      <th>wsgdata</th>
+      <td><p>a list of tree species (mnenomic) and corresponding wood density</p></td>
+    </tr>
+    <tr>
+      <th>denscol</th>
+      <td><p>the variable to be return ("wsg" by default). No other option is implemented.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A data frame with 2 rows and 2 variables:</p><ul>
-<li><p><code>site</code>: A character vector giving site names -- in lowercase.</p></li>
-<li><p><code>site_eqn</code>: A list of site-specific functions to calculate the biomass.</p></li>
-</ul>
+    <p>a data.table (data.frame) with all relevant variables.</p>
     
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>library</span>(<span class='no'>dplyr</span>)</div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: 'dplyr'</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:stats':</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    filter, lag</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:base':</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='input'>
-<span class='no'>site_eqn</span></div><div class='output co'>#&gt; # A tibble: 2 x 2
-#&gt;       site site_eqn
-#&gt;      &lt;chr&gt;   &lt;list&gt;
-#&gt; 1      bci    &lt;fun&gt;
-#&gt; 2 yosemite    &lt;fun&gt;</div><div class='input'>
-<span class='co'># Pull the FAKE allometric equation of bci.</span>
-<span class='fu'><a href='http://dplyr.tidyverse.org/reference/pull.html'>pull</a></span>(<span class='fu'><a href='http://dplyr.tidyverse.org/reference/filter.html'>filter</a></span>(<span class='no'>site_eqn</span>, <span class='no'>site</span> <span class='kw'>==</span> <span class='st'>"bci"</span>))</div><div class='output co'>#&gt; [[1]]
-#&gt; function (dbh) 
-#&gt; {
-#&gt;     1 * dbh
-#&gt; }
-#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#format">Format</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+      <li><a href="#value">Value</a></li>
+          </ul>
+
+    <h2>Author</h2>
+    
+Ervan Rutishauser (er.rutishauser@gmail.com)
 
   </div>
 </div>

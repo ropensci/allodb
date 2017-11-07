@@ -1,0 +1,20 @@
+template:
+  params:
+    bootswatch: united
+
+
+
+home:
+  links:
+  - text: Learn more
+    href: http://www.forestgeo.si.edu/
+
+
+
+navbar:
+  type: default
+  left:
+    - text: Functions Index
+      href: reference/index.html
+    - text: Tutorials
+      href: articles/index.html

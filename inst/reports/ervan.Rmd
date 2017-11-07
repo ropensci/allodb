@@ -1,0 +1,85 @@
+---
+title: "Eploring Data By Ervan Rutishauser"
+author: "Mauro Lepore, Ervan Rutishauser, ..."
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::github_document:
+    toc: true
+    toc_depth: 6
+---
+
+```{r setup, echo = FALSE, message=FALSE, warning=FALSE}
+# hadley's settings
+set.seed(1014)
+options(digits = 3)
+
+knitr::opts_chunk$set(
+  echo = TRUE,  # {mine}
+  comment = "#>",
+  collapse = TRUE,
+  cache = TRUE,
+  out.width = "70%",
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.618,  # 1 / phi
+  fig.show = "hold",
+  rows.print = 3  # {mine}
+)
+```
+
+# Overview
+
+## Source
+
+On Sat, Oct 28, 2017 at 4:05 AM, Ervan Rutishauser <er.rutishauser@gmail.com> wrote:
+
+> For now, you can use the R functions that I have developed to compute biomass at all tropical CTFS sites. It is based on Chave et al 2014 allometric models and some modified functions of the BIOMASS package. It computes biomass after having allocated wood density. The wood density database arise from CTFS and, I guess, isn't aimed to be shared publicly.
+
+## Setup
+
+Make data manipulation and visualization easier
+
+```{r}
+library(tidyverse)
+# Print only few rows of dataframes to save space and time
+options(dplyr.print_min = 3, dplyr.print_max = 3)
+```
+
+
+Load data objects and functions in __allodb__ (from Ervan)
+
+```{r}
+library(allodb)
+```
+
+![](https://i.imgur.com/O9rt33U.png)
+
+## Explore data
+
+```{r}
+glimpse(ficus)
+```
+
+```{r}
+glimpse(site.info)
+```
+
+```{r}
+glimpse(WSG)
+```
+
+I'm particularly interested in these data. Can we add a variable `equation` -- relating dbh with biomass based on `wsg` and `E`?
+
+```{r}
+left_join(site.info, WSG) %>% 
+  select(site, genus, species, wsg, E)
+```
+
+## Explore code
+
+Ervan, could you show some examples of how your funcitons work?
+
+The help files live here https://forestgeo.github.io/allodb/reference/index.html
+
+
+
