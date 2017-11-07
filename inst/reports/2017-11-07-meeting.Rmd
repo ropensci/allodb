@@ -150,13 +150,11 @@ The code seems mature. I think it'd be great to share it. It only seems to need 
 
 -- Erika
 
-
-
-
-
-
-
-
+```{r}
+glimpse(
+  select(allodb::allo_temperate, matches("AGB"), everything())
+)
+```
 
 > there are (...) "generic" (1) models for [Europe and Northern China]. Unfortunately, I am not aware of any generic (2) allometric model for temperate zones.
 
