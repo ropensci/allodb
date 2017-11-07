@@ -64,22 +64,24 @@ update_geom_defaults("point",
 update_geom_defaults("text", list(size = 4.5))
 ```
 
-The goal of this report is to prepare for a meeting -- with Ervan, Krista and Erika -- about compiling allometric equation for ForestGEO sites.
+# Overview
 
-# Meeting goals:
+This report provides key information for meeting with Ervan, Krista and Erika about compiling allometric equation for ForestGEO sites.
 
-1. Both for tropical and temperate forests, compile tables with variables `<category>` and `equation` -- where `<category>` is a category such as `site, that is easier and quicker to get allometries for;
+## Meeting goals:
+
+1. Both for tropical and temperate forests, compile tables with variables `<category>` (e.g. `site`) and `equation` (`<category>` should be, at this first stage, a variable for which getting allometric equations is relatively quick);
 
 2. Clarify what can/cannot be shared and discuss alternatives.
 
-3. Suggestions?
+3. Other's goals
 
 # Background
 
 [@](https://goo.gl/sxjHir)
 
 
-For Tropical forests:
+## Tropical forests
 
 * site-level allometries are possible; the table below seems to have sufficient data for developing a table with variables `site` and `equation`:
 
@@ -94,7 +96,7 @@ For Tropical forests:
 #> # ... with 8,597 more rows
 ```
 
-* genus-level allometries are indeed possible
+* genus-level allometries are possible
 
 > generic allometric models are ... widely used.
 
@@ -106,7 +108,7 @@ For Tropical forests:
 
 --Ervan
 
-For temperate forests:
+## Temperate forests:
 
 * taxa-level allometries are possible
 
@@ -118,11 +120,11 @@ For temperate forests:
 
 ## Tropical forests
 
-For Tropical sites Ervan provided useful tables and code.
+Ervan provided useful tables and code.
 
 ![](https://i.imgur.com/O9rt33U.png)
 
-These data seems to be what I need. Can we add a variable equation -- relating dbh with biomass based on wsg and E?
+These data seems to be what I need. Can we add a variable `equation` -- relating dbh with biomass based on `wsg` and `E`?
 
 ```
 left_join(allodb::site.info, allodb::WSG) %>% 
@@ -152,7 +154,7 @@ The code seems mature. I think it'd be great to share it. It only seems to need 
 
 -- Ervan
 
-Ervan, in (1) you mean general and in (2) you mean taxonomic-genus-level?
+Ervan, Am I right in thinking that in (1) you mean _general_ and in (2) you mean _taxonomic-genus-level_?
 
 # Privacy of wood density data
 
@@ -230,4 +232,20 @@ glimpse(WSG)
 #> $ famwood <dbl> 0.678, 0.678, 0.545, 0.509, 0.539, 0.539, 0.742, 0.742...
 #> $ spwood  <dbl> NA, 0.585, NA, NA, NA, NA, 0.818, NA, 0.427, NA, NA, N...
 ```
+
+
+# Notes during the meeting
+
+
+
+
+
+
+
+
+
+
+
+
+
 
