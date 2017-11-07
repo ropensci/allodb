@@ -1,20 +1,27 @@
 #' Biomass computation
-#' @author Ervan Rutishauser (er.rutishauser@gmail.com)
-#' @description Allocate wood density and compute above-ground biomass using the updated model of Chave et al. (2014), given in Rejou-Mechain et al. (2017). Palm trees (palm=T) are computed using a different allometric model (Goodman et al. 2013).
-#' @param site provide the full name of your site (in lower case) i.e. 'barro colorado island'
-#' @param palm TRUE or FALSE, if TRUE, biomass of palm trees is computed through a specific allometric model (Goodman et al. 2013)
+#'
+#' @description
+#' Allocate wood density and compute above-ground biomass using the
+#'   updated model of Chave et al. (2014), given in Rejou-Mechain et al. (2017).
+#'   Palm trees (palm=T) are computed using a different allometric model
+#'   (Goodman et al. 2013).
+#' @param site provide the full name of your site (in lower case) i.e. 'barro
+#'   colorado island'
+#' @param palm TRUE or FALSE, if TRUE, biomass of palm trees is computed through
+#'   a specific allometric model (Goodman et al. 2013)
 #' @param DATA_path allows to provide a different path where the data are located
+#' @author Ervan Rutishauser (er.rutishauser@gmail.com)
+#'
 #' @return a data.table (data.frame) with all relevant variables.
 #' @export
-
 computeAGB <- function(df,site,palm=T,DATA_path) {
 	requireNamespace("data.table", quietly = TRUE)
 	## Allocate wood density
 	df$wsg <- density.ind(df=df,site,wsg=WSG)
-	
+
 	# Compute biomass
 	df$agb <- AGB.comp(site,df$dbh2, df$wsg,H = NULL)
-	
+
 	# Compute biomass for palms
 	if (palm) {
 		SP <-  LOAD(paste(DATA_path,list.files(DATA_path)[grep("spptable",list.files(DATA_path))],sep="/"))

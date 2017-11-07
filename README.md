@@ -5,112 +5,134 @@ allodb: A database of allometric equations for ForestGEO
 
 The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO's network.
 
+Source
+------
+
+On Sat, Oct 28, 2017 at 4:05 AM, Ervan Rutishauser <er.rutishauser@gmail.com> wrote:
+
+> For now, you can use the R functions that I have developed to compute biomass at all tropical CTFS sites. It is based on Chave et al 2014 allometric models and some modified functions of the BIOMASS package. It computes biomass after having allocated wood density. The wood density database arise from CTFS and, I guess, isn't aimed to be shared publicly.
+
+Setup
+-----
+
+Make data manipulation and visualization easier
+
+``` r
+library(tidyverse)
+#> + ggplot2 2.2.1        Date: 2017-11-06
+#> + tibble  1.3.4           R: 3.4.2
+#> + tidyr   0.7.2          OS: Windows 10 x64
+#> + readr   1.1.1         GUI: RTerm
+#> + purrr   0.2.4      Locale: English_Australia.1252
+#> + dplyr   0.7.4          TZ: America/New_York
+#> + stringr 1.2.0      
+#> + forcats 0.2.0
+#> -- Conflicts ----------------------------------------------------
+#> * filter(),  from dplyr, masks stats::filter()
+#> * lag(),     from dplyr, masks stats::lag()
+# Print only few rows of dataframes to save space and time
+options(dplyr.print_min = 3, dplyr.print_max = 3)
+```
+
+Load data objects and functions in **allodb** (from Ervan)
+
+``` r
+library(allodb)
+```
+
+![](https://i.imgur.com/O9rt33U.png)
+
+Explore data
+------------
+
+``` r
+glimpse(ficus)
+#> Observations: 67
+#> Variables: 8
+#> $ Mnemonic   <fctr> FICUAB, FICUAL, Ficuamaz, FICUAN, ficutr, FICUBJ, ...
+#> $ Genus      <fctr> Ficus, Ficus, Ficus, Ficus, Ficus, Ficus, Ficus, F...
+#> $ Species    <fctr> albipila, altissima, amazonica, annulata, aurea, b...
+#> $ Subgenus   <fctr> Pharmacosycea, Urostigma, Urostigma, Urostigma, Ur...
+#> $ Section    <fctr> Oreosycea, Urostigma, Americana, Urostigma, Americ...
+#> $ Subsection <fctr> Pedunculatae, Conosycea, , Conosycea, , Conosycea,...
+#> $ Strangler  <fctr> No, Yes, Yes, Yes, Yes, Yes, Yes, Yes, Yes, No, Ye...
+#> $ name       <chr> "Ficus albipila", "Ficus altissima", "Ficus amazoni...
+```
+
+``` r
+glimpse(site.info)
+#> Observations: 63
+#> Variables: 12
+#> $ id            <dbl> 42.0, 51.0, 52.0, 45.0, 18.0, 53.0, 46.0, 14.0, ...
+#> $ Site          <fctr> Amacayacu, Badagongshan, Baotianman, Barro Colo...
+#> $ site          <fctr> amacayacu, badagongshan, baotianman, barro colo...
+#> $ lat           <dbl> -3.81, 29.46, 33.50, 9.15, 1.35, 42.38, 8.99, 5....
+#> $ long          <dbl> -70.3, 110.5, 111.9, -79.8, 103.8, 128.1, -79.6,...
+#> $ UTM_Zone      <int> 19, 49, 49, 17, 48, 52, 17, 50, 49, 47, 50, 51, ...
+#> $ UTM_X         <fctr> 359223.7022, 453456.2453, 587323.8348, 626783.7...
+#> $ UTM_Y         <fctr> 9578870.297, 3259047.312, 3706005.813, 1012114....
+#> $ intertropical <fctr> Tropical, Other, Other, Tropical, Tropical, Oth...
+#> $ size.ha       <dbl> 25.0, 25.0, 25.0, 50.0, 4.0, 25.0, 4.0, 50.0, 20...
+#> $ E             <dbl> -0.07929, 1.01162, 1.19960, 0.04945, -0.08480, 1...
+#> $ wsg.site.name <fctr> amacayacu, , , bci, bukittimah, changbai, , , ,...
+```
+
+``` r
+glimpse(WSG)
+#> Observations: 16,558
+#> Variables: 9
+#> $ wsg     <dbl> 0.567, 0.585, 0.450, 0.300, 0.657, 0.657, 0.818, 0.819...
+#> $ idlevel <chr> "genus", "species", "genus", "genus", "genus", "genus"...
+#> $ site    <chr> "amacayacu", "amacayacu", "amacayacu", "amacayacu", "a...
+#> $ sp      <chr> "abarbarb", "abarjupu", "abutgran", "acalcune", "aegic...
+#> $ genus   <chr> "Abarema", "Abarema", "Abuta", "Acalypha", "Aegiphila"...
+#> $ species <chr> "barbouriana", "jupunba", "grandifolia", "cuneata", "c...
+#> $ genwood <dbl> 0.567, 0.567, 0.450, 0.300, 0.657, 0.657, 0.819, 0.819...
+#> $ famwood <dbl> 0.678, 0.678, 0.545, 0.509, 0.539, 0.539, 0.742, 0.742...
+#> $ spwood  <dbl> NA, 0.585, NA, NA, NA, NA, 0.818, NA, 0.427, NA, NA, N...
+```
+
+I'm particularly interested in these data. Can we add a variable `equation` -- relating dbh with biomass based on `wsg` and `E`?
+
+``` r
+left_join(site.info, WSG) %>% 
+  select(site, genus, species, wsg, E)
+#> Joining, by = "site"
+#> Warning: Column `site` joining factor and character vector, coercing into
+#> character vector
+#> # A tibble: 8,600 x 5
+#>        site   genus     species   wsg       E
+#>       <chr>   <chr>       <chr> <dbl>   <dbl>
+#> 1 amacayacu Abarema barbouriana 0.567 -0.0793
+#> 2 amacayacu Abarema     jupunba 0.585 -0.0793
+#> 3 amacayacu   Abuta grandifolia 0.450 -0.0793
+#> # ... with 8,597 more rows
+```
+
+Explore code
+------------
+
+Ervan, could you show some examples of how your funcitons work?
+
+Go to [function's help files](https://forestgeo.github.io/allodb/reference/index.html)
+
 Installation
 ------------
 
 You can install allodb from github with:
 
 ``` r
+# To install from a private repo, use auth_token # with a token from
+# https://github.com/settings/tokens. You only need the repo # scope.
+
 # install.packages("devtools")
-devtools::install_github("forestgeo/allodb")
-```
 
-Example
--------
+# Install the master branch
+devtools::install_github("forestgeo/allodb", auth_token = "abc")
 
-``` r
+# Install an ISSUE-specific branch with
+devtools::install_github("forestgeo/allodb@ISSUE", auth_token = "abc")
+
+# Then, load each time before using
 library(allodb)
-library(tibble)
-library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
-
-
-
-# Table of FAKE allometric equations by site.
-allodb::site_eqn
-#> # A tibble: 2 x 2
-#>       site site_eqn
-#>      <chr>   <list>
-#> 1      bci    <fun>
-#> 2 yosemite    <fun>
-
-# Pull the FAKE allometric equation of bci.
-allodb::site_eqn[[1, 2]]
-#> function(dbh) {1 * dbh}
-
-# Table of FAKE allometric equations by species.
-spp_eqn
-#> # A tibble: 8 x 2
-#>      spp spp_eqn
-#>    <chr>  <list>
-#> 1 swars1   <fun>
-#> 2 hybapr   <fun>
-#> 3 aegipa   <fun>
-#> 4 beilpe   <fun>
-#> 5 faraoc   <fun>
-#> 6 tet2pa   <fun>
-#> 7   pila   <fun>
-#> 8   abco   <fun>
-
-# Combine FAKE allometric equations by site and species.
-(with_site_eqn <- full_join(site_spp, site_eqn))
-#> Joining, by = "site"
-#> # A tibble: 337 x 3
-#>     site    spp site_eqn
-#>    <chr>  <chr>   <list>
-#>  1   bci acacme    <fun>
-#>  2   bci acaldi    <fun>
-#>  3   bci acalma    <fun>
-#>  4   bci ade1tr    <fun>
-#>  5   bci aegipa    <fun>
-#>  6   bci alchco    <fun>
-#>  7   bci alchla    <fun>
-#>  8   bci alibed    <fun>
-#>  9   bci allops    <fun>
-#> 10   bci alsebl    <fun>
-#> # ... with 327 more rows
-with_site_eqn
-#> # A tibble: 337 x 3
-#>     site    spp site_eqn
-#>    <chr>  <chr>   <list>
-#>  1   bci acacme    <fun>
-#>  2   bci acaldi    <fun>
-#>  3   bci acalma    <fun>
-#>  4   bci ade1tr    <fun>
-#>  5   bci aegipa    <fun>
-#>  6   bci alchco    <fun>
-#>  7   bci alchla    <fun>
-#>  8   bci alibed    <fun>
-#>  9   bci allops    <fun>
-#> 10   bci alsebl    <fun>
-#> # ... with 327 more rows
-with_site_and_spp_eqn <- full_join(with_site_eqn, spp_eqn)
-#> Joining, by = "spp"
-with_site_and_spp_eqn
-#> # A tibble: 337 x 4
-#>     site    spp site_eqn spp_eqn
-#>    <chr>  <chr>   <list>  <list>
-#>  1   bci acacme    <fun>  <NULL>
-#>  2   bci acaldi    <fun>  <NULL>
-#>  3   bci acalma    <fun>  <NULL>
-#>  4   bci ade1tr    <fun>  <NULL>
-#>  5   bci aegipa    <fun>   <fun>
-#>  6   bci alchco    <fun>  <NULL>
-#>  7   bci alchla    <fun>  <NULL>
-#>  8   bci alibed    <fun>  <NULL>
-#>  9   bci allops    <fun>  <NULL>
-#> 10   bci alsebl    <fun>  <NULL>
-#> # ... with 327 more rows
-
-# Pull the FAKE allometric equation of species "abco".
-only_abco <- filter(with_site_and_spp_eqn, spp == "abco")
-pull(only_abco, spp_eqn)[[1]]
-#> function(dbh) {10 * dbh}
 ```
