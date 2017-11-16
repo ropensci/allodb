@@ -19,17 +19,14 @@ Make data manipulation and visualization easier
 
 ``` r
 library(tidyverse)
-#> + ggplot2 2.2.1        Date: 2017-11-06
-#> + tibble  1.3.4           R: 3.4.2
-#> + tidyr   0.7.2          OS: Windows 10 x64
-#> + readr   1.1.1         GUI: RTerm
-#> + purrr   0.2.4      Locale: English_Australia.1252
-#> + dplyr   0.7.4          TZ: America/New_York
-#> + stringr 1.2.0      
-#> + forcats 0.2.0
-#> -- Conflicts ----------------------------------------------------
-#> * filter(),  from dplyr, masks stats::filter()
-#> * lag(),     from dplyr, masks stats::lag()
+#> -- Attaching packages ------------------------------------------ tidyverse 1.2.1 --
+#> v ggplot2 2.2.1     v purrr   0.2.4
+#> v tibble  1.3.4     v dplyr   0.7.4
+#> v tidyr   0.7.2     v stringr 1.2.0
+#> v readr   1.1.1     v forcats 0.2.0
+#> -- Conflicts --------------------------------------------- tidyverse_conflicts() --
+#> x dplyr::filter() masks stats::filter()
+#> x dplyr::lag()    masks stats::lag()
 # Print only few rows of dataframes to save space and time
 options(dplyr.print_min = 3, dplyr.print_max = 3)
 ```
