@@ -14,21 +14,21 @@ resource_files:
 runtime: shiny
 output:
   flexdashboard::flex_dashboard:
-    horizontal_layout: scroll
+    horizontal_layout: fill
     orientation: columns
     theme: united
-    vertical_layout: fill
+    vertical_layout: scroll
 ---
 
 ```{r hide-yml}
 # # ymal settings that brake build at work but pass at home.
-#    social: menu
-#    source_code: embed
-#    navbar:
-#      - {title: "Code", href: "https://github.com/maurolepore", align: right, 
-#        icon: fa-user}
-#      - {title: "App", href: "https://github.com/maurolepore", align: right, 
-#        icon: fa-user}
+#   social: menu
+#   source_code: embed
+#   navbar:
+#     - {title: "Code", href: "https://github.com/maurolepore", align: right,
+#       icon: fa-user}
+#     - {title: "App", href: "https://github.com/maurolepore", align: right,
+#       icon: fa-user}
 ```
 
 ```{r global, include=FALSE}
@@ -50,12 +50,11 @@ df_list <- lapply(
   setNames(available_datasets)
 ```
 
-COLUMN --- {data-width=100}
-------------------------------------------------------------------------
-
-### Choose a data set {data-height=40}
+Inputs {.sidebar}
+========================================================================
 
 ```{r}
+helpText("Choose data set:")
 selectInput("dataset", NULL, choices = available_datasets)
 df_in <- reactive({
   req(input$dataset)
@@ -64,7 +63,6 @@ df_in <- reactive({
 ```
 
 ```{r}
-helpText("Download the entire data set")
 downloadHandler(
   filename = function() {
     paste(input$dataset, ".csv", sep = "")
@@ -74,7 +72,6 @@ downloadHandler(
   }
 )
 
-helpText("Column names")
 renderPrint(
   cat(
     paste0(
@@ -85,9 +82,8 @@ renderPrint(
 )
 ```
 
-### Display only these columns (by position) {data-height=20}
-
 ```{r}
+helpText("Display columns:")
 fluidRow(
   column(6, numericInput("var_pos_min", "min", 1)),
   column(6, numericInput("var_pos_max", "max", 6))
@@ -95,7 +91,7 @@ fluidRow(
 ```
 
 ```{r}
-helpText("Download only these columns (all rows)")
+helpText("Download these columns:")
 df_selected <- reactive({
   req(input$dataset)
   df_in()[input$var_pos_min:input$var_pos_max]
@@ -110,28 +106,22 @@ downloadHandler(
 )
 ```
 
-COLUMN --- {data-width=300}
-------------------------------------------------------------------------
-
-### Help {data-height=2}
+Viewer
+========================================================================
 
 ```{r}
 renderPrint(
-  cat(
+  cat("Get help at: ",
     "https://forestgeo.github.io/allodb/reference/", input$dataset, sep = ""
   )
 )
-```
 
-### Viewer {data-height=100}
-
-```{r}
 renderDataTable({
   req(input$dataset)
   DT::datatable(
     df_selected(),
     filter = 'top',
-    options = list(class = 'nowrap display', pageLength = 5),
+    options = list(class = 'nowrap display', pageLength = 10),
   )
 })
 ```
