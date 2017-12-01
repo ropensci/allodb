@@ -6,7 +6,7 @@
 \title{Wood density data set from CTFS sites.}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 16558 rows and 9 columns.}
 \source{
-Ervan Rutishauser (\link{er.rutishauser@gmail.com}), received on Sat,
+Ervan Rutishauser (er.rutishauser@gmail.com), received on Sat,
 Oct 28, 2017 at 4:05 AM.
 }
 \usage{

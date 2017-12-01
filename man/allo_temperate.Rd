@@ -6,7 +6,7 @@
 \title{Allometric equations form temperate sites.}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 415 rows and 25 columns.}
 \source{
-Erika B. Gonzalez (\link{GonzalezEB@si.edu}).
+Erika B. Gonzalez (GonzalezEB@si.edu).
 }
 \usage{
 allo_temperate

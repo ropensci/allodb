@@ -17,7 +17,14 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com}
+\strong{Maintainer}: Mauro Lepore \email{leporem@si.edu} [contractor]
+
+Authors:
+\itemize{
+  \item Gonzalez Erika \email{GonzalezEB@@si.edu}
+  \item Kristina Teixeira \email{TeixeiraK@@si.edu}
+  \item Rutishauser Ervan \email{RutishauserE@@si.edu}
+}
 
 }
 \keyword{internal}

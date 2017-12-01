@@ -6,7 +6,7 @@
 \title{Data to from tropical forests.}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 67 rows and 8 columns.}
 \source{
-Ervan Rutishauser (\link{er.rutishauser@gmail.com}), received on Sat,
+Ervan Rutishauser (er.rutishauser@gmail.com), received on Sat,
 Oct 28, 2017 at 4:05 AM.
 }
 \usage{
