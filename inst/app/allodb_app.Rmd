@@ -53,7 +53,7 @@ df_list <- lapply(
 COLUMN --- {data-width=100}
 ------------------------------------------------------------------------
 
-### Choose a data set {data-height=10}
+### Choose a data set {data-height=40}
 
 ```{r}
 selectInput("dataset", NULL, choices = available_datasets)
@@ -73,6 +73,16 @@ downloadHandler(
     readr::write_csv(df_in(), file)
   }
 )
+
+helpText("Column names")
+renderPrint(
+  cat(
+    paste0(
+      str_pad(1:ncol(df_in()), 2, pad = " "), ": ", names(df_in()), "\n"
+    ),
+    sep = ""
+  )
+)
 ```
 
 ### Display only these columns (by position) {data-height=20}
@@ -86,7 +96,7 @@ fluidRow(
 
 ```{r}
 helpText("Download only these columns (all rows)")
-df_filtered <- reactive({
+df_selected <- reactive({
   req(input$dataset)
   df_in()[input$var_pos_min:input$var_pos_max]
 })
@@ -95,7 +105,7 @@ downloadHandler(
     paste(input$dataset, "_selected", ".csv", sep = "")
   },
   content = function(file) {
-    readr::write_csv(df_filtered(), file)
+    readr::write_csv(df_selected(), file)
   }
 )
 ```
@@ -119,7 +129,7 @@ renderPrint(
 renderDataTable({
   req(input$dataset)
   DT::datatable(
-    df_filtered(),
+    df_selected(),
     filter = 'top',
     options = list(class = 'nowrap display', pageLength = 5),
   )
