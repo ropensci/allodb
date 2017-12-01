@@ -26,6 +26,7 @@ library(dplyr)
 library(tibble)
 library(stringr)
 library(DT)
+library(readr)
 library(shiny)
 
 # Data --------------------------------------------------------------------
@@ -41,36 +42,65 @@ df_list <- lapply(
 COLUMN --- {data-width=100}
 ------------------------------------------------------------------------
 
-```{r}
-selectInput("dataset", "Choose a data set:", choices = available_datasets)
+### Choose a data set {data-height=5}
 
-helpText("Choose the range of columns to display:")
-renderPrint({
+```{r}
+selectInput("dataset", NULL, choices = available_datasets)
+df_in <- reactive({
   req(input$dataset)
-  
-  cat(
-    "* `min` must be equal or greater than 1\n", 
-    "* `max` must be equal or smaller than ", length(df_list[[input$dataset]]),
-    sep = ""
-  )
+  df_list[[input$dataset]]
 })
+```
+
+```{r}
+helpText("Download the entire data set")
+downloadHandler(
+  filename = function() {
+    paste(input$dataset, ".csv", sep = "")
+  },
+  content = function(file) {
+    readr::write_csv(df_in(), file)
+  }
+)
+```
+
+### Display only these columns (by position) {data-height=20}
+
+```{r}
 fluidRow(
   column(6, numericInput("var_pos_min", "min", 1)),
   column(6, numericInput("var_pos_max", "max", 6))
 )
 ```
 
-COLUMN --- {data-width=900}
+```{r}
+helpText("Download only these columns (all rows)")
+df_filtered <- reactive({
+  req(input$dataset)
+  df_in()[input$var_pos_min:input$var_pos_max]
+})
+downloadHandler(
+  filename = function() {
+    paste(input$dataset, "_selected", ".csv", sep = "")
+  },
+  content = function(file) {
+    readr::write_csv(df_filtered(), file)
+  }
+)
+```
+
+COLUMN --- {data-width=300}
 ------------------------------------------------------------------------
 
 ```{r}
 renderDataTable({
   req(input$dataset)
   DT::datatable(
-    df_list[[input$dataset]][input$var_pos_min:input$var_pos_max],
+    df_filtered(),
     filter = 'top',
-    options = list(class = 'nowrap display')
+    options = list(class = 'nowrap display', pageLength = 5),
   )
 })
 ```
+
 
