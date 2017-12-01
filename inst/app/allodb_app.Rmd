@@ -1,12 +1,23 @@
 ---
 title: "allodb"
+resource_files:
+- data/allo_temperate.rda
+- data/ficus.rda
+- data/site.info.rda
+- data/WSG.rda
+- data/wsg_ctfs3.rda
+- data/allo_temperate.rda
+- data/ficus.rda
+- data/site.info.rda
+- data/WSG.rda
+- data/wsg_ctfs3.rda
 runtime: shiny
 output:
   flexdashboard::flex_dashboard:
-    vertical_layout: fill
     horizontal_layout: scroll
     orientation: columns
     theme: united
+    vertical_layout: fill
 ---
 
 ```{r hide-yml}
@@ -31,7 +42,7 @@ library(shiny)
 
 # Data --------------------------------------------------------------------
 
-base_dir <- "../../data/"
+base_dir <- "./data/"
 available_datasets <- str_replace(dir(base_dir), ".rda", "")
 df_list <- lapply(
   paste0(base_dir, available_datasets, ".rda"), function(x) get(load(x))
@@ -42,7 +53,7 @@ df_list <- lapply(
 COLUMN --- {data-width=100}
 ------------------------------------------------------------------------
 
-### Choose a data set {data-height=5}
+### Choose a data set {data-height=10}
 
 ```{r}
 selectInput("dataset", NULL, choices = available_datasets)
@@ -92,6 +103,18 @@ downloadHandler(
 COLUMN --- {data-width=300}
 ------------------------------------------------------------------------
 
+### Help {data-height=2}
+
+```{r}
+renderPrint(
+  cat(
+    "https://forestgeo.github.io/allodb/reference/", input$dataset, sep = ""
+  )
+)
+```
+
+### Viewer {data-height=100}
+
 ```{r}
 renderDataTable({
   req(input$dataset)
@@ -102,5 +125,4 @@ renderDataTable({
   )
 })
 ```
-
 
