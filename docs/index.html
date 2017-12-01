@@ -15,7 +15,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-home">
+    <div class="container template-vignette">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -29,16 +29,69 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="reference/index.html">Functions Index</a>
+  <a href="reference/index.html">
+    <span class="fa fa-database"></span>
+     
+    Datasets
+  </a>
 </li>
 <li>
-  <a href="articles/index.html">Tutorials</a>
+  <a href="https://bookdown.org/forestgeoguest/allodb_app/">
+    <span class="fa fa-play-circle"></span>
+     
+    App
+  </a>
+</li>
+<li>
+  <a href="news/index.html">
+    <span class="fa fa-newspaper-o"></span>
+     
+    news
+  </a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-user"></span>
+     
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="https://github.com/orgs/forestgeo/people/ervanSTRI">Ervan Rutishauser</a>
+    </li>
+    <li>
+      <a href="https://github.com/orgs/forestgeo/people/teixeirak">Kristina Anderson-Teixeira</a>
+    </li>
+    <li>
+      <a href="https://github.com/orgs/forestgeo/people/gonzalezeb">Erika Gonzalez-Akre</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-gavel"></span>
+     
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="https://github.com/maurolepore">Mauro Lepore</a>
+    </li>
+    <li>
+      <a href="https://github.com/orgs/forestgeo/people/gabrielareto">Gabriel Arellano</a>
+    </li>
+    <li>
+      <a href="https://github.com/orgs/forestgeo/people/seanmcm">Sean McMahon</a>
+    </li>
+  </ul>
+</li>
 <li>
   <a href="https://github.com/forestgeo/allodb">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fa fa-github"></span>
      
   </a>
 </li>
@@ -52,8 +105,14 @@
 
       
       </header><div class="row">
-  <div class="contents col-md-9">
-    <div id="allodb-a-database-of-allometric-equations-for-forestgeo" class="section level1">
+  <div class="col-md-9">
+    
+
+    
+    
+<div class="contents">
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<div id="allodb-a-database-of-allometric-equations-for-forestgeo" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#allodb-a-database-of-allometric-equations-for-forestgeo" class="anchor"></a>allodb: A database of allometric equations for ForestGEO</h1></div>
 <p>The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO’s network.</p>
@@ -70,22 +129,21 @@
 <a href="#setup" class="anchor"></a>Setup</h2>
 <p>Make data manipulation and visualization easier</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
-<span class="co">#&gt; + ggplot2 2.2.1        Date: 2017-11-06</span>
-<span class="co">#&gt; + tibble  1.3.4           R: 3.4.2</span>
-<span class="co">#&gt; + tidyr   0.7.2          OS: Windows 10 x64</span>
-<span class="co">#&gt; + readr   1.1.1         GUI: RTerm</span>
-<span class="co">#&gt; + purrr   0.2.4      Locale: English_Australia.1252</span>
-<span class="co">#&gt; + dplyr   0.7.4          TZ: America/New_York</span>
-<span class="co">#&gt; + stringr 1.2.0      </span>
-<span class="co">#&gt; + forcats 0.2.0</span>
-<span class="co">#&gt; -- Conflicts ----------------------------------------------------</span>
-<span class="co">#&gt; * filter(),  from dplyr, masks stats::filter()</span>
-<span class="co">#&gt; * lag(),     from dplyr, masks stats::lag()</span>
+<span class="co">#&gt; -- Attaching packages ------------------------------------------- tidyverse 1.2.1 --</span>
+<span class="co">#&gt; v ggplot2 2.2.1     v purrr   0.2.4</span>
+<span class="co">#&gt; v tibble  1.3.4     v dplyr   0.7.4</span>
+<span class="co">#&gt; v tidyr   0.7.2     v stringr 1.2.0</span>
+<span class="co">#&gt; v readr   1.1.1     v forcats 0.2.0</span>
+<span class="co">#&gt; -- Conflicts ---------------------------------------------- tidyverse_conflicts() --</span>
+<span class="co">#&gt; x dplyr::filter() masks stats::filter()</span>
+<span class="co">#&gt; x dplyr::lag()    masks stats::lag()</span>
 <span class="co"># Print only few rows of dataframes to save space and time</span>
 <span class="kw">options</span>(<span class="dt">dplyr.print_min =</span> <span class="dv">3</span>, <span class="dt">dplyr.print_max =</span> <span class="dv">3</span>)</code></pre></div>
 <p>Load data objects and functions in <strong>allodb</strong> (from Ervan)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(allodb)</code></pre></div>
-<p><img src="https://i.imgur.com/O9rt33U.png"></p>
+<div class="figure">
+<img src="https://i.imgur.com/O9rt33U.png">
+</div>
 </div>
 <div id="explore-data" class="section level2">
 <h2 class="hasAnchor">
@@ -167,10 +225,12 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 <span class="kw">library</span>(allodb)</code></pre></div>
 </div>
 </div>
+</div>
   </div>
 
-  <div class="col-md-3" id="sidebar">
-    <h2>Links</h2>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2 class="hasAnchor">
+<a href="#sidebar" class="anchor"></a>Links</h2>
 <ul class="list-unstyled">
 <li>Browse source code at <br><a href="https://github.com/forestgeo/allodb">https://​github.com/​forestgeo/​allodb</a>
 </li>
@@ -180,17 +240,21 @@ devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocument
 </li>
 </ul>
 <h2>License</h2>
-<p>What license is it under?</p>
+<p><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></p>
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>First Last <br><small class="roles"> Author, maintainer </small> </li>
+<li>Gonzalez Erika <br><small class="roles"> Author </small> </li>
+<li>Kristina Teixeira <br><small class="roles"> Author </small> </li>
+<li>Mauro Lepore <br><small class="roles"> Author, contractor, maintainer </small> </li>
+<li>Rutishauser Ervan <br><small class="roles"> Author </small> </li>
 </ul>
 </div>
+
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by First Last.</p>
+  <p>Developed by Gonzalez Erika, Kristina Teixeira, Mauro Lepore, Rutishauser Ervan.</p>
 </div>
 
 <div class="pkgdown">
