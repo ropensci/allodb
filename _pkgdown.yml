@@ -1,3 +1,6 @@
+url: https://forestgeo.github.io/allodb/
+
+
 template:
   params:
     bootswatch: united
@@ -14,7 +17,31 @@ home:
 navbar:
   type: default
   left:
-    - text: Functions Index
+    - text: Datasets
       href: reference/index.html
-    - text: Tutorials
-      href: articles/index.html
+      icon: fa-database
+    - text: App
+      icon: fa-play-circle
+      href: https://bookdown.org/forestgeoguest/allodb_app/
+    - text: news
+      href: news/index.html
+      icon: fa-newspaper-o
+  right:
+    - icon: fa-user
+      menu:
+        - text: Ervan Rutishauser
+          href: https://github.com/orgs/forestgeo/people/ervanSTRI
+        - text: Kristina Anderson-Teixeira
+          href: https://github.com/orgs/forestgeo/people/teixeirak
+        - text: Erika Gonzalez-Akre
+          href: https://github.com/orgs/forestgeo/people/gonzalezeb
+    - icon: fa-gavel
+      menu:
+        - text: Mauro Lepore
+          href: https://github.com/maurolepore
+        - text: Gabriel Arellano
+          href: https://github.com/orgs/forestgeo/people/gabrielareto
+        - text: Sean McMahon
+          href: https://github.com/orgs/forestgeo/people/seanmcm
+    - icon: fa-github
+      href: https://github.com/forestgeo/allodb
