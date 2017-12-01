@@ -1,0 +1,58 @@
+---
+title: "allodb"
+runtime: shiny
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    theme: united
+---
+
+```{r hide-yml}
+# # ymal settings that brake build at work but pass at home.
+#    social: menu
+#    source_code: embed
+#    navbar:
+#      - {title: "Code", href: "https://github.com/maurolepore", align: right, 
+#        icon: fa-user}
+#      - {title: "App", href: "https://github.com/maurolepore", align: right, 
+#        icon: fa-user}
+```
+
+```{r global, include=FALSE}
+library(flexdashboard)
+library(dplyr)
+library(tibble)
+library(stringr)
+library(DT)
+library(shiny)
+
+# Data --------------------------------------------------------------------
+
+available_datasets <- str_replace(dir("./data/"), ".rda", "")
+df_list <- lapply(
+  paste0("./data/", available_datasets, ".rda"), function(x) get(load(x))
+) %>% 
+  setNames(available_datasets)
+```
+
+COLUMN --- {data-width=100}
+------------------------------------------------------------------------
+
+### Inputs {data-width=100}
+
+```{r}
+selectInput("dataset", "Choose a data set:", choices = available_datasets)
+```
+
+```{r}
+renderPrint({
+  req(input$dataset)
+  cat("Data set:", input$dataset)
+})
+
+renderDataTable({
+  req(input$dataset)
+  DT::datatable(df_list[[input$dataset]])
+})
+```
+
