@@ -3,6 +3,8 @@ title: "allodb"
 runtime: shiny
 output:
   flexdashboard::flex_dashboard:
+    vertical_layout: fill
+    horizontal_layout: scroll
     orientation: columns
     theme: united
 ---
@@ -28,9 +30,10 @@ library(shiny)
 
 # Data --------------------------------------------------------------------
 
-available_datasets <- str_replace(dir("./data/"), ".rda", "")
+base_dir <- "../../data/"
+available_datasets <- str_replace(dir(base_dir), ".rda", "")
 df_list <- lapply(
-  paste0("./data/", available_datasets, ".rda"), function(x) get(load(x))
+  paste0(base_dir, available_datasets, ".rda"), function(x) get(load(x))
 ) %>% 
   setNames(available_datasets)
 ```
@@ -38,21 +41,36 @@ df_list <- lapply(
 COLUMN --- {data-width=100}
 ------------------------------------------------------------------------
 
-### Inputs {data-width=100}
-
 ```{r}
 selectInput("dataset", "Choose a data set:", choices = available_datasets)
-```
 
-```{r}
+helpText("Choose the range of columns to display:")
 renderPrint({
   req(input$dataset)
-  cat("Data set:", input$dataset)
+  
+  cat(
+    "* `min` must be equal or greater than 1\n", 
+    "* `max` must be equal or smaller than ", length(df_list[[input$dataset]]),
+    sep = ""
+  )
 })
+fluidRow(
+  column(6, numericInput("var_pos_min", "min", 1)),
+  column(6, numericInput("var_pos_max", "max", 6))
+)
+```
 
+COLUMN --- {data-width=900}
+------------------------------------------------------------------------
+
+```{r}
 renderDataTable({
   req(input$dataset)
-  DT::datatable(df_list[[input$dataset]])
+  DT::datatable(
+    df_list[[input$dataset]][input$var_pos_min:input$var_pos_max],
+    filter = 'top',
+    options = list(class = 'nowrap display')
+  )
 })
 ```
 
