@@ -1,35 +1,25 @@
 ---
 title: "allodb"
 resource_files:
-- data/allo_temperate.rda
-- data/ficus.rda
-- data/site.info.rda
-- data/WSG.rda
-- data/wsg_ctfs3.rda
-- data/allo_temperate.rda
-- data/ficus.rda
-- data/site.info.rda
-- data/WSG.rda
+- data/dummy_data.rda
 - data/wsg_ctfs3.rda
 runtime: shiny
 output:
   flexdashboard::flex_dashboard:
     horizontal_layout: fill
+    navbar:
+    - align: right
+      href: https://github.com/maurolepore
+      icon: fa-gavel
+    - align: right
+      href: https://github.com/forestgeo/allodb
+      icon: fa-github
     orientation: columns
+    social: menu
+    source_code: embed
     theme: united
     vertical_layout: scroll
 ---
-
-```{r hide-yml}
-# # ymal settings that brake build at work but pass at home.
-#   social: menu
-#   source_code: embed
-#   navbar:
-#     - {title: "Code", href: "https://github.com/maurolepore", align: right,
-#       icon: fa-user}
-#     - {title: "App", href: "https://github.com/maurolepore", align: right,
-#       icon: fa-user}
-```
 
 ```{r global, include=FALSE}
 library(flexdashboard)
