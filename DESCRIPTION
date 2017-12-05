@@ -2,7 +2,7 @@ Package: allodb
 Title: A Database of Allometric Equations for ForestGEO
 Version: 0.0.0.9000
 Authors@R: c(
-    person("Gonzalez", "Erika", , "GonzalezEB@@si.edu", role = c("aut")),
+    person("Gonzalez-Akre", "Erika", , "GonzalezEB@@si.edu", role = c("aut")),
     person("Kristina", "Teixeira", , "TeixeiraK@@si.edu", role = c("aut")),
     person("Mauro", "Lepore", , "leporem@si.edu", role = c("aut", "ctr", "cre")),
     person("Rutishauser", "Ervan", , "RutishauserE@@si.edu", role = c("aut"))
