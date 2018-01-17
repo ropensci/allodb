@@ -1,0 +1,17 @@
+Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,Erikas notes to delete before publication
+1 / A,site,ForestGEO site name,character (string),,,,
+2 / B,family,Plant family name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
+3 / C,genus,Plant genus name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
+4 / D,species,Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
+5 / E,taxa,"Refers to the specific taxonomic level for which the equation was developed (species, genus, family or plant group)",character (string),-,-,-,
+6 / F,wsg,Wood specific gravity.,numeric,,g/cm3,#,
+7 / G,wsg_id,Wood specific gravity unique identification number,numeric,-,-,-,
+8 / H,n_sampled,Number of trees sampled to estimate wsg,numeric,,,,"This will be almost imposible to gather, considering the amount specie sint he netwoor"
+9 / I,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric,,,,
+,,,,,,,
+,,,,,,,
+,,,-,-,-,-,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,

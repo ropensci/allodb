@@ -1,0 +1,18 @@
+Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,Erikas notes to delete before publication
+1 / A,site,ForestGEO site name,character (string),-,-,-,
+2 / B,family,Plant family name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
+3 / C,species,Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),-,-,-,
+4 / D,species_code,"Species code used at the ForestGEO site, could be numeric or characters",,,,,
+5 / E,life_form,Common growth form for the given plant species,character (string),,,,
+6 / F,variable,The biomass variable characterized by the equation (biomass component),character (string),-,-,-,I don't think needed in this table (in equation table)
+7 / G,equation_id,Equation identification number given arbitrarely. Links to id in Allometry Equations table. ,numeric,-,,,need range before publishing
+8 / H,dbh_min,Min DBH at which the equation should be applied,numeric,-,-,,I don't think needed in this table (in equat table). Need range before publishing
+9 / I,dbh_max,Max DBH at which the equation should be applied,numeric,-,-,,I don't think needed in this table (in equat table). Need range before publishing
+10 / J,allometry_specificity,"Refers to the specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)",character (string),-,,,I don't think needed in this table (in wood density table)
+11 / K,wsg_id,Wood density identification number. Links to id in Wood Density table.,numeric,,,,
+12 / L,wsg_specifity,"Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)",numeric,,,,I don't think needed in this table (in wood density table)
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
