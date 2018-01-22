@@ -1,20 +1,15 @@
 Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,Erikas notes to delete before publication
 1 / A,equation_id,Unique equation identification number given arbitrarely. Links to Site_Species table. ,-,-,-,-,
 2 / B,variable,Biomass component characterized by the equation ,character (string),-,-,-,
-3 / C,equation,Model equation as a function of DBH†or DBA,-,-,-,-,We currently have equation form and parameters listed separately. Weíll need a script to transform these. Mauro could write a scrip to merge
+3 / C,equation,Model equation as a function of DBH or DBA,-,-,-,-,We currently have equation form and parameters listed separately. We’ll need a script to transform these. Mauro could write a scrip to merge
 4 / D,taxa,"Refers to the specific taxonomic level for which the equation was developed (species, genus, family or plant group)",character (string),-,-,-,
 5 / E,development_species,Refers to the species for which the allometry was developed,,,,,
 6 / F,geographic_area,Geographic location from which trees were sampled to develop the original equation ,character (string),-,-,-,
-7 / G,dbh_min,Minimun DBH sampled to develop the† equation,numeric,-,,-,
+7 / G,dbh_min,Minimun DBH sampled to develop the  equation,numeric,-,,-,
 8 / H,dbh_max,Maximun DBH sampled to develop the equation,numeric,-,,-,
-9 / I,n_trees,N trees sampled to develop the equation,numeric,-,-,-†,I didnít pull this at the beginning so I think we can omit unless we absolutely need to publish this value hereÖ
-10 / J,biomass_unit,Mass unit used in original publication,character (string),-,,-,
-11 / K,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 ñ false; 1- true,-,-,
-12 / L,bias_correction_factor,"CF for the specific equation, pulled from original publication, if included",numeric,-,-,-,
-13 / M,ref_id,Unique reference identification number to our data source. Links to multiple tables.,-,-,-,-,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
+9 / I,n_trees,N trees sampled to develop the equation,numeric,-,-,- ,I didn’t pull this at the beginning so I think we can omit unless we absolutely need to publish this value here…
+10 / J,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character (string),see description,-,-,
+11 / K,biomass_unit,Mass unit used in original publication,character (string),-,,-,
+12 / L,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 – false; 1- true,-,-,
+13 / M,bias_correction_factor,"CF for the specific equation, pulled from original publication, if included",numeric,-,-,-,
+14 / N,ref_id,Unique reference identification number to our data source. Links to multiple tables.,-,-,-,-,
