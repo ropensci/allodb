@@ -6,12 +6,6 @@ Column,Field,Description,Alphanumeric attributes/ storage type (present data val
 5 / E,taxa,"Refers to the specific taxonomic level for which the equation was developed (species, genus, family or plant group)",character (string),-,-,-,
 6 / F,wsg,Wood specific gravity.,numeric,,g/cm3,#,
 7 / G,wsg_id,Wood specific gravity unique identification number,numeric,-,-,-,
-8 / H,n_sampled,Number of trees sampled to estimate wsg,numeric,,,,"This will be almost imposible to gather, considering the amount specie sint he netwoor"
-9 / I,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric,,,,
-,,,,,,,
-,,,,,,,
-,,,-,-,-,-,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-,,,,,,,
+8/H,wsg_specifity,"Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)",numeric,,,,
+9/I,n_sampled,Number of trees sampled to estimate wsg,numeric,,,,"This will be almost imposible to gather, considering the amount specie sint he netwoor"
+10/J,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric,,,,
