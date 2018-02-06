@@ -1,0 +1,414 @@
+"equation_id","variable_biomass_component","equation","allometry_specificity","development_species","geographic_area","minDBH","maxDHB","DBH_units","biomass_unit","allometry_development_method","corrected_for_bias","bias.correction._CF","ref_id"
+NA,"Stem + branches (live)","a*(DBH^2)^b","Species","","North Carolina","29.46","41.66","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","North Central States","2.5","40","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","Ulmus americana","North Central States","2.5","40","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","New York","25","550","mm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","Fraxinus americana","New York","25","550","mm","kg",NA,"no",NA,NA
+NA,"Total aboveground biomass","a*DBA^b","Species","","Canada","0.18","4.31","cm","g",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","a*DBH^b","Species","","Tennessee","14","43","cm","kg",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species ","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*DBH^b","Species","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","0",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem (wood + bark)","exp(a+b*lnDBH)","Genus","","Tennessee","8.9","25.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","New Hampshire","1","9","cm","g",NA,"yes","0",NA
+NA,"Foliage total","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","New Hampshire","1","9","cm","g",NA,"yes","0",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Ohio","1.85","7.25","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.55","7.76","cm","g",NA,"yes","1.006",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (above stump)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.4","8.49","cm","g",NA,"yes","1.004",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.42","8.53","cm","g",NA,"yes","1.014",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.24","6.72","cm","g",NA,"yes","1.006",NA
+NA,"Whole tree (above stump)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.5","6.14","cm","g",NA,"yes","1.015",NA
+NA,"Branches total (live + dead)","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Foliage total","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.37","6.83","cm","g",NA,"yes","1.017",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.21","5.73","cm","g",NA,"yes","1.056",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.19","3.86","cm","g",NA,"yes","1.016",NA
+NA,"Whole tree (aboveground)","a*(DBH^2)^b","Species","Cornus florida","Southeast U.S.","2.54","12.45","in^2","lb",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","a*(DBH^2)^b","Species","","Southeast U.S.","2.54","12.45","in^2","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*(DBH^2)^b","Species","","North Carolina","29.46","41.66","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Piedmont (Southeastern U.S.)","5.84","25.4","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Piedmont (Southeastern U.S.)","27.94","47.75","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*(DBH^2)^b","Species","","North Carolina","14.48","25.4","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*(DBH^2)^b","Species","","Piedmont (Southeastern U.S.)","27.94","49.53","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Genus","","Piedmont (Southeastern U.S.)","2.54","27.43","in^2","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*(DBH^2)^b","Genus","","Piedmont (Southeastern U.S.)","2.54","27.43","in","lb",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Virburnum lantanoides","Canada","0.28","1.59","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Virburnum lantanoides","Canada","0.28","1.59","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Virburnum lantanoides","Canada","0.28","1.59","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Lonicera canadensis","Canada","0.12","0.69","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","","Canada","0.18","4.31","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Genus","","Idaho/Montana","0.2","1.2","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Rubus idaeus","Idaho/Montana","0.3","0.9","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Rubus idaeus","Idaho/Montana","0.3","0.9","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Rubus idaeus","Idaho/Montana","0.3","0.9","cm","g",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species ","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species","Quercus prinus","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","Quercus prinus","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*DBH^b","Species","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Genus","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Genus","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Genus","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Genus","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"no",NA,NA
+NA,"Total aboveground biomass","a*DBH^b","Species","","Upper Great Lakes","4","32","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBH^b","Species","Fraxinus nigra","Gulf and Atlantic Coastal Plains","4","32","cm","kg",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","Prunus serotina","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","Prunus serotina","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem (wood + bark)","exp(a+b*lnDBH)","Genus","","Tennessee","8.9","25.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","66","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","66","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp(a+b*lnDBH)","Species","","Eastern U.S.","1","55","cm","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","89","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Whole tree (aboveground)","exp(a+b*lnDBH)","Species","Pinus strobus","Eastern U.S.","1","55","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","exp(a+b*lnDBH)","Species","","Eastern U.S.","1","55","cm","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Whole tree (above stump)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.4","8.49","cm","g",NA,"yes","1.004",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","Pinus taeda","North Carolina","3.5","35.6","cm","g",NA,"no",NA,NA
+NA,"Branches total (live + dead)","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Foliage total","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Whole tree (above stump)","10^a*(DBH^2)^b","Species","","Ohio","0.4","8.49","cm","g",NA,"yes","1.004",NA
+NA,"Whole tree (aboveground)","10^a*DBH^b","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","10^a*DBH^b","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","10^a*DBH^b","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Gulf and Atlantic Coastal Plains","28.45","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","a*(DBH^2)^b","Species","","Southeast U.S.","2.54","12.45","in^2","lb",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Piedmont (Southeastern U.S.)","5.84","25.4","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Piedmont (Southeastern U.S.)","27.94","47.75","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","a*(DBH^2)^b","Species","","Southeast U.S.","3.3","11.94","in","lb",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","a*(DBH^2)^b","Species","","Southeast U.S.","4.06","12.45","in^2","lb",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Gulf and Atlantic Coastal Plains","2.54","27.69","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Piedmont (Southeastern U.S.)","4.83","23.88","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Piedmont (Southeastern U.S.)","24.94","49.53","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Genus","","Piedmont (Southeastern U.S.)","2.54","27.43","in^2","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*(DBH^2)^b","Genus","","Piedmont (Southeastern U.S.)","2.54","27.43","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a+b*DBH","Species","","New Hampshire","1.6","10","cm","g",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","New York","25","550","mm","kg",NA,"no",NA,NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Virburnum lantanoides","Canada","0.28","1.59","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Virburnum lantanoides","Canada","0.28","1.59","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Virburnum lantanoides","Canada","0.28","1.59","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Lonicera canadensis","Canada","0.12","0.69","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Genus","","Idaho/Montana","0.2","1.2","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","a*DBH^b","Species","","Tennessee","14","43","cm","kg",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species","Quercus prinus","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem (wood + bark)","exp(a+b*lnDBH)","Genus","","Tennessee","8.9","25.4","cm","g",NA,"yes","included in model",NA
+NA,"Stem (wood + bark)","exp(a+b*lnDBH)","Genus","","Tennessee","8.9","25.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","66","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp(a+b*lnDBH)","Species","","Eastern U.S.","1","55","cm","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","89","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp(a+b*lnDBH)","Species","Quercus rubra","Eastern U.S.","2.5","55","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","exp(a+b*lnDBH)","Species","","Eastern U.S.","2.5","55","cm","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","89","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","exp(a+b*lnDBH)","Species","","Rhode Island","7.62","30.48","in","kg",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","70","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","New Hampshire","1","63","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","North Carolina","7","63","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","North Carolina","15","43.3","cm","kg",NA,"yes","1.003",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","North Carolina","10.6","57.5","cm","kg",NA,"yes","1.013",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","North Carolina","10.2","55.8","cm","kg",NA,"yes","1.008",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","North Carolina","3.5","35.6","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","Pinus taeda","North Carolina","3.5","35.6","cm","g",NA,"no",NA,NA
+NA,"Branches total (live + dead)","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Foliage total","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Branches total (live + dead)","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Foliage total","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","Prunus serotina","Ohio","0.37","6.83","cm","g",NA,"yes","1.017",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.37","6.83","cm","g",NA,"yes","1.017",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.68","7.49","cm","g",NA,"yes","1.012",NA
+NA,"Whole tree (above stump)","10^a*(DBH^2)^b","Species","","Ohio","0.4","8.49","cm","g",NA,"yes","1.004",NA
+NA,"Whole tree (above stump)","a*(DBH^2)^b","Species","","Piedmont (Southeastern U.S.)","24.94","49.53","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","Ulmus americana","North Central States","2.5","40","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","New York","25","550","mm","kg",NA,"no",NA,NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Lonicera canadensis","Canada","0.12","0.69","cm","g",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","a*DBH^b","Species","","Tennessee","14","43","cm","kg",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","Quercus rubra","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a*DBH^b","Species","","West Virginia","5.08","40.64","in","lb",NA,"no",NA,NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","0",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Stem (wood + bark)","exp(a+b*lnDBH)","Genus","","Tennessee","8.9","25.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","66","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Stem + branches (live)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","New Hampshire","1","9","cm","g",NA,"yes","0",NA
+NA,"Foliage total","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","New Hampshire","1","9","cm","g",NA,"yes","0",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","Cornus florida","Ohio","1.85","7.25","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Ohio","1.85","7.25","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.55","7.76","cm","g",NA,"yes","1.006",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Genus","","North Carolina","8.2","52.3","cm","kg",NA,"yes","1.005",NA
+NA,"Whole tree (above stump)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.5","6.14","cm","g",NA,"yes","1.015",NA
+NA,"Branches total (live + dead)","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Foliage total","log10biomass=a+b*(log10(DBH^c))","Genus","","Minessota","5","45","in","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","Prunus serotina","Ohio","0.37","6.83","cm","g",NA,"yes","1.017",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.37","6.83","cm","g",NA,"yes","1.017",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","Prunus serotina","Ohio","0.37","6.83","cm","g",NA,"yes","1.017",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.21","5.73","cm","g",NA,"yes","1.056",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.19","3.86","cm","g",NA,"yes","1.016",NA
+NA,"Total aboveground biomass","a+b*BA","genus","","California","NI","NI","cm^2","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a*ln(dba)+b)","Species ","Arctostaphylos columbiana","Oregon","0.5","2.1","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a*ln(dba)+b)","Species","Arctostaphylos columbiana","Oregon","0.5","2.1","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*ln(DBH))","Species","","California","8","61","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","exp(a+b*ln(DBH))","Species","","Oregon","1.4","13.4","cm","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","614","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","89","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","89","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","70","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","66","cm","kg",NA,"yes","included in model",NA
+NA,"Live crown","exp(a+b*lnDBH)","Species","","Washington, Oregon, N California","1.5","","cm","kg",NA,"yes","included in model",NA
+NA,"Dead crown","exp(a+b*lnDBH)","Species","","Washington, Oregon, N California","1.5","","cm","kg",NA,"yes","included in model",NA
+NA,"Live crown","exp(a+b*lnDBH)","Species","","Washington, Oregon, N California","1.5","","cm","kg",NA,"yes","included in model",NA
+NA,"Dead crown","exp(a+b*lnDBH)","Species","","Washington, Oregon, N California","1.5","","cm","kg",NA,"yes","included in model",NA
+NA,"Bole","exp(a+b×ln(DBH))*WD*Bk(WD=419.814,Bk=1.22)","Species","","Washington, Oregon, N California","1.5","","cm","kg",NA,"yes","included in model",NA
+NA,"Bole","exp(a+b×ln(DBH))*WD*Bk(WD=645.704,Bk=1.05)","Species","","Washington, Oregon, N California","1.5","","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass (wood and bark)","ln(BAE)=a+b*ln(DBA)","Species","Vaccinium alaskaense","Pacific Northwest","0.6","3.6","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Species","Ceanothus velutinus","Pacific Northwest","0.6","2.5","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Genus","","Rocky Mountains","0.4","1.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","lnbiomass=a+b*(ln(DBH))","Species","","Hawaii","2","16","cm","kg",NA,"yes","included in model",NA
+NA,"Stem (wood + bark)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","Pinus ponderosa","Pacific Northwest","24.1","117.7","cm","Mg",NA,"yes","included in model",NA
+NA,"Stem (wood + bark)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Pacific Northwest","24.1","117.7","cm","Mg",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","North Central States","2.5","40","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","North Central States","2.5","40","cm","kg",NA,"no",NA,NA
+NA,"Foliage total","a+b*DBH+c*(DBH^d)","Species","","North Central States","2.5","40","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","North Central States","2.5","40","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","Wisconsin","12.9","30","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","Minessota","1.1","32.6","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","Minessota","1.4","23.4","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","New York","2.5","55","mm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","North Central States","2.5","40","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","a+b*DBH+c*(DBH^d)","Species","","New York","25","550","mm","kg",NA,"no",NA,NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Lonicera canadensis","Canada","0.12","0.69","cm","g",NA,"yes","included in model",NA
+NA,"Stem + branches (live)","a*DBH^b","Species","","West Virginia","5.08","50.8","in","lb",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBH^b","Species","","Upper Great Lakes","4","32","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","4","42","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp(a+b*lnDBH)","Species","","Eastern U.S.","1","55","cm","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Wisconsin, Michigan","3.1","24.6","cm","kg",NA,"yes","1.01",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Wisconsin, Michigan","10","52.2","cm","kg",NA,"yes","1.007",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","Acer rubrum","Wisconsin, Michigan","3.1","24.6","cm","kg",NA,"yes","1.01",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","North Central States","3.5","26.3","cm","kg",NA,"yes","1.006",NA
+NA,"Stem + branches (live)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","New Hampshire","1","9","cm","g",NA,"yes","0",NA
+NA,"Foliage total","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","New Hampshire","1","9","cm","g",NA,"yes","0",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","Cornus florida","Ohio","1.85","7.25","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Wisconsin","2.8","69.5","cm","kg",NA,"yes","1.05",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Maine","0.1","2.54","in","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","lnbiomass=a+b*ln(DBH)+c*(d+(e*ln(DBH)))","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Wisconsin","7.5","23.7","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.5","6.14","cm","g",NA,"yes","1.015",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","Prunus serotina","Ohio","0.37","6.83","cm","g",NA,"yes","1.017",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.37","6.83","cm","g",NA,"yes","1.017",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Ohio","0.68","7.49","cm","g",NA,"yes","1.012",NA
+NA,"Whole tree (aboveground)","log10biomass=a+b*(log10(DBH^c))","Species","","Wisconsin","14.7","39.7","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (above stump)","10^a*DBH^b","Species","","Bristish Columbia","16","49","cm","kg",NA,"no",NA,NA
+NA,"Stem (wood + bark)","a+(b*DBH)+c*(DBH^2)+d*(DBH^3)","Species","","Rocky Mountains","0","10.16","in","lb",NA,"no",NA,NA
+NA,"Total aboveground biomass","a*DBA^b","Species","Lonicera canadensis","Canada","0.12","0.69","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","a*DBA^b","Genus","","Idaho/Montana","0.2","1.2","cm","g",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","exp(a+b*ln(DBH))","Species","","Oregon","1.7","13.2","cm","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*ln(DBH))","Species","","Oregon","10","40","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp(a+b*ln(DBH))","Species","Acer glabrum","North Central States","0.1","2.54","in","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","exp(a+b*ln(DBH))","Species","","North Central States","0.1","2.54","in","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Genus","","North America","3","180","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","109","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass (including foliage)","ln(BAE)=a+b*ln(DBA)","Species","Vaccinium parvifolium","Oregon, Washington","0.4","3.3","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass (including foliage)","ln(BAE)=a+b*ln(DBA)","Species","Vaccinium parvifolium","Oregon, Washington","0.4","3.3","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass (including foliage)","ln(BAE)=a+b*ln(DBA)","Species","","Oregon, Washington","0.4","3.3","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=4.98412+2.18584*ln(DBH)","Species","","West Cascades","1.4","13.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Species","","Rocky Mountains","0.7","2.2","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Species","","West Cascades","0.1","1.1","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Species","Rubus leucodermis","West Cascades","0.1","1.1","cm","g",NA,"yes","included in model",NA
+NA,"Live branch biomass","ln(BBL)=2.7261+2.3324*ln(DBH)","Species","","West Cascades","18.8","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Total foliage biomass","ln(BFT)=2.03496+2.1683*ln(DBH)","Species","","West Cascades","18.8","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Live branch biomass","ln(BFT)=2.0791+2.5585*ln(DBH)","Genus","","North America","8.7","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Total foliage biomass","ln(BFT)=3.4416+1.9278*ln(DBH)","Genus","","North America","8.7","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Stem bark biomass","ln(BSB)=0.716+2.8796*ln(DBH)","Genus","","North America","8.7","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Total stem biomass","ln(BST)=3.892752+2.5812*ln(DBH)","Species","","West Cascades","15.9","235.5","cm","g",NA,"","unable to extract from pub",NA
+NA,"Stem wood biomass (without bark)","ln(BSW)=3.1689+2.6825*ln(DBH)","Genus","","North America","8.7","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Pacific Northwest","0.18","2.23","cm","g",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Pacific Northwest","4.2","7","cm","g",NA,"no",NA,NA
+NA,"Crown (branches + foliage + twigs)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Rocky Mountains","2.54","30.48","in","lb",NA,"no",NA,NA
+NA,"Whole tree (above stump)","log10biomass=a+b*(log10(DBH^c))","Species","","Bristish Columbia","31","90.4","cm","kg",NA,"no",NA,NA
+NA,"Whole tree (aboveground)","exp^(-5.284602+(2.4882*(ln(pi*DBH))))","Species","","Northern England","14","162.5","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.308133+(2.4882*(ln(pi*DBH))))","Species","","Northern England","9","104","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.41227+(2.491767*(ln(pi*DBH))))","Woody species","","Northern England","NI","NI","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (aboveground)","exp^(-5.644074+(2.5189*(ln(pi*DBH))))","Species","","Northern England","11.5","96.5","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*ln(DBH))","Species","Pseudotsuga menziesii","Oregon","10","40","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*ln(DBH))","Species","","Oregon","10","40","cm","kg",NA,"yes","included in model",NA
+NA,"Whole tree (above stump)","exp(a+b*ln(DBH))","Species","","Oregon","1.7","13.2","cm","g",NA,"no",NA,NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Mixed hardwood","","North America","2.5","56","cm","kg",NA,"yes","0.36",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","64","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","70","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*lnDBH)","Family","","North America","3","70","cm","kg",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=4.98412+2.18584*ln(DBH)","Species","Pseudotsuga menziesii","West Cascades","1.4","13.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=4.98412+2.18584*ln(DBH)","Species","","West Cascades","1.4","13.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Species","","Oregon, Washington","0.4","11.5","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Species","Ceanothus velutinus","Pacific Northwest","0.3","11.7","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Species","","Pacific Northwest","0.3","6.5","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass (including foliage)","ln(BAT)=a+b*ln(DBA)","Species","Ceanothus integerrimus","Pacific Northwest","0.3","6.5","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Species","","Rocky Mountains","0.7","2.2","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Genus","","Rocky Mountains","0.4","1.4","cm","g",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","ln(BAT)=a+b*ln(DBA)","Genus","","Rocky Mountains","0.4","1.4","cm","g",NA,"yes","included in model",NA
+NA,"Live branch biomass","ln(BBL)=2.7261+2.3324*ln(DBH)","Species","Abies procera","West Cascades","18.8","111","cm","g",NA,"yes","included in model",NA
+NA,"Live branch biomass","ln(BBL)=2.7261+2.3324*ln(DBH)","Species","Abies procera","West Cascades","18.8","111","cm","g",NA,"yes","included in model",NA
+NA,"Total foliage biomass","ln(BFT)=2.03496+2.1683*ln(DBH)","Species","Abies procera","West Cascades","18.8","111","cm","g",NA,"yes","included in model",NA
+NA,"Total foliage biomass","ln(BFT)=2.03496+2.1683*ln(DBH)","Species","Abies procera","West Cascades","18.8","111","cm","g",NA,"yes","included in model",NA
+NA,"Live branch biomass","ln(BFT)=2.0791+2.5585*ln(DBH)","Genus","","North America","8.7","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Total foliage biomass","ln(BFT)=3.4416+1.9278*ln(DBH)","Genus","","North America","8.7","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Total aboveground live biomass","ln(biomass)=a+b*ln(DBA)","Species","","California","0.5","2.6","cm","kg",NA,"yes","0.165",NA
+NA,"Total aboveground live biomass","ln(biomass)=a+b*ln(DBA)","Species","Leucothoe davisiae","California","0.5","2.6","cm","kg",NA,"yes","0.165",NA
+NA,"Total aboveground live biomass","log(biomass)=a+b*log(DBH)","Species","","California","0.9","5.7","cm","kg",NA,"yes","0.124",NA
+NA,"Total aboveground live biomass","log(biomass)=a+b*log(DBH)","Species","","California","0.8","13","cm","kg",NA,"yes","0.102",NA
+NA,"Stem bark biomass","ln(BSB)=0.716+2.8796*ln(DBH)","Genus","","North America","8.7","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Total stem biomass","ln(BST)=3.892752+2.5812*ln(DBH)","Species","Abies procera","West Cascades","15.9","235.5","cm","g",NA,"yes","included in model",NA
+NA,"Total stem biomass","ln(BST)=3.892752+2.5812*ln(DBH)","Species","Abies procera","West Cascades","15.9","235.5","cm","g",NA,"yes","included in model",NA
+NA,"Stem wood biomass (without bark)","ln(BSW)=3.1689+2.6825*ln(DBH)","Genus","","North America","8.7","111","cm","g",NA,"","unable to extract from pub",NA
+NA,"Stem biomass (wood + bark)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Pacific Northwest","25","143.9","cm","Mg",NA,"yes","included in model",NA
+NA,"Stem (wood + bark)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Pacific Northwest","14.4","158.4","cm","Mg",NA,"no",NA,NA
+NA,"Stem (wood + bark)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Pacific Northwest","18.8","143.2","cm","Mg",NA,"no",NA,NA
+NA,"Stem (wood + bark)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Pacific Northwest","24.1","117.7","cm","Mg",NA,"no",NA,NA
+NA,"Crown (branches + foliage + twigs)","lnbiomass=a+b*DBH+c*(ln(DBH^d))","Species","","Rocky Mountains","2.54","30.48","in","lb",NA,"yes","included in model",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Picea abies","Europe","NI","40","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Picea abies","Europe","NI","40","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
+NA,"Total aboveground biomass","exp(a+b*(DBH/DBH+c))","Species","Fagus spp.","Europe","NI","50","cm","kg",NA,"yes","",NA
