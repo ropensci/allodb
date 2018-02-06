@@ -1,11 +1,9 @@
 Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,Erikas notes to delete before publication
-1 / A,site,ForestGEO site name,character (string),,,,
+1 / A,wsg_id,Wood specific gravity unique identification number,numeric,-,-,-,
 2 / B,family,Plant family name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
-3 / C,genus,Plant genus name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
-4 / D,species,Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
-5 / E,taxa,"Refers to the specific taxonomic level for which the equation was developed (species, genus, family or plant group)",character (string),-,-,-,
-6 / F,wsg,Wood specific gravity.,numeric,,g/cm3,#,
-7 / G,wsg_id,Wood specific gravity unique identification number,numeric,-,-,-,
-8/H,wsg_specifity,"Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)",numeric,,,,
-9/I,n_sampled,Number of trees sampled to estimate wsg,numeric,,,,"This will be almost imposible to gather, considering the amount specie sint he netwoor"
-10/J,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric,,,,
+3 / C,species,Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
+4 / D,wsg,Wood specific gravity,numeric,,g/cm3,#,
+5 / E,wsg_specifity,"Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)",numeric,,,,
+6 / F,n_sampled,Number of trees sampled to estimate wsg,numeric,,,,"This will be almost imposible to gather, considering the amount species in the network"
+7 / G,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric,,,,
+8/H,site,ForestGEO site name where ,character (string),,,,Species could be present in more than one site (specially in NA). I am not sure how to handle that.
