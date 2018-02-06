@@ -28,7 +28,7 @@ names(equations)
 
 #table4
 #right now this table may look incomplete..
-wsg<-master[c(1:3,6,7,8,30)]
+wsg<-master[c(7,2,3, 6,8,30,1)]
 names(wsg)
 
 #build tables, load them to github
