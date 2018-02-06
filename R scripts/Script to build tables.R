@@ -18,11 +18,20 @@ master<-subset(master, master$family !="Unkown")
 
 #table2
 names(master)
-sitespecies<-master[c(1:5,23,19,20)]
+sitespecies<-master[c(1:5,23,19,20,24,6,7)]
+names(sitespecies)
 
 #table3, needs to include a column after'equation_form' to combine coeficienss+formula so we get
 #..."unique" equations, then give unique id
-equations<-master[c(20,23,18,16,24,25,26,13,14,17,7,21,22,28 )]  
+equations<-master[c(20,23,18,24,25,26,13:16,17,21,22,28 )]  
+names(equations)
 
 #table4
-wd<-master[c(1:3,6,7,8,30)]
+#right now this table may look incomplete..
+wsg<-master[c(1:3,6,7,8,30)]
+names(wsg)
+
+#build tables, load them to github
+write.csv(sitespecies, file="sitespecies.csv", row.names=FALSE)
+write.csv(equations, file="equations.csv", row.names=FALSE)
+write.csv(wsg, file="wood_density.csv", row.names=FALSE)
