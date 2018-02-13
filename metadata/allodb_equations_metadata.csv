@@ -13,4 +13,5 @@ Column,Field,Description,Alphanumeric attributes/ storage type (present data val
 12 / L,fitting_method,Regression model used in original publication,,,,,
 13 / M,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0- false; 1- true,-,-,
 14 / N,bias_correction_factor,"Correction factor for the specific equation, pulled from original publication, if included",numeric,-,-,-,
-15/O,ref_id,Unique reference identification number for biomass equation source. Links to Reference table.,-,-,-,-,
+15/O,data_availability,Indicate whether or not the original source data are available,,0- false; 1- true,-,,
+16/P,ref_id,Unique reference identification number for biomass equation source. Links to Reference table.,-,-,-,-,
