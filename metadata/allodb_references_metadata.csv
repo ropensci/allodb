@@ -1,6 +1,7 @@
-Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,
+Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,Notes to be deleted later
 1 / A,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric,-,-,-,
 2 / B,ref_author,Last name of first author of a cited publication,character (string),-,-,-,
 3 / C,ref_year,Year of publication,numeric,-,-,-,
 4 / D,ref_title,Title of publication,character (string),-,-,-,
-5 / E,ref_doi,Publication DOI (Digital object identifier),character (string),-,-,-,
+5 / E,ref_journal,"Journal, book, report where published",character (string),-,-,-,EG: Keep this for now 02/14/2018
+6 / F,ref_doi,Publication DOI (Digital object identifier),character (string),-,-,-,
