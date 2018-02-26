@@ -1,0 +1,64 @@
+---
+title: "Code review"
+date: "2018-02-27"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This document outlines issues to discuss during a personal meeting at SERC with Erika and Krista. Erika proposed these topics:
+
+1. __allodb__ specifically best way to update data files, I still haven't find how to work Rstudio and GitHub.
+
+2. FieldForms for census, I saw some work in Github/forestgeo, would like to learn as I will be a user pretty soon.
+
+# 1. Project structure and worflow with RStudio and GitHub
+
+## Workflow with RStudio and GitHub
+
+My goal is to design a workflow that is convenient for Erika and makes it easy to integrate her work with that of others.
+
+* What is Erika's workflow?
+
+* What she would like to do that she finds if difficult with her current workflow?
+
+If her workflow would improve with RStudio, connect RStudio and GitHub (see how [here](http://happygitwithr.com/rstudio-git-github.html)).
+
+## Project structure
+
+__allodb__ will be used and shared as an R package. This will be useful for the users, eventually. But do we need to maintain an R package right now? Do we prefer to maintain its structure from this early stage or do we prefer to work more freely now and adapt the project's structure to an R package later? Here are some questions to guide the discussion:
+
+* Do we need an R package?
+
+* What are the advantages and dissavantages now and later?
+
+* Consider the simpler structure of an RStudio project as an alternative.
+
+* How hard it is to transform the current project into an R package?
+
+* How hard it is to maintain an R package?
+
+* What are the resources to help us maintain the structure of an R package (cheetsheet, book, etc.)
+    * https://github.com/rstudio/cheatsheets/raw/master/package-development.pdf
+    * http://r-pkgs.had.co.nz/intro.html
+
+* How can I help maintain whatever structure we believe it's best?
+
+### Discussion on structure
+
+About the current structure of the project
+
+* How could we change the current structure to make it more suitable for Erika's workflow?
+
+* What is the importance of each directory in the current structure?
+
+* Discuss changes that would make the project more reproducible. May I restructure the project in a new branch for Erika to review? We may merge it to master but only if Erika likes the new structure.
+
+Note: Prominent members of the R community are discussing how to structure research projects (this thread contains many interesting opinions and links: https://github.com/ropensci/unconf17/issues/5; and this article will likely be influential: https://goo.gl/7w4zo6). Some tools are starting to arise (e.g. https://github.com/benmarwick/rrtools) but there is still no consensus.
+
+# 2. FieldForms for census
+
+The work I did is to build an app to help data managers to process the data after the data has been gathered from the field using the FastField software. My work responds directly to requirements by Jess Shue. This video shows how to get and use the app: https://www.youtube.com/watch?v=PN14GGJOVJ4. The app will likely change as the users provide feedback.
+
