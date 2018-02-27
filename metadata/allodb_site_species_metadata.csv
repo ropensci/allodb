@@ -1,5 +1,5 @@
 Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,Erikas notes to delete before publication
-1 / A,site,ForestGEO site name,character (string),-,-,-,
+1 / A,site,ForestGEO site name (corresponds to name in ForestGEO sites master table),character (string),-,-,-,
 2 / B,family,Plant family name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
 3 / C,species,Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),-,-,-,
 4 / D,species_code,"Species code used at the ForestGEO site, could be numeric or characters",,,,,
