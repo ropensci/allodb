@@ -1,37 +1,46 @@
-#Dec 20, 2017
-#Erika Gonzalez-Akre
-#Last update : 01/23/2018
-#This simple script is used to build 4 tables for the ForestGEO allometry datapaper
+# Build the core tables of the data paper.
 
-#read.csv file, which could be modified. allotemp_main.cvs resides in 'data" folder in Git.
-master<-read.csv("allotemp_main.csv")
-#eliminate rows where fam or sp is unknown #use unique(allo_main$species)
-master<-subset(master, master$family !="Unkown")
-#chnage name of "equation" column to "equation_form"
+master <- read.csv("allotemp_main.csv")
+# eliminate rows where fam or sp is unknown #use unique(allo_main$species)
+master <- subset(master, master$family != "Unkown")
+# chnage name of "equation" column to "equation_form"
 
-#Currently, we think 5 tables will go to the paper
-#table 1: Basic info ForestGEO sites (could be modified from forestgeo/Site-Data repository)
-#table 2: Site-species (includes non-tropical sites, links to equation table with eq Id)
-#table 3: Allometric equations (doesn't include sites, but sp? not sure)
-#table 4: Wood density (with this scrip and master table we only take wsg for temperate sites, later to be merge with trop)
-#table 5: References (links to wood density table with an id, my raw reference table includes sites for my own sanity!)
+# Basic info ForestGEO sites (could be modified from
+# forestgeo/Site-Data repository).
 
-#table2 or sitesp
+
+
+# TODO: Add table. See https://goo.gl/ic7uya.
+
+
+
+# Site-species (includes non-tropical sites, links to equation table
+# with eq Id).
 names(master)
-sitespecies<-master[c(1:5,23,19,20,24,6,7)]
+sitespecies <- master[c(1:5, 23, 19, 20, 24, 6, 7)]
 names(sitespecies)
+write.csv(sitespecies, file = "sitespecies.csv", row.names = FALSE)
 
-#table3, needs to include a column after'equation_form' to combine coeficienss+formula so we get
-#..."unique" equations, then give unique id
-equations<-master[c(20,23,18,24,25,26,13:16,17,21,22,28 )]
+# Allometric equations (doesn't include sites, but sp? not sure)
+# Needs to include a column after'equation_form' to combine
+# coeficienss+formula so we get "unique" equations, then give unique id
+equations <- master[c(20, 23, 18, 24, 25, 26, 13:16, 17, 21, 22, 28)]
 names(equations)
+write.csv(equations, file = "equations.csv", row.names = FALSE)
 
-#table4
-#right now this table may look incomplete..
-wsg<-master[c(7,2,3, 6,8,30,1)]
+# Wood density (with this scrip and master table we only take wsg for
+# temperate sites, later to be merge with trop).
+# Right now this table may look incomplete.
+wsg <- master[c(7, 2, 3, 6, 8, 30, 1)]
 names(wsg)
+write.csv(wsg, file = "wood_density.csv", row.names = FALSE)
 
-#build tables, load them to github
-write.csv(sitespecies, file="sitespecies.csv", row.names=FALSE)
-write.csv(equations, file="equations.csv", row.names=FALSE)
-write.csv(wsg, file="wood_density.csv", row.names=FALSE)
+# References (links to wood density table with an id, my raw reference
+# table includes sites for my own sanity!).
+
+
+
+# TODO: Add table.
+
+
+
