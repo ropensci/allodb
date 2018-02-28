@@ -14,16 +14,16 @@ master<-subset(master, master$family !="Unkown")
 #table 2: Site-species (includes non-tropical sites, links to equation table with eq Id)
 #table 3: Allometric equations (doesn't include sites, but sp? not sure)
 #table 4: Wood density (with this scrip and master table we only take wsg for temperate sites, later to be merge with trop)
-#table 5: References (links to wood density table with an id, my raw reference table includes sites for my own sanity!) 
+#table 5: References (links to wood density table with an id, my raw reference table includes sites for my own sanity!)
 
-#table2
+#table2 or sitesp
 names(master)
 sitespecies<-master[c(1:5,23,19,20,24,6,7)]
 names(sitespecies)
 
 #table3, needs to include a column after'equation_form' to combine coeficienss+formula so we get
 #..."unique" equations, then give unique id
-equations<-master[c(20,23,18,24,25,26,13:16,17,21,22,28 )]  
+equations<-master[c(20,23,18,24,25,26,13:16,17,21,22,28 )]
 names(equations)
 
 #table4
