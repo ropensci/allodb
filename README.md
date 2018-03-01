@@ -1,12 +1,30 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# allodb: A database of allometric equations for ForestGEO
+# allodb: Allometric equations from ForestGEO’s sites <img src="https://i.imgur.com/39pvr4n.png" align="right" height=44 />
+
+[![Travis build
+status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
 
 The goal of allodb is to develop, host and give access to tables of
 allometric equations for ForestGEO’s network.
 
-# Examples
+## Installation
+
+To install **allodb** run the following code in R (but see the note
+below):
+
+    # install.packages("remotes")
+    remotes::install_github("forestgeo/allodb", auth_token = "abc")
+
+NOTES:
+
+  - For details on how to install from private repositories see [this
+    article](https://maurolepore.netlify.com/2017/12/06/2017-12-06-best-prectice-for-installing-packages-from-private-repos/).
+  - For general advice on installing packages from GitHub see [this
+    article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
+
+# Example
 
 ``` r
 library(allodb)
