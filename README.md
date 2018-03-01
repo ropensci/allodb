@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# allodb: Allometric equations from ForestGEO’s sites <img src="https://i.imgur.com/39pvr4n.png" align="right" height=44 />
+# allodb: Database of allometric equations <img src="https://i.imgur.com/39pvr4n.png" align="right" height=44 />
 
 [![Travis build
 status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
@@ -11,8 +11,7 @@ allometric equations for ForestGEO’s network.
 
 ## Installation
 
-To install **allodb** run the following code in R (but see the note
-below):
+To install **allodb** run the following code in R (and the notes below):
 
     # install.packages("remotes")
     remotes::install_github("forestgeo/allodb", auth_token = "abc")
