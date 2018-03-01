@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Wood density data set from CTFS sites. � WSG • allodb</title>
+<title>Tables of wood density and associated metadata. — wsg â€¢ allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -18,6 +18,8 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -25,6 +27,13 @@
 <script src="../pkgdown.js"></script>
   
   
+<meta property="og:title" content="Tables of wood density and associated metadata. — wsg" />
+
+<meta property="og:description" content="
+wsg: Table of allometric equations.
+wsg_metadata: Table of metadata of wsg.
+" />
+<meta name="twitter:card" content="summary" />
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -52,72 +61,28 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../reference/index.html">
-    <span class="fa fa-database"></span>
-     
-    Datasets
-  </a>
-</li>
-<li>
-  <a href="https://bookdown.org/forestgeoguest/allodb_app/">
-    <span class="fa fa-play-circle"></span>
-     
-    App
-  </a>
-</li>
-<li>
-  <a href="../news/index.html">
-    <span class="fa fa-newspaper-o"></span>
-     
-    news
-  </a>
+  <a href="../reference/index.html">Datasets</a>
 </li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-user"></span>
-     
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="https://github.com/orgs/forestgeo/people/ervanSTRI">Ervan Rutishauser</a>
-    </li>
-    <li>
-      <a href="https://github.com/orgs/forestgeo/people/teixeirak">Kristina Anderson-Teixeira</a>
-    </li>
-    <li>
-      <a href="https://github.com/orgs/forestgeo/people/gonzalezeb">Erika Gonzalez-Akre</a>
-    </li>
-  </ul>
+        <li>
+  <a href="../news/index.html">news</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+<li>
+  <a href="https://github.com/maurolepore">
     <span class="fa fa-gavel"></span>
      
-     
-    <span class="caret"></span>
   </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="https://github.com/maurolepore">Mauro Lepore</a>
-    </li>
-    <li>
-      <a href="https://github.com/orgs/forestgeo/people/gabrielareto">Gabriel Arellano</a>
-    </li>
-    <li>
-      <a href="https://github.com/orgs/forestgeo/people/seanmcm">Sean McMahon</a>
-    </li>
-  </ul>
 </li>
 <li>
   <a href="https://github.com/forestgeo/allodb">
     <span class="fa fa-github"></span>
      
   </a>
+</li>
+<li>
+  <a href="https://forestgeo.github.io/fgeo/">fgeo</a>
 </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -130,29 +95,23 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Wood density data set from CTFS sites.</h1>
+    <h1>Tables of wood density and associated metadata.</h1>
     </div>
 
     
-    <p>Wood density data set from CTFS sites.</p>
+    <ul>
+<li><p><code>wsg</code>: Table of allometric equations.</p></li>
+<li><p><code>wsg_metadata</code>: Table of metadata of <code>wsg</code>.</p></li>
+</ul>
     
 
-    <pre class="usage"><span class='no'>WSG</span></pre>
+    <pre class="usage"><span class='no'>wsg</span>
+
+<span class='no'>wsg_metadata</span></pre>
         
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 16558 rows and 9 columns.</p>
-    
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p>Ervan Rutishauser (er.rutishauser@gmail.com), received on Sat,
-Oct 28, 2017 at 4:05 AM.</p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <p><a href='wsg_ctfs3.html'>wsg_ctfs3</a></p>
-<p>Other data from tropical forests: <code><a href='ficus.html'>ficus</a></code>,
-  <code><a href='site.info.html'>site.info</a></code>, <code><a href='wsg_ctfs3.html'>wsg_ctfs3</a></code></p>
+    <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 419 rows and 7 columns.</p>
     
 
   </div>
@@ -161,10 +120,6 @@ Oct 28, 2017 at 4:05 AM.</p>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#format">Format</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#see-also">See also</a></li>
           </ul>
 
   </div>
@@ -172,11 +127,11 @@ Oct 28, 2017 at 4:05 AM.</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Gonzalez Erika, Kristina Teixeira, Mauro Lepore, Rutishauser Ervan.</p>
+  <p>Developed by Gonzalez-Akre Erika, Rutishauser Ervan, Mauro Lepore, Kristina Teixeira.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
