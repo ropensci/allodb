@@ -22,8 +22,8 @@ Useful links:
 Authors:
 \itemize{
   \item Gonzalez-Akre Erika \email{GonzalezEB@@si.edu}
-  \item Kristina Teixeira \email{TeixeiraK@@si.edu}
   \item Rutishauser Ervan \email{RutishauserE@@si.edu}
+  \item Kristina Teixeira \email{TeixeiraK@@si.edu}
 }
 
 }
