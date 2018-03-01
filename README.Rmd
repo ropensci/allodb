@@ -5,21 +5,11 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r setup, echo = FALSE, message=FALSE, warning=FALSE}
-# hadley's settings
 set.seed(1014)
-options(digits = 3)
 
 knitr::opts_chunk$set(
-  echo = TRUE,  # {mine}
   comment = "#>",
-  collapse = TRUE,
-  cache = TRUE,
-  out.width = "70%",
-  fig.align = "center",
-  fig.width = 6,
-  fig.asp = 0.618,  # 1 / phi
-  fig.show = "hold",
-  rows.print = 3  # {mine}
+  collapse = TRUE
 )
 ```
 
@@ -27,75 +17,23 @@ knitr::opts_chunk$set(
 
 The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO's network.
 
-
-## Source
-
-On Sat, Oct 28, 2017 at 4:05 AM, Ervan Rutishauser <er.rutishauser@gmail.com> wrote:
-
-> For now, you can use the R functions that I have developed to compute biomass at all tropical CTFS sites. It is based on Chave et al 2014 allometric models and some modified functions of the BIOMASS package. It computes biomass after having allocated wood density. The wood density database arise from CTFS and, I guess, isn't aimed to be shared publicly.
-
-## Setup
-
-Make data manipulation and visualization easier
-
-```{r}
-library(tidyverse)
-# Print only few rows of dataframes to save space and time
-options(dplyr.print_min = 3, dplyr.print_max = 3)
-```
-
-
-Load data objects and functions in __allodb__ (from Ervan)
+# Examples
 
 ```{r}
 library(allodb)
+library(tibble)
+
+equations
+equations_metadata
+
+missing_values_metadata
+
+references_metadata
+
+sitespecies
+sitespecies_metadata
+
+wsg
+wsg_metadata
 ```
 
-![](https://i.imgur.com/O9rt33U.png)
-
-## Explore data
-
-```{r}
-glimpse(ficus)
-```
-
-```{r}
-glimpse(site.info)
-```
-
-```{r}
-glimpse(WSG)
-```
-
-I'm particularly interested in these data. Can we add a variable `equation` -- relating dbh with biomass based on `wsg` and `E`?
-
-```{r}
-left_join(site.info, WSG) %>% 
-  select(site, genus, species, wsg, E)
-```
-
-## Explore code
-
-Ervan, could you show some examples of how your funcitons work?
-
-Go to [function's help files](https://forestgeo.github.io/allodb/reference/index.html)
-
-## Installation
-
-You can install allodb from github with:
-
-```{r gh-installation, eval = FALSE}
-# To install from a private repo, use auth_token # with a token from
-# https://github.com/settings/tokens. You only need the repo # scope.
-
-# install.packages("devtools")
-
-# Install the master branch
-devtools::install_github("forestgeo/allodb", auth_token = "abc")
-
-# Install an ISSUE-specific branch with
-devtools::install_github("forestgeo/allodb@ISSUE", auth_token = "abc")
-
-# Then, load each time before using
-library(allodb)
-```

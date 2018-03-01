@@ -10,26 +10,39 @@ also update data.md, or (2) Run \> Run All (Ctrl+Alt+R). You can also
 update the data in specific code chunks. (Learn more about RMarkdown
 documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 
-# Gather raw master data and clean it
-
-Clean master data
+# Setup
 
 ``` r
-master <- readr::read_csv(here::here("data-raw/allotemp_main.csv"))
+library(tidyverse)
+#> -- Attaching packages ------------------------------------------- tidyverse 1.2.1 --
+#> v ggplot2 2.2.1     v purrr   0.2.4
+#> v tibble  1.4.2     v dplyr   0.7.4
+#> v tidyr   0.8.0     v stringr 1.3.0
+#> v readr   1.1.1     v forcats 0.3.0
+#> -- Conflicts ---------------------------------------------- tidyverse_conflicts() --
+#> x dplyr::filter() masks stats::filter()
+#> x dplyr::lag()    masks stats::lag()
+library(here)
+#> here() starts at C:/Users/LeporeM/Dropbox/git_repos/allodb
+library(usethis)
 ```
 
-    ## Parsed with column specification:
-    ## cols(
-    ##   .default = col_character(),
-    ##   n_sampled = col_integer(),
-    ##   a = col_double(),
-    ##   b = col_double(),
-    ##   c = col_double(),
-    ##   d = col_double(),
-    ##   n_trees = col_integer()
-    ## )
+# Gather raw master data and clean it
 
-    ## See spec(...) for full column specifications.
+``` r
+master <- read_csv(here("data-raw/allotemp_main.csv"))
+#> Parsed with column specification:
+#> cols(
+#>   .default = col_character(),
+#>   n_sampled = col_integer(),
+#>   a = col_double(),
+#>   b = col_double(),
+#>   c = col_double(),
+#>   d = col_double(),
+#>   n_trees = col_integer()
+#> )
+#> See spec(...) for full column specifications.
+```
 
 ``` r
 # FIXME: Remove ambiguity of this code chunk (#29; https://goo.gl/rmuzmH)
@@ -45,7 +58,7 @@ dataset documented in R/data.R to produce a help file that can be
 accessed from the R console with `?name-of-the-dataset` and also from
 the Functions Index tab of the website of **allodb**.
 
-## Dataset `equations`
+## `equations`
 
 Allometric equations (doesn’t include sites, but sp? not sure)
 
@@ -68,65 +81,51 @@ equations_cols <- c(
   "equation_grouping",
   "bias correction _CF"
 )
-equations <- master[equations_cols]
-usethis::use_data(equations, overwrite = TRUE)
-```
+equations <- as.tibble(master[equations_cols])
+use_data(equations, overwrite = TRUE)
+#> <U+2714> Saving equations to data/equations.rda
 
-    ## <U+2714> Saving equations to data/equations.rda
-
-``` r
-equations_metadata <- readr::read_csv(
-  here::here("data-raw/data_equations_metadata.csv")
+equations_metadata <- read_csv(
+  here("data-raw/data_equations_metadata.csv")
 )
+#> Parsed with column specification:
+#> cols(
+#>   Column = col_character(),
+#>   Field = col_character(),
+#>   Description = col_character(),
+#>   `Alphanumeric attributes/ storage type (present data values)` = col_character(),
+#>   `Variable codes` = col_character(),
+#>   Units = col_character(),
+#>   Range = col_character(),
+#>   `Erikas notes to delete before publication` = col_character()
+#> )
+use_data(equations_metadata, overwrite = TRUE)
+#> <U+2714> Saving equations_metadata to data/equations_metadata.rda
 ```
 
-    ## Parsed with column specification:
-    ## cols(
-    ##   Column = col_character(),
-    ##   Field = col_character(),
-    ##   Description = col_character(),
-    ##   `Alphanumeric attributes/ storage type (present data values)` = col_character(),
-    ##   `Variable codes` = col_character(),
-    ##   Units = col_character(),
-    ##   Range = col_character(),
-    ##   `Erikas notes to delete before publication` = col_character()
-    ## )
+## `missing_values`
 
 ``` r
-usethis::use_data(equations_metadata, overwrite = TRUE)
-```
-
-    ## <U+2714> Saving equations_metadata to data/equations_metadata.rda
-
-## Dataset `missing_values`
-
-``` r
-missing_values_metadata <- readr::read_csv(
-  here::here("data-raw/data_missing_values_metadata.csv")
+missing_values_metadata <- read_csv(
+  here("data-raw/data_missing_values_metadata.csv")
 )
+#> Warning: Missing column names filled in: 'X4' [4], 'X5' [5], 'X6' [6],
+#> 'X7' [7]
+#> Parsed with column specification:
+#> cols(
+#>   Code = col_character(),
+#>   Definition = col_character(),
+#>   Description = col_character(),
+#>   X4 = col_character(),
+#>   X5 = col_character(),
+#>   X6 = col_character(),
+#>   X7 = col_character()
+#> )
+use_data(missing_values_metadata, overwrite = TRUE)
+#> <U+2714> Saving missing_values_metadata to data/missing_values_metadata.rda
 ```
 
-    ## Warning: Missing column names filled in: 'X4' [4], 'X5' [5], 'X6' [6],
-    ## 'X7' [7]
-
-    ## Parsed with column specification:
-    ## cols(
-    ##   Code = col_character(),
-    ##   Definition = col_character(),
-    ##   Description = col_character(),
-    ##   X4 = col_character(),
-    ##   X5 = col_character(),
-    ##   X6 = col_character(),
-    ##   X7 = col_character()
-    ## )
-
-``` r
-usethis::use_data(missing_values_metadata, overwrite = TRUE)
-```
-
-    ## <U+2714> Saving missing_values_metadata to data/missing_values_metadata.rda
-
-## Dataset `references`
+## `references`
 
 References (links to wood density table with an id, my raw reference
 table includes sites for my own sanity\!).
@@ -134,42 +133,33 @@ table includes sites for my own sanity\!).
 ``` r
 # TODO: Add table.
 
-# usethis::use_data(references, overwrite = TRUE)
-
-references_metadata <- readr::read_csv(
-  here::here("data-raw/data_references_metadata.csv")
+references_metadata <- read_csv(
+  here("data-raw/data_references_metadata.csv")
 )
+#> Parsed with column specification:
+#> cols(
+#>   Column = col_character(),
+#>   Field = col_character(),
+#>   Description = col_character(),
+#>   `Alphanumeric attributes/ storage type (present data values)` = col_character(),
+#>   `Variable codes` = col_character(),
+#>   Units = col_character(),
+#>   Range = col_character(),
+#>   `Notes to be deleted later` = col_character()
+#> )
+use_data(references_metadata, overwrite = TRUE)
+#> <U+2714> Saving references_metadata to data/references_metadata.rda
 ```
 
-    ## Parsed with column specification:
-    ## cols(
-    ##   Column = col_character(),
-    ##   Field = col_character(),
-    ##   Description = col_character(),
-    ##   `Alphanumeric attributes/ storage type (present data values)` = col_character(),
-    ##   `Variable codes` = col_character(),
-    ##   Units = col_character(),
-    ##   Range = col_character(),
-    ##   `Notes to be deleted later` = col_character()
-    ## )
-
-``` r
-usethis::use_data(references_metadata, overwrite = TRUE)
-```
-
-    ## <U+2714> Saving references_metadata to data/references_metadata.rda
-
-## Dataset `sites_info`
+## `sites_info`
 
 ``` r
 # Basic info ForestGEO sites
 
 # TODO: Add table. See https://goo.gl/ic7uya.
-
-# usethis::use_data(references, overwrite = TRUE)
 ```
 
-## Dataset `sitespecies`
+## `sitespecies`
 
 Site-species (includes non-tropical sites, links to equation table with
 eq Id).
@@ -188,37 +178,29 @@ sitespecies_cols <- c(
   "wsg",
   "wsg_id"
 )
-sitespecies <- master[sitespecies_cols]
-usethis::use_data(sitespecies, overwrite = TRUE)
-```
+sitespecies <- as.tibble(master[sitespecies_cols])
+use_data(sitespecies, overwrite = TRUE)
+#> <U+2714> Saving sitespecies to data/sitespecies.rda
 
-    ## <U+2714> Saving sitespecies to data/sitespecies.rda
-
-``` r
-sitespecies_metadata <- readr::read_csv(
-  here::here("data-raw/data_sitespecies_metadata.csv")
+sitespecies_metadata <- read_csv(
+  here("data-raw/data_sitespecies_metadata.csv")
 )
+#> Parsed with column specification:
+#> cols(
+#>   Column = col_character(),
+#>   Field = col_character(),
+#>   Description = col_character(),
+#>   `Alphanumeric attributes/ storage type (present data values)` = col_character(),
+#>   `Variable codes` = col_character(),
+#>   Units = col_character(),
+#>   Range = col_character(),
+#>   `Erikas notes to delete before publication` = col_character()
+#> )
+use_data(sitespecies_metadata, overwrite = TRUE)
+#> <U+2714> Saving sitespecies_metadata to data/sitespecies_metadata.rda
 ```
 
-    ## Parsed with column specification:
-    ## cols(
-    ##   Column = col_character(),
-    ##   Field = col_character(),
-    ##   Description = col_character(),
-    ##   `Alphanumeric attributes/ storage type (present data values)` = col_character(),
-    ##   `Variable codes` = col_character(),
-    ##   Units = col_character(),
-    ##   Range = col_character(),
-    ##   `Erikas notes to delete before publication` = col_character()
-    ## )
-
-``` r
-usethis::use_data(sitespecies_metadata, overwrite = TRUE)
-```
-
-    ## <U+2714> Saving sitespecies_metadata to data/sitespecies_metadata.rda
-
-## Dataset `wsg`
+## `wsg`
 
 Wood density (with this scrip and master table we only take wsg for
 temperate sites, later to be merge with trop).
@@ -233,32 +215,24 @@ wsg_cols <- c(
   "variable",
   "site"
 )
-wsg <- master[wsg_cols]
-usethis::use_data(wsg, overwrite = TRUE)
-```
+wsg <- as.tibble(master[wsg_cols])
+use_data(wsg, overwrite = TRUE)
+#> <U+2714> Saving wsg to data/wsg.rda
 
-    ## <U+2714> Saving wsg to data/wsg.rda
-
-``` r
-wsg_metadata <- readr::read_csv(
-  here::here("data-raw/data_wsg_metadata.csv")
+wsg_metadata <- read_csv(
+  here("data-raw/data_wsg_metadata.csv")
 )
+#> Parsed with column specification:
+#> cols(
+#>   Column = col_character(),
+#>   Field = col_character(),
+#>   Description = col_character(),
+#>   `Alphanumeric attributes/ storage type (present data values)` = col_character(),
+#>   `Variable codes` = col_character(),
+#>   Units = col_character(),
+#>   Range = col_character(),
+#>   `Erikas notes to delete before publication` = col_character()
+#> )
+use_data(wsg_metadata, overwrite = TRUE)
+#> <U+2714> Saving wsg_metadata to data/wsg_metadata.rda
 ```
-
-    ## Parsed with column specification:
-    ## cols(
-    ##   Column = col_character(),
-    ##   Field = col_character(),
-    ##   Description = col_character(),
-    ##   `Alphanumeric attributes/ storage type (present data values)` = col_character(),
-    ##   `Variable codes` = col_character(),
-    ##   Units = col_character(),
-    ##   Range = col_character(),
-    ##   `Erikas notes to delete before publication` = col_character()
-    ## )
-
-``` r
-usethis::use_data(wsg_metadata, overwrite = TRUE)
-```
-
-    ## <U+2714> Saving wsg_metadata to data/wsg_metadata.rda

@@ -3,20 +3,30 @@ title: "Gather raw data,clean it and export it to  data/"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Overview
 
 This document exports data. It takes data from data-raw/, cleans it, and places a .rda version of it in data/. To update all exported data you can do either of two things: (1) Click Knit (Ctrl+Shift+K), which will also update data.md, or (2) Run > Run All (Ctrl+Alt+R). You can also update the data in specific code chunks. (Learn more about RMarkdown documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 
+# Setup
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  echo = TRUE
+)
+```
+
+```{r}
+library(tidyverse)
+library(here)
+library(usethis)
+```
+
 # Gather raw master data and clean it
 
-Clean master data
-
 ```{r master}
-master <- readr::read_csv(here::here("data-raw/allotemp_main.csv"))
+master <- read_csv(here("data-raw/allotemp_main.csv"))
 ```
 
 ```{r master-clean}
@@ -30,7 +40,7 @@ master <- subset(master, family != "Unkown")
 
 This section exports subsets of the clean master data to data/. Each dataset documented in R/data.R to produce a help file that can be accessed from the R console with `?name-of-the-dataset` and also from the Functions Index tab of the website of __allodb__.
 
-## Dataset `equations`
+## `equations`
 
 Allometric equations (doesn't include sites, but sp? not sure)
 
@@ -53,54 +63,50 @@ equations_cols <- c(
   "equation_grouping",
   "bias correction _CF"
 )
-equations <- master[equations_cols]
-usethis::use_data(equations, overwrite = TRUE)
+equations <- as.tibble(master[equations_cols])
+use_data(equations, overwrite = TRUE)
 
-equations_metadata <- readr::read_csv(
-  here::here("data-raw/data_equations_metadata.csv")
+equations_metadata <- read_csv(
+  here("data-raw/data_equations_metadata.csv")
 )
-usethis::use_data(equations_metadata, overwrite = TRUE)
+use_data(equations_metadata, overwrite = TRUE)
 ```
 
-## Dataset `missing_values`
+## `missing_values`
 
 ```{r missing-values}
-missing_values_metadata <- readr::read_csv(
-  here::here("data-raw/data_missing_values_metadata.csv")
+missing_values_metadata <- read_csv(
+  here("data-raw/data_missing_values_metadata.csv")
 )
-usethis::use_data(missing_values_metadata, overwrite = TRUE)
+use_data(missing_values_metadata, overwrite = TRUE)
 ```
 
-## Dataset `references`
+## `references`
 
 References (links to wood density table with an id, my raw reference table includes sites for my own sanity!).
 
-```{r}
+```{r references}
 # TODO: Add table.
 
-# usethis::use_data(references, overwrite = TRUE)
-
-references_metadata <- readr::read_csv(
-  here::here("data-raw/data_references_metadata.csv")
+references_metadata <- read_csv(
+  here("data-raw/data_references_metadata.csv")
 )
-usethis::use_data(references_metadata, overwrite = TRUE)
+use_data(references_metadata, overwrite = TRUE)
 ```
 
-## Dataset `sites_info`
+## `sites_info`
 
-```{r}
+```{r sites-info}
 # Basic info ForestGEO sites
 
 # TODO: Add table. See https://goo.gl/ic7uya.
-
-# usethis::use_data(references, overwrite = TRUE)
 ```
 
-## Dataset `sitespecies`
+## `sitespecies`
 
 Site-species (includes non-tropical sites, links to equation table with eq Id).
 
-```{r}
+```{r sitespecies}
 sitespecies_cols <- c(
   "site",
   "family",
@@ -114,20 +120,20 @@ sitespecies_cols <- c(
   "wsg",
   "wsg_id"
 )
-sitespecies <- master[sitespecies_cols]
-usethis::use_data(sitespecies, overwrite = TRUE)
+sitespecies <- as.tibble(master[sitespecies_cols])
+use_data(sitespecies, overwrite = TRUE)
 
-sitespecies_metadata <- readr::read_csv(
-  here::here("data-raw/data_sitespecies_metadata.csv")
+sitespecies_metadata <- read_csv(
+  here("data-raw/data_sitespecies_metadata.csv")
 )
-usethis::use_data(sitespecies_metadata, overwrite = TRUE)
+use_data(sitespecies_metadata, overwrite = TRUE)
 ```
 
-## Dataset `wsg`
+## `wsg`
 
 Wood density (with this scrip and master table we only take wsg for temperate sites, later to be merge with trop).
 
-```{r}
+```{r wsg}
 wsg_cols <- c(
   "wsg_id",
   "family",
@@ -137,12 +143,12 @@ wsg_cols <- c(
   "variable",
   "site"
 )
-wsg <- master[wsg_cols]
-usethis::use_data(wsg, overwrite = TRUE)
+wsg <- as.tibble(master[wsg_cols])
+use_data(wsg, overwrite = TRUE)
 
-wsg_metadata <- readr::read_csv(
-  here::here("data-raw/data_wsg_metadata.csv")
+wsg_metadata <- read_csv(
+  here("data-raw/data_wsg_metadata.csv")
 )
-usethis::use_data(wsg_metadata, overwrite = TRUE)
+use_data(wsg_metadata, overwrite = TRUE)
 ```
 
