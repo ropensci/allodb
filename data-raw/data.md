@@ -14,12 +14,12 @@ documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 
 ``` r
 library(tidyverse)
-#> -- Attaching packages ------------------------------------------- tidyverse 1.2.1 --
+#> -- Attaching packages ---------------------------------------------- tidyverse 1.2.1 --
 #> v ggplot2 2.2.1     v purrr   0.2.4
 #> v tibble  1.4.2     v dplyr   0.7.4
 #> v tidyr   0.8.0     v stringr 1.3.0
 #> v readr   1.1.1     v forcats 0.3.0
-#> -- Conflicts ---------------------------------------------- tidyverse_conflicts() --
+#> -- Conflicts ------------------------------------------------- tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 library(here)
@@ -154,9 +154,26 @@ use_data(references_metadata, overwrite = TRUE)
 ## `sites_info`
 
 ``` r
-# Basic info ForestGEO sites
-
-# TODO: Add table. See https://goo.gl/ic7uya.
+sites_info <- read_csv(
+  here("data-raw/data_sites_info.csv")
+)
+#> Parsed with column specification:
+#> cols(
+#>   id = col_double(),
+#>   Site = col_character(),
+#>   site = col_character(),
+#>   lat = col_double(),
+#>   long = col_double(),
+#>   UTM_Zone = col_integer(),
+#>   UTM_X = col_character(),
+#>   UTM_Y = col_character(),
+#>   intertropical = col_character(),
+#>   size.ha = col_double(),
+#>   E = col_double(),
+#>   wsg.site.name = col_character()
+#> )
+use_data(sites_info, overwrite = TRUE)
+#> <U+2714> Saving sites_info to data/sites_info.rda
 ```
 
 ## `sitespecies`

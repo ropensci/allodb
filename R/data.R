@@ -42,3 +42,11 @@
 
 #' @name wsg
 "wsg_metadata"
+
+
+
+#' Table of information on sites from tropical forests.
+#'
+#' @source Ervan Rutishauser (er.rutishauser@@gmail.com), received on Sat,
+#' Oct 28, 2017 at 4:05 AM.
+"sites_info"

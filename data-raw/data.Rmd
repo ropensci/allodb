@@ -97,9 +97,10 @@ use_data(references_metadata, overwrite = TRUE)
 ## `sites_info`
 
 ```{r sites-info}
-# Basic info ForestGEO sites
-
-# TODO: Add table. See https://goo.gl/ic7uya.
+sites_info <- read_csv(
+  here("data-raw/data_sites_info.csv")
+)
+use_data(sites_info, overwrite = TRUE)
 ```
 
 ## `sitespecies`
