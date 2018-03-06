@@ -1,3 +1,7 @@
+# allodb 0.0.0.9004
+
+* Start new pre-release.
+
 # allodb 0.0.0.9003
 
 * Remove obsolete files of wood density from Joe (#28).
