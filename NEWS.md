@@ -1,3 +1,7 @@
+# allodb 0.0.0.9003
+
+* Remove obsolete files of wood density from Joe (#28).
+
 # allodb 0.0.0.9002
 
 * Remove obsolete files, mostly from Ervan (#27).
