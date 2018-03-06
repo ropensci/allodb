@@ -1,3 +1,7 @@
+# allodb 0.0.0.9002
+
+* Remove obsolete files, mostly from Ervan (#27).
+
 # allodb 0.0.0.9001
 
 * Restructure as an R package.
