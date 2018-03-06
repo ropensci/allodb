@@ -161,4 +161,21 @@ wsg_metadata
 #> 9 9 / I  ref_id Unique refe~ numeric          <NA>             <NA>  <NA> 
 #> # ... with 1 more variable: `Erikas notes to delete before
 #> #   publication` <chr>
+
+sites_info
+#> # A tibble: 63 x 12
+#>       id Site    site       lat   long UTM_Zone UTM_X  UTM_Y intertropical
+#>    <dbl> <chr>   <chr>    <dbl>  <dbl>    <int> <chr>  <chr> <chr>        
+#>  1   42. Amacay~ amacay~  -3.81  -70.3       19 35922~ 9578~ Tropical     
+#>  2   51. Badago~ badago~  29.5   111.        49 45345~ 3259~ Other        
+#>  3   52. Baotia~ baotia~  33.5   112.        49 58732~ 3706~ Other        
+#>  4   45. Barro ~ barro ~   9.15  -79.8       17 62678~ 1012~ Tropical     
+#>  5   18. Bukit ~ bukit ~   1.35  104.        48 36427~ 1492~ Tropical     
+#>  6   53. Changb~ changb~  42.4   128.        52 42451~ 4692~ Other        
+#>  7   46. Cocoli  cocoli    8.99  -79.6       17 65207~ 9937~ Tropical     
+#>  8   14. Danum ~ danum ~   5.10  118.        50 57625~ 5639~ Tropical     
+#>  9    7. Dinghu~ dinghu~  23.2   113.        49 65466~ 2563~ Tropical     
+#> 10   25. Doi In~ doi in~  18.6    98.4       47 440211 2054~ Tropical     
+#> # ... with 53 more rows, and 3 more variables: size.ha <dbl>, E <dbl>,
+#> #   wsg.site.name <chr>
 ```

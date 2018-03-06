@@ -51,5 +51,7 @@ sitespecies_metadata
 
 wsg
 wsg_metadata
+
+sites_info
 ```
 
