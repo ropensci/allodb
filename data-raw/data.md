@@ -14,12 +14,12 @@ documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 
 ``` r
 library(tidyverse)
-#> -- Attaching packages --------------------------------------------- tidyverse 1.2.1 --
+#> -- Attaching packages ------------------------------------------ tidyverse 1.2.1 --
 #> v ggplot2 2.2.1     v purrr   0.2.4
 #> v tibble  1.4.2     v dplyr   0.7.4
 #> v tidyr   0.8.0     v stringr 1.3.0
 #> v readr   1.1.1     v forcats 0.3.0
-#> -- Conflicts ------------------------------------------------ tidyverse_conflicts() --
+#> -- Conflicts --------------------------------------------- tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 library(here)
@@ -30,7 +30,7 @@ library(usethis)
 # Gather raw master data and clean it
 
 ``` r
-master <- read_csv(here("data-raw/allotemp_main.csv"))
+master <- read_csv(here("data-raw/allodb_master.csv"))
 #> Parsed with column specification:
 #> cols(
 #>   .default = col_character(),
@@ -42,11 +42,6 @@ master <- read_csv(here("data-raw/allotemp_main.csv"))
 #>   n_trees = col_integer()
 #> )
 #> See spec(...) for full column specifications.
-```
-
-``` r
-
-# chnage name of "equation" column to "equation_form"
 ```
 
 # Export subsets of the clean master data
@@ -107,17 +102,11 @@ use_data(equations_metadata, overwrite = TRUE)
 missing_values_metadata <- read_csv(
   here("data-raw/data_missing_values_metadata.csv")
 )
-#> Warning: Missing column names filled in: 'X4' [4], 'X5' [5], 'X6' [6],
-#> 'X7' [7]
 #> Parsed with column specification:
 #> cols(
 #>   Code = col_character(),
 #>   Definition = col_character(),
-#>   Description = col_character(),
-#>   X4 = col_character(),
-#>   X5 = col_character(),
-#>   X6 = col_character(),
-#>   X7 = col_character()
+#>   Description = col_character()
 #> )
 use_data(missing_values_metadata, overwrite = TRUE)
 #> <U+2714> Saving missing_values_metadata to data/missing_values_metadata.rda

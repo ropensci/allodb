@@ -12,6 +12,9 @@
 
 #' Table of metadata associated to the table `missing_values`.
 #'
+#'  Example of alternative format for meta-data documentation:
+#' * NA: Not Applicable; Data does not apply to that particular case
+#'
 "missing_values_metadata"
 
 

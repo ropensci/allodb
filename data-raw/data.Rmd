@@ -26,12 +26,7 @@ library(usethis)
 # Gather raw master data and clean it
 
 ```{r master}
-master <- read_csv(here("data-raw/allotemp_main.csv"))
-```
-
-```{r master-clean}
-
-# chnage name of "equation" column to "equation_form"
+master <- read_csv(here("data-raw/allodb_master.csv"))
 ```
 
 # Export subsets of the clean master data
