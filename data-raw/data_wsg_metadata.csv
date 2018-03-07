@@ -1,10 +1,10 @@
-Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,Erikas notes to delete before publication
+Column,Field,Description,Column_type,Field_codes,Units,Range,Erikas notes to delete before publication
 1 / A,wsg_id,Wood specific gravity unique identification number,numeric,-,-,,
-2 / B,family,Plant family name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
-3 / C,genus,Plant genus name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
-4 / D,species,Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character (string),,,,
+2 / B,family,Plant family name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character,,,,
+3 / C,genus,Plant genus name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character,,,,
+4 / D,species,Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.,character,,,,
 5 / E,wsg,Wood specific gravity,numeric,,g/cm3,-,
-6 / F,wsg_specificity,"Specific taxonomic level for which the wsg was measured (species, genus, family or plant group)",character (string),-,-,-,"from KAT: this field may not be necessary. For example, we could indicate a genus level by recording ""spp"" or ""multiple"" in species field."
-7 / G,n_sampled,Number of trees sampled to estimate wsg (original publication),numeric,,,,"This will be almost imposible to gather, considering the amount specie sint he netwoor"
-8 / H,site,ForestGEO site name,character (string),,,,"Species could be present in more than one site (specially in NA). I am not sure how to handle that.  | from KAT: there can be multiple records for a single species, which will differ in wsg_id, wsg, site, n_sampled, ref_id."
+6 / F,wsg_specificity,"Specific taxonomic level for which the wsg was measured (species, genus, family or plant group)",character,-,-,-,"from KAT: this field may not be necessary. For example, we could indicate a genus level by recording ""spp"" or ""multiple"" in species field."
+7 / G,n_trees,"Number of trees sampled to estimate wood specific gravity (from original publication, same as allometry model)",numeric,,,,"This will be almost imposible to gather, considering the amount species in the network"
+8 / H,site,ForestGEO site name,character,,,,"Species could be present in more than one site (specially in North America). I am not sure how to handle that.  | from KAT: there can be multiple records for a single species, which will differ in wsg_id, wsg, site, n_tree, ref_id."
 9 / I,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric,,,,
