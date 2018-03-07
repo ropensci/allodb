@@ -1,7 +1,7 @@
-Column,Field,Description,Alphanumeric attributes/ storage type (present data values),Variable codes,Units,Range,Erikas notes to delete before publication
+Column,Field,Description,Column_type,Field_codes,Units,Range,Erikas notes to delete before publication
 1 / A,equation_id,Unique equation identification number given arbitrarely. Links to Site_Species table. ,-,-,-,-,
 2 / B,variable,Tree component characterized by the equation ,character (string),-,-,-,
-3 / C,equation,Model equation as a function of DBH or DBA,-,-,-,-,We currently have equation form and parameters listed separately. WeÕll need a script to transform these. Mauro could write a scrip to merge
+3 / C,equation,Model equation as a function of DBH or DBA,-,-,-,-,We currently have equation form and parameters listed separately. We willl need a script to transform these. Mauro could write a scrip to merge
 4 / D,allometry_specificity,"Refers to the specific taxonomic level for which the equation was developed (species, genus, family or plant group)",character (string),-,-,-,
 5 / E,development_species,Species for which the particular equation was developed,,,,,
 6 / F,geographic_area,Geographic location from which trees were sampled to develop the original equation ,character (string),-,-,-,
