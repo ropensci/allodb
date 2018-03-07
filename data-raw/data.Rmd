@@ -42,19 +42,28 @@ Allometric equations (doesn't include sites, but sp? not sure)
 # coeficienss+formula so we get "unique" equations, then give unique id
 equations_cols <- c(
   "equation_id",
-  "model_parameters",
-  "biomass_units_original",
-  "regression_model",
-  "other_equations_tested",
-  "log (biomass)",
-  "d",
+  "biomass_variable",
+  "equation_form",
+  "allometry_specificity",
+  "development_species",
+  "geographic_area",
   "dbh_min_cm",
   "dbh_max_cm",
   "n_trees",
   "dbh_units_original",
-  "equation",
-  "equation_grouping",
-  "bias correction _CF"
+  "biomass_units_original",
+  "allometry_development_method",
+  "model_parameters",
+  "regression_model",
+  "other_equations_tested",
+  "log_biomass",
+  "bias_corrected",
+  "bias_correction_factor",
+  "notes_fitting_model",
+  "original_data_availability",
+  "notes_to_consider",
+  "warning",
+  "ref_id"
 )
 equations <- as.tibble(master[equations_cols])
 use_data(equations, overwrite = TRUE)
@@ -107,12 +116,14 @@ sitespecies_cols <- c(
   "species",
   "species_code",
   "life_form",
-  "model_parameters",
-  "allometry_development_method",
+  "biomass_variable",
+  "equation_grouping",
   "equation_id",
-  "regression_model",
-  "wsg",
-  "wsg_id"
+  "allometry_specificity",
+  "dbh_min_cm",
+  "dbh_max_cm",
+  "wsg_id",
+  "wsg_specificity"
 )
 sitespecies <- as.tibble(master[sitespecies_cols])
 use_data(sitespecies, overwrite = TRUE)
@@ -134,8 +145,9 @@ wsg_cols <- c(
   "species",
   "wsg",
   "wsg_specificity",
-  "variable",
-  "site"
+  "n_trees",
+  "site",
+  "ref_id"
 )
 wsg <- as.tibble(master[wsg_cols])
 use_data(wsg, overwrite = TRUE)
