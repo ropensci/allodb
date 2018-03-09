@@ -42,8 +42,8 @@ Allometric equations (doesn't include sites, but sp? not sure)
 # coeficienss+formula so we get "unique" equations, then give unique id
 equations_cols <- c(
   "equation_id",
-  "biomass_variable",
-  "equation_form",
+  "biomass_component",
+  "equation",
   "allometry_specificity",
   "development_species",
   "geographic_area",
@@ -116,7 +116,7 @@ sitespecies_cols <- c(
   "species",
   "species_code",
   "life_form",
-  "biomass_variable",
+  "biomass_component",
   "equation_grouping",
   "equation_id",
   "allometry_specificity",

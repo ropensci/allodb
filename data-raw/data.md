@@ -11,12 +11,12 @@ Setup
 
 ``` r
 library(tidyverse)
-#> -- Attaching packages --------------------------------------- tidyverse 1.2.1 --
+#> -- Attaching packages -------------------------------------------------------- tidyverse 1.2.1 --
 #> v ggplot2 2.2.1     v purrr   0.2.4
 #> v tibble  1.4.2     v dplyr   0.7.4
 #> v tidyr   0.8.0     v stringr 1.3.0
 #> v readr   1.1.1     v forcats 0.3.0
-#> -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+#> -- Conflicts ----------------------------------------------------------- tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 library(here)
@@ -56,8 +56,8 @@ Allometric equations (doesn't include sites, but sp? not sure)
 # coeficienss+formula so we get "unique" equations, then give unique id
 equations_cols <- c(
   "equation_id",
-  "biomass_variable",
-  "equation_form",
+  "biomass_component",
+  "equation",
   "allometry_specificity",
   "development_species",
   "geographic_area",
@@ -179,7 +179,7 @@ sitespecies_cols <- c(
   "species",
   "species_code",
   "life_form",
-  "biomass_variable",
+  "biomass_component",
   "equation_grouping",
   "equation_id",
   "allometry_specificity",
