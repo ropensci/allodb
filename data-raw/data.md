@@ -1,34 +1,40 @@
 Gather raw data,clean it and export it to data/
 ================
 
-Overview
-========
+# Overview
 
-This document exports data. It takes data from data-raw/, cleans it, and places a .rda version of it in data/. To update all exported data you can do either of two things: (1) Click Knit (Ctrl+Shift+K), which will also update data.md, or (2) Run &gt; Run All (Ctrl+Alt+R). You can also update the data in specific code chunks. (Learn more about RMarkdown documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
+This document exports data. It takes data from data-raw/, cleans it, and
+places a .rda version of it in data/. To update all exported data you
+can do either of two things: (1) Click Knit (Ctrl+Shift+K), which will
+also update data.md, or (2) Run \> Run All (Ctrl+Alt+R). You can also
+update the data in specific code chunks. (Learn more about RMarkdown
+documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 
-Setup
-=====
+# Setup
 
 ``` r
+library(allodb)
 library(tidyverse)
-#> -- Attaching packages -------------------------------------------------------- tidyverse 1.2.1 --
+#> -- Attaching packages -------------------------------------------- tidyverse 1.2.1 --
 #> v ggplot2 2.2.1     v purrr   0.2.4
 #> v tibble  1.4.2     v dplyr   0.7.4
 #> v tidyr   0.8.0     v stringr 1.3.0
 #> v readr   1.1.1     v forcats 0.3.0
-#> -- Conflicts ----------------------------------------------------------- tidyverse_conflicts() --
+#> -- Conflicts ----------------------------------------------- tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 library(here)
-#> here() starts at C:/Users/gonzalezeb/Dropbox (Smithsonian)/GitHub/allodb
+#> here() starts at C:/Users/LeporeM/Dropbox/git_repos/allodb
 library(usethis)
 ```
 
-Gather raw master data and clean it
-===================================
+# Gather raw master data
 
 ``` r
-master <- read_csv(here("data-raw/allodb_master.csv"))
+master <- read_csv(
+  # here("data-raw/allodb_master.csv"), col_type = type_allodb_master()
+  here("data-raw/allodb_master.csv")
+)
 #> Parsed with column specification:
 #> cols(
 #>   .default = col_character(),
@@ -41,15 +47,16 @@ master <- read_csv(here("data-raw/allodb_master.csv"))
 #> See spec(...) for full column specifications.
 ```
 
-Export subsets of the clean master data
-=======================================
+# Export subsets of master data
 
-This section exports subsets of the clean master data to data/. Each dataset documented in R/data.R to produce a help file that can be accessed from the R console with `?name-of-the-dataset` and also from the Functions Index tab of the website of **allodb**.
+This section exports subsets of the clean master data to data/. Each
+dataset documented in R/data.R to produce a help file that can be
+accessed from the R console with `?name-of-the-dataset` and also from
+the Functions Index tab of the website of **allodb**.
 
-`equations`
------------
+## `equations`
 
-Allometric equations (doesn't include sites, but sp? not sure)
+Allometric equations (doesn’t include sites, but sp? not sure)
 
 ``` r
 # Needs to include a column after'equation_form' to combine
@@ -101,8 +108,7 @@ use_data(equations_metadata, overwrite = TRUE)
 #> <U+2714> Saving equations_metadata to data/equations_metadata.rda
 ```
 
-`missing_values`
-----------------
+## `missing_values`
 
 ``` r
 missing_values_metadata <- read_csv(
@@ -118,10 +124,10 @@ use_data(missing_values_metadata, overwrite = TRUE)
 #> <U+2714> Saving missing_values_metadata to data/missing_values_metadata.rda
 ```
 
-`references`
-------------
+## `references`
 
-References (links to wood density table with an id, my raw reference table includes sites for my own sanity!).
+References (links to wood density table with an id, my raw reference
+table includes sites for my own sanity\!).
 
 ``` r
 # TODO: Add table.
@@ -141,8 +147,7 @@ use_data(references_metadata, overwrite = TRUE)
 #> <U+2714> Saving references_metadata to data/references_metadata.rda
 ```
 
-`sites_info`
-------------
+## `sites_info`
 
 ``` r
 sites_info <- read_csv(
@@ -167,10 +172,10 @@ use_data(sites_info, overwrite = TRUE)
 #> <U+2714> Saving sites_info to data/sites_info.rda
 ```
 
-`sitespecies`
--------------
+## `sitespecies`
 
-Site-species (includes non-tropical sites, links to equation table with eq Id).
+Site-species (includes non-tropical sites, links to equation table with
+eq Id).
 
 ``` r
 sitespecies_cols <- c(
@@ -210,10 +215,10 @@ use_data(sitespecies_metadata, overwrite = TRUE)
 #> <U+2714> Saving sitespecies_metadata to data/sitespecies_metadata.rda
 ```
 
-`wsg`
------
+## `wsg`
 
-Wood density (with this scrip and master table we only take wsg for temperate sites, later to be merge with trop).
+Wood density (with this scrip and master table we only take wsg for
+temperate sites, later to be merge with trop).
 
 ``` r
 wsg_cols <- c(
