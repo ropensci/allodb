@@ -1,16 +1,1688 @@
-# A tibble: 421 x 13
-   site     family     species       species_code life_form biomass_component  
-   <chr>    <chr>      <chr>         <chr>        <chr>     <chr>              
- 1 Lilly D~ Fabaceae   Robinia pseu~ 901          Tree      Stem and branches ~
- 2 Lilly D~ Fabaceae   Robinia pseu~ 901          Tree      Stem and branches ~
- 3 Lilly D~ Ulmaceae   Ulmus americ~ 972          Tree      Whole tree (above ~
- 4 Lilly D~ Ulmaceae   Ulmus rubra   975          Tree      Whole tree (above ~
- 5 Lilly D~ Oleaceae   Fraxinus ame~ 541          Tree      Whole tree (above ~
- 6 Lilly D~ Oleaceae   Fraxinus pen~ 544          Tree      Whole tree (above ~
- 7 Lilly D~ Hamamelid~ Hamamelis vi~ 498          Shrub     Total aboveground ~
- 8 Lilly D~ Cupressac~ Juniperus vi~ 68           Tree      Total aboveground ~
- 9 Lilly D~ Fagaceae   Fagus grandi~ 531          Tree      Stem and branches ~
-10 Lilly D~ Fagaceae   Quercus alba  802          Tree      Stem and branches ~
-# ... with 411 more rows, and 7 more variables: equation_grouping <chr>,
-#   equation_id <chr>, allometry_specificity <chr>, dbh_min_cm <chr>,
-#   dbh_max_cm <chr>, wsg_id <chr>, wsg_specificity <chr>
+            site           family                            species
+1    Lilly Dicky         Fabaceae               Robinia pseudoacacia
+2    Lilly Dicky         Fabaceae               Robinia pseudoacacia
+3    Lilly Dicky         Ulmaceae                    Ulmus americana
+4    Lilly Dicky         Ulmaceae                        Ulmus rubra
+5    Lilly Dicky         Oleaceae                 Fraxinus americana
+6    Lilly Dicky         Oleaceae             Fraxinus pennsylvanica
+7    Lilly Dicky   Hamamelidaceae               Hamamelis virginiana
+8    Lilly Dicky     Cupressaceae               Juniperus virginiana
+9    Lilly Dicky         Fagaceae                  Fagus grandifolia
+10   Lilly Dicky         Fagaceae                       Quercus alba
+11   Lilly Dicky         Fagaceae                   Quercus coccinea
+12   Lilly Dicky         Fagaceae                     Quercus prinus
+13   Lilly Dicky         Fagaceae                      Quercus rubra
+14   Lilly Dicky         Fagaceae                   Quercus velutina
+15   Lilly Dicky     Juglandaceae                        Carya ovata
+16   Lilly Dicky        Malvaceae                    Tilia americana
+17   Lilly Dicky         Rosaceae                Amelanchier arborea
+18   Lilly Dicky    Anacardiaceae                       Rhus typhina
+19   Lilly Dicky       Annonaceae                    Asimina triloba
+20   Lilly Dicky       Betulaceae               Carpinus caroliniana
+21   Lilly Dicky      Cannabaceae                Celtis occidentalis
+22   Lilly Dicky         Fabaceae                  Cercis canadensis
+23   Lilly Dicky        Lauraceae                    Lindera benzoin
+24   Lilly Dicky    Paulowniaceae                Paulownia tomentosa
+25   Lilly Dicky         Rosaceae                      Crataegus sp.
+26   Lilly Dicky       Betulaceae                  Ostrya virginiana
+27   Lilly Dicky       Betulaceae                  Ostrya virginiana
+28   Lilly Dicky        Cornaceae                     Cornus florida
+29   Lilly Dicky         Fagaceae                   Quercus velutina
+30   Lilly Dicky     Juglandaceae                         Carya alba
+31   Lilly Dicky     Juglandaceae                  Carya cordiformis
+32   Lilly Dicky     Juglandaceae                       Carya glabra
+33   Lilly Dicky        Lauraceae                  Sassafras albidum
+34   Lilly Dicky     Magnoliaceae            Liriodendron tulipifera
+35   Lilly Dicky        Nyssaceae                    Nyssa sylvatica
+36   Lilly Dicky         Oleaceae                 Fraxinus americana
+37   Lilly Dicky         Rosaceae                Amelanchier arborea
+38   Lilly Dicky         Rosaceae                Amelanchier arborea
+39   Lilly Dicky         Rosaceae                    Prunus serotina
+40   Lilly Dicky      Sapindaceae                        Acer rubrum
+41   Lilly Dicky      Sapindaceae                     Acer saccharum
+42          SCBI        Cornaceae                Cornus alternifolia
+43          SCBI        Cornaceae                     Cornus florida
+44          SCBI         Fabaceae               Robinia pseudoacacia
+45          SCBI         Fabaceae               Robinia pseudoacacia
+46          SCBI         Fagaceae                    Quercus falcata
+47          SCBI         Fagaceae                    Quercus falcata
+48          SCBI        Nyssaceae                    Nyssa sylvatica
+49          SCBI      Platanaceae              Platanus occidentalis
+50          SCBI         Ulmaceae                    Ulmus americana
+51          SCBI         Ulmaceae                        Ulmus rubra
+52          SCBI        Adoxaceae               Viburnum acerifolium
+53          SCBI        Adoxaceae               Viburnum prunifolium
+54          SCBI        Adoxaceae                Viburnum recognitum
+55          SCBI   Caprifoliaceae                   Lonicera maackii
+56          SCBI   Hamamelidaceae               Hamamelis virginiana
+57          SCBI         Rosaceae                    Rosa multiflora
+58          SCBI         Rosaceae               Rubus allegheniensis
+59          SCBI         Rosaceae                Rubus pensilvanicus
+60          SCBI         Rosaceae               Rubus phoenicolasius
+61          SCBI         Fagaceae                  Fagus grandifolia
+62          SCBI         Fagaceae                       Quercus alba
+63          SCBI         Fagaceae                   Quercus coccinea
+64          SCBI         Fagaceae                  Quercus michauxii
+65          SCBI         Fagaceae                    Quercus montana
+66          SCBI         Fagaceae              Quercus muehlenbergii
+67          SCBI         Fagaceae                      Quercus rubra
+68          SCBI         Fagaceae                   Quercus velutina
+69          SCBI     Juglandaceae                  Carya cordiformis
+70          SCBI     Juglandaceae                       Carya glabra
+71          SCBI     Juglandaceae                       Carya ovalis
+72          SCBI     Juglandaceae                    Carya tomentosa
+73          SCBI     Magnoliaceae            Liriodendron tulipifera
+74          SCBI        Malvaceae                    Tilia americana
+75          SCBI         Oleaceae                 Fraxinus americana
+76          SCBI         Oleaceae                     Fraxinus nigra
+77          SCBI         Oleaceae             Fraxinus pennsylvanica
+78          SCBI         Rosaceae                       Prunus avium
+79          SCBI         Rosaceae                     Prunus persica
+80          SCBI         Rosaceae                    Prunus serotina
+81          SCBI         Rosaceae                Amelanchier arborea
+82          SCBI        Aceraceae                       Acer negundo
+83          SCBI        Aceraceae                   Acer platanoides
+84          SCBI        Aceraceae                        Acer rubrum
+85          SCBI        Adoxaceae                Sambucus canadensis
+86          SCBI       Annonaceae                    Asimina triloba
+87          SCBI    Aquifoliaceae                  Ilex verticillata
+88          SCBI    Berberidaceae                Berberis thunbergii
+89          SCBI       Betulaceae               Carpinus caroliniana
+90          SCBI       Betulaceae                  Corylus americana
+91          SCBI      Cannabaceae                Celtis occidentalis
+92          SCBI     Celastraceae                    Euonymus alatus
+93          SCBI        Ebenaceae               Diospyros virginiana
+94          SCBI     Elaeagnaceae                Elaeagnus umbellata
+95          SCBI         Fabaceae                  Cercis canadensis
+96          SCBI         Fagaceae                   Castanea dentata
+97          SCBI     Juglandaceae                    Juglans cinerea
+98          SCBI     Juglandaceae                      Juglans nigra
+99          SCBI        Lauraceae                    Lindera benzoin
+100         SCBI         Oleaceae             Chionanthus virginicus
+101         SCBI    Paulowniaceae                Paulownia tomentosa
+102         SCBI         Pinaceae                      Pinus pungens
+103         SCBI         Pinaceae                      Pinus strobus
+104         SCBI         Rosaceae                 Crataegus pruinosa
+105         SCBI    Simaroubaceae                Ailanthus altissima
+106         SCBI        Lauraceae                  Sassafras albidum
+107         SCBI         Pinaceae                   Pinus virginiana
+108         SCBI         Rosaceae                Amelanchier arborea
+109         SCBI         Rosaceae                Amelanchier arborea
+110         SERC        Lauraceae                  Sassafras albidum
+111         SERC     Juglandaceae                  Carya cordiformis
+112         SERC     Juglandaceae                       Carya glabra
+113         SERC     Juglandaceae                          Carya sp.
+114         SERC     Altingiaceae            Liquidambar styraciflua
+115         SERC        Cornaceae                     Cornus florida
+116         SERC         Fagaceae                    Quercus falcata
+117         SERC         Fagaceae                    Quercus falcata
+118         SERC         Fagaceae                   Quercus stellata
+119         SERC        Nyssaceae                    Nyssa sylvatica
+120         SERC         Oleaceae             Fraxinus pennsylvanica
+121         SERC      Platanaceae              Platanus occidentalis
+122         SERC      Platanaceae              Platanus occidentalis
+123         SERC         Ulmaceae                    Ulmus americana
+124         SERC         Ulmaceae                        Ulmus rubra
+125         SERC        Malvaceae                    Tilia americana
+126         SERC         Oleaceae                 Fraxinus americana
+127         SERC        Adoxaceae               Viburnum acerifolium
+128         SERC        Adoxaceae                  Viburnum dentatum
+129         SERC        Adoxaceae               Viburnum prunifolium
+130         SERC   Caprifoliaceae                   Lonicera maackii
+131         SERC         Rosaceae                    Rosa multiflora
+132         SERC     Cupressaceae               Juniperus virginiana
+133         SERC         Fagaceae                  Quercus michauxii
+134         SERC         Rosaceae                Amelanchier arborea
+135         SERC         Rosaceae             Amelanchier canadensis
+136         SERC        Aceraceae                       Acer negundo
+137         SERC        Aceraceae                        Acer rubrum
+138         SERC        Adoxaceae                     Sambucus nigra
+139         SERC    Anacardiaceae                       Rhus typhina
+140         SERC       Annonaceae                    Asimina triloba
+141         SERC    Aquifoliaceae                         Ilex opaca
+142         SERC    Aquifoliaceae                  Ilex verticillata
+143         SERC       Araliaceae                     Aralia spinosa
+144         SERC       Betulaceae               Carpinus caroliniana
+145         SERC      Cannabaceae                Celtis occidentalis
+146         SERC     Elaeagnaceae             Elaeagnus angustifolia
+147         SERC     Elaeagnaceae                Elaeagnus umbellata
+148         SERC        Ericaceae                   Kalmia latifolia
+149         SERC        Ericaceae           Rhododendron arborescens
+150         SERC        Ericaceae               Vaccinium corymbosum
+151         SERC        Ericaceae                      Vaccinium sp.
+152         SERC         Fabaceae                Albizia julibrissin
+153         SERC         Fabaceae                  Cercis canadensis
+154         SERC         Fagaceae                  Quercus palustris
+155         SERC         Fagaceae                      Quercus rubra
+156         SERC         Fagaceae                        Quercus sp.
+157         SERC         Fagaceae                   Quercus velutina
+158         SERC     Juglandaceae                      Juglans nigra
+159         SERC        Lauraceae                    Lindera benzoin
+160         SERC         Moraceae            Broussonetia papyrifera
+161         SERC         Moraceae                        Morus rubra
+162         SERC         Oleaceae                      Ligustrum sp.
+163         SERC        Rubiaceae          Cephalanthus occidentalis
+164         SERC       Salicaceae                        Salix nigra
+165         SERC Scrophulariaceae                Paulownia tomentosa
+166         SERC    Simaroubaceae                Ailanthus altissima
+167         SERC         Fagaceae                  Fagus grandifolia
+168         SERC         Fagaceae                       Quercus alba
+169         SERC         Fagaceae                   Quercus coccinea
+170         SERC         Fagaceae                    Quercus montana
+171         SERC     Juglandaceae                         Carya alba
+172         SERC     Magnoliaceae            Liriodendron tulipifera
+173         SERC         Pinaceae                        Pinus taeda
+174         SERC         Pinaceae                   Pinus virginiana
+175         SERC         Rosaceae                Amelanchier arborea
+176         SERC         Rosaceae                Amelanchier arborea
+177         SERC         Rosaceae             Amelanchier canadensis
+178         SERC         Rosaceae             Amelanchier canadensis
+179         SERC         Rosaceae                       Prunus avium
+180         SERC         Rosaceae                    Prunus serotina
+181         SERC       Salicaceae              Populus grandidentata
+182        Tyson        Lauraceae                  Sassafras albidum
+183        Tyson      Platanaceae              Platanus occidentalis
+184        Tyson         Ulmaceae                        Ulmus rubra
+185        Tyson         Oleaceae                 Fraxinus americana
+186        Tyson   Caprifoliaceae                   Lonicera maackii
+187        Tyson     Cupressaceae               Juniperus virginiana
+188        Tyson         Fagaceae                       Quercus alba
+189        Tyson         Fagaceae                Quercus marilandica
+190        Tyson         Fagaceae              Quercus muehlenbergii
+191        Tyson         Fagaceae                      Quercus rubra
+192        Tyson         Fagaceae                        Quercus sp.
+193        Tyson         Fagaceae                   Quercus stellata
+194        Tyson         Fagaceae                   Quercus velutina
+195        Tyson     Juglandaceae                        Carya ovata
+196        Tyson        Malvaceae                    Tilia americana
+197        Tyson         Rosaceae                Amelanchier arborea
+198        Tyson       Annonaceae                    Asimina triloba
+199        Tyson      Cannabaceae                Celtis occidentalis
+200        Tyson      Cannabaceae                  Celtis tenuifolia
+201        Tyson        Ebenaceae               Diospyros virginiana
+202        Tyson         Fabaceae                  Cercis canadensis
+203        Tyson         Fabaceae              Gleditsia triacanthos
+204        Tyson     Juglandaceae                      Juglans nigra
+205        Tyson        Lauraceae                    Lindera benzoin
+206        Tyson         Moraceae                        Morus rubra
+207        Tyson       Rhamnaceae               Frangula caroliniana
+208        Tyson         Rosaceae                      Crataegus sp.
+209        Tyson         Rosaceae                      Malus ioensis
+210        Tyson      Sapindaceae                       Acer negundo
+211        Tyson       Sapotaceae            Sideroxylon lanuginosum
+212        Tyson    Simaroubaceae                Ailanthus altissima
+213        Tyson       Betulaceae                  Ostrya virginiana
+214        Tyson       Betulaceae                  Ostrya virginiana
+215        Tyson        Cornaceae                  Cornus drummondii
+216        Tyson        Cornaceae                     Cornus florida
+217        Tyson         Fagaceae                   Quercus velutina
+218        Tyson     Juglandaceae                  Carya cordiformis
+219        Tyson     Juglandaceae                       Carya glabra
+220        Tyson     Juglandaceae                          Carya sp.
+221        Tyson     Juglandaceae                       Carya texana
+222        Tyson     Juglandaceae                    Carya tomentosa
+223        Tyson         Oleaceae                 Fraxinus americana
+224        Tyson         Rosaceae                Amelanchier arborea
+225        Tyson         Rosaceae                Amelanchier arborea
+226        Tyson         Rosaceae                   Prunus americana
+227        Tyson         Rosaceae                    Prunus serotina
+228        Tyson         Rosaceae                         Prunus sp.
+229        Tyson      Sapindaceae                        Acer rubrum
+230        Tyson      Sapindaceae                     Acer saccharum
+231         UCSC       Asteraceae                Baccharis pilularis
+232         UCSC        Ericaceae          Arctostaphylos andersonii
+233         UCSC        Ericaceae           Arctostaphylos tomentosa
+234         UCSC        Lauraceae           Umbellularia californica
+235         UCSC         Pinaceae              Pseudotsuga menziesii
+236         UCSC        Adoxaceae                     Sambucus nigra
+237         UCSC    Aquifoliaceae                    Ilex aquifolium
+238         UCSC       Betulaceae                    Corylus cornuta
+239         UCSC     Cupressaceae               Sequoia sempervirens
+240         UCSC         Fagaceae                  Quercus agrifolia
+241         UCSC         Fagaceae                    Quercus parvula
+242         UCSC       Myricaceae                Morella californica
+243         UCSC       Rhamnaceae                Rhamnus californica
+244         UCSC         Rosaceae             Cotoneaster franchetii
+245         UCSC         Rosaceae               Cotoneaster pannosus
+246         UCSC         Rosaceae                 Crataegus monogyna
+247         UCSC         Rosaceae            Heteromeles arbutifolia
+248         UCSC         Rosaceae            Pyracantha angustifolia
+249         UCSC       Salicaceae                    Salix lasiandra
+250         UCSC      Sapindaceae                  Acer macrophyllum
+251         UCSC        Ericaceae                  Arbutus menziesii
+252         UCSC        Ericaceae                  Arbutus menziesii
+253         UCSC         Fagaceae            Lithocarpus densiflorus
+254         UCSC         Fagaceae            Lithocarpus densiflorus
+255         UCSC         Fagaceae            Lithocarpus densiflorus
+256         UCSC        Ericaceae                  Arbutus menziesii
+257         UCSC        Ericaceae                   Vaccinium ovatum
+258         UCSC       Rhamnaceae             Ceanothus thyrsiflorus
+259         UCSC  Grossulariaceae                  Ribes divaricatum
+260         UCSC        Myrtaceae                Eucalyptus globulus
+261         UCSC         Pinaceae                    Pinus attenuata
+262         UCSC         Pinaceae                    Pinus ponderosa
+263      Wabikon       Betulaceae              Betula alleghaniensis
+264      Wabikon     Cupressaceae                 Thuja occidentalis
+265      Wabikon        Malvaceae                    Tilia americana
+266      Wabikon         Pinaceae                     Abies balsamea
+267      Wabikon         Pinaceae                     Larix laricina
+268      Wabikon         Pinaceae                       Picea glauca
+269      Wabikon         Pinaceae                      Picea mariana
+270      Wabikon       Salicaceae                Populus balsamifera
+271      Wabikon         Ulmaceae                    Ulmus americana
+272      Wabikon         Oleaceae                 Fraxinus americana
+273      Wabikon   Caprifoliaceae                Lonicera canadensis
+274      Wabikon        Malvaceae                    Tilia americana
+275      Wabikon         Oleaceae                     Fraxinus nigra
+276      Wabikon        Adoxaceae                  Sambucus racemosa
+277      Wabikon    Aquifoliaceae                     Ilex mucronata
+278      Wabikon    Aquifoliaceae                  Ilex verticillata
+279      Wabikon       Betulaceae                       Alnus incana
+280      Wabikon       Betulaceae                    Corylus cornuta
+281      Wabikon  Grossulariaceae                    Ribes cynosbati
+282      Wabikon     Juglandaceae                    Juglans cinerea
+283      Wabikon         Pinaceae                      Pinus strobus
+284      Wabikon         Rosaceae              Amelanchier sanguinea
+285      Wabikon         Rosaceae                       Malus pumila
+286      Wabikon         Rosaceae                  Prunus virginiana
+287      Wabikon         Rosaceae                   Sorbus americana
+288      Wabikon    Thymelaeaceae                    Dirca palustris
+289      Wabikon        Aceraceae                        Acer rubrum
+290      Wabikon        Aceraceae                        Acer rubrum
+291      Wabikon        Aceraceae                      Acer spicatum
+292      Wabikon       Betulaceae                  Betula papyrifera
+293      Wabikon       Betulaceae                  Ostrya virginiana
+294      Wabikon       Betulaceae                  Ostrya virginiana
+295      Wabikon        Cornaceae                Cornus alternifolia
+296      Wabikon         Fagaceae                      Quercus rubra
+297      Wabikon         Pinaceae                   Tsuga canadensis
+298      Wabikon         Rosaceae                 Amelanchier laevis
+299      Wabikon        Aceraceae                     Acer saccharum
+300      Wabikon         Oleaceae                 Fraxinus americana
+301      Wabikon         Rosaceae                Prunus pensylvanica
+302      Wabikon         Rosaceae                    Prunus serotina
+303      Wabikon       Salicaceae              Populus grandidentata
+304      Wabikon       Salicaceae                Populus tremuloides
+305   Wind River         Pinaceae                 Tsuga heterophylla
+306   Wind River         Pinaceae                      Abies grandis
+307   Wind River   Caprifoliaceae                   Lonicera ciliosa
+308   Wind River         Rosaceae                    Rosa gymnocarpa
+309   Wind River       Betulaceae                        Alnus rubra
+310   Wind River         Pinaceae              Pseudotsuga menziesii
+311   Wind River      Sapindaceae                    Acer circinatum
+312   Wind River      Sapindaceae                       Acer glabrum
+313   Wind River       Betulaceae                    Corylus cornuta
+314   Wind River        Cornaceae                   Cornus nuttallii
+315   Wind River        Ericaceae                 Gaultheria shallon
+316   Wind River        Ericaceae               Menziesia ferruginea
+317   Wind River        Ericaceae          Rhododendron macrophyllum
+318   Wind River         Pinaceae                    Pinus monticola
+319   Wind River       Rhamnaceae                  Rhamnus purshiana
+320   Wind River         Rosaceae              Amelanchier alnifolia
+321   Wind River         Rosaceae              Oemleria cerasiformis
+322   Wind River         Taxaceae                   Taxus brevifolia
+323   Wind River        Ericaceae             Vaccinium membranaceum
+324   Wind River        Ericaceae              Vaccinium ovalifolium
+325   Wind River        Ericaceae              Vaccinium parvifolium
+326   Wind River         Pinaceae              Pseudotsuga menziesii
+327   Wind River         Rosaceae                Holodiscus discolor
+328   Wind River         Rosaceae                  Rubus leucodermis
+329   Wind River         Rosaceae                  Rubus spectabalis
+330   Wind River         Pinaceae                      Abies procera
+331   Wind River         Pinaceae                      Abies procera
+332   Wind River         Pinaceae                          Abies sp.
+333   Wind River         Pinaceae                          Abies sp.
+334   Wind River         Pinaceae                          Abies sp.
+335   Wind River         Pinaceae                      Abies procera
+336   Wind River         Pinaceae                          Abies sp.
+337   Wind River     Cupressaceae                      Thuja plicata
+338   Wind River     Cupressaceae                      Thuja plicata
+339   Wind River         Pinaceae                      Abies grandis
+340   Wind River         Pinaceae                     Abies amabilis
+341   Wind River           Unkown                    Unknown Unknown
+342 Wytham Woods         Fagaceae                      Quercus robur
+343 Wytham Woods         Oleaceae                 Fraxinus excelsior
+344 Wytham Woods        Adoxaceae                     Sambucus nigra
+345 Wytham Woods    Aquifoliaceae                    Ilex aquifolium
+346 Wytham Woods       Betulaceae                         Betula sp.
+347 Wytham Woods       Betulaceae                   Carpinus betulus
+348 Wytham Woods       Betulaceae                   Corylus avellana
+349 Wytham Woods     Celastraceae                 Euonymus europaeus
+350 Wytham Woods        Cornaceae                   Cornus sanguinea
+351 Wytham Woods         Fagaceae                    Castanea sativa
+352 Wytham Woods         Fagaceae                    Fagus sylvatica
+353 Wytham Woods        Malvaceae                   Tilia x europaea
+354 Wytham Woods         Pinaceae                      Larix decidua
+355 Wytham Woods         Pinaceae                        Picea abies
+356 Wytham Woods         Pinaceae                    Pinus sylvatica
+357 Wytham Woods         Pinaceae              Pseudotsuga menziesii
+358 Wytham Woods       Rhamnaceae                     Frangula alnus
+359 Wytham Woods         Rosaceae                 Crataegus monogyna
+360 Wytham Woods         Rosaceae                       Prunus avium
+361 Wytham Woods         Rosaceae                     Prunus spinosa
+362 Wytham Woods       Salicaceae                          Salix sp.
+363 Wytham Woods      Sapindaceae                     Acer campestre
+364 Wytham Woods         Taxaceae                      Taxus baccata
+365 Wytham Woods      Sapindaceae                Acer pseudoplatanus
+366     Yosemite         Pinaceae                  Pinus lambertiana
+367     Yosemite         Pinaceae              Pseudotsuga menziesii
+368     Yosemite         Rosaceae                  Prunus emarginata
+369     Yosemite        Adoxaceae                  Sambucus racemosa
+370     Yosemite       Betulaceae Corylus cornuta subsp. californica
+371     Yosemite        Cornaceae                   Cornus nuttallii
+372     Yosemite        Ericaceae           Rhododendron occidentale
+373     Yosemite       Rhamnaceae                Rhamnus californica
+374     Yosemite         Rosaceae                  Prunus emarginata
+375     Yosemite         Rosaceae                  Prunus virginiana
+376     Yosemite       Salicaceae                  Salix scouleriana
+377     Yosemite       Salicaceae                          Salix sp.
+378     Yosemite         Pinaceae                  Pinus lambertiana
+379     Yosemite         Pinaceae              Pseudotsuga menziesii
+380     Yosemite        Ericaceae              Arctostaphylos patula
+381     Yosemite       Rhamnaceae               Ceanothus cordulatus
+382     Yosemite       Rhamnaceae             Ceanothus integerrimus
+383     Yosemite       Rhamnaceae              Ceanothus parvifolius
+384     Yosemite         Rosaceae                Holodiscus discolor
+385     Yosemite  Grossulariaceae                    Ribes nevadense
+386     Yosemite  Grossulariaceae                      Ribes roezlii
+387     Yosemite         Pinaceae                     Abies concolor
+388     Yosemite         Pinaceae                    Abies magnifica
+389     Yosemite         Pinaceae                     Abies concolor
+390     Yosemite         Pinaceae                    Abies magnifica
+391     Yosemite         Pinaceae                          Abies sp.
+392     Yosemite         Pinaceae                          Abies sp.
+393     Yosemite        Ericaceae                 Leucothoe davisiae
+394     Yosemite        Ericaceae               Vaccinium uliginosum
+395     Yosemite        Cornaceae                     Cornus sericea
+396     Yosemite         Fagaceae           Chrysolepis sempervirens
+397     Yosemite         Pinaceae                          Abies sp.
+398     Yosemite         Pinaceae                     Abies concolor
+399     Yosemite         Pinaceae                    Abies magnifica
+400     Yosemite         Pinaceae                          Abies sp.
+401     Yosemite     Cupressaceae               Calocedrus decurrens
+402     Yosemite         Pinaceae                     Abies concolor
+403     Yosemite         Pinaceae                    Abies magnifica
+404     Yosemite         Pinaceae                    Pinus ponderosa
+405     Yosemite         Pinaceae                    Pinus ponderosa
+406     Yosemite           Unkown                    Unknown Unknown
+407        Zofin      Sambucaceae                  Sambucus racemosa
+408        Zofin         Fagaceae                    Fagus sylvatica
+409        Zofin       Betulaceae                     Betula pandula
+410        Zofin         Pinaceae                         Abies alba
+411        Zofin         Ulmaceae                       Ulmus glabra
+412        Zofin         Rosaceae                   Sorbus aucuparia
+413        Zofin        Aceraceae                   Acer platanoides
+414        Zofin        Aceraceae                Acer pseudoplatanus
+415        Zofin         Pinaceae                        Picea abies
+416        Zofin       Salicaceae                    Populus tremula
+417        Zofin       Salicaceae                       Salix caprea
+418  Lilly Dicky         Fagaceae                   Quercus velutina
+419         SCBI         Fagaceae                   Quercus velutina
+420         SERC         Fagaceae                   Quercus velutina
+421        Tyson         Fagaceae                   Quercus velutina
+    species_code life_form                             biomass_component
+1            901      Tree                      Stem and branches (live)
+2            901      Tree                      Stem and branches (live)
+3            972      Tree                      Whole tree (above stump)
+4            975      Tree                      Whole tree (above stump)
+5            541      Tree                      Whole tree (above stump)
+6            544      Tree                      Whole tree (above stump)
+7            498     Shrub                     Total aboveground biomass
+8             68      Tree                     Total aboveground biomass
+9            531      Tree                      Stem and branches (live)
+10           802      Tree                      Stem and branches (live)
+11           806      Tree                      Stem and branches (live)
+12           832      Tree                      Stem and branches (live)
+13           833      Tree                      Stem and branches (live)
+14           837      Tree                      Whole tree (above stump)
+15           407      Tree                      Stem and branches (live)
+16           951      Tree                      Stem and branches (live)
+17           356      Tree                  Stem biomass (wood and bark)
+18           899     Shrub                     Total aboveground biomass
+19           367      Tree                     Total aboveground biomass
+20           391      Tree                     Total aboveground biomass
+21           462      Tree                     Total aboveground biomass
+22           471      Tree                     Total aboveground biomass
+23           609     Shrub                     Total aboveground biomass
+24           712      Tree                     Total aboveground biomass
+25           500     Shrub                     Total aboveground biomass
+26           701      Tree                      Stem and branches (live)
+27           701      Tree                                 Foliage total
+28           491      Tree                     Total aboveground biomass
+29           837      Tree                     Total aboveground biomass
+30           409      Tree                     Total aboveground biomass
+31           402      Tree                     Total aboveground biomass
+32           403      Tree                     Total aboveground biomass
+33           931      Tree                      Whole tree (above stump)
+34           621      Tree                     Total aboveground biomass
+35           693      Tree                     Total aboveground biomass
+36           541      Tree                      Whole tree (above stump)
+37           356      Tree           Branches total biomass (live, dead)
+38           356      Tree                                 Foliage total
+39           762      Tree                     Total aboveground biomass
+40           316      Tree                     Total aboveground biomass
+41           318      Tree                     Total aboveground biomass
+42          coal      Tree                     Total aboveground biomass
+43          cofl      Tree                     Total aboveground biomass
+44          rops      Tree                      Stem and branches (live)
+45          rops      Tree                      Stem and branches (live)
+46          qufa      Tree                      Whole tree (above stump)
+47          qufa      Tree                      Whole tree (above stump)
+48          nysy      Tree                      Stem and branches (live)
+49          ploc      Tree                      Stem and branches (live)
+50          ulam      Tree                      Whole tree (above stump)
+51          ulru      Tree                      Stem and branches (live)
+52          viac     Shrub                     Total aboveground biomass
+53          vipr     Shrub                     Total aboveground biomass
+54          vire     Shrub                     Total aboveground biomass
+55          loma     Shrub                     Total aboveground biomass
+56          havi     Shrub                     Total aboveground biomass
+57          romu     Shrub                     Total aboveground biomass
+58          rual     Shrub                     Total aboveground biomass
+59          rupe     Shrub                     Total aboveground biomass
+60          ruph     Shrub                     Total aboveground biomass
+61          fagr      Tree                      Stem and branches (live)
+62          qual      Tree                      Stem and branches (live)
+63          quco      Tree                      Stem and branches (live)
+64          qumi      Tree                      Stem and branches (live)
+65          qupr      Tree                      Stem and branches (live)
+66          qumu      Tree                      Stem and branches (live)
+67          quru      Tree                      Stem and branches (live)
+68          quve      Tree                      Whole tree (above stump)
+69          caco      Tree                     Total aboveground biomass
+70          cagl      Tree                     Total aboveground biomass
+71         caovl      Tree                     Total aboveground biomass
+72          cato      Tree                     Total aboveground biomass
+73          litu      Tree                      Stem and branches (live)
+74          tiam      Tree                      Stem and branches (live)
+75          fram      Tree                      Stem and branches (live)
+76          frni      Tree                     Total aboveground biomass
+77          frpe      Tree                     Total aboveground biomass
+78          prav      Tree                      Stem and branches (live)
+79          prpe      Tree                      Stem and branches (live)
+80          prse      Tree                      Stem and branches (live)
+81          amar      Tree                  Stem biomass (wood and bark)
+82          acne      Tree                     Total aboveground biomass
+83          acpl      Tree                     Total aboveground biomass
+84          acru      Tree                     Total aboveground biomass
+85          saca     Shrub                     Total aboveground biomass
+86          astr      Tree                     Total aboveground biomass
+87          ilve     Shrub                     Total aboveground biomass
+88          beth     Shrub                     Total aboveground biomass
+89          caca      Tree                     Total aboveground biomass
+90          coam     Shrub                     Total aboveground biomass
+91          ceoc      Tree                     Total aboveground biomass
+92          eual     Shrub                     Total aboveground biomass
+93          divi      Tree                     Total aboveground biomass
+94          elum     Shrub                     Total aboveground biomass
+95          ceca      Tree                     Total aboveground biomass
+96          cade      Tree                     Total aboveground biomass
+97          juci      Tree                     Total aboveground biomass
+98          juni      Tree                     Total aboveground biomass
+99          libe     Shrub                     Total aboveground biomass
+100         chvi     Shrub                     Total aboveground biomass
+101         pato      Tree                     Total aboveground biomass
+102         pipu      Tree                     Total aboveground biomass
+103         pist      Tree                     Total aboveground biomass
+104         crpr     Shrub                     Total aboveground biomass
+105         aial      Tree                     Total aboveground biomass
+106         saal      Tree                      Whole tree (above stump)
+107         pivi      Tree                     Total aboveground biomass
+108         amar      Tree           Branches total biomass (live, dead)
+109         amar      Tree                                 Foliage total
+110        SAAL5      Tree                      Whole tree (above stump)
+111       CACO15      Tree                     Total aboveground biomass
+112        CAGL8      Tree                     Total aboveground biomass
+113        CARYA      Tree                     Total aboveground biomass
+114        LIST2      Tree                      Whole tree (above stump)
+115        COFL2      Tree                     Total aboveground biomass
+116         QUFA      Tree                      Whole tree (above stump)
+117         QUFA      Tree                      Whole tree (above stump)
+118         QUST      Tree                     Total aboveground biomass
+119         NYSY      Tree                     Total aboveground biomass
+120         FRPE      Tree                      Whole tree (above stump)
+121         PLOC      Tree                      Whole tree (above stump)
+122         PLOC      Tree                      Whole tree (above stump)
+123         ULAM      Tree                      Whole tree (above stump)
+124         ULRU      Tree                      Stem and branches (live)
+125         TIAM      Tree                      Stem and branches (live)
+126        FRAM2      Tree                      Whole tree (above stump)
+127         VIAC     Shrub                     Total aboveground biomass
+128         VIDE     Shrub                     Total aboveground biomass
+129         VIPR     Shrub                     Total aboveground biomass
+130        LOMA6     Shrub                     Total aboveground biomass
+131         ROMU     Shrub                     Total aboveground biomass
+132         JUVI      Tree                     Total aboveground biomass
+133         QUMI      Tree                      Stem and branches (live)
+134        AMAR3      Tree                  Stem biomass (wood and bark)
+135        AMCA4      Tree                  Stem biomass (wood and bark)
+136        ACNE2      Tree                     Total aboveground biomass
+137         ACRU      Tree                     Total aboveground biomass
+138       SANIC4     Shrub                     Total aboveground biomass
+139         RHTY     Shrub                     Total aboveground biomass
+140         ASTR      Tree                     Total aboveground biomass
+141         ILOP     Shrub                     Total aboveground biomass
+142         ILVE     Shrub                     Total aboveground biomass
+143        ARSP2     Shrub                     Total aboveground biomass
+144       CACA18      Tree                     Total aboveground biomass
+145         CEOC      Tree                     Total aboveground biomass
+146         ELAN     Shrub                     Total aboveground biomass
+147         ELUM     Shrub                     Total aboveground biomass
+148         KALA     Shrub                     Total aboveground biomass
+149        RHAR3     Shrub                     Total aboveground biomass
+150         VACO     Shrub                     Total aboveground biomass
+151        VACCI     Shrub                     Total aboveground biomass
+152         ALJU      Tree                     Total aboveground biomass
+153        CECA4      Tree                     Total aboveground biomass
+154        QUPA2      Tree                     Total aboveground biomass
+155         QURU      Tree                     Total aboveground biomass
+156        QUERC      Tree                     Total aboveground biomass
+157         QUVE      Tree                      Whole tree (above stump)
+158         JUNI      Tree                     Total aboveground biomass
+159        LIBE3     Shrub                     Total aboveground biomass
+160        BRPA4      Tree                     Total aboveground biomass
+161        MORU2      Tree                     Total aboveground biomass
+162       LIGUS2     Shrub                     Total aboveground biomass
+163        CEOC2     Shrub                     Total aboveground biomass
+164         SANI     Shrub                     Total aboveground biomass
+165        PATO2      Tree                     Total aboveground biomass
+166         AIAL      Tree                     Total aboveground biomass
+167         FAGR      Tree                     Total aboveground biomass
+168         QUAL      Tree                     Total aboveground biomass
+169        QUCO2      Tree                     Total aboveground biomass
+170        QUMO4      Tree                     Total aboveground biomass
+171       CAAL27      Tree                     Total aboveground biomass
+172         LITU      Tree                     Total aboveground biomass
+173         PITA      Tree                     Total aboveground biomass
+174        PIVI2      Tree                     Total aboveground biomass
+175        AMAR3      Tree           Branches total biomass (live, dead)
+176        AMAR3      Tree                                 Foliage total
+177        AMCA4      Tree           Branches total biomass (live, dead)
+178        AMCA4      Tree                                 Foliage total
+179         PRAV      Tree                     Total aboveground biomass
+180        PRSE2      Tree                     Total aboveground biomass
+181        POGR4      Tree                     Total aboveground biomass
+182       sasalb      Tree                      Whole tree (above stump)
+183       plaocc      Tree                      Whole tree (above stump)
+184       ulmrub      Tree                      Whole tree (above stump)
+185       fraame      Tree                      Whole tree (above stump)
+186       lonmaa     Shrub                     Total aboveground biomass
+187       junvir      Tree                     Total aboveground biomass
+188       quealb      Tree                      Stem and branches (live)
+189       quemar      Tree                      Stem and branches (live)
+190       quemue      Tree                      Stem and branches (live)
+191       querub      Tree                      Stem and branches (live)
+192        quesp      Tree                      Stem and branches (live)
+193       queste      Tree                      Stem and branches (live)
+194       quevel      Tree                      Whole tree (above stump)
+195       carova      Tree                      Stem and branches (live)
+196       tilame      Tree                      Stem and branches (live)
+197       amearb      Tree                  Stem biomass (wood and bark)
+198       asitri      Tree                     Total aboveground biomass
+199       celocc      Tree                     Total aboveground biomass
+200       celten      Tree                     Total aboveground biomass
+201       diovir      Tree                     Total aboveground biomass
+202       cercan      Tree                     Total aboveground biomass
+203       gletri      Tree                     Total aboveground biomass
+204       jugnig      Tree                     Total aboveground biomass
+205       linben     Shrub                     Total aboveground biomass
+206       morrub      Tree                     Total aboveground biomass
+207       fracar      Tree                     Total aboveground biomass
+208        crasp     Shrub                     Total aboveground biomass
+209       malioe     Shrub                     Total aboveground biomass
+210       aceneg      Tree                     Total aboveground biomass
+211       sidlan     Shrub                     Total aboveground biomass
+212       ailalt      Tree                     Total aboveground biomass
+213       ostvir      Tree                      Stem and branches (live)
+214       ostvir      Tree                                 Foliage total
+215       cordru      Tree                     Total aboveground biomass
+216       corflo      Tree                     Total aboveground biomass
+217       quevel      Tree                     Total aboveground biomass
+218       carcor      Tree                     Total aboveground biomass
+219       cargla      Tree                     Total aboveground biomass
+220        carsp      Tree                     Total aboveground biomass
+221       cartex      Tree                     Total aboveground biomass
+222       cartom      Tree                     Total aboveground biomass
+223       fraame      Tree                      Whole tree (above stump)
+224       amearb      Tree           Branches total biomass (live, dead)
+225       amearb      Tree                                 Foliage total
+226       pruame      Tree                     Total aboveground biomass
+227       pruser      Tree                     Total aboveground biomass
+228        prusp      Tree                     Total aboveground biomass
+229       acerub      Tree                     Total aboveground biomass
+230       acesac      Tree                     Total aboveground biomass
+231       BACCPI     Shrub                     Total aboveground biomass
+232       ARCTAN     Shrub                     Total aboveground biomass
+233       ARCTCR     Shrub                     Total aboveground biomass
+234       UMBECA      Tree                     Total aboveground biomass
+235       PSEUME      Tree                      Whole tree (above stump)
+236       SAMBNI     Shrub                     Total aboveground biomass
+237       ILEXAQ     Shrub                     Total aboveground biomass
+238       CORYCO     Shrub                     Total aboveground biomass
+239       SEQUSE      Tree                     Total aboveground biomass
+240       QUERAG      Tree                     Total aboveground biomass
+241       QUERPA      Tree                     Total aboveground biomass
+242       MORECA     Shrub                     Total aboveground biomass
+243       RHAMCA     Shrub                     Total aboveground biomass
+244       COTOFR     Shrub                     Total aboveground biomass
+245       COTOPA     Shrub                     Total aboveground biomass
+246       CRATMO     Shrub                     Total aboveground biomass
+247       HETEAR     Shrub                     Total aboveground biomass
+248       PYRAAN     Shrub                     Total aboveground biomass
+249       SALILA     Shrub                     Total aboveground biomass
+250       ACERMA      Tree                     Total aboveground biomass
+251       ARBUME      Tree                      Total live crown biomass
+252       ARBUME      Tree                                    Dead crown
+253       LITHDE      Tree                                    Live crown
+254       LITHDE      Tree                                    Dead crown
+255       LITHDE      Tree                  Stem biomass (wood and bark)
+256       ARBUME      Tree                  Stem biomass (wood and bark)
+257       VACCOV     Shrub     Total aboveground biomass (wood and bark)
+258       CEANTH     Shrub                     Total aboveground biomass
+259       RIBEDI     Shrub                     Total aboveground biomass
+260       EUCAGL      Tree                     Total aboveground biomass
+261       PINUAT      Tree                  Stem biomass (wood and bark)
+262       PINUPO      Tree                  Stem biomass (wood and bark)
+263       BETALL      Tree                      Whole tree (above stump)
+264       THUOCC      Tree                      Whole tree (above stump)
+265       TILAME      Tree                                 Foliage total
+266       ABIBAL      Tree                      Whole tree (above stump)
+267       LARLAR      Tree                      Whole tree (above stump)
+268       PICGLA      Tree                      Whole tree (above stump)
+269       PICMAR      Tree                      Whole tree (above stump)
+270       POPBAL      Tree                      Whole tree (above stump)
+271       ULMAME      Tree                      Whole tree (above stump)
+272       FRAAME      Tree                      Whole tree (above stump)
+273       LONCAN     Shrub                     Total aboveground biomass
+274       TILAME      Tree                      Stem and branches (live)
+275       FRANIG      Tree                     Total aboveground biomass
+276       SAMRAC     Shrub                     Total aboveground biomass
+277       ILEMUC     Shrub                     Total aboveground biomass
+278       ILEVER     Shrub                     Total aboveground biomass
+279       ALNINC     Shrub                     Total aboveground biomass
+280       CORCOR     Shrub                     Total aboveground biomass
+281       RIBCYN     Shrub                     Total aboveground biomass
+282       JUGCIN      Tree                     Total aboveground biomass
+283       PINSTR      Tree                     Total aboveground biomass
+284       AMESAN     Shrub                     Total aboveground biomass
+285       MALPUM      Tree                     Total aboveground biomass
+286       PRUVIR      Tree                     Total aboveground biomass
+287       SORAME      Tree                     Total aboveground biomass
+288       DIRPAL     Shrub                     Total aboveground biomass
+289       ACERUB      Tree                     Total aboveground biomass
+290       ACERUB      Tree                     Total aboveground biomass
+291       ACESPI     Shrub                     Total aboveground biomass
+292       BETPAP      Tree                     Total aboveground biomass
+293       OSTVIR      Tree                      Stem and branches (live)
+294       OSTVIR      Tree                                 Foliage total
+295       CORALT      Tree                     Total aboveground biomass
+296       QUERUB      Tree                     Total aboveground biomass
+297       TSUCAN      Tree                     Total aboveground biomass
+298       AMELAE     Shrub                     Total aboveground biomass
+299       ACESUG      Tree                     Total aboveground biomass
+300       FRAAME      Tree                      Whole tree (above stump)
+301       PRUPEN      Tree                     Total aboveground biomass
+302       PRUSER      Tree                     Total aboveground biomass
+303       POPGRA      Tree                     Total aboveground biomass
+304       POPTRE      Tree                     Total aboveground biomass
+305         TSHE      Tree                      Whole tree (above stump)
+306         ABGR      Tree                  Stem biomass (wood and bark)
+307         LOCI     Shrub                     Total aboveground biomass
+308         ROGY     Shrub                     Total aboveground biomass
+309         ALRU      Tree                      Whole tree (above stump)
+310         PSME      Tree                     Total aboveground biomass
+311         ACCI     Shrub                     Total aboveground biomass
+312         ACGL      Tree                     Total aboveground biomass
+313        COCOC     Shrub                     Total aboveground biomass
+314         CONU      Tree                     Total aboveground biomass
+315         GASH     Shrub                     Total aboveground biomass
+316         MEFE     Shrub                     Total aboveground biomass
+317         RHMA     Shrub                     Total aboveground biomass
+318         PIMO      Tree                     Total aboveground biomass
+319         RHPU     Shrub                     Total aboveground biomass
+320         AMAL      Tree                     Total aboveground biomass
+321         OECE     Shrub                     Total aboveground biomass
+322         TABR      Tree                     Total aboveground biomass
+323         VAME     Shrub Total aboveground biomass (including foliage)
+324         VAOV     Shrub Total aboveground biomass (including foliage)
+325         VAPA     Shrub Total aboveground biomass (including foliage)
+326         PSME      Tree                     Total aboveground biomass
+327         HODI     Shrub                     Total aboveground biomass
+328         RULE     Shrub                     Total aboveground biomass
+329         RUSP     Shrub                     Total aboveground biomass
+330         ABPR      Tree                           Live branch biomass
+331         ABPR      Tree                         Total foliage biomass
+332         ABSP      Tree                           Live branch biomass
+333         ABSP      Tree                         Total foliage biomass
+334         ABSP      Tree                             Stem bark biomass
+335         ABPR      Tree                            Total stem biomass
+336         ABSP      Tree                   Stem biomass (without bark)
+337         THPL      Tree                     Total aboveground biomass
+338         THPL      Tree                     Total aboveground biomass
+339         ABGR      Tree      Crown biomass (branches, foliage, twigs)
+340         ABAM      Tree                      Whole tree (above stump)
+341         UNKN      Tree                                          <NA>
+342       QUERRO      Tree                     Total aboveground biomass
+343       FRAXEX      Tree                     Total aboveground biomass
+344       SAMBNI     Shrub                     Total aboveground biomass
+345       ILEXAQ     Shrub                     Total aboveground biomass
+346       BETUSP      Tree                     Total aboveground biomass
+347       CARPBE      Tree                     Total aboveground biomass
+348       CORYAV     Shrub                     Total aboveground biomass
+349       EUONEU     Shrub                     Total aboveground biomass
+350       CORNSA     Shrub                     Total aboveground biomass
+351       CASTSA      Tree                     Total aboveground biomass
+352       FAGUSY      Tree                     Total aboveground biomass
+353       TILIEU      Tree                     Total aboveground biomass
+354       LARIDE      Tree                     Total aboveground biomass
+355       PICEAB      Tree                     Total aboveground biomass
+356       PINUSY      Tree                     Total aboveground biomass
+357       PSEUME      Tree                     Total aboveground biomass
+358       FRANAL      Tree                     Total aboveground biomass
+359       CRATMO     Shrub                     Total aboveground biomass
+360       PRUNAV      Tree                     Total aboveground biomass
+361       PRUNSP      Tree                     Total aboveground biomass
+362       SALISP      Tree                     Total aboveground biomass
+363       ACERCA      Tree                     Total aboveground biomass
+364       TAXUBA      Tree                     Total aboveground biomass
+365       ACERPS      Tree                     Total aboveground biomass
+366         PILA      Tree                     Total aboveground biomass
+367         PSME      Tree                     Total aboveground biomass
+368         PREM      Tree                      Whole tree (above stump)
+369         SARA     Shrub                     Total aboveground biomass
+370        COCOC     Shrub                     Total aboveground biomass
+371         CONU      Tree                     Total aboveground biomass
+372         RHOC     Shrub                     Total aboveground biomass
+373         RHCA     Shrub                     Total aboveground biomass
+374         PREM      Tree                     Total aboveground biomass
+375         PRVI      Tree                     Total aboveground biomass
+376         SASC      Tree                     Total aboveground biomass
+377        SALIX      Tree                     Total aboveground biomass
+378         PILA      Tree                     Total aboveground biomass
+379         PSME      Tree                     Total aboveground biomass
+380         ARPA     Shrub                     Total aboveground biomass
+381         CECO     Shrub                     Total aboveground biomass
+382         CEIN     Shrub                     Total aboveground biomass
+383         CEPA     Shrub Total aboveground biomass (including foliage)
+384         HODI     Shrub                     Total aboveground biomass
+385         RINE     Shrub                     Total aboveground biomass
+386         RIRO     Shrub                     Total aboveground biomass
+387         ABCO      Tree                           Live branch biomass
+388         ABMA      Tree                           Live branch biomass
+389         ABCO      Tree                         Total foliage biomass
+390         ABMA      Tree                         Total foliage biomass
+391         ABSP      Tree                           Live branch biomass
+392         ABSP      Tree                         Total foliage biomass
+393         LEDA     Shrub                     Total aboveground biomass
+394         VAUL     Shrub                     Total aboveground biomass
+395         COSE     Shrub                     Total aboveground biomass
+396         CHSE     Shrub                     Total aboveground biomass
+397         ABSP      Tree                             Stem bark biomass
+398         ABCO      Tree                            Total stem biomass
+399         ABMA      Tree                            Total stem biomass
+400         ABSP      Tree                   Stem biomass (without bark)
+401         CADE      Tree                  Stem biomass (wood and bark)
+402         ABCO      Tree                  Stem biomass (wood and bark)
+403         ABMA      Tree                  Stem biomass (wood and bark)
+404         PIPO      Tree                  Stem biomass (wood and bark)
+405         PIPO      Tree      Crown biomass (branches, foliage, twigs)
+406         UNKN      <NA>                                          <NA>
+407          BEZ     Shrub                     Total aboveground biomass
+408           BK      Tree                     Total aboveground biomass
+409           BR      Tree                     Total aboveground biomass
+410           JD      Tree                     Total aboveground biomass
+411           JL      Tree                     Total aboveground biomass
+412           JR      Tree                     Total aboveground biomass
+413           JV      Tree                     Total aboveground biomass
+414           KL      Tree                     Total aboveground biomass
+415           SM      Tree                     Total aboveground biomass
+416           TP      Tree                     Total aboveground biomass
+417           VR      Tree                     Total aboveground biomass
+418          837      Tree            Whole tree (above and belowground)
+419         quve      Tree            Whole tree (above and belowground)
+420         QUVE      Tree            Whole tree (above and belowground)
+421       quevel      Tree            Whole tree (above and belowground)
+    equation_grouping equation_id allometry_specificity dbh_min_cm dbh_max_cm
+1                   E        <NA>               Species      14.22      25.91
+2                   E        <NA>               Species      29.46      41.66
+3                   E        <NA>               Species        2.5         40
+4                   E        <NA>               Species        2.5         40
+5                   E        <NA>               Species         25        550
+6                   E        <NA>               Species         25        550
+7                   E        <NA>               Species       0.18       4.31
+8                   E        <NA>               Species         14         43
+9                   E        <NA>               Species       5.08       50.8
+10                  E        <NA>               Species       5.08       50.8
+11                  E        <NA>               Species       5.08      40.64
+12                  E        <NA>               Species       5.08       50.8
+13                  E        <NA>               Species       5.08       50.8
+14                  E        <NA>               Species       5.08      40.64
+15                  E        <NA>               Species       5.08       50.8
+16                  E        <NA>               Species       5.08       50.8
+17                  E        <NA>                 Genus        8.9       25.4
+18                  G        <NA>        Mixed hardwood        2.5         56
+19                  G        <NA>        Mixed hardwood        2.5         56
+20                  G        <NA>        Mixed hardwood        2.5         56
+21                  G        <NA>        Mixed hardwood        2.5         56
+22                  G        <NA>                Family          4         42
+23                  G        <NA>                Family          3         64
+24                  G        <NA>        Mixed hardwood        2.5         56
+25                  G        <NA>                Family          3         64
+26                  E        <NA>               Species          1          9
+27                  E        <NA>               Species          1          9
+28                  E        <NA>               Species       1.85       7.25
+29                  E        <NA>               Species       0.55       7.76
+30                  E        <NA>                 Genus        8.2       52.3
+31                  E        <NA>                 Genus        8.2       52.3
+32                  E        <NA>                 Genus        8.2       52.3
+33                  E        <NA>               Species        0.4       8.49
+34                  E        <NA>               Species       0.42       8.53
+35                  E        <NA>               Species       0.24       6.72
+36                  E        <NA>               Species        0.5       6.14
+37                  E        <NA>                 Genus          5         45
+38                  E        <NA>                 Genus          5         45
+39                  E        <NA>               Species       0.37       6.83
+40                  E        <NA>               Species       0.21       5.73
+41                  E        <NA>               Species       0.19       3.86
+42                  E        <NA>               Species       2.54      12.45
+43                  E        <NA>               Species       2.54      12.45
+44                  E        <NA>               Species      14.22      25.91
+45                  E        <NA>               Species      29.46      41.66
+46                  E        <NA>               Species       5.84       25.4
+47                  E        <NA>               Species      27.94      47.75
+48                  E        <NA>               Species      14.48       25.4
+49                  E        <NA>               Species      27.94      49.53
+50                  E        <NA>                 Genus       2.54      27.43
+51                  E        <NA>                 Genus       2.54      27.43
+52                  E        <NA>               Species       0.28       1.59
+53                  E        <NA>               Species       0.28       1.59
+54                  E        <NA>               Species       0.28       1.59
+55                  E        <NA>               Species       0.12       0.69
+56                  E        <NA>               Species       0.18       4.31
+57                  E        <NA>                 Genus        0.2        1.2
+58                  E        <NA>               Species        0.3        0.9
+59                  E        <NA>               Species        0.3        0.9
+60                  E        <NA>               Species        0.3        0.9
+61                  E        <NA>               Species       5.08       50.8
+62                  E        <NA>               Species       5.08       50.8
+63                  E        <NA>               Species       5.08      40.64
+64                  E        <NA>               Species       5.08       50.8
+65                  E        <NA>               Species       5.08       50.8
+66                  E        <NA>               Species       5.08       50.8
+67                  E        <NA>               Species       5.08       50.8
+68                  E        <NA>               Species       5.08      40.64
+69                  E        <NA>                 Genus        8.2       52.3
+70                  E        <NA>                 Genus        8.2       52.3
+71                  E        <NA>                 Genus        8.2       52.3
+72                  E        <NA>                 Genus        8.2       52.3
+73                  E        <NA>               Species       5.08       50.8
+74                  E        <NA>               Species       5.08       50.8
+75                  E        <NA>               Species       5.08       50.8
+76                  E        <NA>               Species          4         32
+77                  E        <NA>               Species          4         32
+78                  E        <NA>               Species       5.08       50.8
+79                  E        <NA>               Species       5.08       50.8
+80                  E        <NA>               Species       5.08       50.8
+81                  E        <NA>                 Genus        8.9       25.4
+82                  G        <NA>                Family          3         66
+83                  G        <NA>                Family          3         66
+84                  E        <NA>               Species          1         55
+85                  G        <NA>        Mixed hardwood        2.5         56
+86                  G        <NA>        Mixed hardwood        2.5         56
+87                  G        <NA>                Family          3         64
+88                  G        <NA>        Mixed hardwood        2.5         56
+89                  G        <NA>        Mixed hardwood        2.5         56
+90                  G        <NA>        Mixed hardwood        2.5         56
+91                  G        <NA>        Mixed hardwood        2.5         56
+92                  G        <NA>        Mixed hardwood        2.5         56
+93                  G        <NA>        Mixed hardwood        2.5         56
+94                  G        <NA>        Mixed hardwood        2.5         56
+95                  G        <NA>                Family          4         42
+96                  G        <NA>                Family          3         89
+97                  G        <NA>                Family          4         42
+98                  G        <NA>                Family          4         42
+99                  G        <NA>                Family          3         64
+100                 G        <NA>        Mixed hardwood        2.5         56
+101                 G        <NA>        Mixed hardwood        2.5         56
+102                 E        <NA>               Species          1         55
+103                 E        <NA>               Species          1         55
+104                 G        <NA>                Family          3         64
+105                 G        <NA>        Mixed hardwood        2.5         56
+106                 E        <NA>               Species        0.4       8.49
+107                 E        <NA>               Species        3.5       35.6
+108                 E        <NA>                 Genus          5         45
+109                 E        <NA>                 Genus          5         45
+110                 E        <NA>               Species        0.4       8.49
+111                 E        <NA>                 Genus        8.2       52.3
+112                 E        <NA>                 Genus        8.2       52.3
+113                 E        <NA>                 Genus        8.2       52.3
+114                 E        <NA>               Species      28.45       50.8
+115                 E        <NA>               Species       2.54      12.45
+116                 E        <NA>               Species       5.84       25.4
+117                 E        <NA>               Species      27.94      47.75
+118                 E        <NA>               Species        3.3      11.94
+119                 E        <NA>               Species       4.06      12.45
+120                 E        <NA>               Species       2.54      27.69
+121                 E        <NA>               Species       4.83      23.88
+122                 E        <NA>               Species      24.94      49.53
+123                 E        <NA>                 Genus       2.54      27.43
+124                 E        <NA>                 Genus       2.54      27.43
+125                 E        <NA>               Species        1.6         10
+126                 E        <NA>               Species         25        550
+127                 E        <NA>               Species       0.28       1.59
+128                 E        <NA>               Species       0.28       1.59
+129                 E        <NA>               Species       0.28       1.59
+130                 E        <NA>               Species       0.12       0.69
+131                 E        <NA>                 Genus        0.2        1.2
+132                 E        <NA>               Species         14         43
+133                 E        <NA>               Species       5.08       50.8
+134                 E        <NA>                 Genus        8.9       25.4
+135                 E        <NA>                 Genus        8.9       25.4
+136                 G        <NA>                Family          3         66
+137                 E        <NA>               Species          1         55
+138                 G        <NA>        Mixed hardwood        2.5         56
+139                 G        <NA>        Mixed hardwood        2.5         56
+140                 G        <NA>        Mixed hardwood        2.5         56
+141                 G        <NA>                Family          3         64
+142                 G        <NA>                Family          3         64
+143                 G        <NA>        Mixed hardwood        2.5         56
+144                 G        <NA>        Mixed hardwood        2.5         56
+145                 G        <NA>        Mixed hardwood        2.5         56
+146                 G        <NA>        Mixed hardwood        2.5         56
+147                 G        <NA>        Mixed hardwood        2.5         56
+148                 G        <NA>                Family          3         64
+149                 G        <NA>                Family          3         64
+150                 G        <NA>                Family          3         64
+151                 G        <NA>                Family          3         64
+152                 G        <NA>                Family          3         89
+153                 G        <NA>                Family          4         42
+154                 E        <NA>               Species        2.5         55
+155                 E        <NA>               Species        2.5         55
+156                 G        <NA>                Family          3         89
+157                 E        <NA>               Species       7.62      30.48
+158                 G        <NA>                Family          4         42
+159                 G        <NA>                Family          3         64
+160                 G        <NA>        Mixed hardwood        2.5         56
+161                 G        <NA>        Mixed hardwood        2.5         56
+162                 G        <NA>        Mixed hardwood        2.5         56
+163                 G        <NA>        Mixed hardwood        2.5         56
+164                 G        <NA>                Family          3         70
+165                 G        <NA>        Mixed hardwood        2.5         56
+166                 G        <NA>        Mixed hardwood        2.5         56
+167                 E        <NA>               Species          1         63
+168                 E        <NA>               Species          7         63
+169                 E        <NA>               Species         15       43.3
+170                 E        <NA>               Species       10.6       57.5
+171                 E        <NA>                 Genus        8.2       52.3
+172                 E        <NA>               Species       10.2       55.8
+173                 E        <NA>               Species        3.5       35.6
+174                 E        <NA>               Species        3.5       35.6
+175                 E        <NA>                 Genus          5         45
+176                 E        <NA>                 Genus          5         45
+177                 E        <NA>                 Genus          5         45
+178                 E        <NA>                 Genus          5         45
+179                 E        <NA>               Species       0.37       6.83
+180                 E        <NA>               Species       0.37       6.83
+181                 E        <NA>               Species       0.68       7.49
+182                 E        <NA>               Species        0.4       8.49
+183                 E        <NA>               Species      24.94      49.53
+184                 E        <NA>               Species        2.5         40
+185                 E        <NA>               Species         25        550
+186                 E        <NA>               Species       0.12       0.69
+187                 E        <NA>               Species         14         43
+188                 E        <NA>               Species       5.08       50.8
+189                 E        <NA>               Species       5.08       50.8
+190                 E        <NA>               Species       5.08       50.8
+191                 E        <NA>               Species       5.08       50.8
+192                 E        <NA>               Species       5.08       50.8
+193                 E        <NA>               Species       5.08       50.8
+194                 E        <NA>               Species       5.08      40.64
+195                 E        <NA>               Species       5.08       50.8
+196                 E        <NA>               Species       5.08       50.8
+197                 E        <NA>                 Genus        8.9       25.4
+198                 G        <NA>        Mixed hardwood        2.5         56
+199                 G        <NA>        Mixed hardwood        2.5         56
+200                 G        <NA>        Mixed hardwood        2.5         56
+201                 G        <NA>        Mixed hardwood        2.5         56
+202                 G        <NA>                Family          4         42
+203                 G        <NA>                Family          4         42
+204                 G        <NA>                Family          4         42
+205                 G        <NA>                Family          3         64
+206                 G        <NA>        Mixed hardwood        2.5         56
+207                 G        <NA>        Mixed hardwood        2.5         56
+208                 G        <NA>                Family          3         64
+209                 G        <NA>                Family          3         64
+210                 G        <NA>                Family          3         66
+211                 G        <NA>        Mixed hardwood        2.5         56
+212                 G        <NA>        Mixed hardwood        2.5         56
+213                 E        <NA>               Species          1          9
+214                 E        <NA>               Species          1          9
+215                 E        <NA>               Species       1.85       7.25
+216                 E        <NA>               Species       1.85       7.25
+217                 E        <NA>               Species       0.55       7.76
+218                 E        <NA>                 Genus        8.2       52.3
+219                 E        <NA>                 Genus        8.2       52.3
+220                 E        <NA>                 Genus        8.2       52.3
+221                 E        <NA>                 Genus        8.2       52.3
+222                 E        <NA>                 Genus        8.2       52.3
+223                 E        <NA>               Species        0.5       6.14
+224                 E        <NA>                 Genus          5         45
+225                 E        <NA>                 Genus          5         45
+226                 E        <NA>               Species       0.37       6.83
+227                 E        <NA>               Species       0.37       6.83
+228                 E        <NA>               Species       0.37       6.83
+229                 E        <NA>               Species       0.21       5.73
+230                 E        <NA>               Species       0.19       3.86
+231                 E        <NA>               Species         NI         NI
+232                 E        <NA>               Species        0.5        2.1
+233                 E        <NA>               Species        0.5        2.1
+234                 E        <NA>               Species          8         61
+235                 E        <NA>               Species        1.4       13.4
+236                 G        <NA>        Mixed hardwood        2.5         56
+237                 G        <NA>                Family          3         64
+238                 G        <NA>        Mixed hardwood        2.5         56
+239                 G        <NA>                Family          3        614
+240                 G        <NA>                Family          3         89
+241                 G        <NA>                Family          3         89
+242                 G        <NA>        Mixed hardwood        2.5         56
+243                 G        <NA>        Mixed hardwood        2.5         56
+244                 G        <NA>                Family          3         64
+245                 G        <NA>                Family          3         64
+246                 G        <NA>                Family          3         64
+247                 G        <NA>                Family          3         64
+248                 G        <NA>                Family          3         64
+249                 G        <NA>                Family          3         70
+250                 G        <NA>                Family          3         66
+251                 E        <NA>               Species        1.5       <NA>
+252                 E        <NA>               Species        1.5       <NA>
+253                 E        <NA>               Species        1.5       <NA>
+254                 E        <NA>               Species        1.5       <NA>
+255                 E        <NA>               Species        1.5       <NA>
+256                 E        <NA>               Species        1.5       <NA>
+257                 E        <NA>               Species        0.6        3.6
+258                 E        <NA>               Species        0.6        2.5
+259                 E        <NA>                 Genus        0.4        1.4
+260                 E        <NA>               Species          2         16
+261                 E        <NA>               Species       24.1      117.7
+262                 E        <NA>               Species       24.1      117.7
+263                 E        <NA>               Species        2.5         40
+264                 E        <NA>               Species        2.5         40
+265                 E        <NA>               Species        2.5         40
+266                 E        <NA>               Species        2.5         40
+267                 E        <NA>               Species       12.9         30
+268                 E        <NA>               Species        1.1       32.6
+269                 E        <NA>               Species        1.4       23.4
+270                 E        <NA>               Species        2.5         55
+271                 E        <NA>               Species        2.5         40
+272                 E        <NA>               Species         25        550
+273                 E        <NA>               Species       0.12       0.69
+274                 E        <NA>               Species       5.08       50.8
+275                 E        <NA>               Species          4         32
+276                 G        <NA>        Mixed hardwood        2.5         56
+277                 G        <NA>                Family          3         64
+278                 G        <NA>                Family          3         64
+279                 G        <NA>                Family          3         64
+280                 G        <NA>        Mixed hardwood        2.5         56
+281                 G        <NA>        Mixed hardwood        2.5         56
+282                 G        <NA>                Family          4         42
+283                 E        <NA>               Species          1         55
+284                 G        <NA>                Family          3         64
+285                 G        <NA>                Family          3         64
+286                 G        <NA>                Family          3         64
+287                 G        <NA>                Family          3         64
+288                 G        <NA>        Mixed hardwood        2.5         56
+289                 E        <NA>               Species        3.1       24.6
+290                 E        <NA>               Species         10       52.2
+291                 E        <NA>               Species        3.1       24.6
+292                 E        <NA>               Species        3.5       26.3
+293                 E        <NA>               Species          1          9
+294                 E        <NA>               Species          1          9
+295                 E        <NA>               Species       1.85       7.25
+296                 E        <NA>               Species        2.8       69.5
+297                 E        <NA>               Species        0.1       2.54
+298                 G        <NA>                Family          3         64
+299                 E        <NA>               Species        7.5       23.7
+300                 E        <NA>               Species        0.5       6.14
+301                 E        <NA>               Species       0.37       6.83
+302                 E        <NA>               Species       0.37       6.83
+303                 E        <NA>               Species       0.68       7.49
+304                 E        <NA>               Species       14.7       39.7
+305                 E        <NA>               Species         16         49
+306                 E        <NA>               Species          0      10.16
+307                 E        <NA>               Species       0.12       0.69
+308                 E        <NA>                 Genus        0.2        1.2
+309                 E        <NA>               Species        1.7       13.2
+310                 E        <NA>               Species         10         40
+311                 E        <NA>               Species        0.1       2.54
+312                 E        <NA>               Species        0.1       2.54
+313                 G        <NA>        Mixed hardwood        2.5         56
+314                 G        <NA>                Family          3         64
+315                 G        <NA>                Family          3         64
+316                 G        <NA>                Family          3         64
+317                 G        <NA>                Family          3         64
+318                 G        <NA>                 Genus          3        180
+319                 G        <NA>        Mixed hardwood        2.5         56
+320                 G        <NA>                Family          3         64
+321                 G        <NA>                Family          3         64
+322                 G        <NA>                Family          3        109
+323                 E        <NA>               Species        0.4        3.3
+324                 E        <NA>               Species        0.4        3.3
+325                 E        <NA>               Species        0.4        3.3
+326                 E        <NA>               Species        1.4       13.4
+327                 E        <NA>               Species        0.7        2.2
+328                 E        <NA>               Species        0.1        1.1
+329                 E        <NA>               Species        0.1        1.1
+330                 E        <NA>               Species       18.8        111
+331                 E        <NA>               Species       18.8        111
+332                 E        <NA>                 Genus        8.7        111
+333                 E        <NA>                 Genus        8.7        111
+334                 E        <NA>                 Genus        8.7        111
+335                 E        <NA>               Species       15.9      235.5
+336                 E        <NA>                 Genus        8.7        111
+337                 E        <NA>               Species       0.18       2.23
+338                 E        <NA>               Species        4.2          7
+339                 E        <NA>               Species       2.54      30.48
+340                 E        <NA>               Species         31       90.4
+341                 E        <NA>                  <NA>       <NA>       <NA>
+342                 E        <NA>               Species         14      162.5
+343                 E        <NA>               Species          9        104
+344                 E        <NA>         Woody species         NI         NI
+345                 E        <NA>         Woody species         NI         NI
+346                 E        <NA>         Woody species         NI         NI
+347                 E        <NA>         Woody species         NI         NI
+348                 E        <NA>         Woody species         NI         NI
+349                 E        <NA>         Woody species         NI         NI
+350                 E        <NA>         Woody species         NI         NI
+351                 E        <NA>         Woody species         NI         NI
+352                 E        <NA>         Woody species         NI         NI
+353                 E        <NA>         Woody species         NI         NI
+354                 E        <NA>         Woody species         NI         NI
+355                 E        <NA>         Woody species         NI         NI
+356                 E        <NA>         Woody species         NI         NI
+357                 E        <NA>         Woody species         NI         NI
+358                 E        <NA>         Woody species         NI         NI
+359                 E        <NA>         Woody species         NI         NI
+360                 E        <NA>         Woody species         NI         NI
+361                 E        <NA>         Woody species         NI         NI
+362                 E        <NA>         Woody species         NI         NI
+363                 E        <NA>         Woody species         NI         NI
+364                 E        <NA>         Woody species         NI         NI
+365                 E        <NA>               Species       11.5       96.5
+366                 E        <NA>               Species         10         40
+367                 E        <NA>               Species         10         40
+368                 E        <NA>               Species        1.7       13.2
+369                 G        <NA>        Mixed hardwood        2.5         56
+370                 G        <NA>        Mixed hardwood        2.5         56
+371                 G        <NA>                Family          3         64
+372                 G        <NA>                Family          3         64
+373                 G        <NA>        Mixed hardwood        2.5         56
+374                 G        <NA>                Family          3         64
+375                 G        <NA>                Family          3         64
+376                 G        <NA>                Family          3         70
+377                 G        <NA>                Family          3         70
+378                 E        <NA>               Species        1.4       13.4
+379                 E        <NA>               Species        1.4       13.4
+380                 E        <NA>               Species        0.4       11.5
+381                 E        <NA>               Species        0.3       11.7
+382                 E        <NA>               Species        0.3        6.5
+383                 E        <NA>               Species        0.3        6.5
+384                 E        <NA>               Species        0.7        2.2
+385                 E        <NA>                 Genus        0.4        1.4
+386                 E        <NA>                 Genus        0.4        1.4
+387                 E        <NA>               Species       18.8        111
+388                 E        <NA>               Species       18.8        111
+389                 E        <NA>               Species       18.8        111
+390                 E        <NA>               Species       18.8        111
+391                 E        <NA>                 Genus        8.7        111
+392                 E        <NA>                 Genus        8.7        111
+393                 E        <NA>               Species        0.5        2.6
+394                 E        <NA>               Species        0.5        2.6
+395                 E        <NA>               Species        0.9        5.7
+396                 E        <NA>               Species        0.8         13
+397                 E        <NA>                 Genus        8.7        111
+398                 E        <NA>               Species       15.9      235.5
+399                 E        <NA>               Species       15.9      235.5
+400                 E        <NA>                 Genus        8.7        111
+401                 E        <NA>               Species         25      143.9
+402                 E        <NA>               Species       14.4      158.4
+403                 E        <NA>               Species       18.8      143.2
+404                 E        <NA>               Species       24.1      117.7
+405                 E        <NA>               Species       2.54      30.48
+406              <NA>        <NA>                  <NA>       <NA>       <NA>
+407                 E        <NA>               Species         NI         50
+408                 E        <NA>               Species         NI         50
+409                 E        <NA>               Species         NI         50
+410                 E        <NA>               Species         NI         40
+411                 E        <NA>               Species         NI         50
+412                 E        <NA>               Species         NI         50
+413                 E        <NA>               Species         NI         50
+414                 E        <NA>               Species         NI         50
+415                 E        <NA>               Species         NI         40
+416                 E        <NA>               Species         NI         50
+417                 E        <NA>               Species         NI         50
+418                 E        <NA>               Species      30.48       88.9
+419                 E        <NA>               Species      30.48       88.9
+420                 E        <NA>               Species      30.48       88.9
+421                 E        <NA>               Species      30.48       88.9
+    wsg_id wsg_specificity
+1     <NA>         species
+2     <NA>         species
+3     <NA>            <NA>
+4     <NA>            <NA>
+5     <NA>            <NA>
+6     <NA>            <NA>
+7     <NA>            <NA>
+8     <NA>            <NA>
+9     <NA>            <NA>
+10    <NA>            <NA>
+11    <NA>            <NA>
+12    <NA>            <NA>
+13    <NA>            <NA>
+14    <NA>         species
+15    <NA>            <NA>
+16    <NA>            <NA>
+17    <NA>            <NA>
+18    <NA>            <NA>
+19    <NA>            <NA>
+20    <NA>            <NA>
+21    <NA>            <NA>
+22    <NA>            <NA>
+23    <NA>            <NA>
+24    <NA>            <NA>
+25    <NA>            <NA>
+26    <NA>            <NA>
+27    <NA>            <NA>
+28    <NA>            <NA>
+29    <NA>         species
+30    <NA>            <NA>
+31    <NA>            <NA>
+32    <NA>            <NA>
+33    <NA>            <NA>
+34    <NA>            <NA>
+35    <NA>            <NA>
+36    <NA>            <NA>
+37    <NA>            <NA>
+38    <NA>            <NA>
+39    <NA>            <NA>
+40    <NA>            <NA>
+41    <NA>            <NA>
+42    <NA>            <NA>
+43    <NA>            <NA>
+44    <NA>         species
+45    <NA>         species
+46    <NA>            <NA>
+47    <NA>            <NA>
+48    <NA>            <NA>
+49    <NA>            <NA>
+50    <NA>            <NA>
+51    <NA>            <NA>
+52    <NA>            <NA>
+53    <NA>            <NA>
+54    <NA>            <NA>
+55    <NA>            <NA>
+56    <NA>            <NA>
+57    <NA>            <NA>
+58    <NA>            <NA>
+59    <NA>            <NA>
+60    <NA>            <NA>
+61    <NA>            <NA>
+62    <NA>            <NA>
+63    <NA>            <NA>
+64    <NA>            <NA>
+65    <NA>            <NA>
+66    <NA>            <NA>
+67    <NA>            <NA>
+68    <NA>         species
+69    <NA>            <NA>
+70    <NA>            <NA>
+71    <NA>            <NA>
+72    <NA>            <NA>
+73    <NA>            <NA>
+74    <NA>            <NA>
+75    <NA>            <NA>
+76    <NA>            <NA>
+77    <NA>            <NA>
+78    <NA>            <NA>
+79    <NA>            <NA>
+80    <NA>            <NA>
+81    <NA>            <NA>
+82    <NA>            <NA>
+83    <NA>            <NA>
+84    <NA>            <NA>
+85    <NA>            <NA>
+86    <NA>            <NA>
+87    <NA>            <NA>
+88    <NA>            <NA>
+89    <NA>            <NA>
+90    <NA>            <NA>
+91    <NA>            <NA>
+92    <NA>            <NA>
+93    <NA>            <NA>
+94    <NA>            <NA>
+95    <NA>            <NA>
+96    <NA>            <NA>
+97    <NA>            <NA>
+98    <NA>            <NA>
+99    <NA>            <NA>
+100   <NA>            <NA>
+101   <NA>            <NA>
+102   <NA>            <NA>
+103   <NA>            <NA>
+104   <NA>            <NA>
+105   <NA>            <NA>
+106   <NA>            <NA>
+107   <NA>            <NA>
+108   <NA>            <NA>
+109   <NA>            <NA>
+110   <NA>            <NA>
+111   <NA>            <NA>
+112   <NA>            <NA>
+113   <NA>            <NA>
+114   <NA>            <NA>
+115   <NA>            <NA>
+116   <NA>            <NA>
+117   <NA>            <NA>
+118   <NA>            <NA>
+119   <NA>            <NA>
+120   <NA>            <NA>
+121   <NA>            <NA>
+122   <NA>            <NA>
+123   <NA>            <NA>
+124   <NA>            <NA>
+125   <NA>            <NA>
+126   <NA>            <NA>
+127   <NA>            <NA>
+128   <NA>            <NA>
+129   <NA>            <NA>
+130   <NA>            <NA>
+131   <NA>            <NA>
+132   <NA>            <NA>
+133   <NA>            <NA>
+134   <NA>            <NA>
+135   <NA>            <NA>
+136   <NA>            <NA>
+137   <NA>            <NA>
+138   <NA>            <NA>
+139   <NA>            <NA>
+140   <NA>            <NA>
+141   <NA>            <NA>
+142   <NA>            <NA>
+143   <NA>            <NA>
+144   <NA>            <NA>
+145   <NA>            <NA>
+146   <NA>            <NA>
+147   <NA>            <NA>
+148   <NA>            <NA>
+149   <NA>            <NA>
+150   <NA>            <NA>
+151   <NA>            <NA>
+152   <NA>            <NA>
+153   <NA>            <NA>
+154   <NA>            <NA>
+155   <NA>            <NA>
+156   <NA>            <NA>
+157   <NA>         species
+158   <NA>            <NA>
+159   <NA>            <NA>
+160   <NA>            <NA>
+161   <NA>            <NA>
+162   <NA>            <NA>
+163   <NA>            <NA>
+164   <NA>            <NA>
+165   <NA>            <NA>
+166   <NA>            <NA>
+167   <NA>            <NA>
+168   <NA>            <NA>
+169   <NA>            <NA>
+170   <NA>            <NA>
+171   <NA>            <NA>
+172   <NA>            <NA>
+173   <NA>            <NA>
+174   <NA>            <NA>
+175   <NA>            <NA>
+176   <NA>            <NA>
+177   <NA>            <NA>
+178   <NA>            <NA>
+179   <NA>            <NA>
+180   <NA>            <NA>
+181   <NA>            <NA>
+182   <NA>            <NA>
+183   <NA>            <NA>
+184   <NA>            <NA>
+185   <NA>            <NA>
+186   <NA>            <NA>
+187   <NA>            <NA>
+188   <NA>            <NA>
+189   <NA>            <NA>
+190   <NA>            <NA>
+191   <NA>            <NA>
+192   <NA>            <NA>
+193   <NA>            <NA>
+194   <NA>         species
+195   <NA>            <NA>
+196   <NA>            <NA>
+197   <NA>            <NA>
+198   <NA>            <NA>
+199   <NA>            <NA>
+200   <NA>            <NA>
+201   <NA>            <NA>
+202   <NA>            <NA>
+203   <NA>            <NA>
+204   <NA>            <NA>
+205   <NA>            <NA>
+206   <NA>            <NA>
+207   <NA>            <NA>
+208   <NA>            <NA>
+209   <NA>            <NA>
+210   <NA>            <NA>
+211   <NA>            <NA>
+212   <NA>            <NA>
+213   <NA>            <NA>
+214   <NA>            <NA>
+215   <NA>            <NA>
+216   <NA>            <NA>
+217   <NA>         species
+218   <NA>            <NA>
+219   <NA>            <NA>
+220   <NA>            <NA>
+221   <NA>            <NA>
+222   <NA>            <NA>
+223   <NA>            <NA>
+224   <NA>            <NA>
+225   <NA>            <NA>
+226   <NA>            <NA>
+227   <NA>            <NA>
+228   <NA>            <NA>
+229   <NA>            <NA>
+230   <NA>            <NA>
+231   <NA>            <NA>
+232   <NA>            <NA>
+233   <NA>            <NA>
+234   <NA>            <NA>
+235   <NA>            <NA>
+236   <NA>            <NA>
+237   <NA>            <NA>
+238   <NA>            <NA>
+239   <NA>            <NA>
+240   <NA>            <NA>
+241   <NA>            <NA>
+242   <NA>            <NA>
+243   <NA>            <NA>
+244   <NA>            <NA>
+245   <NA>            <NA>
+246   <NA>            <NA>
+247   <NA>            <NA>
+248   <NA>            <NA>
+249   <NA>            <NA>
+250   <NA>            <NA>
+251   <NA>            <NA>
+252   <NA>            <NA>
+253   <NA>            <NA>
+254   <NA>            <NA>
+255   <NA>            <NA>
+256   <NA>            <NA>
+257   <NA>            <NA>
+258   <NA>            <NA>
+259   <NA>            <NA>
+260   <NA>            <NA>
+261   <NA>            <NA>
+262   <NA>            <NA>
+263   <NA>            <NA>
+264   <NA>            <NA>
+265   <NA>            <NA>
+266   <NA>            <NA>
+267   <NA>            <NA>
+268   <NA>            <NA>
+269   <NA>            <NA>
+270   <NA>            <NA>
+271   <NA>            <NA>
+272   <NA>            <NA>
+273   <NA>            <NA>
+274   <NA>            <NA>
+275   <NA>            <NA>
+276   <NA>            <NA>
+277   <NA>            <NA>
+278   <NA>            <NA>
+279   <NA>            <NA>
+280   <NA>            <NA>
+281   <NA>            <NA>
+282   <NA>            <NA>
+283   <NA>            <NA>
+284   <NA>            <NA>
+285   <NA>            <NA>
+286   <NA>            <NA>
+287   <NA>            <NA>
+288   <NA>            <NA>
+289   <NA>            <NA>
+290   <NA>            <NA>
+291   <NA>            <NA>
+292   <NA>            <NA>
+293   <NA>            <NA>
+294   <NA>            <NA>
+295   <NA>            <NA>
+296   <NA>            <NA>
+297   <NA>            <NA>
+298   <NA>            <NA>
+299   <NA>            <NA>
+300   <NA>            <NA>
+301   <NA>            <NA>
+302   <NA>            <NA>
+303   <NA>            <NA>
+304   <NA>            <NA>
+305   <NA>            <NA>
+306   <NA>            <NA>
+307   <NA>            <NA>
+308   <NA>            <NA>
+309   <NA>            <NA>
+310   <NA>            <NA>
+311   <NA>            <NA>
+312   <NA>            <NA>
+313   <NA>            <NA>
+314   <NA>            <NA>
+315   <NA>            <NA>
+316   <NA>            <NA>
+317   <NA>            <NA>
+318   <NA>            <NA>
+319   <NA>            <NA>
+320   <NA>            <NA>
+321   <NA>            <NA>
+322   <NA>            <NA>
+323   <NA>            <NA>
+324   <NA>            <NA>
+325   <NA>            <NA>
+326   <NA>            <NA>
+327   <NA>            <NA>
+328   <NA>            <NA>
+329   <NA>            <NA>
+330   <NA>            <NA>
+331   <NA>            <NA>
+332   <NA>            <NA>
+333   <NA>            <NA>
+334   <NA>            <NA>
+335   <NA>            <NA>
+336   <NA>            <NA>
+337   <NA>            <NA>
+338   <NA>            <NA>
+339   <NA>            <NA>
+340   <NA>            <NA>
+341   <NA>            <NA>
+342   <NA>            <NA>
+343   <NA>            <NA>
+344   <NA>            <NA>
+345   <NA>            <NA>
+346   <NA>            <NA>
+347   <NA>            <NA>
+348   <NA>            <NA>
+349   <NA>            <NA>
+350   <NA>            <NA>
+351   <NA>            <NA>
+352   <NA>            <NA>
+353   <NA>            <NA>
+354   <NA>            <NA>
+355   <NA>            <NA>
+356   <NA>            <NA>
+357   <NA>            <NA>
+358   <NA>            <NA>
+359   <NA>            <NA>
+360   <NA>            <NA>
+361   <NA>            <NA>
+362   <NA>            <NA>
+363   <NA>            <NA>
+364   <NA>            <NA>
+365   <NA>            <NA>
+366   <NA>            <NA>
+367   <NA>            <NA>
+368   <NA>            <NA>
+369   <NA>            <NA>
+370   <NA>            <NA>
+371   <NA>            <NA>
+372   <NA>            <NA>
+373   <NA>            <NA>
+374   <NA>            <NA>
+375   <NA>            <NA>
+376   <NA>            <NA>
+377   <NA>            <NA>
+378   <NA>            <NA>
+379   <NA>            <NA>
+380   <NA>            <NA>
+381   <NA>            <NA>
+382   <NA>            <NA>
+383   <NA>            <NA>
+384   <NA>            <NA>
+385   <NA>            <NA>
+386   <NA>            <NA>
+387   <NA>            <NA>
+388   <NA>            <NA>
+389   <NA>            <NA>
+390   <NA>            <NA>
+391   <NA>            <NA>
+392   <NA>            <NA>
+393   <NA>            <NA>
+394   <NA>            <NA>
+395   <NA>            <NA>
+396   <NA>            <NA>
+397   <NA>            <NA>
+398   <NA>            <NA>
+399   <NA>            <NA>
+400   <NA>            <NA>
+401   <NA>            <NA>
+402   <NA>            <NA>
+403   <NA>            <NA>
+404   <NA>            <NA>
+405   <NA>            <NA>
+406   <NA>            <NA>
+407   <NA>            <NA>
+408   <NA>            <NA>
+409   <NA>            <NA>
+410   <NA>            <NA>
+411   <NA>            <NA>
+412   <NA>            <NA>
+413   <NA>            <NA>
+414   <NA>            <NA>
+415   <NA>            <NA>
+416   <NA>            <NA>
+417   <NA>            <NA>
+418   <NA>         species
+419   <NA>         species
+420   <NA>         species
+421   <NA>         species

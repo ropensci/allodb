@@ -1,17 +1,56 @@
-# A tibble: 13 x 8
-   Column Field  Description                Column_type Field_codes Units Range
-   <chr>  <chr>  <chr>                      <chr>       <chr>       <chr> <chr>
- 1 1 / A  site   ForestGEO site name (corr~ character   -           -     -    
- 2 2 / B  family Plant family name as Taxo~ character   <NA>        <NA>  <NA> 
- 3 3 / C  speci~ Plant species name as Tax~ character   -           -     -    
- 4 4 / D  speci~ Species code used at the ~ character   <NA>        <NA>  <NA> 
- 5 5 / E  life_~ Common growth form for th~ character   <NA>        <NA>  <NA> 
- 6 6 / F  bioma~ The biomass variable char~ character   -           -     -    
- 7 7 / G  equat~ "Allometric equation grou~ character   G- generic~ -     -    
- 8 8 / H  equat~ Equation identification n~ numeric     -           <NA>  <NA> 
- 9 9 / I  allom~ Refers to the specific ta~ character ~ -           <NA>  <NA> 
-10 10 / J dbh_m~ Min DBH at which the equa~ numeric     -           -     <NA> 
-11 11 / K dbh_m~ Max DBH at which the equa~ numeric     -           -     <NA> 
-12 12 / L wsg_id Wood density identificati~ numeric     <NA>        <NA>  <NA> 
-13 13 / L wsg_s~ Refers to the specific ta~ character   <NA>        <NA>  <NA> 
-# ... with 1 more variable: `Erikas notes to delete before publication` <chr>
+   Column                 Field
+1   1 / A                  site
+2   2 / B                family
+3   3 / C               species
+4   4 / D          species_code
+5   5 / E             life_form
+6   6 / F      biomass_variable
+7   7 / G     equation_grouping
+8   8 / H           equation_id
+9   9 / I allometry_specificity
+10 10 / J            dbh_min_cm
+11 11 / K            dbh_max_cm
+12 12 / L                wsg_id
+13 13 / L         wsg_specifity
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Description
+1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ForestGEO site name (corresponds to name in ForestGEO sites master table)
+2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Plant family name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.
+3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names.
+4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Species code used at the ForestGEO site, could be numeric or characters
+5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Common growth form for the given plant species
+6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              The biomass variable characterized by the equation (biomass component)
+7  Allometric equation group that can be selected by the user. "Generic" equations are the current best equations or equation groups that can be applied to any site in a broad geographic area (e.g., pantropical, continental) and to any taxa at that site. "Expert selected" equations are the current best equations for specific taxa at a specific site, as identified by a botanist or forest ecologist. "Other" equations are potentially relevant (i.e., may be selected as best under different criteria) or were previously classified as best available, but not currently classified as best available.
+8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Equation identification number given arbitrarely. Links to id in Allometry Equations table.
+9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Refers to the specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)
+10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Min DBH at which the equation should be applied
+11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Max DBH at which the equation should be applied
+12                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Wood density identification number. Links to id in Wood Density table.
+13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)
+          Column_type                              Field_codes Units Range
+1           character                                        -     -     -
+2           character                                     <NA>  <NA>  <NA>
+3           character                                        -     -     -
+4           character                                     <NA>  <NA>  <NA>
+5           character                                     <NA>  <NA>  <NA>
+6           character                                        -     -     -
+7           character G- generic; E- expert selected; O- other     -     -
+8             numeric                                        -  <NA>  <NA>
+9  character (string)                                        -  <NA>  <NA>
+10            numeric                                        -     -  <NA>
+11            numeric                                        -     -  <NA>
+12            numeric                                     <NA>  <NA>  <NA>
+13          character                                     <NA>  <NA>  <NA>
+                                   Erikas notes to delete before publication
+1                                                                       <NA>
+2                                                                       <NA>
+3                                                                       <NA>
+4                                                                       <NA>
+5                                                                       <NA>
+6                                                                       <NA>
+7  its likely that we'll want a grouping variable like this for wood density
+8                                               need range before publishing
+9                                                                       <NA>
+10                                              Need range before publishing
+11                                              Need range before publishing
+12                                                                      <NA>
+13                I don't think needed in this table (in wood density table)

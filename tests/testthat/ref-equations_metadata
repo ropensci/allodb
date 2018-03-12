@@ -1,15 +1,144 @@
-# A tibble: 23 x 8
-   Column Field    Description              Column_type Field_codes Units Range
-   <chr>  <chr>    <chr>                    <chr>       <chr>       <chr> <chr>
- 1 1 / A  equatio~ Unique equation identif~ -           -           -     -    
- 2 2 / B  biomass~ Tree component characte~ character   -           -     -    
- 3 3 / C  equation Model equation as a fun~ character   -           -     -    
- 4 4 / D  allomet~ Refers to the specific ~ character   -           -     -    
- 5 5 / E  develop~ Species for which the p~ character   <NA>        <NA>  <NA> 
- 6 6 / F  geograp~ Geographic location fro~ character   -           -     -    
- 7 7 / G  dbh_min~ Minimun DBH in cm sampl~ numeric     -           <NA>  -    
- 8 8 / H  dbh_max~ Maximun DBH in cm sampl~ numeric     -           <NA>  -    
- 9 9 / I  n_trees  Number of trees sampled~ integer     -           -     -    
-10 10 / J dbh_uni~ DBH unit used in origin~ character   <NA>        <NA>  <NA> 
-# ... with 13 more rows, and 1 more variable: `Erikas notes to delete before
-#   publication` <chr>
+   Column                        Field
+1   1 / A                  equation_id
+2   2 / B            biomass_component
+3   3 / C                     equation
+4   4 / D        allometry_specificity
+5   5 / E          development_species
+6   6 / F              geographic_area
+7   7 / G                   dbh_min_cm
+8   8 / H                   dbh_max_cm
+9   9 / I                      n_trees
+10 10 / J           dbh_units_original
+11 11 / K       biomass_units_original
+12 12 / L allometry_development_method
+13 13 / M             model_parameters
+14 14 / N             regression_model
+15 15 / O       other_equations_tested
+16 16 / P                  log_biomass
+17 17 / Q               bias_corrected
+18 18 / R       bias_correction_factor
+19 19 / S          notes_fitting_model
+20 20 / T   original_data_availability
+21 21 / U            notes_to_consider
+22 22 / V                      warning
+23 23 / W                       ref_id
+                                                                                                                                                                                                                                 Description
+1                                                                                                                                                      Unique equation identification number given arbitrarely. Links to Site_Species table.
+2                                                                                                                                                                                               Tree component characterized by the equation
+3                                                                                                                                                                                                 Model equation as a function of DBH or DBA
+4                                                                                                                        Refers to the specific taxonomic level for which the equation was developed (species, genus, family or plant group)
+5                                                                                                                                                                                    Species for which the particular equation was developed
+6                                                                                                                                                         Geographic location from which trees were sampled to develop the original equation
+7                                                                                                                                                                                          Minimun DBH in cm sampled to develop the equation
+8                                                                                                                                                                                          Maximun DBH in cm sampled to develop the equation
+9                                                                                                                                                                                            Number of trees sampled to develop the equation
+10                                                                                                                                                                                                     DBH unit used in original publication
+11                                                                                                                                                                                                    Mass unit used in original publication
+12 Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing ("harvest").  However, we anticipate that many future allometries will be developed using ground-based LiDAR ("lidar").
+13                                                                                                    Parameters included in biomass model (H: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density)
+14                                                                                                                                                                                             Regression model used in original publication
+15                                                                                                                                                                                                                                      <NA>
+16                                                                                                                                                             Whether the fits are done with biomass as the response variable log(biomass).
+17                                                                                                                                            Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model
+18                                                                                                                                                Correction factor for the specific equation, pulled from original publication, if included
+19                                                                                                                                                                                                      Other details on statistical methods
+20                                                                                                                                                                            Indicates whether or not the original source data is available
+21                                                                                                                                                                               Includes any notes to consider when using selected equation
+22                                                                                                                             Warning or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected
+23                                                                                                                                             Unique reference identification number for biomass equation source. Links to Reference table.
+   Column_type
+1            -
+2    character
+3    character
+4    character
+5    character
+6    character
+7      numeric
+8      numeric
+9      integer
+10   character
+11   character
+12   character
+13   character
+14   character
+15   character
+16   character
+17     numeric
+18     numeric
+19   character
+20   character
+21   character
+22   character
+23           -
+                                                           Field_codes Units
+1                                                                    -     -
+2                                                                    -     -
+3                                                                    -     -
+4                                                                    -     -
+5                                                                 <NA>  <NA>
+6                                                                    -     -
+7                                                                    -  <NA>
+8                                                                    -  <NA>
+9                                                                    -     -
+10                                                                <NA>  <NA>
+11                                                                   -  <NA>
+12                                                     see description     -
+13                                                                <NA>  <NA>
+14                                                                <NA>  <NA>
+15                                                                <NA>  <NA>
+16 Yes -logaritmic transformation (base 10) was used; No - no log used  <NA>
+17                                                   0- false; 1- true     -
+18                                                                   -     -
+19                                                                <NA>  <NA>
+20                                                   0- false; 1- true     -
+21                                                                <NA>  <NA>
+22                                                                <NA>  <NA>
+23                                                                   -     -
+   Range
+1      -
+2      -
+3      -
+4      -
+5   <NA>
+6      -
+7      -
+8      -
+9      -
+10  <NA>
+11     -
+12     -
+13  <NA>
+14  <NA>
+15  <NA>
+16  <NA>
+17     -
+18     -
+19  <NA>
+20  <NA>
+21  <NA>
+22  <NA>
+23     -
+                                                                                                         Erikas notes to delete before publication
+1                                                                                                                                             <NA>
+2                                                                                                                                             <NA>
+3  We currently have equation form and parameters listed separately. We willl need a script to transform these. Mauro could write a scrip to merge
+4                                                                                                                                             <NA>
+5                                                                                                                                             <NA>
+6                                                                                                                                             <NA>
+7                                                                                                                                             <NA>
+8                                                                                                                                             <NA>
+9                                                                                                                                             <NA>
+10                                                                                                                                            <NA>
+11                                                                                                                                            <NA>
+12                                                                                                                                            <NA>
+13                                                                                EGA: We may excude this column later, but lets leave it for now.
+14                                                                                                                                            <NA>
+15                                                                                                                                            <NA>
+16                                                                                                                                            <NA>
+17                                                                                                                                            <NA>
+18                                                                                                                                            <NA>
+19                                                                                                                                            <NA>
+20                                                                                                                                            <NA>
+21                                                                                                                                            <NA>
+22                                                                                                                                            <NA>
+23                                                                                                                                            <NA>
