@@ -28,8 +28,7 @@ library(usethis)
 
 ```{r master}
 master <- read_csv(
-  # here("data-raw/allodb_master.csv"), col_type = type_allodb_master()
-  here("data-raw/allodb_master.csv")
+  here("data-raw/allodb_master.csv"), col_type = type_allodb_master()
 )
 ```
 

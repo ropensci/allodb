@@ -32,19 +32,8 @@ library(usethis)
 
 ``` r
 master <- read_csv(
-  # here("data-raw/allodb_master.csv"), col_type = type_allodb_master()
-  here("data-raw/allodb_master.csv")
+  here("data-raw/allodb_master.csv"), col_type = type_allodb_master()
 )
-#> Parsed with column specification:
-#> cols(
-#>   .default = col_character(),
-#>   a = col_double(),
-#>   b = col_double(),
-#>   c = col_double(),
-#>   d = col_double(),
-#>   n_trees = col_integer()
-#> )
-#> See spec(...) for full column specifications.
 ```
 
 # Export subsets of master data
