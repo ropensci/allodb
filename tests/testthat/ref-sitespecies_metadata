@@ -1,0 +1,17 @@
+# A tibble: 13 x 8
+   Column Field  Description                Column_type Field_codes Units Range
+   <chr>  <chr>  <chr>                      <chr>       <chr>       <chr> <chr>
+ 1 1 / A  site   ForestGEO site name (corr~ character   -           -     -    
+ 2 2 / B  family Plant family name as Taxo~ character   <NA>        <NA>  <NA> 
+ 3 3 / C  speci~ Plant species name as Tax~ character   -           -     -    
+ 4 4 / D  speci~ Species code used at the ~ character   <NA>        <NA>  <NA> 
+ 5 5 / E  life_~ Common growth form for th~ character   <NA>        <NA>  <NA> 
+ 6 6 / F  bioma~ The biomass variable char~ character   -           -     -    
+ 7 7 / G  equat~ "Allometric equation grou~ character   G- generic~ -     -    
+ 8 8 / H  equat~ Equation identification n~ numeric     -           <NA>  <NA> 
+ 9 9 / I  allom~ Refers to the specific ta~ character ~ -           <NA>  <NA> 
+10 10 / J dbh_m~ Min DBH at which the equa~ numeric     -           -     <NA> 
+11 11 / K dbh_m~ Max DBH at which the equa~ numeric     -           -     <NA> 
+12 12 / L wsg_id Wood density identificati~ numeric     <NA>        <NA>  <NA> 
+13 13 / L wsg_s~ Refers to the specific ta~ character   <NA>        <NA>  <NA> 
+# ... with 1 more variable: `Erikas notes to delete before publication` <chr>

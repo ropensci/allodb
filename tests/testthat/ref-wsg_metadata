@@ -1,0 +1,12 @@
+# A tibble: 9 x 8
+  Column Field Description Column_type Field_codes Units Range `Erikas notes t~
+  <chr>  <chr> <chr>       <chr>       <chr>       <chr> <chr> <chr>           
+1 1 / A  wsg_~ Wood speci~ numeric     -           -     <NA>  <NA>            
+2 2 / B  fami~ Plant fami~ character   <NA>        <NA>  <NA>  <NA>            
+3 3 / C  genus Plant genu~ character   <NA>        <NA>  <NA>  <NA>            
+4 4 / D  spec~ Plant spec~ character   <NA>        <NA>  <NA>  <NA>            
+5 5 / E  wsg   Wood speci~ numeric     <NA>        g/cm3 -     <NA>            
+6 6 / F  wsg_~ Specific t~ character   -           -     -     "from KAT: this~
+7 7 / G  n_tr~ Number of ~ numeric     <NA>        <NA>  <NA>  This will be al~
+8 8 / H  site  ForestGEO ~ character   <NA>        <NA>  <NA>  Species could b~
+9 9 / I  ref_~ Unique ref~ numeric     <NA>        <NA>  <NA>  <NA>            

@@ -1,0 +1,9 @@
+# A tibble: 6 x 5
+  Column Field       Description                Colum_type  `Notes to be delet~
+  <chr>  <chr>       <chr>                      <chr>       <chr>              
+1 1 / A  ref_id      Unique reference identifi~ numeric     <NA>               
+2 2 / B  ref_author  Last name of first author~ character ~ <NA>               
+3 3 / C  ref_year    Year of publication        numeric     <NA>               
+4 4 / D  ref_title   Title of publication       character ~ <NA>               
+5 5 / E  ref_journal Journal, book, report whe~ character ~ EG: Keep this for ~
+6 6 / F  ref_doi     Publication DOI (Digital ~ character ~ <NA>               

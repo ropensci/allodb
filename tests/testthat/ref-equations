@@ -1,0 +1,21 @@
+# A tibble: 421 x 23
+   equation_id biomass_component  equation   allometry_specif~ development_spe~
+   <chr>       <chr>              <chr>      <chr>             <chr>           
+ 1 <NA>        Stem and branches~ a*(DBH^2)~ Species           <NA>            
+ 2 <NA>        Stem and branches~ a*(DBH^2)~ Species           <NA>            
+ 3 <NA>        Whole tree (above~ a+b*DBH+c~ Species           <NA>            
+ 4 <NA>        Whole tree (above~ a+b*DBH+c~ Species           Ulmus americana 
+ 5 <NA>        Whole tree (above~ a+b*DBH+c~ Species           <NA>            
+ 6 <NA>        Whole tree (above~ a+b*DBH+c~ Species           Fraxinus americ~
+ 7 <NA>        Total aboveground~ a*DBA^b    Species           <NA>            
+ 8 <NA>        Total aboveground~ a*DBH^b    Species           <NA>            
+ 9 <NA>        Stem and branches~ a*DBH^b    Species           <NA>            
+10 <NA>        Stem and branches~ a*DBH^b    Species           <NA>            
+# ... with 411 more rows, and 18 more variables: geographic_area <chr>,
+#   dbh_min_cm <chr>, dbh_max_cm <chr>, n_trees <int>,
+#   dbh_units_original <chr>, biomass_units_original <chr>,
+#   allometry_development_method <chr>, model_parameters <chr>,
+#   regression_model <chr>, other_equations_tested <chr>, log_biomass <chr>,
+#   bias_corrected <chr>, bias_correction_factor <chr>,
+#   notes_fitting_model <chr>, original_data_availability <chr>,
+#   notes_to_consider <chr>, warning <chr>, ref_id <chr>

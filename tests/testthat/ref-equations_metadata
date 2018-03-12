@@ -1,0 +1,15 @@
+# A tibble: 23 x 8
+   Column Field    Description              Column_type Field_codes Units Range
+   <chr>  <chr>    <chr>                    <chr>       <chr>       <chr> <chr>
+ 1 1 / A  equatio~ Unique equation identif~ -           -           -     -    
+ 2 2 / B  biomass~ Tree component characte~ character   -           -     -    
+ 3 3 / C  equation Model equation as a fun~ character   -           -     -    
+ 4 4 / D  allomet~ Refers to the specific ~ character   -           -     -    
+ 5 5 / E  develop~ Species for which the p~ character   <NA>        <NA>  <NA> 
+ 6 6 / F  geograp~ Geographic location fro~ character   -           -     -    
+ 7 7 / G  dbh_min~ Minimun DBH in cm sampl~ numeric     -           <NA>  -    
+ 8 8 / H  dbh_max~ Maximun DBH in cm sampl~ numeric     -           <NA>  -    
+ 9 9 / I  n_trees  Number of trees sampled~ integer     -           -     -    
+10 10 / J dbh_uni~ DBH unit used in origin~ character   <NA>        <NA>  <NA> 
+# ... with 13 more rows, and 1 more variable: `Erikas notes to delete before
+#   publication` <chr>

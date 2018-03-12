@@ -1,0 +1,7 @@
+# A tibble: 4 x 3
+  Code  Definition            Description                                      
+  <chr> <chr>                 <chr>                                            
+1 <NA>  Not Applicable        Data does not apply to that particular case      
+2 NAC   Not Acquired          Information may be available but has not been ac~
+3 NRA   Not Readily Available Information was not readily available to the aut~
+4 NI    No Information        No information available in original publication 

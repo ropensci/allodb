@@ -1,0 +1,16 @@
+# A tibble: 421 x 13
+   site     family     species       species_code life_form biomass_component  
+   <chr>    <chr>      <chr>         <chr>        <chr>     <chr>              
+ 1 Lilly D~ Fabaceae   Robinia pseu~ 901          Tree      Stem and branches ~
+ 2 Lilly D~ Fabaceae   Robinia pseu~ 901          Tree      Stem and branches ~
+ 3 Lilly D~ Ulmaceae   Ulmus americ~ 972          Tree      Whole tree (above ~
+ 4 Lilly D~ Ulmaceae   Ulmus rubra   975          Tree      Whole tree (above ~
+ 5 Lilly D~ Oleaceae   Fraxinus ame~ 541          Tree      Whole tree (above ~
+ 6 Lilly D~ Oleaceae   Fraxinus pen~ 544          Tree      Whole tree (above ~
+ 7 Lilly D~ Hamamelid~ Hamamelis vi~ 498          Shrub     Total aboveground ~
+ 8 Lilly D~ Cupressac~ Juniperus vi~ 68           Tree      Total aboveground ~
+ 9 Lilly D~ Fagaceae   Fagus grandi~ 531          Tree      Stem and branches ~
+10 Lilly D~ Fagaceae   Quercus alba  802          Tree      Stem and branches ~
+# ... with 411 more rows, and 7 more variables: equation_grouping <chr>,
+#   equation_id <chr>, allometry_specificity <chr>, dbh_min_cm <chr>,
+#   dbh_max_cm <chr>, wsg_id <chr>, wsg_specificity <chr>

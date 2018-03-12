@@ -1,0 +1,14 @@
+# A tibble: 63 x 12
+      id Site   site      lat   long UTM_Zone UTM_X UTM_Y intertropical size.ha
+   <dbl> <chr>  <chr>   <dbl>  <dbl>    <int> <chr> <chr> <chr>           <dbl>
+ 1   42. Amaca~ amaca~  -3.81  -70.3       19 3592~ 9578~ Tropical          25.
+ 2   51. Badag~ badag~  29.5   111.        49 4534~ 3259~ Other             25.
+ 3   52. Baoti~ baoti~  33.5   112.        49 5873~ 3706~ Other             25.
+ 4   45. Barro~ barro~   9.15  -79.8       17 6267~ 1012~ Tropical          50.
+ 5   18. Bukit~ bukit~   1.35  104.        48 3642~ 1492~ Tropical           4.
+ 6   53. Chang~ chang~  42.4   128.        52 4245~ 4692~ Other             25.
+ 7   46. Cocoli cocoli   8.99  -79.6       17 6520~ 9937~ Tropical           4.
+ 8   14. Danum~ danum~   5.10  118.        50 5762~ 5639~ Tropical          50.
+ 9    7. Dingh~ dingh~  23.2   113.        49 6546~ 2563~ Tropical          20.
+10   25. Doi I~ doi i~  18.6    98.4       47 4402~ 2054~ Tropical          15.
+# ... with 53 more rows, and 2 more variables: E <dbl>, wsg.site.name <chr>

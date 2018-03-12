@@ -1,0 +1,14 @@
+# A tibble: 421 x 8
+   wsg_id family         species    wsg   wsg_specificity n_trees site   ref_id
+   <chr>  <chr>          <chr>      <chr> <chr>             <int> <chr>  <chr> 
+ 1 <NA>   Fabaceae       Robinia p~ 0.6   species               9 Lilly~ <NA>  
+ 2 <NA>   Fabaceae       Robinia p~ 0.66  species               9 Lilly~ <NA>  
+ 3 <NA>   Ulmaceae       Ulmus ame~ 0.46  <NA>                 NA Lilly~ <NA>  
+ 4 <NA>   Ulmaceae       Ulmus rub~ 0.48  <NA>                 NA Lilly~ <NA>  
+ 5 <NA>   Oleaceae       Fraxinus ~ 0.51  <NA>                 NA Lilly~ <NA>  
+ 6 <NA>   Oleaceae       Fraxinus ~ 0.53  <NA>                 NA Lilly~ <NA>  
+ 7 <NA>   Hamamelidaceae Hamamelis~ 0.71  <NA>                 NA Lilly~ <NA>  
+ 8 <NA>   Cupressaceae   Juniperus~ 0.44  <NA>                 NA Lilly~ <NA>  
+ 9 <NA>   Fagaceae       Fagus gra~ 0.56  <NA>                 NA Lilly~ <NA>  
+10 <NA>   Fagaceae       Quercus a~ 0.6   <NA>                 NA Lilly~ <NA>  
+# ... with 411 more rows
