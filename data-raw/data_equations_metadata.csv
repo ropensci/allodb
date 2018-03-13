@@ -1,6 +1,6 @@
 Column,Field,Description,Column_type,Field_codes,Units,Range,Erikas notes to delete before publication
 1 / A,equation_id,Unique equation identification number given arbitrarely. Links to Site_Species table. ,-,-,-,-,
-2 / B,biomass_component,Tree component characterized by the equation ,character,-,-,-,
+2 / B,dependent_variable_biomass_component,Tree component characterized by the equation ,character,-,-,-,
 3 / C,equation,Model equation as a function of DBH or DBA,character,-,-,-,We currently have equation form and parameters listed separately. We willl need a script to transform these. Mauro could write a scrip to merge
 4 / D,allometry_specificity,"Refers to the specific taxonomic level for which the equation was developed (species, genus, family or plant group)",character,-,-,-,
 5 / E,development_species,Species for which the particular equation was developed,character,,,,
@@ -11,7 +11,7 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,Erikas notes to del
 10 / J,dbh_units_original,DBH unit used in original publication,character,,,,
 11 / K,biomass_units_original,Mass unit used in original publication,character,-,,-,
 12 / L,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character,see description,-,-,
-13 / M,model_parameters,Parameters included in biomass model (H: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density),character,,,,"EGA: We may excude this column later, but lets leave it for now."
+13 / M,independent_variable,Parameters included in biomass model (H: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density),character,,,,
 14 / N,regression_model,Regression model used in original publication,character,,,,
 15 / O,other_equations_tested,,character,,,,
 16 / P,log_biomass,Whether the fits are done with biomass as the response variable log(biomass). ,character,Yes -logaritmic transformation (base 10) was used; No - no log used,,,
