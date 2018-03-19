@@ -450,10 +450,10 @@
 27             <NA>      NA  Lilly Dicky   <NA>
 28             <NA>      NA  Lilly Dicky   <NA>
 29          species      34  Lilly Dicky   <NA>
-30             <NA>      NA  Lilly Dicky   <NA>
-31             <NA>      NA  Lilly Dicky   <NA>
-32             <NA>      NA  Lilly Dicky   <NA>
-33             <NA>      NA  Lilly Dicky   <NA>
+30             <NA>      10  Lilly Dicky   <NA>
+31             <NA>      10  Lilly Dicky   <NA>
+32             <NA>      10  Lilly Dicky   <NA>
+33             <NA>      41  Lilly Dicky   <NA>
 34             <NA>      NA  Lilly Dicky   <NA>
 35             <NA>      NA  Lilly Dicky   <NA>
 36             <NA>      NA  Lilly Dicky   <NA>
@@ -526,11 +526,11 @@
 103            <NA>      NA         SCBI   <NA>
 104            <NA>      NA         SCBI   <NA>
 105            <NA>      NA         SCBI   <NA>
-106            <NA>      NA         SCBI   <NA>
+106            <NA>      41         SCBI   <NA>
 107            <NA>      NA         SCBI   <NA>
 108            <NA>      NA         SCBI   <NA>
 109            <NA>      NA         SCBI   <NA>
-110            <NA>      NA         SERC   <NA>
+110            <NA>      41         SERC   <NA>
 111            <NA>      10         SERC   <NA>
 112            <NA>      10         SERC   <NA>
 113            <NA>      10         SERC   <NA>
@@ -602,7 +602,7 @@
 179            <NA>      NA         SERC   <NA>
 180            <NA>      NA         SERC   <NA>
 181            <NA>      NA         SERC   <NA>
-182            <NA>      NA        Tyson   <NA>
+182            <NA>      41        Tyson   <NA>
 183            <NA>      NA        Tyson   <NA>
 184            <NA>      NA        Tyson   <NA>
 185            <NA>      NA        Tyson   <NA>
@@ -638,11 +638,11 @@
 215            <NA>      NA        Tyson   <NA>
 216            <NA>      NA        Tyson   <NA>
 217         species      34        Tyson   <NA>
-218            <NA>      NA        Tyson   <NA>
-219            <NA>      NA        Tyson   <NA>
-220            <NA>      NA        Tyson   <NA>
-221            <NA>      NA        Tyson   <NA>
-222            <NA>      NA        Tyson   <NA>
+218            <NA>      10        Tyson   <NA>
+219            <NA>      10        Tyson   <NA>
+220            <NA>      10        Tyson   <NA>
+221            <NA>      10        Tyson   <NA>
+222            <NA>      10        Tyson   <NA>
 223            <NA>      NA        Tyson   <NA>
 224            <NA>      NA        Tyson   <NA>
 225            <NA>      NA        Tyson   <NA>
@@ -827,17 +827,17 @@
 404            <NA>      NA     Yosemite   <NA>
 405            <NA>      NA     Yosemite   <NA>
 406            <NA>      NA     Yosemite   <NA>
-407            <NA>      NA        Zofin   <NA>
-408            <NA>      NA        Zofin   <NA>
-409            <NA>      NA        Zofin   <NA>
-410            <NA>      NA        Zofin   <NA>
-411            <NA>      NA        Zofin   <NA>
-412            <NA>      NA        Zofin   <NA>
-413            <NA>      NA        Zofin   <NA>
-414            <NA>      NA        Zofin   <NA>
-415            <NA>      NA        Zofin   <NA>
-416            <NA>      NA        Zofin   <NA>
-417            <NA>      NA        Zofin   <NA>
+407            <NA>     240        Zofin   <NA>
+408            <NA>     240        Zofin   <NA>
+409            <NA>     240        Zofin   <NA>
+410            <NA>     144        Zofin   <NA>
+411            <NA>     240        Zofin   <NA>
+412            <NA>     240        Zofin   <NA>
+413            <NA>     240        Zofin   <NA>
+414            <NA>     240        Zofin   <NA>
+415            <NA>     144        Zofin   <NA>
+416            <NA>     240        Zofin   <NA>
+417            <NA>     240        Zofin   <NA>
 418         species      26  Lilly Dicky   <NA>
 419         species      26         SCBI   <NA>
 420         species      26         SERC   <NA>

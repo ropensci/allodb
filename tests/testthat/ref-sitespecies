@@ -420,7 +420,7 @@
 419         SCBI         Fagaceae                   Quercus velutina
 420         SERC         Fagaceae                   Quercus velutina
 421        Tyson         Fagaceae                   Quercus velutina
-    species_code life_form                             biomass_component
+    species_code life_form          dependent_variable_biomass_component
 1            901      Tree                      Stem and branches (live)
 2            901      Tree                      Stem and branches (live)
 3            972      Tree                      Whole tree (above stump)
@@ -1249,17 +1249,17 @@
 404                 E        <NA>               Species       24.1      117.7
 405                 E        <NA>               Species       2.54      30.48
 406              <NA>        <NA>                  <NA>       <NA>       <NA>
-407                 E        <NA>               Species         NI         50
-408                 E        <NA>               Species         NI         50
-409                 E        <NA>               Species         NI         50
+407                 E        <NA>                 Genus         NI         50
+408                 E        <NA>                 Genus         NI         50
+409                 E        <NA>                 Genus         NI         50
 410                 E        <NA>               Species         NI         40
-411                 E        <NA>               Species         NI         50
-412                 E        <NA>               Species         NI         50
-413                 E        <NA>               Species         NI         50
-414                 E        <NA>               Species         NI         50
+411                 E        <NA>                 Genus         NI         50
+412                 E        <NA>                 Genus         NI         50
+413                 E        <NA>                 Genus         NI         50
+414                 E        <NA>                 Genus         NI         50
 415                 E        <NA>               Species         NI         40
-416                 E        <NA>               Species         NI         50
-417                 E        <NA>               Species         NI         50
+416                 E        <NA>                 Genus         NI         50
+417                 E        <NA>                 Genus         NI         50
 418                 E        <NA>               Species      30.48       88.9
 419                 E        <NA>               Species      30.48       88.9
 420                 E        <NA>               Species      30.48       88.9
