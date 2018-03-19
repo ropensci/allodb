@@ -1,0 +1,52 @@
+---
+title: "Integrating bmss and allodb"
+author: "maurolepore@gmail.com"
+date: "2018-03-19"
+output:
+  rmarkdown::html_document:
+    theme: united
+    toc: true
+    toc_depth: 6
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+set.seed(1014)
+
+knitr::opts_chunk$set(
+  echo = TRUE,
+  comment = "#>",
+  collapse = TRUE,
+  cache = TRUE,
+  out.width = "70%",
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.618,  # 1 / phi
+  fig.show = "hold")
+```
+
+# OVerview
+
+The goal of this document is to comunicate with Erika during the process of integrating the __bmss__ and __allodb__ packages.
+
+# Setup
+
+```{r pkg}
+library(tidyverse)
+library(bmss)
+library(allodb)
+library(here)
+```
+
+# Exploring the current version of the `equations` dataset.
+
+```{r}
+# Don't run
+# Snapshot current version of equations
+eqn <- here("inst/issues/36_integrateequations_2018-19-03.csv")
+write_csv(allodb::equations, eqn)
+
+eqn_meta <- here("inst/issues/36_integrate/equations_metadata_2018-19-03.csv")
+write_csv(allodb::equations_metadata, eqn_meta)
+```
+
