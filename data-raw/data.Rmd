@@ -45,7 +45,7 @@ Allometric equations (doesn't include sites, but sp? not sure)
 # coeficienss+formula so we get "unique" equations, then give unique id
 equations_cols <- c(
   "equation_id",
-  "biomass_component",
+  "dependent_variable_biomass_component",
   "equation",
   "allometry_specificity",
   "development_species",
@@ -56,7 +56,7 @@ equations_cols <- c(
   "dbh_units_original",
   "biomass_units_original",
   "allometry_development_method",
-  "model_parameters",
+  "independent_variable",
   "regression_model",
   "other_equations_tested",
   "log_biomass",
@@ -119,7 +119,7 @@ sitespecies_cols <- c(
   "species",
   "species_code",
   "life_form",
-  "biomass_component",
+  "dependent_variable_biomass_component",
   "equation_grouping",
   "equation_id",
   "allometry_specificity",
