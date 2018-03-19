@@ -42,11 +42,11 @@ library(here)
 
 ```{r}
 # Don't run
-# Snapshot current version of equations
-eqn <- here("inst/issues/36_integrateequations_2018-19-03.csv")
-write_csv(allodb::equations, eqn)
-
-eqn_meta <- here("inst/issues/36_integrate/equations_metadata_2018-19-03.csv")
-write_csv(allodb::equations_metadata, eqn_meta)
+# Snapshot current version of equations (SHA: ac033b65)
+# eqn <- here("inst/issues/36_integrateequations_2018-19-03.csv")
+# write_csv(allodb::equations, eqn)
+# 
+# eqn_meta <- here("inst/issues/36_integrate/equations_metadata_2018-19-03.csv")
+# write_csv(allodb::equations_metadata, eqn_meta)
 ```
 
