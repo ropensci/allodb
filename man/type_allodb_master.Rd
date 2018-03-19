@@ -7,7 +7,7 @@
 type_allodb_master()
 }
 \description{
-For details see \link{https://forestgeo.github.io/fgeo.tool/reference/type_fgeo}.
+For details see \code{\link[fgeo.tool:type_fgeo]{fgeo.tool::type_fgeo()}}.
 }
 \details{
 Types' reference (see \code{\link[readr:read_csv]{readr::read_csv()}}.

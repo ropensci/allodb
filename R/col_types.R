@@ -1,6 +1,6 @@
 #' Help to read datasets safely, with consistent column type.
 #'
-#' For details see [https://forestgeo.github.io/fgeo.tool/reference/type_fgeo].
+#' For details see [fgeo.tool::type_fgeo()].
 #'
 #' Types' reference (see [readr::read_csv()].
 #' * c = character.
