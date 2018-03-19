@@ -1,27 +1,27 @@
-   Column                        Field
-1   1 / A                  equation_id
-2   2 / B            biomass_component
-3   3 / C                     equation
-4   4 / D        allometry_specificity
-5   5 / E          development_species
-6   6 / F              geographic_area
-7   7 / G                   dbh_min_cm
-8   8 / H                   dbh_max_cm
-9   9 / I                      n_trees
-10 10 / J           dbh_units_original
-11 11 / K       biomass_units_original
-12 12 / L allometry_development_method
-13 13 / M             model_parameters
-14 14 / N             regression_model
-15 15 / O       other_equations_tested
-16 16 / P                  log_biomass
-17 17 / Q               bias_corrected
-18 18 / R       bias_correction_factor
-19 19 / S          notes_fitting_model
-20 20 / T   original_data_availability
-21 21 / U            notes_to_consider
-22 22 / V                      warning
-23 23 / W                       ref_id
+   Column                                Field
+1   1 / A                          equation_id
+2   2 / B dependent_variable_biomass_component
+3   3 / C                             equation
+4   4 / D                allometry_specificity
+5   5 / E                  development_species
+6   6 / F                      geographic_area
+7   7 / G                           dbh_min_cm
+8   8 / H                           dbh_max_cm
+9   9 / I                              n_trees
+10 10 / J                   dbh_units_original
+11 11 / K               biomass_units_original
+12 12 / L         allometry_development_method
+13 13 / M                 independent_variable
+14 14 / N                     regression_model
+15 15 / O               other_equations_tested
+16 16 / P                          log_biomass
+17 17 / Q                       bias_corrected
+18 18 / R               bias_correction_factor
+19 19 / S                  notes_fitting_model
+20 20 / T           original_data_availability
+21 21 / U                    notes_to_consider
+22 22 / V                              warning
+23 23 / W                               ref_id
                                                                                                                                                                                                                                  Description
 1                                                                                                                                                      Unique equation identification number given arbitrarely. Links to Site_Species table.
 2                                                                                                                                                                                               Tree component characterized by the equation
@@ -131,7 +131,7 @@
 10                                                                                                                                            <NA>
 11                                                                                                                                            <NA>
 12                                                                                                                                            <NA>
-13                                                                                EGA: We may excude this column later, but lets leave it for now.
+13                                                                                                                                            <NA>
 14                                                                                                                                            <NA>
 15                                                                                                                                            <NA>
 16                                                                                                                                            <NA>
