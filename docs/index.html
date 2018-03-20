@@ -32,7 +32,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="reference/index.html">Datasets</a>
+  <a href="reference/index.html">Datasets and Functions Index</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -97,154 +97,148 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(tibble)</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4">equations</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; # A tibble: 419 x 14</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;    equation_id model_parameters biomass_units_original regression_model</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;                  &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  1 &lt;NA&gt;        &lt;NA&gt;             lb                     linear_multiple </span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  2 &lt;NA&gt;        &lt;NA&gt;             lb                     linear_multiple </span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  3 &lt;NA&gt;        &lt;NA&gt;             kg                     &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  4 &lt;NA&gt;        &lt;NA&gt;             kg                     &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  5 &lt;NA&gt;        &lt;NA&gt;             kg                     &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  6 &lt;NA&gt;        &lt;NA&gt;             kg                     &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  7 &lt;NA&gt;        &lt;NA&gt;             g                      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  8 &lt;NA&gt;        &lt;NA&gt;             kg                     &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  9 &lt;NA&gt;        &lt;NA&gt;             lb                     &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; 10 &lt;NA&gt;        &lt;NA&gt;             lb                     &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; # ... with 409 more rows, and 10 more variables:</span></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; #   other_equations_tested &lt;chr&gt;, `log (biomass)` &lt;chr&gt;, d &lt;dbl&gt;,</span></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt; #   dbh_min_cm &lt;chr&gt;, dbh_max_cm &lt;chr&gt;, n_trees &lt;int&gt;,</span></a>
-<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; #   dbh_units_original &lt;chr&gt;, equation &lt;chr&gt;, equation_grouping &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt; #   `bias correction _CF` &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-23" data-line-number="23">equations_metadata</a>
-<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; # A tibble: 22 x 8</span></a>
-<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt;    Column Field  Description `Alphanumeric a~ `Variable codes` Units Range</span></a>
-<a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt;  1 1 / A  equat~ Unique equ~ -                -                -     -    </span></a>
-<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt;  2 2 / B  varia~ Tree compo~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;  3 3 / C  equat~ Model equa~ -                -                -     -    </span></a>
-<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;  4 4 / D  allom~ Refers to ~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  5 5 / E  devel~ Species fo~ &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  6 6 / F  geogr~ Geographic~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  7 7 / G  dbh_m~ Minimun DB~ numeric          -                &lt;NA&gt;  -    </span></a>
-<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  8 8 / H  dbh_m~ Maximun DB~ numeric          -                &lt;NA&gt;  -    </span></a>
-<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  9 9 / I  n_tre~ Number of ~ numeric          -                -     -    </span></a>
-<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt; 10 10 / J dbh_u~ DBH unit u~ &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt; # ... with 12 more rows, and 1 more variable: `Erikas notes to delete</span></a>
-<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt; #   before publication` &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-39" data-line-number="39"></a>
-<a class="sourceLine" id="cb2-40" data-line-number="40">missing_values_metadata</a>
-<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; # A tibble: 12 x 7</span></a>
-<a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt;    Code  Definition            Description         X4    X5    X6    X7   </span></a>
-<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;                 &lt;chr&gt;               &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt;  1 &lt;NA&gt;  Not Applicable        Data does not appl~ &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt;  2 NAC   Not Acquired          Information may be~ &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt;  3 NRA   Not Readily Available Information was no~ &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-47" data-line-number="47"><span class="co">#&gt;  4 NI    No Information        No information ava~ &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt;  5 &lt;NA&gt;  &lt;NA&gt;                  &lt;NA&gt;                &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt;  6 &lt;NA&gt;  &lt;NA&gt;                  &lt;NA&gt;                &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-50" data-line-number="50"><span class="co">#&gt;  7 &lt;NA&gt;  &lt;NA&gt;                  &lt;NA&gt;                &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-51" data-line-number="51"><span class="co">#&gt;  8 &lt;NA&gt;  &lt;NA&gt;                  &lt;NA&gt;                &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-52" data-line-number="52"><span class="co">#&gt;  9 &lt;NA&gt;  &lt;NA&gt;                  &lt;NA&gt;                &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-53" data-line-number="53"><span class="co">#&gt; 10 &lt;NA&gt;  &lt;NA&gt;                  &lt;NA&gt;                &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-54" data-line-number="54"><span class="co">#&gt; 11 &lt;NA&gt;  &lt;NA&gt;                  &lt;NA&gt;                &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-55" data-line-number="55"><span class="co">#&gt; 12 &lt;NA&gt;  &lt;NA&gt;                  &lt;NA&gt;                &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;</span></a>
-<a class="sourceLine" id="cb2-56" data-line-number="56"></a>
-<a class="sourceLine" id="cb2-57" data-line-number="57">references_metadata</a>
-<a class="sourceLine" id="cb2-58" data-line-number="58"><span class="co">#&gt; # A tibble: 6 x 8</span></a>
-<a class="sourceLine" id="cb2-59" data-line-number="59"><span class="co">#&gt;   Column Field  Description  `Alphanumeric a~ `Variable codes` Units Range</span></a>
-<a class="sourceLine" id="cb2-60" data-line-number="60"><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-61" data-line-number="61"><span class="co">#&gt; 1 1 / A  ref_id Unique refe~ numeric          -                -     -    </span></a>
-<a class="sourceLine" id="cb2-62" data-line-number="62"><span class="co">#&gt; 2 2 / B  ref_a~ Last name o~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-63" data-line-number="63"><span class="co">#&gt; 3 3 / C  ref_y~ Year of pub~ numeric          -                -     -    </span></a>
-<a class="sourceLine" id="cb2-64" data-line-number="64"><span class="co">#&gt; 4 4 / D  ref_t~ Title of pu~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt; 5 5 / E  ref_j~ Journal, bo~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt; 6 6 / F  ref_d~ Publication~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt; # ... with 1 more variable: `Notes to be deleted later` &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-68" data-line-number="68"></a>
-<a class="sourceLine" id="cb2-69" data-line-number="69">sitespecies</a>
-<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt; # A tibble: 419 x 11</span></a>
-<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;    site     family    species      species_code life_form model_parameters</span></a>
-<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;    &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb2-73" data-line-number="73"><span class="co">#&gt;  1 Lilly D~ Fabaceae  Robinia pse~ 901          Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="co">#&gt;  2 Lilly D~ Fabaceae  Robinia pse~ 901          Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt;  3 Lilly D~ Ulmaceae  Ulmus ameri~ 972          Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt;  4 Lilly D~ Ulmaceae  Ulmus rubra  975          Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-77" data-line-number="77"><span class="co">#&gt;  5 Lilly D~ Oleaceae  Fraxinus am~ 541          Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-78" data-line-number="78"><span class="co">#&gt;  6 Lilly D~ Oleaceae  Fraxinus pe~ 544          Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-79" data-line-number="79"><span class="co">#&gt;  7 Lilly D~ Hamameli~ Hamamelis v~ 498          Shrub     &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-80" data-line-number="80"><span class="co">#&gt;  8 Lilly D~ Cupressa~ Juniperus v~ 68           Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-81" data-line-number="81"><span class="co">#&gt;  9 Lilly D~ Fagaceae  Fagus grand~ 531          Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-82" data-line-number="82"><span class="co">#&gt; 10 Lilly D~ Fagaceae  Quercus alba 802          Tree      &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-83" data-line-number="83"><span class="co">#&gt; # ... with 409 more rows, and 5 more variables:</span></a>
-<a class="sourceLine" id="cb2-84" data-line-number="84"><span class="co">#&gt; #   allometry_development_method &lt;chr&gt;, equation_id &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-85" data-line-number="85"><span class="co">#&gt; #   regression_model &lt;chr&gt;, wsg &lt;chr&gt;, wsg_id &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-86" data-line-number="86">sitespecies_metadata</a>
-<a class="sourceLine" id="cb2-87" data-line-number="87"><span class="co">#&gt; # A tibble: 13 x 8</span></a>
-<a class="sourceLine" id="cb2-88" data-line-number="88"><span class="co">#&gt;    Column Field  Description `Alphanumeric a~ `Variable codes` Units Range</span></a>
-<a class="sourceLine" id="cb2-89" data-line-number="89"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-90" data-line-number="90"><span class="co">#&gt;  1 1 / A  site   ForestGEO ~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-91" data-line-number="91"><span class="co">#&gt;  2 2 / B  family Plant fami~ character (stri~ &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-92" data-line-number="92"><span class="co">#&gt;  3 3 / C  speci~ Plant spec~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-93" data-line-number="93"><span class="co">#&gt;  4 4 / D  speci~ Species co~ &lt;NA&gt;             &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-94" data-line-number="94"><span class="co">#&gt;  5 5 / E  life_~ Common gro~ character (stri~ &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-95" data-line-number="95"><span class="co">#&gt;  6 6 / F  varia~ The biomas~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-96" data-line-number="96"><span class="co">#&gt;  7 7 / G  equat~ "Allometri~ character (stri~ G- generic; E- ~ -     -    </span></a>
-<a class="sourceLine" id="cb2-97" data-line-number="97"><span class="co">#&gt;  8 8 / H  equat~ Equation i~ numeric          -                &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-98" data-line-number="98"><span class="co">#&gt;  9 9 / I  allom~ Refers to ~ character (stri~ -                &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-99" data-line-number="99"><span class="co">#&gt; 10 10 / J dbh_m~ Min DBH at~ numeric          -                -     &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-100" data-line-number="100"><span class="co">#&gt; 11 11 / K dbh_m~ Max DBH at~ numeric          -                -     &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-101" data-line-number="101"><span class="co">#&gt; 12 12 / L wsg_id Wood densi~ numeric          &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-102" data-line-number="102"><span class="co">#&gt; 13 13 / L wsg_s~ Refers to ~ numeric          &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-103" data-line-number="103"><span class="co">#&gt; # ... with 1 more variable: `Erikas notes to delete before</span></a>
-<a class="sourceLine" id="cb2-104" data-line-number="104"><span class="co">#&gt; #   publication` &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-105" data-line-number="105"></a>
-<a class="sourceLine" id="cb2-106" data-line-number="106">wsg</a>
-<a class="sourceLine" id="cb2-107" data-line-number="107"><span class="co">#&gt; # A tibble: 419 x 7</span></a>
-<a class="sourceLine" id="cb2-108" data-line-number="108"><span class="co">#&gt;    wsg_id family         species    wsg   wsg_specificity variable   site </span></a>
-<a class="sourceLine" id="cb2-109" data-line-number="109"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;      &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-110" data-line-number="110"><span class="co">#&gt;  1 &lt;NA&gt;   Fabaceae       Robinia p~ 0.6   species         Stem and ~ Lill~</span></a>
-<a class="sourceLine" id="cb2-111" data-line-number="111"><span class="co">#&gt;  2 &lt;NA&gt;   Fabaceae       Robinia p~ 0.66  species         Stem and ~ Lill~</span></a>
-<a class="sourceLine" id="cb2-112" data-line-number="112"><span class="co">#&gt;  3 &lt;NA&gt;   Ulmaceae       Ulmus ame~ 0.46  &lt;NA&gt;            Whole tre~ Lill~</span></a>
-<a class="sourceLine" id="cb2-113" data-line-number="113"><span class="co">#&gt;  4 &lt;NA&gt;   Ulmaceae       Ulmus rub~ 0.48  &lt;NA&gt;            Whole tre~ Lill~</span></a>
-<a class="sourceLine" id="cb2-114" data-line-number="114"><span class="co">#&gt;  5 &lt;NA&gt;   Oleaceae       Fraxinus ~ 0.51  &lt;NA&gt;            Whole tre~ Lill~</span></a>
-<a class="sourceLine" id="cb2-115" data-line-number="115"><span class="co">#&gt;  6 &lt;NA&gt;   Oleaceae       Fraxinus ~ 0.53  &lt;NA&gt;            Whole tre~ Lill~</span></a>
-<a class="sourceLine" id="cb2-116" data-line-number="116"><span class="co">#&gt;  7 &lt;NA&gt;   Hamamelidaceae Hamamelis~ 0.71  &lt;NA&gt;            Above gro~ Lill~</span></a>
-<a class="sourceLine" id="cb2-117" data-line-number="117"><span class="co">#&gt;  8 &lt;NA&gt;   Cupressaceae   Juniperus~ 0.44  &lt;NA&gt;            Above gro~ Lill~</span></a>
-<a class="sourceLine" id="cb2-118" data-line-number="118"><span class="co">#&gt;  9 &lt;NA&gt;   Fagaceae       Fagus gra~ 0.56  &lt;NA&gt;            Stem and ~ Lill~</span></a>
-<a class="sourceLine" id="cb2-119" data-line-number="119"><span class="co">#&gt; 10 &lt;NA&gt;   Fagaceae       Quercus a~ 0.6   &lt;NA&gt;            Stem and ~ Lill~</span></a>
-<a class="sourceLine" id="cb2-120" data-line-number="120"><span class="co">#&gt; # ... with 409 more rows</span></a>
-<a class="sourceLine" id="cb2-121" data-line-number="121">wsg_metadata</a>
-<a class="sourceLine" id="cb2-122" data-line-number="122"><span class="co">#&gt; # A tibble: 9 x 8</span></a>
-<a class="sourceLine" id="cb2-123" data-line-number="123"><span class="co">#&gt;   Column Field  Description  `Alphanumeric a~ `Variable codes` Units Range</span></a>
-<a class="sourceLine" id="cb2-124" data-line-number="124"><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-125" data-line-number="125"><span class="co">#&gt; 1 1 / A  wsg_id Wood specif~ numeric          -                -     &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-126" data-line-number="126"><span class="co">#&gt; 2 2 / B  family Plant famil~ character (stri~ &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-127" data-line-number="127"><span class="co">#&gt; 3 3 / C  genus  Plant genus~ character (stri~ &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-128" data-line-number="128"><span class="co">#&gt; 4 4 / D  speci~ Plant speci~ character (stri~ &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-129" data-line-number="129"><span class="co">#&gt; 5 5 / E  wsg    Wood specif~ numeric          &lt;NA&gt;             g/cm3 -    </span></a>
-<a class="sourceLine" id="cb2-130" data-line-number="130"><span class="co">#&gt; 6 6 / F  wsg_s~ Specific ta~ character (stri~ -                -     -    </span></a>
-<a class="sourceLine" id="cb2-131" data-line-number="131"><span class="co">#&gt; 7 7 / G  n_sam~ Number of t~ numeric          &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-132" data-line-number="132"><span class="co">#&gt; 8 8 / H  site   ForestGEO s~ character (stri~ &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-133" data-line-number="133"><span class="co">#&gt; 9 9 / I  ref_id Unique refe~ numeric          &lt;NA&gt;             &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-134" data-line-number="134"><span class="co">#&gt; # ... with 1 more variable: `Erikas notes to delete before</span></a>
-<a class="sourceLine" id="cb2-135" data-line-number="135"><span class="co">#&gt; #   publication` &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-136" data-line-number="136"></a>
-<a class="sourceLine" id="cb2-137" data-line-number="137">sites_info</a>
-<a class="sourceLine" id="cb2-138" data-line-number="138"><span class="co">#&gt; # A tibble: 63 x 12</span></a>
-<a class="sourceLine" id="cb2-139" data-line-number="139"><span class="co">#&gt;       id Site    site       lat   long UTM_Zone UTM_X  UTM_Y intertropical</span></a>
-<a class="sourceLine" id="cb2-140" data-line-number="140"><span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;        </span></a>
-<a class="sourceLine" id="cb2-141" data-line-number="141"><span class="co">#&gt;  1   42. Amacay~ amacay~  -3.81  -70.3       19 35922~ 9578~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-142" data-line-number="142"><span class="co">#&gt;  2   51. Badago~ badago~  29.5   111.        49 45345~ 3259~ Other        </span></a>
-<a class="sourceLine" id="cb2-143" data-line-number="143"><span class="co">#&gt;  3   52. Baotia~ baotia~  33.5   112.        49 58732~ 3706~ Other        </span></a>
-<a class="sourceLine" id="cb2-144" data-line-number="144"><span class="co">#&gt;  4   45. Barro ~ barro ~   9.15  -79.8       17 62678~ 1012~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-145" data-line-number="145"><span class="co">#&gt;  5   18. Bukit ~ bukit ~   1.35  104.        48 36427~ 1492~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-146" data-line-number="146"><span class="co">#&gt;  6   53. Changb~ changb~  42.4   128.        52 42451~ 4692~ Other        </span></a>
-<a class="sourceLine" id="cb2-147" data-line-number="147"><span class="co">#&gt;  7   46. Cocoli  cocoli    8.99  -79.6       17 65207~ 9937~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-148" data-line-number="148"><span class="co">#&gt;  8   14. Danum ~ danum ~   5.10  118.        50 57625~ 5639~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-149" data-line-number="149"><span class="co">#&gt;  9    7. Dinghu~ dinghu~  23.2   113.        49 65466~ 2563~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-150" data-line-number="150"><span class="co">#&gt; 10   25. Doi In~ doi in~  18.6    98.4       47 440211 2054~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-151" data-line-number="151"><span class="co">#&gt; # ... with 53 more rows, and 3 more variables: size.ha &lt;dbl&gt;, E &lt;dbl&gt;,</span></a>
-<a class="sourceLine" id="cb2-152" data-line-number="152"><span class="co">#&gt; #   wsg.site.name &lt;chr&gt;</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; # A tibble: 421 x 23</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;    equation_id biomass_compone~ equation allometry_speci~ development_spe~</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;           </span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  1 &lt;NA&gt;        Stem and branch~ a*(DBH^~ Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  2 &lt;NA&gt;        Stem and branch~ a*(DBH^~ Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  3 &lt;NA&gt;        Whole tree (abo~ a+b*DBH~ Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  4 &lt;NA&gt;        Whole tree (abo~ a+b*DBH~ Species          Ulmus americana </span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  5 &lt;NA&gt;        Whole tree (abo~ a+b*DBH~ Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  6 &lt;NA&gt;        Whole tree (abo~ a+b*DBH~ Species          Fraxinus americ~</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  7 &lt;NA&gt;        Total abovegrou~ a*DBA^b  Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  8 &lt;NA&gt;        Total abovegrou~ a*DBH^b  Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  9 &lt;NA&gt;        Stem and branch~ a*DBH^b  Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; 10 &lt;NA&gt;        Stem and branch~ a*DBH^b  Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; # ... with 411 more rows, and 18 more variables: geographic_area &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; #   dbh_min_cm &lt;chr&gt;, dbh_max_cm &lt;chr&gt;, n_trees &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt; #   dbh_units_original &lt;chr&gt;, biomass_units_original &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; #   allometry_development_method &lt;chr&gt;, model_parameters &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt; #   regression_model &lt;chr&gt;, other_equations_tested &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt; #   log_biomass &lt;chr&gt;, bias_corrected &lt;chr&gt;, bias_correction_factor &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; #   notes_fitting_model &lt;chr&gt;, original_data_availability &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; #   notes_to_consider &lt;chr&gt;, warning &lt;chr&gt;, ref_id &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-26" data-line-number="26">equations_metadata</a>
+<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt; # A tibble: 23 x 8</span></a>
+<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt;    Column Field   Description          Column_type Field_codes Units Range</span></a>
+<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;                &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;  1 1 / A  equati~ Unique equation ide~ -           -           -     -    </span></a>
+<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  2 2 / B  biomas~ Tree component char~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  3 3 / C  equati~ Model equation as a~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  4 4 / D  allome~ Refers to the speci~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  5 5 / E  develo~ Species for which t~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  6 6 / F  geogra~ Geographic location~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  7 7 / G  dbh_mi~ Minimun DBH in cm s~ numeric     -           &lt;NA&gt;  -    </span></a>
+<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt;  8 8 / H  dbh_ma~ Maximun DBH in cm s~ numeric     -           &lt;NA&gt;  -    </span></a>
+<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt;  9 9 / I  n_trees Number of trees sam~ integer     -           -     -    </span></a>
+<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; 10 10 / J dbh_un~ DBH unit used in or~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; # ... with 13 more rows, and 1 more variable: `Erikas notes to delete</span></a>
+<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; #   before publication` &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-42" data-line-number="42"></a>
+<a class="sourceLine" id="cb2-43" data-line-number="43">missing_values_metadata</a>
+<a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt; # A tibble: 4 x 3</span></a>
+<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt;   Code  Definition            Description                                 </span></a>
+<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;                 &lt;chr&gt;                                       </span></a>
+<a class="sourceLine" id="cb2-47" data-line-number="47"><span class="co">#&gt; 1 &lt;NA&gt;  Not Applicable        Data does not apply to that particular case </span></a>
+<a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt; 2 NAC   Not Acquired          Information may be available but has not be~</span></a>
+<a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt; 3 NRA   Not Readily Available Information was not readily available to th~</span></a>
+<a class="sourceLine" id="cb2-50" data-line-number="50"><span class="co">#&gt; 4 NI    No Information        No information available in original public~</span></a>
+<a class="sourceLine" id="cb2-51" data-line-number="51"></a>
+<a class="sourceLine" id="cb2-52" data-line-number="52">references_metadata</a>
+<a class="sourceLine" id="cb2-53" data-line-number="53"><span class="co">#&gt; # A tibble: 6 x 5</span></a>
+<a class="sourceLine" id="cb2-54" data-line-number="54"><span class="co">#&gt;   Column Field       Description            Colum_type  `Notes to be dele~</span></a>
+<a class="sourceLine" id="cb2-55" data-line-number="55"><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;                  &lt;chr&gt;       &lt;chr&gt;             </span></a>
+<a class="sourceLine" id="cb2-56" data-line-number="56"><span class="co">#&gt; 1 1 / A  ref_id      Unique reference iden~ numeric     &lt;NA&gt;              </span></a>
+<a class="sourceLine" id="cb2-57" data-line-number="57"><span class="co">#&gt; 2 2 / B  ref_author  Last name of first au~ character ~ &lt;NA&gt;              </span></a>
+<a class="sourceLine" id="cb2-58" data-line-number="58"><span class="co">#&gt; 3 3 / C  ref_year    Year of publication    numeric     &lt;NA&gt;              </span></a>
+<a class="sourceLine" id="cb2-59" data-line-number="59"><span class="co">#&gt; 4 4 / D  ref_title   Title of publication   character ~ &lt;NA&gt;              </span></a>
+<a class="sourceLine" id="cb2-60" data-line-number="60"><span class="co">#&gt; 5 5 / E  ref_journal Journal, book, report~ character ~ EG: Keep this for~</span></a>
+<a class="sourceLine" id="cb2-61" data-line-number="61"><span class="co">#&gt; 6 6 / F  ref_doi     Publication DOI (Digi~ character ~ &lt;NA&gt;</span></a>
+<a class="sourceLine" id="cb2-62" data-line-number="62"></a>
+<a class="sourceLine" id="cb2-63" data-line-number="63">sitespecies</a>
+<a class="sourceLine" id="cb2-64" data-line-number="64"><span class="co">#&gt; # A tibble: 421 x 13</span></a>
+<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt;    site    family    species     species_code life_form biomass_component </span></a>
+<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;             </span></a>
+<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt;  1 Lilly ~ Fabaceae  Robinia ps~ 901          Tree      Stem and branches~</span></a>
+<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt;  2 Lilly ~ Fabaceae  Robinia ps~ 901          Tree      Stem and branches~</span></a>
+<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt;  3 Lilly ~ Ulmaceae  Ulmus amer~ 972          Tree      Whole tree (above~</span></a>
+<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt;  4 Lilly ~ Ulmaceae  Ulmus rubra 975          Tree      Whole tree (above~</span></a>
+<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;  5 Lilly ~ Oleaceae  Fraxinus a~ 541          Tree      Whole tree (above~</span></a>
+<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;  6 Lilly ~ Oleaceae  Fraxinus p~ 544          Tree      Whole tree (above~</span></a>
+<a class="sourceLine" id="cb2-73" data-line-number="73"><span class="co">#&gt;  7 Lilly ~ Hamameli~ Hamamelis ~ 498          Shrub     Total aboveground~</span></a>
+<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="co">#&gt;  8 Lilly ~ Cupressa~ Juniperus ~ 68           Tree      Total aboveground~</span></a>
+<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt;  9 Lilly ~ Fagaceae  Fagus gran~ 531          Tree      Stem and branches~</span></a>
+<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt; 10 Lilly ~ Fagaceae  Quercus al~ 802          Tree      Stem and branches~</span></a>
+<a class="sourceLine" id="cb2-77" data-line-number="77"><span class="co">#&gt; # ... with 411 more rows, and 7 more variables: equation_grouping &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-78" data-line-number="78"><span class="co">#&gt; #   equation_id &lt;chr&gt;, allometry_specificity &lt;chr&gt;, dbh_min_cm &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-79" data-line-number="79"><span class="co">#&gt; #   dbh_max_cm &lt;chr&gt;, wsg_id &lt;chr&gt;, wsg_specificity &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-80" data-line-number="80">sitespecies_metadata</a>
+<a class="sourceLine" id="cb2-81" data-line-number="81"><span class="co">#&gt; # A tibble: 13 x 8</span></a>
+<a class="sourceLine" id="cb2-82" data-line-number="82"><span class="co">#&gt;    Column Field  Description           Column_type Field_codes Units Range</span></a>
+<a class="sourceLine" id="cb2-83" data-line-number="83"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;                 &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-84" data-line-number="84"><span class="co">#&gt;  1 1 / A  site   ForestGEO site name ~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-85" data-line-number="85"><span class="co">#&gt;  2 2 / B  family Plant family name as~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-86" data-line-number="86"><span class="co">#&gt;  3 3 / C  speci~ Plant species name a~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-87" data-line-number="87"><span class="co">#&gt;  4 4 / D  speci~ Species code used at~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-88" data-line-number="88"><span class="co">#&gt;  5 5 / E  life_~ Common growth form f~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-89" data-line-number="89"><span class="co">#&gt;  6 6 / F  bioma~ The biomass variable~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-90" data-line-number="90"><span class="co">#&gt;  7 7 / G  equat~ "Allometric equation~ character   G- generic~ -     -    </span></a>
+<a class="sourceLine" id="cb2-91" data-line-number="91"><span class="co">#&gt;  8 8 / H  equat~ Equation identificat~ numeric     -           &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-92" data-line-number="92"><span class="co">#&gt;  9 9 / I  allom~ Refers to the specif~ character ~ -           &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-93" data-line-number="93"><span class="co">#&gt; 10 10 / J dbh_m~ Min DBH at which the~ numeric     -           -     &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-94" data-line-number="94"><span class="co">#&gt; 11 11 / K dbh_m~ Max DBH at which the~ numeric     -           -     &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-95" data-line-number="95"><span class="co">#&gt; 12 12 / L wsg_id Wood density identif~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-96" data-line-number="96"><span class="co">#&gt; 13 13 / L wsg_s~ Refers to the specif~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-97" data-line-number="97"><span class="co">#&gt; # ... with 1 more variable: `Erikas notes to delete before</span></a>
+<a class="sourceLine" id="cb2-98" data-line-number="98"><span class="co">#&gt; #   publication` &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-99" data-line-number="99"></a>
+<a class="sourceLine" id="cb2-100" data-line-number="100">wsg</a>
+<a class="sourceLine" id="cb2-101" data-line-number="101"><span class="co">#&gt; # A tibble: 421 x 8</span></a>
+<a class="sourceLine" id="cb2-102" data-line-number="102"><span class="co">#&gt;    wsg_id family   species     wsg   wsg_specificity n_trees site   ref_id</span></a>
+<a class="sourceLine" id="cb2-103" data-line-number="103"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt; </span></a>
+<a class="sourceLine" id="cb2-104" data-line-number="104"><span class="co">#&gt;  1 &lt;NA&gt;   Fabaceae Robinia ps~ 0.6   species               9 Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-105" data-line-number="105"><span class="co">#&gt;  2 &lt;NA&gt;   Fabaceae Robinia ps~ 0.66  species               9 Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-106" data-line-number="106"><span class="co">#&gt;  3 &lt;NA&gt;   Ulmaceae Ulmus amer~ 0.46  &lt;NA&gt;                 NA Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-107" data-line-number="107"><span class="co">#&gt;  4 &lt;NA&gt;   Ulmaceae Ulmus rubra 0.48  &lt;NA&gt;                 NA Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-108" data-line-number="108"><span class="co">#&gt;  5 &lt;NA&gt;   Oleaceae Fraxinus a~ 0.51  &lt;NA&gt;                 NA Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-109" data-line-number="109"><span class="co">#&gt;  6 &lt;NA&gt;   Oleaceae Fraxinus p~ 0.53  &lt;NA&gt;                 NA Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-110" data-line-number="110"><span class="co">#&gt;  7 &lt;NA&gt;   Hamamel~ Hamamelis ~ 0.71  &lt;NA&gt;                 NA Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-111" data-line-number="111"><span class="co">#&gt;  8 &lt;NA&gt;   Cupress~ Juniperus ~ 0.44  &lt;NA&gt;                 NA Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-112" data-line-number="112"><span class="co">#&gt;  9 &lt;NA&gt;   Fagaceae Fagus gran~ 0.56  &lt;NA&gt;                 NA Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-113" data-line-number="113"><span class="co">#&gt; 10 &lt;NA&gt;   Fagaceae Quercus al~ 0.6   &lt;NA&gt;                 NA Lilly~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb2-114" data-line-number="114"><span class="co">#&gt; # ... with 411 more rows</span></a>
+<a class="sourceLine" id="cb2-115" data-line-number="115">wsg_metadata</a>
+<a class="sourceLine" id="cb2-116" data-line-number="116"><span class="co">#&gt; # A tibble: 9 x 8</span></a>
+<a class="sourceLine" id="cb2-117" data-line-number="117"><span class="co">#&gt;   Column Field  Description            Column_type Field_codes Units Range</span></a>
+<a class="sourceLine" id="cb2-118" data-line-number="118"><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;                  &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-119" data-line-number="119"><span class="co">#&gt; 1 1 / A  wsg_id Wood specific gravity~ numeric     -           -     &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-120" data-line-number="120"><span class="co">#&gt; 2 2 / B  family Plant family name as ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-121" data-line-number="121"><span class="co">#&gt; 3 3 / C  genus  Plant genus name as T~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-122" data-line-number="122"><span class="co">#&gt; 4 4 / D  speci~ Plant species name as~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-123" data-line-number="123"><span class="co">#&gt; 5 5 / E  wsg    Wood specific gravity  numeric     &lt;NA&gt;        g/cm3 -    </span></a>
+<a class="sourceLine" id="cb2-124" data-line-number="124"><span class="co">#&gt; 6 6 / F  wsg_s~ Specific taxonomic le~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-125" data-line-number="125"><span class="co">#&gt; 7 7 / G  n_tre~ Number of trees sampl~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-126" data-line-number="126"><span class="co">#&gt; 8 8 / H  site   ForestGEO site name    character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-127" data-line-number="127"><span class="co">#&gt; 9 9 / I  ref_id Unique reference iden~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-128" data-line-number="128"><span class="co">#&gt; # ... with 1 more variable: `Erikas notes to delete before</span></a>
+<a class="sourceLine" id="cb2-129" data-line-number="129"><span class="co">#&gt; #   publication` &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-130" data-line-number="130"></a>
+<a class="sourceLine" id="cb2-131" data-line-number="131">sites_info</a>
+<a class="sourceLine" id="cb2-132" data-line-number="132"><span class="co">#&gt; # A tibble: 63 x 12</span></a>
+<a class="sourceLine" id="cb2-133" data-line-number="133"><span class="co">#&gt;       id Site    site       lat   long UTM_Zone UTM_X  UTM_Y intertropical</span></a>
+<a class="sourceLine" id="cb2-134" data-line-number="134"><span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;        </span></a>
+<a class="sourceLine" id="cb2-135" data-line-number="135"><span class="co">#&gt;  1   42. Amacay~ amacay~  -3.81  -70.3       19 35922~ 9578~ Tropical     </span></a>
+<a class="sourceLine" id="cb2-136" data-line-number="136"><span class="co">#&gt;  2   51. Badago~ badago~  29.5   111.        49 45345~ 3259~ Other        </span></a>
+<a class="sourceLine" id="cb2-137" data-line-number="137"><span class="co">#&gt;  3   52. Baotia~ baotia~  33.5   112.        49 58732~ 3706~ Other        </span></a>
+<a class="sourceLine" id="cb2-138" data-line-number="138"><span class="co">#&gt;  4   45. Barro ~ barro ~   9.15  -79.8       17 62678~ 1012~ Tropical     </span></a>
+<a class="sourceLine" id="cb2-139" data-line-number="139"><span class="co">#&gt;  5   18. Bukit ~ bukit ~   1.35  104.        48 36427~ 1492~ Tropical     </span></a>
+<a class="sourceLine" id="cb2-140" data-line-number="140"><span class="co">#&gt;  6   53. Changb~ changb~  42.4   128.        52 42451~ 4692~ Other        </span></a>
+<a class="sourceLine" id="cb2-141" data-line-number="141"><span class="co">#&gt;  7   46. Cocoli  cocoli    8.99  -79.6       17 65207~ 9937~ Tropical     </span></a>
+<a class="sourceLine" id="cb2-142" data-line-number="142"><span class="co">#&gt;  8   14. Danum ~ danum ~   5.10  118.        50 57625~ 5639~ Tropical     </span></a>
+<a class="sourceLine" id="cb2-143" data-line-number="143"><span class="co">#&gt;  9    7. Dinghu~ dinghu~  23.2   113.        49 65466~ 2563~ Tropical     </span></a>
+<a class="sourceLine" id="cb2-144" data-line-number="144"><span class="co">#&gt; 10   25. Doi In~ doi in~  18.6    98.4       47 440211 2054~ Tropical     </span></a>
+<a class="sourceLine" id="cb2-145" data-line-number="145"><span class="co">#&gt; # ... with 53 more rows, and 3 more variables: size.ha &lt;dbl&gt;, E &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb2-146" data-line-number="146"><span class="co">#&gt; #   wsg.site.name &lt;chr&gt;</span></a></code></pre></div>
 </div>
 </div>
   </div>

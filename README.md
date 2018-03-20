@@ -30,135 +30,129 @@ library(allodb)
 library(tibble)
 
 equations
-#> # A tibble: 419 x 14
-#>    equation_id model_parameters biomass_units_original regression_model
-#>    <chr>       <chr>            <chr>                  <chr>           
-#>  1 <NA>        <NA>             lb                     linear_multiple 
-#>  2 <NA>        <NA>             lb                     linear_multiple 
-#>  3 <NA>        <NA>             kg                     <NA>            
-#>  4 <NA>        <NA>             kg                     <NA>            
-#>  5 <NA>        <NA>             kg                     <NA>            
-#>  6 <NA>        <NA>             kg                     <NA>            
-#>  7 <NA>        <NA>             g                      <NA>            
-#>  8 <NA>        <NA>             kg                     <NA>            
-#>  9 <NA>        <NA>             lb                     <NA>            
-#> 10 <NA>        <NA>             lb                     <NA>            
-#> # ... with 409 more rows, and 10 more variables:
-#> #   other_equations_tested <chr>, `log (biomass)` <chr>, d <dbl>,
+#> # A tibble: 421 x 23
+#>    equation_id biomass_compone~ equation allometry_speci~ development_spe~
+#>    <chr>       <chr>            <chr>    <chr>            <chr>           
+#>  1 <NA>        Stem and branch~ a*(DBH^~ Species          <NA>            
+#>  2 <NA>        Stem and branch~ a*(DBH^~ Species          <NA>            
+#>  3 <NA>        Whole tree (abo~ a+b*DBH~ Species          <NA>            
+#>  4 <NA>        Whole tree (abo~ a+b*DBH~ Species          Ulmus americana 
+#>  5 <NA>        Whole tree (abo~ a+b*DBH~ Species          <NA>            
+#>  6 <NA>        Whole tree (abo~ a+b*DBH~ Species          Fraxinus americ~
+#>  7 <NA>        Total abovegrou~ a*DBA^b  Species          <NA>            
+#>  8 <NA>        Total abovegrou~ a*DBH^b  Species          <NA>            
+#>  9 <NA>        Stem and branch~ a*DBH^b  Species          <NA>            
+#> 10 <NA>        Stem and branch~ a*DBH^b  Species          <NA>            
+#> # ... with 411 more rows, and 18 more variables: geographic_area <chr>,
 #> #   dbh_min_cm <chr>, dbh_max_cm <chr>, n_trees <int>,
-#> #   dbh_units_original <chr>, equation <chr>, equation_grouping <chr>,
-#> #   `bias correction _CF` <chr>
+#> #   dbh_units_original <chr>, biomass_units_original <chr>,
+#> #   allometry_development_method <chr>, model_parameters <chr>,
+#> #   regression_model <chr>, other_equations_tested <chr>,
+#> #   log_biomass <chr>, bias_corrected <chr>, bias_correction_factor <chr>,
+#> #   notes_fitting_model <chr>, original_data_availability <chr>,
+#> #   notes_to_consider <chr>, warning <chr>, ref_id <chr>
 equations_metadata
-#> # A tibble: 22 x 8
-#>    Column Field  Description `Alphanumeric a~ `Variable codes` Units Range
-#>    <chr>  <chr>  <chr>       <chr>            <chr>            <chr> <chr>
-#>  1 1 / A  equat~ Unique equ~ -                -                -     -    
-#>  2 2 / B  varia~ Tree compo~ character (stri~ -                -     -    
-#>  3 3 / C  equat~ Model equa~ -                -                -     -    
-#>  4 4 / D  allom~ Refers to ~ character (stri~ -                -     -    
-#>  5 5 / E  devel~ Species fo~ <NA>             <NA>             <NA>  <NA> 
-#>  6 6 / F  geogr~ Geographic~ character (stri~ -                -     -    
-#>  7 7 / G  dbh_m~ Minimun DB~ numeric          -                <NA>  -    
-#>  8 8 / H  dbh_m~ Maximun DB~ numeric          -                <NA>  -    
-#>  9 9 / I  n_tre~ Number of ~ numeric          -                -     -    
-#> 10 10 / J dbh_u~ DBH unit u~ <NA>             <NA>             <NA>  <NA> 
-#> # ... with 12 more rows, and 1 more variable: `Erikas notes to delete
+#> # A tibble: 23 x 8
+#>    Column Field   Description          Column_type Field_codes Units Range
+#>    <chr>  <chr>   <chr>                <chr>       <chr>       <chr> <chr>
+#>  1 1 / A  equati~ Unique equation ide~ -           -           -     -    
+#>  2 2 / B  biomas~ Tree component char~ character   -           -     -    
+#>  3 3 / C  equati~ Model equation as a~ character   -           -     -    
+#>  4 4 / D  allome~ Refers to the speci~ character   -           -     -    
+#>  5 5 / E  develo~ Species for which t~ character   <NA>        <NA>  <NA> 
+#>  6 6 / F  geogra~ Geographic location~ character   -           -     -    
+#>  7 7 / G  dbh_mi~ Minimun DBH in cm s~ numeric     -           <NA>  -    
+#>  8 8 / H  dbh_ma~ Maximun DBH in cm s~ numeric     -           <NA>  -    
+#>  9 9 / I  n_trees Number of trees sam~ integer     -           -     -    
+#> 10 10 / J dbh_un~ DBH unit used in or~ character   <NA>        <NA>  <NA> 
+#> # ... with 13 more rows, and 1 more variable: `Erikas notes to delete
 #> #   before publication` <chr>
 
 missing_values_metadata
-#> # A tibble: 12 x 7
-#>    Code  Definition            Description         X4    X5    X6    X7   
-#>    <chr> <chr>                 <chr>               <chr> <chr> <chr> <chr>
-#>  1 <NA>  Not Applicable        Data does not appl~ <NA>  <NA>  <NA>  <NA> 
-#>  2 NAC   Not Acquired          Information may be~ <NA>  <NA>  <NA>  <NA> 
-#>  3 NRA   Not Readily Available Information was no~ <NA>  <NA>  <NA>  <NA> 
-#>  4 NI    No Information        No information ava~ <NA>  <NA>  <NA>  <NA> 
-#>  5 <NA>  <NA>                  <NA>                <NA>  <NA>  <NA>  <NA> 
-#>  6 <NA>  <NA>                  <NA>                <NA>  <NA>  <NA>  <NA> 
-#>  7 <NA>  <NA>                  <NA>                <NA>  <NA>  <NA>  <NA> 
-#>  8 <NA>  <NA>                  <NA>                <NA>  <NA>  <NA>  <NA> 
-#>  9 <NA>  <NA>                  <NA>                <NA>  <NA>  <NA>  <NA> 
-#> 10 <NA>  <NA>                  <NA>                <NA>  <NA>  <NA>  <NA> 
-#> 11 <NA>  <NA>                  <NA>                <NA>  <NA>  <NA>  <NA> 
-#> 12 <NA>  <NA>                  <NA>                <NA>  <NA>  <NA>  <NA>
+#> # A tibble: 4 x 3
+#>   Code  Definition            Description                                 
+#>   <chr> <chr>                 <chr>                                       
+#> 1 <NA>  Not Applicable        Data does not apply to that particular case 
+#> 2 NAC   Not Acquired          Information may be available but has not be~
+#> 3 NRA   Not Readily Available Information was not readily available to th~
+#> 4 NI    No Information        No information available in original public~
 
 references_metadata
-#> # A tibble: 6 x 8
-#>   Column Field  Description  `Alphanumeric a~ `Variable codes` Units Range
-#>   <chr>  <chr>  <chr>        <chr>            <chr>            <chr> <chr>
-#> 1 1 / A  ref_id Unique refe~ numeric          -                -     -    
-#> 2 2 / B  ref_a~ Last name o~ character (stri~ -                -     -    
-#> 3 3 / C  ref_y~ Year of pub~ numeric          -                -     -    
-#> 4 4 / D  ref_t~ Title of pu~ character (stri~ -                -     -    
-#> 5 5 / E  ref_j~ Journal, bo~ character (stri~ -                -     -    
-#> 6 6 / F  ref_d~ Publication~ character (stri~ -                -     -    
-#> # ... with 1 more variable: `Notes to be deleted later` <chr>
+#> # A tibble: 6 x 5
+#>   Column Field       Description            Colum_type  `Notes to be dele~
+#>   <chr>  <chr>       <chr>                  <chr>       <chr>             
+#> 1 1 / A  ref_id      Unique reference iden~ numeric     <NA>              
+#> 2 2 / B  ref_author  Last name of first au~ character ~ <NA>              
+#> 3 3 / C  ref_year    Year of publication    numeric     <NA>              
+#> 4 4 / D  ref_title   Title of publication   character ~ <NA>              
+#> 5 5 / E  ref_journal Journal, book, report~ character ~ EG: Keep this for~
+#> 6 6 / F  ref_doi     Publication DOI (Digi~ character ~ <NA>
 
 sitespecies
-#> # A tibble: 419 x 11
-#>    site     family    species      species_code life_form model_parameters
-#>    <chr>    <chr>     <chr>        <chr>        <chr>     <chr>           
-#>  1 Lilly D~ Fabaceae  Robinia pse~ 901          Tree      <NA>            
-#>  2 Lilly D~ Fabaceae  Robinia pse~ 901          Tree      <NA>            
-#>  3 Lilly D~ Ulmaceae  Ulmus ameri~ 972          Tree      <NA>            
-#>  4 Lilly D~ Ulmaceae  Ulmus rubra  975          Tree      <NA>            
-#>  5 Lilly D~ Oleaceae  Fraxinus am~ 541          Tree      <NA>            
-#>  6 Lilly D~ Oleaceae  Fraxinus pe~ 544          Tree      <NA>            
-#>  7 Lilly D~ Hamameli~ Hamamelis v~ 498          Shrub     <NA>            
-#>  8 Lilly D~ Cupressa~ Juniperus v~ 68           Tree      <NA>            
-#>  9 Lilly D~ Fagaceae  Fagus grand~ 531          Tree      <NA>            
-#> 10 Lilly D~ Fagaceae  Quercus alba 802          Tree      <NA>            
-#> # ... with 409 more rows, and 5 more variables:
-#> #   allometry_development_method <chr>, equation_id <chr>,
-#> #   regression_model <chr>, wsg <chr>, wsg_id <chr>
+#> # A tibble: 421 x 13
+#>    site    family    species     species_code life_form biomass_component 
+#>    <chr>   <chr>     <chr>       <chr>        <chr>     <chr>             
+#>  1 Lilly ~ Fabaceae  Robinia ps~ 901          Tree      Stem and branches~
+#>  2 Lilly ~ Fabaceae  Robinia ps~ 901          Tree      Stem and branches~
+#>  3 Lilly ~ Ulmaceae  Ulmus amer~ 972          Tree      Whole tree (above~
+#>  4 Lilly ~ Ulmaceae  Ulmus rubra 975          Tree      Whole tree (above~
+#>  5 Lilly ~ Oleaceae  Fraxinus a~ 541          Tree      Whole tree (above~
+#>  6 Lilly ~ Oleaceae  Fraxinus p~ 544          Tree      Whole tree (above~
+#>  7 Lilly ~ Hamameli~ Hamamelis ~ 498          Shrub     Total aboveground~
+#>  8 Lilly ~ Cupressa~ Juniperus ~ 68           Tree      Total aboveground~
+#>  9 Lilly ~ Fagaceae  Fagus gran~ 531          Tree      Stem and branches~
+#> 10 Lilly ~ Fagaceae  Quercus al~ 802          Tree      Stem and branches~
+#> # ... with 411 more rows, and 7 more variables: equation_grouping <chr>,
+#> #   equation_id <chr>, allometry_specificity <chr>, dbh_min_cm <chr>,
+#> #   dbh_max_cm <chr>, wsg_id <chr>, wsg_specificity <chr>
 sitespecies_metadata
 #> # A tibble: 13 x 8
-#>    Column Field  Description `Alphanumeric a~ `Variable codes` Units Range
-#>    <chr>  <chr>  <chr>       <chr>            <chr>            <chr> <chr>
-#>  1 1 / A  site   ForestGEO ~ character (stri~ -                -     -    
-#>  2 2 / B  family Plant fami~ character (stri~ <NA>             <NA>  <NA> 
-#>  3 3 / C  speci~ Plant spec~ character (stri~ -                -     -    
-#>  4 4 / D  speci~ Species co~ <NA>             <NA>             <NA>  <NA> 
-#>  5 5 / E  life_~ Common gro~ character (stri~ <NA>             <NA>  <NA> 
-#>  6 6 / F  varia~ The biomas~ character (stri~ -                -     -    
-#>  7 7 / G  equat~ "Allometri~ character (stri~ G- generic; E- ~ -     -    
-#>  8 8 / H  equat~ Equation i~ numeric          -                <NA>  <NA> 
-#>  9 9 / I  allom~ Refers to ~ character (stri~ -                <NA>  <NA> 
-#> 10 10 / J dbh_m~ Min DBH at~ numeric          -                -     <NA> 
-#> 11 11 / K dbh_m~ Max DBH at~ numeric          -                -     <NA> 
-#> 12 12 / L wsg_id Wood densi~ numeric          <NA>             <NA>  <NA> 
-#> 13 13 / L wsg_s~ Refers to ~ numeric          <NA>             <NA>  <NA> 
+#>    Column Field  Description           Column_type Field_codes Units Range
+#>    <chr>  <chr>  <chr>                 <chr>       <chr>       <chr> <chr>
+#>  1 1 / A  site   ForestGEO site name ~ character   -           -     -    
+#>  2 2 / B  family Plant family name as~ character   <NA>        <NA>  <NA> 
+#>  3 3 / C  speci~ Plant species name a~ character   -           -     -    
+#>  4 4 / D  speci~ Species code used at~ character   <NA>        <NA>  <NA> 
+#>  5 5 / E  life_~ Common growth form f~ character   <NA>        <NA>  <NA> 
+#>  6 6 / F  bioma~ The biomass variable~ character   -           -     -    
+#>  7 7 / G  equat~ "Allometric equation~ character   G- generic~ -     -    
+#>  8 8 / H  equat~ Equation identificat~ numeric     -           <NA>  <NA> 
+#>  9 9 / I  allom~ Refers to the specif~ character ~ -           <NA>  <NA> 
+#> 10 10 / J dbh_m~ Min DBH at which the~ numeric     -           -     <NA> 
+#> 11 11 / K dbh_m~ Max DBH at which the~ numeric     -           -     <NA> 
+#> 12 12 / L wsg_id Wood density identif~ numeric     <NA>        <NA>  <NA> 
+#> 13 13 / L wsg_s~ Refers to the specif~ character   <NA>        <NA>  <NA> 
 #> # ... with 1 more variable: `Erikas notes to delete before
 #> #   publication` <chr>
 
 wsg
-#> # A tibble: 419 x 7
-#>    wsg_id family         species    wsg   wsg_specificity variable   site 
-#>    <chr>  <chr>          <chr>      <chr> <chr>           <chr>      <chr>
-#>  1 <NA>   Fabaceae       Robinia p~ 0.6   species         Stem and ~ Lill~
-#>  2 <NA>   Fabaceae       Robinia p~ 0.66  species         Stem and ~ Lill~
-#>  3 <NA>   Ulmaceae       Ulmus ame~ 0.46  <NA>            Whole tre~ Lill~
-#>  4 <NA>   Ulmaceae       Ulmus rub~ 0.48  <NA>            Whole tre~ Lill~
-#>  5 <NA>   Oleaceae       Fraxinus ~ 0.51  <NA>            Whole tre~ Lill~
-#>  6 <NA>   Oleaceae       Fraxinus ~ 0.53  <NA>            Whole tre~ Lill~
-#>  7 <NA>   Hamamelidaceae Hamamelis~ 0.71  <NA>            Above gro~ Lill~
-#>  8 <NA>   Cupressaceae   Juniperus~ 0.44  <NA>            Above gro~ Lill~
-#>  9 <NA>   Fagaceae       Fagus gra~ 0.56  <NA>            Stem and ~ Lill~
-#> 10 <NA>   Fagaceae       Quercus a~ 0.6   <NA>            Stem and ~ Lill~
-#> # ... with 409 more rows
+#> # A tibble: 421 x 8
+#>    wsg_id family   species     wsg   wsg_specificity n_trees site   ref_id
+#>    <chr>  <chr>    <chr>       <chr> <chr>             <int> <chr>  <chr> 
+#>  1 <NA>   Fabaceae Robinia ps~ 0.6   species               9 Lilly~ <NA>  
+#>  2 <NA>   Fabaceae Robinia ps~ 0.66  species               9 Lilly~ <NA>  
+#>  3 <NA>   Ulmaceae Ulmus amer~ 0.46  <NA>                 NA Lilly~ <NA>  
+#>  4 <NA>   Ulmaceae Ulmus rubra 0.48  <NA>                 NA Lilly~ <NA>  
+#>  5 <NA>   Oleaceae Fraxinus a~ 0.51  <NA>                 NA Lilly~ <NA>  
+#>  6 <NA>   Oleaceae Fraxinus p~ 0.53  <NA>                 NA Lilly~ <NA>  
+#>  7 <NA>   Hamamel~ Hamamelis ~ 0.71  <NA>                 NA Lilly~ <NA>  
+#>  8 <NA>   Cupress~ Juniperus ~ 0.44  <NA>                 NA Lilly~ <NA>  
+#>  9 <NA>   Fagaceae Fagus gran~ 0.56  <NA>                 NA Lilly~ <NA>  
+#> 10 <NA>   Fagaceae Quercus al~ 0.6   <NA>                 NA Lilly~ <NA>  
+#> # ... with 411 more rows
 wsg_metadata
 #> # A tibble: 9 x 8
-#>   Column Field  Description  `Alphanumeric a~ `Variable codes` Units Range
-#>   <chr>  <chr>  <chr>        <chr>            <chr>            <chr> <chr>
-#> 1 1 / A  wsg_id Wood specif~ numeric          -                -     <NA> 
-#> 2 2 / B  family Plant famil~ character (stri~ <NA>             <NA>  <NA> 
-#> 3 3 / C  genus  Plant genus~ character (stri~ <NA>             <NA>  <NA> 
-#> 4 4 / D  speci~ Plant speci~ character (stri~ <NA>             <NA>  <NA> 
-#> 5 5 / E  wsg    Wood specif~ numeric          <NA>             g/cm3 -    
-#> 6 6 / F  wsg_s~ Specific ta~ character (stri~ -                -     -    
-#> 7 7 / G  n_sam~ Number of t~ numeric          <NA>             <NA>  <NA> 
-#> 8 8 / H  site   ForestGEO s~ character (stri~ <NA>             <NA>  <NA> 
-#> 9 9 / I  ref_id Unique refe~ numeric          <NA>             <NA>  <NA> 
+#>   Column Field  Description            Column_type Field_codes Units Range
+#>   <chr>  <chr>  <chr>                  <chr>       <chr>       <chr> <chr>
+#> 1 1 / A  wsg_id Wood specific gravity~ numeric     -           -     <NA> 
+#> 2 2 / B  family Plant family name as ~ character   <NA>        <NA>  <NA> 
+#> 3 3 / C  genus  Plant genus name as T~ character   <NA>        <NA>  <NA> 
+#> 4 4 / D  speci~ Plant species name as~ character   <NA>        <NA>  <NA> 
+#> 5 5 / E  wsg    Wood specific gravity  numeric     <NA>        g/cm3 -    
+#> 6 6 / F  wsg_s~ Specific taxonomic le~ character   -           -     -    
+#> 7 7 / G  n_tre~ Number of trees sampl~ numeric     <NA>        <NA>  <NA> 
+#> 8 8 / H  site   ForestGEO site name    character   <NA>        <NA>  <NA> 
+#> 9 9 / I  ref_id Unique reference iden~ numeric     <NA>        <NA>  <NA> 
 #> # ... with 1 more variable: `Erikas notes to delete before
 #> #   publication` <chr>
 

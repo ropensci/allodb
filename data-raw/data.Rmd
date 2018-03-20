@@ -18,18 +18,21 @@ knitr::opts_chunk$set(
 ```
 
 ```{r}
+library(allodb)
 library(tidyverse)
 library(here)
 library(usethis)
 ```
 
-# Gather raw master data and clean it
+# Gather raw master data
 
 ```{r master}
-master <- read_csv(here("data-raw/allodb_master.csv"))
+master <- read_csv(
+  here("data-raw/allodb_master.csv"), col_type = type_allodb_master()
+)
 ```
 
-# Export subsets of the clean master data
+# Export subsets of master data
 
 This section exports subsets of the clean master data to data/. Each dataset documented in R/data.R to produce a help file that can be accessed from the R console with `?name-of-the-dataset` and also from the Functions Index tab of the website of __allodb__.
 

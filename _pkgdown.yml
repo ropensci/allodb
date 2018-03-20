@@ -16,7 +16,7 @@ navbar:
   type: default
 
   left:
-    - text: Datasets
+    - text: Datasets and Functions Index
       href: reference/index.html
 
   right:
@@ -31,3 +31,17 @@ navbar:
 
     - text: fgeo
       href: https://forestgeo.github.io/fgeo/
+
+
+
+reference:
+
+  - title: Datasets
+    contents:
+      - matches("[^type_allodb_master]")
+
+  - title: Functions
+    contents:
+      - type_allodb_master
+
+
