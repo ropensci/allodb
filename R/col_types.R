@@ -1,8 +1,8 @@
 #' Help to read datasets safely, with consistent column type.
 #'
-#' For details see [fgeo.tool::type_fgeo()].
+#' For details see [`fgeo.tool::type_fgeo()`](https://goo.gl/gVSMT8).
 #'
-#' Types' reference (see [readr::read_csv()].
+#' Types' reference (see [`readr::read_csv()`](https://goo.gl/DtDvXq).
 #' * c = character.
 #' * i = integer.
 #' * n = number.
