@@ -1,11 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# allodb: Database of allometric equations <img src="https://i.imgur.com/VcNaTWW.png" align="right" height=44 />
+# <img src="https://i.imgur.com/VcNaTWW.png" align="right" height=44 /> allodb: Database of allometric equations
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build
 status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
+[![Coverage
+status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/r/forestgeo/allodb?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/package=allodb)
 
@@ -13,8 +15,6 @@ The goal of allodb is to develop, host and give access to tables of
 allometric equations for ForestGEO’s network.
 
 ## Installation
-
-To install **allodb** run the following code in R (and the notes below):
 
     # install.packages("remotes")
     remotes::install_github("forestgeo/allodb", auth_token = "abc")
