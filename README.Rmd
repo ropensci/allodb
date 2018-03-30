@@ -13,9 +13,11 @@ knitr::opts_chunk$set(
 )
 ```
 
-# allodb: Database of allometric equations <img src="https://i.imgur.com/39pvr4n.png" align="right" height=44 />
+# allodb: Database of allometric equations <img src="https://i.imgur.com/VcNaTWW.png" align="right" height=44 />
 
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
+[![CRAN status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/package=allodb)
 
 The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO's network.
 
@@ -28,10 +30,7 @@ To install __allodb__ run the following code in R (and the notes below):
 remotes::install_github("forestgeo/allodb", auth_token = "abc")
 ```
 
-NOTES: 
-
-* For details on how to install from private repositories see [this article](https://maurolepore.netlify.com/2017/12/06/2017-12-06-best-prectice-for-installing-packages-from-private-repos/). 
-* For general advice on installing packages from GitHub see [this article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
+For details in how to install packages from GitHub see [this article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
 
 # Example
 
@@ -55,3 +54,7 @@ wsg_metadata
 sites_info
 ```
 
+---
+
+Please note that this project is released with a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md).
+  By participating in this project you agree to abide by its terms.

@@ -1,10 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# allodb: Database of allometric equations <img src="https://i.imgur.com/39pvr4n.png" align="right" height=44 />
+# allodb: Database of allometric equations <img src="https://i.imgur.com/VcNaTWW.png" align="right" height=44 />
 
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build
 status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/package=allodb)
 
 The goal of allodb is to develop, host and give access to tables of
 allometric equations for ForestGEO’s network.
@@ -16,12 +19,8 @@ To install **allodb** run the following code in R (and the notes below):
     # install.packages("remotes")
     remotes::install_github("forestgeo/allodb", auth_token = "abc")
 
-NOTES:
-
-  - For details on how to install from private repositories see [this
-    article](https://maurolepore.netlify.com/2017/12/06/2017-12-06-best-prectice-for-installing-packages-from-private-repos/).
-  - For general advice on installing packages from GitHub see [this
-    article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
+For details in how to install packages from GitHub see [this
+article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
 
 # Example
 
@@ -31,7 +30,7 @@ library(tibble)
 
 equations
 #> # A tibble: 421 x 23
-#>    equation_id biomass_compone~ equation allometry_speci~ development_spe~
+#>    equation_id dependent_varia~ equation allometry_speci~ development_spe~
 #>    <chr>       <chr>            <chr>    <chr>            <chr>           
 #>  1 <NA>        Stem and branch~ a*(DBH^~ Species          <NA>            
 #>  2 <NA>        Stem and branch~ a*(DBH^~ Species          <NA>            
@@ -39,32 +38,32 @@ equations
 #>  4 <NA>        Whole tree (abo~ a+b*DBH~ Species          Ulmus americana 
 #>  5 <NA>        Whole tree (abo~ a+b*DBH~ Species          <NA>            
 #>  6 <NA>        Whole tree (abo~ a+b*DBH~ Species          Fraxinus americ~
-#>  7 <NA>        Total abovegrou~ a*DBA^b  Species          <NA>            
-#>  8 <NA>        Total abovegrou~ a*DBH^b  Species          <NA>            
-#>  9 <NA>        Stem and branch~ a*DBH^b  Species          <NA>            
-#> 10 <NA>        Stem and branch~ a*DBH^b  Species          <NA>            
+#>  7 <NA>        Total abovegrou~ a*(DBA^~ Species          <NA>            
+#>  8 <NA>        Total abovegrou~ a*(DBH^~ Species          <NA>            
+#>  9 <NA>        Stem and branch~ a*(DBH^~ Species          <NA>            
+#> 10 <NA>        Stem and branch~ a*(DBH^~ Species          <NA>            
 #> # ... with 411 more rows, and 18 more variables: geographic_area <chr>,
 #> #   dbh_min_cm <chr>, dbh_max_cm <chr>, n_trees <int>,
 #> #   dbh_units_original <chr>, biomass_units_original <chr>,
-#> #   allometry_development_method <chr>, model_parameters <chr>,
+#> #   allometry_development_method <chr>, independent_variable <chr>,
 #> #   regression_model <chr>, other_equations_tested <chr>,
 #> #   log_biomass <chr>, bias_corrected <chr>, bias_correction_factor <chr>,
 #> #   notes_fitting_model <chr>, original_data_availability <chr>,
 #> #   notes_to_consider <chr>, warning <chr>, ref_id <chr>
 equations_metadata
 #> # A tibble: 23 x 8
-#>    Column Field   Description          Column_type Field_codes Units Range
-#>    <chr>  <chr>   <chr>                <chr>       <chr>       <chr> <chr>
-#>  1 1 / A  equati~ Unique equation ide~ -           -           -     -    
-#>  2 2 / B  biomas~ Tree component char~ character   -           -     -    
-#>  3 3 / C  equati~ Model equation as a~ character   -           -     -    
-#>  4 4 / D  allome~ Refers to the speci~ character   -           -     -    
-#>  5 5 / E  develo~ Species for which t~ character   <NA>        <NA>  <NA> 
-#>  6 6 / F  geogra~ Geographic location~ character   -           -     -    
-#>  7 7 / G  dbh_mi~ Minimun DBH in cm s~ numeric     -           <NA>  -    
-#>  8 8 / H  dbh_ma~ Maximun DBH in cm s~ numeric     -           <NA>  -    
-#>  9 9 / I  n_trees Number of trees sam~ integer     -           -     -    
-#> 10 10 / J dbh_un~ DBH unit used in or~ character   <NA>        <NA>  <NA> 
+#>    Column Field    Description         Column_type Field_codes Units Range
+#>    <chr>  <chr>    <chr>               <chr>       <chr>       <chr> <chr>
+#>  1 1 / A  equatio~ Unique equation id~ -           -           -     -    
+#>  2 2 / B  depende~ Tree component cha~ character   -           -     -    
+#>  3 3 / C  equation Model equation as ~ character   -           -     -    
+#>  4 4 / D  allomet~ Refers to the spec~ character   -           -     -    
+#>  5 5 / E  develop~ Species for which ~ character   <NA>        <NA>  <NA> 
+#>  6 6 / F  geograp~ Geographic locatio~ character   -           -     -    
+#>  7 7 / G  dbh_min~ Minimun DBH in cm ~ numeric     -           <NA>  -    
+#>  8 8 / H  dbh_max~ Maximun DBH in cm ~ numeric     -           <NA>  -    
+#>  9 9 / I  n_trees  Number of trees sa~ integer     -           -     -    
+#> 10 10 / J dbh_uni~ DBH unit used in o~ character   <NA>        <NA>  <NA> 
 #> # ... with 13 more rows, and 1 more variable: `Erikas notes to delete
 #> #   before publication` <chr>
 
@@ -90,18 +89,18 @@ references_metadata
 
 sitespecies
 #> # A tibble: 421 x 13
-#>    site    family    species     species_code life_form biomass_component 
-#>    <chr>   <chr>     <chr>       <chr>        <chr>     <chr>             
-#>  1 Lilly ~ Fabaceae  Robinia ps~ 901          Tree      Stem and branches~
-#>  2 Lilly ~ Fabaceae  Robinia ps~ 901          Tree      Stem and branches~
-#>  3 Lilly ~ Ulmaceae  Ulmus amer~ 972          Tree      Whole tree (above~
-#>  4 Lilly ~ Ulmaceae  Ulmus rubra 975          Tree      Whole tree (above~
-#>  5 Lilly ~ Oleaceae  Fraxinus a~ 541          Tree      Whole tree (above~
-#>  6 Lilly ~ Oleaceae  Fraxinus p~ 544          Tree      Whole tree (above~
-#>  7 Lilly ~ Hamameli~ Hamamelis ~ 498          Shrub     Total aboveground~
-#>  8 Lilly ~ Cupressa~ Juniperus ~ 68           Tree      Total aboveground~
-#>  9 Lilly ~ Fagaceae  Fagus gran~ 531          Tree      Stem and branches~
-#> 10 Lilly ~ Fagaceae  Quercus al~ 802          Tree      Stem and branches~
+#>    site    family   species    species_code life_form dependent_variable_~
+#>    <chr>   <chr>    <chr>      <chr>        <chr>     <chr>               
+#>  1 Lilly ~ Fabaceae Robinia p~ 901          Tree      Stem and branches (~
+#>  2 Lilly ~ Fabaceae Robinia p~ 901          Tree      Stem and branches (~
+#>  3 Lilly ~ Ulmaceae Ulmus ame~ 972          Tree      Whole tree (above s~
+#>  4 Lilly ~ Ulmaceae Ulmus rub~ 975          Tree      Whole tree (above s~
+#>  5 Lilly ~ Oleaceae Fraxinus ~ 541          Tree      Whole tree (above s~
+#>  6 Lilly ~ Oleaceae Fraxinus ~ 544          Tree      Whole tree (above s~
+#>  7 Lilly ~ Hamamel~ Hamamelis~ 498          Shrub     Total aboveground b~
+#>  8 Lilly ~ Cupress~ Juniperus~ 68           Tree      Total aboveground b~
+#>  9 Lilly ~ Fagaceae Fagus gra~ 531          Tree      Stem and branches (~
+#> 10 Lilly ~ Fagaceae Quercus a~ 802          Tree      Stem and branches (~
 #> # ... with 411 more rows, and 7 more variables: equation_grouping <chr>,
 #> #   equation_id <chr>, allometry_specificity <chr>, dbh_min_cm <chr>,
 #> #   dbh_max_cm <chr>, wsg_id <chr>, wsg_specificity <chr>
@@ -173,3 +172,9 @@ sites_info
 #> # ... with 53 more rows, and 3 more variables: size.ha <dbl>, E <dbl>,
 #> #   wsg.site.name <chr>
 ```
+
+-----
+
+Please note that this project is released with a [Contributor Code of
+Conduct](.github/CODE_OF_CONDUCT.md). By participating in this project
+you agree to abide by its terms.

@@ -7,7 +7,7 @@ output:
     theme: united
     toc: true
 editor_options: 
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -162,18 +162,59 @@ dplyr::mutate(
 
 # Section 2
 
-In this section I first show that we can programatically replace the parameters a-d from `equations$equation`. However, we have to be careful with potential mismatches. Second I show that there are other parameters, such as `DBA`, `BBL`, and `BFT`, that don't seem to have a corresponding column in the `equations` dataset, so I don't know yet how to replace them. Erika, can you guide me?
+In this section I show that we can programatically replace the parameters `a`-`d` from `equations$equation`. Also I identify a few parameters -- other than `a`-`d` and `DBH` -- that are missing and we'll need to somehow feed into the code for it to to its job.
 
-* 1. Replacing a-d.
+Get data.
 
-```{r}
+```{r, results="hide"}
 master <- readr::read_csv(
   here::here("data-raw/allodb_master.csv"),
   col_types = allodb::type_allodb_master()
 )
 
-replaced <- master %>%
-  select(equation, a:d) %>%
+# Tidy
+master <- master %>% 
+  # Add spacing for readability (http://style.tidyverse.org/syntax.html#spacing)
+  mutate(
+    equation = formatR::tidy_source(text = equation)[[1]]
+  ) %>% 
+  # Show most key column first
+  select(equation, everything())
+```
+
+```{r}
+master
+```
+
+
+Explore distinct equations
+
+```{r}
+master %>%
+  select(equation) %>% 
+  distinct() %>% 
+  print(n = nrow(.))
+```
+
+Notice `NA`s. What should we do with this?
+
+```{r}
+is_missing <- is.na(master$equation) | grepl("NA", master$equation)
+master %>% 
+  # Find both: missing value `NA` and the literal string "NA"
+  filter(is_missing)
+```
+
+In the meantime, I keep only non missing equations.
+
+```{r}
+non_missing <- master %>% filter(!is_missing)
+```
+
+Replacing a-d.
+
+```{r}
+replaced <- non_missing %>%
   mutate(
     eqn_replaced = str_replace_all(equation, "a", as.character(a)),
   ) %>% 
@@ -181,16 +222,9 @@ replaced <- master %>%
     eqn_replaced = str_replace_all(eqn_replaced, "b", as.character(b)),
     eqn_replaced = str_replace_all(eqn_replaced, "c", as.character(c)),
     eqn_replaced = str_replace_all(eqn_replaced, "d", as.character(d)),
-  )
+  ) %>% 
+  select(eqn_replaced)
+
 replaced
-```
-
-* 2. These are all the unique equations, showing that -- apart from a-d -- there are other parameters that we need to replace but I don't know yet how.
-
-```{r}
- replaced %>% 
-  # pull(eqn_replaced) %>% 
-  pull(equation) %>% 
-  unique()
 ```
 
