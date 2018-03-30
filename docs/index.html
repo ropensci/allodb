@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Database of Allometric Equations for ForestGEO â€¢ allodb</title>
+<title>A Database of Allometric Equations for ForestGEO • allodb</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
@@ -27,8 +27,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">allodb</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="index.html">allodb</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.0.0.9004</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
@@ -73,7 +77,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <div id="allodb-database-of-allometric-equations" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#allodb-database-of-allometric-equations" class="anchor"></a>allodb: Database of allometric equations <img src="https://i.imgur.com/39pvr4n.png" align="right" height="44">
+<a href="#allodb-database-of-allometric-equations" class="anchor"></a>allodb: Database of allometric equations <img src="https://i.imgur.com/VcNaTWW.png" align="right" height="44">
 </h1></div>
 
 <p>The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO’s network.</p>
@@ -98,7 +102,7 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
 <a class="sourceLine" id="cb2-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4">equations</a>
 <a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; # A tibble: 421 x 23</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;    equation_id biomass_compone~ equation allometry_speci~ development_spe~</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;    equation_id dependent_varia~ equation allometry_speci~ development_spe~</span></a>
 <a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;    &lt;chr&gt;            &lt;chr&gt;           </span></a>
 <a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  1 &lt;NA&gt;        Stem and branch~ a*(DBH^~ Species          &lt;NA&gt;            </span></a>
 <a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  2 &lt;NA&gt;        Stem and branch~ a*(DBH^~ Species          &lt;NA&gt;            </span></a>
@@ -106,32 +110,32 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
 <a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  4 &lt;NA&gt;        Whole tree (abo~ a+b*DBH~ Species          Ulmus americana </span></a>
 <a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  5 &lt;NA&gt;        Whole tree (abo~ a+b*DBH~ Species          &lt;NA&gt;            </span></a>
 <a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  6 &lt;NA&gt;        Whole tree (abo~ a+b*DBH~ Species          Fraxinus americ~</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  7 &lt;NA&gt;        Total abovegrou~ a*DBA^b  Species          &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  8 &lt;NA&gt;        Total abovegrou~ a*DBH^b  Species          &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  9 &lt;NA&gt;        Stem and branch~ a*DBH^b  Species          &lt;NA&gt;            </span></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; 10 &lt;NA&gt;        Stem and branch~ a*DBH^b  Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  7 &lt;NA&gt;        Total abovegrou~ a*(DBA^~ Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  8 &lt;NA&gt;        Total abovegrou~ a*(DBH^~ Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  9 &lt;NA&gt;        Stem and branch~ a*(DBH^~ Species          &lt;NA&gt;            </span></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; 10 &lt;NA&gt;        Stem and branch~ a*(DBH^~ Species          &lt;NA&gt;            </span></a>
 <a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; # ... with 411 more rows, and 18 more variables: geographic_area &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; #   dbh_min_cm &lt;chr&gt;, dbh_max_cm &lt;chr&gt;, n_trees &lt;int&gt;,</span></a>
 <a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt; #   dbh_units_original &lt;chr&gt;, biomass_units_original &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; #   allometry_development_method &lt;chr&gt;, model_parameters &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; #   allometry_development_method &lt;chr&gt;, independent_variable &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt; #   regression_model &lt;chr&gt;, other_equations_tested &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt; #   log_biomass &lt;chr&gt;, bias_corrected &lt;chr&gt;, bias_correction_factor &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; #   notes_fitting_model &lt;chr&gt;, original_data_availability &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; #   notes_to_consider &lt;chr&gt;, warning &lt;chr&gt;, ref_id &lt;chr&gt;</span></a>
 <a class="sourceLine" id="cb2-26" data-line-number="26">equations_metadata</a>
 <a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt; # A tibble: 23 x 8</span></a>
-<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt;    Column Field   Description          Column_type Field_codes Units Range</span></a>
-<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;                &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;  1 1 / A  equati~ Unique equation ide~ -           -           -     -    </span></a>
-<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  2 2 / B  biomas~ Tree component char~ character   -           -     -    </span></a>
-<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  3 3 / C  equati~ Model equation as a~ character   -           -     -    </span></a>
-<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  4 4 / D  allome~ Refers to the speci~ character   -           -     -    </span></a>
-<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  5 5 / E  develo~ Species for which t~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  6 6 / F  geogra~ Geographic location~ character   -           -     -    </span></a>
-<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  7 7 / G  dbh_mi~ Minimun DBH in cm s~ numeric     -           &lt;NA&gt;  -    </span></a>
-<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt;  8 8 / H  dbh_ma~ Maximun DBH in cm s~ numeric     -           &lt;NA&gt;  -    </span></a>
-<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt;  9 9 / I  n_trees Number of trees sam~ integer     -           -     -    </span></a>
-<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; 10 10 / J dbh_un~ DBH unit used in or~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt;    Column Field    Description         Column_type Field_codes Units Range</span></a>
+<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;  1 1 / A  equatio~ Unique equation id~ -           -           -     -    </span></a>
+<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  2 2 / B  depende~ Tree component cha~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  3 3 / C  equation Model equation as ~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  4 4 / D  allomet~ Refers to the spec~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  5 5 / E  develop~ Species for which ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  6 6 / F  geograp~ Geographic locatio~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  7 7 / G  dbh_min~ Minimun DBH in cm ~ numeric     -           &lt;NA&gt;  -    </span></a>
+<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt;  8 8 / H  dbh_max~ Maximun DBH in cm ~ numeric     -           &lt;NA&gt;  -    </span></a>
+<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt;  9 9 / I  n_trees  Number of trees sa~ integer     -           -     -    </span></a>
+<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; 10 10 / J dbh_uni~ DBH unit used in o~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
 <a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; # ... with 13 more rows, and 1 more variable: `Erikas notes to delete</span></a>
 <a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; #   before publication` &lt;chr&gt;</span></a>
 <a class="sourceLine" id="cb2-42" data-line-number="42"></a>
@@ -157,18 +161,18 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
 <a class="sourceLine" id="cb2-62" data-line-number="62"></a>
 <a class="sourceLine" id="cb2-63" data-line-number="63">sitespecies</a>
 <a class="sourceLine" id="cb2-64" data-line-number="64"><span class="co">#&gt; # A tibble: 421 x 13</span></a>
-<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt;    site    family    species     species_code life_form biomass_component </span></a>
-<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;             </span></a>
-<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt;  1 Lilly ~ Fabaceae  Robinia ps~ 901          Tree      Stem and branches~</span></a>
-<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt;  2 Lilly ~ Fabaceae  Robinia ps~ 901          Tree      Stem and branches~</span></a>
-<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt;  3 Lilly ~ Ulmaceae  Ulmus amer~ 972          Tree      Whole tree (above~</span></a>
-<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt;  4 Lilly ~ Ulmaceae  Ulmus rubra 975          Tree      Whole tree (above~</span></a>
-<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;  5 Lilly ~ Oleaceae  Fraxinus a~ 541          Tree      Whole tree (above~</span></a>
-<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;  6 Lilly ~ Oleaceae  Fraxinus p~ 544          Tree      Whole tree (above~</span></a>
-<a class="sourceLine" id="cb2-73" data-line-number="73"><span class="co">#&gt;  7 Lilly ~ Hamameli~ Hamamelis ~ 498          Shrub     Total aboveground~</span></a>
-<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="co">#&gt;  8 Lilly ~ Cupressa~ Juniperus ~ 68           Tree      Total aboveground~</span></a>
-<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt;  9 Lilly ~ Fagaceae  Fagus gran~ 531          Tree      Stem and branches~</span></a>
-<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt; 10 Lilly ~ Fagaceae  Quercus al~ 802          Tree      Stem and branches~</span></a>
+<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt;    site    family   species    species_code life_form dependent_variable_~</span></a>
+<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;               </span></a>
+<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt;  1 Lilly ~ Fabaceae Robinia p~ 901          Tree      Stem and branches (~</span></a>
+<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt;  2 Lilly ~ Fabaceae Robinia p~ 901          Tree      Stem and branches (~</span></a>
+<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt;  3 Lilly ~ Ulmaceae Ulmus ame~ 972          Tree      Whole tree (above s~</span></a>
+<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt;  4 Lilly ~ Ulmaceae Ulmus rub~ 975          Tree      Whole tree (above s~</span></a>
+<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;  5 Lilly ~ Oleaceae Fraxinus ~ 541          Tree      Whole tree (above s~</span></a>
+<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;  6 Lilly ~ Oleaceae Fraxinus ~ 544          Tree      Whole tree (above s~</span></a>
+<a class="sourceLine" id="cb2-73" data-line-number="73"><span class="co">#&gt;  7 Lilly ~ Hamamel~ Hamamelis~ 498          Shrub     Total aboveground b~</span></a>
+<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="co">#&gt;  8 Lilly ~ Cupress~ Juniperus~ 68           Tree      Total aboveground b~</span></a>
+<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt;  9 Lilly ~ Fagaceae Fagus gra~ 531          Tree      Stem and branches (~</span></a>
+<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt; 10 Lilly ~ Fagaceae Quercus a~ 802          Tree      Stem and branches (~</span></a>
 <a class="sourceLine" id="cb2-77" data-line-number="77"><span class="co">#&gt; # ... with 411 more rows, and 7 more variables: equation_grouping &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb2-78" data-line-number="78"><span class="co">#&gt; #   equation_id &lt;chr&gt;, allometry_specificity &lt;chr&gt;, dbh_min_cm &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb2-79" data-line-number="79"><span class="co">#&gt; #   dbh_max_cm &lt;chr&gt;, wsg_id &lt;chr&gt;, wsg_specificity &lt;chr&gt;</span></a>
@@ -244,8 +248,8 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2 class="hasAnchor">
-<a href="#sidebar" class="anchor"></a>Links</h2>
+    <div class="links">
+<h2>Links</h2>
 <ul class="list-unstyled">
 <li>Browse source code at <br><a href="https://github.com/forestgeo/allodb">https://​github.com/​forestgeo/​allodb</a>
 </li>
@@ -254,19 +258,32 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
 <li>Learn more at <br><a href="http://www.forestgeo.si.edu/">http://​www.forestgeo.si.edu/​</a>
 </li>
 </ul>
+</div>
+<div class="license">
 <h2>License</h2>
-<p><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></p>
+<ul class="list-unstyled">
+<li><a href="LICENSE.html">Full license</a></li>
+<li><small><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></small></li>
+</ul>
+</div>
+<div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Gonzalez-Akre Erika <br><small class="roles"> Author </small> </li>
-<li>Rutishauser Ervan <br><small class="roles"> Author </small> </li>
-<li>Mauro Lepore <br><small class="roles"> Author, contractor, maintainer </small> </li>
-<li>Kristina Teixeira <br><small class="roles"> Author </small> </li>
+<li>Gonzalez-Akre Erika <br><small class="roles"> Author </small>  </li>
+<li>Rutishauser Ervan <br><small class="roles"> Author </small>  </li>
+<li>Mauro Lepore <br><small class="roles"> Author, contractor, maintainer </small>  </li>
+<li>Kristina Teixeira <br><small class="roles"> Author </small>  </li>
 </ul>
+</div>
+
+      <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
+<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="lifecycle"></a></li>
 <li><a href="https://travis-ci.org/forestgeo/allodb"><img src="https://travis-ci.org/forestgeo/allodb.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://cran.r-project.org/package=allodb"><img src="https://www.r-pkg.org/badges/version/allodb" alt="CRAN status"></a></li>
 </ul>
+</div>
 </div>
 
 </div>
@@ -282,6 +299,8 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
 
       </footer>
 </div>
+
+  
 
   </body>
 </html>

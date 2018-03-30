@@ -14,9 +14,9 @@ BugReports: https://github.com/forestgeo/allodb/issues
 Depends: 
     R (>= 3.1)
 Suggests: 
+    covr,
     knitr (>= 1.17),
     rmarkdown (>= 1.7),
-    covr,
     testthat
 VignetteBuilder: knitr
 Encoding: UTF-8

@@ -1,0 +1,67 @@
+---
+title: "md and themed html documents"
+subtitle: Subtitle
+author: "Your name"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: '3'
+    theme: united
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+# This chunk named setup will run before any other code (https://goo.gl/BeM2Uu)
+set.seed(1014)
+knitr::opts_chunk$set(
+  echo = TRUE,
+  comment = "#>",
+  collapse = TRUE,
+  cache = FALSE,
+  # Figures (http://r4ds.had.co.nz/)
+  out.width = "70%",
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.618,
+  fig.show = "hold"
+)
+```
+
+# About this template
+
+This document produces two types of output:
+
+1. .html: Good for websites; Themed consistently with other .html files of the
+   __fgeo__ development.
+2. .md: Good for GitHub -- but notice that the custom theme will be lost.
+
+Both outputs will show a rendered version of this .Rmd file.
+
+If you don't want the .html file you may add it to .gitignore -- an easy way to do this is with `usethis::use_git_ignore()`. Or edit the yaml header of this file:
+
+* Replace `html_output` with `github_output`.
+* Remove `theme: united`.
+* Remove `keep_md: true`.
+
+# Get started
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
