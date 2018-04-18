@@ -41,22 +41,22 @@ This section exports subsets of the clean master data to data/. Each dataset doc
 Allometric equations (doesn't include sites, but sp? not sure)
 
 ```{r equations}
-# Needs to include a column after'equation_form' to combine
-# coeficienss+formula so we get "unique" equations, then give unique id
+
 equations_cols <- c(
   "equation_id",
+  "equation_form",
+  "equation_allometry",
   "dependent_variable_biomass_component",
-  "equation",
+  "independent_variable",
   "allometry_specificity",
   "development_species",
   "geographic_area",
   "dbh_min_cm",
   "dbh_max_cm",
-  "n_trees",
+  "sample_size",
   "dbh_units_original",
   "biomass_units_original",
   "allometry_development_method",
-  "independent_variable",
   "regression_model",
   "other_equations_tested",
   "log_biomass",
@@ -148,7 +148,7 @@ wsg_cols <- c(
   "species",
   "wsg",
   "wsg_specificity",
-  "n_trees",
+  "sample_size",
   "site",
   "ref_id"
 )
