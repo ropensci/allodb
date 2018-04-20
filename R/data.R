@@ -1,4 +1,4 @@
-#' Tables of allometric equations and associated metadata.
+#' Tables of allometric equations and associated metadata for ForestGEO sites.
 #'
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Table of metadata of `equations`.
