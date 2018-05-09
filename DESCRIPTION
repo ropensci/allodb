@@ -19,7 +19,8 @@ Suggests:
     rmarkdown (>= 1.7),
     testthat,
     dplyr,
-    purrr
+    purrr,
+    tidyr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true

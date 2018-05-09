@@ -2,6 +2,7 @@ context("evaluate_eqn.R")
 
 library(purrr)
 library(dplyr)
+library(tidyr)
 
 evaluate_eqn <- function() {
   eqn <- allodb::equations$equation_allometry
@@ -15,7 +16,7 @@ evaluate_eqn <- function() {
     purrr::map("error") %>%
     purrr::map("message") %>%
     purrr::modify_if(is.null, ~NA_character_)
-  res <- tidyr::unnest(tibble::tibble(equation_allometry = eqn, results, messages))
+  res <- tidyr::unnest(dplyr::tibble(equation_allometry = eqn, results, messages))
   res
 }
 
