@@ -5,7 +5,7 @@
 4  4 / D         species
 5  5 / E             wsg
 6  6 / F wsg_specificity
-7  7 / G         n_trees
+7  7 / G     sample_size
 8  8 / H            site
 9  9 / I          ref_id
                                                                                                                  Description
