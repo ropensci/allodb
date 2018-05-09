@@ -17,7 +17,9 @@ Suggests:
     covr,
     knitr (>= 1.17),
     rmarkdown (>= 1.7),
-    testthat
+    testthat,
+    dplyr,
+    purrr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true

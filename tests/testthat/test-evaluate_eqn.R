@@ -1,7 +1,8 @@
 context("evaluate_eqn.R")
 
 library(allodb)
-library(tidyverse)
+library(purrr)
+library(dplyr)
 
 evaluate_eqn <- function() {
   eqn <- allodb::equations$equation_allometry
