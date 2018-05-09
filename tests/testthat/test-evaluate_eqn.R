@@ -1,6 +1,5 @@
 context("evaluate_eqn.R")
 
-library(allodb)
 library(purrr)
 library(dplyr)
 
