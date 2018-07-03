@@ -49,7 +49,7 @@ equations_cols <- c(
   "dependent_variable_biomass_component",
   "independent_variable",
   "allometry_specificity",
-  "development_species",
+  "proxy_species",
   "geographic_area",
   "dbh_min_cm",
   "dbh_max_cm",
