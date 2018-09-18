@@ -1,0 +1,36 @@
+---
+title: "Issue 41: Calculate biomass of shrubs"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here I wrap discussions in issue 41 and try to come up with my next actions for developing code.
+
+CHECK:
+
+* Where is Valentine's code again?
+* Is this still necessary?
+
+* Write expressive conditions to use in if statements to control flow:
+    * `is_shrub()`.
+    * `depends_on_dbh()`.
+    * `depends_on_dba()`.
+
+* Case when `is_shrub()` and `depends_on_dbh()`:
+    * find main stem of each treeid.
+    * apply equation only to dbh of main stem, and get `total_biomass`.
+    * redistrubute biomass to each stem
+        * contribution = dbh of each stem / sum of dbh of all stems of a treeid
+        * `contribution * total_biomass`
+
+* Case when `is_shrub()` and `depends_on_dba()`:
+    * basal_area = sum of basal area by treeid.
+    * dba aprox. sqrt(dbh1^2 + dbh2^2 + ...) (assuming area preserving).
+    * apply equation to calculated dba and get `total_biomass`.
+    * redistribute `total_biomass`
+    
+
+    
