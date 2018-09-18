@@ -4,34 +4,27 @@ library(purrr)
 library(dplyr)
 library(tidyr)
 
-evaluate_eqn <- function() {
-  eqn <- allodb::equations$equation_allometry
-  eval_eqn <- purrr::safely(
-    function(text, envir) eval(parse(text = text), envir = envir)
-  )
-  out <- purrr::map(eqn, ~eval_eqn(.x, list(dbh = 10)))
-
-  results <- purrr::map(out, "result") %>% modify_if(is.null, ~NA_real_)
-  messages <- out %>%
-    purrr::map("error") %>%
-    purrr::map("message") %>%
-    purrr::modify_if(is.null, ~NA_character_)
-  res <- tidyr::unnest(dplyr::tibble(equation_allometry = eqn, results, messages))
-  res
+eval_eqn <- function(text, envir) {
+  eval(parse(text = text), envir = list(dbh = 10))
 }
 
-test_that("the dataframe used to test for valid code is as expected.", {
-  expect_is(evaluate_eqn(), "data.frame")
-  expect_named(evaluate_eqn(), c("equation_allometry", "results", "messages"))
-})
+eqn <- allodb::equations$equation_allometry
+contents <- eqn %>%
+  map(safely(eval_eqn)) %>%
+  transpose()
+
+ok <- map_lgl(contents$error, is.null)
+
+invalid <- tibble(
+  equation_allometry = eqn[!ok],
+  messages = map_chr(contents$error[!ok], "message")
+)
 
 test_that("all equations can be evaluated (i.e. evaluation errors = 0)", {
-  n_errors <- sum(is.na(evaluate_eqn()$messages))
-  expect_equal(n_errors, 0)
+  expect_equal(nrow(invalid), 0)
 })
 
 test_that("all equations independent of `dba` can be evaluated)", {
-  not_dba <- filter(evaluate_eqn(), !grepl("object 'dba' not found", messages))
-  n_errors <- sum(is.na(not_dba))
-  expect_equal(n_errors, 0)
+  other_errors <- filter(invalid, !grepl('dba', messages))$messages
+  expect_equal(other_errors, "")
 })
