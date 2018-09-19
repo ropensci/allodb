@@ -3,6 +3,7 @@ context("evaluate_eqn.R")
 library(purrr)
 library(dplyr)
 library(tidyr)
+library(glue)
 
 eval_eqn <- function(text, envir) {
   eval(parse(text = text), envir = list(dbh = 10))
@@ -20,11 +21,8 @@ invalid <- tibble(
   messages = map_chr(contents$error[!ok], "message")
 )
 
-test_that("all equations can be evaluated (i.e. evaluation errors = 0)", {
+test_that("all equations depend on dbh (i.e. evaluation errors = 0)", {
   expect_equal(nrow(invalid), 0)
-})
-
-test_that("all equations independent of `dba` can be evaluated)", {
-  other_errors <- filter(invalid, !grepl('dba', messages))$messages
-  expect_equal(other_errors, "")
+  problems <- glue_collapse(unique(invalid$messages), sep = '\n')
+  warning(glue("Problems to fix:\n {problems}"))
 })
