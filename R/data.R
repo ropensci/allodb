@@ -1,16 +1,13 @@
 #' Tables of allometric equations and associated metadata for ForestGEO sites.
 #'
-#' A dataset of best available allometry equations to calculate AGB per species per ForestGEO site
+#' A dataset of best available allometry equations to calculate AGB per species
+#' per ForestGEO site:
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Table of metadata of `equations`.
-#'@format a dataset of 419 observations and 24 variables
-#'\describe{
-#'   \item{equation_id}{Unique equation identification number given arbitrarely. Links to Site_Species table.}
 "equations"
 
 #' @rdname equations
 "equations_metadata"
-
 
 
 
@@ -21,11 +18,10 @@
 #'
 "missing_values_metadata"
 
-
-
 #' Table of metadata associated to the table `references`.
 #'
 "references_metadata"
+
 
 
 #' Tables of sites and species and associated metadata.
