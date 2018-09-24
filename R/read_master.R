@@ -1,4 +1,15 @@
-#' Help to read datasets safely, with consistent column type.
+#' Help to read datasets safely.
+#'
+#' Reading the master table with this funcion ensures the following:
+#' * Missing values are consistent with `allodb::missing_values_metadata`
+#' * Columns have the type we expect, consistent with type_allodb_master().
+#' @keywords internal
+read_master <- function(file) {
+  na_kinds <- unique(c("", allodb::missing_values_metadata$Code))
+  readr::read_csv(file, col_type = type_allodb_master(), na = c("", na_kinds))
+}
+
+#' Helper of read_master().
 #'
 #' For details see [`fgeo.tool::type_fgeo()`](https://goo.gl/gVSMT8).
 #'
@@ -13,8 +24,7 @@
 #' * t = time.
 #' * ? = guess.
 #' * _/- to skip the column.
-#'
-#' @export
+#' @keywords internal
 type_allodb_master <- function() {
   list(
     site = 'c',
