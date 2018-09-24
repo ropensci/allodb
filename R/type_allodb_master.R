@@ -31,12 +31,14 @@ type_allodb_master <- function() {
     d = 'd',
     dbh_min_cm = 'c',
     dbh_max_cm = 'c',
-    n_trees = 'i',
+    sample_size = 'i',
     dbh_units_original = 'c',
     biomass_units_original = 'c',
     allometry_development_method = 'c',
+    site_dbh_unit = 'c',
     equation_id = 'c',
-    equation = 'c',
+    equation_form = 'c',
+    equation_allometry = 'c',
     equation_grouping = 'c',
     independent_variable = 'c',
     regression_model = 'c',
@@ -58,3 +60,4 @@ type_allodb_master <- function() {
     warning = 'c'
   )
 }
+
