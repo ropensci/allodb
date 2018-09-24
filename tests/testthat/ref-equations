@@ -1698,7 +1698,7 @@
 17                             New York         25        550          32
 18                                 Ohio        0.5       6.14          40
 19                             New York         25        550          NA
-20                               Canada       0.18       4.31          NA
+20                               Canada       0.18       4.31          21
 21                            Tennessee         14         43          NA
 22                        North America          3         64          NA
 23                                 Ohio       0.42       8.53          NA
@@ -1750,13 +1750,13 @@
 69                        West Virginia       5.08       50.8          NA
 70                    Upper Great Lakes          4         32          NA
 71     Gulf and Atlantic Coastal Plains          4         32          NA
-72                               Canada       0.18       4.31          NA
+72                               Canada       0.18       4.31          21
 73                        North America          3         64          NA
 74                        North America          4         42          NA
 75                        North America          4         42          NA
 76                        North America          3         64          NA
 77                        West Virginia       5.08       50.8          NA
-78                               Canada       0.12       0.69          NA
+78                               Canada       0.12       0.69          20
 79                       North Carolina      14.48       25.4          NA
 80                        North America        2.5         56          NA
 81                         Eastern U.S.          1         55          NA
@@ -1778,18 +1778,18 @@
 97  North Carolina, Kentucky, Tennessee      30.48       88.9          26
 98              North Carolina, Georgia      14.22      25.91           9
 99                       North Carolina      29.46      41.66           9
-100                       Idaho/Montana        0.2        1.2          NA
-101                       Idaho/Montana        0.3        0.9          NA
-102                       Idaho/Montana        0.3        0.9          NA
-103                       Idaho/Montana        0.3        0.9          NA
+100                       Idaho/Montana        0.2        1.2          32
+101                       Idaho/Montana        0.3        0.9          26
+102                       Idaho/Montana        0.3        0.9          26
+103                       Idaho/Montana        0.3        0.9          26
 104                       North America        2.5         56          NA
 105                                Ohio        0.4       8.49          41
 106                       West Virginia       5.08       50.8          NA
 107        Piedmont (Southeastern U.S.)       2.54      27.43          NA
 108        Piedmont (Southeastern U.S.)       2.54      27.43          NA
-109                              Canada       0.28       1.59          NA
-110                              Canada       0.28       1.59          NA
-111                              Canada       0.28       1.59          NA
+109                              Canada       0.28       1.59          19
+110                              Canada       0.28       1.59          19
+111                              Canada       0.28       1.59          19
 112                       North America          3         66          NA
 113                        Eastern U.S.          1         55          NA
 114                       North America        2.5         56          NA
@@ -1826,7 +1826,7 @@
 145                       North America          3         64          NA
 146    Gulf and Atlantic Coastal Plains      28.45       50.8          NA
 147                      North Carolina       10.2       55.8          NA
-148                              Canada       0.12       0.69          NA
+148                              Canada       0.12       0.69          20
 149                       North America        2.5         56          NA
 150                      Southeast U.S.       4.06      12.45          NA
 151                       North America        2.5         56          NA
@@ -1851,7 +1851,7 @@
 170 North Carolina, Kentucky, Tennessee      30.48       88.9          26
 171                       North America          3         64          NA
 172                       North America        2.5         56          NA
-173                       Idaho/Montana        0.2        1.2          NA
+173                       Idaho/Montana        0.2        1.2          32
 174                       North America          3         70          NA
 175                       North America        2.5         56          NA
 176                                Ohio        0.4       8.49          41
@@ -1860,9 +1860,9 @@
 179        Piedmont (Southeastern U.S.)       2.54      27.43          NA
 180                       North America          3         64          NA
 181                       North America          3         64          NA
-182                              Canada       0.28       1.59          NA
-183                              Canada       0.28       1.59          NA
-184                              Canada       0.28       1.59          NA
+182                              Canada       0.28       1.59          19
+183                              Canada       0.28       1.59          19
+184                              Canada       0.28       1.59          19
 185                       North America          3         66          NA
 186                                Ohio       0.21       5.73          NA
 187                                Ohio       0.19       3.86          NA
@@ -1891,7 +1891,7 @@
 210                       North America          4         42          NA
 211                           Tennessee         14         43          NA
 212                       North America          3         64          NA
-213                              Canada       0.12       0.69          NA
+213                              Canada       0.12       0.69          20
 214                       North America          3         64          NA
 215                       North America        2.5         56          NA
 216                       New Hampshire          1          9          NA
@@ -1917,9 +1917,9 @@
 236    Washington, Oregon, N California        1.5       <NA>          31
 237    Washington, Oregon, N California        1.5       <NA>          31
 238    Washington, Oregon, N California        1.5       <NA>          31
-239                              Oregon        0.5        2.1          NA
-240                              Oregon        0.5        2.1          NA
-241                          California         NI         NI          NA
+239                              Oregon        0.5        2.1          11
+240                              Oregon        0.5        2.1          11
+241                          California       <NA>       <NA>          NA
 242                   Pacific Northwest        0.6        2.5          NA
 243                       North America        2.5         56          NA
 244                       North America          3         64          NA
@@ -1943,7 +1943,7 @@
 262                       North America          3         70          NA
 263                       North America        2.5         56          NA
 264                       North America          3        614          NA
-265                          California          8         61          NA
+265                          California        7.6         61          14
 266                   Pacific Northwest        0.6        3.6          NA
 267                North Central States        2.5         40          NA
 268                 Wisconsin, Michigan        3.1       24.6          NA
@@ -1965,7 +1965,7 @@
 284                       North America          3         64          NA
 285                       North America          4         42          NA
 286                           Wisconsin       12.9         30          NA
-287                              Canada       0.12       0.69          NA
+287                              Canada       0.12       0.69          20
 288                       North America          3         64          NA
 289                       New Hampshire          1          9          NA
 290                       New Hampshire          1          9          NA
@@ -2005,7 +2005,7 @@
 324                       North America        2.5         56          NA
 325                       North America          3         64          NA
 326                     Rocky Mountains        0.7        2.2          NA
-327                              Canada       0.12       0.69          NA
+327                              Canada       0.12       0.69          20
 328                       North America          3         64          NA
 329                       North America          3         64          NA
 330                       North America          3        180          NA
@@ -2013,7 +2013,7 @@
 332                       West Cascades        1.4       13.4          NA
 333                       North America        2.5         56          NA
 334                       North America          3         64          NA
-335                       Idaho/Montana        0.2        1.2          NA
+335                       Idaho/Montana        0.2        1.2          32
 336                       West Cascades        0.1        1.1          NA
 337                       West Cascades        0.1        1.1          NA
 338                       North America          3        109          NA
@@ -2023,30 +2023,30 @@
 342                  Oregon, Washington        0.4        3.3          NA
 343                  Oregon, Washington        0.4        3.3          NA
 344                  Oregon, Washington        0.4        3.3          NA
-345                    Northern England         NI         NI          NA
+345                    Northern England       <NA>       <NA>          NA
 346                    Northern England       11.5       96.5          NA
-347                    Northern England         NI         NI          NA
-348                    Northern England         NI         NI          NA
-349                    Northern England         NI         NI          NA
-350                    Northern England         NI         NI          NA
-351                    Northern England         NI         NI          NA
-352                    Northern England         NI         NI          NA
-353                    Northern England         NI         NI          NA
-354                    Northern England         NI         NI          NA
-355                    Northern England         NI         NI          NA
+347                    Northern England       <NA>       <NA>          NA
+348                    Northern England       <NA>       <NA>          NA
+349                    Northern England       <NA>       <NA>          NA
+350                    Northern England       <NA>       <NA>          NA
+351                    Northern England       <NA>       <NA>          NA
+352                    Northern England       <NA>       <NA>          NA
+353                    Northern England       <NA>       <NA>          NA
+354                    Northern England       <NA>       <NA>          NA
+355                    Northern England       <NA>       <NA>          NA
 356                    Northern England          9        104          NA
-357                    Northern England         NI         NI          NA
-358                    Northern England         NI         NI          NA
-359                    Northern England         NI         NI          NA
-360                    Northern England         NI         NI          NA
-361                    Northern England         NI         NI          NA
-362                    Northern England         NI         NI          NA
-363                    Northern England         NI         NI          NA
+357                    Northern England       <NA>       <NA>          NA
+358                    Northern England       <NA>       <NA>          NA
+359                    Northern England       <NA>       <NA>          NA
+360                    Northern England       <NA>       <NA>          NA
+361                    Northern England       <NA>       <NA>          NA
+362                    Northern England       <NA>       <NA>          NA
+363                    Northern England       <NA>       <NA>          NA
 364                    Northern England         14      162.5          NA
-365                    Northern England         NI         NI          NA
-366                    Northern England         NI         NI          NA
-367                    Northern England         NI         NI          NA
-368                    Northern England         NI         NI          NA
+365                    Northern England       <NA>       <NA>          NA
+366                    Northern England       <NA>       <NA>          NA
+367                    Northern England       <NA>       <NA>          NA
+368                    Northern England       <NA>       <NA>          NA
 369                       West Cascades       18.8        111          NA
 370                       West Cascades       18.8        111          NA
 371                       West Cascades       15.9      235.5          NA
@@ -2087,17 +2087,17 @@
 406                       North America          3         70          NA
 407                       North America        2.5         56          NA
 408                          California        0.5        2.6          40
-409                              Europe         NI         40         144
-410                              Europe         NI         50         240
-411                              Europe         NI         50         240
-412                              Europe         NI         50         240
-413                              Europe         NI         50         240
-414                              Europe         NI         40         144
-415                              Europe         NI         50         240
-416                              Europe         NI         50         240
-417                              Europe         NI         50         240
-418                              Europe         NI         50         240
-419                              Europe         NI         50         240
+409                              Europe       <NA>         40         144
+410                              Europe       <NA>         50         240
+411                              Europe       <NA>         50         240
+412                              Europe       <NA>         50         240
+413                              Europe       <NA>         50         240
+414                              Europe       <NA>         40         144
+415                              Europe       <NA>         50         240
+416                              Europe       <NA>         50         240
+417                              Europe       <NA>         50         240
+418                              Europe       <NA>         50         240
+419                              Europe       <NA>         50         240
     dbh_units_original biomass_units_original allometry_development_method
 1                   cm                      g                      harvest
 2                   cm                      g                      harvest
@@ -2271,7 +2271,7 @@
 170                 in                     lb                      harvest
 171                 cm                     kg                      harvest
 172                 cm                     kg                      harvest
-173                 cm                     kg                      harvest
+173                 cm                      g                      harvest
 174                 cm                     kg                      harvest
 175                 cm                     kg                      harvest
 176                 cm                      g                      harvest
@@ -2555,8 +2555,8 @@
 34                         linear                         <NA>           1
 35                         linear                         <NA>           1
 36                           <NA>                         <NA>        <NA>
-37                linear_multiple                          NRA           1
-38                linear_multiple                          NRA           1
+37                linear_multiple                         <NA>           1
+38                linear_multiple                         <NA>           1
 39                         linear                         <NA>           1
 40                           <NA>                         <NA>        <NA>
 41                           <NA>                         <NA>        <NA>
@@ -2616,8 +2616,8 @@
 95                           <NA>                         <NA>        <NA>
 96                         linear a+(b*DBH^2); a+(b*DBH+DBH^2)           0
 97                         linear                         <NA>           1
-98                linear_multiple                          NRA           1
-99                linear_multiple                          NRA           1
+98                linear_multiple                         <NA>           1
+99                linear_multiple                         <NA>           1
 100                          <NA>                         <NA>        <NA>
 101                          <NA>                         <NA>        <NA>
 102                          <NA>                         <NA>        <NA>
@@ -2783,7 +2783,7 @@
 262                          <NA>                         <NA>        <NA>
 263                          <NA>                         <NA>        <NA>
 264                          <NA>                         <NA>        <NA>
-265                          <NA>                         <NA>        <NA>
+265          least squares linear                         <NA>        <NA>
 266                          <NA>                         <NA>        <NA>
 267                          <NA>                         <NA>        <NA>
 268                          <NA>                         <NA>        <NA>
@@ -2971,9 +2971,9 @@
 30               0                   <NA>
 31               1      included in model
 32               1      included in model
-33               0                    NRA
+33               0                   <NA>
 34               1                  1.006
-35               0                    NRA
+35               0                   <NA>
 36               1                   0.36
 37               1      included in model
 38               1      included in model
@@ -3034,8 +3034,8 @@
 93               1      included in model
 94               1      included in model
 95               1      included in model
-96               0                    NRA
-97               0                    NRA
+96               0                   <NA>
+97               0                   <NA>
 98               1      included in model
 99               1      included in model
 100              1      included in model
@@ -3108,7 +3108,7 @@
 167              1      included in model
 168              0                   <NA>
 169              0                   <NA>
-170              0                    NRA
+170              0                   <NA>
 171              1      included in model
 172              1                   0.36
 173              1      included in model
@@ -3166,9 +3166,9 @@
 225              1      included in model
 226              1      included in model
 227              1      included in model
-228              0                    NRA
+228              0                   <NA>
 229              1                  1.006
-230              0                    NRA
+230              0                   <NA>
 231              1                  1.004
 232              1                   0.36
 233              1      included in model
@@ -3203,7 +3203,7 @@
 262              1      included in model
 263              1                   0.36
 264              1      included in model
-265              1      included in model
+265              1                 0.2497
 266              1      included in model
 267              0                   <NA>
 268              1                   1.01
@@ -3250,13 +3250,13 @@
 309              0                   <NA>
 310              0                   <NA>
 311              0                   <NA>
-312           <NA>                    NRA
-313           <NA>                    NRA
-314           <NA>                    NRA
-315           <NA>                    NRA
-316           <NA>                    NRA
-317           <NA>                    NRA
-318           <NA>                    NRA
+312           <NA>                   <NA>
+313           <NA>                   <NA>
+314           <NA>                   <NA>
+315           <NA>                   <NA>
+316           <NA>                   <NA>
+317           <NA>                   <NA>
+318           <NA>                   <NA>
 319              0                   <NA>
 320              0                   <NA>
 321              0                   <NA>
@@ -3315,10 +3315,10 @@
 374              1      included in model
 375              1      included in model
 376              0                   <NA>
-377           <NA>                    NRA
-378           <NA>                    NRA
-379           <NA>                    NRA
-380           <NA>                    NRA
+377           <NA>                   <NA>
+378           <NA>                   <NA>
+379           <NA>                   <NA>
+380           <NA>                   <NA>
 381              1      included in model
 382              1      included in model
 383              1      included in model
@@ -4218,7 +4218,7 @@
 17                                                                           Unable to locate orignal publication
 18                                                                                                           <NA>
 19                                                                                                           <NA>
-20                                                                            DBA= stem basal diameter (at 15 cm)
+20                                                                                       DBA= stem basal diameter
 21                                                                                                           <NA>
 22                                                                                                           <NA>
 23                                                                                                           <NA>
@@ -4270,13 +4270,13 @@
 69                                                                                                           <NA>
 70                                                                                                           <NA>
 71                                                                                                           <NA>
-72                                                                            DBA= stem basal diameter (at 15 cm)
+72                                                                                       DBA= stem basal diameter
 73                                                                                                           <NA>
 74                                                                                                           <NA>
 75                                                                                                           <NA>
 76                                                                                                           <NA>
 77                                                                                                           <NA>
-78                                                                            DBA= stem basal diameter (at 15 cm)
+78                                                                                       DBA= stem basal diameter
 79                                                                                                           <NA>
 80                                                                                                           <NA>
 81                                                                                                           <NA>
@@ -4298,18 +4298,18 @@
 97                                                                           Unable to locate orignal publication
 98                                                                                                           <NA>
 99                                                                                                           <NA>
-100                                                                           DBA= stem basal diameter (at 15 cm)
-101                                                                           DBA= stem basal diameter (at 15 cm)
-102                                                                           DBA= stem basal diameter (at 15 cm)
-103                                                                           DBA= stem basal diameter (at 15 cm)
+100                                                                                      DBA= stem basal diameter
+101                                                                                      DBA= stem basal diameter
+102                                                                                      DBA= stem basal diameter
+103                                                                                      DBA= stem basal diameter
 104                                                                                                          <NA>
 105                                                                                                          <NA>
 106                                                                                                          <NA>
 107                                                                                                          <NA>
 108                                                                                                          <NA>
-109                                                                           DBA= stem basal diameter (at 15 cm)
-110                                                                           DBA= stem basal diameter (at 15 cm)
-111                                                                           DBA= stem basal diameter (at 15 cm)
+109                                                                                      DBA= stem basal diameter
+110                                                                                      DBA= stem basal diameter
+111                                                                                      DBA= stem basal diameter
 112                                                                                                          <NA>
 113                                                                                                          <NA>
 114                                                                                                          <NA>
@@ -4346,7 +4346,7 @@
 145                                                                                                          <NA>
 146                                                                                                          <NA>
 147                                                                                                          <NA>
-148                                                                           DBA= stem basal diameter (at 15 cm)
+148                                                                                      DBA= stem basal diameter
 149                                                                                                          <NA>
 150                                                                                                          <NA>
 151                                                                                                          <NA>
@@ -4371,7 +4371,7 @@
 170                                                                          Unable to locate orignal publication
 171                                                                                                          <NA>
 172                                                                                                          <NA>
-173                                                                           DBA= stem basal diameter (at 15 cm)
+173                                                                                      DBA= stem basal diameter
 174                                                                                                          <NA>
 175                                                                                                          <NA>
 176                                                                                                          <NA>
@@ -4380,9 +4380,9 @@
 179                                                                                                          <NA>
 180                                                                                                          <NA>
 181                                                                                                          <NA>
-182                                                                           DBA= stem basal diameter (at 15 cm)
-183                                                                           DBA= stem basal diameter (at 15 cm)
-184                                                                           DBA= stem basal diameter (at 15 cm)
+182                                                                                      DBA= stem basal diameter
+183                                                                                      DBA= stem basal diameter
+184                                                                                      DBA= stem basal diameter
 185                                                                                                          <NA>
 186                                                                                                          <NA>
 187                                                                                                          <NA>
@@ -4411,7 +4411,7 @@
 210                                                                                                          <NA>
 211                                                                                                          <NA>
 212                                                                                                          <NA>
-213                                                                           DBA= stem basal diameter (at 15 cm)
+213                                                                                      DBA= stem basal diameter
 214                                                                                                          <NA>
 215                                                                                                          <NA>
 216                                                                                                          <NA>
@@ -4440,7 +4440,7 @@
 239                                                                                      DBA= Stem basal diameter
 240                                                                                      DBA= Stem basal diameter
 241 Basal area (BA)=Diameter of all stems measured 5 cm above ground in a 1x1m plot then sum to obtain basal area
-242                 DBA= Stem basal diameter. Used equation for C. velutinus the most common sp. within the genus
+242             DBA= Stem basal diameter. Used equation for C. velutinus the most common species within the genus
 243                                                                                                          <NA>
 244                                                                                                          <NA>
 245                                                                                                          <NA>
@@ -4485,7 +4485,7 @@
 284                                                                                                          <NA>
 285                                                                                                          <NA>
 286                                                                                                          <NA>
-287                                                                           DBA= stem basal diameter (at 15 cm)
+287                                                                                      DBA= stem basal diameter
 288                                                                                                          <NA>
 289                                                                                                          <NA>
 290                                                                                                          <NA>
@@ -4525,7 +4525,7 @@
 324                                                                                                          <NA>
 325                                                                                                          <NA>
 326                                                                                      DBA= Stem basal diameter
-327                                                                           DBA= stem basal diameter (at 15 cm)
+327                                                                                      DBA= stem basal diameter
 328                                                                                                          <NA>
 329                                                                                                          <NA>
 330                                                                                                          <NA>
@@ -4533,7 +4533,7 @@
 332                                                                                                          <NA>
 333                                                                                                          <NA>
 334                                                                                                          <NA>
-335                                                                           DBA= stem basal diameter (at 15 cm)
+335                                                                                      DBA= stem basal diameter
 336                                                                                      DBA= Stem basal diameter
 337                                                                                      DBA= Stem basal diameter
 338                                                                                                          <NA>

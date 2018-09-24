@@ -6,6 +6,19 @@
 \usage{
 read_master(file)
 }
+\arguments{
+\item{file}{Either a path to a file, a connection, or literal data
+(either a single string or a raw vector).
+
+Files ending in \code{.gz}, \code{.bz2}, \code{.xz}, or \code{.zip} will
+be automatically uncompressed. Files starting with \code{http://},
+\code{https://}, \code{ftp://}, or \code{ftps://} will be automatically
+downloaded. Remote gz files can also be automatically downloaded and
+decompressed.
+
+Literal data is most useful for examples and tests. It must contain at
+least one new line to be recognised as data (instead of a path).}
+}
 \description{
 Reading the master table with this funcion ensures the following:
 \itemize{
@@ -13,4 +26,6 @@ Reading the master table with this funcion ensures the following:
 \item Columns have the type we expect, consistent with type_allodb_master().
 }
 }
-\keyword{internal}
+\seealso{
+\code{\link[readr:read_csv]{readr::read_csv()}}.
+}

@@ -3,7 +3,12 @@
 #' Reading the master table with this funcion ensures the following:
 #' * Missing values are consistent with `allodb::missing_values_metadata`
 #' * Columns have the type we expect, consistent with type_allodb_master().
-#' @keywords internal
+#'
+#' @inheritParams readr::read_csv
+#'
+#' @seealso [readr::read_csv()].
+#'
+#' @export
 read_master <- function(file) {
   na_kinds <- unique(c("", allodb::missing_values_metadata$Code))
   readr::read_csv(file, col_type = type_allodb_master(), na = c("", na_kinds))

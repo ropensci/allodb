@@ -16,24 +16,22 @@ documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 library(allodb)
 library(tidyverse)
 #> -- Attaching packages -------------------------------------------- tidyverse 1.2.1 --
-#> v ggplot2 2.2.1     v purrr   0.2.4
-#> v tibble  1.4.2     v dplyr   0.7.4
-#> v tidyr   0.8.0     v stringr 1.3.0
+#> v ggplot2 3.0.0     v purrr   0.2.5
+#> v tibble  1.4.2     v dplyr   0.7.6
+#> v tidyr   0.8.1     v stringr 1.3.1
 #> v readr   1.1.1     v forcats 0.3.0
 #> -- Conflicts ----------------------------------------------- tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 library(here)
-#> here() starts at C:/Users/LeporeM/Dropbox/git_repos/allodb
+#> here() starts at C:/Users/LeporeM/Documents/Dropbox/git/allodb
 library(usethis)
 ```
 
 # Gather raw master data
 
 ``` r
-master <- read_csv(
-  here("data-raw/allodb_master.csv"), col_type = type_allodb_master()
-)
+master <- read_master(here("data-raw/allodb_master.csv"))
 ```
 
 # Export subsets of master data
@@ -48,22 +46,22 @@ the Functions Index tab of the website of **allodb**.
 Allometric equations (doesn’t include sites, but sp? not sure)
 
 ``` r
-# Needs to include a column after'equation_form' to combine
-# coeficienss+formula so we get "unique" equations, then give unique id
+
 equations_cols <- c(
   "equation_id",
-  "biomass_component",
-  "equation",
+  "equation_form",
+  "equation_allometry",
+  "dependent_variable_biomass_component",
+  "independent_variable",
   "allometry_specificity",
   "development_species",
   "geographic_area",
   "dbh_min_cm",
   "dbh_max_cm",
-  "n_trees",
+  "sample_size",
   "dbh_units_original",
   "biomass_units_original",
   "allometry_development_method",
-  "model_parameters",
   "regression_model",
   "other_equations_tested",
   "log_biomass",
@@ -77,7 +75,8 @@ equations_cols <- c(
 )
 equations <- as.tibble(master[equations_cols])
 use_data(equations, overwrite = TRUE)
-#> <U+2714> Saving equations to data/equations.rda
+#> <U+2714> Setting active project to 'C:/Users/LeporeM/Documents/Dropbox/git/allodb'
+#> <U+2714> Saving 'equations' to 'data/equations.rda'
 
 equations_metadata <- read_csv(
   here("data-raw/data_equations_metadata.csv")
@@ -90,11 +89,10 @@ equations_metadata <- read_csv(
 #>   Column_type = col_character(),
 #>   Field_codes = col_character(),
 #>   Units = col_character(),
-#>   Range = col_character(),
-#>   `Erikas notes to delete before publication` = col_character()
+#>   Range = col_character()
 #> )
 use_data(equations_metadata, overwrite = TRUE)
-#> <U+2714> Saving equations_metadata to data/equations_metadata.rda
+#> <U+2714> Saving 'equations_metadata' to 'data/equations_metadata.rda'
 ```
 
 ## `missing_values`
@@ -110,7 +108,7 @@ missing_values_metadata <- read_csv(
 #>   Description = col_character()
 #> )
 use_data(missing_values_metadata, overwrite = TRUE)
-#> <U+2714> Saving missing_values_metadata to data/missing_values_metadata.rda
+#> <U+2714> Saving 'missing_values_metadata' to 'data/missing_values_metadata.rda'
 ```
 
 ## `references`
@@ -133,7 +131,7 @@ references_metadata <- read_csv(
 #>   `Notes to be deleted later` = col_character()
 #> )
 use_data(references_metadata, overwrite = TRUE)
-#> <U+2714> Saving references_metadata to data/references_metadata.rda
+#> <U+2714> Saving 'references_metadata' to 'data/references_metadata.rda'
 ```
 
 ## `sites_info`
@@ -158,7 +156,7 @@ sites_info <- read_csv(
 #>   wsg.site.name = col_character()
 #> )
 use_data(sites_info, overwrite = TRUE)
-#> <U+2714> Saving sites_info to data/sites_info.rda
+#> <U+2714> Saving 'sites_info' to 'data/sites_info.rda'
 ```
 
 ## `sitespecies`
@@ -173,7 +171,7 @@ sitespecies_cols <- c(
   "species",
   "species_code",
   "life_form",
-  "biomass_component",
+  "dependent_variable_biomass_component",
   "equation_grouping",
   "equation_id",
   "allometry_specificity",
@@ -184,7 +182,7 @@ sitespecies_cols <- c(
 )
 sitespecies <- as.tibble(master[sitespecies_cols])
 use_data(sitespecies, overwrite = TRUE)
-#> <U+2714> Saving sitespecies to data/sitespecies.rda
+#> <U+2714> Saving 'sitespecies' to 'data/sitespecies.rda'
 
 sitespecies_metadata <- read_csv(
   here("data-raw/data_sitespecies_metadata.csv")
@@ -201,7 +199,7 @@ sitespecies_metadata <- read_csv(
 #>   `Erikas notes to delete before publication` = col_character()
 #> )
 use_data(sitespecies_metadata, overwrite = TRUE)
-#> <U+2714> Saving sitespecies_metadata to data/sitespecies_metadata.rda
+#> <U+2714> Saving 'sitespecies_metadata' to 'data/sitespecies_metadata.rda'
 ```
 
 ## `wsg`
@@ -216,13 +214,13 @@ wsg_cols <- c(
   "species",
   "wsg",
   "wsg_specificity",
-  "n_trees",
+  "sample_size",
   "site",
   "ref_id"
 )
 wsg <- as.tibble(master[wsg_cols])
 use_data(wsg, overwrite = TRUE)
-#> <U+2714> Saving wsg to data/wsg.rda
+#> <U+2714> Saving 'wsg' to 'data/wsg.rda'
 
 wsg_metadata <- read_csv(
   here("data-raw/data_wsg_metadata.csv")
@@ -239,5 +237,5 @@ wsg_metadata <- read_csv(
 #>   `Erikas notes to delete before publication` = col_character()
 #> )
 use_data(wsg_metadata, overwrite = TRUE)
-#> <U+2714> Saving wsg_metadata to data/wsg_metadata.rda
+#> <U+2714> Saving 'wsg_metadata' to 'data/wsg_metadata.rda'
 ```
