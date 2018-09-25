@@ -1679,101 +1679,101 @@
 418                 Genus                Fagus spp.
 419                 Genus                Fagus spp.
                         geographic_area dbh_min_cm dbh_max_cm sample_size
-1                                  Ohio       0.21       5.73          NA
-2                                  Ohio       0.19       3.86          NA
-3                             Tennessee        8.9       25.4          NA
-4                             Minessota          5         45          NA
-5                             Minessota          5         45          NA
-6                         North America        2.5         56          NA
-7                         North America        2.5         56          NA
+1                                  Ohio       0.21       5.73        <NA>
+2                                  Ohio       0.19       3.86        <NA>
+3                             Tennessee        8.9       25.4        <NA>
+4                             Minessota          5         45        <NA>
+5                             Minessota          5         45        <NA>
+6                         North America        2.5         56        <NA>
+7                         North America        2.5         56        <NA>
 8                        North Carolina        8.2       52.3          10
 9                        North Carolina        8.2       52.3          10
 10                       North Carolina        8.2       52.3          10
-11                        West Virginia       5.08       50.8          NA
-12                        North America        2.5         56          NA
-13                        North America          4         42          NA
-14                                 Ohio       1.85       7.25          NA
-15                        North America          3         64          NA
-16                        West Virginia       5.08       50.8          NA
+11                        West Virginia       5.08       50.8        <NA>
+12                        North America        2.5         56        <NA>
+13                        North America          4         42        <NA>
+14                                 Ohio       1.85       7.25        <NA>
+15                        North America          3         64        <NA>
+16                        West Virginia       5.08       50.8        <NA>
 17                             New York         25        550          32
 18                                 Ohio        0.5       6.14          40
-19                             New York         25        550          NA
+19                             New York         25        550        <NA>
 20                               Canada       0.18       4.31          21
-21                            Tennessee         14         43          NA
-22                        North America          3         64          NA
-23                                 Ohio       0.42       8.53          NA
-24                                 Ohio       0.24       6.72          NA
-25                        New Hampshire          1          9          NA
-26                        New Hampshire          1          9          NA
-27                        North America        2.5         56          NA
-28                                 Ohio       0.37       6.83          NA
+21                            Tennessee         14         43        <NA>
+22                        North America          3         64        <NA>
+23                                 Ohio       0.42       8.53        <NA>
+24                                 Ohio       0.24       6.72        <NA>
+25                        New Hampshire          1          9        <NA>
+26                        New Hampshire          1          9        <NA>
+27                        North America        2.5         56        <NA>
+28                                 Ohio       0.37       6.83        <NA>
 29                        West Virginia       5.08       50.8          29
-30                        West Virginia       5.08      40.64          NA
-31                        West Virginia       5.08       50.8          NA
-32                        West Virginia       5.08       50.8          NA
+30                        West Virginia       5.08      40.64        <NA>
+31                        West Virginia       5.08       50.8        <NA>
+32                        West Virginia       5.08       50.8        <NA>
 33                        West Virginia       5.08      40.64          19
 34                                 Ohio       0.55       7.76          34
 35  North Carolina, Kentucky, Tennessee      30.48       88.9          26
-36                        North America        2.5         56          NA
+36                        North America        2.5         56        <NA>
 37              North Carolina, Georgia      14.22      25.91           9
 38              North Carolina, Georgia      29.46      41.66           9
 39                                 Ohio        0.4       8.49          41
-40                        West Virginia       5.08       50.8          NA
-41                 North Central States        2.5         40          NA
-42                 North Central States        2.5         40          NA
-43                        North America          3         66          NA
-44                        North America          3         66          NA
-45                         Eastern U.S.          1         55          NA
-46                        North America        2.5         56          NA
-47                            Tennessee        8.9       25.4          NA
-48                            Minessota          5         45          NA
-49                            Minessota          5         45          NA
-50                        North America        2.5         56          NA
-51                        North America        2.5         56          NA
-52                        North America        2.5         56          NA
+40                        West Virginia       5.08       50.8        <NA>
+41                 North Central States        2.5         40        <NA>
+42                 North Central States        2.5         40        <NA>
+43                        North America          3         66        <NA>
+44                        North America          3         66        <NA>
+45                         Eastern U.S.          1         55        <NA>
+46                        North America        2.5         56        <NA>
+47                            Tennessee        8.9       25.4        <NA>
+48                            Minessota          5         45        <NA>
+49                            Minessota          5         45        <NA>
+50                        North America        2.5         56        <NA>
+51                        North America        2.5         56        <NA>
+52                        North America        2.5         56        <NA>
 53                       North Carolina        8.2       52.3          10
 54                       North Carolina        8.2       52.3          10
 55                       North Carolina        8.2       52.3          10
 56                       North Carolina        8.2       52.3          10
-57                        North America          3         89          NA
-58                        North America        2.5         56          NA
-59                        North America          4         42          NA
-60                        North America        2.5         56          NA
-61                       Southeast U.S.       2.54      12.45          NA
-62                       Southeast U.S.       2.54      12.45          NA
-63                        North America        2.5         56          NA
-64                        North America          3         64          NA
-65                        North America        2.5         56          NA
-66                        North America        2.5         56          NA
-67                        North America        2.5         56          NA
-68                        West Virginia       5.08       50.8          NA
-69                        West Virginia       5.08       50.8          NA
-70                    Upper Great Lakes          4         32          NA
-71     Gulf and Atlantic Coastal Plains          4         32          NA
+57                        North America          3         89        <NA>
+58                        North America        2.5         56        <NA>
+59                        North America          4         42        <NA>
+60                        North America        2.5         56        <NA>
+61                       Southeast U.S.       2.54      12.45        <NA>
+62                       Southeast U.S.       2.54      12.45        <NA>
+63                        North America        2.5         56        <NA>
+64                        North America          3         64        <NA>
+65                        North America        2.5         56        <NA>
+66                        North America        2.5         56        <NA>
+67                        North America        2.5         56        <NA>
+68                        West Virginia       5.08       50.8        <NA>
+69                        West Virginia       5.08       50.8        <NA>
+70                    Upper Great Lakes          4         32        <NA>
+71     Gulf and Atlantic Coastal Plains          4         32        <NA>
 72                               Canada       0.18       4.31          21
-73                        North America          3         64          NA
-74                        North America          4         42          NA
-75                        North America          4         42          NA
-76                        North America          3         64          NA
-77                        West Virginia       5.08       50.8          NA
+73                        North America          3         64        <NA>
+74                        North America          4         42        <NA>
+75                        North America          4         42        <NA>
+76                        North America          3         64        <NA>
+77                        West Virginia       5.08       50.8        <NA>
 78                               Canada       0.12       0.69          20
-79                       North Carolina      14.48       25.4          NA
-80                        North America        2.5         56          NA
-81                         Eastern U.S.          1         55          NA
-82                         Eastern U.S.          1         55          NA
-83                       North Carolina        3.5       35.6          NA
-84         Piedmont (Southeastern U.S.)      27.94      49.53          NA
-85                        West Virginia       5.08       50.8          NA
-86                        West Virginia       5.08       50.8          NA
-87                        West Virginia       5.08       50.8          NA
+79                       North Carolina      14.48       25.4        <NA>
+80                        North America        2.5         56        <NA>
+81                         Eastern U.S.          1         55        <NA>
+82                         Eastern U.S.          1         55        <NA>
+83                       North Carolina        3.5       35.6        <NA>
+84         Piedmont (Southeastern U.S.)      27.94      49.53        <NA>
+85                        West Virginia       5.08       50.8        <NA>
+86                        West Virginia       5.08       50.8        <NA>
+87                        West Virginia       5.08       50.8        <NA>
 88                        West Virginia       5.08       50.8          29
-89                        West Virginia       5.08      40.64          NA
-90         Piedmont (Southeastern U.S.)       5.84       25.4          NA
-91         Piedmont (Southeastern U.S.)      27.94      47.75          NA
-92                        West Virginia       5.08       50.8          NA
-93                        West Virginia       5.08       50.8          NA
-94                        West Virginia       5.08       50.8          NA
-95                        West Virginia       5.08       50.8          NA
+89                        West Virginia       5.08      40.64        <NA>
+90         Piedmont (Southeastern U.S.)       5.84       25.4        <NA>
+91         Piedmont (Southeastern U.S.)      27.94      47.75        <NA>
+92                        West Virginia       5.08       50.8        <NA>
+93                        West Virginia       5.08       50.8        <NA>
+94                        West Virginia       5.08       50.8        <NA>
+95                        West Virginia       5.08       50.8        <NA>
 96                        West Virginia       5.08      40.64          19
 97  North Carolina, Kentucky, Tennessee      30.48       88.9          26
 98              North Carolina, Georgia      14.22      25.91           9
@@ -1782,322 +1782,322 @@
 101                       Idaho/Montana        0.3        0.9          26
 102                       Idaho/Montana        0.3        0.9          26
 103                       Idaho/Montana        0.3        0.9          26
-104                       North America        2.5         56          NA
+104                       North America        2.5         56        <NA>
 105                                Ohio        0.4       8.49          41
-106                       West Virginia       5.08       50.8          NA
-107        Piedmont (Southeastern U.S.)       2.54      27.43          NA
-108        Piedmont (Southeastern U.S.)       2.54      27.43          NA
+106                       West Virginia       5.08       50.8        <NA>
+107        Piedmont (Southeastern U.S.)       2.54      27.43        <NA>
+108        Piedmont (Southeastern U.S.)       2.54      27.43        <NA>
 109                              Canada       0.28       1.59          19
 110                              Canada       0.28       1.59          19
 111                              Canada       0.28       1.59          19
-112                       North America          3         66          NA
-113                        Eastern U.S.          1         55          NA
-114                       North America        2.5         56          NA
-115                       North America          3         89          NA
-116                           Tennessee        8.9       25.4          NA
-117                           Minessota          5         45          NA
-118                           Minessota          5         45          NA
-119                           Tennessee        8.9       25.4          NA
-120                           Minessota          5         45          NA
-121                           Minessota          5         45          NA
-122                       North America        2.5         56          NA
-123                       North America        2.5         56          NA
-124                       North America        2.5         56          NA
-125                       North America        2.5         56          NA
+112                       North America          3         66        <NA>
+113                        Eastern U.S.          1         55        <NA>
+114                       North America        2.5         56        <NA>
+115                       North America          3         89        <NA>
+116                           Tennessee        8.9       25.4        <NA>
+117                           Minessota          5         45        <NA>
+118                           Minessota          5         45        <NA>
+119                           Tennessee        8.9       25.4        <NA>
+120                           Minessota          5         45        <NA>
+121                           Minessota          5         45        <NA>
+122                       North America        2.5         56        <NA>
+123                       North America        2.5         56        <NA>
+124                       North America        2.5         56        <NA>
+125                       North America        2.5         56        <NA>
 126                      North Carolina        8.2       52.3          10
 127                      North Carolina        8.2       52.3          10
 128                      North Carolina        8.2       52.3          10
 129                      North Carolina        8.2       52.3          10
-130                       North America        2.5         56          NA
-131                       North America        2.5         56          NA
-132                       North America          4         42          NA
-133                      Southeast U.S.       2.54      12.45          NA
-134                       North America        2.5         56          NA
-135                       North America        2.5         56          NA
-136                       New Hampshire          1         63          NA
+130                       North America        2.5         56        <NA>
+131                       North America        2.5         56        <NA>
+132                       North America          4         42        <NA>
+133                      Southeast U.S.       2.54      12.45        <NA>
+134                       North America        2.5         56        <NA>
+135                       North America        2.5         56        <NA>
+136                       New Hampshire          1         63        <NA>
 137                            New York         25        550          32
-138    Gulf and Atlantic Coastal Plains       2.54      27.69          NA
-139                       North America          3         64          NA
-140                       North America          3         64          NA
-141                       North America          4         42          NA
-142                           Tennessee         14         43          NA
-143                       North America          3         64          NA
-144                       North America        2.5         56          NA
-145                       North America          3         64          NA
-146    Gulf and Atlantic Coastal Plains      28.45       50.8          NA
-147                      North Carolina       10.2       55.8          NA
+138    Gulf and Atlantic Coastal Plains       2.54      27.69        <NA>
+139                       North America          3         64        <NA>
+140                       North America          3         64        <NA>
+141                       North America          4         42        <NA>
+142                           Tennessee         14         43        <NA>
+143                       North America          3         64        <NA>
+144                       North America        2.5         56        <NA>
+145                       North America          3         64        <NA>
+146    Gulf and Atlantic Coastal Plains      28.45       50.8        <NA>
+147                      North Carolina       10.2       55.8        <NA>
 148                              Canada       0.12       0.69          20
-149                       North America        2.5         56          NA
-150                      Southeast U.S.       4.06      12.45          NA
-151                       North America        2.5         56          NA
-152                      North Carolina        3.5       35.6          NA
-153                      North Carolina        3.5       35.6          NA
-154        Piedmont (Southeastern U.S.)       4.83      23.88          NA
-155        Piedmont (Southeastern U.S.)      24.94      49.53          NA
-156                                Ohio       0.68       7.49          NA
-157                                Ohio       0.37       6.83          NA
-158                                Ohio       0.37       6.83          NA
+149                       North America        2.5         56        <NA>
+150                      Southeast U.S.       4.06      12.45        <NA>
+151                       North America        2.5         56        <NA>
+152                      North Carolina        3.5       35.6        <NA>
+153                      North Carolina        3.5       35.6        <NA>
+154        Piedmont (Southeastern U.S.)       4.83      23.88        <NA>
+155        Piedmont (Southeastern U.S.)      24.94      49.53        <NA>
+156                                Ohio       0.68       7.49        <NA>
+157                                Ohio       0.37       6.83        <NA>
+158                                Ohio       0.37       6.83        <NA>
 159                      North Carolina          7         63          10
-160                      North Carolina         15       43.3          NA
-161        Piedmont (Southeastern U.S.)       5.84       25.4          NA
-162        Piedmont (Southeastern U.S.)      27.94      47.75          NA
-163                       West Virginia       5.08       50.8          NA
-164                      North Carolina       10.6       57.5          NA
-165                        Eastern U.S.        2.5         55          NA
-166                        Eastern U.S.        2.5         55          NA
-167                       North America          3         89          NA
-168                      Southeast U.S.        3.3      11.94          NA
+160                      North Carolina         15       43.3        <NA>
+161        Piedmont (Southeastern U.S.)       5.84       25.4        <NA>
+162        Piedmont (Southeastern U.S.)      27.94      47.75        <NA>
+163                       West Virginia       5.08       50.8        <NA>
+164                      North Carolina       10.6       57.5        <NA>
+165                        Eastern U.S.        2.5         55        <NA>
+166                        Eastern U.S.        2.5         55        <NA>
+167                       North America          3         89        <NA>
+168                      Southeast U.S.        3.3      11.94        <NA>
 169                        Rhode Island       7.62      30.48          26
 170 North Carolina, Kentucky, Tennessee      30.48       88.9          26
-171                       North America          3         64          NA
-172                       North America        2.5         56          NA
+171                       North America          3         64        <NA>
+172                       North America        2.5         56        <NA>
 173                       Idaho/Montana        0.2        1.2          32
-174                       North America          3         70          NA
-175                       North America        2.5         56          NA
+174                       North America          3         70        <NA>
+175                       North America        2.5         56        <NA>
 176                                Ohio        0.4       8.49          41
-177                       New Hampshire        1.6         10          NA
-178        Piedmont (Southeastern U.S.)       2.54      27.43          NA
-179        Piedmont (Southeastern U.S.)       2.54      27.43          NA
-180                       North America          3         64          NA
-181                       North America          3         64          NA
+177                       New Hampshire        1.6         10        <NA>
+178        Piedmont (Southeastern U.S.)       2.54      27.43        <NA>
+179        Piedmont (Southeastern U.S.)       2.54      27.43        <NA>
+180                       North America          3         64        <NA>
+181                       North America          3         64        <NA>
 182                              Canada       0.28       1.59          19
 183                              Canada       0.28       1.59          19
 184                              Canada       0.28       1.59          19
-185                       North America          3         66          NA
-186                                Ohio       0.21       5.73          NA
-187                                Ohio       0.19       3.86          NA
-188                       North America        2.5         56          NA
-189                           Tennessee        8.9       25.4          NA
-190                           Minessota          5         45          NA
-191                           Minessota          5         45          NA
-192                       North America        2.5         56          NA
+185                       North America          3         66        <NA>
+186                                Ohio       0.21       5.73        <NA>
+187                                Ohio       0.19       3.86        <NA>
+188                       North America        2.5         56        <NA>
+189                           Tennessee        8.9       25.4        <NA>
+190                           Minessota          5         45        <NA>
+191                           Minessota          5         45        <NA>
+192                       North America        2.5         56        <NA>
 193                      North Carolina        8.2       52.3          10
 194                      North Carolina        8.2       52.3          10
-195                       West Virginia       5.08       50.8          NA
+195                       West Virginia       5.08       50.8        <NA>
 196                      North Carolina        8.2       52.3          10
 197                      North Carolina        8.2       52.3          10
 198                      North Carolina        8.2       52.3          10
-199                       North America        2.5         56          NA
-200                       North America        2.5         56          NA
-201                       North America          4         42          NA
-202                                Ohio       1.85       7.25          NA
-203                                Ohio       1.85       7.25          NA
-204                       North America          3         64          NA
-205                       North America        2.5         56          NA
-206                       North America        2.5         56          NA
+199                       North America        2.5         56        <NA>
+200                       North America        2.5         56        <NA>
+201                       North America          4         42        <NA>
+202                                Ohio       1.85       7.25        <NA>
+203                                Ohio       1.85       7.25        <NA>
+204                       North America          3         64        <NA>
+205                       North America        2.5         56        <NA>
+206                       North America        2.5         56        <NA>
 207                            New York         25        550          32
 208                                Ohio        0.5       6.14          40
-209                       North America          4         42          NA
-210                       North America          4         42          NA
-211                           Tennessee         14         43          NA
-212                       North America          3         64          NA
+209                       North America          4         42        <NA>
+210                       North America          4         42        <NA>
+211                           Tennessee         14         43        <NA>
+212                       North America          3         64        <NA>
 213                              Canada       0.12       0.69          20
-214                       North America          3         64          NA
-215                       North America        2.5         56          NA
-216                       New Hampshire          1          9          NA
-217                       New Hampshire          1          9          NA
-218        Piedmont (Southeastern U.S.)      24.94      49.53          NA
-219                                Ohio       0.37       6.83          NA
-220                                Ohio       0.37       6.83          NA
-221                                Ohio       0.37       6.83          NA
+214                       North America          3         64        <NA>
+215                       North America        2.5         56        <NA>
+216                       New Hampshire          1          9        <NA>
+217                       New Hampshire          1          9        <NA>
+218        Piedmont (Southeastern U.S.)      24.94      49.53        <NA>
+219                                Ohio       0.37       6.83        <NA>
+220                                Ohio       0.37       6.83        <NA>
+221                                Ohio       0.37       6.83        <NA>
 222                       West Virginia       5.08       50.8          29
-223                       West Virginia       5.08       50.8          NA
-224                       West Virginia       5.08       50.8          NA
-225                       West Virginia       5.08       50.8          NA
-226                       West Virginia       5.08       50.8          NA
-227                       West Virginia       5.08       50.8          NA
+223                       West Virginia       5.08       50.8        <NA>
+224                       West Virginia       5.08       50.8        <NA>
+225                       West Virginia       5.08       50.8        <NA>
+226                       West Virginia       5.08       50.8        <NA>
+227                       West Virginia       5.08       50.8        <NA>
 228                       West Virginia       5.08      40.64          19
 229                                Ohio       0.55       7.76          34
 230 North Carolina, Kentucky, Tennessee      30.48       88.9          26
 231                                Ohio        0.4       8.49          41
-232                       North America        2.5         56          NA
-233                       West Virginia       5.08       50.8          NA
-234                North Central States        2.5         40          NA
-235                       North America          3         66          NA
+232                       North America        2.5         56        <NA>
+233                       West Virginia       5.08       50.8        <NA>
+234                North Central States        2.5         40        <NA>
+235                       North America          3         66        <NA>
 236    Washington, Oregon, N California        1.5       <NA>          31
 237    Washington, Oregon, N California        1.5       <NA>          31
 238    Washington, Oregon, N California        1.5       <NA>          31
 239                              Oregon        0.5        2.1          11
 240                              Oregon        0.5        2.1          11
-241                          California       <NA>       <NA>          NA
-242                   Pacific Northwest        0.6        2.5          NA
-243                       North America        2.5         56          NA
-244                       North America          3         64          NA
-245                       North America          3         64          NA
-246                       North America          3         64          NA
-247                              Hawaii          2         16          NA
-248                       North America          3         64          NA
-249                       North America          3         64          NA
-250    Washington, Oregon, N California        1.5       <NA>          NA
-251    Washington, Oregon, N California        1.5       <NA>          NA
-252    Washington, Oregon, N California        1.5       <NA>          NA
-253                       North America        2.5         56          NA
-254                   Pacific Northwest       24.1      117.7          NA
-255                   Pacific Northwest       24.1      117.7          NA
-256                              Oregon        1.4       13.4          NA
-257                       North America          3         64          NA
-258                       North America          3         89          NA
-259                       North America          3         89          NA
-260                       North America        2.5         56          NA
-261                     Rocky Mountains        0.4        1.4          NA
-262                       North America          3         70          NA
-263                       North America        2.5         56          NA
-264                       North America          3        614          NA
+241                          California         NI         NI        <NA>
+242                   Pacific Northwest        0.6        2.5         NRA
+243                       North America        2.5         56        <NA>
+244                       North America          3         64        <NA>
+245                       North America          3         64        <NA>
+246                       North America          3         64        <NA>
+247                              Hawaii          2         16        <NA>
+248                       North America          3         64        <NA>
+249                       North America          3         64        <NA>
+250    Washington, Oregon, N California        1.5       <NA>        <NA>
+251    Washington, Oregon, N California        1.5       <NA>        <NA>
+252    Washington, Oregon, N California        1.5       <NA>        <NA>
+253                       North America        2.5         56        <NA>
+254                   Pacific Northwest       24.1      117.7        <NA>
+255                   Pacific Northwest       24.1      117.7        <NA>
+256                              Oregon        1.4       13.4        <NA>
+257                       North America          3         64        <NA>
+258                       North America          3         89        <NA>
+259                       North America          3         89        <NA>
+260                       North America        2.5         56        <NA>
+261                     Rocky Mountains        0.4        1.4         NRA
+262                       North America          3         70        <NA>
+263                       North America        2.5         56        <NA>
+264                       North America          3        614        <NA>
 265                          California        7.6         61          14
-266                   Pacific Northwest        0.6        3.6          NA
-267                North Central States        2.5         40          NA
-268                 Wisconsin, Michigan        3.1       24.6          NA
-269                 Wisconsin, Michigan         10       52.2          NA
-270                           Wisconsin        7.5       23.7          NA
+266                   Pacific Northwest        0.6        3.6         NRA
+267                North Central States        2.5         40        <NA>
+268                 Wisconsin, Michigan        3.1       24.6        <NA>
+269                 Wisconsin, Michigan         10       52.2        <NA>
+270                           Wisconsin        7.5       23.7        <NA>
 271                 Wisconsin, Michigan        3.1       24.6          41
-272                       North America          3         64          NA
-273                       North America          3         64          NA
-274                       North America          3         64          NA
-275                North Central States        2.5         40          NA
-276                North Central States        3.5       26.3          NA
-277                                Ohio       1.85       7.25          NA
-278                       North America        2.5         56          NA
-279                       North America        2.5         56          NA
+272                       North America          3         64        <NA>
+273                       North America          3         64        <NA>
+274                       North America          3         64        <NA>
+275                North Central States        2.5         40        <NA>
+276                North Central States        3.5       26.3        <NA>
+277                                Ohio       1.85       7.25        <NA>
+278                       North America        2.5         56        <NA>
+279                       North America        2.5         56        <NA>
 280                            New York         25        550          32
 281                                Ohio        0.5       6.14          40
-282                   Upper Great Lakes          4         32          NA
-283                       North America          3         64          NA
-284                       North America          3         64          NA
-285                       North America          4         42          NA
-286                           Wisconsin       12.9         30          NA
+282                   Upper Great Lakes          4         32        <NA>
+283                       North America          3         64        <NA>
+284                       North America          3         64        <NA>
+285                       North America          4         42        <NA>
+286                           Wisconsin       12.9         30        <NA>
 287                              Canada       0.12       0.69          20
-288                       North America          3         64          NA
-289                       New Hampshire          1          9          NA
-290                       New Hampshire          1          9          NA
-291                           Minessota        1.1       32.6          NA
-292                           Minessota        1.4       23.4          NA
-293                        Eastern U.S.          1         55          NA
-294                            New York        2.5         55          NA
-295                                Ohio       0.68       7.49          NA
-296                           Wisconsin       14.7       39.7          NA
-297                                Ohio       0.37       6.83          NA
-298                                Ohio       0.37       6.83          NA
-299                       North America          3         64          NA
-300                           Wisconsin        2.8       69.5          NA
-301                       North America        2.5         56          NA
-302                       North America        2.5         56          NA
-303                       North America          3         64          NA
-304                North Central States        2.5         40          NA
-305                North Central States        2.5         40          NA
-306                       West Virginia       5.08       50.8          NA
-307                               Maine        0.1       2.54          NA
-308                North Central States        2.5         40          NA
-309                   Bristish Columbia         31       90.4          NA
+288                       North America          3         64        <NA>
+289                       New Hampshire          1          9        <NA>
+290                       New Hampshire          1          9        <NA>
+291                           Minessota        1.1       32.6        <NA>
+292                           Minessota        1.4       23.4        <NA>
+293                        Eastern U.S.          1         55        <NA>
+294                            New York        2.5         55        <NA>
+295                                Ohio       0.68       7.49        <NA>
+296                           Wisconsin       14.7       39.7        <NA>
+297                                Ohio       0.37       6.83        <NA>
+298                                Ohio       0.37       6.83        <NA>
+299                       North America          3         64        <NA>
+300                           Wisconsin        2.8       69.5        <NA>
+301                       North America        2.5         56        <NA>
+302                       North America        2.5         56        <NA>
+303                       North America          3         64        <NA>
+304                North Central States        2.5         40        <NA>
+305                North Central States        2.5         40        <NA>
+306                       West Virginia       5.08       50.8        <NA>
+307                               Maine        0.1       2.54        <NA>
+308                North Central States        2.5         40        <NA>
+309                   Bristish Columbia         31       90.4        <NA>
 310                     Rocky Mountains          0      10.16          12
 311                     Rocky Mountains       2.54      30.48          15
-312                       West Cascades       18.8        111          NA
-313                       West Cascades       18.8        111          NA
-314                       West Cascades       15.9      235.5          NA
-315                       North America        8.7        111          NA
-316                       North America        8.7        111          NA
-317                       North America        8.7        111          NA
-318                       North America        8.7        111          NA
-319                North Central States        0.1       2.54          NA
-320                North Central States        0.1       2.54          NA
-321                              Oregon        1.7       13.2          NA
-322                       North America          3         64          NA
-323                       North America          3         64          NA
-324                       North America        2.5         56          NA
-325                       North America          3         64          NA
-326                     Rocky Mountains        0.7        2.2          NA
+312                       West Cascades       18.8        111        <NA>
+313                       West Cascades       18.8        111        <NA>
+314                       West Cascades       15.9      235.5        <NA>
+315                       North America        8.7        111        <NA>
+316                       North America        8.7        111        <NA>
+317                       North America        8.7        111        <NA>
+318                       North America        8.7        111        <NA>
+319                North Central States        0.1       2.54        <NA>
+320                North Central States        0.1       2.54        <NA>
+321                              Oregon        1.7       13.2        <NA>
+322                       North America          3         64        <NA>
+323                       North America          3         64        <NA>
+324                       North America        2.5         56        <NA>
+325                       North America          3         64        <NA>
+326                     Rocky Mountains        0.7        2.2         NRA
 327                              Canada       0.12       0.69          20
-328                       North America          3         64          NA
-329                       North America          3         64          NA
-330                       North America          3        180          NA
-331                              Oregon         10         40          NA
-332                       West Cascades        1.4       13.4          NA
-333                       North America        2.5         56          NA
-334                       North America          3         64          NA
+328                       North America          3         64        <NA>
+329                       North America          3         64        <NA>
+330                       North America          3        180        <NA>
+331                              Oregon         10         40        <NA>
+332                       West Cascades        1.4       13.4        <NA>
+333                       North America        2.5         56        <NA>
+334                       North America          3         64        <NA>
 335                       Idaho/Montana        0.2        1.2          32
-336                       West Cascades        0.1        1.1          NA
-337                       West Cascades        0.1        1.1          NA
-338                       North America          3        109          NA
-339                   Pacific Northwest       0.18       2.23          NA
-340                   Pacific Northwest        4.2          7          NA
+336                       West Cascades        0.1        1.1         NRA
+337                       West Cascades        0.1        1.1         NRA
+338                       North America          3        109        <NA>
+339                   Pacific Northwest       0.18       2.23        <NA>
+340                   Pacific Northwest        4.2          7        <NA>
 341                   Bristish Columbia         16         49           8
-342                  Oregon, Washington        0.4        3.3          NA
-343                  Oregon, Washington        0.4        3.3          NA
-344                  Oregon, Washington        0.4        3.3          NA
-345                    Northern England       <NA>       <NA>          NA
-346                    Northern England       11.5       96.5          NA
-347                    Northern England       <NA>       <NA>          NA
-348                    Northern England       <NA>       <NA>          NA
-349                    Northern England       <NA>       <NA>          NA
-350                    Northern England       <NA>       <NA>          NA
-351                    Northern England       <NA>       <NA>          NA
-352                    Northern England       <NA>       <NA>          NA
-353                    Northern England       <NA>       <NA>          NA
-354                    Northern England       <NA>       <NA>          NA
-355                    Northern England       <NA>       <NA>          NA
-356                    Northern England          9        104          NA
-357                    Northern England       <NA>       <NA>          NA
-358                    Northern England       <NA>       <NA>          NA
-359                    Northern England       <NA>       <NA>          NA
-360                    Northern England       <NA>       <NA>          NA
-361                    Northern England       <NA>       <NA>          NA
-362                    Northern England       <NA>       <NA>          NA
-363                    Northern England       <NA>       <NA>          NA
-364                    Northern England         14      162.5          NA
-365                    Northern England       <NA>       <NA>          NA
-366                    Northern England       <NA>       <NA>          NA
-367                    Northern England       <NA>       <NA>          NA
-368                    Northern England       <NA>       <NA>          NA
-369                       West Cascades       18.8        111          NA
-370                       West Cascades       18.8        111          NA
-371                       West Cascades       15.9      235.5          NA
-372                   Pacific Northwest       14.4      158.4          NA
-373                       West Cascades       18.8        111          NA
-374                       West Cascades       18.8        111          NA
-375                       West Cascades       15.9      235.5          NA
-376                   Pacific Northwest       18.8      143.2          NA
-377                       North America        8.7        111          NA
-378                       North America        8.7        111          NA
-379                       North America        8.7        111          NA
-380                       North America        8.7        111          NA
-381                  Oregon, Washington        0.4       11.5          NA
-382                   Pacific Northwest         25      143.9          NA
-383                   Pacific Northwest        0.3       11.7          NA
-384                   Pacific Northwest        0.3        6.5          NA
-385                   Pacific Northwest        0.3        6.5          NA
+342                  Oregon, Washington        0.4        3.3         NRA
+343                  Oregon, Washington        0.4        3.3         NRA
+344                  Oregon, Washington        0.4        3.3         NRA
+345                    Northern England         NI         NI        <NA>
+346                    Northern England       11.5       96.5        <NA>
+347                    Northern England         NI         NI        <NA>
+348                    Northern England         NI         NI        <NA>
+349                    Northern England         NI         NI        <NA>
+350                    Northern England         NI         NI        <NA>
+351                    Northern England         NI         NI        <NA>
+352                    Northern England         NI         NI        <NA>
+353                    Northern England         NI         NI        <NA>
+354                    Northern England         NI         NI        <NA>
+355                    Northern England         NI         NI        <NA>
+356                    Northern England          9        104        <NA>
+357                    Northern England         NI         NI        <NA>
+358                    Northern England         NI         NI        <NA>
+359                    Northern England         NI         NI        <NA>
+360                    Northern England         NI         NI        <NA>
+361                    Northern England         NI         NI        <NA>
+362                    Northern England         NI         NI        <NA>
+363                    Northern England         NI         NI        <NA>
+364                    Northern England         14      162.5        <NA>
+365                    Northern England         NI         NI        <NA>
+366                    Northern England         NI         NI        <NA>
+367                    Northern England         NI         NI        <NA>
+368                    Northern England         NI         NI        <NA>
+369                       West Cascades       18.8        111        <NA>
+370                       West Cascades       18.8        111        <NA>
+371                       West Cascades       15.9      235.5        <NA>
+372                   Pacific Northwest       14.4      158.4        <NA>
+373                       West Cascades       18.8        111        <NA>
+374                       West Cascades       18.8        111        <NA>
+375                       West Cascades       15.9      235.5        <NA>
+376                   Pacific Northwest       18.8      143.2        <NA>
+377                       North America        8.7        111        <NA>
+378                       North America        8.7        111        <NA>
+379                       North America        8.7        111        <NA>
+380                       North America        8.7        111        <NA>
+381                  Oregon, Washington        0.4       11.5         NRA
+382                   Pacific Northwest         25      143.9        <NA>
+383                   Pacific Northwest        0.3       11.7         NRA
+384                   Pacific Northwest        0.3        6.5         NRA
+385                   Pacific Northwest        0.3        6.5         NRA
 386                          California        0.8         13          40
-387                       North America          3         64          NA
+387                       North America          3         64        <NA>
 388                          California        0.9        5.7          41
-389                       North America        2.5         56          NA
-390                     Rocky Mountains        0.7        2.2          NA
+389                       North America        2.5         56        <NA>
+390                     Rocky Mountains        0.7        2.2         NRA
 391                          California        0.5        2.6          40
-392                              Oregon         10         40          NA
-393                       West Cascades        1.4       13.4          NA
-394                   Pacific Northwest       24.1      117.7          NA
-395                     Rocky Mountains       2.54      30.48          NA
-396                              Oregon        1.7       13.2          NA
-397                       North America          3         64          NA
-398                       North America          3         64          NA
-399                              Oregon         10         40          NA
-400                       West Cascades        1.4       13.4          NA
-401                       North America        2.5         56          NA
-402                       North America          3         64          NA
-403                     Rocky Mountains        0.4        1.4          NA
-404                     Rocky Mountains        0.4        1.4          NA
-405                       North America          3         70          NA
-406                       North America          3         70          NA
-407                       North America        2.5         56          NA
+392                              Oregon         10         40        <NA>
+393                       West Cascades        1.4       13.4        <NA>
+394                   Pacific Northwest       24.1      117.7        <NA>
+395                     Rocky Mountains       2.54      30.48        <NA>
+396                              Oregon        1.7       13.2        <NA>
+397                       North America          3         64        <NA>
+398                       North America          3         64        <NA>
+399                              Oregon         10         40        <NA>
+400                       West Cascades        1.4       13.4        <NA>
+401                       North America        2.5         56        <NA>
+402                       North America          3         64        <NA>
+403                     Rocky Mountains        0.4        1.4         NRA
+404                     Rocky Mountains        0.4        1.4         NRA
+405                       North America          3         70        <NA>
+406                       North America          3         70        <NA>
+407                       North America        2.5         56        <NA>
 408                          California        0.5        2.6          40
-409                              Europe       <NA>         40         144
-410                              Europe       <NA>         50         240
-411                              Europe       <NA>         50         240
-412                              Europe       <NA>         50         240
-413                              Europe       <NA>         50         240
-414                              Europe       <NA>         40         144
-415                              Europe       <NA>         50         240
-416                              Europe       <NA>         50         240
-417                              Europe       <NA>         50         240
-418                              Europe       <NA>         50         240
-419                              Europe       <NA>         50         240
+409                              Europe         NI         40         144
+410                              Europe         NI         50         240
+411                              Europe         NI         50         240
+412                              Europe         NI         50         240
+413                              Europe         NI         50         240
+414                              Europe         NI         40         144
+415                              Europe         NI         50         240
+416                              Europe         NI         50         240
+417                              Europe         NI         50         240
+418                              Europe         NI         50         240
+419                              Europe         NI         50         240
     dbh_units_original biomass_units_original allometry_development_method
 1                   cm                      g                      harvest
 2                   cm                      g                      harvest
@@ -2555,8 +2555,8 @@
 34                         linear                         <NA>           1
 35                         linear                         <NA>           1
 36                           <NA>                         <NA>        <NA>
-37                linear_multiple                         <NA>           1
-38                linear_multiple                         <NA>           1
+37                linear_multiple                          NRA           1
+38                linear_multiple                          NRA           1
 39                         linear                         <NA>           1
 40                           <NA>                         <NA>        <NA>
 41                           <NA>                         <NA>        <NA>
@@ -2616,8 +2616,8 @@
 95                           <NA>                         <NA>        <NA>
 96                         linear a+(b*DBH^2); a+(b*DBH+DBH^2)           0
 97                         linear                         <NA>           1
-98                linear_multiple                         <NA>           1
-99                linear_multiple                         <NA>           1
+98                linear_multiple                          NRA           1
+99                linear_multiple                          NRA           1
 100                          <NA>                         <NA>        <NA>
 101                          <NA>                         <NA>        <NA>
 102                          <NA>                         <NA>        <NA>
@@ -2971,9 +2971,9 @@
 30               0                   <NA>
 31               1      included in model
 32               1      included in model
-33               0                   <NA>
+33               0                    NRA
 34               1                  1.006
-35               0                   <NA>
+35               0                    NRA
 36               1                   0.36
 37               1      included in model
 38               1      included in model
@@ -3034,8 +3034,8 @@
 93               1      included in model
 94               1      included in model
 95               1      included in model
-96               0                   <NA>
-97               0                   <NA>
+96               0                    NRA
+97               0                    NRA
 98               1      included in model
 99               1      included in model
 100              1      included in model
@@ -3108,7 +3108,7 @@
 167              1      included in model
 168              0                   <NA>
 169              0                   <NA>
-170              0                   <NA>
+170              0                    NRA
 171              1      included in model
 172              1                   0.36
 173              1      included in model
@@ -3166,9 +3166,9 @@
 225              1      included in model
 226              1      included in model
 227              1      included in model
-228              0                   <NA>
+228              0                    NRA
 229              1                  1.006
-230              0                   <NA>
+230              0                    NRA
 231              1                  1.004
 232              1                   0.36
 233              1      included in model
@@ -3250,13 +3250,13 @@
 309              0                   <NA>
 310              0                   <NA>
 311              0                   <NA>
-312           <NA>                   <NA>
-313           <NA>                   <NA>
-314           <NA>                   <NA>
-315           <NA>                   <NA>
-316           <NA>                   <NA>
-317           <NA>                   <NA>
-318           <NA>                   <NA>
+312           <NA>                    NRA
+313           <NA>                    NRA
+314           <NA>                    NRA
+315           <NA>                    NRA
+316           <NA>                    NRA
+317           <NA>                    NRA
+318           <NA>                    NRA
 319              0                   <NA>
 320              0                   <NA>
 321              0                   <NA>
@@ -3315,10 +3315,10 @@
 374              1      included in model
 375              1      included in model
 376              0                   <NA>
-377           <NA>                   <NA>
-378           <NA>                   <NA>
-379           <NA>                   <NA>
-380           <NA>                   <NA>
+377           <NA>                    NRA
+378           <NA>                    NRA
+379           <NA>                    NRA
+380           <NA>                    NRA
 381              1      included in model
 382              1      included in model
 383              1      included in model

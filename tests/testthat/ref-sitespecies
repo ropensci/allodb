@@ -1079,7 +1079,7 @@
 238                 E        <NA>               Species        1.5       <NA>
 239                 E        <NA>               Species        0.5        2.1
 240                 E        <NA>               Species        0.5        2.1
-241                 E        <NA>               Species       <NA>       <NA>
+241                 E        <NA>               Species         NI         NI
 242                 E        <NA>               Species        0.6        2.5
 243                 G        <NA>        Mixed hardwood        2.5         56
 244                 G        <NA>                Family          3         64
@@ -1183,30 +1183,30 @@
 342                 E        <NA>               Species        0.4        3.3
 343                 E        <NA>               Species        0.4        3.3
 344                 E        <NA>               Species        0.4        3.3
-345                 E        <NA>         Woody species       <NA>       <NA>
+345                 E        <NA>         Woody species         NI         NI
 346                 E        <NA>               Species       11.5       96.5
-347                 E        <NA>         Woody species       <NA>       <NA>
-348                 E        <NA>         Woody species       <NA>       <NA>
-349                 E        <NA>         Woody species       <NA>       <NA>
-350                 E        <NA>         Woody species       <NA>       <NA>
-351                 E        <NA>         Woody species       <NA>       <NA>
-352                 E        <NA>         Woody species       <NA>       <NA>
-353                 E        <NA>         Woody species       <NA>       <NA>
-354                 E        <NA>         Woody species       <NA>       <NA>
-355                 E        <NA>         Woody species       <NA>       <NA>
+347                 E        <NA>         Woody species         NI         NI
+348                 E        <NA>         Woody species         NI         NI
+349                 E        <NA>         Woody species         NI         NI
+350                 E        <NA>         Woody species         NI         NI
+351                 E        <NA>         Woody species         NI         NI
+352                 E        <NA>         Woody species         NI         NI
+353                 E        <NA>         Woody species         NI         NI
+354                 E        <NA>         Woody species         NI         NI
+355                 E        <NA>         Woody species         NI         NI
 356                 E        <NA>               Species          9        104
-357                 E        <NA>         Woody species       <NA>       <NA>
-358                 E        <NA>         Woody species       <NA>       <NA>
-359                 E        <NA>         Woody species       <NA>       <NA>
-360                 E        <NA>         Woody species       <NA>       <NA>
-361                 E        <NA>         Woody species       <NA>       <NA>
-362                 E        <NA>         Woody species       <NA>       <NA>
-363                 E        <NA>         Woody species       <NA>       <NA>
+357                 E        <NA>         Woody species         NI         NI
+358                 E        <NA>         Woody species         NI         NI
+359                 E        <NA>         Woody species         NI         NI
+360                 E        <NA>         Woody species         NI         NI
+361                 E        <NA>         Woody species         NI         NI
+362                 E        <NA>         Woody species         NI         NI
+363                 E        <NA>         Woody species         NI         NI
 364                 E        <NA>               Species         14      162.5
-365                 E        <NA>         Woody species       <NA>       <NA>
-366                 E        <NA>         Woody species       <NA>       <NA>
-367                 E        <NA>         Woody species       <NA>       <NA>
-368                 E        <NA>         Woody species       <NA>       <NA>
+365                 E        <NA>         Woody species         NI         NI
+366                 E        <NA>         Woody species         NI         NI
+367                 E        <NA>         Woody species         NI         NI
+368                 E        <NA>         Woody species         NI         NI
 369                 E        <NA>               Species       18.8        111
 370                 E        <NA>               Species       18.8        111
 371                 E        <NA>               Species       15.9      235.5
@@ -1247,17 +1247,17 @@
 406                 G        <NA>                Family          3         70
 407                 G        <NA>        Mixed hardwood        2.5         56
 408                 E        <NA>               Species        0.5        2.6
-409                 E        <NA>               Species       <NA>         40
-410                 E        <NA>                 Genus       <NA>         50
-411                 E        <NA>                 Genus       <NA>         50
-412                 E        <NA>                 Genus       <NA>         50
-413                 E        <NA>                 Genus       <NA>         50
-414                 E        <NA>               Species       <NA>         40
-415                 E        <NA>                 Genus       <NA>         50
-416                 E        <NA>                 Genus       <NA>         50
-417                 E        <NA>                 Genus       <NA>         50
-418                 E        <NA>                 Genus       <NA>         50
-419                 E        <NA>                 Genus       <NA>         50
+409                 E        <NA>               Species         NI         40
+410                 E        <NA>                 Genus         NI         50
+411                 E        <NA>                 Genus         NI         50
+412                 E        <NA>                 Genus         NI         50
+413                 E        <NA>                 Genus         NI         50
+414                 E        <NA>               Species         NI         40
+415                 E        <NA>                 Genus         NI         50
+416                 E        <NA>                 Genus         NI         50
+417                 E        <NA>                 Genus         NI         50
+418                 E        <NA>                 Genus         NI         50
+419                 E        <NA>                 Genus         NI         50
     wsg_id wsg_specificity
 1     <NA>            <NA>
 2     <NA>            <NA>

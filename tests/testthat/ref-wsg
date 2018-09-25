@@ -76,7 +76,7 @@
 75    <NA>     Juglandaceae                      Juglans nigra  0.51
 76    <NA>        Lauraceae                    Lindera benzoin   0.5
 77    <NA>     Magnoliaceae            Liriodendron tulipifera   0.4
-78    <NA>   Caprifoliaceae                   Lonicera maackii  <NA>
+78    <NA>   Caprifoliaceae                   Lonicera maackii   NRA
 79    <NA>        Nyssaceae                    Nyssa sylvatica  0.46
 80    <NA>    Paulowniaceae                Paulownia tomentosa  0.38
 81    <NA>         Pinaceae                      Pinus pungens  0.49
@@ -98,10 +98,10 @@
 97    <NA>         Fagaceae                   Quercus velutina  0.56
 98    <NA>         Fabaceae               Robinia pseudoacacia   0.6
 99    <NA>         Fabaceae               Robinia pseudoacacia  0.66
-100   <NA>         Rosaceae                    Rosa multiflora  <NA>
-101   <NA>         Rosaceae               Rubus allegheniensis  <NA>
-102   <NA>         Rosaceae                Rubus pensilvanicus  <NA>
-103   <NA>         Rosaceae               Rubus phoenicolasius  <NA>
+100   <NA>         Rosaceae                    Rosa multiflora   NRA
+101   <NA>         Rosaceae               Rubus allegheniensis   NRA
+102   <NA>         Rosaceae                Rubus pensilvanicus   NRA
+103   <NA>         Rosaceae               Rubus phoenicolasius   NRA
 104   <NA>        Adoxaceae                Sambucus canadensis   0.5
 105   <NA>        Lauraceae                  Sassafras albidum  0.42
 106   <NA>        Malvaceae                    Tilia americana  0.32
@@ -146,7 +146,7 @@
 145   <NA>        Lauraceae                    Lindera benzoin   0.5
 146   <NA>     Altingiaceae            Liquidambar styraciflua  0.46
 147   <NA>     Magnoliaceae            Liriodendron tulipifera   0.4
-148   <NA>   Caprifoliaceae                   Lonicera maackii  <NA>
+148   <NA>   Caprifoliaceae                   Lonicera maackii   NRA
 149   <NA>         Moraceae                        Morus rubra  0.59
 150   <NA>        Nyssaceae                    Nyssa sylvatica  0.46
 151   <NA> Scrophulariaceae                Paulownia tomentosa  0.38
@@ -171,7 +171,7 @@
 170   <NA>         Fagaceae                   Quercus velutina  0.56
 171   <NA>        Ericaceae           Rhododendron arborescens   0.5
 172   <NA>    Anacardiaceae                       Rhus typhina   0.5
-173   <NA>         Rosaceae                    Rosa multiflora  <NA>
+173   <NA>         Rosaceae                    Rosa multiflora   NRA
 174   <NA>       Salicaceae                        Salix nigra  0.36
 175   <NA>        Adoxaceae                     Sambucus nigra   0.5
 176   <NA>        Lauraceae                  Sassafras albidum  0.42
@@ -211,7 +211,7 @@
 210   <NA>     Juglandaceae                      Juglans nigra  0.51
 211   <NA>     Cupressaceae               Juniperus virginiana  0.44
 212   <NA>        Lauraceae                    Lindera benzoin   0.5
-213   <NA>   Caprifoliaceae                   Lonicera maackii  <NA>
+213   <NA>   Caprifoliaceae                   Lonicera maackii   NRA
 214   <NA>         Rosaceae                      Malus ioensis  0.61
 215   <NA>         Moraceae                        Morus rubra  0.59
 216   <NA>       Betulaceae                  Ostrya virginiana  0.63
@@ -239,7 +239,7 @@
 238   <NA>        Ericaceae                  Arbutus menziesii  0.58
 239   <NA>        Ericaceae          Arctostaphylos andersonii  0.72
 240   <NA>        Ericaceae           Arctostaphylos tomentosa  0.72
-241   <NA>       Asteraceae                Baccharis pilularis  <NA>
+241   <NA>       Asteraceae                Baccharis pilularis   NRA
 242   <NA>       Rhamnaceae             Ceanothus thyrsiflorus  0.67
 243   <NA>       Betulaceae                    Corylus cornuta   0.5
 244   <NA>         Rosaceae             Cotoneaster franchetii   0.5
@@ -285,7 +285,7 @@
 284   <NA>    Aquifoliaceae                  Ilex verticillata   0.5
 285   <NA>     Juglandaceae                    Juglans cinerea  0.36
 286   <NA>         Pinaceae                     Larix laricina  0.49
-287   <NA>   Caprifoliaceae                Lonicera canadensis  <NA>
+287   <NA>   Caprifoliaceae                Lonicera canadensis   NRA
 288   <NA>         Rosaceae                       Malus pumila  0.61
 289   <NA>       Betulaceae                  Ostrya virginiana  0.63
 290   <NA>       Betulaceae                  Ostrya virginiana  1.63
@@ -317,7 +317,7 @@
 316   <NA>         Pinaceae                          Abies sp.  0.36
 317   <NA>         Pinaceae                          Abies sp.  0.36
 318   <NA>         Pinaceae                          Abies sp.  0.36
-319   <NA>      Sapindaceae                    Acer circinatum  <NA>
+319   <NA>      Sapindaceae                    Acer circinatum   NRA
 320   <NA>      Sapindaceae                       Acer glabrum  0.44
 321   <NA>       Betulaceae                        Alnus rubra  0.37
 322   <NA>         Rosaceae              Amelanchier alnifolia  0.66
@@ -325,7 +325,7 @@
 324   <NA>       Betulaceae                    Corylus cornuta   0.5
 325   <NA>        Ericaceae                 Gaultheria shallon   0.5
 326   <NA>         Rosaceae                Holodiscus discolor  0.71
-327   <NA>   Caprifoliaceae                   Lonicera ciliosa  <NA>
+327   <NA>   Caprifoliaceae                   Lonicera ciliosa   NRA
 328   <NA>        Ericaceae               Menziesia ferruginea   0.5
 329   <NA>         Rosaceae              Oemleria cerasiformis   0.5
 330   <NA>         Pinaceae                    Pinus monticola  0.35
@@ -333,9 +333,9 @@
 332   <NA>         Pinaceae              Pseudotsuga menziesii  0.45
 333   <NA>       Rhamnaceae                  Rhamnus purshiana   0.5
 334   <NA>        Ericaceae          Rhododendron macrophyllum   0.5
-335   <NA>         Rosaceae                    Rosa gymnocarpa  <NA>
-336   <NA>         Rosaceae                  Rubus leucodermis  <NA>
-337   <NA>         Rosaceae                  Rubus spectabilis  <NA>
+335   <NA>         Rosaceae                    Rosa gymnocarpa   NRA
+336   <NA>         Rosaceae                  Rubus leucodermis   NRA
+337   <NA>         Rosaceae                  Rubus spectabilis   NRA
 338   <NA>         Taxaceae                   Taxus brevifolia   0.6
 339   <NA>     Cupressaceae                      Thuja plicata  0.31
 340   <NA>     Cupressaceae                      Thuja plicata  0.31
@@ -401,8 +401,8 @@
 400   <NA>         Pinaceae              Pseudotsuga menziesii  0.45
 401   <NA>       Rhamnaceae                Rhamnus californica   0.5
 402   <NA>        Ericaceae           Rhododendron occidentale   0.5
-403   <NA>  Grossulariaceae                   Ribes nevadaense  <NA>
-404   <NA>  Grossulariaceae                      Ribes roezlii  <NA>
+403   <NA>  Grossulariaceae                   Ribes nevadaense   NRA
+404   <NA>  Grossulariaceae                      Ribes roezlii   NRA
 405   <NA>       Salicaceae                  Salix scouleriana  0.36
 406   <NA>       Salicaceae                          Salix sp.  0.36
 407   <NA>        Adoxaceae                  Sambucus racemosa   0.5
@@ -419,101 +419,101 @@
 418   <NA>         Rosaceae                   Sorbus aucuparia  0.63
 419   <NA>         Ulmaceae                       Ulmus glabra  0.55
     wsg_specificity sample_size         site ref_id
-1              <NA>          NA  Lilly Dicky   <NA>
-2              <NA>          NA  Lilly Dicky   <NA>
-3              <NA>          NA  Lilly Dicky   <NA>
-4              <NA>          NA  Lilly Dicky   <NA>
-5              <NA>          NA  Lilly Dicky   <NA>
-6              <NA>          NA  Lilly Dicky   <NA>
-7              <NA>          NA  Lilly Dicky   <NA>
+1              <NA>        <NA>  Lilly Dicky   <NA>
+2              <NA>        <NA>  Lilly Dicky   <NA>
+3              <NA>        <NA>  Lilly Dicky   <NA>
+4              <NA>        <NA>  Lilly Dicky   <NA>
+5              <NA>        <NA>  Lilly Dicky   <NA>
+6              <NA>        <NA>  Lilly Dicky   <NA>
+7              <NA>        <NA>  Lilly Dicky   <NA>
 8              <NA>          10  Lilly Dicky   <NA>
 9              <NA>          10  Lilly Dicky   <NA>
 10             <NA>          10  Lilly Dicky   <NA>
-11             <NA>          NA  Lilly Dicky   <NA>
-12             <NA>          NA  Lilly Dicky   <NA>
-13             <NA>          NA  Lilly Dicky   <NA>
-14             <NA>          NA  Lilly Dicky   <NA>
-15             <NA>          NA  Lilly Dicky   <NA>
-16             <NA>          NA  Lilly Dicky   <NA>
+11             <NA>        <NA>  Lilly Dicky   <NA>
+12             <NA>        <NA>  Lilly Dicky   <NA>
+13             <NA>        <NA>  Lilly Dicky   <NA>
+14             <NA>        <NA>  Lilly Dicky   <NA>
+15             <NA>        <NA>  Lilly Dicky   <NA>
+16             <NA>        <NA>  Lilly Dicky   <NA>
 17             <NA>          32  Lilly Dicky   <NA>
 18             <NA>          40  Lilly Dicky   <NA>
-19             <NA>          NA  Lilly Dicky   <NA>
+19             <NA>        <NA>  Lilly Dicky   <NA>
 20             <NA>          21  Lilly Dicky   <NA>
-21             <NA>          NA  Lilly Dicky   <NA>
-22             <NA>          NA  Lilly Dicky   <NA>
-23             <NA>          NA  Lilly Dicky   <NA>
-24             <NA>          NA  Lilly Dicky   <NA>
-25             <NA>          NA  Lilly Dicky   <NA>
-26             <NA>          NA  Lilly Dicky   <NA>
-27             <NA>          NA  Lilly Dicky   <NA>
-28             <NA>          NA  Lilly Dicky   <NA>
+21             <NA>        <NA>  Lilly Dicky   <NA>
+22             <NA>        <NA>  Lilly Dicky   <NA>
+23             <NA>        <NA>  Lilly Dicky   <NA>
+24             <NA>        <NA>  Lilly Dicky   <NA>
+25             <NA>        <NA>  Lilly Dicky   <NA>
+26             <NA>        <NA>  Lilly Dicky   <NA>
+27             <NA>        <NA>  Lilly Dicky   <NA>
+28             <NA>        <NA>  Lilly Dicky   <NA>
 29             <NA>          29  Lilly Dicky   <NA>
-30             <NA>          NA  Lilly Dicky   <NA>
-31             <NA>          NA  Lilly Dicky   <NA>
-32             <NA>          NA  Lilly Dicky   <NA>
+30             <NA>        <NA>  Lilly Dicky   <NA>
+31             <NA>        <NA>  Lilly Dicky   <NA>
+32             <NA>        <NA>  Lilly Dicky   <NA>
 33          species          19  Lilly Dicky   <NA>
 34          species          34  Lilly Dicky   <NA>
 35          species          26  Lilly Dicky   <NA>
-36             <NA>          NA  Lilly Dicky   <NA>
+36             <NA>        <NA>  Lilly Dicky   <NA>
 37          species           9  Lilly Dicky   <NA>
 38          species           9  Lilly Dicky   <NA>
 39             <NA>          41  Lilly Dicky   <NA>
-40             <NA>          NA  Lilly Dicky   <NA>
-41             <NA>          NA  Lilly Dicky   <NA>
-42             <NA>          NA  Lilly Dicky   <NA>
-43             <NA>          NA         SCBI   <NA>
-44             <NA>          NA         SCBI   <NA>
-45             <NA>          NA         SCBI   <NA>
-46             <NA>          NA         SCBI   <NA>
-47             <NA>          NA         SCBI   <NA>
-48             <NA>          NA         SCBI   <NA>
-49             <NA>          NA         SCBI   <NA>
-50             <NA>          NA         SCBI   <NA>
-51             <NA>          NA         SCBI   <NA>
-52             <NA>          NA         SCBI   <NA>
+40             <NA>        <NA>  Lilly Dicky   <NA>
+41             <NA>        <NA>  Lilly Dicky   <NA>
+42             <NA>        <NA>  Lilly Dicky   <NA>
+43             <NA>        <NA>         SCBI   <NA>
+44             <NA>        <NA>         SCBI   <NA>
+45             <NA>        <NA>         SCBI   <NA>
+46             <NA>        <NA>         SCBI   <NA>
+47             <NA>        <NA>         SCBI   <NA>
+48             <NA>        <NA>         SCBI   <NA>
+49             <NA>        <NA>         SCBI   <NA>
+50             <NA>        <NA>         SCBI   <NA>
+51             <NA>        <NA>         SCBI   <NA>
+52             <NA>        <NA>         SCBI   <NA>
 53             <NA>          10         SCBI   <NA>
 54             <NA>          10         SCBI   <NA>
 55             <NA>          10         SCBI   <NA>
 56             <NA>          10         SCBI   <NA>
-57             <NA>          NA         SCBI   <NA>
-58             <NA>          NA         SCBI   <NA>
-59             <NA>          NA         SCBI   <NA>
-60             <NA>          NA         SCBI   <NA>
-61             <NA>          NA         SCBI   <NA>
-62             <NA>          NA         SCBI   <NA>
-63             <NA>          NA         SCBI   <NA>
-64             <NA>          NA         SCBI   <NA>
-65             <NA>          NA         SCBI   <NA>
-66             <NA>          NA         SCBI   <NA>
-67             <NA>          NA         SCBI   <NA>
-68             <NA>          NA         SCBI   <NA>
-69             <NA>          NA         SCBI   <NA>
-70             <NA>          NA         SCBI   <NA>
-71             <NA>          NA         SCBI   <NA>
+57             <NA>        <NA>         SCBI   <NA>
+58             <NA>        <NA>         SCBI   <NA>
+59             <NA>        <NA>         SCBI   <NA>
+60             <NA>        <NA>         SCBI   <NA>
+61             <NA>        <NA>         SCBI   <NA>
+62             <NA>        <NA>         SCBI   <NA>
+63             <NA>        <NA>         SCBI   <NA>
+64             <NA>        <NA>         SCBI   <NA>
+65             <NA>        <NA>         SCBI   <NA>
+66             <NA>        <NA>         SCBI   <NA>
+67             <NA>        <NA>         SCBI   <NA>
+68             <NA>        <NA>         SCBI   <NA>
+69             <NA>        <NA>         SCBI   <NA>
+70             <NA>        <NA>         SCBI   <NA>
+71             <NA>        <NA>         SCBI   <NA>
 72             <NA>          21         SCBI   <NA>
-73             <NA>          NA         SCBI   <NA>
-74             <NA>          NA         SCBI   <NA>
-75             <NA>          NA         SCBI   <NA>
-76             <NA>          NA         SCBI   <NA>
-77             <NA>          NA         SCBI   <NA>
+73             <NA>        <NA>         SCBI   <NA>
+74             <NA>        <NA>         SCBI   <NA>
+75             <NA>        <NA>         SCBI   <NA>
+76             <NA>        <NA>         SCBI   <NA>
+77             <NA>        <NA>         SCBI   <NA>
 78             <NA>          20         SCBI   <NA>
-79             <NA>          NA         SCBI   <NA>
-80             <NA>          NA         SCBI   <NA>
-81             <NA>          NA         SCBI   <NA>
-82             <NA>          NA         SCBI   <NA>
-83             <NA>          NA         SCBI   <NA>
-84             <NA>          NA         SCBI   <NA>
-85             <NA>          NA         SCBI   <NA>
-86             <NA>          NA         SCBI   <NA>
-87             <NA>          NA         SCBI   <NA>
+79             <NA>        <NA>         SCBI   <NA>
+80             <NA>        <NA>         SCBI   <NA>
+81             <NA>        <NA>         SCBI   <NA>
+82             <NA>        <NA>         SCBI   <NA>
+83             <NA>        <NA>         SCBI   <NA>
+84             <NA>        <NA>         SCBI   <NA>
+85             <NA>        <NA>         SCBI   <NA>
+86             <NA>        <NA>         SCBI   <NA>
+87             <NA>        <NA>         SCBI   <NA>
 88             <NA>          29         SCBI   <NA>
-89             <NA>          NA         SCBI   <NA>
-90             <NA>          NA         SCBI   <NA>
-91             <NA>          NA         SCBI   <NA>
-92             <NA>          NA         SCBI   <NA>
-93             <NA>          NA         SCBI   <NA>
-94             <NA>          NA         SCBI   <NA>
-95             <NA>          NA         SCBI   <NA>
+89             <NA>        <NA>         SCBI   <NA>
+90             <NA>        <NA>         SCBI   <NA>
+91             <NA>        <NA>         SCBI   <NA>
+92             <NA>        <NA>         SCBI   <NA>
+93             <NA>        <NA>         SCBI   <NA>
+94             <NA>        <NA>         SCBI   <NA>
+95             <NA>        <NA>         SCBI   <NA>
 96          species          19         SCBI   <NA>
 97          species          26         SCBI   <NA>
 98          species           9         SCBI   <NA>
@@ -522,310 +522,310 @@
 101            <NA>          26         SCBI   <NA>
 102            <NA>          26         SCBI   <NA>
 103            <NA>          26         SCBI   <NA>
-104            <NA>          NA         SCBI   <NA>
+104            <NA>        <NA>         SCBI   <NA>
 105            <NA>          41         SCBI   <NA>
-106            <NA>          NA         SCBI   <NA>
-107            <NA>          NA         SCBI   <NA>
-108            <NA>          NA         SCBI   <NA>
+106            <NA>        <NA>         SCBI   <NA>
+107            <NA>        <NA>         SCBI   <NA>
+108            <NA>        <NA>         SCBI   <NA>
 109            <NA>          19         SCBI   <NA>
 110            <NA>          19         SCBI   <NA>
 111            <NA>          19         SCBI   <NA>
-112            <NA>          NA         SERC   <NA>
-113            <NA>          NA         SERC   <NA>
-114            <NA>          NA         SERC   <NA>
-115            <NA>          NA         SERC   <NA>
-116            <NA>          NA         SERC   <NA>
-117            <NA>          NA         SERC   <NA>
-118            <NA>          NA         SERC   <NA>
-119            <NA>          NA         SERC   <NA>
-120            <NA>          NA         SERC   <NA>
-121            <NA>          NA         SERC   <NA>
-122            <NA>          NA         SERC   <NA>
-123            <NA>          NA         SERC   <NA>
-124            <NA>          NA         SERC   <NA>
-125            <NA>          NA         SERC   <NA>
+112            <NA>        <NA>         SERC   <NA>
+113            <NA>        <NA>         SERC   <NA>
+114            <NA>        <NA>         SERC   <NA>
+115            <NA>        <NA>         SERC   <NA>
+116            <NA>        <NA>         SERC   <NA>
+117            <NA>        <NA>         SERC   <NA>
+118            <NA>        <NA>         SERC   <NA>
+119            <NA>        <NA>         SERC   <NA>
+120            <NA>        <NA>         SERC   <NA>
+121            <NA>        <NA>         SERC   <NA>
+122            <NA>        <NA>         SERC   <NA>
+123            <NA>        <NA>         SERC   <NA>
+124            <NA>        <NA>         SERC   <NA>
+125            <NA>        <NA>         SERC   <NA>
 126            <NA>          10         SERC   <NA>
 127            <NA>          10         SERC   <NA>
 128            <NA>          10         SERC   <NA>
 129            <NA>          10         SERC   <NA>
-130            <NA>          NA         SERC   <NA>
-131            <NA>          NA         SERC   <NA>
-132            <NA>          NA         SERC   <NA>
-133            <NA>          NA         SERC   <NA>
-134            <NA>          NA         SERC   <NA>
-135            <NA>          NA         SERC   <NA>
-136            <NA>          NA         SERC   <NA>
+130            <NA>        <NA>         SERC   <NA>
+131            <NA>        <NA>         SERC   <NA>
+132            <NA>        <NA>         SERC   <NA>
+133            <NA>        <NA>         SERC   <NA>
+134            <NA>        <NA>         SERC   <NA>
+135            <NA>        <NA>         SERC   <NA>
+136            <NA>        <NA>         SERC   <NA>
 137            <NA>          32         SERC   <NA>
-138            <NA>          NA         SERC   <NA>
-139            <NA>          NA         SERC   <NA>
-140            <NA>          NA         SERC   <NA>
-141            <NA>          NA         SERC   <NA>
-142            <NA>          NA         SERC   <NA>
-143            <NA>          NA         SERC   <NA>
-144            <NA>          NA         SERC   <NA>
-145            <NA>          NA         SERC   <NA>
-146            <NA>          NA         SERC   <NA>
-147            <NA>          NA         SERC   <NA>
+138            <NA>        <NA>         SERC   <NA>
+139            <NA>        <NA>         SERC   <NA>
+140            <NA>        <NA>         SERC   <NA>
+141            <NA>        <NA>         SERC   <NA>
+142            <NA>        <NA>         SERC   <NA>
+143            <NA>        <NA>         SERC   <NA>
+144            <NA>        <NA>         SERC   <NA>
+145            <NA>        <NA>         SERC   <NA>
+146            <NA>        <NA>         SERC   <NA>
+147            <NA>        <NA>         SERC   <NA>
 148            <NA>          20         SERC   <NA>
-149            <NA>          NA         SERC   <NA>
-150            <NA>          NA         SERC   <NA>
-151            <NA>          NA         SERC   <NA>
-152            <NA>          NA         SERC   <NA>
-153            <NA>          NA         SERC   <NA>
-154            <NA>          NA         SERC   <NA>
-155            <NA>          NA         SERC   <NA>
-156            <NA>          NA         SERC   <NA>
-157            <NA>          NA         SERC   <NA>
-158            <NA>          NA         SERC   <NA>
+149            <NA>        <NA>         SERC   <NA>
+150            <NA>        <NA>         SERC   <NA>
+151            <NA>        <NA>         SERC   <NA>
+152            <NA>        <NA>         SERC   <NA>
+153            <NA>        <NA>         SERC   <NA>
+154            <NA>        <NA>         SERC   <NA>
+155            <NA>        <NA>         SERC   <NA>
+156            <NA>        <NA>         SERC   <NA>
+157            <NA>        <NA>         SERC   <NA>
+158            <NA>        <NA>         SERC   <NA>
 159            <NA>          10         SERC   <NA>
-160            <NA>          NA         SERC   <NA>
-161            <NA>          NA         SERC   <NA>
-162            <NA>          NA         SERC   <NA>
-163            <NA>          NA         SERC   <NA>
-164            <NA>          NA         SERC   <NA>
-165            <NA>          NA         SERC   <NA>
-166            <NA>          NA         SERC   <NA>
-167            <NA>          NA         SERC   <NA>
-168            <NA>          NA         SERC   <NA>
+160            <NA>        <NA>         SERC   <NA>
+161            <NA>        <NA>         SERC   <NA>
+162            <NA>        <NA>         SERC   <NA>
+163            <NA>        <NA>         SERC   <NA>
+164            <NA>        <NA>         SERC   <NA>
+165            <NA>        <NA>         SERC   <NA>
+166            <NA>        <NA>         SERC   <NA>
+167            <NA>        <NA>         SERC   <NA>
+168            <NA>        <NA>         SERC   <NA>
 169         species          26         SERC   <NA>
 170         species          26         SERC   <NA>
-171            <NA>          NA         SERC   <NA>
-172            <NA>          NA         SERC   <NA>
+171            <NA>        <NA>         SERC   <NA>
+172            <NA>        <NA>         SERC   <NA>
 173            <NA>          32         SERC   <NA>
-174            <NA>          NA         SERC   <NA>
-175            <NA>          NA         SERC   <NA>
+174            <NA>        <NA>         SERC   <NA>
+175            <NA>        <NA>         SERC   <NA>
 176            <NA>          41         SERC   <NA>
-177            <NA>          NA         SERC   <NA>
-178            <NA>          NA         SERC   <NA>
-179            <NA>          NA         SERC   <NA>
-180            <NA>          NA         SERC   <NA>
-181            <NA>          NA         SERC   <NA>
+177            <NA>        <NA>         SERC   <NA>
+178            <NA>        <NA>         SERC   <NA>
+179            <NA>        <NA>         SERC   <NA>
+180            <NA>        <NA>         SERC   <NA>
+181            <NA>        <NA>         SERC   <NA>
 182            <NA>          19         SERC   <NA>
 183            <NA>          19         SERC   <NA>
 184            <NA>          19         SERC   <NA>
-185            <NA>          NA        Tyson   <NA>
-186            <NA>          NA        Tyson   <NA>
-187            <NA>          NA        Tyson   <NA>
-188            <NA>          NA        Tyson   <NA>
-189            <NA>          NA        Tyson   <NA>
-190            <NA>          NA        Tyson   <NA>
-191            <NA>          NA        Tyson   <NA>
-192            <NA>          NA        Tyson   <NA>
+185            <NA>        <NA>        Tyson   <NA>
+186            <NA>        <NA>        Tyson   <NA>
+187            <NA>        <NA>        Tyson   <NA>
+188            <NA>        <NA>        Tyson   <NA>
+189            <NA>        <NA>        Tyson   <NA>
+190            <NA>        <NA>        Tyson   <NA>
+191            <NA>        <NA>        Tyson   <NA>
+192            <NA>        <NA>        Tyson   <NA>
 193            <NA>          10        Tyson   <NA>
 194            <NA>          10        Tyson   <NA>
-195            <NA>          NA        Tyson   <NA>
+195            <NA>        <NA>        Tyson   <NA>
 196            <NA>          10        Tyson   <NA>
 197            <NA>          10        Tyson   <NA>
 198            <NA>          10        Tyson   <NA>
-199            <NA>          NA        Tyson   <NA>
-200            <NA>          NA        Tyson   <NA>
-201            <NA>          NA        Tyson   <NA>
-202            <NA>          NA        Tyson   <NA>
-203            <NA>          NA        Tyson   <NA>
-204            <NA>          NA        Tyson   <NA>
-205            <NA>          NA        Tyson   <NA>
-206            <NA>          NA        Tyson   <NA>
+199            <NA>        <NA>        Tyson   <NA>
+200            <NA>        <NA>        Tyson   <NA>
+201            <NA>        <NA>        Tyson   <NA>
+202            <NA>        <NA>        Tyson   <NA>
+203            <NA>        <NA>        Tyson   <NA>
+204            <NA>        <NA>        Tyson   <NA>
+205            <NA>        <NA>        Tyson   <NA>
+206            <NA>        <NA>        Tyson   <NA>
 207            <NA>          32        Tyson   <NA>
 208            <NA>          40        Tyson   <NA>
-209            <NA>          NA        Tyson   <NA>
-210            <NA>          NA        Tyson   <NA>
-211            <NA>          NA        Tyson   <NA>
-212            <NA>          NA        Tyson   <NA>
+209            <NA>        <NA>        Tyson   <NA>
+210            <NA>        <NA>        Tyson   <NA>
+211            <NA>        <NA>        Tyson   <NA>
+212            <NA>        <NA>        Tyson   <NA>
 213            <NA>          20        Tyson   <NA>
-214            <NA>          NA        Tyson   <NA>
-215            <NA>          NA        Tyson   <NA>
-216            <NA>          NA        Tyson   <NA>
-217            <NA>          NA        Tyson   <NA>
-218            <NA>          NA        Tyson   <NA>
-219            <NA>          NA        Tyson   <NA>
-220            <NA>          NA        Tyson   <NA>
-221            <NA>          NA        Tyson   <NA>
+214            <NA>        <NA>        Tyson   <NA>
+215            <NA>        <NA>        Tyson   <NA>
+216            <NA>        <NA>        Tyson   <NA>
+217            <NA>        <NA>        Tyson   <NA>
+218            <NA>        <NA>        Tyson   <NA>
+219            <NA>        <NA>        Tyson   <NA>
+220            <NA>        <NA>        Tyson   <NA>
+221            <NA>        <NA>        Tyson   <NA>
 222            <NA>          29        Tyson   <NA>
-223            <NA>          NA        Tyson   <NA>
-224            <NA>          NA        Tyson   <NA>
-225            <NA>          NA        Tyson   <NA>
-226            <NA>          NA        Tyson   <NA>
-227            <NA>          NA        Tyson   <NA>
+223            <NA>        <NA>        Tyson   <NA>
+224            <NA>        <NA>        Tyson   <NA>
+225            <NA>        <NA>        Tyson   <NA>
+226            <NA>        <NA>        Tyson   <NA>
+227            <NA>        <NA>        Tyson   <NA>
 228         species          19        Tyson   <NA>
 229         species          34        Tyson   <NA>
 230         species          26        Tyson   <NA>
 231            <NA>          41        Tyson   <NA>
-232            <NA>          NA        Tyson   <NA>
-233            <NA>          NA        Tyson   <NA>
-234            <NA>          NA        Tyson   <NA>
-235            <NA>          NA         UCSC   <NA>
+232            <NA>        <NA>        Tyson   <NA>
+233            <NA>        <NA>        Tyson   <NA>
+234            <NA>        <NA>        Tyson   <NA>
+235            <NA>        <NA>         UCSC   <NA>
 236            <NA>          31         UCSC   <NA>
 237            <NA>          31         UCSC   <NA>
 238            <NA>          31         UCSC   <NA>
 239            <NA>          11         UCSC   <NA>
 240            <NA>          11         UCSC   <NA>
-241            <NA>          NA         UCSC   <NA>
-242            <NA>          NA         UCSC   <NA>
-243            <NA>          NA         UCSC   <NA>
-244            <NA>          NA         UCSC   <NA>
-245            <NA>          NA         UCSC   <NA>
-246            <NA>          NA         UCSC   <NA>
-247            <NA>          NA         UCSC   <NA>
-248            <NA>          NA         UCSC   <NA>
-249            <NA>          NA         UCSC   <NA>
-250            <NA>          NA         UCSC   <NA>
-251            <NA>          NA         UCSC   <NA>
-252            <NA>          NA         UCSC   <NA>
-253            <NA>          NA         UCSC   <NA>
-254            <NA>          NA         UCSC   <NA>
-255            <NA>          NA         UCSC   <NA>
-256            <NA>          NA         UCSC   <NA>
-257            <NA>          NA         UCSC   <NA>
-258            <NA>          NA         UCSC   <NA>
-259            <NA>          NA         UCSC   <NA>
-260            <NA>          NA         UCSC   <NA>
-261            <NA>          NA         UCSC   <NA>
-262            <NA>          NA         UCSC   <NA>
-263            <NA>          NA         UCSC   <NA>
-264            <NA>          NA         UCSC   <NA>
+241            <NA>        <NA>         UCSC   <NA>
+242            <NA>         NRA         UCSC   <NA>
+243            <NA>        <NA>         UCSC   <NA>
+244            <NA>        <NA>         UCSC   <NA>
+245            <NA>        <NA>         UCSC   <NA>
+246            <NA>        <NA>         UCSC   <NA>
+247            <NA>        <NA>         UCSC   <NA>
+248            <NA>        <NA>         UCSC   <NA>
+249            <NA>        <NA>         UCSC   <NA>
+250            <NA>        <NA>         UCSC   <NA>
+251            <NA>        <NA>         UCSC   <NA>
+252            <NA>        <NA>         UCSC   <NA>
+253            <NA>        <NA>         UCSC   <NA>
+254            <NA>        <NA>         UCSC   <NA>
+255            <NA>        <NA>         UCSC   <NA>
+256            <NA>        <NA>         UCSC   <NA>
+257            <NA>        <NA>         UCSC   <NA>
+258            <NA>        <NA>         UCSC   <NA>
+259            <NA>        <NA>         UCSC   <NA>
+260            <NA>        <NA>         UCSC   <NA>
+261            <NA>         NRA         UCSC   <NA>
+262            <NA>        <NA>         UCSC   <NA>
+263            <NA>        <NA>         UCSC   <NA>
+264            <NA>        <NA>         UCSC   <NA>
 265            <NA>          14         UCSC   <NA>
-266            <NA>          NA         UCSC   <NA>
-267            <NA>          NA      Wabikon   <NA>
-268            <NA>          NA      Wabikon   <NA>
-269            <NA>          NA      Wabikon   <NA>
-270            <NA>          NA      Wabikon   <NA>
+266            <NA>         NRA         UCSC   <NA>
+267            <NA>        <NA>      Wabikon   <NA>
+268            <NA>        <NA>      Wabikon   <NA>
+269            <NA>        <NA>      Wabikon   <NA>
+270            <NA>        <NA>      Wabikon   <NA>
 271            <NA>          41      Wabikon   <NA>
-272            <NA>          NA      Wabikon   <NA>
-273            <NA>          NA      Wabikon   <NA>
-274            <NA>          NA      Wabikon   <NA>
-275            <NA>          NA      Wabikon   <NA>
-276            <NA>          NA      Wabikon   <NA>
-277            <NA>          NA      Wabikon   <NA>
-278            <NA>          NA      Wabikon   <NA>
-279            <NA>          NA      Wabikon   <NA>
+272            <NA>        <NA>      Wabikon   <NA>
+273            <NA>        <NA>      Wabikon   <NA>
+274            <NA>        <NA>      Wabikon   <NA>
+275            <NA>        <NA>      Wabikon   <NA>
+276            <NA>        <NA>      Wabikon   <NA>
+277            <NA>        <NA>      Wabikon   <NA>
+278            <NA>        <NA>      Wabikon   <NA>
+279            <NA>        <NA>      Wabikon   <NA>
 280            <NA>          32      Wabikon   <NA>
 281            <NA>          40      Wabikon   <NA>
-282            <NA>          NA      Wabikon   <NA>
-283            <NA>          NA      Wabikon   <NA>
-284            <NA>          NA      Wabikon   <NA>
-285            <NA>          NA      Wabikon   <NA>
-286            <NA>          NA      Wabikon   <NA>
+282            <NA>        <NA>      Wabikon   <NA>
+283            <NA>        <NA>      Wabikon   <NA>
+284            <NA>        <NA>      Wabikon   <NA>
+285            <NA>        <NA>      Wabikon   <NA>
+286            <NA>        <NA>      Wabikon   <NA>
 287            <NA>          20      Wabikon   <NA>
-288            <NA>          NA      Wabikon   <NA>
-289            <NA>          NA      Wabikon   <NA>
-290            <NA>          NA      Wabikon   <NA>
-291            <NA>          NA      Wabikon   <NA>
-292            <NA>          NA      Wabikon   <NA>
-293            <NA>          NA      Wabikon   <NA>
-294            <NA>          NA      Wabikon   <NA>
-295            <NA>          NA      Wabikon   <NA>
-296            <NA>          NA      Wabikon   <NA>
-297            <NA>          NA      Wabikon   <NA>
-298            <NA>          NA      Wabikon   <NA>
-299            <NA>          NA      Wabikon   <NA>
-300            <NA>          NA      Wabikon   <NA>
-301            <NA>          NA      Wabikon   <NA>
-302            <NA>          NA      Wabikon   <NA>
-303            <NA>          NA      Wabikon   <NA>
-304            <NA>          NA      Wabikon   <NA>
-305            <NA>          NA      Wabikon   <NA>
-306            <NA>          NA      Wabikon   <NA>
-307            <NA>          NA      Wabikon   <NA>
-308            <NA>          NA      Wabikon   <NA>
-309            <NA>          NA   Wind River   <NA>
+288            <NA>        <NA>      Wabikon   <NA>
+289            <NA>        <NA>      Wabikon   <NA>
+290            <NA>        <NA>      Wabikon   <NA>
+291            <NA>        <NA>      Wabikon   <NA>
+292            <NA>        <NA>      Wabikon   <NA>
+293            <NA>        <NA>      Wabikon   <NA>
+294            <NA>        <NA>      Wabikon   <NA>
+295            <NA>        <NA>      Wabikon   <NA>
+296            <NA>        <NA>      Wabikon   <NA>
+297            <NA>        <NA>      Wabikon   <NA>
+298            <NA>        <NA>      Wabikon   <NA>
+299            <NA>        <NA>      Wabikon   <NA>
+300            <NA>        <NA>      Wabikon   <NA>
+301            <NA>        <NA>      Wabikon   <NA>
+302            <NA>        <NA>      Wabikon   <NA>
+303            <NA>        <NA>      Wabikon   <NA>
+304            <NA>        <NA>      Wabikon   <NA>
+305            <NA>        <NA>      Wabikon   <NA>
+306            <NA>        <NA>      Wabikon   <NA>
+307            <NA>        <NA>      Wabikon   <NA>
+308            <NA>        <NA>      Wabikon   <NA>
+309            <NA>        <NA>   Wind River   <NA>
 310            <NA>          12   Wind River   <NA>
 311            <NA>          15   Wind River   <NA>
-312            <NA>          NA   Wind River   <NA>
-313            <NA>          NA   Wind River   <NA>
-314            <NA>          NA   Wind River   <NA>
-315            <NA>          NA   Wind River   <NA>
-316            <NA>          NA   Wind River   <NA>
-317            <NA>          NA   Wind River   <NA>
-318            <NA>          NA   Wind River   <NA>
-319            <NA>          NA   Wind River   <NA>
-320            <NA>          NA   Wind River   <NA>
-321            <NA>          NA   Wind River   <NA>
-322            <NA>          NA   Wind River   <NA>
-323            <NA>          NA   Wind River   <NA>
-324            <NA>          NA   Wind River   <NA>
-325            <NA>          NA   Wind River   <NA>
-326            <NA>          NA   Wind River   <NA>
+312            <NA>        <NA>   Wind River   <NA>
+313            <NA>        <NA>   Wind River   <NA>
+314            <NA>        <NA>   Wind River   <NA>
+315            <NA>        <NA>   Wind River   <NA>
+316            <NA>        <NA>   Wind River   <NA>
+317            <NA>        <NA>   Wind River   <NA>
+318            <NA>        <NA>   Wind River   <NA>
+319            <NA>        <NA>   Wind River   <NA>
+320            <NA>        <NA>   Wind River   <NA>
+321            <NA>        <NA>   Wind River   <NA>
+322            <NA>        <NA>   Wind River   <NA>
+323            <NA>        <NA>   Wind River   <NA>
+324            <NA>        <NA>   Wind River   <NA>
+325            <NA>        <NA>   Wind River   <NA>
+326            <NA>         NRA   Wind River   <NA>
 327            <NA>          20   Wind River   <NA>
-328            <NA>          NA   Wind River   <NA>
-329            <NA>          NA   Wind River   <NA>
-330            <NA>          NA   Wind River   <NA>
-331            <NA>          NA   Wind River   <NA>
-332            <NA>          NA   Wind River   <NA>
-333            <NA>          NA   Wind River   <NA>
-334            <NA>          NA   Wind River   <NA>
+328            <NA>        <NA>   Wind River   <NA>
+329            <NA>        <NA>   Wind River   <NA>
+330            <NA>        <NA>   Wind River   <NA>
+331            <NA>        <NA>   Wind River   <NA>
+332            <NA>        <NA>   Wind River   <NA>
+333            <NA>        <NA>   Wind River   <NA>
+334            <NA>        <NA>   Wind River   <NA>
 335            <NA>          32   Wind River   <NA>
-336            <NA>          NA   Wind River   <NA>
-337            <NA>          NA   Wind River   <NA>
-338            <NA>          NA   Wind River   <NA>
-339            <NA>          NA   Wind River   <NA>
-340            <NA>          NA   Wind River   <NA>
+336            <NA>         NRA   Wind River   <NA>
+337            <NA>         NRA   Wind River   <NA>
+338            <NA>        <NA>   Wind River   <NA>
+339            <NA>        <NA>   Wind River   <NA>
+340            <NA>        <NA>   Wind River   <NA>
 341            <NA>           8   Wind River   <NA>
-342            <NA>          NA   Wind River   <NA>
-343            <NA>          NA   Wind River   <NA>
-344            <NA>          NA   Wind River   <NA>
-345            <NA>          NA Wytham Woods   <NA>
-346            <NA>          NA Wytham Woods   <NA>
-347            <NA>          NA Wytham Woods   <NA>
-348            <NA>          NA Wytham Woods   <NA>
-349            <NA>          NA Wytham Woods   <NA>
-350            <NA>          NA Wytham Woods   <NA>
-351            <NA>          NA Wytham Woods   <NA>
-352            <NA>          NA Wytham Woods   <NA>
-353            <NA>          NA Wytham Woods   <NA>
-354            <NA>          NA Wytham Woods   <NA>
-355            <NA>          NA Wytham Woods   <NA>
-356            <NA>          NA Wytham Woods   <NA>
-357            <NA>          NA Wytham Woods   <NA>
-358            <NA>          NA Wytham Woods   <NA>
-359            <NA>          NA Wytham Woods   <NA>
-360            <NA>          NA Wytham Woods   <NA>
-361            <NA>          NA Wytham Woods   <NA>
-362            <NA>          NA Wytham Woods   <NA>
-363            <NA>          NA Wytham Woods   <NA>
-364            <NA>          NA Wytham Woods   <NA>
-365            <NA>          NA Wytham Woods   <NA>
-366            <NA>          NA Wytham Woods   <NA>
-367            <NA>          NA Wytham Woods   <NA>
-368            <NA>          NA Wytham Woods   <NA>
-369            <NA>          NA     Yosemite   <NA>
-370            <NA>          NA     Yosemite   <NA>
-371            <NA>          NA     Yosemite   <NA>
-372            <NA>          NA     Yosemite   <NA>
-373            <NA>          NA     Yosemite   <NA>
-374            <NA>          NA     Yosemite   <NA>
-375            <NA>          NA     Yosemite   <NA>
-376            <NA>          NA     Yosemite   <NA>
-377            <NA>          NA     Yosemite   <NA>
-378            <NA>          NA     Yosemite   <NA>
-379            <NA>          NA     Yosemite   <NA>
-380            <NA>          NA     Yosemite   <NA>
-381            <NA>          NA     Yosemite   <NA>
-382            <NA>          NA     Yosemite   <NA>
-383            <NA>          NA     Yosemite   <NA>
-384            <NA>          NA     Yosemite   <NA>
-385            <NA>          NA     Yosemite   <NA>
+342            <NA>         NRA   Wind River   <NA>
+343            <NA>         NRA   Wind River   <NA>
+344            <NA>         NRA   Wind River   <NA>
+345            <NA>        <NA> Wytham Woods   <NA>
+346            <NA>        <NA> Wytham Woods   <NA>
+347            <NA>        <NA> Wytham Woods   <NA>
+348            <NA>        <NA> Wytham Woods   <NA>
+349            <NA>        <NA> Wytham Woods   <NA>
+350            <NA>        <NA> Wytham Woods   <NA>
+351            <NA>        <NA> Wytham Woods   <NA>
+352            <NA>        <NA> Wytham Woods   <NA>
+353            <NA>        <NA> Wytham Woods   <NA>
+354            <NA>        <NA> Wytham Woods   <NA>
+355            <NA>        <NA> Wytham Woods   <NA>
+356            <NA>        <NA> Wytham Woods   <NA>
+357            <NA>        <NA> Wytham Woods   <NA>
+358            <NA>        <NA> Wytham Woods   <NA>
+359            <NA>        <NA> Wytham Woods   <NA>
+360            <NA>        <NA> Wytham Woods   <NA>
+361            <NA>        <NA> Wytham Woods   <NA>
+362            <NA>        <NA> Wytham Woods   <NA>
+363            <NA>        <NA> Wytham Woods   <NA>
+364            <NA>        <NA> Wytham Woods   <NA>
+365            <NA>        <NA> Wytham Woods   <NA>
+366            <NA>        <NA> Wytham Woods   <NA>
+367            <NA>        <NA> Wytham Woods   <NA>
+368            <NA>        <NA> Wytham Woods   <NA>
+369            <NA>        <NA>     Yosemite   <NA>
+370            <NA>        <NA>     Yosemite   <NA>
+371            <NA>        <NA>     Yosemite   <NA>
+372            <NA>        <NA>     Yosemite   <NA>
+373            <NA>        <NA>     Yosemite   <NA>
+374            <NA>        <NA>     Yosemite   <NA>
+375            <NA>        <NA>     Yosemite   <NA>
+376            <NA>        <NA>     Yosemite   <NA>
+377            <NA>        <NA>     Yosemite   <NA>
+378            <NA>        <NA>     Yosemite   <NA>
+379            <NA>        <NA>     Yosemite   <NA>
+380            <NA>        <NA>     Yosemite   <NA>
+381            <NA>         NRA     Yosemite   <NA>
+382            <NA>        <NA>     Yosemite   <NA>
+383            <NA>         NRA     Yosemite   <NA>
+384            <NA>         NRA     Yosemite   <NA>
+385            <NA>         NRA     Yosemite   <NA>
 386            <NA>          40     Yosemite   <NA>
-387            <NA>          NA     Yosemite   <NA>
+387            <NA>        <NA>     Yosemite   <NA>
 388            <NA>          41     Yosemite   <NA>
-389            <NA>          NA     Yosemite   <NA>
-390            <NA>          NA     Yosemite   <NA>
+389            <NA>        <NA>     Yosemite   <NA>
+390            <NA>         NRA     Yosemite   <NA>
 391            <NA>          40     Yosemite   <NA>
-392            <NA>          NA     Yosemite   <NA>
-393            <NA>          NA     Yosemite   <NA>
-394            <NA>          NA     Yosemite   <NA>
-395            <NA>          NA     Yosemite   <NA>
-396            <NA>          NA     Yosemite   <NA>
-397            <NA>          NA     Yosemite   <NA>
-398            <NA>          NA     Yosemite   <NA>
-399            <NA>          NA     Yosemite   <NA>
-400            <NA>          NA     Yosemite   <NA>
-401            <NA>          NA     Yosemite   <NA>
-402            <NA>          NA     Yosemite   <NA>
-403            <NA>          NA     Yosemite   <NA>
-404            <NA>          NA     Yosemite   <NA>
-405            <NA>          NA     Yosemite   <NA>
-406            <NA>          NA     Yosemite   <NA>
-407            <NA>          NA     Yosemite   <NA>
+392            <NA>        <NA>     Yosemite   <NA>
+393            <NA>        <NA>     Yosemite   <NA>
+394            <NA>        <NA>     Yosemite   <NA>
+395            <NA>        <NA>     Yosemite   <NA>
+396            <NA>        <NA>     Yosemite   <NA>
+397            <NA>        <NA>     Yosemite   <NA>
+398            <NA>        <NA>     Yosemite   <NA>
+399            <NA>        <NA>     Yosemite   <NA>
+400            <NA>        <NA>     Yosemite   <NA>
+401            <NA>        <NA>     Yosemite   <NA>
+402            <NA>        <NA>     Yosemite   <NA>
+403            <NA>         NRA     Yosemite   <NA>
+404            <NA>         NRA     Yosemite   <NA>
+405            <NA>        <NA>     Yosemite   <NA>
+406            <NA>        <NA>     Yosemite   <NA>
+407            <NA>        <NA>     Yosemite   <NA>
 408            <NA>          40     Yosemite   <NA>
 409            <NA>         144        Zofin   <NA>
 410            <NA>         240        Zofin   <NA>

@@ -15,12 +15,12 @@ documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 ``` r
 library(allodb)
 library(tidyverse)
-#> -- Attaching packages -------------------------------------------- tidyverse 1.2.1 --
+#> -- Attaching packages --------------------------------------------------------- tidyverse 1.2.1 --
 #> v ggplot2 3.0.0     v purrr   0.2.5
 #> v tibble  1.4.2     v dplyr   0.7.6
 #> v tidyr   0.8.1     v stringr 1.3.1
 #> v readr   1.1.1     v forcats 0.3.0
-#> -- Conflicts ----------------------------------------------- tidyverse_conflicts() --
+#> -- Conflicts ------------------------------------------------------------ tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 library(here)
@@ -31,7 +31,7 @@ library(usethis)
 # Gather raw master data
 
 ``` r
-master <- read_master(here("data-raw/allodb_master.csv"))
+master <- read_csv_as_chr(here("data-raw/allodb_master.csv"))
 ```
 
 # Export subsets of master data

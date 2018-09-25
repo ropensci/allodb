@@ -27,7 +27,7 @@ library(usethis)
 # Gather raw master data
 
 ```{r master}
-master <- read_master(here("data-raw/allodb_master.csv"))
+master <- read_csv_as_chr(here("data-raw/allodb_master.csv"))
 ```
 
 # Export subsets of master data
