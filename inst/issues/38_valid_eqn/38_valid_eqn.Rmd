@@ -22,76 +22,36 @@ eqn <- equations$equation_allometry
 Try to evaluate each equation and catch errors.
 
 ```{r}
-eval_eqn <- purrr::safely(
-  function(text, envir) eval(parse(text = text), envir = envir)
-)
-out <- map(eqn, ~eval_eqn(.x, list(dbh = 10)))
-
-results <- out %>% map("result") %>% modify_if(is.null, ~NA_real_)
-messages <- out %>%
-  map("error") %>%
-  map("message") %>%
-  modify_if(is.null, ~NA_character_)
-
-res <- unnest(tibble(equation_allometry = eqn, results, messages))
-```
-
-```{r}
-valid <- filter(res, !is.na(results))
-valid
-```
-
-```{r}
-invalid <- filter(res, is.na(results))
-invalid
-```
-
-Examine details about each equation.
-
-```
-View(invalid)
-```
-
-### General problems and soultions
-
-```{r}
-# For reuse
-filter_pattern <- function(pattern) filter(invalid, grepl(pattern, messages))
-vars <- c("equation_allometry", "valid", "result")
-
-fix_problem <- function(pattern1, pattern2, replacement) {
-  filter_pattern(pattern1) %>% 
-    mutate(
-      valid = str_replace(equation_allometry, pattern2, replacement),
-      result = map_dbl(.data$valid, ~eval(parse(text = .x), list(dbh = 10)))
-    ) %>% 
-    select(equation_allometry, valid, result)
+eval_toy <- function(text) {
+  toy_value <- 10
+  eval(parse(text = text), envir = list(dbh = toy_value))
 }
+
+contents <- eqn %>% 
+  map(safely(eval_toy)) %>% 
+  transpose()
+
+ok <- map_lgl(contents$error, is.null) 
+
+invalid <- tibble(
+  equation_allometry = eqn[!ok], 
+  messages = map_chr(contents$error[!ok], "message")
+)
+
+unique(invalid$messages)
 ```
 
-The expression {`number(`} is invalid: For example `10^(1.1891 +` {`1.419(`} `log10(dbh^2)))`. Adding a star (`*`) fixes the problem.
+Issue with 'dba'.
 
 ```{r}
-fix_problem("attempt", "([0-9])(\\(log10)", "\\1 * \\2")
+filter(invalid, grepl("dba", messages))
 ```
 
-`dba` is missing. This has no immediate solution. We need to find a way to calculate `dba` from ForestGEO census data.
+Proposed solution: [#38](https://github.com/forestgeo/allodb/issues/38) and [#41](https://github.com/forestgeo/allodb/issues/38).
+
+Issue with 'BA'.
 
 ```{r}
-filter_pattern("object")
+filter(invalid, grepl("BA", messages))
 ```
-
-There are a few trailing `)` and removing them fixes the problem.
-
-```{r}
-fix_problem("unexpected ')'", "\\)$", "")
-```
-
-The `*` in `pi(*dbh) is missplaced. Removing it fixes the problem.
-
-```{r}
-filter_pattern("unexpected '\\*'")
-fix_problem("unexpected '\\*'", "pi\\(\\*dbh", "pi * dbh")
-```
-
-Erika, althought I pointed to some problems and suggested solutiouns, I didn't fix the problems permanently. I assume you want to check my approach and fix the issues yourself. Let me know if you have questions or need help.
+ How should we deal with this?

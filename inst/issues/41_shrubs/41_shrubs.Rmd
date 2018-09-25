@@ -1,0 +1,32 @@
+---
+title: "Issue 41: Calculate biomass of shrubs"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here I wrap discussions in issue 41 and try to come up with my next actions for developing code.
+
+## Checks
+* Err if multiple data contains multiple plots
+* Err if stemid is duplicated
+* Warn if multiple data contains multiple censuses.
+
+## Computation
+
+* If `is_shrub()` and `independent_variable == DBH`:
+    * find main stem of each treeid.
+    * evaluate `equation_allometry` only to dbh of main stem, and get `total_biomass`.
+    * redistrubute biomass to each stem
+        * contribution = dbh of each stem / sum of dbh of all stems of a treeid
+        * `contribution * total_biomass`
+
+* If `is_shrub()` and `independent_variable == DBA`
+    * basal_area = sum of basal area by treeid.
+    * dba aprox. sqrt(dbh1^2 + dbh2^2 + ...) (assuming area preserving).
+    * apply equation to calculated dba and get `total_biomass`.
+    * redistribute `total_biomass`
+
+
