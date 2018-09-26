@@ -2,7 +2,7 @@ context("type_allodb_master")
 
 master <- read_csv_as_chr(here::here("data-raw/allodb_master.csv"))
 
-test_that("has same names as `master`", {
+test_that("has same names as `master` (#37)", {
   expect_length(setdiff(names(master), names(type_allodb_master())), 0)
   expect_length(setdiff(names(type_allodb_master()), names(master)), 0)
 })
