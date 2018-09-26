@@ -15,12 +15,12 @@ documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 ``` r
 library(allodb)
 library(tidyverse)
-#> -- Attaching packages ------------------------------------------------ tidyverse 1.2.1 --
+#> -- Attaching packages --------------------------------------------- tidyverse 1.2.1 --
 #> v ggplot2 3.0.0     v purrr   0.2.5
 #> v tibble  1.4.2     v dplyr   0.7.6
 #> v tidyr   0.8.1     v stringr 1.3.1
 #> v readr   1.1.1     v forcats 0.3.0
-#> -- Conflicts --------------------------------------------------- tidyverse_conflicts() --
+#> -- Conflicts ------------------------------------------------ tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 library(here)
@@ -46,7 +46,6 @@ the Functions Index tab of the website of **allodb**.
 Allometric equations (doesn’t include sites, but sp? not sure)
 
 ``` r
-
 equations_cols <- c(
   "equation_id",
   "equation_form",
@@ -73,7 +72,9 @@ equations_cols <- c(
   "warning",
   "ref_id"
 )
-equations <- as.tibble(master[equations_cols])
+equations <- master[equations_cols] %>% 
+  unique() %>% 
+  as.tibble()
 use_data(equations, overwrite = TRUE)
 #> <U+2714> Setting active project to 'C:/Users/LeporeM/Documents/Dropbox/git/allodb'
 #> <U+2714> Saving 'equations' to 'data/equations.rda'
@@ -180,7 +181,9 @@ sitespecies_cols <- c(
   "wsg_id",
   "wsg_specificity"
 )
-sitespecies <- as.tibble(master[sitespecies_cols])
+sitespecies <- master[sitespecies_cols] %>% 
+  unique() %>% 
+  as.tibble()
 use_data(sitespecies, overwrite = TRUE)
 #> <U+2714> Saving 'sitespecies' to 'data/sitespecies.rda'
 
@@ -218,7 +221,9 @@ wsg_cols <- c(
   "site",
   "ref_id"
 )
-wsg <- as.tibble(master[wsg_cols])
+wsg <- master[wsg_cols] %>% 
+  unique() %>% 
+  as.tibble()
 use_data(wsg, overwrite = TRUE)
 #> <U+2714> Saving 'wsg' to 'data/wsg.rda'
 

@@ -39,7 +39,6 @@ This section exports subsets of the clean master data to data/. Each dataset doc
 Allometric equations (doesn't include sites, but sp? not sure)
 
 ```{r equations}
-
 equations_cols <- c(
   "equation_id",
   "equation_form",
@@ -66,7 +65,9 @@ equations_cols <- c(
   "warning",
   "ref_id"
 )
-equations <- as.tibble(master[equations_cols])
+equations <- master[equations_cols] %>% 
+  unique() %>% 
+  as.tibble()
 use_data(equations, overwrite = TRUE)
 
 equations_metadata <- read_csv(
@@ -126,7 +127,9 @@ sitespecies_cols <- c(
   "wsg_id",
   "wsg_specificity"
 )
-sitespecies <- as.tibble(master[sitespecies_cols])
+sitespecies <- master[sitespecies_cols] %>% 
+  unique() %>% 
+  as.tibble()
 use_data(sitespecies, overwrite = TRUE)
 
 sitespecies_metadata <- read_csv(
@@ -150,7 +153,9 @@ wsg_cols <- c(
   "site",
   "ref_id"
 )
-wsg <- as.tibble(master[wsg_cols])
+wsg <- master[wsg_cols] %>% 
+  unique() %>% 
+  as.tibble()
 use_data(wsg, overwrite = TRUE)
 
 wsg_metadata <- read_csv(
