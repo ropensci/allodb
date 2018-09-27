@@ -1,0 +1,420 @@
+site,family,species,species_code,life_form,dependent_variable_biomass_component,equation_grouping,equation_id,allometry_specificity,dbh_min_cm,dbh_max_cm,wsg_id,wsg_specificity
+Lilly Dicky,Sapindaceae,Acer rubrum,316,Tree,Total aboveground biomass,E,NA,Species,0.21,5.73,NA,NA
+Lilly Dicky,Sapindaceae,Acer saccharum,318,Tree,Total aboveground biomass,E,NA,Species,0.19,3.86,NA,NA
+Lilly Dicky,Rosaceae,Amelanchier arborea,356,Tree,Stem biomass (with bark),E,NA,Genus,8.9,25.4,NA,NA
+Lilly Dicky,Rosaceae,Amelanchier arborea,356,Tree,"Branches (live, dead)",E,NA,Genus,5,45,NA,NA
+Lilly Dicky,Rosaceae,Amelanchier arborea,356,Tree,Foliage total,E,NA,Genus,5,45,NA,NA
+Lilly Dicky,Annonaceae,Asimina triloba,367,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Lilly Dicky,Betulaceae,Carpinus caroliniana,391,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Lilly Dicky,Juglandaceae,Carya alba,409,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+Lilly Dicky,Juglandaceae,Carya cordiformis,402,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+Lilly Dicky,Juglandaceae,Carya glabra,403,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+Lilly Dicky,Juglandaceae,Carya ovata,407,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Lilly Dicky,Cannabaceae,Celtis occidentalis,462,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Lilly Dicky,Fabaceae,Cercis canadensis,471,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+Lilly Dicky,Cornaceae,Cornus florida,491,Tree,Total aboveground biomass,E,NA,Species,1.85,7.25,NA,NA
+Lilly Dicky,Rosaceae,Crataegus sp.,500,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Lilly Dicky,Fagaceae,Fagus grandifolia,531,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Lilly Dicky,Oleaceae,Fraxinus americana,541,Tree,Whole tree (above stump),E,NA,Species,25,550,NA,NA
+Lilly Dicky,Oleaceae,Fraxinus americana,541,Tree,Whole tree (above stump),E,NA,Species,0.5,6.14,NA,NA
+Lilly Dicky,Oleaceae,Fraxinus pennsylvanica,544,Tree,Whole tree (above stump),E,NA,Species,25,550,NA,NA
+Lilly Dicky,Hamamelidaceae,Hamamelis virginiana,498,Shrub,Total aboveground biomass,E,NA,Species,0.18,4.31,NA,NA
+Lilly Dicky,Cupressaceae,Juniperus virginiana,68,Tree,Total aboveground biomass,E,NA,Species,14,43,NA,NA
+Lilly Dicky,Lauraceae,Lindera benzoin,609,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Lilly Dicky,Magnoliaceae,Liriodendron tulipifera,621,Tree,Total aboveground biomass,E,NA,Species,0.42,8.53,NA,NA
+Lilly Dicky,Nyssaceae,Nyssa sylvatica,693,Tree,Total aboveground biomass,E,NA,Species,0.24,6.72,NA,NA
+Lilly Dicky,Betulaceae,Ostrya virginiana,701,Tree,Stem and branches (live),E,NA,Species,1,9,NA,NA
+Lilly Dicky,Betulaceae,Ostrya virginiana,701,Tree,Foliage total,E,NA,Species,1,9,NA,NA
+Lilly Dicky,Paulowniaceae,Paulownia tomentosa,712,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Lilly Dicky,Rosaceae,Prunus serotina,762,Tree,Total aboveground biomass,E,NA,Species,0.37,6.83,NA,NA
+Lilly Dicky,Fagaceae,Quercus alba,802,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Lilly Dicky,Fagaceae,Quercus coccinea,806,Tree,Stem and branches (live),E,NA,Species,5.08,40.64,NA,NA
+Lilly Dicky,Fagaceae,Quercus prinus,832,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Lilly Dicky,Fagaceae,Quercus rubra,833,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above stump),E,NA,Species,5.08,40.64,NA,species
+Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Total aboveground biomass,E,NA,Species,0.55,7.76,NA,species
+Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above and belowground),E,NA,Species,30.48,88.9,NA,species
+Lilly Dicky,Anacardiaceae,Rhus typhina,899,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Stem and branches (live),E,NA,Species,14.22,25.91,NA,species
+Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Stem and branches (live),E,NA,Species,29.46,41.66,NA,species
+Lilly Dicky,Lauraceae,Sassafras albidum,931,Tree,Whole tree (above stump),E,NA,Species,0.4,8.49,NA,NA
+Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Lilly Dicky,Ulmaceae,Ulmus americana,972,Tree,Whole tree (above stump),E,NA,Species,2.5,40,NA,NA
+Lilly Dicky,Ulmaceae,Ulmus rubra,975,Tree,Whole tree (above stump),E,NA,Species,2.5,40,NA,NA
+SCBI,Aceraceae,Acer negundo,acne,Tree,Total aboveground biomass,G,NA,Family,3,66,NA,NA
+SCBI,Aceraceae,Acer platanoides,acpl,Tree,Total aboveground biomass,G,NA,Family,3,66,NA,NA
+SCBI,Aceraceae,Acer rubrum,acru,Tree,Total aboveground biomass,E,NA,Species,1,55,NA,NA
+SCBI,Simaroubaceae,Ailanthus altissima,aial,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Rosaceae,Amelanchier arborea,amar,Tree,Stem biomass (with bark),E,NA,Genus,8.9,25.4,NA,NA
+SCBI,Rosaceae,Amelanchier arborea,amar,Tree,"Branches (live, dead)",E,NA,Genus,5,45,NA,NA
+SCBI,Rosaceae,Amelanchier arborea,amar,Tree,Foliage total,E,NA,Genus,5,45,NA,NA
+SCBI,Annonaceae,Asimina triloba,astr,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Berberidaceae,Berberis thunbergii,beth,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Betulaceae,Carpinus caroliniana,caca,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Juglandaceae,Carya cordiformis,caco,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+SCBI,Juglandaceae,Carya glabra,cagl,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+SCBI,Juglandaceae,Carya ovalis,caovl,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+SCBI,Juglandaceae,Carya tomentosa,cato,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+SCBI,Fagaceae,Castanea dentata,cade,Tree,Total aboveground biomass,G,NA,Family,3,89,NA,NA
+SCBI,Cannabaceae,Celtis occidentalis,ceoc,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Fabaceae,Cercis canadensis,ceca,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+SCBI,Oleaceae,Chionanthus virginicus,chvi,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Cornaceae,Cornus alternifolia,coal,Tree,Total aboveground biomass,E,NA,Species,2.54,12.45,NA,NA
+SCBI,Cornaceae,Cornus florida,cofl,Tree,Total aboveground biomass,E,NA,Species,2.54,12.45,NA,NA
+SCBI,Betulaceae,Corylus americana,coam,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Rosaceae,Crataegus pruinosa,crpr,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SCBI,Ebenaceae,Diospyros virginiana,divi,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Elaeagnaceae,Elaeagnus umbellata,elum,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Celastraceae,Euonymus alatus,eual,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Fagaceae,Fagus grandifolia,fagr,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Oleaceae,Fraxinus americana,fram,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Oleaceae,Fraxinus nigra,frni,Tree,Total aboveground biomass,E,NA,Species,4,32,NA,NA
+SCBI,Oleaceae,Fraxinus pennsylvanica,frpe,Tree,Total aboveground biomass,E,NA,Species,4,32,NA,NA
+SCBI,Hamamelidaceae,Hamamelis virginiana,havi,Shrub,Total aboveground biomass,E,NA,Species,0.18,4.31,NA,NA
+SCBI,Aquifoliaceae,Ilex verticillata,ilve,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SCBI,Juglandaceae,Juglans cinerea,juci,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+SCBI,Juglandaceae,Juglans nigra,juni,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+SCBI,Lauraceae,Lindera benzoin,libe,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SCBI,Magnoliaceae,Liriodendron tulipifera,litu,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Caprifoliaceae,Lonicera maackii,loma,Shrub,Total aboveground biomass,E,NA,Species,0.12,0.69,NA,NA
+SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Stem and branches (live),E,NA,Species,14.48,25.4,NA,NA
+SCBI,Paulowniaceae,Paulownia tomentosa,pato,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Pinaceae,Pinus pungens,pipu,Tree,Total aboveground biomass,E,NA,Species,1,55,NA,NA
+SCBI,Pinaceae,Pinus strobus,pist,Tree,Total aboveground biomass,E,NA,Species,1,55,NA,NA
+SCBI,Pinaceae,Pinus virginiana,pivi,Tree,Total aboveground biomass,E,NA,Species,3.5,35.6,NA,NA
+SCBI,Platanaceae,Platanus occidentalis,ploc,Tree,Stem and branches (live),E,NA,Species,27.94,49.53,NA,NA
+SCBI,Rosaceae,Prunus avium,prav,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Rosaceae,Prunus persica,prpe,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Rosaceae,Prunus serotina,prse,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Fagaceae,Quercus alba,qual,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Fagaceae,Quercus coccinea,quco,Tree,Stem and branches (live),E,NA,Species,5.08,40.64,NA,NA
+SCBI,Fagaceae,Quercus falcata,qufa,Tree,Whole tree (above stump),E,NA,Species,5.84,25.4,NA,NA
+SCBI,Fagaceae,Quercus falcata,qufa,Tree,Whole tree (above stump),E,NA,Species,27.94,47.75,NA,NA
+SCBI,Fagaceae,Quercus michauxii,qumi,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Fagaceae,Quercus montana,qupr,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Fagaceae,Quercus muehlenbergii,qumu,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Fagaceae,Quercus rubra,quru,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above stump),E,NA,Species,5.08,40.64,NA,species
+SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above and belowground),E,NA,Species,30.48,88.9,NA,species
+SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem and branches (live),E,NA,Species,14.22,25.91,NA,species
+SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem and branches (live),E,NA,Species,29.46,41.66,NA,species
+SCBI,Rosaceae,Rosa multiflora,romu,Shrub,Total aboveground biomass,E,NA,Genus,0.2,1.2,NA,NA
+SCBI,Rosaceae,Rubus allegheniensis,rual,Shrub,Total aboveground biomass,E,NA,Species,0.3,0.9,NA,NA
+SCBI,Rosaceae,Rubus pensilvanicus,rupe,Shrub,Total aboveground biomass,E,NA,Species,0.3,0.9,NA,NA
+SCBI,Rosaceae,Rubus phoenicolasius,ruph,Shrub,Total aboveground biomass,E,NA,Species,0.3,0.9,NA,NA
+SCBI,Adoxaceae,Sambucus canadensis,saca,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SCBI,Lauraceae,Sassafras albidum,saal,Tree,Whole tree (above stump),E,NA,Species,0.4,8.49,NA,NA
+SCBI,Malvaceae,Tilia americana,tiam,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SCBI,Ulmaceae,Ulmus americana,ulam,Tree,Whole tree (above stump),E,NA,Genus,2.54,27.43,NA,NA
+SCBI,Ulmaceae,Ulmus rubra,ulru,Tree,Stem and branches (live),E,NA,Genus,2.54,27.43,NA,NA
+SCBI,Adoxaceae,Viburnum acerifolium,viac,Shrub,Total aboveground biomass,E,NA,Species,0.28,1.59,NA,NA
+SCBI,Adoxaceae,Viburnum prunifolium,vipr,Shrub,Total aboveground biomass,E,NA,Species,0.28,1.59,NA,NA
+SCBI,Adoxaceae,Viburnum recognitum,vire,Shrub,Total aboveground biomass,E,NA,Species,0.28,1.59,NA,NA
+SERC,Aceraceae,Acer negundo,ACNE2,Tree,Total aboveground biomass,G,NA,Family,3,66,NA,NA
+SERC,Aceraceae,Acer rubrum,ACRU,Tree,Total aboveground biomass,E,NA,Species,1,55,NA,NA
+SERC,Simaroubaceae,Ailanthus altissima,AIAL,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Fabaceae,Albizia julibrissin,ALJU,Tree,Total aboveground biomass,G,NA,Family,3,89,NA,NA
+SERC,Rosaceae,Amelanchier arborea,AMAR3,Tree,Stem biomass (with bark),E,NA,Genus,8.9,25.4,NA,NA
+SERC,Rosaceae,Amelanchier arborea,AMAR3,Tree,"Branches (live, dead)",E,NA,Genus,5,45,NA,NA
+SERC,Rosaceae,Amelanchier arborea,AMAR3,Tree,Foliage total,E,NA,Genus,5,45,NA,NA
+SERC,Rosaceae,Amelanchier canadensis,AMCA4,Tree,Stem biomass (with bark),E,NA,Genus,8.9,25.4,NA,NA
+SERC,Rosaceae,Amelanchier canadensis,AMCA4,Tree,"Branches (live, dead)",E,NA,Genus,5,45,NA,NA
+SERC,Rosaceae,Amelanchier canadensis,AMCA4,Tree,Foliage total,E,NA,Genus,5,45,NA,NA
+SERC,Araliaceae,Aralia spinosa,ARSP2,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Annonaceae,Asimina triloba,ASTR,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Moraceae,Broussonetia papyrifera,BRPA4,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Betulaceae,Carpinus caroliniana,CACA18,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Juglandaceae,Carya alba,CAAL27,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+SERC,Juglandaceae,Carya cordiformis,CACO15,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+SERC,Juglandaceae,Carya glabra,CAGL8,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+SERC,Juglandaceae,Carya sp.,CARYA,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+SERC,Cannabaceae,Celtis occidentalis,CEOC,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Rubiaceae,Cephalanthus occidentalis,CEOC2,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Fabaceae,Cercis canadensis,CECA4,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+SERC,Cornaceae,Cornus florida,COFL2,Tree,Total aboveground biomass,E,NA,Species,2.54,12.45,NA,NA
+SERC,Elaeagnaceae,Elaeagnus angustifolia,ELAN,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Elaeagnaceae,Elaeagnus umbellata,ELUM,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Fagaceae,Fagus grandifolia,FAGR,Tree,Total aboveground biomass,E,NA,Species,1,63,NA,NA
+SERC,Oleaceae,Fraxinus americana,FRAM2,Tree,Whole tree (above stump),E,NA,Species,25,550,NA,NA
+SERC,Oleaceae,Fraxinus pennsylvanica,FRPE,Tree,Whole tree (above stump),E,NA,Species,2.54,27.69,NA,NA
+SERC,Aquifoliaceae,Ilex opaca,ILOP,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SERC,Aquifoliaceae,Ilex verticillata,ILVE,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SERC,Juglandaceae,Juglans nigra,JUNI,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+SERC,Cupressaceae,Juniperus virginiana,JUVI,Tree,Total aboveground biomass,E,NA,Species,14,43,NA,NA
+SERC,Ericaceae,Kalmia latifolia,KALA,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SERC,Oleaceae,Ligustrum sp.,LIGUS2,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Lauraceae,Lindera benzoin,LIBE3,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SERC,Altingiaceae,Liquidambar styraciflua,LIST2,Tree,Whole tree (above stump),E,NA,Species,28.45,50.8,NA,NA
+SERC,Magnoliaceae,Liriodendron tulipifera,LITU,Tree,Total aboveground biomass,E,NA,Species,10.2,55.8,NA,NA
+SERC,Caprifoliaceae,Lonicera maackii,LOMA6,Shrub,Total aboveground biomass,E,NA,Species,0.12,0.69,NA,NA
+SERC,Moraceae,Morus rubra,MORU2,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Nyssaceae,Nyssa sylvatica,NYSY,Tree,Total aboveground biomass,E,NA,Species,4.06,12.45,NA,NA
+SERC,Scrophulariaceae,Paulownia tomentosa,PATO2,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Pinaceae,Pinus taeda,PITA,Tree,Total aboveground biomass,E,NA,Species,3.5,35.6,NA,NA
+SERC,Pinaceae,Pinus virginiana,PIVI2,Tree,Total aboveground biomass,E,NA,Species,3.5,35.6,NA,NA
+SERC,Platanaceae,Platanus occidentalis,PLOC,Tree,Whole tree (above stump),E,NA,Species,4.83,23.88,NA,NA
+SERC,Platanaceae,Platanus occidentalis,PLOC,Tree,Whole tree (above stump),E,NA,Species,24.94,49.53,NA,NA
+SERC,Salicaceae,Populus grandidentata,POGR4,Tree,Total aboveground biomass,E,NA,Species,0.68,7.49,NA,NA
+SERC,Rosaceae,Prunus avium,PRAV,Tree,Total aboveground biomass,E,NA,Species,0.37,6.83,NA,NA
+SERC,Rosaceae,Prunus serotina,PRSE2,Tree,Total aboveground biomass,E,NA,Species,0.37,6.83,NA,NA
+SERC,Fagaceae,Quercus alba,QUAL,Tree,Total aboveground biomass,E,NA,Species,7,63,NA,NA
+SERC,Fagaceae,Quercus coccinea,QUCO2,Tree,Total aboveground biomass,E,NA,Species,15,43.3,NA,NA
+SERC,Fagaceae,Quercus falcata,QUFA,Tree,Whole tree (above stump),E,NA,Species,5.84,25.4,NA,NA
+SERC,Fagaceae,Quercus falcata,QUFA,Tree,Whole tree (above stump),E,NA,Species,27.94,47.75,NA,NA
+SERC,Fagaceae,Quercus michauxii,QUMI,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+SERC,Fagaceae,Quercus montana,QUMO4,Tree,Total aboveground biomass,E,NA,Species,10.6,57.5,NA,NA
+SERC,Fagaceae,Quercus palustris,QUPA2,Tree,Total aboveground biomass,E,NA,Species,2.5,55,NA,NA
+SERC,Fagaceae,Quercus rubra,QURU,Tree,Total aboveground biomass,E,NA,Species,2.5,55,NA,NA
+SERC,Fagaceae,Quercus sp.,QUERC,Tree,Total aboveground biomass,G,NA,Family,3,89,NA,NA
+SERC,Fagaceae,Quercus stellata,QUST,Tree,Total aboveground biomass,E,NA,Species,3.3,11.94,NA,NA
+SERC,Fagaceae,Quercus velutina,QUVE,Tree,Whole tree (above stump),E,NA,Species,7.62,30.48,NA,species
+SERC,Fagaceae,Quercus velutina,QUVE,Tree,Whole tree (above and belowground),E,NA,Species,30.48,88.9,NA,species
+SERC,Ericaceae,Rhododendron arborescens,RHAR3,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SERC,Anacardiaceae,Rhus typhina,RHTY,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Rosaceae,Rosa multiflora,ROMU,Shrub,Total aboveground biomass,E,NA,Genus,0.2,1.2,NA,NA
+SERC,Salicaceae,Salix nigra,SANI,Shrub,Total aboveground biomass,G,NA,Family,3,70,NA,NA
+SERC,Adoxaceae,Sambucus nigra,SANIC4,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+SERC,Lauraceae,Sassafras albidum,SAAL5,Tree,Whole tree (above stump),E,NA,Species,0.4,8.49,NA,NA
+SERC,Malvaceae,Tilia americana,TIAM,Tree,Stem and branches (live),E,NA,Species,1.6,10,NA,NA
+SERC,Ulmaceae,Ulmus americana,ULAM,Tree,Whole tree (above stump),E,NA,Genus,2.54,27.43,NA,NA
+SERC,Ulmaceae,Ulmus rubra,ULRU,Tree,Stem and branches (live),E,NA,Genus,2.54,27.43,NA,NA
+SERC,Ericaceae,Vaccinium corymbosum,VACO,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SERC,Ericaceae,Vaccinium sp.,VACCI,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+SERC,Adoxaceae,Viburnum acerifolium,VIAC,Shrub,Total aboveground biomass,E,NA,Species,0.28,1.59,NA,NA
+SERC,Adoxaceae,Viburnum dentatum,VIDE,Shrub,Total aboveground biomass,E,NA,Species,0.28,1.59,NA,NA
+SERC,Adoxaceae,Viburnum prunifolium,VIPR,Shrub,Total aboveground biomass,E,NA,Species,0.28,1.59,NA,NA
+Tyson,Sapindaceae,Acer negundo,aceneg,Tree,Total aboveground biomass,G,NA,Family,3,66,NA,NA
+Tyson,Sapindaceae,Acer rubrum,acerub,Tree,Total aboveground biomass,E,NA,Species,0.21,5.73,NA,NA
+Tyson,Sapindaceae,Acer saccharum,acesac,Tree,Total aboveground biomass,E,NA,Species,0.19,3.86,NA,NA
+Tyson,Simaroubaceae,Ailanthus altissima,ailalt,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Tyson,Rosaceae,Amelanchier arborea,amearb,Tree,Stem biomass (with bark),E,NA,Genus,8.9,25.4,NA,NA
+Tyson,Rosaceae,Amelanchier arborea,amearb,Tree,"Branches (live, dead)",E,NA,Genus,5,45,NA,NA
+Tyson,Rosaceae,Amelanchier arborea,amearb,Tree,Foliage total,E,NA,Genus,5,45,NA,NA
+Tyson,Annonaceae,Asimina triloba,asitri,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Tyson,Juglandaceae,Carya cordiformis,carcor,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+Tyson,Juglandaceae,Carya glabra,cargla,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+Tyson,Juglandaceae,Carya ovata,carova,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Tyson,Juglandaceae,Carya sp.,carsp,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+Tyson,Juglandaceae,Carya texana,cartex,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+Tyson,Juglandaceae,Carya tomentosa,cartom,Tree,Total aboveground biomass,E,NA,Genus,8.2,52.3,NA,NA
+Tyson,Cannabaceae,Celtis occidentalis,celocc,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Tyson,Cannabaceae,Celtis tenuifolia,celten,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Tyson,Fabaceae,Cercis canadensis,cercan,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+Tyson,Cornaceae,Cornus drummondii,cordru,Tree,Total aboveground biomass,E,NA,Species,1.85,7.25,NA,NA
+Tyson,Cornaceae,Cornus florida,corflo,Tree,Total aboveground biomass,E,NA,Species,1.85,7.25,NA,NA
+Tyson,Rosaceae,Crataegus sp.,crasp,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Tyson,Ebenaceae,Diospyros virginiana,diovir,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Tyson,Rhamnaceae,Frangula caroliniana,fracar,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Tyson,Oleaceae,Fraxinus americana,fraame,Tree,Whole tree (above stump),E,NA,Species,25,550,NA,NA
+Tyson,Oleaceae,Fraxinus americana,fraame,Tree,Whole tree (above stump),E,NA,Species,0.5,6.14,NA,NA
+Tyson,Fabaceae,Gleditsia triacanthos,gletri,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+Tyson,Juglandaceae,Juglans nigra,jugnig,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+Tyson,Cupressaceae,Juniperus virginiana,junvir,Tree,Total aboveground biomass,E,NA,Species,14,43,NA,NA
+Tyson,Lauraceae,Lindera benzoin,linben,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Tyson,Caprifoliaceae,Lonicera maackii,lonmaa,Shrub,Total aboveground biomass,E,NA,Species,0.12,0.69,NA,NA
+Tyson,Rosaceae,Malus ioensis,malioe,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Tyson,Moraceae,Morus rubra,morrub,Tree,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Tyson,Betulaceae,Ostrya virginiana,ostvir,Tree,Stem and branches (live),E,NA,Species,1,9,NA,NA
+Tyson,Betulaceae,Ostrya virginiana,ostvir,Tree,Foliage total,E,NA,Species,1,9,NA,NA
+Tyson,Platanaceae,Platanus occidentalis,plaocc,Tree,Whole tree (above stump),E,NA,Species,24.94,49.53,NA,NA
+Tyson,Rosaceae,Prunus americana,pruame,Tree,Total aboveground biomass,E,NA,Species,0.37,6.83,NA,NA
+Tyson,Rosaceae,Prunus serotina,pruser,Tree,Total aboveground biomass,E,NA,Species,0.37,6.83,NA,NA
+Tyson,Rosaceae,Prunus sp.,prusp,Tree,Total aboveground biomass,E,NA,Species,0.37,6.83,NA,NA
+Tyson,Fagaceae,Quercus alba,quealb,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Tyson,Fagaceae,Quercus marilandica,quemar,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Tyson,Fagaceae,Quercus muehlenbergii,quemue,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Tyson,Fagaceae,Quercus rubra,querub,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Tyson,Fagaceae,Quercus sp.,quesp,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Tyson,Fagaceae,Quercus stellata,queste,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Tyson,Fagaceae,Quercus velutina,quevel,Tree,Whole tree (above stump),E,NA,Species,5.08,40.64,NA,species
+Tyson,Fagaceae,Quercus velutina,quevel,Tree,Total aboveground biomass,E,NA,Species,0.55,7.76,NA,species
+Tyson,Fagaceae,Quercus velutina,quevel,Tree,Whole tree (above and belowground),E,NA,Species,30.48,88.9,NA,species
+Tyson,Lauraceae,Sassafras albidum,sasalb,Tree,Whole tree (above stump),E,NA,Species,0.4,8.49,NA,NA
+Tyson,Sapotaceae,Sideroxylon lanuginosum,sidlan,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Tyson,Malvaceae,Tilia americana,tilame,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Tyson,Ulmaceae,Ulmus rubra,ulmrub,Tree,Whole tree (above stump),E,NA,Species,2.5,40,NA,NA
+UCSC,Sapindaceae,Acer macrophyllum,ACERMA,Tree,Total aboveground biomass,G,NA,Family,3,66,NA,NA
+UCSC,Ericaceae,Arbutus menziesii,ARBUME,Tree,Live crown,E,NA,Species,1.5,NA,NA,NA
+UCSC,Ericaceae,Arbutus menziesii,ARBUME,Tree,Dead crown,E,NA,Species,1.5,NA,NA,NA
+UCSC,Ericaceae,Arbutus menziesii,ARBUME,Tree,Stem biomass (with bark),E,NA,Species,1.5,NA,NA,NA
+UCSC,Ericaceae,Arctostaphylos andersonii,ARCTAN,Shrub,Total aboveground biomass,E,NA,Species,0.5,2.1,NA,NA
+UCSC,Ericaceae,Arctostaphylos tomentosa,ARCTCR,Shrub,Total aboveground biomass,E,NA,Species,0.5,2.1,NA,NA
+UCSC,Asteraceae,Baccharis pilularis,BACCPI,Shrub,Total aboveground biomass,E,NA,Species,NI,NI,NA,NA
+UCSC,Rhamnaceae,Ceanothus thyrsiflorus,CEANTH,Shrub,Total aboveground biomass,E,NA,Species,0.6,2.5,NA,NA
+UCSC,Betulaceae,Corylus cornuta,CORYCO,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+UCSC,Rosaceae,Cotoneaster franchetii,COTOFR,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+UCSC,Rosaceae,Cotoneaster pannosus,COTOPA,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+UCSC,Rosaceae,Crataegus monogyna,CRATMO,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+UCSC,Myrtaceae,Eucalyptus globulus,EUCAGL,Tree,Total aboveground biomass,E,NA,Species,2,16,NA,NA
+UCSC,Rosaceae,Heteromeles arbutifolia,HETEAR,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+UCSC,Aquifoliaceae,Ilex aquifolium,ILEXAQ,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+UCSC,Fagaceae,Lithocarpus densiflorus,LITHDE,Tree,Live crown,E,NA,Species,1.5,NA,NA,NA
+UCSC,Fagaceae,Lithocarpus densiflorus,LITHDE,Tree,Dead crown,E,NA,Species,1.5,NA,NA,NA
+UCSC,Fagaceae,Lithocarpus densiflorus,LITHDE,Tree,Stem biomass (with bark),E,NA,Species,1.5,NA,NA,NA
+UCSC,Myricaceae,Morella californica,MORECA,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+UCSC,Pinaceae,Pinus attenuata,PINUAT,Tree,Stem biomass (with bark),E,NA,Species,24.1,117.7,NA,NA
+UCSC,Pinaceae,Pinus ponderosa,PINUPO,Tree,Stem biomass (with bark),E,NA,Species,24.1,117.7,NA,NA
+UCSC,Pinaceae,Pseudotsuga menziesii,PSEUME,Tree,Whole tree (above stump),E,NA,Species,1.4,13.4,NA,NA
+UCSC,Rosaceae,Pyracantha angustifolia,PYRAAN,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+UCSC,Fagaceae,Quercus agrifolia,QUERAG,Tree,Total aboveground biomass,G,NA,Family,3,89,NA,NA
+UCSC,Fagaceae,Quercus parvula,QUERPA,Tree,Total aboveground biomass,G,NA,Family,3,89,NA,NA
+UCSC,Rhamnaceae,Rhamnus californica,RHAMCA,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+UCSC,Grossulariaceae,Ribes divaricatum,RIBEDI,Shrub,Total aboveground biomass,E,NA,Genus,0.4,1.4,NA,NA
+UCSC,Salicaceae,Salix lasiandra,SALILA,Shrub,Total aboveground biomass,G,NA,Family,3,70,NA,NA
+UCSC,Adoxaceae,Sambucus nigra,SAMBNI,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+UCSC,Cupressaceae,Sequoia sempervirens,SEQUSE,Tree,Total aboveground biomass,G,NA,Family,3,614,NA,NA
+UCSC,Lauraceae,Umbellularia californica,UMBECA,Tree,Total aboveground biomass,E,NA,Species,7.6,61,NA,NA
+UCSC,Ericaceae,Vaccinium ovatum,VACCOV,Shrub,Total aboveground biomass (wood and bark),E,NA,Species,0.6,3.6,NA,NA
+Wabikon,Pinaceae,Abies balsamea,ABIBAL,Tree,Whole tree (above stump),E,NA,Species,2.5,40,NA,NA
+Wabikon,Aceraceae,Acer rubrum,ACERUB,Tree,Total aboveground biomass,E,NA,Species,3.1,24.6,NA,NA
+Wabikon,Aceraceae,Acer rubrum,ACERUB,Tree,Total aboveground biomass,E,NA,Species,10,52.2,NA,NA
+Wabikon,Aceraceae,Acer saccharum,ACESUG,Tree,Total aboveground biomass,E,NA,Species,7.5,23.7,NA,NA
+Wabikon,Aceraceae,Acer spicatum,ACESPI,Shrub,Total aboveground biomass,E,NA,Species,3.1,24.6,NA,NA
+Wabikon,Betulaceae,Alnus incana,ALNINC,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wabikon,Rosaceae,Amelanchier laevis,AMELAE,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wabikon,Rosaceae,Amelanchier sanguinea,AMESAN,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wabikon,Betulaceae,Betula alleghaniensis,BETALL,Tree,Whole tree (above stump),E,NA,Species,2.5,40,NA,NA
+Wabikon,Betulaceae,Betula papyrifera,BETPAP,Tree,Total aboveground biomass,E,NA,Species,3.5,26.3,NA,NA
+Wabikon,Cornaceae,Cornus alternifolia,CORALT,Tree,Total aboveground biomass,E,NA,Species,1.85,7.25,NA,NA
+Wabikon,Betulaceae,Corylus cornuta,CORCOR,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Wabikon,Thymelaeaceae,Dirca palustris,DIRPAL,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Wabikon,Oleaceae,Fraxinus americana,FRAAME,Tree,Whole tree (above stump),E,NA,Species,25,550,NA,NA
+Wabikon,Oleaceae,Fraxinus americana,FRAAME,Tree,Whole tree (above stump),E,NA,Species,0.5,6.14,NA,NA
+Wabikon,Oleaceae,Fraxinus nigra,FRANIG,Tree,Total aboveground biomass,E,NA,Species,4,32,NA,NA
+Wabikon,Aquifoliaceae,Ilex mucronata,ILEMUC,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wabikon,Aquifoliaceae,Ilex verticillata,ILEVER,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wabikon,Juglandaceae,Juglans cinerea,JUGCIN,Tree,Total aboveground biomass,G,NA,Family,4,42,NA,NA
+Wabikon,Pinaceae,Larix laricina,LARLAR,Tree,Whole tree (above stump),E,NA,Species,12.9,30,NA,NA
+Wabikon,Caprifoliaceae,Lonicera canadensis,LONCAN,Shrub,Total aboveground biomass,E,NA,Species,0.12,0.69,NA,NA
+Wabikon,Rosaceae,Malus pumila,MALPUM,Tree,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wabikon,Betulaceae,Ostrya virginiana,OSTVIR,Tree,Stem and branches (live),E,NA,Species,1,9,NA,NA
+Wabikon,Betulaceae,Ostrya virginiana,OSTVIR,Tree,Foliage total,E,NA,Species,1,9,NA,NA
+Wabikon,Pinaceae,Picea glauca,PICGLA,Tree,Whole tree (above stump),E,NA,Species,1.1,32.6,NA,NA
+Wabikon,Pinaceae,Picea mariana,PICMAR,Tree,Whole tree (above stump),E,NA,Species,1.4,23.4,NA,NA
+Wabikon,Pinaceae,Pinus strobus,PINSTR,Tree,Total aboveground biomass,E,NA,Species,1,55,NA,NA
+Wabikon,Salicaceae,Populus balsamifera,POPBAL,Tree,Whole tree (above stump),E,NA,Species,2.5,55,NA,NA
+Wabikon,Salicaceae,Populus grandidentata,POPGRA,Tree,Total aboveground biomass,E,NA,Species,0.68,7.49,NA,NA
+Wabikon,Salicaceae,Populus tremuloides,POPTRE,Tree,Total aboveground biomass,E,NA,Species,14.7,39.7,NA,NA
+Wabikon,Rosaceae,Prunus pensylvanica,PRUPEN,Tree,Total aboveground biomass,E,NA,Species,0.37,6.83,NA,NA
+Wabikon,Rosaceae,Prunus serotina,PRUSER,Tree,Total aboveground biomass,E,NA,Species,0.37,6.83,NA,NA
+Wabikon,Rosaceae,Prunus virginiana,PRUVIR,Tree,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wabikon,Fagaceae,Quercus rubra,QUERUB,Tree,Total aboveground biomass,E,NA,Species,2.8,69.5,NA,NA
+Wabikon,Grossulariaceae,Ribes cynosbati,RIBCYN,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Wabikon,Adoxaceae,Sambucus racemosa,SAMRAC,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Wabikon,Rosaceae,Sorbus americana,SORAME,Tree,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wabikon,Cupressaceae,Thuja occidentalis,THUOCC,Tree,Whole tree (above stump),E,NA,Species,2.5,40,NA,NA
+Wabikon,Malvaceae,Tilia americana,TILAME,Tree,Foliage total,E,NA,Species,2.5,40,NA,NA
+Wabikon,Malvaceae,Tilia americana,TILAME,Tree,Stem and branches (live),E,NA,Species,5.08,50.8,NA,NA
+Wabikon,Pinaceae,Tsuga canadensis,TSUCAN,Tree,Total aboveground biomass,E,NA,Species,0.1,2.54,NA,NA
+Wabikon,Ulmaceae,Ulmus americana,ULMAME,Tree,Whole tree (above stump),E,NA,Species,2.5,40,NA,NA
+Wind River,Pinaceae,Abies amabilis,ABAM,Tree,Whole tree (above stump),E,NA,Species,31,90.4,NA,NA
+Wind River,Pinaceae,Abies grandis,ABGR,Tree,Stem biomass (with bark),E,NA,Species,0,10.16,NA,NA
+Wind River,Pinaceae,Abies grandis,ABGR,Tree,"Crown biomass (branches, foliage, twigs)",E,NA,Species,2.54,30.48,NA,NA
+Wind River,Pinaceae,Abies procera,ABPR,Tree,Branches (live),E,NA,Species,18.8,111,NA,NA
+Wind River,Pinaceae,Abies procera,ABPR,Tree,Foliage total,E,NA,Species,18.8,111,NA,NA
+Wind River,Pinaceae,Abies procera,ABPR,Tree,Stem biomass,E,NA,Species,15.9,235.5,NA,NA
+Wind River,Pinaceae,Abies sp.,ABSP,Tree,Branches (live),E,NA,Genus,8.7,111,NA,NA
+Wind River,Pinaceae,Abies sp.,ABSP,Tree,Foliage total,E,NA,Genus,8.7,111,NA,NA
+Wind River,Pinaceae,Abies sp.,ABSP,Tree,Stem bark biomass,E,NA,Genus,8.7,111,NA,NA
+Wind River,Pinaceae,Abies sp.,ABSP,Tree,Stem biomass (without bark),E,NA,Genus,8.7,111,NA,NA
+Wind River,Sapindaceae,Acer circinatum,ACCI,Shrub,Total aboveground biomass,E,NA,Species,0.1,2.54,NA,NA
+Wind River,Sapindaceae,Acer glabrum,ACGL,Tree,Total aboveground biomass,E,NA,Species,0.1,2.54,NA,NA
+Wind River,Betulaceae,Alnus rubra,ALRU,Tree,Whole tree (above stump),E,NA,Species,1.7,13.2,NA,NA
+Wind River,Rosaceae,Amelanchier alnifolia,AMAL,Tree,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wind River,Cornaceae,Cornus nuttallii,CONU,Tree,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wind River,Betulaceae,Corylus cornuta,COCOC,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Wind River,Ericaceae,Gaultheria shallon,GASH,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wind River,Rosaceae,Holodiscus discolor,HODI,Shrub,Total aboveground biomass,E,NA,Species,0.7,2.2,NA,NA
+Wind River,Caprifoliaceae,Lonicera ciliosa,LOCI,Shrub,Total aboveground biomass,E,NA,Species,0.12,0.69,NA,NA
+Wind River,Ericaceae,Menziesia ferruginea,MEFE,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wind River,Rosaceae,Oemleria cerasiformis,OECE,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wind River,Pinaceae,Pinus monticola,PIMO,Tree,Total aboveground biomass,G,NA,Genus,3,180,NA,NA
+Wind River,Pinaceae,Pseudotsuga menziesii,PSME,Tree,Total aboveground biomass,E,NA,Species,10,40,NA,NA
+Wind River,Pinaceae,Pseudotsuga menziesii,PSME,Tree,Total aboveground biomass,E,NA,Species,1.4,13.4,NA,NA
+Wind River,Rhamnaceae,Rhamnus purshiana,RHPU,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Wind River,Ericaceae,Rhododendron macrophyllum,RHMA,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Wind River,Rosaceae,Rosa gymnocarpa,ROGY,Shrub,Total aboveground biomass,E,NA,Genus,0.2,1.2,NA,NA
+Wind River,Rosaceae,Rubus leucodermis,RULE,Shrub,Total aboveground biomass,E,NA,Species,0.1,1.1,NA,NA
+Wind River,Rosaceae,Rubus spectabilis,RUSP,Shrub,Total aboveground biomass,E,NA,Species,0.1,1.1,NA,NA
+Wind River,Taxaceae,Taxus brevifolia,TABR,Tree,Total aboveground biomass,G,NA,Family,3,109,NA,NA
+Wind River,Cupressaceae,Thuja plicata,THPL,Tree,Total aboveground biomass,E,NA,Species,0.18,2.23,NA,NA
+Wind River,Cupressaceae,Thuja plicata,THPL,Tree,Total aboveground biomass,E,NA,Species,4.2,7,NA,NA
+Wind River,Pinaceae,Tsuga heterophylla,TSHE,Tree,Whole tree (above stump),E,NA,Species,16,49,NA,NA
+Wind River,Ericaceae,Vaccinium membranaceum,VAME,Shrub,Total aboveground biomass,E,NA,Species,0.4,3.3,NA,NA
+Wind River,Ericaceae,Vaccinium ovalifolium,VAOV,Shrub,Total aboveground biomass,E,NA,Species,0.4,3.3,NA,NA
+Wind River,Ericaceae,Vaccinium parvifolium,VAPA,Shrub,Total aboveground biomass,E,NA,Species,0.4,3.3,NA,NA
+Wytham Woods,Sapindaceae,Acer campestre,ACERCA,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Sapindaceae,Acer pseudoplatanus,ACERPS,Tree,Total aboveground biomass,E,NA,Species,11.5,96.5,NA,NA
+Wytham Woods,Betulaceae,Betula sp.,BETUSP,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Betulaceae,Carpinus betulus,CARPBE,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Fagaceae,Castanea sativa,CASTSA,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Cornaceae,Cornus sanguinea,CORNSA,Shrub,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Betulaceae,Corylus avellana,CORYAV,Shrub,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Rosaceae,Crataegus monogyna,CRATMO,Shrub,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Celastraceae,Euonymus europaeus,EUONEU,Shrub,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Fagaceae,Fagus sylvatica,FAGUSY,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Rhamnaceae,Frangula alnus,FRANAL,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Oleaceae,Fraxinus excelsior,FRAXEX,Tree,Total aboveground biomass,E,NA,Species,9,104,NA,NA
+Wytham Woods,Aquifoliaceae,Ilex aquifolium,ILEXAQ,Shrub,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Pinaceae,Larix decidua,LARIDE,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Pinaceae,Picea abies,PICEAB,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Pinaceae,Pinus sylvatica,PINUSY,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Rosaceae,Prunus avium,PRUNAV,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Rosaceae,Prunus spinosa,PRUNSP,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Pinaceae,Pseudotsuga menziesii,PSEUME,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Fagaceae,Quercus robur,QUERRO,Tree,Total aboveground biomass,E,NA,Species,14,162.5,NA,NA
+Wytham Woods,Salicaceae,Salix sp.,SALISP,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Adoxaceae,Sambucus nigra,SAMBNI,Shrub,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Taxaceae,Taxus baccata,TAXUBA,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Wytham Woods,Malvaceae,Tilia x europaea,TILIEU,Tree,Total aboveground biomass,E,NA,Woody species,NI,NI,NA,NA
+Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Branches (live),E,NA,Species,18.8,111,NA,NA
+Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Foliage total,E,NA,Species,18.8,111,NA,NA
+Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Stem biomass,E,NA,Species,15.9,235.5,NA,NA
+Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Stem biomass (with bark),E,NA,Species,14.4,158.4,NA,NA
+Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Branches (live),E,NA,Species,18.8,111,NA,NA
+Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Foliage total,E,NA,Species,18.8,111,NA,NA
+Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Stem biomass,E,NA,Species,15.9,235.5,NA,NA
+Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Stem biomass (with bark),E,NA,Species,18.8,143.2,NA,NA
+Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Branches (live),E,NA,Genus,8.7,111,NA,NA
+Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Foliage total,E,NA,Genus,8.7,111,NA,NA
+Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Stem bark biomass,E,NA,Genus,8.7,111,NA,NA
+Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Stem biomass (without bark),E,NA,Genus,8.7,111,NA,NA
+Yosemite,Ericaceae,Arctostaphylos patula,ARPA,Shrub,Total aboveground biomass,E,NA,Species,0.4,11.5,NA,NA
+Yosemite,Cupressaceae,Calocedrus decurrens,CADE,Tree,Stem biomass (with bark),E,NA,Species,25,143.9,NA,NA
+Yosemite,Rhamnaceae,Ceanothus cordulatus,CECO,Shrub,Total aboveground biomass,E,NA,Species,0.3,11.7,NA,NA
+Yosemite,Rhamnaceae,Ceanothus integerrimus,CEIN,Shrub,Total aboveground biomass,E,NA,Species,0.3,6.5,NA,NA
+Yosemite,Rhamnaceae,Ceanothus parvifolius,CEPA,Shrub,Total aboveground biomass,E,NA,Species,0.3,6.5,NA,NA
+Yosemite,Fagaceae,Chrysolepis sempervirens,CHSE,Shrub,Total aboveground biomass,E,NA,Species,0.8,13,NA,NA
+Yosemite,Cornaceae,Cornus nuttallii,CONU,Tree,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Yosemite,Cornaceae,Cornus sericea,COSE,Shrub,Total aboveground biomass,E,NA,Species,0.9,5.7,NA,NA
+Yosemite,Betulaceae,Corylus cornuta subsp. californica,COCOC,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Yosemite,Rosaceae,Holodiscus discolor,HODI,Shrub,Total aboveground biomass,E,NA,Species,0.7,2.2,NA,NA
+Yosemite,Ericaceae,Leucothoe davisiae,LEDA,Shrub,Total aboveground biomass,E,NA,Species,0.5,2.6,NA,NA
+Yosemite,Pinaceae,Pinus lambertiana,PILA,Tree,Total aboveground biomass,E,NA,Species,10,40,NA,NA
+Yosemite,Pinaceae,Pinus lambertiana,PILA,Tree,Total aboveground biomass,E,NA,Species,1.4,13.4,NA,NA
+Yosemite,Pinaceae,Pinus ponderosa,PIPO,Tree,Stem biomass (with bark),E,NA,Species,24.1,117.7,NA,NA
+Yosemite,Pinaceae,Pinus ponderosa,PIPO,Tree,"Crown biomass (branches, foliage, twigs)",E,NA,Species,2.54,30.48,NA,NA
+Yosemite,Rosaceae,Prunus emarginata,PREM,Tree,Whole tree (above stump),E,NA,Species,1.7,13.2,NA,NA
+Yosemite,Rosaceae,Prunus emarginata,PREM,Tree,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Yosemite,Rosaceae,Prunus virginiana,PRVI,Tree,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Yosemite,Pinaceae,Pseudotsuga menziesii,PSME,Tree,Total aboveground biomass,E,NA,Species,10,40,NA,NA
+Yosemite,Pinaceae,Pseudotsuga menziesii,PSME,Tree,Total aboveground biomass,E,NA,Species,1.4,13.4,NA,NA
+Yosemite,Rhamnaceae,Rhamnus californica,RHCA,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Yosemite,Ericaceae,Rhododendron occidentale,RHOC,Shrub,Total aboveground biomass,G,NA,Family,3,64,NA,NA
+Yosemite,Grossulariaceae,Ribes nevadaense,RINE,Shrub,Total aboveground biomass,E,NA,Genus,0.4,1.4,NA,NA
+Yosemite,Grossulariaceae,Ribes roezlii,RIRO,Shrub,Total aboveground biomass,E,NA,Genus,0.4,1.4,NA,NA
+Yosemite,Salicaceae,Salix scouleriana,SASC,Tree,Total aboveground biomass,G,NA,Family,3,70,NA,NA
+Yosemite,Salicaceae,Salix sp.,SALIX,Tree,Total aboveground biomass,G,NA,Family,3,70,NA,NA
+Yosemite,Adoxaceae,Sambucus racemosa,SARA,Shrub,Total aboveground biomass,G,NA,Mixed hardwood,2.5,56,NA,NA
+Yosemite,Ericaceae,Vaccinium uliginosum,VAUL,Shrub,Total aboveground biomass,E,NA,Species,0.5,2.6,NA,NA
+Zofin,Pinaceae,Abies alba,JD,Tree,Total aboveground biomass,E,NA,Species,NI,40,NA,NA
+Zofin,Aceraceae,Acer platanoides,JV,Tree,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
+Zofin,Aceraceae,Acer pseudoplatanus,KL,Tree,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
+Zofin,Betulaceae,Betula pendula,BR,Tree,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
+Zofin,Fagaceae,Fagus sylvatica,BK,Tree,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
+Zofin,Pinaceae,Picea abies,SM,Tree,Total aboveground biomass,E,NA,Species,NI,40,NA,NA
+Zofin,Salicaceae,Populus tremula,TP,Tree,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
+Zofin,Salicaceae,Salix caprea,VR,Tree,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
+Zofin,Sambucaceae,Sambucus racemosa,BEZ,Shrub,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
+Zofin,Rosaceae,Sorbus aucuparia,JR,Tree,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
+Zofin,Ulmaceae,Ulmus glabra,JL,Tree,Total aboveground biomass,E,NA,Genus,NI,50,NA,NA
