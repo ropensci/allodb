@@ -9,7 +9,7 @@ datasets_chr <- path_ext_remove(path_file(dirs))
 datasets_chr %>% 
   map(~get(.x, pos = "package:allodb")) %>% 
   set_names(datasets_chr) %>% 
-  fgeo.tool::dfs_to_csv("data-raw/db")
+  fgeo.tool::dfs_to_csv(here("data-raw/db"))
 ```
 
 The result is a collection of .csv files that could be used to enter
