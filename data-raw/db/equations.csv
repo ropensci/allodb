@@ -1,0 +1,168 @@
+equation_id,equation_form,equation_allometry,dependent_variable_biomass_component,independent_variable,allometry_specificity,geographic_area,dbh_min_cm,dbh_max_cm,sample_size,dbh_units_original,biomass_units_original,allometry_development_method,regression_model,other_equations_tested,log_biomass,bias_corrected,bias_correction_factor,notes_fitting_model,original_data_availability,warning,ref_id
+NA,10^(a+b*(log10(DBH^c))),10^(1.1891+1.419*(log10(dbh^2))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.21,5.73,NA,cm,g,harvest,NA,NA,NA,1,1.056,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH^c))),10^(1.2315+1.6376*(log10(dbh^2))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.19,3.86,NA,cm,g,harvest,NA,NA,NA,1,1.016,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(7.217+1.514*log(dbh)),Stem biomass (with bark),DBH,Genus,"Tennessee, USA",8.9,25.4,NA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(2.5368+1.3197*(log10(dbh))),"Branches (live, dead)",DBH,Genus,"Minessota, USA",5,45,NA,in,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(2.0865+0.9449*(log10(dbh))),Foliage total,DBH,Genus,"Minessota, USA",5,45,NA,in,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.48+2.4835*log(dbh)),Total aboveground biomass,DBH,Mixed hardwood,North America,2.5,56,NA,cm,kg,harvest,NA,NA,NA,1,0.36,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-1.326+2.762*(log10(dbh))),Total aboveground biomass,DBH,Genus,"North Carolina, USA",8.2,52.3,10,cm,kg,harvest,linear,NA,1,1,1.005,NA,NA,NA,NA
+NA,a*(DBH^b),2.034*(dbh^2.6349),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,1,0,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.5095+2.5437*log(dbh)),Total aboveground biomass,DBH,Family,North America,4,42,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(5.67+1.97*dbh+1*log(dbh)),Total aboveground biomass,DBH,Species,"Ohio, USA",1.85,7.25,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.2118+2.4133*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,64,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^b),2.0394*(dbh^2.5715),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a+(b*DBH)+c*(DBH^d),3.203+(-0.234*dbh)+0.006*(dbh^2),Whole tree (above stump),DBH,Species,"New York, USA",25,550,32,mm,kg,harvest,NA,NA,NA,0,NA,NA,0,NA,NA
+NA,10^(a+b*(log10(DBH^c))),10^(1.2784+1.4248*(log10(dbh^2))),Whole tree (above stump),DBH,Species,"Ohio, USA",0.5,6.14,40,cm,g,harvest,NA,NA,NA,1,1.015,NA,NA,NA,NA
+NA,a*(DBA^b),38.111*(dba^2.9),Total aboveground biomass,DBA,Species,Canada,0.18,4.31,21,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,a*(DBH^b),0.1632*(dbh^2.2454),Total aboveground biomass,DBH,Species,"Tennessee, USA",14,43,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH^c))),10^(0.8306+2.7308*(log10(dbh^2))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.42,8.53,NA,cm,g,harvest,NA,NA,NA,1,1.014,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH^c))),10^(1.1468+2.363*(log10(dbh^2))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.24,6.72,NA,cm,g,harvest,NA,NA,NA,1,1.006,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(4.97+2.34*dbh+1*log(dbh)),Stem and branches (live),DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(1.92+1.86*dbh+1*log(dbh)),Foliage total,DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(1.1981+1.5876*(log10(dbh))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.37,6.83,NA,cm,g,harvest,NA,NA,NA,1,1.017,NA,NA,NA,NA
+NA,a*(DBH^b),1.5647*(dbh^2.6887),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,29,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^b),2.65743*(dbh^2.43948),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,40.64,NA,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^b),1.5509*(dbh^2.7276),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^b),2.4601*(dbh^2.4572),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^b),2.1457*(dbh^2.503),Whole tree (above stump),DBH,Species,"West Virginia, USA",5.08,40.64,19,in,lb,harvest,linear,a+(b*DBH^2); a+(b*DBH+DBH^2),0,0,NA,"Although there are more sophisticated statistical procedures, models providing the best R^ -values (or r^) were accepted and are given with their standard errors and standard errors as a percent of the W-means.",NA,NA,NA
+NA,10^(a+b*(log10(DBH^c))),10^(1.3069+1.3593*(log10(dbh^2))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.55,7.76,34,cm,g,harvest,linear,NA,1,1,1.006,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(1.00005+2.10621*(log10(dbh))),Whole tree (above and belowground),DBH,Species,"North Carolina, Kentucky, Tennessee, USA",30.48,88.9,26,in,lb,harvest,linear,NA,1,0,NA,NA,0,No specific location of sampled trees is given in publication. Geographic area may be too broad.,NA
+NA,a*(DBH^2)^b,4.13741*(dbh^2)^1.08876,Stem and branches (live),DBH,Species,"North Carolina, Georgia, USA",14.22,25.91,9,in,lb,harvest,linear_multiple,NRA,1,1,included in model,"Regression equations were developed to predict green and dry weight and volume of wood and bark combined or wood alone. A logarithmic transformation (base 10) was used to obtain a relatively homogeneous variance. The procedure outlined in Draper and Smith (1981) for fitting two linear equations with a known point of intersection was used. To adjust for bias, a correction factor was computed and applied to each model by using Baskerville's (1972) procedure.",1,NA,NA
+NA,a*(DBH^2)^b,1.04649*(dbh^2)^1.37539,Stem and branches (live),DBH,Species,"North Carolina, Georgia, USA",29.46,41.66,9,in,lb,harvest,linear_multiple,NRA,1,1,included in model,"Regression equations were developed to predict green and dry weight and volume of wood and bark combined or wood alone. A logarithmic transformation (base 10) was used to obtain a relatively homogeneous variance. The procedure outlined in Draper and Smith (1981) for fitting two linear equations with a known point of intersection was used. To adjust for bias, a correction factor was computed and applied to each model by using Baskerville's (1972) procedure.",1,NA,NA
+NA,10^(a+b*(log10(DBH^c))),10^(1.3539+2.7308*(log10(dbh^2))),Whole tree (above stump),DBH,Species,"Ohio, USA",0.4,8.49,41,cm,g,harvest,linear,NA,1,1,1.004,NA,NA,Equation built for seedlings and saplings,NA
+NA,a*(DBH^b),1.4416*(dbh^2.7324),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^b),0.004884*(dbh^2.094),Foliage total,DBH,Species,"North Central States, USA",2.5,40,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^b),0.08248*(dbh^2.468),Whole tree (above stump),DBH,Species,"North Central States, USA",2.5,40,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.047+2.3852*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,66,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(4.5893+2.43*log(dbh)),Total aboveground biomass,DBH,Species,Eastern USA,1,55,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.0705+2.441*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,89,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^2)^b,3.08355*(dbh^2)^1.14915,Total aboveground biomass,DBH,Species,Southeast USA,2.54,12.45,NA,in^2,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^b),2.3626*(dbh^2.4798),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^b),0.1634*(dbh^2.348),Total aboveground biomass,DBH,Species,"Upper Great Lakes, USA",4,32,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^b),1.0259*(dbh^2.7324),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBA^b),51.996*(dba^2.77),Total aboveground biomass,DBA,Species,Canada,0.12,0.69,20,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,a*(DBH^2)^b,1.5416*(dbh^2)^2.7818,Stem and branches (live),DBH,Species,"North Carolina, USA",14.48,25.4,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(5.2831+2.0369*log(dbh)),Total aboveground biomass,DBH,Species,Eastern USA,1,55,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(1.83+2.464*(log10(dbh))),Total aboveground biomass,DBH,Species,"North Carolina, USA",3.5,35.6,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.49193*(dbh^2)^2.7727,Stem and branches (live),DBH,Species,Piedmont (Southeastern USA),27.94,49.53,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^b),1.8082*(dbh^2.6174),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.30252*(dbh^2)^1.6839,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),5.84,25.4,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.23731*(dbh^2)^1.26394,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),27.94,47.75,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBA^b),37.637*(dba^2.779),Total aboveground biomass,DBA,Genus,"Idaho/Montana, USA",0.2,1.2,32,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,a*(DBA^b),43.992*(dba^2.86),Total aboveground biomass,DBA,Species,"Idaho/Montana, USA",0.3,0.9,26,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,10^(a+b*(log10(DBH^c))),10^(1.3539+1.3412*(log10(dbh^2))),Whole tree (above stump),DBH,Species,"Ohio, USA",0.4,8.49,41,cm,g,harvest,linear,NA,1,1,1.004,NA,NA,Equation built for seedlings and saplings,NA
+NA,a*(DBH^2)^b,2.17565*(dbh^2)^1.2481,Whole tree (above stump),DBH,Genus,Piedmont (Southeastern USA),2.54,27.43,NA,in^2,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.04282*(dbh^2)^1.25462,Stem and branches (live),DBH,Genus,Piedmont (Southeastern USA),2.54,27.43,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBA^b),29.615*(dba^3.243),Total aboveground biomass,DBA,Species,Canada,0.28,1.59,19,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,10^(a+b*(log10(DBH))),10^(2.1112+2.462*(log10(dbh))),Total aboveground biomass,DBH,Species,"New Hampshire, USA",1,63,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.76583*(dbh^2)^1.15849,Whole tree (above stump),DBH,Species,"Gulf and Atlantic Coastal Plains, USA",2.54,27.69,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^2)^b,1.72982*(dbh^2)^1.27422,Whole tree (above stump),DBH,Species,"Gulf and Atlantic Coastal Plains, USA",28.45,50.8,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-1.236+2.635*(log10(dbh))),Total aboveground biomass,DBH,Species,"North Carolina, USA",10.2,55.8,NA,cm,kg,harvest,NA,NA,NA,1,1.008,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.56795*(dbh^2)^1.18685,Total aboveground biomass,DBH,Species,Southeast USA,4.06,12.45,NA,in^2,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^2)^b,1.57573*(dbh^2)^1.29005,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),4.83,23.88,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.51502*(dbh^2)^1.19256,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),24.94,49.53,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH^c))),10^(1.2696+1.3889*(log10(dbh^2))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.68,7.49,NA,cm,g,harvest,NA,NA,NA,1,1.012,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-1.266+2.613*(log10(dbh))),Total aboveground biomass,DBH,Species,"North Carolina, USA",7,63,10,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-1.283+2.685*(log10(dbh))),Total aboveground biomass,DBH,Species,"North Carolina, USA",15,43.3,NA,cm,kg,harvest,NA,NA,NA,1,1.003,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.30252*(dbh^2)^1.25795,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),5.84,25.4,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-1.587+2.91*(log10(dbh))),Total aboveground biomass,DBH,Species,"North Carolina, USA",10.6,57.5,NA,cm,kg,harvest,NA,NA,NA,1,1.013,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(4.9967+2.3944*log(dbh)),Total aboveground biomass,DBH,Species,Eastern USA,2.5,55,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^2)^b,2.23*(dbh^2)^1.2153,Total aboveground biomass,DBH,Species,Southeast USA,3.3,11.94,NA,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-0.34052+2.65803*log(dbh)),Whole tree (above stump),DBH,Species,"Rhode Island, USA",7.62,30.48,26,in,kg,harvest,"linear, multiple and stepwise",NA,0,0,NA,"Linear regressions for species were tested for differences in slope and level according to Freese (1967) . Differences were found to be not significant, and data were combined to produce a single regression applicable to all species.",NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.4441+2.4561*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,70,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a+(b*DBH),4.72+(2.17*dbh),Stem and branches (live),DBH,Species,"New Hampshire, USA",1.6,10,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(3.8941+2.4839*log(dbh)),Live crown,DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,31,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(5.3224+2.2936*log(dbh)),Dead crown,DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,31,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+(b*ln(DBH)))*645.704*1.05,exp(8.5385+(2.2969*log(dbh)))*645.704*1.05,Stem biomass (with bark),DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,31,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(2.025+3.527*log(dba)),Total aboveground biomass,DBA,Species,"Oregon, USA",0.5,2.1,11,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,a+b*BA,51.68+0.02*BA,Total aboveground biomass,DBH,Species,"California, USA",NI,NI,NA,cm^2,g,harvest,NA,NA,NA,1,included in model,NA,NA,Original publication uses Basal area (BA)=Diameter of all stems measured 5 cm above ground in a 1x1m plot then sum to obtain basal area. Use shrub function in this package,NA
+NA,exp(a+b*ln(DBA)),exp(3.67+2.847*log(dba)),Total aboveground biomass,DBA,Species,"Pacific Northwest, USA",0.6,2.5,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+b*ln(DBH)),exp(-2.5049+1.256*log(dbh)),Total aboveground biomass,DBH,Species,"Hawaii, USA",2,16,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(3.2304+2.2774*log(dbh)),Live crown,DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(5.1792+2.0374*log(dbh)),Dead crown,DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+(b*ln(DBH)))*419.814*1.22,exp(9.0717+(2.5169*log(dbh)))*419.814*1.22,Stem biomass (with bark),DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(-10.755+2.7308*dbh+1*log(dbh)),Stem biomass (with bark),DBH,Species,"Pacific Northwest, USA",24.1,117.7,NA,cm,Mg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(-0.4282+2.1772*dbh+1*log(dbh)),"Crown biomass (branches, foliage, twigs)",DBH,Species,"Rocky Mountains, USA",2.54,30.48,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.677+2.4638*log(dbh)),Total aboveground biomass,DBH,Genus,North America,3,180,561,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(4.98412+2.18584*log(dbh)),Total aboveground biomass,DBH,Species,"Oregon, USA",1.4,13.4,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-3.9371+2.8427*log(dbh)),Total aboveground biomass,DBH,Species,"Oregon, USA",10,40,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(3.892+3.122*log(dba)),Total aboveground biomass,DBA,Genus,"Rocky Mountains, USA",0.4,1.4,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+b*ln(DBH)),exp(-2.7765+2.4195*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,614,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.1001+2.3996*log(dbh)),Total aboveground biomass,DBH,Species,"California, USA",7.6,61,14,cm,kg,harvest,least squares linear,NA,NA,1,0.2497,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(3.6123+2.9944*log(dba)),Total aboveground biomass (wood and bark),DBA,Species,"Pacific Northwest, USA",0.6,3.6,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,a*(DBH^b),0.0752*(dbh^2.497),Whole tree (above stump),DBH,Species,"North Central States, USA",2.5,40,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(-2.037+2.363*dbh+1*log(dbh)),Total aboveground biomass,DBH,Species,"Wisconsin, Michigan, USA",3.1,24.6,41,cm,kg,harvest,NA,NA,NA,1,1.01,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(-1.721+2.334*dbh+1*log(dbh)),Total aboveground biomass,DBH,Species,"Wisconsin, Michigan, USA",10,52.2,NA,cm,kg,harvest,NA,NA,NA,1,1.007,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-0.9+2.52*(log10(dbh))),Total aboveground biomass,DBH,Species,"Wisconsin, USA",7.5,23.7,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.5932+2.534*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,64,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,a*(DBH^b),0.08724*(dbh^2.587),Whole tree (above stump),DBH,Species,"North Central States, USA",2.5,40,9,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-2.474+2.555*log(dbh)),Whole tree (aboveground),DBH,Species,"North Central States, USA",3.5,26.3,21,cm,kg,harvest,NA,NA,NA,1,1.006,NA,NA,NA,NA
+NA,a*(DBH^b),0.305*(dbh^2.014),Whole tree (above stump),DBH,Species,"Wisconsin, USA",12.9,30,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^b),0.0777*(dbh^2.472),Whole tree (above stump),DBH,Species,"Minessota, USA",1.1,32.6,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBH^b),0.153*(dbh^2.248),Whole tree (above stump),DBH,Species,"Minessota, USA",1.4,23.4,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a+(b*DBH)+c*(DBH ^ d),9.1583+(-0.4291*dbh)+0.005799*(dbh^2),Whole tree (above stump),DBH,Genus,"New York, USA",2.5,55,31,mm,kg,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-0.685+2.249*(log10(dbh))),Total aboveground biomass,DBH,Species,"Wisconsin, USA",14.7,39.7,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(-2.972-0.017*dbh+2.873*(log(dbh))),Total aboveground biomass,DBH,Species,"Wisconsin, USA",2.8,69.5,NA,cm,kg,harvest,NA,NA,NA,1,1.05,NA,NA,NA,NA
+NA,a*(DBH^b),0.091*(dbh^2.234),Whole tree (above stump),DBH,Species,"North Central States, USA",2.5,40,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(6.9159+0.7003*dbh+1*log(dbh)),Total aboveground biomass,DBH,Species,"Maine, USA",0.1,2.54,NA,in,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(3.779+2.473*(log10(dbh))),Whole tree (above stump),DBH,Species,"Bristish Columbia, Canada",31,90.4,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),0.62+(0.8024*dbh)+0.1724*(dbh^2)+1*(dbh^3),Stem biomass (with bark),DBH,Species,"Rocky Mountains, USA",0,10.16,12,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(1.0152+1.6839*dbh+1*log(dbh)),"Crown biomass (branches, foliage, twigs)",DBH,Species,"Rocky Mountains, USA",2.54,30.48,15,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(2.7261+2.3324*log(dbh)),Branches (live),DBH,Species,"West Cascades, USA",18.8,111,26,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(2.03496+2.1683*log(dbh)),Foliage total,DBH,Species,"West Cascades, USA",18.8,111,25,cm,g,harvest,NA,NA,NA,0,NRA,NA,0,Unable to extract correction factor from original publication,NA
+NA,exp(a+b*ln(DBH)),exp(3.892752+2.5812*log(dbh)),Stem biomass,DBH,Species,"West Cascades, USA",15.9,235.5,310,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(2.0791+2.5585*log(dbh)),Branches (live),DBH,Genus,North America,8.7,111,NA,cm,g,harvest,NA,NA,NA,NA,NRA,NA,0,Unable to extract correction factor from original publication,NA
+NA,exp(a+b*ln(DBH)),exp(3.4416+1.9278*log(dbh)),Foliage total,DBH,Genus,North America,8.7,111,NA,cm,g,harvest,NA,NA,NA,NA,NRA,NA,0,Unable to extract correction factor from original publication,NA
+NA,exp(a+b*ln(DBH)),exp(0.716+2.8796*log(dbh)),Stem bark biomass,DBH,Genus,North America,8.7,111,NA,cm,g,harvest,NA,NA,NA,NA,NRA,NA,0,Unable to extract correction factor from original publication,NA
+NA,exp(a+b*ln(DBH)),exp(3.1689+2.6825*log(dbh)),Stem biomass (without bark),DBH,Genus,North America,8.7,111,NA,cm,g,harvest,NA,NA,NA,NA,NRA,NA,0,Unable to extract correction factor from original publication,NA
+NA,exp(a+b*ln(DBH)),exp(7.2723+1.4835*log(dbh)),Total aboveground biomass,DBH,Species,"North Central States, USA",0.1,2.54,NA,in,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(5.13118+2.15046*log(dbh)),Whole tree (above stump),DBH,Species,"Oregon, USA",1.7,13.2,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(3.769+3.033*log(dba)),Total aboveground biomass,DBA,Species,"Rocky Mountains, USA",0.7,2.2,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+b*ln(DBH)),exp(-2.6177+2.4638*log(dbh)),Total aboveground biomass,DBH,Genus,North America,3,180,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(2.855+2.334*log(dba)),Total aboveground biomass,DBA,Species,"West Cascades, USA",0.1,1.1,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+b*ln(DBH)),exp(-2.6327+2.4757*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,109,55,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(3.34884+2.45446*dbh+1*log(dbh)),Total aboveground biomass,DBH,Species,"Pacific Northwest, USA",0.18,2.23,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-3463.8+1083.9*log(dbh)),Total aboveground biomass,DBH,Species,"Pacific Northwest, USA",4.2,7,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(3.68+2.135*(log10(dbh))),Whole tree (above stump),DBH,Species,"Bristish Columbia, Canada",16,49,8,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(3.761+2.37498*log(dba)),Total aboveground biomass,DBA,Species,"Oregon, Washington, USA",0.4,3.3,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+(b*(ln(pi*DBH)))),exp(-5.41227+(2.491767*(log(pi*dbh)))),Total aboveground biomass,DBH,Woody species,Northern England,NI,NI,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+(b*(ln(pi*DBH)))),exp(-5.644074+(2.5189*(log(pi*dbh)))),Total aboveground biomass,DBH,Species,Northern England,11.5,96.5,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+(b*(ln(pi*DBH)))),exp(-5.308133+(2.4882*(log(pi*dbh)))),Total aboveground biomass,DBH,Species,Northern England,9,104,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+(b*(ln(pi*DBH)))),exp(-5.284602+(2.4882*(log(pi*dbh)))),Total aboveground biomass,DBH,Species,Northern England,14,162.5,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(-10.8036+2.7727*dbh+1*log(dbh)),Stem biomass (with bark),DBH,Species,"Pacific Northwest, USA",14.4,158.4,NA,cm,Mg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(4.36982+2.5043*log(dbh)),Total aboveground biomass,DBH,Species,"California, USA",7,98,NA,cm,g,harvest,NA,NA,NA,1,1.014,NA,NA,NA,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(-10.7955+2.759*dbh+1*log(dbh)),Stem biomass (with bark),DBH,Species,"Pacific Northwest, USA",18.8,143.2,NA,cm,Mg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(3.3186+2.6846*log(dba)),Total aboveground biomass,DBA,Species,"Oregon, Washington, USA",0.4,11.5,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+b*DBH+c*(ln(DBH))),exp(-11.7031+2.7818*dbh+1*log(dbh)),Stem biomass (with bark),DBH,Species,"Pacific Northwest, USA",25,143.9,NA,cm,Mg,harvest,NA,NA,NA,1,included in model,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(3.5247+2.2043*log(dba)),Total aboveground biomass,DBA,Species,"Pacific Northwest, USA",0.3,11.7,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+b*ln(DBA)),exp(3.6471+2.532*log(dba)),Total aboveground biomass,DBA,Species,"Pacific Northwest, USA",0.3,6.5,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+b*ln(DBH)),exp(5.965+1.469*log(dbh)),Total aboveground biomass,DBH,Species,"California, USA",0.8,13,40,cm,kg,harvest,NA,NA,NA,1,0.102,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(5.089+1.883*log(dbh)),Total aboveground biomass,DBH,Species,"California, USA",0.9,5.7,41,cm,kg,harvest,NA,NA,NA,1,0.124,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(2.749+2.306*log(dba)),Total aboveground biomass,DBA,Species,"California, USA",0.5,2.6,40,cm,kg,harvest,NA,NA,NA,1,0.165,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+NA,exp(a+b*(DBH/(DBH+c))),exp(-1.694+10.825*(dbh/(dbh+11.816))),Total aboveground biomass,DBH,Species,Europe,NI,40,144,cm,kg,harvest,NA,NA,NA,1,NA,NA,NA,NA,NA
+NA,exp(a+b*(DBH/(DBH+c))),exp(0.006+10.933*(dbh/(dbh+21.216))),Total aboveground biomass,DBH,Genus,Europe,NI,50,240,cm,kg,harvest,NA,NA,NA,1,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBA)),exp(4.070762+2.4028*log(dba)),Stem biomass (with bark),DBH,Species,"Rocky Mountains, USA",15.6,68.7,NA,cm,gm,harvest,NA,NA,NA,NA,NRA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-3.1774+2.6426*log(dbh)),Total aboveground biomass,DBH,Genus,North America,3,236,221,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBA^b),0.0104*(dba^2.7105),Total aboveground biomass,DBH,Species,"Nevada, USA",5,55.8,52,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a+(b*DBH)+c*(DBH^d),(-36.94)+0.42*(DBH^2),Total aboveground biomass,DBH,Species,"Colorado, USA",4,76,29,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(3.03+2.5567*log(dbh)),Total aboveground biomass,DBH,Genus,North America,3,283,128,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(3.63+2.54*log(dbh)),Total aboveground biomass,DBH,Species,"Alaska, USA",1.5,13,18,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(2.1364+2.3233*log(dbh)),Total aboveground biomass,DBH,Genus,North America,3,72,289,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a+b*(log10(DBH)),1.468+2.582*(log10((DBH-10.603)/0.9823)),Total aboveground biomass,DBH,Species,"Arizona, USA",5,45,15,cm,kg,harvest,NA,NA,NA,0,included in model,NA,NA,"Original biomass equation uses DRC (diameter root collar). Chojnacky & Rogers, 1999 equation to do the oposite, convert dcr to dbh (dbh=6.818+1.0222*drc+1.88791.8971-0.0399*drc) so we rewrote Chojnaky to convert dbh to dcr",NA
+NA,10^(a+b*(log10(DBH))),10^(-1.024+2.416*(log10(dbh))),Stem biomass (without bark),DBH,Species,"New Mexico, USA",2.7,27.5,10,cm,kg,harvest,NA,NA,NA,1,1.014,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-1.234+2.128*(log10(dbh))),Stem bark biomass,DBH,Species,"New Mexico, USA",2.7,27.5,10,cm,kg,harvest,NA,NA,NA,1,0.004,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-2.336+2.650*(log10(dbh))),"Branches (live, dead)",DBH,Species,"New Mexico, USA",2.7,27.5,14,cm,kg,harvest,NA,NA,NA,1,0.088,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(-2.347+2.478*(log10(dbh))),Total foliage,DBH,Species,"New Mexico, USA",2.7,27.5,14,cm,kg,harvest,NA,NA,NA,1,1.053,NA,NA,NA,NA
+NA,exp(a+b*ln(DBH)),exp(-0.86896+1.652882*ln(DBH)),Total aboveground biomass,DBH,Species,"Nevada, USA",3,112,105,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+NA,a*(DBA^b),0.1231*(dba^2.242),Total aboveground biomass,DBH,Species,"Utah, USA",3,36,20,cm,kg,harvest,NA,NA,NA,1,1.046,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(0.15+2.48*(log10(DBH))),Total aboveground biomass,DBH,Species,"New Brunswick, Canada",2.54,25.4,13,in,lb,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,a+(b*DBH)+c*(DBH^2),(-16809)+(2656.48*DBH)+248.416*(DBH^2),Total aboveground biomass,DBH,Species,"Alaska, USA",3.7,32.7,37,cm,kg,harvest,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(2.648+0.715*(log10(dbh))),Total aboveground biomass,DBH,Species,"Manitoba, Canada",0.2,2,7,cm,g,harvest,NA,NA,NA,1,1.027,NA,NA,NA,NA
+NA,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),7.06302+(-3.01775*DBH)+*(DBH^2)-0.00329*(DBH^3),Total aboveground biomass,DBH,Species,"Northwest Territory, Canada",5,35,56,cm,kg,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
+NA,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),36.56038+(-10.6275*DBH)+0.93837*(DBH^2)-0.01032*(DBH^3),Total aboveground biomass,DBH,Species,"Northwest Territory, Canada",5,35,61,cm,kg,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH)+c(AGE)+d(log10(DBH)*AGE)),10^(3.011+1.202*(log10(DBH)-0.01(AGE)+0.011(log10(DBH)*AGE)),Total aboveground biomass,DBH,Species,"Manitoba, Canada",0.5,17,40,cm,g,harvest,NA,NA,NA,1,1.057,NA,NA,Need stand age!,NA
+NA,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),1.51752+(-0.9688*DBH)+0.29833*(DBH^2)+0.00092*(DBH^3),Total aboveground biomass,DBH,Species,"Northwest Territory, Canada",5,35,51,cm,kg,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH)+c(AGE)+d(log10(DBH)*AGE)),10^(2.889+0.789*(log10(DBH)-0.014(AGE)+0.025(log10(DBH)*AGE)),Total aboveground biomass,DBH,Species,"Manitoba, Canada",0.3,17,46,cm,g,harvest,NA,NA,NA,1,1.032,NA,NA,Need stand age!,NA
+NA,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),(-95.5471)+(21.1602*DBH)-1.04327*(DBH^2)+0.02434*(DBH^3),Total aboveground biomass,DBH,Species,"Northwest Territory, Canada",5,35,56,cm,kg,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
+NA,10^(a+b*(log10(DBH))),10^(2.481+1.19*(log10(dbh))),Total aboveground biomass,DBH,Species,"Manitoba, Canada",0.3,1,10,cm,g,harvest,NA,NA,NA,1,1.121,NA,NA,NA,NA
