@@ -5,7 +5,7 @@
 4   4 / D dependent_variable_biomass_component
 5   5 / E                 independent_variable
 6   6 / F                allometry_specificity
-7   7 / G                  development_species
+7   7 / G                        proxy_species
 8   8 / H                      geographic_area
 9   9 / I                           dbh_min_cm
 10 10 / J                           dbh_max_cm
@@ -30,7 +30,7 @@
 4                                                                                                                                                                                               Tree component characterized by the equation
 5                                                                                                     Parameters included in biomass model (H: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density)
 6                                                                                                                                      Specific taxonomic level for which the equation was developed (species, genus, family or plant group)
-7                                                                                                                                                                                      Species for which a particular equation was developed
+7                                                                                                                                                  Species used as proxy to calculate AGB when a specific-species equation was not available
 8                                                                                                                                                         Geographic location from which trees were sampled to develop the original equation
 9                                                                                                                                                                                          Minimun DBH in cm sampled to develop the equation
 10                                                                                                                                                                                         Maximun DBH in cm sampled to develop the equation
