@@ -46,7 +46,6 @@ equations_cols <- c(
   "dependent_variable_biomass_component",
   "independent_variable",
   "allometry_specificity",
-  "development_species",
   "geographic_area",
   "dbh_min_cm",
   "dbh_max_cm",
@@ -61,7 +60,6 @@ equations_cols <- c(
   "bias_correction_factor",
   "notes_fitting_model",
   "original_data_availability",
-  "notes_to_consider",
   "warning",
   "ref_id"
 )
@@ -122,8 +120,10 @@ sitespecies_cols <- c(
   "equation_grouping",
   "equation_id",
   "allometry_specificity",
+  "proxy_species",
   "dbh_min_cm",
   "dbh_max_cm",
+  "notes_on_species",
   "wsg_id",
   "wsg_specificity"
 )
