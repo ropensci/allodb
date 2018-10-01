@@ -15,12 +15,12 @@ documents [here](https://rmarkdown.rstudio.com/lesson-1.html).)
 ``` r
 library(allodb)
 library(tidyverse)
-#> -- Attaching packages ---------------------------------------------------------- tidyverse 1.2.1 --
+#> -- Attaching packages ----------------------------------------------- tidyverse 1.2.1 --
 #> v ggplot2 3.0.0     v purrr   0.2.5
 #> v tibble  1.4.2     v dplyr   0.7.6
 #> v tidyr   0.8.1     v stringr 1.3.1
 #> v readr   1.1.1     v forcats 0.3.0
-#> -- Conflicts ------------------------------------------------------------- tidyverse_conflicts() --
+#> -- Conflicts -------------------------------------------------- tidyverse_conflicts() --
 #> x dplyr::filter() masks stats::filter()
 #> x dplyr::lag()    masks stats::lag()
 library(here)
@@ -33,6 +33,92 @@ library(usethis)
 ``` r
 master <- read_csv_as_chr(here("data-raw/allodb_master.csv"))
 ```
+
+# Add `equaion_id` to master
+
+## Create random values of `equation_id`
+
+Create a unique id for each equation already in the database
+
+    # WARNING
+    # This chunk should not be re-run. If you re-run it, you will change the random
+    # id of each equation
+    equation_allometry <- unique(master$equation_allometry)
+    allometry_id <- tibble::tibble(
+      equation_allometry = equation_allometry,
+      equation_id = ids::random_id(length(equation_allometry), bytes = 3)
+    )
+    write_csv(allometry_id, here("data-raw/allometry_id.csv"))
+
+## Add the equation ids to `master`
+
+Right now, all values of `equation_id` in `master` are missing:
+
+``` r
+any(!is.na(master$equation_id))
+#> [1] FALSE
+
+master %>% 
+  select(equation_allometry, equation_id)
+#> # A tibble: 602 x 2
+#>    equation_allometry                equation_id
+#>    <chr>                             <chr>      
+#>  1 10^(1.1891+1.419*(log10(dbh^2)))  <NA>       
+#>  2 10^(1.2315+1.6376*(log10(dbh^2))) <NA>       
+#>  3 exp(7.217+1.514*log(dbh))         <NA>       
+#>  4 10^(2.5368+1.3197*(log10(dbh)))   <NA>       
+#>  5 10^(2.0865+0.9449*(log10(dbh)))   <NA>       
+#>  6 exp(-2.48+2.4835*log(dbh))        <NA>       
+#>  7 exp(-2.48+2.4835*log(dbh))        <NA>       
+#>  8 10^(-1.326+2.762*(log10(dbh)))    <NA>       
+#>  9 10^(-1.326+2.762*(log10(dbh)))    <NA>       
+#> 10 10^(-1.326+2.762*(log10(dbh)))    <NA>       
+#> # ... with 592 more rows
+```
+
+Fill `equation_id`s:
+
+``` r
+allometry_id <- read_csv(here("data-raw/allometry_id.csv"))
+#> Parsed with column specification:
+#> cols(
+#>   equation_allometry = col_character(),
+#>   equation_id = col_character()
+#> )
+master_id <- master %>% 
+  select(-equation_id) %>%
+  left_join(allometry_id)
+#> Joining, by = "equation_allometry"
+```
+
+Confirm that `equation_id` has no missing value.
+
+``` r
+any(is.na(master_id$equation_id))
+#> [1] FALSE
+
+master_id %>% 
+  select(equation_allometry, equation_id)
+#> # A tibble: 602 x 2
+#>    equation_allometry                equation_id
+#>    <chr>                             <chr>      
+#>  1 10^(1.1891+1.419*(log10(dbh^2)))  2060ea     
+#>  2 10^(1.2315+1.6376*(log10(dbh^2))) a4d879     
+#>  3 exp(7.217+1.514*log(dbh))         c59e03     
+#>  4 10^(2.5368+1.3197*(log10(dbh)))   96c0af     
+#>  5 10^(2.0865+0.9449*(log10(dbh)))   529234     
+#>  6 exp(-2.48+2.4835*log(dbh))        ae65ed     
+#>  7 exp(-2.48+2.4835*log(dbh))        ae65ed     
+#>  8 10^(-1.326+2.762*(log10(dbh)))    9c4cc9     
+#>  9 10^(-1.326+2.762*(log10(dbh)))    9c4cc9     
+#> 10 10^(-1.326+2.762*(log10(dbh)))    9c4cc9     
+#> # ... with 592 more rows
+```
+
+## How to allocate `equation_id` to new equations
+
+If you need a new random id for a new equation, you can pick one from
+`data-raw/available_random_ids.csv` and delete it from that file.
 
 # Export subsets of master data
 
@@ -53,7 +139,6 @@ equations_cols <- c(
   "dependent_variable_biomass_component",
   "independent_variable",
   "allometry_specificity",
-  "development_species",
   "geographic_area",
   "dbh_min_cm",
   "dbh_max_cm",
@@ -68,11 +153,10 @@ equations_cols <- c(
   "bias_correction_factor",
   "notes_fitting_model",
   "original_data_availability",
-  "notes_to_consider",
   "warning",
   "ref_id"
 )
-equations <- master[equations_cols] %>% 
+equations <- master_id[equations_cols] %>% 
   unique() %>% 
   as.tibble()
 use_data(equations, overwrite = TRUE)
@@ -176,12 +260,14 @@ sitespecies_cols <- c(
   "equation_grouping",
   "equation_id",
   "allometry_specificity",
+  "proxy_species",
   "dbh_min_cm",
   "dbh_max_cm",
+  "notes_on_species",
   "wsg_id",
   "wsg_specificity"
 )
-sitespecies <- master[sitespecies_cols] %>% 
+sitespecies <- master_id[sitespecies_cols] %>% 
   unique() %>% 
   as.tibble()
 use_data(sitespecies, overwrite = TRUE)
@@ -221,7 +307,7 @@ wsg_cols <- c(
   "site",
   "ref_id"
 )
-wsg <- master[wsg_cols] %>% 
+wsg <- master_id[wsg_cols] %>% 
   unique() %>% 
   as.tibble()
 use_data(wsg, overwrite = TRUE)

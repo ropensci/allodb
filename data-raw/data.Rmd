@@ -30,6 +30,57 @@ library(usethis)
 master <- read_csv_as_chr(here("data-raw/allodb_master.csv"))
 ```
 
+# Add `equaion_id` to master
+
+## Create random values of `equation_id`
+
+Create a unique id for each equation already in the database
+
+```
+# WARNING
+# This chunk should not be re-run. If you re-run it, you will change the random
+# id of each equation
+equation_allometry <- unique(master$equation_allometry)
+allometry_id <- tibble::tibble(
+  equation_allometry = equation_allometry,
+  equation_id = ids::random_id(length(equation_allometry), bytes = 3)
+)
+write_csv(allometry_id, here("data-raw/allometry_id.csv"))
+```
+
+## Add the equation ids to `master`
+
+Right now, all values of `equation_id` in `master` are missing:
+
+```{r show-master-id}
+any(!is.na(master$equation_id))
+
+master %>% 
+  select(equation_allometry, equation_id)
+```
+
+Fill `equation_id`s:
+
+```{r}
+allometry_id <- read_csv(here("data-raw/allometry_id.csv"))
+master_id <- master %>% 
+  select(-equation_id) %>%
+  left_join(allometry_id)
+```
+
+Confirm that `equation_id` has no missing value.
+
+```{r}
+any(is.na(master_id$equation_id))
+
+master_id %>% 
+  select(equation_allometry, equation_id)
+```
+
+## How to allocate `equation_id` to new equations
+
+If you need a new random id for a new equation, you can pick one from `data-raw/available_random_ids.csv` and delete it from that file.
+
 # Export subsets of master data
 
 This section exports subsets of the clean master data to data/. Each dataset documented in R/data.R to produce a help file that can be accessed from the R console with `?name-of-the-dataset` and also from the Functions Index tab of the website of __allodb__.
@@ -63,7 +114,7 @@ equations_cols <- c(
   "warning",
   "ref_id"
 )
-equations <- master[equations_cols] %>% 
+equations <- master_id[equations_cols] %>% 
   unique() %>% 
   as.tibble()
 use_data(equations, overwrite = TRUE)
@@ -127,7 +178,7 @@ sitespecies_cols <- c(
   "wsg_id",
   "wsg_specificity"
 )
-sitespecies <- master[sitespecies_cols] %>% 
+sitespecies <- master_id[sitespecies_cols] %>% 
   unique() %>% 
   as.tibble()
 use_data(sitespecies, overwrite = TRUE)
@@ -153,7 +204,7 @@ wsg_cols <- c(
   "site",
   "ref_id"
 )
-wsg <- master[wsg_cols] %>% 
+wsg <- master_id[wsg_cols] %>% 
   unique() %>% 
   as.tibble()
 use_data(wsg, overwrite = TRUE)
