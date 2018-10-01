@@ -9,7 +9,6 @@ test_that("has same names as `master` (#37)", {
 
 
 
-
 context("type_allodb_master")
 
 test_that("creates objects of the expected class 'allodb'", {
