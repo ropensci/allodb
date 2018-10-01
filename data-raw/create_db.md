@@ -32,12 +32,12 @@ database. The different talbes can then be joined with e.g.
 ``` r
 sitespecies <- read_csv(here("data-raw/db/sitespecies.csv"))
 dim(sitespecies)
-#> [1] 419  13
+#> [1] 602  15
 
 sites_info <- read_csv(here("data-raw/db/sites_info.csv"))
 dim(sites_info)
 #> [1] 63 12
 
 dim(left_join(sites_info, sitespecies))
-#> [1] 63 24
+#> [1] 63 26
 ```
