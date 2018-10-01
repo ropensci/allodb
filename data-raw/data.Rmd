@@ -60,7 +60,6 @@ equations_cols <- c(
   "bias_correction_factor",
   "notes_fitting_model",
   "original_data_availability",
-  "notes_to_consider",
   "warning",
   "ref_id"
 )
@@ -124,6 +123,7 @@ sitespecies_cols <- c(
   "proxy_species",
   "dbh_min_cm",
   "dbh_max_cm",
+  "notes_on_species",
   "wsg_id",
   "wsg_specificity"
 )
