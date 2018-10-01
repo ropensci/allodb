@@ -113,7 +113,7 @@ type_allodb_master <- function() {
     wsg_source = 'c',
     ref_wsg_id = 'c',
     original_data_availability = 'c',
-    notes_to_consider = 'c',
+    notes_on_species = 'c',
     warning = 'c'
   )
 }
