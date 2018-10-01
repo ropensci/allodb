@@ -15,7 +15,7 @@ NA,Rosaceae,Crataegus sp.,0.62,NA,NA,Lilly Dicky,NA
 NA,Fagaceae,Fagus grandifolia,0.56,NA,NA,Lilly Dicky,NA
 NA,Oleaceae,Fraxinus americana,0.51,NA,32,Lilly Dicky,NA
 NA,Oleaceae,Fraxinus americana,0.51,NA,40,Lilly Dicky,NA
-NA,Oleaceae,Fraxinus pennsylvanica,0.53,NA,NA,Lilly Dicky,NA
+NA,Oleaceae,Fraxinus pennsylvanica,0.53,NA,32,Lilly Dicky,NA
 NA,Hamamelidaceae,Hamamelis virginiana,0.71,NA,21,Lilly Dicky,NA
 NA,Cupressaceae,Juniperus virginiana,0.44,NA,NA,Lilly Dicky,NA
 NA,Lauraceae,Lindera benzoin,0.5,NA,NA,Lilly Dicky,NA
@@ -206,10 +206,10 @@ NA,Rosaceae,Prunus serotina,0.47,NA,NA,Tyson,NA
 NA,Rosaceae,Prunus sp.,0.47,NA,NA,Tyson,NA
 NA,Fagaceae,Quercus alba,0.6,NA,29,Tyson,NA
 NA,Fagaceae,Quercus marilandica,0.56,NA,NA,Tyson,NA
-NA,Fagaceae,Quercus muehlenbergii,0.6,NA,NA,Tyson,NA
+NA,Fagaceae,Quercus muehlenbergii,0.6,NA,29,Tyson,NA
 NA,Fagaceae,Quercus rubra,0.56,NA,NA,Tyson,NA
-NA,Fagaceae,Quercus sp.,0.6,NA,NA,Tyson,NA
-NA,Fagaceae,Quercus stellata,0.6,NA,NA,Tyson,NA
+NA,Fagaceae,Quercus sp.,0.6,NA,29,Tyson,NA
+NA,Fagaceae,Quercus stellata,0.6,NA,29,Tyson,NA
 NA,Fagaceae,Quercus velutina,0.56,species,19,Tyson,NA
 NA,Fagaceae,Quercus velutina,0.56,species,34,Tyson,NA
 NA,Fagaceae,Quercus velutina,0.56,species,26,Tyson,NA
@@ -234,6 +234,7 @@ NA,Fagaceae,Lithocarpus densiflorus,0.56,NA,NA,UCSC,NA
 NA,Myricaceae,Morella californica,0.5,NA,NA,UCSC,NA
 NA,Pinaceae,Pinus attenuata,0.42,NA,NA,UCSC,NA
 NA,Pinaceae,Pinus ponderosa,0.38,NA,NA,UCSC,NA
+NA,Pinaceae,Pinus ponderosa,0.38,NA,561,UCSC,NA
 NA,Pinaceae,Pseudotsuga menziesii,0.45,NA,NA,UCSC,NA
 NA,Rosaceae,Pyracantha angustifolia,0.5,NA,NA,UCSC,NA
 NA,Fagaceae,Quercus agrifolia,0.6,NA,NA,UCSC,NA
@@ -246,14 +247,15 @@ NA,Cupressaceae,Sequoia sempervirens,0.36,NA,NA,UCSC,NA
 NA,Lauraceae,Umbellularia californica,0.47,NA,14,UCSC,NA
 NA,Ericaceae,Vaccinium ovatum,0.47,NA,NRA,UCSC,NA
 NA,Pinaceae,Abies balsamea,0.34,NA,NA,Wabikon,NA
+NA,Aceraceae,Acer rubrum,0.49,NA,41,Wabikon,NA
 NA,Aceraceae,Acer rubrum,0.49,NA,NA,Wabikon,NA
 NA,Aceraceae,Acer saccharum,0.56,NA,NA,Wabikon,NA
 NA,Aceraceae,Acer spicatum,0.44,NA,41,Wabikon,NA
 NA,Betulaceae,Alnus incana,0.37,NA,NA,Wabikon,NA
 NA,Rosaceae,Amelanchier laevis,0.66,NA,NA,Wabikon,NA
 NA,Rosaceae,Amelanchier sanguinea,0.66,NA,NA,Wabikon,NA
-NA,Betulaceae,Betula alleghaniensis,0.55,NA,NA,Wabikon,NA
-NA,Betulaceae,Betula papyrifera,0.48,NA,NA,Wabikon,NA
+NA,Betulaceae,Betula alleghaniensis,0.55,NA,9,Wabikon,NA
+NA,Betulaceae,Betula papyrifera,0.48,NA,21,Wabikon,NA
 NA,Cornaceae,Cornus alternifolia,0.64,NA,NA,Wabikon,NA
 NA,Betulaceae,Corylus cornuta,0.5,NA,NA,Wabikon,NA
 NA,Thymelaeaceae,Dirca palustris,0.33,NA,NA,Wabikon,NA
@@ -271,7 +273,7 @@ NA,Betulaceae,Ostrya virginiana,1.63,NA,NA,Wabikon,NA
 NA,Pinaceae,Picea glauca,0.37,NA,NA,Wabikon,NA
 NA,Pinaceae,Picea mariana,0.38,NA,NA,Wabikon,NA
 NA,Pinaceae,Pinus strobus,0.34,NA,NA,Wabikon,NA
-NA,Salicaceae,Populus balsamifera,0.31,NA,NA,Wabikon,NA
+NA,Salicaceae,Populus balsamifera,0.31,NA,31,Wabikon,NA
 NA,Salicaceae,Populus grandidentata,0.36,NA,NA,Wabikon,NA
 NA,Salicaceae,Populus tremuloides,0.35,NA,NA,Wabikon,NA
 NA,Rosaceae,Prunus pensylvanica,0.5,NA,NA,Wabikon,NA
@@ -288,7 +290,9 @@ NA,Ulmaceae,Ulmus americana,0.46,NA,NA,Wabikon,NA
 NA,Pinaceae,Abies amabilis,0.4,NA,NA,Wind River,NA
 NA,Pinaceae,Abies grandis,0.35,NA,12,Wind River,NA
 NA,Pinaceae,Abies grandis,0.35,NA,15,Wind River,NA
-NA,Pinaceae,Abies procera,0.37,NA,NA,Wind River,NA
+NA,Pinaceae,Abies procera,0.37,NA,26,Wind River,NA
+NA,Pinaceae,Abies procera,0.37,NA,25,Wind River,NA
+NA,Pinaceae,Abies procera,0.37,NA,310,Wind River,NA
 NA,Pinaceae,Abies sp.,0.36,NA,NA,Wind River,NA
 NA,Sapindaceae,Acer circinatum,NRA,NA,NA,Wind River,NA
 NA,Sapindaceae,Acer glabrum,0.44,NA,NA,Wind River,NA
@@ -308,7 +312,7 @@ NA,Ericaceae,Rhododendron macrophyllum,0.5,NA,NA,Wind River,NA
 NA,Rosaceae,Rosa gymnocarpa,NRA,NA,32,Wind River,NA
 NA,Rosaceae,Rubus leucodermis,NRA,NA,NRA,Wind River,NA
 NA,Rosaceae,Rubus spectabilis,NRA,NA,NRA,Wind River,NA
-NA,Taxaceae,Taxus brevifolia,0.6,NA,NA,Wind River,NA
+NA,Taxaceae,Taxus brevifolia,0.6,NA,55,Wind River,NA
 NA,Cupressaceae,Thuja plicata,0.31,NA,NA,Wind River,NA
 NA,Pinaceae,Tsuga heterophylla,0.42,NA,8,Wind River,NA
 NA,Ericaceae,Vaccinium membranaceum,0.47,NA,NRA,Wind River,NA
@@ -338,7 +342,13 @@ NA,Salicaceae,Salix sp.,0.36,NA,NA,Wytham Woods,NA
 NA,Adoxaceae,Sambucus nigra,0.5,NA,NA,Wytham Woods,NA
 NA,Taxaceae,Taxus baccata,0.55,NA,NA,Wytham Woods,NA
 NA,Malvaceae,Tilia x europaea,0.32,NA,NA,Wytham Woods,NA
+NA,Pinaceae,Abies concolor,0.37,NA,26,Yosemite,NA
+NA,Pinaceae,Abies concolor,0.37,NA,25,Yosemite,NA
+NA,Pinaceae,Abies concolor,0.37,NA,310,Yosemite,NA
 NA,Pinaceae,Abies concolor,0.37,NA,NA,Yosemite,NA
+NA,Pinaceae,Abies magnifica,0.37,NA,26,Yosemite,NA
+NA,Pinaceae,Abies magnifica,0.37,NA,25,Yosemite,NA
+NA,Pinaceae,Abies magnifica,0.37,NA,310,Yosemite,NA
 NA,Pinaceae,Abies magnifica,0.37,NA,NA,Yosemite,NA
 NA,Pinaceae,Abies sp.,0.36,NA,NA,Yosemite,NA
 NA,Ericaceae,Arctostaphylos patula,0.72,NA,NRA,Yosemite,NA
@@ -354,6 +364,7 @@ NA,Rosaceae,Holodiscus discolor,0.71,NA,NRA,Yosemite,NA
 NA,Ericaceae,Leucothoe davisiae,0.405,NA,40,Yosemite,NA
 NA,Pinaceae,Pinus lambertiana,0.34,NA,NA,Yosemite,NA
 NA,Pinaceae,Pinus ponderosa,0.38,NA,NA,Yosemite,NA
+NA,Pinaceae,Pinus ponderosa,0.38,NA,561,Yosemite,NA
 NA,Rosaceae,Prunus emarginata,0.47,NA,NA,Yosemite,NA
 NA,Rosaceae,Prunus virginiana,0.47,NA,NA,Yosemite,NA
 NA,Pinaceae,Pseudotsuga menziesii,0.45,NA,NA,Yosemite,NA
@@ -376,3 +387,164 @@ NA,Salicaceae,Salix caprea,0.4,NA,240,Zofin,NA
 NA,Sambucaceae,Sambucus racemosa,0.46,NA,240,Zofin,NA
 NA,Rosaceae,Sorbus aucuparia,0.63,NA,240,Zofin,NA
 NA,Ulmaceae,Ulmus glabra,0.55,NA,240,Zofin,NA
+NA,Pinaceae,Abies bifolia,0.31,NA,NA,Utah,NA
+NA,Pinaceae,Abies concolor,0.37,NA,NA,Utah,NA
+NA,Pinaceae,Abies concolor,0.37,NA,221,Utah,NA
+NA,Rosaceae,Amelanchier alnifolia,0.66,NA,NA,Utah,NA
+NA,Rosaceae,Cercocarpus ledifolius,0.81,NA,52,Utah,NA
+NA,Cupressaceae,Juniperus communis,0.44,NA,NA,Utah,NA
+NA,Cupressaceae,Juniperus communis,0.44,NA,55,Utah,NA
+NA,Cupressaceae,Juniperus scopulorum,0.44,NA,NA,Utah,NA
+NA,Cupressaceae,Juniperus scopulorum,0.44,NA,55,Utah,NA
+NA,Pinaceae,Picea engelmannii,0.33,NA,29,Utah,NA
+NA,Pinaceae,Picea engelmannii,0.33,NA,128,Utah,NA
+NA,Pinaceae,Picea pungens,0.38,NA,18,Utah,NA
+NA,Pinaceae,Picea pungens,0.38,NA,289,Utah,NA
+NA,Pinaceae,Pinus edulis,NA,NA,15,Utah,NA
+NA,Pinaceae,Pinus flexilis,NA,NA,10,Utah,NA
+NA,Pinaceae,Pinus flexilis,NA,NA,14,Utah,NA
+NA,Pinaceae,Pinus flexilis,NA,NA,105,Utah,NA
+NA,Pinaceae,Pinus longaeva,NA,NA,10,Utah,NA
+NA,Pinaceae,Pinus longaeva,NA,NA,14,Utah,NA
+NA,Pinaceae,Pinus longaeva,NA,NA,105,Utah,NA
+NA,Pinaceae,Pinus ponderosa,0.38,NA,NA,Utah,NA
+NA,Pinaceae,Pinus ponderosa,0.38,NA,561,Utah,NA
+NA,Salicaceae,Populus tremuloides,0.35,NA,20,Utah,NA
+NA,Pinaceae,Pseudotsuga menziesii,0.45,NA,NA,Utah,NA
+NA,Grossulariaceae,Ribes cereum,NRA,NA,NRA,Utah,NA
+NA,Grossulariaceae,Ribes montigenum,NRA,NA,NRA,Utah,NA
+NA,Adoxaceae,Sambucus racemosa,0.5,NA,NA,Utah,NA
+NA,Adoxaceae,Viburnum prunifolium,0.83,NA,19,UMBC,NA
+NA,Adoxaceae,Viburnum acerifolium,0.83,NA,19,UMBC,NA
+NA,Adoxaceae,Viburnum rhytidophyllum,0.83,NA,19,UMBC,NA
+NA,Aquifoliaceae,Ilex opaca,0.5,NA,NA,UMBC,NA
+NA,Betulaceae,Betula nigra,0.55,NA,9,UMBC,NA
+NA,Betulaceae,Ostrya virginiana,0.63,NA,NA,UMBC,NA
+NA,Betulaceae,Carpinus caroliniana,0.58,NA,NA,UMBC,NA
+NA,Cannabaceae,Celtis occidentalis,0.49,NA,NA,UMBC,NA
+NA,Celastraceae,Euonymus atropurpureus,0.5,NA,NA,UMBC,NA
+NA,Cornaceae,Cornus florida,0.64,NA,NA,UMBC,NA
+NA,Cornaceae,Cornus kousa,0.64,NA,NA,UMBC,NA
+NA,Cupressaceae,Juniperus virginiana,0.44,NA,55,UMBC,NA
+NA,Cupressaceae,Cupressus x leylandii,0.44,NA,55,UMBC,NA
+NA,Ebenaceae,Diospyros virginiana,0.64,NA,NA,UMBC,NA
+NA,Elaeagnaceae,Elaeagnus pungens,0.5,NA,NA,UMBC,NA
+NA,Elaeagnaceae,Elaeagnus angustifolia,0.5,NA,NA,UMBC,NA
+NA,Fabaceae,Gleditsia triacanthos,NA,NA,NA,UMBC,NA
+NA,Fabaceae,Gleditsia triacanthos,NA,NA,9,UMBC,NA
+NA,Fabaceae,Robinia pseudoacacia,0.6,NA,9,UMBC,NA
+NA,Fabaceae,Cercis canadensis,0.63,NA,NA,UMBC,NA
+NA,Fagaceae,Quercus sp.,0.56,NA,NA,UMBC,NA
+NA,Fagaceae,Fagus grandifolia,0.56,NA,NA,UMBC,NA
+NA,Fagaceae,Quercus coccinea,0.6,NA,NA,UMBC,NA
+NA,Fagaceae,Quercus falcata,0.52,NA,NA,UMBC,NA
+NA,Fagaceae,Quercus macrocarpa,0.6,NA,10,UMBC,NA
+NA,Fagaceae,Quercus palustris,0.58,NA,NA,UMBC,NA
+NA,Fagaceae,Quercus phellos,0.6,NA,10,UMBC,NA
+NA,Fagaceae,Quercus prinus,0.57,NA,NA,UMBC,NA
+NA,Fagaceae,Quercus rubra,0.56,NA,NA,UMBC,NA
+NA,Hamamelidaceae,Hamamelis virginiana,0.71,NA,21,UMBC,NA
+NA,Juglandaceae,Juglans nigra,0.51,NA,NA,UMBC,NA
+NA,Juglandaceae,Carya cordiformis,0.6,NA,10,UMBC,NA
+NA,Juglandaceae,Carya glabra,0.66,NA,10,UMBC,NA
+NA,Juglandaceae,Carya sp.,0.66,NA,10,UMBC,NA
+NA,Juglandaceae,Carya tomentosa,0.64,NA,10,UMBC,NA
+NA,Lauraceae,Sassafras albidum,0.42,NA,41,UMBC,NA
+NA,Lauraceae,Lindera benzoin,0.5,NA,NA,UMBC,NA
+NA,Lythraceae,Lagerstroemia indica,0.47,NA,NA,UMBC,NA
+NA,Magnoliaceae,Liriodendron tulipifera,0.4,NA,NA,UMBC,NA
+NA,Malvaceae,Tilia americana,0.32,NA,NA,UMBC,NA
+NA,Moraceae,Maclura pomifera,NA,NA,NA,UMBC,NA
+NA,Moraceae,Morus rubra,0.59,NA,NA,UMBC,NA
+NA,Moraceae,Morus alba,0.59,NA,NA,UMBC,NA
+NA,Nyssaceae,Nyssa sylvatica,0.46,NA,NA,UMBC,NA
+NA,Oleaceae,Fraxinus sp.,0.51,NA,32,UMBC,NA
+NA,Oleaceae,Fraxinus americana,0.51,NA,32,UMBC,NA
+NA,Oleaceae,Fraxinus pennsylvanica,0.53,NA,NA,UMBC,NA
+NA,Oleaceae,Ligustrum amurense,NA,NA,NA,UMBC,NA
+NA,Paulowniaceae,Paulownia tomentosa,0.38,NA,NA,UMBC,NA
+NA,Pinaceae,Pinus thunbergii,NA,NA,NA,UMBC,NA
+NA,Pinaceae,Picea abies,NA,NA,13,UMBC,NA
+NA,Platanaceae,Platanus occidentalis,0.46,NA,NA,UMBC,NA
+NA,Rosaceae,Malus coronaria,0.61,NA,NA,UMBC,NA
+NA,Rosaceae,Malus sylvestris,0.61,NA,NA,UMBC,NA
+NA,Rosaceae,Crataegus sp.,0.62,NA,NA,UMBC,NA
+NA,Rosaceae,Amelanchier arborea,0.66,NA,NA,UMBC,NA
+NA,Rosaceae,Prunus serotina,0.47,NA,NA,UMBC,NA
+NA,Rosaceae,Prunus avium,0.47,NA,NA,UMBC,NA
+NA,Rosaceae,Pyrus calleryana,NA,NA,NA,UMBC,NA
+NA,Rosaceae,Pyrus communis,NA,NA,NA,UMBC,NA
+NA,Salicaceae,Salix nigra,0.36,NA,NA,UMBC,NA
+NA,Salicaceae,Populus deltoides,NA,NA,31,UMBC,NA
+NA,Sapindaceae,Acer negundo,0.44,NA,NA,UMBC,NA
+NA,Sapindaceae,Acer platanoides,0.44,NA,NA,UMBC,NA
+NA,Sapindaceae,Acer rubrum,0.49,NA,NA,UMBC,NA
+NA,Sapindaceae,Acer saccharinum,0.56,NA,NA,UMBC,NA
+NA,Sapindaceae,Acer saccharum,0.56,NA,NA,UMBC,NA
+NA,Simaroubaceae,Ailanthus altissima,0.33,NA,NA,UMBC,NA
+NA,Ulmaceae,Ulmus americana,0.46,NA,NA,UMBC,NA
+NA,Ulmaceae,Ulmus parvifolia x carpinifolia,0.46,NA,NA,UMBC,NA
+NA,Vitaceae,Vitis riparia,NA,NA,NA,UMBC,NA
+NA,Adoxaceae,Sambucus racemosa,0.5,NA,NA,Harvard Forest,NA
+NA,Adoxaceae,Viburnum dentatum,0.83,NA,19,Harvard Forest,NA
+NA,Adoxaceae,Viburnum acerfolium,0.83,NA,19,Harvard Forest,NA
+NA,Anacardiaceae,Toxicodendron vernix,NA,NA,NA,Harvard Forest,NA
+NA,Anacardiaceae,Toxicodendron radicans,NA,NA,NA,Harvard Forest,NA
+NA,Aquifoliaceae,Ilex laevigata,0.5,NA,NA,Harvard Forest,NA
+NA,Aquifoliaceae,Ilex verticillata,0.5,NA,NA,Harvard Forest,NA
+NA,Betulaceae,Alnus incana,0.37,NA,NA,Harvard Forest,NA
+NA,Betulaceae,Betula alleghaniensis,0.55,NA,9,Harvard Forest,NA
+NA,Betulaceae,Betula lenta,0.55,NA,9,Harvard Forest,NA
+NA,Betulaceae,Betula papyrifera,0.48,NA,21,Harvard Forest,NA
+NA,Betulaceae,Betula populifolia,0.45,NA,21,Harvard Forest,NA
+NA,Betulaceae,Betula unknown,0.55,NA,9,Harvard Forest,NA
+NA,Betulaceae,Ostrya virginiana,0.63,NA,NA,Harvard Forest,NA
+NA,Cupressaceae,Juniperus communis,0.44,NA,55,Harvard Forest,NA
+NA,Ericaceae,Kalmia latifolia,0.5,NA,NA,Harvard Forest,NA
+NA,Ericaceae,Lyonia ligustrina,0.5,NA,NA,Harvard Forest,NA
+NA,Ericaceae,Rhododendron prinophyllum,0.5,NA,NA,Harvard Forest,NA
+NA,Ericaceae,Vaccinium corymbosum,0.47,NA,NA,Harvard Forest,NA
+NA,Fagaceae,Castanea dentata,0.4,NA,NA,Harvard Forest,NA
+NA,Fagaceae,Fagus grandifolia,0.56,NA,NA,Harvard Forest,NA
+NA,Fagaceae,Quercus rubra,0.56,NA,NA,Harvard Forest,NA
+NA,Fagaceae,Quercus unknown,0.56,NA,NA,Harvard Forest,NA
+NA,Fagaceae,Quercus velutina,0.56,species,34,Harvard Forest,NA
+NA,Fagaceae,Quercus velutina,0.56,species,26,Harvard Forest,NA
+NA,Hamamelidaceae,Hamamelis virginiana,0.71,NA,21,Harvard Forest,NA
+NA,Lauraceae,Lindera benzoin,0.5,NA,NA,Harvard Forest,NA
+NA,Nyssaceae,Nyssa sylvatica,0.46,NA,NA,Harvard Forest,NA
+NA,Oleaceae,Fraxinus americana,0.51,NA,32,Harvard Forest,NA
+NA,Oleaceae,Fraxinus nigra,0.45,NA,NA,Harvard Forest,NA
+NA,Pinaceae,Picea abies,NA,NA,13,Harvard Forest,NA
+NA,Pinaceae,Picea rubens,NA,NA,13,Harvard Forest,NA
+NA,Pinaceae,Picea unknown,NA,NA,13,Harvard Forest,NA
+NA,Pinaceae,Pinus resinosa,NA,NA,NA,Harvard Forest,NA
+NA,Pinaceae,Pinus strobus,NA,NA,NA,Harvard Forest,NA
+NA,Pinaceae,Pinus unknown,NA,NA,NA,Harvard Forest,NA
+NA,Pinaceae,Tsuga canadensis,0.38,NA,NA,Harvard Forest,NA
+NA,Rhamnaceae,Frangula alnus,0.5,NA,NA,Harvard Forest,NA
+NA,Rosaceae,Amelanchier laevis,0.66,NA,NA,Harvard Forest,NA
+NA,Rosaceae,Aronia melanocarpa,NA,NA,NA,Harvard Forest,NA
+NA,Rosaceae,Crataegus sp.,0.62,NA,NA,Harvard Forest,NA
+NA,Rosaceae,Prunus serotina,0.47,NA,NA,Harvard Forest,NA
+NA,Rosaceae,Sorbus americana,NA,NA,NA,Harvard Forest,NA
+NA,Salicaceae,Populus grandidentata,0.36,NA,NA,Harvard Forest,NA
+NA,Salicaceae,Populus tremuloides,NA,NA,NA,Harvard Forest,NA
+NA,Salicaceae,Salix species,0.36,NA,NA,Harvard Forest,NA
+NA,Sapindaceae,Acer rubrum,0.49,NA,NA,Harvard Forest,NA
+NA,Sapindaceae,Acer saccharum,0.56,NA,NA,Harvard Forest,NA
+NA,Ulmaceae,Ulmus americana,0.46,NA,NA,Harvard Forest,NA
+NA,Betulaceae,Alnus viridis ssp. crispa,NA,NA,NA,Scotty Creek,NA
+NA,Betulaceae,Betula glandulosa,NA,NA,NA,Scotty Creek,NA
+NA,Betulaceae,Betula neoalaskana,NA,NA,37,Scotty Creek,NA
+NA,Betulaceae,Betula occidentalis,NA,NA,9,Scotty Creek,NA
+NA,Betulaceae,Betula pubescens,NA,NA,9,Scotty Creek,NA
+NA,Betulaceae,Betula spp.,NA,NA,NA,Scotty Creek,NA
+NA,Pinaceae,Larix laricina,NA,NA,7,Scotty Creek,NA
+NA,Pinaceae,Larix laricina,NA,NA,56,Scotty Creek,NA
+NA,Pinaceae,Picea glauca,NA,NA,61,Scotty Creek,NA
+NA,Pinaceae,Picea mariana,NA,NA,40,Scotty Creek,NA
+NA,Pinaceae,Picea mariana,NA,NA,51,Scotty Creek,NA
+NA,Pinaceae,Pinus banksiana,NA,NA,46,Scotty Creek,NA
+NA,Pinaceae,Pinus banksiana,NA,NA,56,Scotty Creek,NA
+NA,Salicaceae,Salix sp.,NA,NA,10,Scotty Creek,NA
