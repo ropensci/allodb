@@ -439,7 +439,7 @@ Utah,Cupressaceae,Juniperus scopulorum,NA,Tree,Total aboveground biomass,G,c8f88
 Utah,Pinaceae,Picea engelmannii,NA,Tree,Total aboveground biomass,E,9f4b7d,Species,NA,4,76,NA,NA,NA
 Utah,Pinaceae,Picea engelmannii,NA,Tree,Total aboveground biomass,G,57488c,Genus,NA,3,283,NA,NA,NA
 Utah,Pinaceae,Picea pungens,NA,Tree,Total aboveground biomass,E,4b4063,Species,Picea mariana,1.5,13,NA,NA,NA
-Utah,Pinaceae,Picea pungens,NA,Tree,Total aboveground biomass,G,8912e9,Genus,NA,3,72,NA,NA,NA
+Utah,Pinaceae,Picea pungens,NA,Tree,Total aboveground biomass,G,8.91E+12,Genus,NA,3,72,NA,NA,NA
 Utah,Pinaceae,Pinus edulis,NA,Tree,Total aboveground biomass,E,da0e89,Species,NA,5,45,NA,NA,NA
 Utah,Pinaceae,Pinus flexilis,NA,Tree,Stem biomass (without bark),E,48557b,Species,Pseudotsuga menziesii,2.7,27.5,using allometries for Pseudotsuga menziesii as generic small conifer proxy,NA,NA
 Utah,Pinaceae,Pinus flexilis,NA,Tree,Stem bark biomass,E,697035,Species,Pseudotsuga menziesii,2.7,27.5,using allometries for Pseudotsuga menziesii as generic small conifer proxy,NA,NA
@@ -536,12 +536,12 @@ UMBC,Sapindaceae,Acer saccharum,NA,Tree,Total aboveground biomass,E,77e37e,Speci
 UMBC,Simaroubaceae,Ailanthus altissima,NA,Tree,Total aboveground biomass,G,ae65ed,Mixed hardwood,NA,2.5,56,NA,NA,NA
 UMBC,Ulmaceae,Ulmus americana,NA,Tree,Whole tree (above stump),E,2473f9,Species,NA,2.5,40,NA,NA,NA
 UMBC,Ulmaceae,Ulmus parvifolia x carpinifolia,NA,Tree,Whole tree (above stump),E,2473f9,Species,Ulmus americana,2.5,40,NA,NA,NA
-UMBC,Vitaceae,Vitis riparia,NA,"Vine, to delete",NA,NA,89bf40,NA,NA,NA,NA,NA,NA,NA
+UMBC,Vitaceae,Vitis riparia,NA,"Vine, to delete",NA,NA,,NA,NA,NA,NA,NA,NA,NA
 Harvard Forest,Adoxaceae,Sambucus racemosa,NA,Shrub,Total aboveground biomass,G,ae65ed,Mixed hardwood,NA,2.5,56,NA,NA,NA
 Harvard Forest,Adoxaceae,Viburnum dentatum,NA,Shrub,Total aboveground biomass,E,5e2dea,Species,Virburnum lantanoides,0.28,1.59,NA,NA,NA
 Harvard Forest,Adoxaceae,Viburnum acerfolium,NA,Shrub,Total aboveground biomass,E,5e2dea,Species,Virburnum lantanoides,0.28,1.59,NA,NA,NA
 Harvard Forest,Anacardiaceae,Toxicodendron vernix,NA,Shrub,Total aboveground biomass,G,ae65ed,Mixed hardwood,NA,2.5,56,NA,NA,NA
-Harvard Forest,Anacardiaceae,Toxicodendron radicans,NA,"Vine or shrub, ask PI",NA,NA,89bf40,NA,NA,NA,NA,NA,NA,NA
+Harvard Forest,Anacardiaceae,Toxicodendron radicans,NA,"Vine or shrub, ask PI",NA,NA,,NA,NA,NA,NA,NA,NA,NA
 Harvard Forest,Aquifoliaceae,Ilex laevigata,NA,Shrub,Total aboveground biomass,G,f08fff,Family,NA,3,64,NA,NA,NA
 Harvard Forest,Aquifoliaceae,Ilex verticillata,NA,Shrub,Total aboveground biomass,G,f08fff,Family,NA,3,64,NA,NA,NA
 Harvard Forest,Betulaceae,Alnus incana,NA,Tree,Total aboveground biomass,G,5caff8,Family,NA,3,64,NA,NA,NA
@@ -588,11 +588,11 @@ Harvard Forest,Sapindaceae,Acer rubrum,NA,Tree,Total aboveground biomass,E,7c72e
 Harvard Forest,Sapindaceae,Acer saccharum,NA,Tree,Total aboveground biomass,E,77e37e,Species,NA,7.5,23.7,NA,NA,NA
 Harvard Forest,Ulmaceae,Ulmus americana,NA,Tree,Whole tree (above stump),E,2473f9,Species,NA,2.5,40,NA,NA,NA
 Scotty Creek,Betulaceae,Alnus viridis ssp. crispa,NA,Tree,Total aboveground biomass,G,5caff8,Family,NA,3,64,NA,NA,NA
-Scotty Creek,Betulaceae,Betula glandulosa,NA,Shrub,NA,NA,89bf40,NA,NA,NA,NA,NA,NA,NA
+Scotty Creek,Betulaceae,Betula glandulosa,NA,Shrub,NA,NA,,NA,NA,NA,NA,NA,NA,NA
 Scotty Creek,Betulaceae,Betula neoalaskana,NA,Tree,Total aboveground biomass,E,686376,Species,NA,3.7,32.7,NA,NA,NA
 Scotty Creek,Betulaceae,Betula occidentalis,NA,Tree,Whole tree (above stump),E,382ee9,Species,Betula alleghaniensis,2.5,40,NA,NA,NA
 Scotty Creek,Betulaceae,Betula pubescens,NA,Tree,Whole tree (above stump),E,382ee9,Species,Betula alleghaniensis,2.5,40,NA,NA,NA
-Scotty Creek,Betulaceae,Betula spp.,NA,Shrub,NA,NA,89bf40,NA,NA,NA,NA,NA,NA,NA
+Scotty Creek,Betulaceae,Betula spp.,NA,Shrub,NA,NA,,NA,NA,NA,NA,NA,NA,NA
 Scotty Creek,Pinaceae,Larix laricina,NA,Tree,Total aboveground biomass,E,726f1d,Species,NA,0.2,2,NA,NA,NA
 Scotty Creek,Pinaceae,Larix laricina,NA,Tree,Total aboveground biomass,E,a5d599,Species,NA,5,35,NA,NA,NA
 Scotty Creek,Pinaceae,Picea glauca,NA,Tree,Total aboveground biomass,E,ae60e9,Species,NA,5,35,NA,NA,NA
