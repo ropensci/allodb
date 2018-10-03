@@ -147,7 +147,7 @@ b30744,exp(a+b*ln(DBA)),exp(4.070762+2.4028*log(dba)),Stem biomass (with bark),D
 9f4b7d,a+(b*DBH)+c*(DBH^d),(-36.94)+0.42*(DBH^2),Total aboveground biomass,DBH,Species,"Colorado, USA",4,76,29,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
 57488c,exp(a+b*ln(DBH)),exp(3.03+2.5567*log(dbh)),Total aboveground biomass,DBH,Genus,North America,3,283,128,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
 4b4063,exp(a+b*ln(DBH)),exp(3.63+2.54*log(dbh)),Total aboveground biomass,DBH,Species,"Alaska, USA",1.5,13,18,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
-8912e9,exp(a+b*ln(DBH)),exp(2.1364+2.3233*log(dbh)),Total aboveground biomass,DBH,Genus,North America,3,72,289,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+8.91E+12,exp(a+b*ln(DBH)),exp(2.1364+2.3233*log(dbh)),Total aboveground biomass,DBH,Genus,North America,3,72,289,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
 da0e89,a+b*(log10(DBH)),1.468+2.582*(log10((DBH-10.603)/0.9823)),Total aboveground biomass,DBH,Species,"Arizona, USA",5,45,15,cm,kg,harvest,NA,NA,NA,0,included in model,NA,NA,"Original biomass equation uses DRC (diameter root collar). Chojnacky & Rogers, 1999 equation to do the oposite, convert dcr to dbh (dbh=6.818+1.0222*drc+1.88791.8971-0.0399*drc) so we rewrote Chojnaky to convert dbh to dcr",NA
 48557b,10^(a+b*(log10(DBH))),10^(-1.024+2.416*(log10(dbh))),Stem biomass (without bark),DBH,Species,"New Mexico, USA",2.7,27.5,10,cm,kg,harvest,NA,NA,NA,1,1.014,NA,NA,NA,NA
 697035,10^(a+b*(log10(DBH))),10^(-1.234+2.128*(log10(dbh))),Stem bark biomass,DBH,Species,"New Mexico, USA",2.7,27.5,10,cm,kg,harvest,NA,NA,NA,1,0.004,NA,NA,NA,NA
@@ -156,7 +156,6 @@ a59bd5,10^(a+b*(log10(DBH))),10^(-2.347+2.478*(log10(dbh))),Total foliage,DBH,Sp
 ecef00,exp(a+b*ln(DBH)),exp(-0.86896+1.652882*ln(DBH)),Total aboveground biomass,DBH,Species,"Nevada, USA",3,112,105,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
 aeebe9,a*(DBA^b),0.1231*(dba^2.242),Total aboveground biomass,DBH,Species,"Utah, USA",3,36,20,cm,kg,harvest,NA,NA,NA,1,1.046,NA,NA,NA,NA
 e2c7c7,10^(a+b*(log10(DBH))),10^(0.15+2.48*(log10(DBH))),Total aboveground biomass,DBH,Species,"New Brunswick, Canada",2.54,25.4,13,in,lb,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
-89bf40,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 686376,a+(b*DBH)+c*(DBH^2),(-16809)+(2656.48*DBH)+248.416*(DBH^2),Total aboveground biomass,DBH,Species,"Alaska, USA",3.7,32.7,37,cm,kg,harvest,NA,NA,NA,NA,NA,NA,NA,NA,NA
 726f1d,10^(a+b*(log10(DBH))),10^(2.648+0.715*(log10(dbh))),Total aboveground biomass,DBH,Species,"Manitoba, Canada",0.2,2,7,cm,g,harvest,NA,NA,NA,1,1.027,NA,NA,NA,NA
 a5d599,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),7.06302+(-3.01775*DBH)+*(DBH^2)-0.00329*(DBH^3),Total aboveground biomass,DBH,Species,"Northwest Territory, Canada",5,35,56,cm,kg,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
