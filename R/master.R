@@ -1,38 +1,23 @@
-#' Read csv files into a master table.
+#' Join the main allodb tables: `equations``, `sitespecies`, and `sites_info`.
 #'
-#' @param path Path to directory with equations.csv, sitespecies.csv, and
-#'   sites_info.csv.
-#'
+#' @param .f A function, form the __dplyr__ package, used to join tables (e.g.
+#'   `dplyr::full_join()`).
+#' @seealso [dplyr::full_join()].
 #' @return A dataframe.
 #' @export
 #'
 #' @examples
-#' csv_master(allodb_example("csv_database"))
-#' # Or
+#' # Defaults to use `dplyr::full_join()`
+#' master()
+#'
+#' # But you can use other joins
+#' master(.f = dplyr::left_join)
 #' \dontrun{
-#' csv_master("data-raw/csv_database")
+#' # Nice view in RStudio
+#' View(master())
 #' }
-csv_master <- function(path) {
-  main_tables <- "equations.csv$|sitespecies.csv$|sites_info.csv"
-  files <- fs::dir_ls(path, regexp = main_tables)
-  tbls <- purrr::map(files, readr::read_csv)
-  names(tbls) <- fs::path_ext_remove(fs::path_file(names(tbls)))
-
-  tbls$equations %>%
-    dplyr::left_join(tbls$sitespecies, by = "equation_id") %>%
-    dplyr::left_join(tbls$sites_info, by = "site")
-}
-
-#' Help create path to example data.
-#'
-#' @param path Directory containing example.
-#'
-#' @return A path.
-#' @export
-#'
-#' @examples
-#' allodb_example("csv_database")
-allodb_example <- function(path) {
-  system.file("extdata", path, package = "allodb")
+master <- function(.f = dplyr::full_join) {
+  eqn_site <- .f(allodb::equations, allodb::sitespecies, by = "equation_id")
+  .f(eqn_site, allodb::sites_info, by = "site")
 }
 

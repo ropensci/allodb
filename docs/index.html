@@ -222,19 +222,19 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
 <a class="sourceLine" id="cb2-131" data-line-number="131"></a>
 <a class="sourceLine" id="cb2-132" data-line-number="132">sites_info</a>
 <a class="sourceLine" id="cb2-133" data-line-number="133"><span class="co">#&gt; # A tibble: 63 x 12</span></a>
-<a class="sourceLine" id="cb2-134" data-line-number="134"><span class="co">#&gt;       id Site  site     lat   long UTM_Zone UTM_X UTM_Y intertropical</span></a>
-<a class="sourceLine" id="cb2-135" data-line-number="135"><span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;        </span></a>
-<a class="sourceLine" id="cb2-136" data-line-number="136"><span class="co">#&gt;  1    42 Amac~ amac~  -3.81  -70.3       19 3592~ 9578~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-137" data-line-number="137"><span class="co">#&gt;  2    51 Bada~ bada~  29.5   111.        49 4534~ 3259~ Other        </span></a>
-<a class="sourceLine" id="cb2-138" data-line-number="138"><span class="co">#&gt;  3    52 Baot~ baot~  33.5   112.        49 5873~ 3706~ Other        </span></a>
-<a class="sourceLine" id="cb2-139" data-line-number="139"><span class="co">#&gt;  4    45 Barr~ barr~   9.15  -79.8       17 6267~ 1012~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-140" data-line-number="140"><span class="co">#&gt;  5    18 Buki~ buki~   1.35  104.        48 3642~ 1492~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-141" data-line-number="141"><span class="co">#&gt;  6    53 Chan~ chan~  42.4   128.        52 4245~ 4692~ Other        </span></a>
-<a class="sourceLine" id="cb2-142" data-line-number="142"><span class="co">#&gt;  7    46 Coco~ coco~   8.99  -79.6       17 6520~ 9937~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-143" data-line-number="143"><span class="co">#&gt;  8    14 Danu~ danu~   5.1   118.        50 5762~ 5639~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-144" data-line-number="144"><span class="co">#&gt;  9     7 Ding~ ding~  23.2   113.        49 6546~ 2563~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-145" data-line-number="145"><span class="co">#&gt; 10    25 Doi ~ doi ~  18.6    98.4       47 4402~ 2054~ Tropical     </span></a>
-<a class="sourceLine" id="cb2-146" data-line-number="146"><span class="co">#&gt; # ... with 53 more rows, and 3 more variables: size.ha &lt;dbl&gt;, E &lt;dbl&gt;,</span></a>
+<a class="sourceLine" id="cb2-134" data-line-number="134"><span class="co">#&gt;    id    Site  site  lat   long  UTM_Zone UTM_X UTM_Y intertropical size.ha</span></a>
+<a class="sourceLine" id="cb2-135" data-line-number="135"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  </span></a>
+<a class="sourceLine" id="cb2-136" data-line-number="136"><span class="co">#&gt;  1 42    Amac~ amac~ -3.81 -70.~ 19       3592~ 9578~ Tropical      25     </span></a>
+<a class="sourceLine" id="cb2-137" data-line-number="137"><span class="co">#&gt;  2 51    Bada~ bada~ 29.46 110.~ 49       4534~ 3259~ Other         25     </span></a>
+<a class="sourceLine" id="cb2-138" data-line-number="138"><span class="co">#&gt;  3 52    Baot~ baot~ 33.5  111.~ 49       5873~ 3706~ Other         25     </span></a>
+<a class="sourceLine" id="cb2-139" data-line-number="139"><span class="co">#&gt;  4 45    Barr~ barr~ 9.15  -79.~ 17       6267~ 1012~ Tropical      50     </span></a>
+<a class="sourceLine" id="cb2-140" data-line-number="140"><span class="co">#&gt;  5 18    Buki~ buki~ 1.35  103.~ 48       3642~ 1492~ Tropical      4      </span></a>
+<a class="sourceLine" id="cb2-141" data-line-number="141"><span class="co">#&gt;  6 53    Chan~ chan~ 42.38 128.~ 52       4245~ 4692~ Other         25     </span></a>
+<a class="sourceLine" id="cb2-142" data-line-number="142"><span class="co">#&gt;  7 46    Coco~ coco~ 8.99  -79.~ 17       6520~ 9937~ Tropical      4      </span></a>
+<a class="sourceLine" id="cb2-143" data-line-number="143"><span class="co">#&gt;  8 14    Danu~ danu~ 5.1   117.~ 50       5762~ 5639~ Tropical      50     </span></a>
+<a class="sourceLine" id="cb2-144" data-line-number="144"><span class="co">#&gt;  9 7     Ding~ ding~ 23.17 112.~ 49       6546~ 2563~ Tropical      20     </span></a>
+<a class="sourceLine" id="cb2-145" data-line-number="145"><span class="co">#&gt; 10 25    Doi ~ doi ~ 18.58 98.43 47       4402~ 2054~ Tropical      15     </span></a>
+<a class="sourceLine" id="cb2-146" data-line-number="146"><span class="co">#&gt; # ... with 53 more rows, and 2 more variables: E &lt;chr&gt;,</span></a>
 <a class="sourceLine" id="cb2-147" data-line-number="147"><span class="co">#&gt; #   wsg.site.name &lt;chr&gt;</span></a></code></pre></div>
 </div>
 <div id="code-of-conduct" class="section level2">

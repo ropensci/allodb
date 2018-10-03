@@ -1,27 +1,45 @@
 Package: allodb
 Title: A Database of Allometric Equations for ForestGEO
 Version: 0.0.0.9004
-Authors@R: c(
-    person("Gonzalez-Akre", "Erika", , "GonzalezEB@@si.edu", role = c("aut")),
-    person("Rutishauser", "Ervan", , "RutishauserE@@si.edu", role = c("aut")),
-    person("Mauro", "Lepore", , "leporem@si.edu", role = c("aut", "ctr", "cre")),
-    person("Kristina", "Teixeira", , "TeixeiraK@@si.edu", role = c("aut"))
-    )
+Authors@R: 
+    c(person(given = "Gonzalez-Akre",
+             family = "Erika",
+             role = "aut",
+             email = "GonzalezEB@@si.edu"),
+      person(given = "Rutishauser",
+             family = "Ervan",
+             role = "aut",
+             email = "RutishauserE@@si.edu"),
+      person(given = "Mauro",
+             family = "Lepore",
+             role = c("aut", "ctr", "cre"),
+             email = "leporem@si.edu"),
+      person(given = "Kristina",
+             family = "Teixeira",
+             role = "aut",
+             email = "TeixeiraK@@si.edu"))
 Description: A database of allometric equations for ForestGEO.
 License: GPL-3
 URL: https://github.com/forestgeo/allodb
 BugReports: https://github.com/forestgeo/allodb/issues
 Depends: 
     R (>= 3.1)
+Imports: 
+    dplyr,
+    readr
 Suggests: 
     covr,
+    fs,
+    glue,
+    here,
     knitr (>= 1.17),
+    purrr,
     rmarkdown (>= 1.7),
     testthat,
-    dplyr,
-    purrr,
-    tidyr
-VignetteBuilder: knitr
+    tidyr,
+    magrittr
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

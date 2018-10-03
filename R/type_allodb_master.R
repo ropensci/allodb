@@ -36,26 +36,6 @@ new_allodb <- function(x) {
 
 
 
-#' Read a .csv file interpreting all columns as characters.
-#'
-#' This is a conservative way of reading data in a way that preserves all its
-#' information.
-#'
-#' @inheritParams readr::read_delim
-#'
-#' @return A tibble.
-#'
-#' @export
-#'
-#' @examples
-#' read_csv_as_chr("x\n1")
-read_csv_as_chr <- function(file) {
-  first_row <- suppressMessages(readr::read_csv(file, n_max = 1))
-  n_cols <- length(names(first_row))
-  all_chr <- paste0(rep("c", n_cols), collapse = "")
-  readr::read_csv(file, col_types = all_chr)
-}
-
 #' Help read allodb data safely.
 #'
 #' For details see [`fgeo.tool::type_fgeo()`](https://goo.gl/gVSMT8).
