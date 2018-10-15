@@ -8,3 +8,4 @@ tmp.R
 data-raw/.DS_Store
 .DS_Store
 .DS_Store
+data-raw/csv_database/sitespecies_metadata.csv
