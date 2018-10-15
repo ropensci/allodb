@@ -1,4 +1,4 @@
-site,family,species,species_code,life_form,dependent_variable_biomass_component,equation_grouping,equation_id,allometry_specificity,proxy_species,dbh_min_cm,dbh_max_cm,notes_on_species,wsg_id,wsg_specificity
+site,family,species,species_code,life_form,dependent_variable_biomass_component,equation_group,equation_id,allometry_specificity,proxy_species,dbh_min_cm,dbh_max_cm,notes_on_species,wsg_id,wsg_specificity
 Lilly Dicky,Sapindaceae,Acer rubrum,316,Tree,Total aboveground biomass,E,2060ea,Species,NA,0.21,5.73,NA,NA,NA
 Lilly Dicky,Sapindaceae,Acer saccharum,318,Tree,Total aboveground biomass,E,a4d879,Species,NA,0.19,3.86,NA,NA,NA
 Lilly Dicky,Rosaceae,Amelanchier arborea,356,Tree,Stem biomass (with bark),E,c59e03,Genus,NA,8.9,25.4,NA,NA,NA
