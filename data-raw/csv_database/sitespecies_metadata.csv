@@ -9,7 +9,9 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,Erikas notes to del
 8 / H,equation_id,Unique equation identification number given arbitrarely. Links Equations table.,numeric,-,NA,NA,need range before publishing
 9 / I,equation_taxa,"Species, genus, family, or plant group for which the allomery was developed",character (string),NA,NA,NA,
 10 / J,allometry_specificity,"Refers to the specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)",character (string),-,NA,NA,NA
-11 / K,dbh_min_cm,Min DBH at which the equation should be applied,numeric,-,-,NA,Need range before publishing
-12 / L,dbh_max_cm,Max DBH at which the equation should be applied,numeric,-,-,NA,Need range before publishing
-13 / L,wsg_id,Wood density identification number. Links to id in Wood Density table.,numeric,NA,NA,NA,NA
-14 / M,wsg_specifity,"Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)",character,NA,NA,NA,I don't think needed in this table (in wood density table)
+11 / K,proxy_species,Species used as proxy to calculate AGB when a specific-species equation was not available,character,NA,NA,NA,
+12 / L,dbh_min_cm,Min DBH at which the equation should be applied,numeric,-,-,NA,Need range before publishing
+13 / M,dbh_max_cm,Max DBH at which the equation should be applied,numeric,-,-,NA,Need range before publishing
+14 / N,notes_on_species,"Informative notes on species and sites, non critical in biomass calculation",character,NA,NA,NA,
+15 / O,wsg_id,Wood density identification number. Links to id in Wood Density table.,numeric,NA,NA,NA,NA
+16 / P,wsg_specifity,"Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)",character,NA,NA,NA,I don't think needed in this table (in wood density table)
