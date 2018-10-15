@@ -76,7 +76,7 @@ type_allodb_master <- function() {
     equation_id = 'c',
     equation_form = 'c',
     equation_allometry = 'c',
-    equation_grouping = 'c',
+    equation_group = 'c',
     independent_variable = 'c',
     regression_model = 'c',
     other_equations_tested = 'c',
