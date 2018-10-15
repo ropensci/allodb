@@ -588,11 +588,11 @@ Harvard Forest,Sapindaceae,Acer rubrum,NA,Tree,Total aboveground biomass,E,7c72e
 Harvard Forest,Sapindaceae,Acer saccharum,NA,Tree,Total aboveground biomass,E,77e37e,Acer saccharum,Species,NA,7.5,23.7,NA,NA,NA
 Harvard Forest,Ulmaceae,Ulmus americana,NA,Tree,Whole tree (above stump),E,2473f9,Ulmus americana,Species,NA,2.5,40,NA,NA,NA
 Scotty Creek,Betulaceae,Alnus viridis ssp. crispa,NA,Tree,Total aboveground biomass,G,5caff8,Betulaceae,Family,NA,3,64,NA,NA,NA
-Scotty Creek,Betulaceae,Betula glandulosa,NA,Shrub,NA,NA,,,NA,NA,NA,NA,NA,NA,NA
+Scotty Creek,Betulaceae,Betula glandulosa,NA,Shrub,Total aboveground biomass,E,a3a86f,Betula,Genus,NA,0.31,1.37,NA,NA,NA
 Scotty Creek,Betulaceae,Betula neoalaskana,NA,Tree,Total aboveground biomass,E,686376,Betula neoalaskana,Species,NA,3.7,32.7,NA,NA,NA
 Scotty Creek,Betulaceae,Betula occidentalis,NA,Tree,Whole tree (above stump),E,382ee9,Betula occidentalis,Species,Betula alleghaniensis,2.5,40,NA,NA,NA
 Scotty Creek,Betulaceae,Betula pubescens,NA,Tree,Whole tree (above stump),E,382ee9,Betula pubescens,Species,Betula alleghaniensis,2.5,40,NA,NA,NA
-Scotty Creek,Betulaceae,Betula spp.,NA,Shrub,NA,NA,,,NA,NA,NA,NA,NA,NA,NA
+Scotty Creek,Betulaceae,Betula spp.,NA,Shrub,Total aboveground biomass,E,a3a86f,Betula,Genus,NA,0.31,1.37,NA,NA,NA
 Scotty Creek,Pinaceae,Larix laricina,NA,Tree,Total aboveground biomass,E,726f1d,Larix laricina,Species,NA,0.2,2,NA,NA,NA
 Scotty Creek,Pinaceae,Larix laricina,NA,Tree,Total aboveground biomass,E,a5d599,Larix laricina,Species,NA,5,35,NA,NA,NA
 Scotty Creek,Pinaceae,Picea glauca,NA,Tree,Total aboveground biomass,E,ae60e9,Picea glauca,Species,NA,5,35,NA,NA,NA
