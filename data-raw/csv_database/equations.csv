@@ -166,3 +166,4 @@ b47d78,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),1.51752+(-0.9688*DBH)+0.29833*(DBH^2)+0.000
 a5de78,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),(-95.5471)+(21.1602*DBH)-1.04327*(DBH^2)+0.02434*(DBH^3),Total aboveground biomass,DBH,Species,"Northwest Territory, Canada",5,35,56,cm,kg,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
 390a5a,10^(a+b*(log10(DBH))),10^(2.481+1.19*(log10(dbh))),Total aboveground biomass,DBH,Species,"Manitoba, Canada",0.3,1,10,cm,g,harvest,NA,NA,NA,1,1.121,NA,NA,NA,NA
 a3a86f,a*(DBA^b),49.52*(dba^2.027),Total aboveground biomass,DBA,Genus,"Alberta, Canada",0.31,1.37,25,cm,g,harvest,ordinary least squares,mixed model,NA,1,NA,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
+1f17bb,a*(DBA^b),44.06*(dba^2.395),Total aboveground biomass,DBA,Genus,"Alberta, Canada",0.64,5.7,27,cm,g,harvest,ordinary least squares,mixed model,NA,1,NA,NA,NA,DBA= stem basal diameter. Use shrub function in this package,NA
