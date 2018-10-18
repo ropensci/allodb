@@ -2,7 +2,7 @@
 % Please edit documentation in R/master.R
 \name{master}
 \alias{master}
-\title{Join the main allodb tables: \code{equations``,}sitespecies\code{, and}sites_info`.}
+\title{Join the main allodb tables: \code{equations``, }sitespecies\code{, and }sites_info`.}
 \usage{
 master(.f = dplyr::full_join)
 }
@@ -14,7 +14,7 @@ master(.f = dplyr::full_join)
 A dataframe.
 }
 \description{
-Join the main allodb tables: \code{equations``,}sitespecies\code{, and}sites_info`.
+Join the main allodb tables: \code{equations``, }sitespecies\code{, and }sites_info`.
 }
 \examples{
 # Defaults to use `dplyr::full_join()`

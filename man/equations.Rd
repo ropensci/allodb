@@ -5,7 +5,7 @@
 \alias{equations}
 \alias{equations_metadata}
 \title{Tables of allometric equations and associated metadata for ForestGEO sites.}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 167 rows and 22 columns.}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 168 rows and 22 columns.}
 \usage{
 equations
 

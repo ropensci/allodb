@@ -147,7 +147,7 @@
 146      9f4b7d                           a+(b*DBH)+c*(DBH^d)
 147      57488c                              exp(a+b*ln(DBH))
 148      4b4063                              exp(a+b*ln(DBH))
-149      8912e9                              exp(a+b*ln(DBH))
+149    8.91E+12                              exp(a+b*ln(DBH))
 150      da0e89                              a+b*(log10(DBH))
 151      48557b                         10^(a+b*(log10(DBH)))
 152      697035                         10^(a+b*(log10(DBH)))
@@ -156,16 +156,17 @@
 155      ecef00                              exp(a+b*ln(DBH))
 156      aeebe9                                     a*(DBA^b)
 157      e2c7c7                         10^(a+b*(log10(DBH)))
-158      89bf40                                          <NA>
-159      686376                           a+(b*DBH)+c*(DBH^2)
-160      726f1d                         10^(a+b*(log10(DBH)))
-161      a5d599                 a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
-162      ae60e9                 a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
-163      2a6b9b 10^(a+b*(log10(DBH)+c(AGE)+d(log10(DBH)*AGE))
-164      b47d78                 a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
-165      7901c0 10^(a+b*(log10(DBH)+c(AGE)+d(log10(DBH)*AGE))
-166      a5de78                 a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
-167      390a5a                         10^(a+b*(log10(DBH)))
+158      686376                           a+(b*DBH)+c*(DBH^2)
+159      726f1d                         10^(a+b*(log10(DBH)))
+160      a5d599                 a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+161      ae60e9                 a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+162      2a6b9b 10^(a+b*(log10(DBH)+c(AGE)+d(log10(DBH)*AGE))
+163      b47d78                 a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+164      7901c0 10^(a+b*(log10(DBH)+c(AGE)+d(log10(DBH)*AGE))
+165      a5de78                 a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+166      390a5a                         10^(a+b*(log10(DBH)))
+167      a3a86f                                     a*(DBA^b)
+168      1f17bb                                     a*(DBA^b)
                                                equation_allometry
 1                                10^(1.1891+1.419*(log10(dbh^2)))
 2                               10^(1.2315+1.6376*(log10(dbh^2)))
@@ -321,19 +322,20 @@
 152                                10^(-1.234+2.128*(log10(dbh)))
 153                                10^(-2.336+2.650*(log10(dbh)))
 154                                10^(-2.347+2.478*(log10(dbh)))
-155                                exp(-0.86896+1.652882*ln(DBH))
+155                               exp(-0.86896+1.652882*log(DBH))
 156                                            0.1231*(dba^2.242)
 157                                   10^(0.15+2.48*(log10(DBH)))
-158                                                          <NA>
-159                        (-16809)+(2656.48*DBH)+248.416*(DBH^2)
-160                                 10^(2.648+0.715*(log10(dbh)))
-161               7.06302+(-3.01775*DBH)+*(DBH^2)-0.00329*(DBH^3)
-162       36.56038+(-10.6275*DBH)+0.93837*(DBH^2)-0.01032*(DBH^3)
-163  10^(3.011+1.202*(log10(DBH)-0.01(AGE)+0.011(log10(DBH)*AGE))
-164         1.51752+(-0.9688*DBH)+0.29833*(DBH^2)+0.00092*(DBH^3)
-165 10^(2.889+0.789*(log10(DBH)-0.014(AGE)+0.025(log10(DBH)*AGE))
-166      (-95.5471)+(21.1602*DBH)-1.04327*(DBH^2)+0.02434*(DBH^3)
-167                                  10^(2.481+1.19*(log10(dbh)))
+158                        (-16809)+(2656.48*DBH)+248.416*(DBH^2)
+159                                 10^(2.648+0.715*(log10(dbh)))
+160               7.06302+(-3.01775*DBH)+*(DBH^2)-0.00329*(DBH^3)
+161       36.56038+(-10.6275*DBH)+0.93837*(DBH^2)-0.01032*(DBH^3)
+162  10^(3.011+1.202*(log10(DBH)-0.01(AGE)+0.011(log10(DBH)*AGE))
+163         1.51752+(-0.9688*DBH)+0.29833*(DBH^2)+0.00092*(DBH^3)
+164 10^(2.889+0.789*(log10(DBH)-0.014(AGE)+0.025(log10(DBH)*AGE))
+165      (-95.5471)+(21.1602*DBH)-1.04327*(DBH^2)+0.02434*(DBH^3)
+166                                  10^(2.481+1.19*(log10(dbh)))
+167                                             49.52*(dba^2.027)
+168                                             44.06*(dba^2.395)
          dependent_variable_biomass_component independent_variable
 1                   Total aboveground biomass                  DBH
 2                   Total aboveground biomass                  DBH
@@ -492,7 +494,7 @@
 155                 Total aboveground biomass                  DBH
 156                 Total aboveground biomass                  DBH
 157                 Total aboveground biomass                  DBH
-158                                      <NA>                 <NA>
+158                 Total aboveground biomass                  DBH
 159                 Total aboveground biomass                  DBH
 160                 Total aboveground biomass                  DBH
 161                 Total aboveground biomass                  DBH
@@ -501,7 +503,8 @@
 164                 Total aboveground biomass                  DBH
 165                 Total aboveground biomass                  DBH
 166                 Total aboveground biomass                  DBH
-167                 Total aboveground biomass                  DBH
+167                 Total aboveground biomass                  DBA
+168                 Total aboveground biomass                  DBA
     allometry_specificity                          geographic_area dbh_min_cm
 1                 Species                                Ohio, USA       0.21
 2                 Species                                Ohio, USA       0.19
@@ -660,16 +663,17 @@
 155               Species                              Nevada, USA          3
 156               Species                                Utah, USA          3
 157               Species                    New Brunswick, Canada       2.54
-158                  <NA>                                     <NA>       <NA>
-159               Species                              Alaska, USA        3.7
-160               Species                         Manitoba, Canada        0.2
+158               Species                              Alaska, USA        3.7
+159               Species                         Manitoba, Canada        0.2
+160               Species              Northwest Territory, Canada          5
 161               Species              Northwest Territory, Canada          5
-162               Species              Northwest Territory, Canada          5
-163               Species                         Manitoba, Canada        0.5
-164               Species              Northwest Territory, Canada          5
-165               Species                         Manitoba, Canada        0.3
-166               Species              Northwest Territory, Canada          5
-167               Species                         Manitoba, Canada        0.3
+162               Species                         Manitoba, Canada        0.5
+163               Species              Northwest Territory, Canada          5
+164               Species                         Manitoba, Canada        0.3
+165               Species              Northwest Territory, Canada          5
+166               Species                         Manitoba, Canada        0.3
+167                 Genus                          Alberta, Canada       0.31
+168                 Genus                          Alberta, Canada       0.64
     dbh_max_cm sample_size dbh_units_original biomass_units_original
 1         5.73        <NA>                 cm                      g
 2         3.86        <NA>                 cm                      g
@@ -828,16 +832,17 @@
 155        112         105                 cm                     kg
 156         36          20                 cm                     kg
 157       25.4          13                 in                     lb
-158       <NA>        <NA>               <NA>                   <NA>
-159       32.7          37                 cm                     kg
-160          2           7                 cm                      g
-161         35          56                 cm                     kg
-162         35          61                 cm                     kg
-163         17          40                 cm                      g
-164         35          51                 cm                     kg
-165         17          46                 cm                      g
-166         35          56                 cm                     kg
-167          1          10                 cm                      g
+158       32.7          37                 cm                     kg
+159          2           7                 cm                      g
+160         35          56                 cm                     kg
+161         35          61                 cm                     kg
+162         17          40                 cm                      g
+163         35          51                 cm                     kg
+164         17          46                 cm                      g
+165         35          56                 cm                     kg
+166          1          10                 cm                      g
+167       1.37          25                 cm                      g
+168        5.7          27                 cm                      g
     allometry_development_method              regression_model
 1                        harvest                          <NA>
 2                        harvest                          <NA>
@@ -996,7 +1001,7 @@
 155                      harvest                          <NA>
 156                      harvest                          <NA>
 157                      harvest                          <NA>
-158                         <NA>                          <NA>
+158                      harvest                          <NA>
 159                      harvest                          <NA>
 160                      harvest                          <NA>
 161                      harvest                          <NA>
@@ -1005,7 +1010,8 @@
 164                      harvest                          <NA>
 165                      harvest                          <NA>
 166                      harvest                          <NA>
-167                      harvest                          <NA>
+167                      harvest        ordinary least squares
+168                      harvest        ordinary least squares
           other_equations_tested log_biomass bias_corrected
 1                           <NA>        <NA>              1
 2                           <NA>        <NA>              1
@@ -1165,15 +1171,16 @@
 156                         <NA>        <NA>              1
 157                         <NA>        <NA>              0
 158                         <NA>        <NA>           <NA>
-159                         <NA>        <NA>           <NA>
-160                         <NA>        <NA>              1
+159                         <NA>        <NA>              1
+160                         <NA>        <NA>              0
 161                         <NA>        <NA>              0
-162                         <NA>        <NA>              0
-163                         <NA>        <NA>              1
-164                         <NA>        <NA>              0
-165                         <NA>        <NA>              1
-166                         <NA>        <NA>              0
-167                         <NA>        <NA>              1
+162                         <NA>        <NA>              1
+163                         <NA>        <NA>              0
+164                         <NA>        <NA>              1
+165                         <NA>        <NA>              0
+166                         <NA>        <NA>              1
+167                  mixed model        <NA>              1
+168                  mixed model        <NA>              1
     bias_correction_factor
 1                    1.056
 2                    1.016
@@ -1333,15 +1340,16 @@
 156                  1.046
 157                      0
 158                   <NA>
-159                   <NA>
-160                  1.027
+159                  1.027
+160                      0
 161                      0
-162                      0
-163                  1.057
-164                      0
-165                  1.032
-166                      0
-167                  1.121
+162                  1.057
+163                      0
+164                  1.032
+165                      0
+166                  1.121
+167                   <NA>
+168                   <NA>
                                                                                                                                                                                                                                                                                                                                                                                                                                                              notes_fitting_model
 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <NA>
 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <NA>
@@ -1510,6 +1518,7 @@
 165                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
 166                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
 167                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+168                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
     original_data_availability
 1                         <NA>
 2                         <NA>
@@ -1678,6 +1687,7 @@
 165                       <NA>
 166                       <NA>
 167                       <NA>
+168                       <NA>
                                                                                                                                                                                                                            warning
 1                                                                                                                                                                                                                             <NA>
 2                                                                                                                                                                                                                             <NA>
@@ -1840,12 +1850,13 @@
 159                                                                                                                                                                                                                           <NA>
 160                                                                                                                                                                                                                           <NA>
 161                                                                                                                                                                                                                           <NA>
-162                                                                                                                                                                                                                           <NA>
-163                                                                                                                                                                                                                Need stand age!
-164                                                                                                                                                                                                                           <NA>
-165                                                                                                                                                                                                                Need stand age!
+162                                                                                                                                                                                                                Need stand age!
+163                                                                                                                                                                                                                           <NA>
+164                                                                                                                                                                                                                Need stand age!
+165                                                                                                                                                                                                                           <NA>
 166                                                                                                                                                                                                                           <NA>
-167                                                                                                                                                                                                                           <NA>
+167                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+168                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
     ref_id
 1     <NA>
 2     <NA>
@@ -2014,3 +2025,4 @@
 165   <NA>
 166   <NA>
 167   <NA>
+168   <NA>
