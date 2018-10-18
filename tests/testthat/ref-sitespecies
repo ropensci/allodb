@@ -536,1277 +536,1271 @@
 535           UMBC    Simaroubaceae                Ailanthus altissima
 536           UMBC         Ulmaceae                    Ulmus americana
 537           UMBC         Ulmaceae    Ulmus parvifolia x carpinifolia
-538           UMBC         Vitaceae                      Vitis riparia
-539 Harvard Forest        Adoxaceae                  Sambucus racemosa
-540 Harvard Forest        Adoxaceae                  Viburnum dentatum
-541 Harvard Forest        Adoxaceae                Viburnum acerfolium
-542 Harvard Forest    Anacardiaceae               Toxicodendron vernix
-543 Harvard Forest    Anacardiaceae             Toxicodendron radicans
-544 Harvard Forest    Aquifoliaceae                     Ilex laevigata
-545 Harvard Forest    Aquifoliaceae                  Ilex verticillata
-546 Harvard Forest       Betulaceae                       Alnus incana
-547 Harvard Forest       Betulaceae              Betula alleghaniensis
-548 Harvard Forest       Betulaceae                       Betula lenta
-549 Harvard Forest       Betulaceae                  Betula papyrifera
-550 Harvard Forest       Betulaceae                 Betula populifolia
-551 Harvard Forest       Betulaceae                     Betula unknown
-552 Harvard Forest       Betulaceae                  Ostrya virginiana
-553 Harvard Forest       Betulaceae                  Ostrya virginiana
-554 Harvard Forest     Cupressaceae                 Juniperus communis
-555 Harvard Forest        Ericaceae                   Kalmia latifolia
-556 Harvard Forest        Ericaceae                  Lyonia ligustrina
-557 Harvard Forest        Ericaceae          Rhododendron prinophyllum
-558 Harvard Forest        Ericaceae               Vaccinium corymbosum
-559 Harvard Forest         Fagaceae                   Castanea dentata
-560 Harvard Forest         Fagaceae                  Fagus grandifolia
-561 Harvard Forest         Fagaceae                      Quercus rubra
-562 Harvard Forest         Fagaceae                    Quercus unknown
-563 Harvard Forest         Fagaceae                   Quercus velutina
-564 Harvard Forest         Fagaceae                   Quercus velutina
-565 Harvard Forest   Hamamelidaceae               Hamamelis virginiana
-566 Harvard Forest        Lauraceae                    Lindera benzoin
-567 Harvard Forest        Nyssaceae                    Nyssa sylvatica
-568 Harvard Forest         Oleaceae                 Fraxinus americana
-569 Harvard Forest         Oleaceae                     Fraxinus nigra
-570 Harvard Forest         Pinaceae                        Picea abies
-571 Harvard Forest         Pinaceae                       Picea rubens
-572 Harvard Forest         Pinaceae                      Picea unknown
-573 Harvard Forest         Pinaceae                     Pinus resinosa
-574 Harvard Forest         Pinaceae                      Pinus strobus
-575 Harvard Forest         Pinaceae                      Pinus unknown
-576 Harvard Forest         Pinaceae                   Tsuga canadensis
-577 Harvard Forest       Rhamnaceae                     Frangula alnus
-578 Harvard Forest         Rosaceae                 Amelanchier laevis
-579 Harvard Forest         Rosaceae                 Aronia melanocarpa
-580 Harvard Forest         Rosaceae                      Crataegus sp.
-581 Harvard Forest         Rosaceae                    Prunus serotina
-582 Harvard Forest         Rosaceae                   Sorbus americana
-583 Harvard Forest       Salicaceae              Populus grandidentata
-584 Harvard Forest       Salicaceae                Populus tremuloides
-585 Harvard Forest       Salicaceae                      Salix species
-586 Harvard Forest      Sapindaceae                        Acer rubrum
-587 Harvard Forest      Sapindaceae                     Acer saccharum
-588 Harvard Forest         Ulmaceae                    Ulmus americana
-589   Scotty Creek       Betulaceae          Alnus viridis ssp. crispa
-590   Scotty Creek       Betulaceae                  Betula glandulosa
-591   Scotty Creek       Betulaceae                 Betula neoalaskana
-592   Scotty Creek       Betulaceae                Betula occidentalis
-593   Scotty Creek       Betulaceae                   Betula pubescens
-594   Scotty Creek       Betulaceae                        Betula spp.
-595   Scotty Creek         Pinaceae                     Larix laricina
-596   Scotty Creek         Pinaceae                     Larix laricina
-597   Scotty Creek         Pinaceae                       Picea glauca
-598   Scotty Creek         Pinaceae                      Picea mariana
-599   Scotty Creek         Pinaceae                      Picea mariana
-600   Scotty Creek         Pinaceae                    Pinus banksiana
-601   Scotty Creek         Pinaceae                    Pinus banksiana
-602   Scotty Creek       Salicaceae                          Salix sp.
-    species_code             life_form
-1            316                  Tree
-2            318                  Tree
-3            356                  Tree
-4            356                  Tree
-5            356                  Tree
-6            367                  Tree
-7            391                  Tree
-8            409                  Tree
-9            402                  Tree
-10           403                  Tree
-11           407                  Tree
-12           462                  Tree
-13           471                  Tree
-14           491                  Tree
-15           500                 Shrub
-16           531                  Tree
-17           541                  Tree
-18           541                  Tree
-19           544                  Tree
-20           498                 Shrub
-21            68                  Tree
-22           609                 Shrub
-23           621                  Tree
-24           693                  Tree
-25           701                  Tree
-26           701                  Tree
-27           712                  Tree
-28           762                  Tree
-29           802                  Tree
-30           806                  Tree
-31           832                  Tree
-32           833                  Tree
-33           837                  Tree
-34           837                  Tree
-35           837                  Tree
-36           899                 Shrub
-37           901                  Tree
-38           901                  Tree
-39           931                  Tree
-40           951                  Tree
-41           951                  Tree
-42           972                  Tree
-43           975                  Tree
-44          acne                  Tree
-45          acpl                  Tree
-46          acru                  Tree
-47          aial                  Tree
-48          amar                  Tree
-49          amar                  Tree
-50          amar                  Tree
-51          astr                  Tree
-52          beth                 Shrub
-53          caca                  Tree
-54          caco                  Tree
-55          cagl                  Tree
-56         caovl                  Tree
-57          cato                  Tree
-58          cade                  Tree
-59          ceoc                  Tree
-60          ceca                  Tree
-61          chvi                 Shrub
-62          coal                  Tree
-63          cofl                  Tree
-64          coam                 Shrub
-65          crpr                 Shrub
-66          divi                  Tree
-67          elum                 Shrub
-68          eual                 Shrub
-69          fagr                  Tree
-70          fram                  Tree
-71          frni                  Tree
-72          frpe                  Tree
-73          havi                 Shrub
-74          ilve                 Shrub
-75          juci                  Tree
-76          juni                  Tree
-77          libe                 Shrub
-78          litu                  Tree
-79          loma                 Shrub
-80          nysy                  Tree
-81          pato                  Tree
-82          pipu                  Tree
-83          pist                  Tree
-84          pivi                  Tree
-85          ploc                  Tree
-86          prav                  Tree
-87          prpe                  Tree
-88          prse                  Tree
-89          qual                  Tree
-90          quco                  Tree
-91          qufa                  Tree
-92          qufa                  Tree
-93          qumi                  Tree
-94          qupr                  Tree
-95          qumu                  Tree
-96          quru                  Tree
-97          quve                  Tree
-98          quve                  Tree
-99          rops                  Tree
-100         rops                  Tree
-101         romu                 Shrub
-102         rual                 Shrub
-103         rupe                 Shrub
-104         ruph                 Shrub
-105         saca                 Shrub
-106         saal                  Tree
-107         tiam                  Tree
-108         tiam                  Tree
-109         ulam                  Tree
-110         ulru                  Tree
-111         viac                 Shrub
-112         vipr                 Shrub
-113         vire                 Shrub
-114        ACNE2                  Tree
-115         ACRU                  Tree
-116         AIAL                  Tree
-117         ALJU                  Tree
-118        AMAR3                  Tree
-119        AMAR3                  Tree
-120        AMAR3                  Tree
-121        AMCA4                  Tree
-122        AMCA4                  Tree
-123        AMCA4                  Tree
-124        ARSP2                 Shrub
-125         ASTR                  Tree
-126        BRPA4                  Tree
-127       CACA18                  Tree
-128       CAAL27                  Tree
-129       CACO15                  Tree
-130        CAGL8                  Tree
-131        CARYA                  Tree
-132         CEOC                  Tree
-133        CEOC2                 Shrub
-134        CECA4                  Tree
-135        COFL2                  Tree
-136         ELAN                 Shrub
-137         ELUM                 Shrub
-138         FAGR                  Tree
-139        FRAM2                  Tree
-140         FRPE                  Tree
-141         ILOP                 Shrub
-142         ILVE                 Shrub
-143         JUNI                  Tree
-144         JUVI                  Tree
-145         KALA                 Shrub
-146       LIGUS2                 Shrub
-147        LIBE3                 Shrub
-148        LIST2                  Tree
-149         LITU                  Tree
-150        LOMA6                 Shrub
-151        MORU2                  Tree
-152         NYSY                  Tree
-153        PATO2                  Tree
-154         PITA                  Tree
-155        PIVI2                  Tree
-156         PLOC                  Tree
-157         PLOC                  Tree
-158        POGR4                  Tree
-159         PRAV                  Tree
-160        PRSE2                  Tree
-161         QUAL                  Tree
-162        QUCO2                  Tree
-163         QUFA                  Tree
-164         QUFA                  Tree
-165         QUMI                  Tree
-166        QUMO4                  Tree
-167        QUPA2                  Tree
-168         QURU                  Tree
-169        QUERC                  Tree
-170         QUST                  Tree
-171         QUVE                  Tree
-172         QUVE                  Tree
-173        RHAR3                 Shrub
-174         RHTY                 Shrub
-175         ROMU                 Shrub
-176         SANI                 Shrub
-177       SANIC4                 Shrub
-178        SAAL5                  Tree
-179         TIAM                  Tree
-180         TIAM                  Tree
-181         ULAM                  Tree
-182         ULRU                  Tree
-183         VACO                 Shrub
-184        VACCI                 Shrub
-185         VIAC                 Shrub
-186         VIDE                 Shrub
-187         VIPR                 Shrub
-188       aceneg                  Tree
-189       acerub                  Tree
-190       acesac                  Tree
-191       ailalt                  Tree
-192       amearb                  Tree
-193       amearb                  Tree
-194       amearb                  Tree
-195       asitri                  Tree
-196       carcor                  Tree
-197       cargla                  Tree
-198       carova                  Tree
-199        carsp                  Tree
-200       cartex                  Tree
-201       cartom                  Tree
-202       celocc                  Tree
-203       celten                  Tree
-204       cercan                  Tree
-205       cordru                  Tree
-206       corflo                  Tree
-207        crasp                 Shrub
-208       diovir                  Tree
-209       fracar                 Shrub
-210       fraame                  Tree
-211       fraame                  Tree
-212       gletri                  Tree
-213       jugnig                  Tree
-214       junvir                  Tree
-215       linben                 Shrub
-216       lonmaa                 Shrub
-217       malioe                 Shrub
-218       morrub                  Tree
-219       ostvir                  Tree
-220       ostvir                  Tree
-221       plaocc                  Tree
-222       pruame                  Tree
-223       pruser                  Tree
-224        prusp                  Tree
-225       quealb                  Tree
-226       quemar                  Tree
-227       quemue                  Tree
-228       querub                  Tree
-229        quesp                  Tree
-230       queste                  Tree
-231       quevel                  Tree
-232       quevel                  Tree
-233       quevel                  Tree
-234       sasalb                  Tree
-235       sidlan                 Shrub
-236       tilame                  Tree
-237       tilame                  Tree
-238       ulmrub                  Tree
-239       ACERMA                  Tree
-240       ARBUME                  Tree
-241       ARBUME                  Tree
-242       ARBUME                  Tree
-243       ARCTAN                 Shrub
-244       ARCTCR                 Shrub
-245       BACCPI                 Shrub
-246       CEANTH                 Shrub
-247       CORYCO                 Shrub
-248       COTOFR                 Shrub
-249       COTOPA                 Shrub
-250       CRATMO                 Shrub
-251       EUCAGL                  Tree
-252       HETEAR                 Shrub
-253       ILEXAQ                 Shrub
-254       LITHDE                  Tree
-255       LITHDE                  Tree
-256       LITHDE                  Tree
-257       MORECA                 Shrub
-258       PINUAT                  Tree
-259       PINUPO                  Tree
-260       PINUPO                  Tree
-261       PINUPO                  Tree
-262       PSEUME                  Tree
-263       PSEUME                  Tree
-264       PYRAAN                 Shrub
-265       QUERAG                  Tree
-266       QUERPA                  Tree
-267       RHAMCA                 Shrub
-268       RIBEDI                 Shrub
-269       SALILA                 Shrub
-270       SAMBNI                 Shrub
-271       SEQUSE                  Tree
-272       UMBECA                  Tree
-273       VACCOV                 Shrub
-274       ABIBAL                  Tree
-275       ACERUB                  Tree
-276       ACERUB                  Tree
-277       ACESUG                  Tree
-278       ACESPI                 Shrub
-279       ALNINC                 Shrub
-280       AMELAE                 Shrub
-281       AMESAN                 Shrub
-282       BETALL                  Tree
-283       BETPAP                  Tree
-284       CORALT                  Tree
-285       CORCOR                 Shrub
-286       DIRPAL                 Shrub
-287       FRAAME                  Tree
-288       FRAAME                  Tree
-289       FRANIG                  Tree
-290       ILEMUC                 Shrub
-291       ILEVER                 Shrub
-292       JUGCIN                  Tree
-293       LARLAR                  Tree
-294       LONCAN                 Shrub
-295       MALPUM                  Tree
-296       OSTVIR                  Tree
-297       OSTVIR                  Tree
-298       PICGLA                  Tree
-299       PICMAR                  Tree
-300       PINSTR                  Tree
-301       POPBAL                  Tree
-302       POPGRA                  Tree
-303       POPTRE                  Tree
-304       PRUPEN                  Tree
-305       PRUSER                  Tree
-306       PRUVIR                  Tree
-307       QUERUB                  Tree
-308       RIBCYN                 Shrub
-309       SAMRAC                 Shrub
-310       SORAME                  Tree
-311       THUOCC                  Tree
-312       TILAME                  Tree
-313       TILAME                  Tree
-314       TSUCAN                  Tree
-315       ULMAME                  Tree
-316         ABAM                  Tree
-317         ABGR                  Tree
-318         ABGR                  Tree
-319         ABPR                  Tree
-320         ABPR                  Tree
-321         ABPR                  Tree
-322         ABSP                  Tree
-323         ABSP                  Tree
-324         ABSP                  Tree
-325         ABSP                  Tree
-326         ACCI                 Shrub
-327         ACGL                  Tree
-328         ALRU                  Tree
-329         AMAL                  Tree
-330         CONU                  Tree
-331        COCOC                 Shrub
-332         GASH                 Shrub
-333         HODI                 Shrub
-334         LOCI                 Shrub
-335         MEFE                 Shrub
-336         OECE                 Shrub
-337         PIMO                  Tree
-338         PSME                  Tree
-339         PSME                  Tree
-340         RHPU                 Shrub
-341         RHMA                 Shrub
-342         ROGY                 Shrub
-343         RULE                 Shrub
-344         RUSP                 Shrub
-345         TABR                  Tree
-346         THPL                  Tree
-347         THPL                  Tree
-348         TSHE                  Tree
-349         VAME                 Shrub
-350         VAOV                 Shrub
-351         VAPA                 Shrub
-352       ACERCA                  Tree
-353       ACERPS                  Tree
-354       BETUSP                  Tree
-355       CARPBE                  Tree
-356       CASTSA                  Tree
-357       CORNSA                 Shrub
-358       CORYAV                 Shrub
-359       CRATMO                 Shrub
-360       EUONEU                 Shrub
-361       FAGUSY                  Tree
-362       FRANAL                 Shrub
-363       FRAXEX                  Tree
-364       ILEXAQ                 Shrub
-365       LARIDE                  Tree
-366       PICEAB                  Tree
-367       PINUSY                  Tree
-368       PRUNAV                  Tree
-369       PRUNSP                  Tree
-370       PSEUME                  Tree
-371       QUERRO                  Tree
-372       SALISP                  Tree
-373       SAMBNI                 Shrub
-374       TAXUBA                  Tree
-375       TILIEU                  Tree
-376         ABCO                  Tree
-377         ABCO                  Tree
-378         ABCO                  Tree
-379         ABCO                  Tree
-380         ABCO                  Tree
-381         ABMA                  Tree
-382         ABMA                  Tree
-383         ABMA                  Tree
-384         ABMA                  Tree
-385         ABSP                  Tree
-386         ABSP                  Tree
-387         ABSP                  Tree
-388         ABSP                  Tree
-389         ARPA                 Shrub
-390         CADE                  Tree
-391         CECO                 Shrub
-392         CEIN                 Shrub
-393         CEPA                 Shrub
-394         CHSE                 Shrub
-395         CONU                  Tree
-396         COSE                 Shrub
-397        COCOC                 Shrub
-398         HODI                 Shrub
-399         LEDA                 Shrub
-400         PILA                  Tree
-401         PILA                  Tree
-402         PIPO                  Tree
-403         PIPO                  Tree
-404         PIPO                  Tree
-405         PREM                  Tree
-406         PREM                  Tree
-407         PRVI                  Tree
-408         PSME                  Tree
-409         PSME                  Tree
-410         RHCA                 Shrub
-411         RHOC                 Shrub
-412         RINE                 Shrub
-413         RIRO                 Shrub
-414         SASC                  Tree
-415        SALIX                  Tree
-416         SARA                 Shrub
-417         VAUL                 Shrub
-418           JD                  Tree
-419           JV                  Tree
-420           KL                  Tree
-421           BR                  Tree
-422           BK                  Tree
-423           SM                  Tree
-424           TP                  Tree
-425           VR                  Tree
-426          BEZ                 Shrub
-427           JR                  Tree
-428           JL                  Tree
-429         <NA>                  Tree
-430         <NA>                  Tree
-431         <NA>                  Tree
-432         <NA>                  Tree
-433         <NA>     Shrub, small tree
-434         <NA>                 Shrub
-435         <NA>                 Shrub
-436         <NA>                  Tree
-437         <NA>                  Tree
-438         <NA>                  Tree
-439         <NA>                  Tree
-440         <NA>                  Tree
-441         <NA>                  Tree
-442         <NA>                  Tree
-443         <NA>                  Tree
-444         <NA>                  Tree
-445         <NA>                  Tree
-446         <NA>                  Tree
-447         <NA>                  Tree
-448         <NA>                  Tree
-449         <NA>                  Tree
-450         <NA>                  Tree
-451         <NA>                  Tree
-452         <NA>                  Tree
-453         <NA>                  Tree
-454         <NA>                  Tree
-455         <NA>                  Tree
-456         <NA>                  Tree
-457         <NA>                  Tree
-458         <NA>                 Shrub
-459         <NA>                 Shrub
-460         <NA>                 Shrub
-461         <NA>                  Tree
-462         <NA>                 Shrub
-463         <NA>                 Shrub
-464         <NA>                 Shrub
-465         <NA>                 Shrub
-466         <NA>                  Tree
-467         <NA>                  Tree
-468         <NA>                  Tree
-469         <NA>                  Tree
-470         <NA>                  Tree
-471         <NA>                 Shrub
-472         <NA>                  Tree
-473         <NA>                  Tree
-474         <NA>                  Tree
-475         <NA>                  Tree
-476         <NA>                  Tree
-477         <NA>     Shrub, small tree
-478         <NA>     Shrub, small tree
-479         <NA>                  Tree
-480         <NA>                  Tree
-481         <NA>                  Tree
-482         <NA>                  Tree
-483         <NA>                  Tree
-484         <NA>                  Tree
-485         <NA>                  Tree
-486         <NA>                  Tree
-487         <NA>                  Tree
-488         <NA>                  Tree
-489         <NA>                  Tree
-490         <NA>                  Tree
-491         <NA>                  Tree
-492         <NA>                  Tree
-493         <NA>                  Tree
-494         <NA>                 Shrub
-495         <NA>                  Tree
-496         <NA>                  Tree
-497         <NA>                  Tree
-498         <NA>                  Tree
-499         <NA>                  Tree
-500         <NA>                  Tree
-501         <NA>                 Shrub
-502         <NA>                 Shrub
-503         <NA>                  Tree
-504         <NA>                  Tree
-505         <NA>                  Tree
-506         <NA>                  Tree
-507         <NA>                  Tree
-508         <NA>                  Tree
-509         <NA>                  Tree
-510         <NA>                  Tree
-511         <NA>                  Tree
-512         <NA>                  Tree
-513         <NA>                  Tree
-514         <NA>                  Tree
-515         <NA>                  Tree
-516         <NA>                  Tree
-517         <NA>                  Tree
-518         <NA>                 Shrub
-519         <NA>                 Shrub
-520         <NA>                 Shrub
-521         <NA>                  Tree
-522         <NA>                  Tree
-523         <NA>                  Tree
-524         <NA>                  Tree
-525         <NA>                  Tree
-526         <NA>                  Tree
-527         <NA>                  Tree
-528         <NA>                  Tree
-529         <NA>                  Tree
-530         <NA>                  Tree
-531         <NA>                  Tree
-532         <NA>                  Tree
-533         <NA>                  Tree
-534         <NA>                  Tree
-535         <NA>                  Tree
-536         <NA>                  Tree
-537         <NA>                  Tree
-538         <NA>       Vine, to delete
-539         <NA>                 Shrub
-540         <NA>                 Shrub
-541         <NA>                 Shrub
-542         <NA>                 Shrub
-543         <NA> Vine or shrub, ask PI
-544         <NA>                 Shrub
-545         <NA>                 Shrub
-546         <NA>                  Tree
-547         <NA>                  Tree
-548         <NA>                  Tree
-549         <NA>                  Tree
-550         <NA>                  Tree
-551         <NA>                  Tree
-552         <NA>                  Tree
-553         <NA>                  Tree
-554         <NA>                 Shrub
-555         <NA>                 Shrub
-556         <NA>                 Shrub
-557         <NA>                 Shrub
-558         <NA>                 Shrub
-559         <NA>                  Tree
-560         <NA>                  Tree
-561         <NA>                  Tree
-562         <NA>                  Tree
-563         <NA>                  Tree
-564         <NA>                  Tree
-565         <NA>                 Shrub
-566         <NA>                 Shrub
-567         <NA>                  Tree
-568         <NA>                  Tree
-569         <NA>                  Tree
-570         <NA>                  Tree
-571         <NA>                  Tree
-572         <NA>                  Tree
-573         <NA>                  Tree
-574         <NA>                  Tree
-575         <NA>                  Tree
-576         <NA>                  Tree
-577         <NA>                 Shrub
-578         <NA>                 Shrub
-579         <NA>                 Shrub
-580         <NA>                 Shrub
-581         <NA>                  Tree
-582         <NA>                 Shrub
-583         <NA>                  Tree
-584         <NA>                  Tree
-585         <NA>                  Tree
-586         <NA>                  Tree
-587         <NA>                  Tree
-588         <NA>                  Tree
-589         <NA>                  Tree
-590         <NA>                 Shrub
-591         <NA>                  Tree
-592         <NA>                  Tree
-593         <NA>                  Tree
-594         <NA>                 Shrub
-595         <NA>                  Tree
-596         <NA>                  Tree
-597         <NA>                  Tree
-598         <NA>                  Tree
-599         <NA>                  Tree
-600         <NA>                  Tree
-601         <NA>                  Tree
-602         <NA>                  Tree
-         dependent_variable_biomass_component equation_grouping equation_id
-1                   Total aboveground biomass                 E      2060ea
-2                   Total aboveground biomass                 E      a4d879
-3                    Stem biomass (with bark)                 E      c59e03
-4                       Branches (live, dead)                 E      96c0af
-5                               Foliage total                 E      529234
-6                   Total aboveground biomass                 G      ae65ed
-7                   Total aboveground biomass                 G      ae65ed
-8                   Total aboveground biomass                 E      9c4cc9
-9                   Total aboveground biomass                 E      9c4cc9
-10                  Total aboveground biomass                 E      9c4cc9
-11                   Stem and branches (live)                 E      7913b8
-12                  Total aboveground biomass                 G      ae65ed
-13                  Total aboveground biomass                 G      7f7777
-14                  Total aboveground biomass                 E      cf733d
-15                  Total aboveground biomass                 G      f08fff
-16                   Stem and branches (live)                 E      74186d
-17                   Whole tree (above stump)                 E      122ba6
-18                   Whole tree (above stump)                 E      e3f3bf
-19                   Whole tree (above stump)                 E      122ba6
-20                  Total aboveground biomass                 E      76aa3c
-21                  Total aboveground biomass                 E      c36a5b
-22                  Total aboveground biomass                 G      f08fff
-23                  Total aboveground biomass                 E      94f593
-24                  Total aboveground biomass                 E      8c94e8
-25                   Stem and branches (live)                 E      289f7c
-26                              Foliage total                 E      b9d4fc
-27                  Total aboveground biomass                 G      ae65ed
-28                  Total aboveground biomass                 E      8aecca
-29                   Stem and branches (live)                 E      07dba7
-30                   Stem and branches (live)                 E      cb0353
-31                   Stem and branches (live)                 E      76df22
-32                   Stem and branches (live)                 E      839012
-33                   Whole tree (above stump)                 E      7640f0
-34                  Total aboveground biomass                 E      4b8afb
-35         Whole tree (above and belowground)                 E      c70dea
-36                  Total aboveground biomass                 G      ae65ed
-37                   Stem and branches (live)                 E      333c34
-38                   Stem and branches (live)                 E      e9d686
-39                   Whole tree (above stump)                 E      c13e0f
-40                   Stem and branches (live)                 E      3f99ba
-41                              Foliage total                 E      76d19b
-42                   Whole tree (above stump)                 E      2473f9
-43                   Whole tree (above stump)                 E      2473f9
-44                  Total aboveground biomass                 G      d6be5c
-45                  Total aboveground biomass                 G      d6be5c
-46                  Total aboveground biomass                 E      7c72ed
-47                  Total aboveground biomass                 G      ae65ed
-48                   Stem biomass (with bark)                 E      c59e03
-49                      Branches (live, dead)                 E      96c0af
-50                              Foliage total                 E      529234
-51                  Total aboveground biomass                 G      ae65ed
-52                  Total aboveground biomass                 G      ae65ed
-53                  Total aboveground biomass                 G      ae65ed
-54                  Total aboveground biomass                 E      9c4cc9
-55                  Total aboveground biomass                 E      9c4cc9
-56                  Total aboveground biomass                 E      9c4cc9
-57                  Total aboveground biomass                 E      9c4cc9
-58                  Total aboveground biomass                 G      5edb7f
-59                  Total aboveground biomass                 G      ae65ed
-60                  Total aboveground biomass                 G      7f7777
-61                  Total aboveground biomass                 G      ae65ed
-62                  Total aboveground biomass                 E      f3e023
-63                  Total aboveground biomass                 E      f3e023
-64                  Total aboveground biomass                 G      ae65ed
-65                  Total aboveground biomass                 G      f08fff
-66                  Total aboveground biomass                 G      ae65ed
-67                  Total aboveground biomass                 G      ae65ed
-68                  Total aboveground biomass                 G      ae65ed
-69                   Stem and branches (live)                 E      74186d
-70                   Stem and branches (live)                 E      973c05
-71                  Total aboveground biomass                 E      0edaff
-72                  Total aboveground biomass                 E      0edaff
-73                  Total aboveground biomass                 E      76aa3c
-74                  Total aboveground biomass                 G      f08fff
-75                  Total aboveground biomass                 G      7f7777
-76                  Total aboveground biomass                 G      7f7777
-77                  Total aboveground biomass                 G      f08fff
-78                   Stem and branches (live)                 E      34fe5a
-79                  Total aboveground biomass                 E      28dce6
-80                   Stem and branches (live)                 E      8da09d
-81                  Total aboveground biomass                 G      ae65ed
-82                  Total aboveground biomass                 E      21800b
-83                  Total aboveground biomass                 E      21800b
-84                  Total aboveground biomass                 E      6ea81f
-85                   Stem and branches (live)                 E      d7f1a6
-86                   Stem and branches (live)                 E      508dfe
-87                   Stem and branches (live)                 E      508dfe
-88                   Stem and branches (live)                 E      508dfe
-89                   Stem and branches (live)                 E      07dba7
-90                   Stem and branches (live)                 E      cb0353
-91                   Whole tree (above stump)                 E      81397c
-92                   Whole tree (above stump)                 E      6943b4
-93                   Stem and branches (live)                 E      76df22
-94                   Stem and branches (live)                 E      76df22
-95                   Stem and branches (live)                 E      76df22
-96                   Stem and branches (live)                 E      839012
-97                   Whole tree (above stump)                 E      7640f0
-98         Whole tree (above and belowground)                 E      c70dea
-99                   Stem and branches (live)                 E      333c34
-100                  Stem and branches (live)                 E      e9d686
-101                 Total aboveground biomass                 E      a1646f
-102                 Total aboveground biomass                 E      b61369
-103                 Total aboveground biomass                 E      b61369
-104                 Total aboveground biomass                 E      b61369
-105                 Total aboveground biomass                 G      ae65ed
-106                  Whole tree (above stump)                 E      2c092b
-107                  Stem and branches (live)                 E      3f99ba
-108                             Foliage total                 E      76d19b
-109                  Whole tree (above stump)                 E      8eca60
-110                  Stem and branches (live)                 E      455839
-111                 Total aboveground biomass                 E      5e2dea
-112                 Total aboveground biomass                 E      5e2dea
-113                 Total aboveground biomass                 E      5e2dea
-114                 Total aboveground biomass                 G      d6be5c
-115                 Total aboveground biomass                 E      7c72ed
-116                 Total aboveground biomass                 G      ae65ed
-117                 Total aboveground biomass                 G      5edb7f
-118                  Stem biomass (with bark)                 E      c59e03
-119                     Branches (live, dead)                 E      96c0af
-120                             Foliage total                 E      529234
-121                  Stem biomass (with bark)                 E      c59e03
-122                     Branches (live, dead)                 E      96c0af
-123                             Foliage total                 E      529234
-124                 Total aboveground biomass                 G      ae65ed
-125                 Total aboveground biomass                 G      ae65ed
-126                 Total aboveground biomass                 G      ae65ed
-127                 Total aboveground biomass                 G      ae65ed
-128                 Total aboveground biomass                 E      9c4cc9
-129                 Total aboveground biomass                 E      9c4cc9
-130                 Total aboveground biomass                 E      9c4cc9
-131                 Total aboveground biomass                 E      9c4cc9
-132                 Total aboveground biomass                 G      ae65ed
-133                 Total aboveground biomass                 G      ae65ed
-134                 Total aboveground biomass                 G      7f7777
-135                 Total aboveground biomass                 E      f3e023
-136                 Total aboveground biomass                 G      ae65ed
-137                 Total aboveground biomass                 G      ae65ed
-138                 Total aboveground biomass                 E      281635
-139                  Whole tree (above stump)                 E      122ba6
-140                  Whole tree (above stump)                 E      b521bd
-141                 Total aboveground biomass                 G      f08fff
-142                 Total aboveground biomass                 G      f08fff
-143                 Total aboveground biomass                 G      7f7777
-144                 Total aboveground biomass                 E      c36a5b
-145                 Total aboveground biomass                 G      f08fff
-146                 Total aboveground biomass                 G      ae65ed
-147                 Total aboveground biomass                 G      f08fff
-148                  Whole tree (above stump)                 E      6f6bc3
-149                 Total aboveground biomass                 E      c48e81
-150                 Total aboveground biomass                 E      28dce6
-151                 Total aboveground biomass                 G      ae65ed
-152                 Total aboveground biomass                 E      e8ebc2
-153                 Total aboveground biomass                 G      ae65ed
-154                 Total aboveground biomass                 E      6ea81f
-155                 Total aboveground biomass                 E      6ea81f
-156                  Whole tree (above stump)                 E      73325b
-157                  Whole tree (above stump)                 E      0a1212
-158                 Total aboveground biomass                 E      3172f7
-159                 Total aboveground biomass                 E      8aecca
-160                 Total aboveground biomass                 E      8aecca
-161                 Total aboveground biomass                 E      524aca
-162                 Total aboveground biomass                 E      162ce7
-163                  Whole tree (above stump)                 E      0cc678
-164                  Whole tree (above stump)                 E      6943b4
-165                  Stem and branches (live)                 E      76df22
-166                 Total aboveground biomass                 E      f21996
-167                 Total aboveground biomass                 E      1d7c4c
-168                 Total aboveground biomass                 E      1d7c4c
-169                 Total aboveground biomass                 G      5edb7f
-170                 Total aboveground biomass                 E      b40702
-171                  Whole tree (above stump)                 E      23ec05
-172        Whole tree (above and belowground)                 E      c70dea
-173                 Total aboveground biomass                 G      f08fff
-174                 Total aboveground biomass                 G      ae65ed
-175                 Total aboveground biomass                 E      a1646f
-176                 Total aboveground biomass                 G      829bad
-177                 Total aboveground biomass                 G      ae65ed
-178                  Whole tree (above stump)                 E      2c092b
-179                  Stem and branches (live)                 E      bebe2e
-180                             Foliage total                 E      76d19b
-181                  Whole tree (above stump)                 E      8eca60
-182                  Stem and branches (live)                 E      455839
-183                 Total aboveground biomass                 G      f08fff
-184                 Total aboveground biomass                 G      f08fff
-185                 Total aboveground biomass                 E      5e2dea
-186                 Total aboveground biomass                 E      5e2dea
-187                 Total aboveground biomass                 E      5e2dea
-188                 Total aboveground biomass                 G      d6be5c
-189                 Total aboveground biomass                 E      2060ea
-190                 Total aboveground biomass                 E      a4d879
-191                 Total aboveground biomass                 G      ae65ed
-192                  Stem biomass (with bark)                 E      c59e03
-193                     Branches (live, dead)                 E      96c0af
-194                             Foliage total                 E      529234
-195                 Total aboveground biomass                 G      ae65ed
-196                 Total aboveground biomass                 E      9c4cc9
-197                 Total aboveground biomass                 E      9c4cc9
-198                  Stem and branches (live)                 E      7913b8
-199                 Total aboveground biomass                 E      9c4cc9
-200                 Total aboveground biomass                 E      9c4cc9
-201                 Total aboveground biomass                 E      9c4cc9
-202                 Total aboveground biomass                 G      ae65ed
-203                 Total aboveground biomass                 G      ae65ed
-204                 Total aboveground biomass                 G      7f7777
-205                 Total aboveground biomass                 E      cf733d
-206                 Total aboveground biomass                 E      cf733d
-207                 Total aboveground biomass                 G      f08fff
-208                 Total aboveground biomass                 G      ae65ed
-209                 Total aboveground biomass                 G      ae65ed
-210                  Whole tree (above stump)                 E      122ba6
-211                  Whole tree (above stump)                 E      e3f3bf
-212                 Total aboveground biomass                 G      7f7777
-213                 Total aboveground biomass                 G      7f7777
-214                 Total aboveground biomass                 E      c36a5b
-215                 Total aboveground biomass                 G      f08fff
-216                 Total aboveground biomass                 E      28dce6
-217                 Total aboveground biomass                 G      f08fff
-218                 Total aboveground biomass                 G      ae65ed
-219                  Stem and branches (live)                 E      289f7c
-220                             Foliage total                 E      b9d4fc
-221                  Whole tree (above stump)                 E      0a1212
-222                 Total aboveground biomass                 E      8aecca
-223                 Total aboveground biomass                 E      8aecca
-224                 Total aboveground biomass                 E      8aecca
-225                  Stem and branches (live)                 E      07dba7
-226                  Stem and branches (live)                 E      839012
-227                  Stem and branches (live)                 E      07dba7
-228                  Stem and branches (live)                 E      839012
-229                  Stem and branches (live)                 E      07dba7
-230                  Stem and branches (live)                 E      07dba7
-231                  Whole tree (above stump)                 E      7640f0
-232                 Total aboveground biomass                 E      4b8afb
-233        Whole tree (above and belowground)                 E      c70dea
-234                  Whole tree (above stump)                 E      2c092b
-235                 Total aboveground biomass                 G      ae65ed
-236                  Stem and branches (live)                 E      3f99ba
-237                             Foliage total                 E      76d19b
-238                  Whole tree (above stump)                 E      2473f9
-239                 Total aboveground biomass                 G      d6be5c
-240                                Live crown                 E      b45a32
-241                                Dead crown                 E      c8c6f1
-242                  Stem biomass (with bark)                 E      785080
-243                 Total aboveground biomass                 E      3cb95a
-244                 Total aboveground biomass                 E      3cb95a
-245                 Total aboveground biomass                 E      c94845
-246                 Total aboveground biomass                 E      6b3b2a
-247                 Total aboveground biomass                 G      ae65ed
-248                 Total aboveground biomass                 G      f08fff
-249                 Total aboveground biomass                 G      f08fff
-250                 Total aboveground biomass                 G      f08fff
-251                 Total aboveground biomass                 E      7da4c9
-252                 Total aboveground biomass                 G      f08fff
-253                 Total aboveground biomass                 G      f08fff
-254                                Live crown                 E      870336
-255                                Dead crown                 E      748d94
-256                  Stem biomass (with bark)                 E      5a774d
-257                 Total aboveground biomass                 G      ae65ed
-258                  Stem biomass (with bark)                 E      5ea2c1
-259                  Stem biomass (with bark)                 E      5ea2c1
-260  Crown biomass (branches, foliage, twigs)                 E      0bdd5e
-261                 Total aboveground biomass                 G      15b165
-262                 Total aboveground biomass                 E      4d8e54
-263                 Total aboveground biomass                 E      f94e03
-264                 Total aboveground biomass                 G      f08fff
-265                 Total aboveground biomass                 G      5edb7f
-266                 Total aboveground biomass                 G      5edb7f
-267                 Total aboveground biomass                 G      ae65ed
-268                 Total aboveground biomass                 E      b95baf
-269                 Total aboveground biomass                 G      829bad
-270                 Total aboveground biomass                 G      ae65ed
-271                 Total aboveground biomass                 G      2ee3ae
-272                 Total aboveground biomass                 E      8470d2
-273 Total aboveground biomass (wood and bark)                 E      e8f868
-274                  Whole tree (above stump)                 E      1badac
-275                 Total aboveground biomass                 E      5084bd
-276                 Total aboveground biomass                 E      138258
-277                 Total aboveground biomass                 E      77e37e
-278                 Total aboveground biomass                 E      5084bd
-279                 Total aboveground biomass                 G      5caff8
-280                 Total aboveground biomass                 G      f08fff
-281                 Total aboveground biomass                 G      f08fff
-282                  Whole tree (above stump)                 E      382ee9
-283                  Whole tree (aboveground)                 E      d3f7ed
-284                 Total aboveground biomass                 E      cf733d
-285                 Total aboveground biomass                 G      ae65ed
-286                 Total aboveground biomass                 G      ae65ed
-287                  Whole tree (above stump)                 E      122ba6
-288                  Whole tree (above stump)                 E      e3f3bf
-289                 Total aboveground biomass                 E      0edaff
-290                 Total aboveground biomass                 G      f08fff
-291                 Total aboveground biomass                 G      f08fff
-292                 Total aboveground biomass                 G      7f7777
-293                  Whole tree (above stump)                 E      01e863
-294                 Total aboveground biomass                 E      28dce6
-295                 Total aboveground biomass                 G      f08fff
-296                  Stem and branches (live)                 E      289f7c
-297                             Foliage total                 E      b9d4fc
-298                  Whole tree (above stump)                 E      bce95d
-299                  Whole tree (above stump)                 E      1d3182
-300                 Total aboveground biomass                 E      21800b
-301                  Whole tree (above stump)                 E      ecd464
-302                 Total aboveground biomass                 E      3172f7
-303                 Total aboveground biomass                 E      687843
-304                 Total aboveground biomass                 E      8aecca
-305                 Total aboveground biomass                 E      8aecca
-306                 Total aboveground biomass                 G      f08fff
-307                 Total aboveground biomass                 E      82e78c
-308                 Total aboveground biomass                 G      ae65ed
-309                 Total aboveground biomass                 G      ae65ed
-310                 Total aboveground biomass                 G      f08fff
-311                  Whole tree (above stump)                 E      c078ca
-312                             Foliage total                 E      76d19b
-313                  Stem and branches (live)                 E      3f99ba
-314                 Total aboveground biomass                 E      1d44c6
-315                  Whole tree (above stump)                 E      2473f9
-316                  Whole tree (above stump)                 E      b570d4
-317                  Stem biomass (with bark)                 E      cab5a8
-318  Crown biomass (branches, foliage, twigs)                 E      6b7404
-319                           Branches (live)                 E      171b02
-320                             Foliage total                 E      23a23d
-321                              Stem biomass                 E      677eda
-322                           Branches (live)                 E      51f4e4
-323                             Foliage total                 E      61f888
-324                         Stem bark biomass                 E      2d2a14
-325               Stem biomass (without bark)                 E      7afe68
-326                 Total aboveground biomass                 E      678f25
-327                 Total aboveground biomass                 E      678f25
-328                  Whole tree (above stump)                 E      b9ebe4
-329                 Total aboveground biomass                 G      f08fff
-330                 Total aboveground biomass                 G      f08fff
-331                 Total aboveground biomass                 G      ae65ed
-332                 Total aboveground biomass                 G      f08fff
-333                 Total aboveground biomass                 E      b9b3b0
-334                 Total aboveground biomass                 E      28dce6
-335                 Total aboveground biomass                 G      f08fff
-336                 Total aboveground biomass                 G      f08fff
-337                 Total aboveground biomass                 G      90c207
-338                 Total aboveground biomass                 E      f94e03
-339                 Total aboveground biomass                 E      4d8e54
-340                 Total aboveground biomass                 G      ae65ed
-341                 Total aboveground biomass                 G      f08fff
-342                 Total aboveground biomass                 E      a1646f
-343                 Total aboveground biomass                 E      e7bf91
-344                 Total aboveground biomass                 E      e7bf91
-345                 Total aboveground biomass                 G      c8f882
-346                 Total aboveground biomass                 E      19bb04
-347                 Total aboveground biomass                 E      dc04c7
-348                  Whole tree (above stump)                 E      e3edf1
-349                 Total aboveground biomass                 E      12104c
-350                 Total aboveground biomass                 E      12104c
-351                 Total aboveground biomass                 E      12104c
-352                 Total aboveground biomass                 E      fc521f
-353                 Total aboveground biomass                 E      f49bcb
-354                 Total aboveground biomass                 E      fc521f
-355                 Total aboveground biomass                 E      fc521f
-356                 Total aboveground biomass                 E      fc521f
-357                 Total aboveground biomass                 E      fc521f
-358                 Total aboveground biomass                 E      fc521f
-359                 Total aboveground biomass                 E      fc521f
-360                 Total aboveground biomass                 E      fc521f
-361                 Total aboveground biomass                 E      fc521f
-362                 Total aboveground biomass                 E      fc521f
-363                 Total aboveground biomass                 E      7bb5bd
-364                 Total aboveground biomass                 E      fc521f
-365                 Total aboveground biomass                 E      fc521f
-366                 Total aboveground biomass                 E      fc521f
-367                 Total aboveground biomass                 E      fc521f
-368                 Total aboveground biomass                 E      fc521f
-369                 Total aboveground biomass                 E      fc521f
-370                 Total aboveground biomass                 E      fc521f
-371                 Total aboveground biomass                 E      d635f1
-372                 Total aboveground biomass                 E      fc521f
-373                 Total aboveground biomass                 E      fc521f
-374                 Total aboveground biomass                 E      fc521f
-375                 Total aboveground biomass                 E      fc521f
-376                           Branches (live)                 E      171b02
-377                             Foliage total                 E      23a23d
-378                              Stem biomass                 E      677eda
-379                  Stem biomass (with bark)                 E      7aaa22
-380                 Total aboveground biomass                 E      1b9161
-381                           Branches (live)                 E      171b02
-382                             Foliage total                 E      23a23d
-383                              Stem biomass                 E      677eda
-384                  Stem biomass (with bark)                 E      f2943e
-385                           Branches (live)                 E      51f4e4
-386                             Foliage total                 E      61f888
-387                         Stem bark biomass                 E      2d2a14
-388               Stem biomass (without bark)                 E      7afe68
-389                 Total aboveground biomass                 E      014bb7
-390                  Stem biomass (with bark)                 E      7992d5
-391                 Total aboveground biomass                 E      604854
-392                 Total aboveground biomass                 E      a1cfac
-393                 Total aboveground biomass                 E      a1cfac
-394                 Total aboveground biomass                 E      398df4
-395                 Total aboveground biomass                 G      f08fff
-396                 Total aboveground biomass                 E      3b860c
-397                 Total aboveground biomass                 G      ae65ed
-398                 Total aboveground biomass                 E      b9b3b0
-399                 Total aboveground biomass                 E      969226
-400                 Total aboveground biomass                 E      f94e03
-401                 Total aboveground biomass                 E      4d8e54
-402                  Stem biomass (with bark)                 E      5ea2c1
-403  Crown biomass (branches, foliage, twigs)                 E      0bdd5e
-404                 Total aboveground biomass                 G      15b165
-405                  Whole tree (above stump)                 E      b9ebe4
-406                 Total aboveground biomass                 G      f08fff
-407                 Total aboveground biomass                 G      f08fff
-408                 Total aboveground biomass                 E      f94e03
-409                 Total aboveground biomass                 E      4d8e54
-410                 Total aboveground biomass                 G      ae65ed
-411                 Total aboveground biomass                 G      f08fff
-412                 Total aboveground biomass                 E      b95baf
-413                 Total aboveground biomass                 E      b95baf
-414                 Total aboveground biomass                 G      829bad
-415                 Total aboveground biomass                 G      829bad
-416                 Total aboveground biomass                 G      ae65ed
-417                 Total aboveground biomass                 E      969226
-418                 Total aboveground biomass                 E      e44bb9
-419                 Total aboveground biomass                 E      7b7468
-420                 Total aboveground biomass                 E      7b7468
-421                 Total aboveground biomass                 E      7b7468
-422                 Total aboveground biomass                 E      7b7468
-423                 Total aboveground biomass                 E      e44bb9
-424                 Total aboveground biomass                 E      7b7468
-425                 Total aboveground biomass                 E      7b7468
-426                 Total aboveground biomass                 E      7b7468
-427                 Total aboveground biomass                 E      7b7468
-428                 Total aboveground biomass                 E      7b7468
-429                  Stem biomass (with bark)                 E      b30744
-430                  Stem biomass (with bark)                 E      7aaa22
-431                 Total aboveground biomass                 G      74dd65
-432                 Total aboveground biomass                 G      f08fff
-433                 Total aboveground biomass                 E      998abf
-434                 Total aboveground biomass                 E      c36a5b
-435                 Total aboveground biomass                 G      c8f882
-436                 Total aboveground biomass                 E      c36a5b
-437                 Total aboveground biomass                 G      c8f882
-438                 Total aboveground biomass                 E      9f4b7d
-439                 Total aboveground biomass                 G      57488c
-440                 Total aboveground biomass                 E      4b4063
-441                 Total aboveground biomass                 G      8912e9
-442                 Total aboveground biomass                 E      da0e89
-443               Stem biomass (without bark)                 E      48557b
-444                         Stem bark biomass                 E      697035
-445                     Branches (live, dead)                 E      9a977b
-446                             Total foliage                 E      a59bd5
-447                 Total aboveground biomass                 E      ecef00
-448               Stem biomass (without bark)                 E      48557b
-449                         Stem bark biomass                 E      697035
-450                     Branches (live, dead)                 E      9a977b
-451                             Total foliage                 E      a59bd5
-452                 Total aboveground biomass                 E      ecef00
-453                  Stem biomass (with bark)                 E      5ea2c1
-454  Crown biomass (branches, foliage, twigs)                 E      0bdd5e
-455                 Total aboveground biomass                 G      15b165
-456                 Total aboveground biomass                 E      aeebe9
-457                 Total aboveground biomass                 E      f94e03
-458                 Total aboveground biomass                 E      b95baf
-459                 Total aboveground biomass                 E      b95baf
-460                 Total aboveground biomass                 G      ae65ed
-461                 Total aboveground biomass                 E      4d8e54
-462                 Total aboveground biomass                 E      5e2dea
-463                 Total aboveground biomass                 E      5e2dea
-464                 Total aboveground biomass                 E      5e2dea
-465                 Total aboveground biomass                 G      f08fff
-466                  Whole tree (above stump)                 E      382ee9
-467                  Stem and branches (live)                 E      289f7c
-468                             Foliage total                 E      b9d4fc
-469                 Total aboveground biomass                 G      ae65ed
-470                 Total aboveground biomass                 G      ae65ed
-471                 Total aboveground biomass                 G      ae65ed
-472                 Total aboveground biomass                 E      f3e023
-473                 Total aboveground biomass                 E      f3e023
-474                 Total aboveground biomass                 G      c8f882
-475                 Total aboveground biomass                 G      c8f882
-476                 Total aboveground biomass                 G      ae65ed
-477                 Total aboveground biomass                 G      ae65ed
-478                 Total aboveground biomass                 G      ae65ed
-479                 Total aboveground biomass                 G      7f7777
-480                  Stem and branches (live)                 E      333c34
-481                  Stem and branches (live)                 E      e9d686
-482                  Stem and branches (live)                 E      333c34
-483                  Stem and branches (live)                 E      e9d686
-484                 Total aboveground biomass                 G      7f7777
-485                 Total aboveground biomass                 E      1d7c4c
-486                 Total aboveground biomass                 E      281635
-487                 Total aboveground biomass                 E      162ce7
-488                  Whole tree (above stump)                 E      6943b4
-489                 Total aboveground biomass                 E      524aca
-490                 Total aboveground biomass                 E      1d7c4c
-491                 Total aboveground biomass                 E      524aca
-492                  Stem and branches (live)                 E      76df22
-493                 Total aboveground biomass                 E      1d7c4c
-494                 Total aboveground biomass                 E      76aa3c
-495                 Total aboveground biomass                 G      7f7777
-496                 Total aboveground biomass                 E      9c4cc9
-497                 Total aboveground biomass                 E      9c4cc9
-498                 Total aboveground biomass                 E      9c4cc9
-499                 Total aboveground biomass                 E      9c4cc9
-500                  Whole tree (above stump)                 E      2c092b
-501                 Total aboveground biomass                 G      f08fff
-502                 Total aboveground biomass                 G      ae65ed
-503                 Total aboveground biomass                 E      c48e81
-504                  Stem and branches (live)                 E      bebe2e
-505                             Foliage total                 E      76d19b
-506                 Total aboveground biomass                 G      ae65ed
-507                 Total aboveground biomass                 G      ae65ed
-508                 Total aboveground biomass                 G      ae65ed
-509                 Total aboveground biomass                 E      e8ebc2
-510                  Whole tree (above stump)                 E      122ba6
-511                  Whole tree (above stump)                 E      122ba6
-512                  Whole tree (above stump)                 E      b521bd
-513                 Total aboveground biomass                 G      ae65ed
-514                 Total aboveground biomass                 G      ae65ed
-515                 Total aboveground biomass                 E      21800b
-516                 Total aboveground biomass                 E      e2c7c7
-517                  Whole tree (above stump)                 E      0a1212
-518                 Total aboveground biomass                 G      f08fff
-519                 Total aboveground biomass                 G      f08fff
-520                 Total aboveground biomass                 G      f08fff
-521                  Stem biomass (with bark)                 E      c59e03
-522                     Branches (live, dead)                 E      96c0af
-523                             Foliage total                 E      529234
-524                 Total aboveground biomass                 E      8aecca
-525                 Total aboveground biomass                 E      8aecca
-526                 Total aboveground biomass                 G      f08fff
-527                 Total aboveground biomass                 G      f08fff
-528                 Total aboveground biomass                 G      829bad
-529                  Whole tree (above stump)                 E      ecd464
-530                 Total aboveground biomass                 G      d6be5c
-531                 Total aboveground biomass                 G      d6be5c
-532                 Total aboveground biomass                 E      7c72ed
-533                 Total aboveground biomass                 E      77e37e
-534                 Total aboveground biomass                 E      77e37e
-535                 Total aboveground biomass                 G      ae65ed
-536                  Whole tree (above stump)                 E      2473f9
-537                  Whole tree (above stump)                 E      2473f9
-538                                      <NA>              <NA>      89bf40
-539                 Total aboveground biomass                 G      ae65ed
-540                 Total aboveground biomass                 E      5e2dea
-541                 Total aboveground biomass                 E      5e2dea
-542                 Total aboveground biomass                 G      ae65ed
-543                                      <NA>              <NA>      89bf40
-544                 Total aboveground biomass                 G      f08fff
-545                 Total aboveground biomass                 G      f08fff
-546                 Total aboveground biomass                 G      5caff8
-547                  Whole tree (above stump)                 E      382ee9
-548                  Whole tree (above stump)                 E      382ee9
-549                  Whole tree (aboveground)                 E      d3f7ed
-550                  Whole tree (aboveground)                 E      d3f7ed
-551                  Whole tree (above stump)                 E      382ee9
-552                  Stem and branches (live)                 E      289f7c
-553                             Foliage total                 E      b9d4fc
-554                 Total aboveground biomass                 G      c8f882
-555                 Total aboveground biomass                 G      f08fff
-556                 Total aboveground biomass                 G      f08fff
-557                 Total aboveground biomass                 G      f08fff
-558                 Total aboveground biomass                 G      f08fff
-559                 Total aboveground biomass                 G      5edb7f
-560                 Total aboveground biomass                 E      281635
-561                 Total aboveground biomass                 E      1d7c4c
-562                 Total aboveground biomass                 E      1d7c4c
-563                 Total aboveground biomass                 E      4b8afb
-564        Whole tree (above and belowground)                 E      c70dea
-565                 Total aboveground biomass                 E      76aa3c
-566                 Total aboveground biomass                 G      f08fff
-567                 Total aboveground biomass                 E      8c94e8
-568                  Whole tree (above stump)                 E      122ba6
-569                 Total aboveground biomass                 E      0edaff
-570                 Total aboveground biomass                 E      e2c7c7
-571                 Total aboveground biomass                 E      e2c7c7
-572                 Total aboveground biomass                 E      e2c7c7
-573                 Total aboveground biomass                 E      21800b
-574                 Total aboveground biomass                 E      21800b
-575                 Total aboveground biomass                 E      21800b
-576                 Total aboveground biomass                 E      1d44c6
-577                 Total aboveground biomass                 G      ae65ed
-578                 Total aboveground biomass                 G      f08fff
-579                 Total aboveground biomass                 G      f08fff
-580                 Total aboveground biomass                 G      f08fff
-581                 Total aboveground biomass                 E      8aecca
-582                 Total aboveground biomass                 G      f08fff
-583                 Total aboveground biomass                 E      3172f7
-584                 Total aboveground biomass                 E      3172f7
-585                 Total aboveground biomass                 G      829bad
-586                 Total aboveground biomass                 E      7c72ed
-587                 Total aboveground biomass                 E      77e37e
-588                  Whole tree (above stump)                 E      2473f9
-589                 Total aboveground biomass                 G      5caff8
-590                                      <NA>              <NA>      89bf40
-591                 Total aboveground biomass                 E      686376
-592                  Whole tree (above stump)                 E      382ee9
-593                  Whole tree (above stump)                 E      382ee9
-594                                      <NA>              <NA>      89bf40
-595                 Total aboveground biomass                 E      726f1d
-596                 Total aboveground biomass                 E      a5d599
-597                 Total aboveground biomass                 E      ae60e9
-598                 Total aboveground biomass                 E      2a6b9b
-599                 Total aboveground biomass                 E      b47d78
-600                 Total aboveground biomass                 E      7901c0
-601                 Total aboveground biomass                 E      a5de78
-602                 Total aboveground biomass                 E      390a5a
+538 Harvard Forest        Adoxaceae                  Sambucus racemosa
+539 Harvard Forest        Adoxaceae                  Viburnum dentatum
+540 Harvard Forest        Adoxaceae                Viburnum acerfolium
+541 Harvard Forest    Anacardiaceae               Toxicodendron vernix
+542 Harvard Forest    Aquifoliaceae                     Ilex laevigata
+543 Harvard Forest    Aquifoliaceae                  Ilex verticillata
+544 Harvard Forest       Betulaceae                       Alnus incana
+545 Harvard Forest       Betulaceae              Betula alleghaniensis
+546 Harvard Forest       Betulaceae                       Betula lenta
+547 Harvard Forest       Betulaceae                  Betula papyrifera
+548 Harvard Forest       Betulaceae                 Betula populifolia
+549 Harvard Forest       Betulaceae                     Betula unknown
+550 Harvard Forest       Betulaceae                  Ostrya virginiana
+551 Harvard Forest       Betulaceae                  Ostrya virginiana
+552 Harvard Forest     Cupressaceae                 Juniperus communis
+553 Harvard Forest        Ericaceae                   Kalmia latifolia
+554 Harvard Forest        Ericaceae                  Lyonia ligustrina
+555 Harvard Forest        Ericaceae          Rhododendron prinophyllum
+556 Harvard Forest        Ericaceae               Vaccinium corymbosum
+557 Harvard Forest         Fagaceae                   Castanea dentata
+558 Harvard Forest         Fagaceae                  Fagus grandifolia
+559 Harvard Forest         Fagaceae                      Quercus rubra
+560 Harvard Forest         Fagaceae                    Quercus unknown
+561 Harvard Forest         Fagaceae                   Quercus velutina
+562 Harvard Forest         Fagaceae                   Quercus velutina
+563 Harvard Forest   Hamamelidaceae               Hamamelis virginiana
+564 Harvard Forest        Lauraceae                    Lindera benzoin
+565 Harvard Forest        Nyssaceae                    Nyssa sylvatica
+566 Harvard Forest         Oleaceae                 Fraxinus americana
+567 Harvard Forest         Oleaceae                     Fraxinus nigra
+568 Harvard Forest         Pinaceae                        Picea abies
+569 Harvard Forest         Pinaceae                       Picea rubens
+570 Harvard Forest         Pinaceae                      Picea unknown
+571 Harvard Forest         Pinaceae                     Pinus resinosa
+572 Harvard Forest         Pinaceae                      Pinus strobus
+573 Harvard Forest         Pinaceae                      Pinus unknown
+574 Harvard Forest         Pinaceae                   Tsuga canadensis
+575 Harvard Forest       Rhamnaceae                     Frangula alnus
+576 Harvard Forest         Rosaceae                 Amelanchier laevis
+577 Harvard Forest         Rosaceae                 Aronia melanocarpa
+578 Harvard Forest         Rosaceae                      Crataegus sp.
+579 Harvard Forest         Rosaceae                    Prunus serotina
+580 Harvard Forest         Rosaceae                   Sorbus americana
+581 Harvard Forest       Salicaceae              Populus grandidentata
+582 Harvard Forest       Salicaceae                Populus tremuloides
+583 Harvard Forest       Salicaceae                      Salix species
+584 Harvard Forest      Sapindaceae                        Acer rubrum
+585 Harvard Forest      Sapindaceae                     Acer saccharum
+586 Harvard Forest         Ulmaceae                    Ulmus americana
+587   Scotty Creek       Betulaceae          Alnus viridis ssp. crispa
+588   Scotty Creek       Betulaceae                  Betula glandulosa
+589   Scotty Creek       Betulaceae                 Betula neoalaskana
+590   Scotty Creek       Betulaceae                Betula occidentalis
+591   Scotty Creek       Betulaceae                   Betula pubescens
+592   Scotty Creek       Betulaceae                        Betula spp.
+593   Scotty Creek         Pinaceae                     Larix laricina
+594   Scotty Creek         Pinaceae                     Larix laricina
+595   Scotty Creek         Pinaceae                       Picea glauca
+596   Scotty Creek         Pinaceae                      Picea mariana
+597   Scotty Creek         Pinaceae                      Picea mariana
+598   Scotty Creek         Pinaceae                    Pinus banksiana
+599   Scotty Creek         Pinaceae                    Pinus banksiana
+600   Scotty Creek       Salicaceae                          Salix sp.
+    species_code         life_form      dependent_variable_biomass_component
+1            316              Tree                 Total aboveground biomass
+2            318              Tree                 Total aboveground biomass
+3            356              Tree                  Stem biomass (with bark)
+4            356              Tree                     Branches (live, dead)
+5            356              Tree                             Foliage total
+6            367              Tree                 Total aboveground biomass
+7            391              Tree                 Total aboveground biomass
+8            409              Tree                 Total aboveground biomass
+9            402              Tree                 Total aboveground biomass
+10           403              Tree                 Total aboveground biomass
+11           407              Tree                  Stem and branches (live)
+12           462              Tree                 Total aboveground biomass
+13           471              Tree                 Total aboveground biomass
+14           491              Tree                 Total aboveground biomass
+15           500             Shrub                 Total aboveground biomass
+16           531              Tree                  Stem and branches (live)
+17           541              Tree                  Whole tree (above stump)
+18           541              Tree                  Whole tree (above stump)
+19           544              Tree                  Whole tree (above stump)
+20           498             Shrub                 Total aboveground biomass
+21            68              Tree                 Total aboveground biomass
+22           609             Shrub                 Total aboveground biomass
+23           621              Tree                 Total aboveground biomass
+24           693              Tree                 Total aboveground biomass
+25           701              Tree                  Stem and branches (live)
+26           701              Tree                             Foliage total
+27           712              Tree                 Total aboveground biomass
+28           762              Tree                 Total aboveground biomass
+29           802              Tree                  Stem and branches (live)
+30           806              Tree                  Stem and branches (live)
+31           832              Tree                  Stem and branches (live)
+32           833              Tree                  Stem and branches (live)
+33           837              Tree                  Whole tree (above stump)
+34           837              Tree                 Total aboveground biomass
+35           837              Tree        Whole tree (above and belowground)
+36           899             Shrub                 Total aboveground biomass
+37           901              Tree                  Stem and branches (live)
+38           901              Tree                  Stem and branches (live)
+39           931              Tree                  Whole tree (above stump)
+40           951              Tree                  Stem and branches (live)
+41           951              Tree                             Foliage total
+42           972              Tree                  Whole tree (above stump)
+43           975              Tree                  Whole tree (above stump)
+44          acne              Tree                 Total aboveground biomass
+45          acpl              Tree                 Total aboveground biomass
+46          acru              Tree                 Total aboveground biomass
+47          aial              Tree                 Total aboveground biomass
+48          amar              Tree                  Stem biomass (with bark)
+49          amar              Tree                     Branches (live, dead)
+50          amar              Tree                             Foliage total
+51          astr              Tree                 Total aboveground biomass
+52          beth             Shrub                 Total aboveground biomass
+53          caca              Tree                 Total aboveground biomass
+54          caco              Tree                 Total aboveground biomass
+55          cagl              Tree                 Total aboveground biomass
+56         caovl              Tree                 Total aboveground biomass
+57          cato              Tree                 Total aboveground biomass
+58          cade              Tree                 Total aboveground biomass
+59          ceoc              Tree                 Total aboveground biomass
+60          ceca              Tree                 Total aboveground biomass
+61          chvi             Shrub                 Total aboveground biomass
+62          coal              Tree                 Total aboveground biomass
+63          cofl              Tree                 Total aboveground biomass
+64          coam             Shrub                 Total aboveground biomass
+65          crpr             Shrub                 Total aboveground biomass
+66          divi              Tree                 Total aboveground biomass
+67          elum             Shrub                 Total aboveground biomass
+68          eual             Shrub                 Total aboveground biomass
+69          fagr              Tree                  Stem and branches (live)
+70          fram              Tree                  Stem and branches (live)
+71          frni              Tree                 Total aboveground biomass
+72          frpe              Tree                 Total aboveground biomass
+73          havi             Shrub                 Total aboveground biomass
+74          ilve             Shrub                 Total aboveground biomass
+75          juci              Tree                 Total aboveground biomass
+76          juni              Tree                 Total aboveground biomass
+77          libe             Shrub                 Total aboveground biomass
+78          litu              Tree                  Stem and branches (live)
+79          loma             Shrub                 Total aboveground biomass
+80          nysy              Tree                  Stem and branches (live)
+81          pato              Tree                 Total aboveground biomass
+82          pipu              Tree                 Total aboveground biomass
+83          pist              Tree                 Total aboveground biomass
+84          pivi              Tree                 Total aboveground biomass
+85          ploc              Tree                  Stem and branches (live)
+86          prav              Tree                  Stem and branches (live)
+87          prpe              Tree                  Stem and branches (live)
+88          prse              Tree                  Stem and branches (live)
+89          qual              Tree                  Stem and branches (live)
+90          quco              Tree                  Stem and branches (live)
+91          qufa              Tree                  Whole tree (above stump)
+92          qufa              Tree                  Whole tree (above stump)
+93          qumi              Tree                  Stem and branches (live)
+94          qupr              Tree                  Stem and branches (live)
+95          qumu              Tree                  Stem and branches (live)
+96          quru              Tree                  Stem and branches (live)
+97          quve              Tree                  Whole tree (above stump)
+98          quve              Tree        Whole tree (above and belowground)
+99          rops              Tree                  Stem and branches (live)
+100         rops              Tree                  Stem and branches (live)
+101         romu             Shrub                 Total aboveground biomass
+102         rual             Shrub                 Total aboveground biomass
+103         rupe             Shrub                 Total aboveground biomass
+104         ruph             Shrub                 Total aboveground biomass
+105         saca             Shrub                 Total aboveground biomass
+106         saal              Tree                  Whole tree (above stump)
+107         tiam              Tree                  Stem and branches (live)
+108         tiam              Tree                             Foliage total
+109         ulam              Tree                  Whole tree (above stump)
+110         ulru              Tree                  Stem and branches (live)
+111         viac             Shrub                 Total aboveground biomass
+112         vipr             Shrub                 Total aboveground biomass
+113         vire             Shrub                 Total aboveground biomass
+114        ACNE2              Tree                 Total aboveground biomass
+115         ACRU              Tree                 Total aboveground biomass
+116         AIAL              Tree                 Total aboveground biomass
+117         ALJU              Tree                 Total aboveground biomass
+118        AMAR3              Tree                  Stem biomass (with bark)
+119        AMAR3              Tree                     Branches (live, dead)
+120        AMAR3              Tree                             Foliage total
+121        AMCA4              Tree                  Stem biomass (with bark)
+122        AMCA4              Tree                     Branches (live, dead)
+123        AMCA4              Tree                             Foliage total
+124        ARSP2             Shrub                 Total aboveground biomass
+125         ASTR              Tree                 Total aboveground biomass
+126        BRPA4              Tree                 Total aboveground biomass
+127       CACA18              Tree                 Total aboveground biomass
+128       CAAL27              Tree                 Total aboveground biomass
+129       CACO15              Tree                 Total aboveground biomass
+130        CAGL8              Tree                 Total aboveground biomass
+131        CARYA              Tree                 Total aboveground biomass
+132         CEOC              Tree                 Total aboveground biomass
+133        CEOC2             Shrub                 Total aboveground biomass
+134        CECA4              Tree                 Total aboveground biomass
+135        COFL2              Tree                 Total aboveground biomass
+136         ELAN             Shrub                 Total aboveground biomass
+137         ELUM             Shrub                 Total aboveground biomass
+138         FAGR              Tree                 Total aboveground biomass
+139        FRAM2              Tree                  Whole tree (above stump)
+140         FRPE              Tree                  Whole tree (above stump)
+141         ILOP             Shrub                 Total aboveground biomass
+142         ILVE             Shrub                 Total aboveground biomass
+143         JUNI              Tree                 Total aboveground biomass
+144         JUVI              Tree                 Total aboveground biomass
+145         KALA             Shrub                 Total aboveground biomass
+146       LIGUS2             Shrub                 Total aboveground biomass
+147        LIBE3             Shrub                 Total aboveground biomass
+148        LIST2              Tree                  Whole tree (above stump)
+149         LITU              Tree                 Total aboveground biomass
+150        LOMA6             Shrub                 Total aboveground biomass
+151        MORU2              Tree                 Total aboveground biomass
+152         NYSY              Tree                 Total aboveground biomass
+153        PATO2              Tree                 Total aboveground biomass
+154         PITA              Tree                 Total aboveground biomass
+155        PIVI2              Tree                 Total aboveground biomass
+156         PLOC              Tree                  Whole tree (above stump)
+157         PLOC              Tree                  Whole tree (above stump)
+158        POGR4              Tree                 Total aboveground biomass
+159         PRAV              Tree                 Total aboveground biomass
+160        PRSE2              Tree                 Total aboveground biomass
+161         QUAL              Tree                 Total aboveground biomass
+162        QUCO2              Tree                 Total aboveground biomass
+163         QUFA              Tree                  Whole tree (above stump)
+164         QUFA              Tree                  Whole tree (above stump)
+165         QUMI              Tree                  Stem and branches (live)
+166        QUMO4              Tree                 Total aboveground biomass
+167        QUPA2              Tree                 Total aboveground biomass
+168         QURU              Tree                 Total aboveground biomass
+169        QUERC              Tree                 Total aboveground biomass
+170         QUST              Tree                 Total aboveground biomass
+171         QUVE              Tree                  Whole tree (above stump)
+172         QUVE              Tree        Whole tree (above and belowground)
+173        RHAR3             Shrub                 Total aboveground biomass
+174         RHTY             Shrub                 Total aboveground biomass
+175         ROMU             Shrub                 Total aboveground biomass
+176         SANI             Shrub                 Total aboveground biomass
+177       SANIC4             Shrub                 Total aboveground biomass
+178        SAAL5              Tree                  Whole tree (above stump)
+179         TIAM              Tree                  Stem and branches (live)
+180         TIAM              Tree                             Foliage total
+181         ULAM              Tree                  Whole tree (above stump)
+182         ULRU              Tree                  Stem and branches (live)
+183         VACO             Shrub                 Total aboveground biomass
+184        VACCI             Shrub                 Total aboveground biomass
+185         VIAC             Shrub                 Total aboveground biomass
+186         VIDE             Shrub                 Total aboveground biomass
+187         VIPR             Shrub                 Total aboveground biomass
+188       aceneg              Tree                 Total aboveground biomass
+189       acerub              Tree                 Total aboveground biomass
+190       acesac              Tree                 Total aboveground biomass
+191       ailalt              Tree                 Total aboveground biomass
+192       amearb              Tree                  Stem biomass (with bark)
+193       amearb              Tree                     Branches (live, dead)
+194       amearb              Tree                             Foliage total
+195       asitri              Tree                 Total aboveground biomass
+196       carcor              Tree                 Total aboveground biomass
+197       cargla              Tree                 Total aboveground biomass
+198       carova              Tree                  Stem and branches (live)
+199        carsp              Tree                 Total aboveground biomass
+200       cartex              Tree                 Total aboveground biomass
+201       cartom              Tree                 Total aboveground biomass
+202       celocc              Tree                 Total aboveground biomass
+203       celten              Tree                 Total aboveground biomass
+204       cercan              Tree                 Total aboveground biomass
+205       cordru              Tree                 Total aboveground biomass
+206       corflo              Tree                 Total aboveground biomass
+207        crasp             Shrub                 Total aboveground biomass
+208       diovir              Tree                 Total aboveground biomass
+209       fracar             Shrub                 Total aboveground biomass
+210       fraame              Tree                  Whole tree (above stump)
+211       fraame              Tree                  Whole tree (above stump)
+212       gletri              Tree                 Total aboveground biomass
+213       jugnig              Tree                 Total aboveground biomass
+214       junvir              Tree                 Total aboveground biomass
+215       linben             Shrub                 Total aboveground biomass
+216       lonmaa             Shrub                 Total aboveground biomass
+217       malioe             Shrub                 Total aboveground biomass
+218       morrub              Tree                 Total aboveground biomass
+219       ostvir              Tree                  Stem and branches (live)
+220       ostvir              Tree                             Foliage total
+221       plaocc              Tree                  Whole tree (above stump)
+222       pruame              Tree                 Total aboveground biomass
+223       pruser              Tree                 Total aboveground biomass
+224        prusp              Tree                 Total aboveground biomass
+225       quealb              Tree                  Stem and branches (live)
+226       quemar              Tree                  Stem and branches (live)
+227       quemue              Tree                  Stem and branches (live)
+228       querub              Tree                  Stem and branches (live)
+229        quesp              Tree                  Stem and branches (live)
+230       queste              Tree                  Stem and branches (live)
+231       quevel              Tree                  Whole tree (above stump)
+232       quevel              Tree                 Total aboveground biomass
+233       quevel              Tree        Whole tree (above and belowground)
+234       sasalb              Tree                  Whole tree (above stump)
+235       sidlan             Shrub                 Total aboveground biomass
+236       tilame              Tree                  Stem and branches (live)
+237       tilame              Tree                             Foliage total
+238       ulmrub              Tree                  Whole tree (above stump)
+239       ACERMA              Tree                 Total aboveground biomass
+240       ARBUME              Tree                                Live crown
+241       ARBUME              Tree                                Dead crown
+242       ARBUME              Tree                  Stem biomass (with bark)
+243       ARCTAN             Shrub                 Total aboveground biomass
+244       ARCTCR             Shrub                 Total aboveground biomass
+245       BACCPI             Shrub                 Total aboveground biomass
+246       CEANTH             Shrub                 Total aboveground biomass
+247       CORYCO             Shrub                 Total aboveground biomass
+248       COTOFR             Shrub                 Total aboveground biomass
+249       COTOPA             Shrub                 Total aboveground biomass
+250       CRATMO             Shrub                 Total aboveground biomass
+251       EUCAGL              Tree                 Total aboveground biomass
+252       HETEAR             Shrub                 Total aboveground biomass
+253       ILEXAQ             Shrub                 Total aboveground biomass
+254       LITHDE              Tree                                Live crown
+255       LITHDE              Tree                                Dead crown
+256       LITHDE              Tree                  Stem biomass (with bark)
+257       MORECA             Shrub                 Total aboveground biomass
+258       PINUAT              Tree                  Stem biomass (with bark)
+259       PINUPO              Tree                  Stem biomass (with bark)
+260       PINUPO              Tree  Crown biomass (branches, foliage, twigs)
+261       PINUPO              Tree                 Total aboveground biomass
+262       PSEUME              Tree                 Total aboveground biomass
+263       PSEUME              Tree                 Total aboveground biomass
+264       PYRAAN             Shrub                 Total aboveground biomass
+265       QUERAG              Tree                 Total aboveground biomass
+266       QUERPA              Tree                 Total aboveground biomass
+267       RHAMCA             Shrub                 Total aboveground biomass
+268       RIBEDI             Shrub                 Total aboveground biomass
+269       SALILA             Shrub                 Total aboveground biomass
+270       SAMBNI             Shrub                 Total aboveground biomass
+271       SEQUSE              Tree                 Total aboveground biomass
+272       UMBECA              Tree                 Total aboveground biomass
+273       VACCOV             Shrub Total aboveground biomass (wood and bark)
+274       ABIBAL              Tree                  Whole tree (above stump)
+275       ACERUB              Tree                 Total aboveground biomass
+276       ACERUB              Tree                 Total aboveground biomass
+277       ACESUG              Tree                 Total aboveground biomass
+278       ACESPI             Shrub                 Total aboveground biomass
+279       ALNINC             Shrub                 Total aboveground biomass
+280       AMELAE             Shrub                 Total aboveground biomass
+281       AMESAN             Shrub                 Total aboveground biomass
+282       BETALL              Tree                  Whole tree (above stump)
+283       BETPAP              Tree                  Whole tree (aboveground)
+284       CORALT              Tree                 Total aboveground biomass
+285       CORCOR             Shrub                 Total aboveground biomass
+286       DIRPAL             Shrub                 Total aboveground biomass
+287       FRAAME              Tree                  Whole tree (above stump)
+288       FRAAME              Tree                  Whole tree (above stump)
+289       FRANIG              Tree                 Total aboveground biomass
+290       ILEMUC             Shrub                 Total aboveground biomass
+291       ILEVER             Shrub                 Total aboveground biomass
+292       JUGCIN              Tree                 Total aboveground biomass
+293       LARLAR              Tree                  Whole tree (above stump)
+294       LONCAN             Shrub                 Total aboveground biomass
+295       MALPUM              Tree                 Total aboveground biomass
+296       OSTVIR              Tree                  Stem and branches (live)
+297       OSTVIR              Tree                             Foliage total
+298       PICGLA              Tree                  Whole tree (above stump)
+299       PICMAR              Tree                  Whole tree (above stump)
+300       PINSTR              Tree                 Total aboveground biomass
+301       POPBAL              Tree                  Whole tree (above stump)
+302       POPGRA              Tree                 Total aboveground biomass
+303       POPTRE              Tree                 Total aboveground biomass
+304       PRUPEN              Tree                 Total aboveground biomass
+305       PRUSER              Tree                 Total aboveground biomass
+306       PRUVIR              Tree                 Total aboveground biomass
+307       QUERUB              Tree                 Total aboveground biomass
+308       RIBCYN             Shrub                 Total aboveground biomass
+309       SAMRAC             Shrub                 Total aboveground biomass
+310       SORAME              Tree                 Total aboveground biomass
+311       THUOCC              Tree                  Whole tree (above stump)
+312       TILAME              Tree                             Foliage total
+313       TILAME              Tree                  Stem and branches (live)
+314       TSUCAN              Tree                 Total aboveground biomass
+315       ULMAME              Tree                  Whole tree (above stump)
+316         ABAM              Tree                  Whole tree (above stump)
+317         ABGR              Tree                  Stem biomass (with bark)
+318         ABGR              Tree  Crown biomass (branches, foliage, twigs)
+319         ABPR              Tree                           Branches (live)
+320         ABPR              Tree                             Foliage total
+321         ABPR              Tree                              Stem biomass
+322         ABSP              Tree                           Branches (live)
+323         ABSP              Tree                             Foliage total
+324         ABSP              Tree                         Stem bark biomass
+325         ABSP              Tree               Stem biomass (without bark)
+326         ACCI             Shrub                 Total aboveground biomass
+327         ACGL              Tree                 Total aboveground biomass
+328         ALRU              Tree                  Whole tree (above stump)
+329         AMAL              Tree                 Total aboveground biomass
+330         CONU              Tree                 Total aboveground biomass
+331        COCOC             Shrub                 Total aboveground biomass
+332         GASH             Shrub                 Total aboveground biomass
+333         HODI             Shrub                 Total aboveground biomass
+334         LOCI             Shrub                 Total aboveground biomass
+335         MEFE             Shrub                 Total aboveground biomass
+336         OECE             Shrub                 Total aboveground biomass
+337         PIMO              Tree                 Total aboveground biomass
+338         PSME              Tree                 Total aboveground biomass
+339         PSME              Tree                 Total aboveground biomass
+340         RHPU             Shrub                 Total aboveground biomass
+341         RHMA             Shrub                 Total aboveground biomass
+342         ROGY             Shrub                 Total aboveground biomass
+343         RULE             Shrub                 Total aboveground biomass
+344         RUSP             Shrub                 Total aboveground biomass
+345         TABR              Tree                 Total aboveground biomass
+346         THPL              Tree                 Total aboveground biomass
+347         THPL              Tree                 Total aboveground biomass
+348         TSHE              Tree                  Whole tree (above stump)
+349         VAME             Shrub                 Total aboveground biomass
+350         VAOV             Shrub                 Total aboveground biomass
+351         VAPA             Shrub                 Total aboveground biomass
+352       ACERCA              Tree                 Total aboveground biomass
+353       ACERPS              Tree                 Total aboveground biomass
+354       BETUSP              Tree                 Total aboveground biomass
+355       CARPBE              Tree                 Total aboveground biomass
+356       CASTSA              Tree                 Total aboveground biomass
+357       CORNSA             Shrub                 Total aboveground biomass
+358       CORYAV             Shrub                 Total aboveground biomass
+359       CRATMO             Shrub                 Total aboveground biomass
+360       EUONEU             Shrub                 Total aboveground biomass
+361       FAGUSY              Tree                 Total aboveground biomass
+362       FRANAL             Shrub                 Total aboveground biomass
+363       FRAXEX              Tree                 Total aboveground biomass
+364       ILEXAQ             Shrub                 Total aboveground biomass
+365       LARIDE              Tree                 Total aboveground biomass
+366       PICEAB              Tree                 Total aboveground biomass
+367       PINUSY              Tree                 Total aboveground biomass
+368       PRUNAV              Tree                 Total aboveground biomass
+369       PRUNSP              Tree                 Total aboveground biomass
+370       PSEUME              Tree                 Total aboveground biomass
+371       QUERRO              Tree                 Total aboveground biomass
+372       SALISP              Tree                 Total aboveground biomass
+373       SAMBNI             Shrub                 Total aboveground biomass
+374       TAXUBA              Tree                 Total aboveground biomass
+375       TILIEU              Tree                 Total aboveground biomass
+376         ABCO              Tree                           Branches (live)
+377         ABCO              Tree                             Foliage total
+378         ABCO              Tree                              Stem biomass
+379         ABCO              Tree                  Stem biomass (with bark)
+380         ABCO              Tree                 Total aboveground biomass
+381         ABMA              Tree                           Branches (live)
+382         ABMA              Tree                             Foliage total
+383         ABMA              Tree                              Stem biomass
+384         ABMA              Tree                  Stem biomass (with bark)
+385         ABSP              Tree                           Branches (live)
+386         ABSP              Tree                             Foliage total
+387         ABSP              Tree                         Stem bark biomass
+388         ABSP              Tree               Stem biomass (without bark)
+389         ARPA             Shrub                 Total aboveground biomass
+390         CADE              Tree                  Stem biomass (with bark)
+391         CECO             Shrub                 Total aboveground biomass
+392         CEIN             Shrub                 Total aboveground biomass
+393         CEPA             Shrub                 Total aboveground biomass
+394         CHSE             Shrub                 Total aboveground biomass
+395         CONU              Tree                 Total aboveground biomass
+396         COSE             Shrub                 Total aboveground biomass
+397        COCOC             Shrub                 Total aboveground biomass
+398         HODI             Shrub                 Total aboveground biomass
+399         LEDA             Shrub                 Total aboveground biomass
+400         PILA              Tree                 Total aboveground biomass
+401         PILA              Tree                 Total aboveground biomass
+402         PIPO              Tree                  Stem biomass (with bark)
+403         PIPO              Tree  Crown biomass (branches, foliage, twigs)
+404         PIPO              Tree                 Total aboveground biomass
+405         PREM              Tree                  Whole tree (above stump)
+406         PREM              Tree                 Total aboveground biomass
+407         PRVI              Tree                 Total aboveground biomass
+408         PSME              Tree                 Total aboveground biomass
+409         PSME              Tree                 Total aboveground biomass
+410         RHCA             Shrub                 Total aboveground biomass
+411         RHOC             Shrub                 Total aboveground biomass
+412         RINE             Shrub                 Total aboveground biomass
+413         RIRO             Shrub                 Total aboveground biomass
+414         SASC              Tree                 Total aboveground biomass
+415        SALIX              Tree                 Total aboveground biomass
+416         SARA             Shrub                 Total aboveground biomass
+417         VAUL             Shrub                 Total aboveground biomass
+418           JD              Tree                 Total aboveground biomass
+419           JV              Tree                 Total aboveground biomass
+420           KL              Tree                 Total aboveground biomass
+421           BR              Tree                 Total aboveground biomass
+422           BK              Tree                 Total aboveground biomass
+423           SM              Tree                 Total aboveground biomass
+424           TP              Tree                 Total aboveground biomass
+425           VR              Tree                 Total aboveground biomass
+426          BEZ             Shrub                 Total aboveground biomass
+427           JR              Tree                 Total aboveground biomass
+428           JL              Tree                 Total aboveground biomass
+429         <NA>              Tree                  Stem biomass (with bark)
+430         <NA>              Tree                  Stem biomass (with bark)
+431         <NA>              Tree                 Total aboveground biomass
+432         <NA>              Tree                 Total aboveground biomass
+433         <NA> Shrub, small tree                 Total aboveground biomass
+434         <NA>             Shrub                 Total aboveground biomass
+435         <NA>             Shrub                 Total aboveground biomass
+436         <NA>              Tree                 Total aboveground biomass
+437         <NA>              Tree                 Total aboveground biomass
+438         <NA>              Tree                 Total aboveground biomass
+439         <NA>              Tree                 Total aboveground biomass
+440         <NA>              Tree                 Total aboveground biomass
+441         <NA>              Tree                 Total aboveground biomass
+442         <NA>              Tree                 Total aboveground biomass
+443         <NA>              Tree               Stem biomass (without bark)
+444         <NA>              Tree                         Stem bark biomass
+445         <NA>              Tree                     Branches (live, dead)
+446         <NA>              Tree                             Total foliage
+447         <NA>              Tree                 Total aboveground biomass
+448         <NA>              Tree               Stem biomass (without bark)
+449         <NA>              Tree                         Stem bark biomass
+450         <NA>              Tree                     Branches (live, dead)
+451         <NA>              Tree                             Total foliage
+452         <NA>              Tree                 Total aboveground biomass
+453         <NA>              Tree                  Stem biomass (with bark)
+454         <NA>              Tree  Crown biomass (branches, foliage, twigs)
+455         <NA>              Tree                 Total aboveground biomass
+456         <NA>              Tree                 Total aboveground biomass
+457         <NA>              Tree                 Total aboveground biomass
+458         <NA>             Shrub                 Total aboveground biomass
+459         <NA>             Shrub                 Total aboveground biomass
+460         <NA>             Shrub                 Total aboveground biomass
+461         <NA>              Tree                 Total aboveground biomass
+462         <NA>             Shrub                 Total aboveground biomass
+463         <NA>             Shrub                 Total aboveground biomass
+464         <NA>             Shrub                 Total aboveground biomass
+465         <NA>             Shrub                 Total aboveground biomass
+466         <NA>              Tree                  Whole tree (above stump)
+467         <NA>              Tree                  Stem and branches (live)
+468         <NA>              Tree                             Foliage total
+469         <NA>              Tree                 Total aboveground biomass
+470         <NA>              Tree                 Total aboveground biomass
+471         <NA>             Shrub                 Total aboveground biomass
+472         <NA>              Tree                 Total aboveground biomass
+473         <NA>              Tree                 Total aboveground biomass
+474         <NA>              Tree                 Total aboveground biomass
+475         <NA>              Tree                 Total aboveground biomass
+476         <NA>              Tree                 Total aboveground biomass
+477         <NA> Shrub, small tree                 Total aboveground biomass
+478         <NA> Shrub, small tree                 Total aboveground biomass
+479         <NA>              Tree                 Total aboveground biomass
+480         <NA>              Tree                  Stem and branches (live)
+481         <NA>              Tree                  Stem and branches (live)
+482         <NA>              Tree                  Stem and branches (live)
+483         <NA>              Tree                  Stem and branches (live)
+484         <NA>              Tree                 Total aboveground biomass
+485         <NA>              Tree                 Total aboveground biomass
+486         <NA>              Tree                 Total aboveground biomass
+487         <NA>              Tree                 Total aboveground biomass
+488         <NA>              Tree                  Whole tree (above stump)
+489         <NA>              Tree                 Total aboveground biomass
+490         <NA>              Tree                 Total aboveground biomass
+491         <NA>              Tree                 Total aboveground biomass
+492         <NA>              Tree                  Stem and branches (live)
+493         <NA>              Tree                 Total aboveground biomass
+494         <NA>             Shrub                 Total aboveground biomass
+495         <NA>              Tree                 Total aboveground biomass
+496         <NA>              Tree                 Total aboveground biomass
+497         <NA>              Tree                 Total aboveground biomass
+498         <NA>              Tree                 Total aboveground biomass
+499         <NA>              Tree                 Total aboveground biomass
+500         <NA>              Tree                  Whole tree (above stump)
+501         <NA>             Shrub                 Total aboveground biomass
+502         <NA>             Shrub                 Total aboveground biomass
+503         <NA>              Tree                 Total aboveground biomass
+504         <NA>              Tree                  Stem and branches (live)
+505         <NA>              Tree                             Foliage total
+506         <NA>              Tree                 Total aboveground biomass
+507         <NA>              Tree                 Total aboveground biomass
+508         <NA>              Tree                 Total aboveground biomass
+509         <NA>              Tree                 Total aboveground biomass
+510         <NA>              Tree                  Whole tree (above stump)
+511         <NA>              Tree                  Whole tree (above stump)
+512         <NA>              Tree                  Whole tree (above stump)
+513         <NA>              Tree                 Total aboveground biomass
+514         <NA>              Tree                 Total aboveground biomass
+515         <NA>              Tree                 Total aboveground biomass
+516         <NA>              Tree                 Total aboveground biomass
+517         <NA>              Tree                  Whole tree (above stump)
+518         <NA>             Shrub                 Total aboveground biomass
+519         <NA>             Shrub                 Total aboveground biomass
+520         <NA>             Shrub                 Total aboveground biomass
+521         <NA>              Tree                  Stem biomass (with bark)
+522         <NA>              Tree                     Branches (live, dead)
+523         <NA>              Tree                             Foliage total
+524         <NA>              Tree                 Total aboveground biomass
+525         <NA>              Tree                 Total aboveground biomass
+526         <NA>              Tree                 Total aboveground biomass
+527         <NA>              Tree                 Total aboveground biomass
+528         <NA>              Tree                 Total aboveground biomass
+529         <NA>              Tree                  Whole tree (above stump)
+530         <NA>              Tree                 Total aboveground biomass
+531         <NA>              Tree                 Total aboveground biomass
+532         <NA>              Tree                 Total aboveground biomass
+533         <NA>              Tree                 Total aboveground biomass
+534         <NA>              Tree                 Total aboveground biomass
+535         <NA>              Tree                 Total aboveground biomass
+536         <NA>              Tree                  Whole tree (above stump)
+537         <NA>              Tree                  Whole tree (above stump)
+538         <NA>             Shrub                 Total aboveground biomass
+539         <NA>             Shrub                 Total aboveground biomass
+540         <NA>             Shrub                 Total aboveground biomass
+541         <NA>             Shrub                 Total aboveground biomass
+542         <NA>             Shrub                 Total aboveground biomass
+543         <NA>             Shrub                 Total aboveground biomass
+544         <NA>              Tree                 Total aboveground biomass
+545         <NA>              Tree                  Whole tree (above stump)
+546         <NA>              Tree                  Whole tree (above stump)
+547         <NA>              Tree                  Whole tree (aboveground)
+548         <NA>              Tree                  Whole tree (aboveground)
+549         <NA>              Tree                  Whole tree (above stump)
+550         <NA>              Tree                  Stem and branches (live)
+551         <NA>              Tree                             Foliage total
+552         <NA>             Shrub                 Total aboveground biomass
+553         <NA>             Shrub                 Total aboveground biomass
+554         <NA>             Shrub                 Total aboveground biomass
+555         <NA>             Shrub                 Total aboveground biomass
+556         <NA>             Shrub                 Total aboveground biomass
+557         <NA>              Tree                 Total aboveground biomass
+558         <NA>              Tree                 Total aboveground biomass
+559         <NA>              Tree                 Total aboveground biomass
+560         <NA>              Tree                 Total aboveground biomass
+561         <NA>              Tree                 Total aboveground biomass
+562         <NA>              Tree        Whole tree (above and belowground)
+563         <NA>             Shrub                 Total aboveground biomass
+564         <NA>             Shrub                 Total aboveground biomass
+565         <NA>              Tree                 Total aboveground biomass
+566         <NA>              Tree                  Whole tree (above stump)
+567         <NA>              Tree                 Total aboveground biomass
+568         <NA>              Tree                 Total aboveground biomass
+569         <NA>              Tree                 Total aboveground biomass
+570         <NA>              Tree                 Total aboveground biomass
+571         <NA>              Tree                 Total aboveground biomass
+572         <NA>              Tree                 Total aboveground biomass
+573         <NA>              Tree                 Total aboveground biomass
+574         <NA>              Tree                 Total aboveground biomass
+575         <NA>             Shrub                 Total aboveground biomass
+576         <NA>             Shrub                 Total aboveground biomass
+577         <NA>             Shrub                 Total aboveground biomass
+578         <NA>             Shrub                 Total aboveground biomass
+579         <NA>              Tree                 Total aboveground biomass
+580         <NA>             Shrub                 Total aboveground biomass
+581         <NA>              Tree                 Total aboveground biomass
+582         <NA>              Tree                 Total aboveground biomass
+583         <NA>              Tree                 Total aboveground biomass
+584         <NA>              Tree                 Total aboveground biomass
+585         <NA>              Tree                 Total aboveground biomass
+586         <NA>              Tree                  Whole tree (above stump)
+587         <NA>              Tree                 Total aboveground biomass
+588         <NA>             Shrub                 Total aboveground biomass
+589         <NA>              Tree                 Total aboveground biomass
+590         <NA>              Tree                  Whole tree (above stump)
+591         <NA>              Tree                  Whole tree (above stump)
+592         <NA>             Shrub                 Total aboveground biomass
+593         <NA>              Tree                 Total aboveground biomass
+594         <NA>              Tree                 Total aboveground biomass
+595         <NA>              Tree                 Total aboveground biomass
+596         <NA>              Tree                 Total aboveground biomass
+597         <NA>              Tree                 Total aboveground biomass
+598         <NA>              Tree                 Total aboveground biomass
+599         <NA>              Tree                 Total aboveground biomass
+600         <NA>              Tree                 Total aboveground biomass
+    equation_group equation_id                   equation_taxa
+1                E      2060ea                     Acer rubrum
+2                E      a4d879                  Acer saccharum
+3                E      c59e03                     Amelanchier
+4                E      96c0af                     Amelanchier
+5                E      529234                     Amelanchier
+6                G      ae65ed                  Mixed hardwood
+7                G      ae65ed                  Mixed hardwood
+8                E      9c4cc9                           Carya
+9                E      9c4cc9                           Carya
+10               E      9c4cc9                           Carya
+11               E      7913b8                     Carya ovata
+12               G      ae65ed                  Mixed hardwood
+13               G      7f7777                        Fabaceae
+14               E      cf733d                  Cornus florida
+15               G      f08fff                        Rosaceae
+16               E      74186d               Fagus grandifolia
+17               E      122ba6              Fraxinus americana
+18               E      e3f3bf              Fraxinus americana
+19               E      122ba6          Fraxinus pennsylvanica
+20               E      76aa3c            Hamamelis virginiana
+21               E      c36a5b            Juniperus virginiana
+22               G      f08fff                       Lauraceae
+23               E      94f593         Liriodendron tulipifera
+24               E      8c94e8                 Nyssa sylvatica
+25               E      289f7c               Ostrya virginiana
+26               E      b9d4fc               Ostrya virginiana
+27               G      ae65ed                  Mixed hardwood
+28               E      8aecca                 Prunus serotina
+29               E      07dba7                    Quercus alba
+30               E      cb0353                Quercus coccinea
+31               E      76df22                  Quercus prinus
+32               E      839012                   Quercus rubra
+33               E      7640f0                Quercus velutina
+34               E      4b8afb                Quercus velutina
+35               E      c70dea                Quercus velutina
+36               G      ae65ed                  Mixed hardwood
+37               E      333c34            Robinia pseudoacacia
+38               E      e9d686            Robinia pseudoacacia
+39               E      c13e0f               Sassafras albidum
+40               E      3f99ba                 Tilia americana
+41               E      76d19b                 Tilia americana
+42               E      2473f9                 Ulmus americana
+43               E      2473f9                     Ulmus rubra
+44               G      d6be5c                       Aceraceae
+45               G      d6be5c                       Aceraceae
+46               E      7c72ed                     Acer rubrum
+47               G      ae65ed                  Mixed hardwood
+48               E      c59e03                     Amelanchier
+49               E      96c0af                     Amelanchier
+50               E      529234                     Amelanchier
+51               G      ae65ed                  Mixed hardwood
+52               G      ae65ed                  Mixed hardwood
+53               G      ae65ed                  Mixed hardwood
+54               E      9c4cc9                           Carya
+55               E      9c4cc9                           Carya
+56               E      9c4cc9                           Carya
+57               E      9c4cc9                           Carya
+58               G      5edb7f                        Fagaceae
+59               G      ae65ed                  Mixed hardwood
+60               G      7f7777                        Fabaceae
+61               G      ae65ed                  Mixed hardwood
+62               E      f3e023             Cornus alternifolia
+63               E      f3e023                  Cornus florida
+64               G      ae65ed                  Mixed hardwood
+65               G      f08fff                        Rosaceae
+66               G      ae65ed                  Mixed hardwood
+67               G      ae65ed                  Mixed hardwood
+68               G      ae65ed                  Mixed hardwood
+69               E      74186d               Fagus grandifolia
+70               E      973c05              Fraxinus americana
+71               E      0edaff                  Fraxinus nigra
+72               E      0edaff          Fraxinus pennsylvanica
+73               E      76aa3c            Hamamelis virginiana
+74               G      f08fff                   Aquifoliaceae
+75               G      7f7777                    Juglandaceae
+76               G      7f7777                    Juglandaceae
+77               G      f08fff                       Lauraceae
+78               E      34fe5a         Liriodendron tulipifera
+79               E      28dce6                Lonicera maackii
+80               E      8da09d                 Nyssa sylvatica
+81               G      ae65ed                  Mixed hardwood
+82               E      21800b                   Pinus pungens
+83               E      21800b                   Pinus strobus
+84               E      6ea81f                Pinus virginiana
+85               E      d7f1a6           Platanus occidentalis
+86               E      508dfe                    Prunus avium
+87               E      508dfe                  Prunus persica
+88               E      508dfe                 Prunus serotina
+89               E      07dba7                    Quercus alba
+90               E      cb0353                Quercus coccinea
+91               E      81397c                 Quercus falcata
+92               E      6943b4                 Quercus falcata
+93               E      76df22               Quercus michauxii
+94               E      76df22                 Quercus montana
+95               E      76df22           Quercus muehlenbergii
+96               E      839012                   Quercus rubra
+97               E      7640f0                Quercus velutina
+98               E      c70dea                Quercus velutina
+99               E      333c34            Robinia pseudoacacia
+100              E      e9d686            Robinia pseudoacacia
+101              E      a1646f                            Rosa
+102              E      b61369            Rubus allegheniensis
+103              E      b61369             Rubus pensilvanicus
+104              E      b61369            Rubus phoenicolasius
+105              G      ae65ed                  Mixed hardwood
+106              E      2c092b               Sassafras albidum
+107              E      3f99ba                 Tilia americana
+108              E      76d19b                 Tilia americana
+109              E      8eca60                           Ulmus
+110              E      455839                           Ulmus
+111              E      5e2dea            Viburnum acerifolium
+112              E      5e2dea            Viburnum prunifolium
+113              E      5e2dea             Viburnum recognitum
+114              G      d6be5c                       Aceraceae
+115              E      7c72ed                     Acer rubrum
+116              G      ae65ed                  Mixed hardwood
+117              G      5edb7f                        Fabaceae
+118              E      c59e03                     Amelanchier
+119              E      96c0af                     Amelanchier
+120              E      529234                     Amelanchier
+121              E      c59e03                     Amelanchier
+122              E      96c0af                     Amelanchier
+123              E      529234                     Amelanchier
+124              G      ae65ed                  Mixed hardwood
+125              G      ae65ed                  Mixed hardwood
+126              G      ae65ed                  Mixed hardwood
+127              G      ae65ed                  Mixed hardwood
+128              E      9c4cc9                           Carya
+129              E      9c4cc9                           Carya
+130              E      9c4cc9                           Carya
+131              E      9c4cc9                           Carya
+132              G      ae65ed                  Mixed hardwood
+133              G      ae65ed                  Mixed hardwood
+134              G      7f7777                        Fabaceae
+135              E      f3e023                  Cornus florida
+136              G      ae65ed                  Mixed hardwood
+137              G      ae65ed                  Mixed hardwood
+138              E      281635               Fagus grandifolia
+139              E      122ba6              Fraxinus americana
+140              E      b521bd          Fraxinus pennsylvanica
+141              G      f08fff                   Aquifoliaceae
+142              G      f08fff                   Aquifoliaceae
+143              G      7f7777                    Juglandaceae
+144              E      c36a5b            Juniperus virginiana
+145              G      f08fff                       Ericaceae
+146              G      ae65ed                  Mixed hardwood
+147              G      f08fff                       Lauraceae
+148              E      6f6bc3         Liquidambar styraciflua
+149              E      c48e81         Liriodendron tulipifera
+150              E      28dce6                Lonicera maackii
+151              G      ae65ed                  Mixed hardwood
+152              E      e8ebc2                 Nyssa sylvatica
+153              G      ae65ed                  Mixed hardwood
+154              E      6ea81f                     Pinus taeda
+155              E      6ea81f                Pinus virginiana
+156              E      73325b           Platanus occidentalis
+157              E      0a1212           Platanus occidentalis
+158              E      3172f7           Populus grandidentata
+159              E      8aecca                    Prunus avium
+160              E      8aecca                 Prunus serotina
+161              E      524aca                    Quercus alba
+162              E      162ce7                Quercus coccinea
+163              E      0cc678                 Quercus falcata
+164              E      6943b4                 Quercus falcata
+165              E      76df22               Quercus michauxii
+166              E      f21996                 Quercus montana
+167              E      1d7c4c               Quercus palustris
+168              E      1d7c4c                   Quercus rubra
+169              G      5edb7f                        Fagaceae
+170              E      b40702                Quercus stellata
+171              E      23ec05                Quercus velutina
+172              E      c70dea                Quercus velutina
+173              G      f08fff                       Ericaceae
+174              G      ae65ed                  Mixed hardwood
+175              E      a1646f                            Rosa
+176              G      829bad                      Salicaceae
+177              G      ae65ed                  Mixed hardwood
+178              E      2c092b               Sassafras albidum
+179              E      bebe2e                 Tilia americana
+180              E      76d19b                 Tilia americana
+181              E      8eca60                           Ulmus
+182              E      455839                           Ulmus
+183              G      f08fff                       Ericaceae
+184              G      f08fff                       Ericaceae
+185              E      5e2dea            Viburnum acerifolium
+186              E      5e2dea               Viburnum dentatum
+187              E      5e2dea            Viburnum prunifolium
+188              G      d6be5c                     Sapindaceae
+189              E      2060ea                     Acer rubrum
+190              E      a4d879                  Acer saccharum
+191              G      ae65ed                  Mixed hardwood
+192              E      c59e03                     Amelanchier
+193              E      96c0af                     Amelanchier
+194              E      529234                     Amelanchier
+195              G      ae65ed                  Mixed hardwood
+196              E      9c4cc9                           Carya
+197              E      9c4cc9                           Carya
+198              E      7913b8                     Carya ovata
+199              E      9c4cc9                           Carya
+200              E      9c4cc9                           Carya
+201              E      9c4cc9                           Carya
+202              G      ae65ed                  Mixed hardwood
+203              G      ae65ed                  Mixed hardwood
+204              G      7f7777                        Fabaceae
+205              E      cf733d               Cornus drummondii
+206              E      cf733d                  Cornus florida
+207              G      f08fff                        Rosaceae
+208              G      ae65ed                  Mixed hardwood
+209              G      ae65ed                  Mixed hardwood
+210              E      122ba6              Fraxinus americana
+211              E      e3f3bf              Fraxinus americana
+212              G      7f7777                        Fabaceae
+213              G      7f7777                    Juglandaceae
+214              E      c36a5b            Juniperus virginiana
+215              G      f08fff                       Lauraceae
+216              E      28dce6                Lonicera maackii
+217              G      f08fff                        Rosaceae
+218              G      ae65ed                  Mixed hardwood
+219              E      289f7c               Ostrya virginiana
+220              E      b9d4fc               Ostrya virginiana
+221              E      0a1212           Platanus occidentalis
+222              E      8aecca                Prunus americana
+223              E      8aecca                 Prunus serotina
+224              E      8aecca                 Prunus serotina
+225              E      07dba7                    Quercus alba
+226              E      839012             Quercus marilandica
+227              E      07dba7                    Quercus alba
+228              E      839012                   Quercus rubra
+229              E      07dba7                    Quercus alba
+230              E      07dba7                Quercus stellata
+231              E      7640f0                Quercus velutina
+232              E      4b8afb                Quercus velutina
+233              E      c70dea                Quercus velutina
+234              E      2c092b               Sassafras albidum
+235              G      ae65ed                  Mixed hardwood
+236              E      3f99ba                 Tilia americana
+237              E      76d19b                 Tilia americana
+238              E      2473f9                     Ulmus rubra
+239              G      d6be5c                     Sapindaceae
+240              E      b45a32               Arbutus menziesii
+241              E      c8c6f1               Arbutus menziesii
+242              E      785080               Arbutus menziesii
+243              E      3cb95a       Arctostaphylos andersonii
+244              E      3cb95a        Arctostaphylos tomentosa
+245              E      c94845             Baccharis pilularis
+246              E      6b3b2a          Ceanothus thyrsiflorus
+247              G      ae65ed                  Mixed hardwood
+248              G      f08fff                        Rosaceae
+249              G      f08fff                        Rosaceae
+250              G      f08fff                        Rosaceae
+251              E      7da4c9             Eucalyptus globulus
+252              G      f08fff                        Rosaceae
+253              G      f08fff                   Aquifoliaceae
+254              E      870336         Lithocarpus densiflorus
+255              E      748d94         Lithocarpus densiflorus
+256              E      5a774d         Lithocarpus densiflorus
+257              G      ae65ed                  Mixed hardwood
+258              E      5ea2c1                 Pinus attenuata
+259              E      5ea2c1                 Pinus ponderosa
+260              E      0bdd5e                 Pinus ponderosa
+261              G      15b165                           Pinus
+262              E      4d8e54           Pseudotsuga menziesii
+263              E      f94e03           Pseudotsuga menziesii
+264              G      f08fff                        Rosaceae
+265              G      5edb7f                        Fagaceae
+266              G      5edb7f                        Fagaceae
+267              G      ae65ed                  Mixed hardwood
+268              E      b95baf                           Ribes
+269              G      829bad                      Salicaceae
+270              G      ae65ed                  Mixed hardwood
+271              G      2ee3ae                    Cupressaceae
+272              E      8470d2        Umbellularia californica
+273              E      e8f868                Vaccinium ovatum
+274              E      1badac                  Abies balsamea
+275              E      5084bd                     Acer rubrum
+276              E      138258                     Acer rubrum
+277              E      77e37e                  Acer saccharum
+278              E      5084bd                   Acer spicatum
+279              G      5caff8                      Betulaceae
+280              G      f08fff                        Rosaceae
+281              G      f08fff                        Rosaceae
+282              E      382ee9           Betula alleghaniensis
+283              E      d3f7ed               Betula papyrifera
+284              E      cf733d             Cornus alternifolia
+285              G      ae65ed                  Mixed hardwood
+286              G      ae65ed                  Mixed hardwood
+287              E      122ba6              Fraxinus americana
+288              E      e3f3bf              Fraxinus americana
+289              E      0edaff                  Fraxinus nigra
+290              G      f08fff                   Aquifoliaceae
+291              G      f08fff                   Aquifoliaceae
+292              G      7f7777                    Juglandaceae
+293              E      01e863                  Larix laricina
+294              E      28dce6             Lonicera canadensis
+295              G      f08fff                        Rosaceae
+296              E      289f7c               Ostrya virginiana
+297              E      b9d4fc               Ostrya virginiana
+298              E      bce95d                    Picea glauca
+299              E      1d3182                   Picea mariana
+300              E      21800b                   Pinus strobus
+301              E      ecd464                         Populus
+302              E      3172f7           Populus grandidentata
+303              E      687843             Populus tremuloides
+304              E      8aecca             Prunus pensylvanica
+305              E      8aecca                 Prunus serotina
+306              G      f08fff                        Rosaceae
+307              E      82e78c                   Quercus rubra
+308              G      ae65ed                  Mixed hardwood
+309              G      ae65ed                  Mixed hardwood
+310              G      f08fff                        Rosaceae
+311              E      c078ca              Thuja occidentalis
+312              E      76d19b                 Tilia americana
+313              E      3f99ba                 Tilia americana
+314              E      1d44c6                Tsuga canadensis
+315              E      2473f9                 Ulmus americana
+316              E      b570d4                  Abies amabilis
+317              E      cab5a8                   Abies grandis
+318              E      6b7404                   Abies grandis
+319              E      171b02                   Abies procera
+320              E      23a23d                   Abies procera
+321              E      677eda                   Abies procera
+322              E      51f4e4                           Abies
+323              E      61f888                           Abies
+324              E      2d2a14                           Abies
+325              E      7afe68                           Abies
+326              E      678f25                 Acer circinatum
+327              E      678f25                    Acer glabrum
+328              E      b9ebe4                     Alnus rubra
+329              G      f08fff                        Rosaceae
+330              G      f08fff                       Cornaceae
+331              G      ae65ed                  Mixed hardwood
+332              G      f08fff                       Ericaceae
+333              E      b9b3b0             Holodiscus discolor
+334              E      28dce6                Lonicera ciliosa
+335              G      f08fff                       Ericaceae
+336              G      f08fff                        Rosaceae
+337              G      90c207                           Pinus
+338              E      f94e03           Pseudotsuga menziesii
+339              E      4d8e54           Pseudotsuga menziesii
+340              G      ae65ed                  Mixed hardwood
+341              G      f08fff                       Ericaceae
+342              E      a1646f                            Rosa
+343              E      e7bf91               Rubus leucodermis
+344              E      e7bf91               Rubus spectabilis
+345              G      c8f882                        Taxaceae
+346              E      19bb04                   Thuja plicata
+347              E      dc04c7                   Thuja plicata
+348              E      e3edf1              Tsuga heterophylla
+349              E      12104c          Vaccinium membranaceum
+350              E      12104c           Vaccinium ovalifolium
+351              E      12104c           Vaccinium parvifolium
+352              E      fc521f                   Woody species
+353              E      f49bcb             Acer pseudoplatanus
+354              E      fc521f                   Woody species
+355              E      fc521f                   Woody species
+356              E      fc521f                   Woody species
+357              E      fc521f                   Woody species
+358              E      fc521f                   Woody species
+359              E      fc521f                   Woody species
+360              E      fc521f                   Woody species
+361              E      fc521f                   Woody species
+362              E      fc521f                   Woody species
+363              E      7bb5bd              Fraxinus excelsior
+364              E      fc521f                   Woody species
+365              E      fc521f                   Woody species
+366              E      fc521f                   Woody species
+367              E      fc521f                   Woody species
+368              E      fc521f                   Woody species
+369              E      fc521f                   Woody species
+370              E      fc521f                   Woody species
+371              E      d635f1                   Quercus robur
+372              E      fc521f                   Woody species
+373              E      fc521f                   Woody species
+374              E      fc521f                   Woody species
+375              E      fc521f                   Woody species
+376              E      171b02                  Abies concolor
+377              E      23a23d                  Abies concolor
+378              E      677eda                  Abies concolor
+379              E      7aaa22                  Abies concolor
+380              E      1b9161                  Abies concolor
+381              E      171b02                 Abies magnifica
+382              E      23a23d                 Abies magnifica
+383              E      677eda                 Abies magnifica
+384              E      f2943e                 Abies magnifica
+385              E      51f4e4                           Abies
+386              E      61f888                           Abies
+387              E      2d2a14                           Abies
+388              E      7afe68                           Abies
+389              E      014bb7           Arctostaphylos patula
+390              E      7992d5            Calocedrus decurrens
+391              E      604854            Ceanothus cordulatus
+392              E      a1cfac          Ceanothus integerrimus
+393              E      a1cfac           Ceanothus parvifolius
+394              E      398df4        Chrysolepis sempervirens
+395              G      f08fff                       Cornaceae
+396              E      3b860c                  Cornus sericea
+397              G      ae65ed                  Mixed hardwood
+398              E      b9b3b0             Holodiscus discolor
+399              E      969226              Leucothoe davisiae
+400              E      f94e03               Pinus lambertiana
+401              E      4d8e54               Pinus lambertiana
+402              E      5ea2c1                 Pinus ponderosa
+403              E      0bdd5e                 Pinus ponderosa
+404              G      15b165                           Pinus
+405              E      b9ebe4               Prunus emarginata
+406              G      f08fff                        Rosaceae
+407              G      f08fff                        Rosaceae
+408              E      f94e03           Pseudotsuga menziesii
+409              E      4d8e54           Pseudotsuga menziesii
+410              G      ae65ed                  Mixed hardwood
+411              G      f08fff                       Ericaceae
+412              E      b95baf                           Ribes
+413              E      b95baf                           Ribes
+414              G      829bad                      Salicaceae
+415              G      829bad                      Salicaceae
+416              G      ae65ed                  Mixed hardwood
+417              E      969226            Vaccinium uliginosum
+418              E      e44bb9                      Abies alba
+419              E      7b7468                            Acer
+420              E      7b7468                            Acer
+421              E      7b7468                          Betula
+422              E      7b7468                           Fagus
+423              E      e44bb9                     Picea abies
+424              E      7b7468                         Populus
+425              E      7b7468                           Salix
+426              E      7b7468                        Sambucus
+427              E      7b7468                          Sorbus
+428              E      7b7468                           Ulmus
+429              E      b30744                   Abies bifolia
+430              E      7aaa22                  Abies concolor
+431              G      74dd65                           Abies
+432              G      f08fff                        Rosaceae
+433              E      998abf          Cercocarpus ledifolius
+434              E      c36a5b              Juniperus communis
+435              G      c8f882                    Cupressaceae
+436              E      c36a5b            Juniperus scopulorum
+437              G      c8f882                    Cupressaceae
+438              E      9f4b7d               Picea engelmannii
+439              G      57488c                           Picea
+440              E      4b4063                   Picea pungens
+441              G    8.91E+12                           Picea
+442              E      da0e89                    Pinus edulis
+443              E      48557b                  Pinus flexilis
+444              E      697035                  Pinus flexilis
+445              E      9a977b                  Pinus flexilis
+446              E      a59bd5                  Pinus flexilis
+447              E      ecef00                  Pinus flexilis
+448              E      48557b                  Pinus longaeva
+449              E      697035                  Pinus longaeva
+450              E      9a977b                  Pinus longaeva
+451              E      a59bd5                  Pinus longaeva
+452              E      ecef00                  Pinus longaeva
+453              E      5ea2c1                 Pinus ponderosa
+454              E      0bdd5e                 Pinus ponderosa
+455              G      15b165                           Pinus
+456              E      aeebe9             Populus tremuloides
+457              E      f94e03           Pseudotsuga menziesii
+458              E      b95baf                           Ribes
+459              E      b95baf                           Ribes
+460              G      ae65ed                  Mixed hardwood
+461              E      4d8e54           Pseudotsuga menziesii
+462              E      5e2dea            Viburnum prunifolium
+463              E      5e2dea            Viburnum acerifolium
+464              E      5e2dea         Viburnum rhytidophyllum
+465              G      f08fff                   Aquifoliaceae
+466              E      382ee9                    Betula nigra
+467              E      289f7c               Ostrya virginiana
+468              E      b9d4fc               Ostrya virginiana
+469              G      ae65ed                  Mixed hardwood
+470              G      ae65ed                  Mixed hardwood
+471              G      ae65ed                  Mixed hardwood
+472              E      f3e023                  Cornus florida
+473              E      f3e023                    Cornus kousa
+474              G      c8f882                    Cupressaceae
+475              G      c8f882                    Cupressaceae
+476              G      ae65ed                  Mixed hardwood
+477              G      ae65ed                  Mixed hardwood
+478              G      ae65ed                  Mixed hardwood
+479              G      7f7777                        Fabaceae
+480              E      333c34           Gleditsia triacanthos
+481              E      e9d686           Gleditsia triacanthos
+482              E      333c34            Robinia pseudoacacia
+483              E      e9d686            Robinia pseudoacacia
+484              G      7f7777                        Fabaceae
+485              E      1d7c4c                   Quercus rubra
+486              E      281635               Fagus grandifolia
+487              E      162ce7                Quercus coccinea
+488              E      6943b4                 Quercus falcata
+489              E      524aca              Quercus macrocarpa
+490              E      1d7c4c               Quercus palustris
+491              E      524aca                 Quercus phellos
+492              E      76df22                  Quercus prinus
+493              E      1d7c4c                   Quercus rubra
+494              E      76aa3c            Hamamelis virginiana
+495              G      7f7777                    Juglandaceae
+496              E      9c4cc9                           Carya
+497              E      9c4cc9                           Carya
+498              E      9c4cc9                           Carya
+499              E      9c4cc9                           Carya
+500              E      2c092b               Sassafras albidum
+501              G      f08fff                       Lauraceae
+502              G      ae65ed                  Mixed hardwood
+503              E      c48e81         Liriodendron tulipifera
+504              E      bebe2e                 Tilia americana
+505              E      76d19b                 Tilia americana
+506              G      ae65ed                  Mixed hardwood
+507              G      ae65ed                  Mixed hardwood
+508              G      ae65ed                  Mixed hardwood
+509              E      e8ebc2                 Nyssa sylvatica
+510              E      122ba6              Fraxinus americana
+511              E      122ba6              Fraxinus americana
+512              E      b521bd          Fraxinus pennsylvanica
+513              G      ae65ed                  Mixed hardwood
+514              G      ae65ed                  Mixed hardwood
+515              E      21800b                Pinus thunbergii
+516              E      e2c7c7                     Picea abies
+517              E      0a1212           Platanus occidentalis
+518              G      f08fff                        Rosaceae
+519              G      f08fff                        Rosaceae
+520              G      f08fff                        Rosaceae
+521              E      c59e03                     Amelanchier
+522              E      96c0af                     Amelanchier
+523              E      529234                     Amelanchier
+524              E      8aecca                 Prunus serotina
+525              E      8aecca                    Prunus avium
+526              G      f08fff                        Rosaceae
+527              G      f08fff                        Rosaceae
+528              G      829bad                      Salicaceae
+529              E      ecd464                         Populus
+530              G      d6be5c                     Sapindaceae
+531              G      d6be5c                     Sapindaceae
+532              E      7c72ed                     Acer rubrum
+533              E      77e37e                Acer saccharinum
+534              E      77e37e                  Acer saccharum
+535              G      ae65ed                  Mixed hardwood
+536              E      2473f9                 Ulmus americana
+537              E      2473f9 Ulmus parvifolia x carpinifolia
+538              G      ae65ed                  Mixed hardwood
+539              E      5e2dea               Viburnum dentatum
+540              E      5e2dea             Viburnum acerfolium
+541              G      ae65ed                  Mixed hardwood
+542              G      f08fff                   Aquifoliaceae
+543              G      f08fff                   Aquifoliaceae
+544              G      5caff8                      Betulaceae
+545              E      382ee9           Betula alleghaniensis
+546              E      382ee9                    Betula lenta
+547              E      d3f7ed               Betula papyrifera
+548              E      d3f7ed              Betula populifolia
+549              E      382ee9           Betula alleghaniensis
+550              E      289f7c               Ostrya virginiana
+551              E      b9d4fc               Ostrya virginiana
+552              G      c8f882                    Cupressaceae
+553              G      f08fff                       Ericaceae
+554              G      f08fff                       Ericaceae
+555              G      f08fff                       Ericaceae
+556              G      f08fff                       Ericaceae
+557              G      5edb7f                        Fagaceae
+558              E      281635               Fagus grandifolia
+559              E      1d7c4c                   Quercus rubra
+560              E      1d7c4c                   Quercus rubra
+561              E      4b8afb                Quercus velutina
+562              E      c70dea                Quercus velutina
+563              E      76aa3c            Hamamelis virginiana
+564              G      f08fff                       Lauraceae
+565              E      8c94e8                 Nyssa sylvatica
+566              E      122ba6              Fraxinus americana
+567              E      0edaff                  Fraxinus nigra
+568              E      e2c7c7                     Picea abies
+569              E      e2c7c7                    Picea rubens
+570              E      e2c7c7                     Picea abies
+571              E      21800b                  Pinus resinosa
+572              E      21800b                   Pinus strobus
+573              E      21800b                   Pinus strobus
+574              E      1d44c6                Tsuga canadensis
+575              G      ae65ed                  Mixed hardwood
+576              G      f08fff                        Rosaceae
+577              G      f08fff                        Rosaceae
+578              G      f08fff                        Rosaceae
+579              E      8aecca                 Prunus serotina
+580              G      f08fff                        Rosaceae
+581              E      3172f7           Populus grandidentata
+582              E      3172f7             Populus tremuloides
+583              G      829bad                      Salicaceae
+584              E      7c72ed                     Acer rubrum
+585              E      77e37e                  Acer saccharum
+586              E      2473f9                 Ulmus americana
+587              E      1f17bb                           Alnus
+588              E      a3a86f                          Betula
+589              E      686376              Betula neoalaskana
+590              E      382ee9             Betula occidentalis
+591              E      382ee9                Betula pubescens
+592              E      a3a86f                          Betula
+593              E      726f1d                  Larix laricina
+594              E      a5d599                  Larix laricina
+595              E      ae60e9                    Picea glauca
+596              E      2a6b9b                   Picea mariana
+597              E      b47d78                   Picea mariana
+598              E      7901c0                 Pinus banksiana
+599              E      a5de78                 Pinus banksiana
+600              E      390a5a                           Salix
     allometry_specificity             proxy_species dbh_min_cm dbh_max_cm
 1                 Species                      <NA>       0.21       5.73
 2                 Species                      <NA>       0.19       3.86
@@ -2034,7 +2028,7 @@
 224               Species           Prunus serotina       0.37       6.83
 225               Species                      <NA>       5.08       50.8
 226               Species             Quercus rubra       5.08       50.8
-227               Species                      <NA>       5.08       50.8
+227               Species              Quercus alba       5.08       50.8
 228               Species                      <NA>       5.08       50.8
 229               Species                      <NA>       5.08       50.8
 230               Species                      <NA>       5.08       50.8
@@ -2101,7 +2095,7 @@
 291                Family                      <NA>          3         64
 292                Family                      <NA>          4         42
 293               Species                      <NA>       12.9         30
-294               Species       Lonicera canadensis       0.12       0.69
+294               Species                      <NA>       0.12       0.69
 295                Family                      <NA>          3         64
 296               Species                      <NA>          1          9
 297               Species                      <NA>          1          9
@@ -2345,71 +2339,69 @@
 535        Mixed hardwood                      <NA>        2.5         56
 536               Species                      <NA>        2.5         40
 537               Species           Ulmus americana        2.5         40
-538                  <NA>                      <NA>       <NA>       <NA>
-539        Mixed hardwood                      <NA>        2.5         56
+538        Mixed hardwood                      <NA>        2.5         56
+539               Species     Virburnum lantanoides       0.28       1.59
 540               Species     Virburnum lantanoides       0.28       1.59
-541               Species     Virburnum lantanoides       0.28       1.59
-542        Mixed hardwood                      <NA>        2.5         56
-543                  <NA>                      <NA>       <NA>       <NA>
+541        Mixed hardwood                      <NA>        2.5         56
+542                Family                      <NA>          3         64
+543                Family                      <NA>          3         64
 544                Family                      <NA>          3         64
-545                Family                      <NA>          3         64
-546                Family                      <NA>          3         64
-547               Species                      <NA>        2.5         40
-548               Species     Betula alleghaniensis        2.5         40
-549               Species                      <NA>        3.5       26.3
-550               Species         Betula papyrifera        3.5       26.3
-551               Species     Betula alleghaniensis        2.5         40
-552               Species                      <NA>          1          9
-553               Species                      <NA>          1          9
-554                Family                      <NA>          3        109
+545               Species                      <NA>        2.5         40
+546               Species     Betula alleghaniensis        2.5         40
+547               Species                      <NA>        3.5       26.3
+548               Species         Betula papyrifera        3.5       26.3
+549               Species     Betula alleghaniensis        2.5         40
+550               Species                      <NA>          1          9
+551               Species                      <NA>          1          9
+552                Family                      <NA>          3        109
+553                Family                      <NA>          3         64
+554                Family                      <NA>          3         64
 555                Family                      <NA>          3         64
 556                Family                      <NA>          3         64
-557                Family                      <NA>          3         64
-558                Family                      <NA>          3         64
-559                Family                      <NA>          3         89
-560               Species                      <NA>          1         63
-561               Species                      <NA>        2.5         55
-562               Species             Quercus rubra        2.5         55
-563               Species                      <NA>       0.55       7.76
-564               Species                      <NA>      30.48       88.9
-565               Species                      <NA>       0.18       4.31
-566                Family                      <NA>          3         64
-567               Species                      <NA>       0.24       6.72
-568               Species                      <NA>         25        550
-569               Species                      <NA>          4         32
-570               Species                      <NA>       2.54       25.4
-571               Species               Picea abies       2.54       25.4
-572               Species               Picea abies       2.54       25.4
+557                Family                      <NA>          3         89
+558               Species                      <NA>          1         63
+559               Species                      <NA>        2.5         55
+560               Species             Quercus rubra        2.5         55
+561               Species                      <NA>       0.55       7.76
+562               Species                      <NA>      30.48       88.9
+563               Species                      <NA>       0.18       4.31
+564                Family                      <NA>          3         64
+565               Species                      <NA>       0.24       6.72
+566               Species                      <NA>         25        550
+567               Species                      <NA>          4         32
+568               Species                      <NA>       2.54       25.4
+569               Species               Picea abies       2.54       25.4
+570               Species               Picea abies       2.54       25.4
+571               Species             Pinus strobus          1         55
+572               Species                      <NA>          1         55
 573               Species             Pinus strobus          1         55
-574               Species                      <NA>          1         55
-575               Species             Pinus strobus          1         55
-576               Species                      <NA>        0.1       2.54
-577        Mixed hardwood                      <NA>        2.5         56
+574               Species                      <NA>        0.1       2.54
+575        Mixed hardwood                      <NA>        2.5         56
+576                Family                      <NA>          3         64
+577                Family                      <NA>          3         64
 578                Family                      <NA>          3         64
-579                Family                      <NA>          3         64
+579               Species                      <NA>       0.37       6.83
 580                Family                      <NA>          3         64
-581               Species                      <NA>       0.37       6.83
-582                Family                      <NA>          3         64
-583               Species                      <NA>       0.68       7.49
-584               Species     Populus grandidentata       0.68       7.49
-585                Family                      <NA>          3         70
-586               Species                      <NA>          1         55
-587               Species                      <NA>        7.5       23.7
-588               Species                      <NA>        2.5         40
-589                Family                      <NA>          3         64
-590                  <NA>                      <NA>       <NA>       <NA>
-591               Species                      <NA>        3.7       32.7
-592               Species     Betula alleghaniensis        2.5         40
-593               Species     Betula alleghaniensis        2.5         40
-594                  <NA>                      <NA>       <NA>       <NA>
-595               Species                      <NA>        0.2          2
-596               Species                      <NA>          5         35
+581               Species                      <NA>       0.68       7.49
+582               Species     Populus grandidentata       0.68       7.49
+583                Family                      <NA>          3         70
+584               Species                      <NA>          1         55
+585               Species                      <NA>        7.5       23.7
+586               Species                      <NA>        2.5         40
+587                 Genus                      <NA>       0.64        5.7
+588                 Genus                      <NA>       0.31       1.37
+589               Species                      <NA>        3.7       32.7
+590               Species     Betula alleghaniensis        2.5         40
+591               Species     Betula alleghaniensis        2.5         40
+592                 Genus                      <NA>       0.31       1.37
+593               Species                      <NA>        0.2          2
+594               Species                      <NA>          5         35
+595               Species                      <NA>          5         35
+596               Species                      <NA>        0.5         17
 597               Species                      <NA>          5         35
-598               Species                      <NA>        0.5         17
+598               Species                      <NA>        0.3         17
 599               Species                      <NA>          5         35
-600               Species                      <NA>        0.3         17
-601               Species                      <NA>          5         35
-602               Species                      <NA>        0.3          1
+600                 Genus                      <NA>        0.3          1
                                                               notes_on_species
 1                                                                         <NA>
 2                                                                         <NA>
@@ -3011,8 +3003,6 @@
 598                                                                       <NA>
 599                                                                       <NA>
 600                                                                       <NA>
-601                                                                       <NA>
-602                                                                       <NA>
     wsg_id wsg_specificity
 1     <NA>            <NA>
 2     <NA>            <NA>
@@ -3574,10 +3564,10 @@
 558   <NA>            <NA>
 559   <NA>            <NA>
 560   <NA>            <NA>
-561   <NA>            <NA>
-562   <NA>            <NA>
-563   <NA>         species
-564   <NA>         species
+561   <NA>         species
+562   <NA>         species
+563   <NA>            <NA>
+564   <NA>            <NA>
 565   <NA>            <NA>
 566   <NA>            <NA>
 567   <NA>            <NA>
@@ -3614,5 +3604,3 @@
 598   <NA>            <NA>
 599   <NA>            <NA>
 600   <NA>            <NA>
-601   <NA>            <NA>
-602   <NA>            <NA>

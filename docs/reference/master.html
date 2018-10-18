@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Join the main allodb tables: <code>equations``,</code>sitespecies<code>, and</code>sites_info`. — master • allodb</title>
+<title>Join the main allodb tables: <code>equations``, </code>sitespecies<code>, and </code>sites_info`. — master • allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Join the main allodb tables: <code>equations``,</code>sitespecies<code>, and</code>sites_info`. — master" />
+<meta property="og:title" content="Join the main allodb tables: <code>equations``, </code>sitespecies<code>, and </code>sites_info`. — master" />
 
-<meta property="og:description" content="Join the main allodb tables: equations``,sitespecies, andsites_info`." />
+<meta property="og:description" content="Join the main allodb tables: equations``, sitespecies, and sites_info`." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,34 +103,107 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Join the main allodb tables: <code>equations``,</code>sitespecies<code>, and</code>sites_info`.</h1>
+    <h1>Join the main allodb tables: <code>equations``, </code>sitespecies<code>, and </code>sites_info`.</h1>
     <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/master.R'><code>R/master.R</code></a></small>
     <div class="hidden name"><code>master.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Join the main allodb tables: <code>equations``,</code>sitespecies<code>, and</code>sites_info`.</p>
+    <p>Join the main allodb tables: <code>equations``, </code>sitespecies<code>, and </code>sites_info`.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>master</span>()</pre>
-        
+    <pre class="usage"><span class='fu'>master</span>(<span class='kw'>.f</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='no'><a href='http://dplyr.tidyverse.org/reference/join.html'>full_join</a></span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>.f</th>
+      <td><p>A function, form the <strong>dplyr</strong> package, used to join tables (e.g.
+<code><a href='http://dplyr.tidyverse.org/reference/join.html'>dplyr::full_join()</a></code>).</p></td>
+    </tr>
+    </table>
+    
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A dataframe.</p>
     
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='http://dplyr.tidyverse.org/reference/join.html'>dplyr::full_join()</a></code>.</p></div>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>master</span>()</div><div class='output co'>#&gt; <span class='error'>Error in allodb::equations %&gt;% dplyr::full_join(allodb::sitespecies, by = "equation_id") %&gt;%     dplyr::full_join(allodb::sites_info, by = "site"): could not find function "%&gt;%"</span></div><span class='co'># NOT RUN {</span>
+    <pre class="examples"><div class='input'><span class='co'># Defaults to use `dplyr::full_join()`</span>
+<span class='fu'>master</span>()</div><div class='output co'>#&gt; # A tibble: 663 x 48
+#&gt;    equation_id equation_form equation_allome~ dependent_varia~ independent_var~
+#&gt;    &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt;           
+#&gt;  1 2060ea      10^(a+b*(log~ 10^(1.1891+1.41~ Total abovegrou~ DBH             
+#&gt;  2 2060ea      10^(a+b*(log~ 10^(1.1891+1.41~ Total abovegrou~ DBH             
+#&gt;  3 a4d879      10^(a+b*(log~ 10^(1.2315+1.63~ Total abovegrou~ DBH             
+#&gt;  4 a4d879      10^(a+b*(log~ 10^(1.2315+1.63~ Total abovegrou~ DBH             
+#&gt;  5 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt;  6 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt;  7 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt;  8 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt;  9 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt; 10 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt; # ... with 653 more rows, and 43 more variables: allometry_specificity.x &lt;chr&gt;,
+#&gt; #   geographic_area &lt;chr&gt;, dbh_min_cm.x &lt;chr&gt;, dbh_max_cm.x &lt;chr&gt;,
+#&gt; #   sample_size &lt;chr&gt;, dbh_units_original &lt;chr&gt;, biomass_units_original &lt;chr&gt;,
+#&gt; #   allometry_development_method &lt;chr&gt;, regression_model &lt;chr&gt;,
+#&gt; #   other_equations_tested &lt;chr&gt;, log_biomass &lt;chr&gt;, bias_corrected &lt;chr&gt;,
+#&gt; #   bias_correction_factor &lt;chr&gt;, notes_fitting_model &lt;chr&gt;,
+#&gt; #   original_data_availability &lt;chr&gt;, warning &lt;chr&gt;, ref_id &lt;chr&gt;, site &lt;chr&gt;,
+#&gt; #   family &lt;chr&gt;, species &lt;chr&gt;, species_code &lt;chr&gt;, life_form &lt;chr&gt;,
+#&gt; #   dependent_variable_biomass_component.y &lt;chr&gt;, equation_group &lt;chr&gt;,
+#&gt; #   equation_taxa &lt;chr&gt;, allometry_specificity.y &lt;chr&gt;, proxy_species &lt;chr&gt;,
+#&gt; #   dbh_min_cm.y &lt;chr&gt;, dbh_max_cm.y &lt;chr&gt;, notes_on_species &lt;chr&gt;,
+#&gt; #   wsg_id &lt;chr&gt;, wsg_specificity &lt;chr&gt;, id &lt;chr&gt;, Site &lt;chr&gt;, lat &lt;chr&gt;,
+#&gt; #   long &lt;chr&gt;, UTM_Zone &lt;chr&gt;, UTM_X &lt;chr&gt;, UTM_Y &lt;chr&gt;, intertropical &lt;chr&gt;,
+#&gt; #   size.ha &lt;chr&gt;, E &lt;chr&gt;, wsg.site.name &lt;chr&gt;</div><div class='input'>
+<span class='co'># But you can use other joins</span>
+<span class='fu'>master</span>(<span class='kw'>.f</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='no'><a href='http://dplyr.tidyverse.org/reference/join.html'>left_join</a></span>)</div><div class='output co'>#&gt; # A tibble: 600 x 48
+#&gt;    equation_id equation_form equation_allome~ dependent_varia~ independent_var~
+#&gt;    &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt;           
+#&gt;  1 2060ea      10^(a+b*(log~ 10^(1.1891+1.41~ Total abovegrou~ DBH             
+#&gt;  2 2060ea      10^(a+b*(log~ 10^(1.1891+1.41~ Total abovegrou~ DBH             
+#&gt;  3 a4d879      10^(a+b*(log~ 10^(1.2315+1.63~ Total abovegrou~ DBH             
+#&gt;  4 a4d879      10^(a+b*(log~ 10^(1.2315+1.63~ Total abovegrou~ DBH             
+#&gt;  5 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt;  6 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt;  7 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt;  8 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt;  9 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt; 10 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
+#&gt; # ... with 590 more rows, and 43 more variables: allometry_specificity.x &lt;chr&gt;,
+#&gt; #   geographic_area &lt;chr&gt;, dbh_min_cm.x &lt;chr&gt;, dbh_max_cm.x &lt;chr&gt;,
+#&gt; #   sample_size &lt;chr&gt;, dbh_units_original &lt;chr&gt;, biomass_units_original &lt;chr&gt;,
+#&gt; #   allometry_development_method &lt;chr&gt;, regression_model &lt;chr&gt;,
+#&gt; #   other_equations_tested &lt;chr&gt;, log_biomass &lt;chr&gt;, bias_corrected &lt;chr&gt;,
+#&gt; #   bias_correction_factor &lt;chr&gt;, notes_fitting_model &lt;chr&gt;,
+#&gt; #   original_data_availability &lt;chr&gt;, warning &lt;chr&gt;, ref_id &lt;chr&gt;, site &lt;chr&gt;,
+#&gt; #   family &lt;chr&gt;, species &lt;chr&gt;, species_code &lt;chr&gt;, life_form &lt;chr&gt;,
+#&gt; #   dependent_variable_biomass_component.y &lt;chr&gt;, equation_group &lt;chr&gt;,
+#&gt; #   equation_taxa &lt;chr&gt;, allometry_specificity.y &lt;chr&gt;, proxy_species &lt;chr&gt;,
+#&gt; #   dbh_min_cm.y &lt;chr&gt;, dbh_max_cm.y &lt;chr&gt;, notes_on_species &lt;chr&gt;,
+#&gt; #   wsg_id &lt;chr&gt;, wsg_specificity &lt;chr&gt;, id &lt;chr&gt;, Site &lt;chr&gt;, lat &lt;chr&gt;,
+#&gt; #   long &lt;chr&gt;, UTM_Zone &lt;chr&gt;, UTM_X &lt;chr&gt;, UTM_Y &lt;chr&gt;, intertropical &lt;chr&gt;,
+#&gt; #   size.ha &lt;chr&gt;, E &lt;chr&gt;, wsg.site.name &lt;chr&gt;</div><span class='co'># NOT RUN {</span>
+<span class='co'># Nice view in RStudio</span>
 <span class='fu'>View</span>(<span class='fu'>master</span>())
 <span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
