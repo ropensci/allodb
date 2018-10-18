@@ -1,3 +1,8 @@
+#' TODO
+#'
+"scbi_stem1"
+
+
 #' Tables of allometric equations and associated metadata for ForestGEO sites.
 #'
 #' A dataset of best available allometry equations to calculate AGB per species
