@@ -2,6 +2,8 @@
 
 library(tidyverse)
 
+
+
 strip_odd_chars <- function(x) gsub("[.,\\)\\(]", "", x)
 
 four <- function(x) {
@@ -18,6 +20,8 @@ glue4initials <- function(x){
     four() %>%
     paste0(collapse = "")
 }
+
+
 
 #' Create a citation id.
 #'
@@ -51,12 +55,12 @@ combo <- right_join(
   ) %>%
   unique()
 
-combo %>%
+refid <- combo %>%
   mutate(title4 = map_chr(tolower(ref_title), glue4initials)) %>%
   unite("refid", ref_author, ref_year, title4, remove = FALSE) %>%
   select(-title4) %>%
   select(
     refid, ref_doi, ref_author, ref_year, ref_title, ref_journal, everything()
-  ) %>%
-  write_csv("data-raw/data_references_id.csv")
+  )
 
+refid %>% write_csv("data-raw/data_references_id.csv")
