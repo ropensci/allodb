@@ -536,7 +536,6 @@ UMBC,Sapindaceae,Acer saccharum,NA,Tree,Total aboveground biomass,E,77e37e,Acer 
 UMBC,Simaroubaceae,Ailanthus altissima,NA,Tree,Total aboveground biomass,G,ae65ed,Mixed hardwood,Mixed hardwood,NA,2.5,56,NA,NA,NA
 UMBC,Ulmaceae,Ulmus americana,NA,Tree,Whole tree (above stump),E,2473f9,Ulmus americana,Species,NA,2.5,40,NA,NA,NA
 UMBC,Ulmaceae,Ulmus parvifolia x carpinifolia,NA,Tree,Whole tree (above stump),E,2473f9,Ulmus parvifolia x carpinifolia,Species,Ulmus americana,2.5,40,NA,NA,NA
-UMBC,Vitaceae,Vitis riparia,NA,"Vine, to delete",NA,NA,,,NA,NA,NA,NA,NA,NA,NA
 Harvard Forest,Adoxaceae,Sambucus racemosa,NA,Shrub,Total aboveground biomass,G,ae65ed,Mixed hardwood,Mixed hardwood,NA,2.5,56,NA,NA,NA
 Harvard Forest,Adoxaceae,Viburnum dentatum,NA,Shrub,Total aboveground biomass,E,5e2dea,Viburnum dentatum,Species,Virburnum lantanoides,0.28,1.59,NA,NA,NA
 Harvard Forest,Adoxaceae,Viburnum acerfolium,NA,Shrub,Total aboveground biomass,E,5e2dea,Viburnum acerfolium,Species,Virburnum lantanoides,0.28,1.59,NA,NA,NA
