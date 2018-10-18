@@ -153,7 +153,7 @@ da0e89,a+b*(log10(DBH)),1.468+2.582*(log10((DBH-10.603)/0.9823)),Total abovegrou
 697035,10^(a+b*(log10(DBH))),10^(-1.234+2.128*(log10(dbh))),Stem bark biomass,DBH,Species,"New Mexico, USA",2.7,27.5,10,cm,kg,harvest,NA,NA,NA,1,0.004,NA,NA,NA,NA
 9a977b,10^(a+b*(log10(DBH))),10^(-2.336+2.650*(log10(dbh))),"Branches (live, dead)",DBH,Species,"New Mexico, USA",2.7,27.5,14,cm,kg,harvest,NA,NA,NA,1,0.088,NA,NA,NA,NA
 a59bd5,10^(a+b*(log10(DBH))),10^(-2.347+2.478*(log10(dbh))),Total foliage,DBH,Species,"New Mexico, USA",2.7,27.5,14,cm,kg,harvest,NA,NA,NA,1,1.053,NA,NA,NA,NA
-ecef00,exp(a+b*ln(DBH)),exp(-0.86896+1.652882*ln(DBH)),Total aboveground biomass,DBH,Species,"Nevada, USA",3,112,105,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
+ecef00,exp(a+b*ln(DBH)),exp(-0.86896+1.652882*log(DBH)),Total aboveground biomass,DBH,Species,"Nevada, USA",3,112,105,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA,NA
 aeebe9,a*(DBA^b),0.1231*(dba^2.242),Total aboveground biomass,DBH,Species,"Utah, USA",3,36,20,cm,kg,harvest,NA,NA,NA,1,1.046,NA,NA,NA,NA
 e2c7c7,10^(a+b*(log10(DBH))),10^(0.15+2.48*(log10(DBH))),Total aboveground biomass,DBH,Species,"New Brunswick, Canada",2.54,25.4,13,in,lb,harvest,NA,NA,NA,0,0,NA,NA,NA,NA
 686376,a+(b*DBH)+c*(DBH^2),(-16809)+(2656.48*DBH)+248.416*(DBH^2),Total aboveground biomass,DBH,Species,"Alaska, USA",3.7,32.7,37,cm,kg,harvest,NA,NA,NA,NA,NA,NA,NA,NA,NA
