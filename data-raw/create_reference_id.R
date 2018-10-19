@@ -31,7 +31,7 @@ glue4initials <- function(x){
 # From commit SHA t f8962bc
 master <- readr::read_csv("data-raw/allodb_master.csv")
 author_year <- master %>%
-  select(biomass_equation_source) %>%
+  select(biomass_equation_source, equation_allometry) %>%
   mutate(
     ref_author = strip_odd_chars(tolower(
       map_chr(strsplit(master$biomass_equation_source, split = " "), first)
@@ -63,4 +63,11 @@ refid <- combo %>%
     refid, ref_doi, ref_author, ref_year, ref_title, ref_journal, everything()
   )
 
-refid %>% write_csv("data-raw/data_references_id.csv")
+equations <- readr::read_csv(here::here("data-raw/csv_database/equations.csv"))
+
+refid %>%
+  select(refid, equation_allometry) %>%
+  right_join(equations) %>%
+  select(refid, ref_id, everything()) %>%
+  unique() %>%
+  readr::write_csv(here::here("data-raw/csv_database/equations_refid.csv"))
