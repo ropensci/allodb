@@ -1,5 +1,6 @@
-#' TODO
-#'
+#' SCBI plot stem data (census 1)
+
+#'Dataset of stem data for census 1 at SCBI. Data is also public in Bourg et al. 2013.
 "scbi_stem1"
 
 
@@ -9,13 +10,15 @@
 #'  per species at ForestGEO sites:
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Metadata for `equations` table.
-"equations"
+"equations":
 
 #' @rdname equations
 "equations_metadata"
 
-
-
+#'@format A data frame with 168 rows and 22 variables:
+#'
+#' Darn I don't know how to make a table like in dataset::airquality!
+#'
 #' Table of metadata associated to the table `missing_values`.
 #'
 #'  Example of alternative format for meta-data documentation:
@@ -29,10 +32,10 @@
 
 
 
-#' Tables of sites and species and associated metadata.
+#' Tables of ForestGEO sites and tree species and associated metadata.
 #'
-#' * `sitespecies`: Table of sites and species.
-#' * `sitespecies_metadata`: Table of metadata of `sitespecies`.
+#' * `sitespecies`: Table of ForestGEO sites and tree species.
+#' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
 "sitespecies"
 
