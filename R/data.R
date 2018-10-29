@@ -11,7 +11,7 @@
 #'  per species at ForestGEO sites:
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Metadata for `equations` table.
-"equations":
+"equations"
 
 #' @rdname equations
 "equations_metadata"
