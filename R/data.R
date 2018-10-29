@@ -5,8 +5,8 @@
 
 #' Tables of allometric equations and associated metadata for ForestGEO sites.
 #'
-#' A dataset of best available allometry equations to calculate AGB per species
-#' per ForestGEO site:
+#' A dataset of best available allometry equations to calculate aboveground biomass AGB per species
+#' at ForestGEO sites:
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Table of metadata of `equations`.
 "equations"
