@@ -4,7 +4,7 @@
 \name{scbi_stem1}
 \alias{scbi_stem1}
 \title{TODO}
-\format{An object of class \code{data.frame} with 55295 rows and 20 columns.}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 55295 rows and 20 columns.}
 \usage{
 scbi_stem1
 }

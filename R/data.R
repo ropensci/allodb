@@ -2,13 +2,23 @@
 #'
 "scbi_stem1"
 
-
 #' Tables of allometric equations and associated metadata for ForestGEO sites.
 #'
 #' A dataset of best available allometry equations to calculate AGB per species
 #' per ForestGEO site:
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Table of metadata of `equations`.
+#'
+#' @format
+#' A data frame with 154 observations on 6 variables.
+#' ```
+#' [,1]	Ozone	 numeric	 Ozone (ppb)
+#' [,2]	Solar.R	 numeric	 Solar R (lang)
+#' [,3]	Wind	 numeric	 Wind (mph)
+#' [,4]	Temp	 numeric	 Temperature (degrees F)
+#' [,5]	Month	 numeric	 Month (1--12)
+#' [,6]	Day	 numeric	 Day of month (1--31)
+#' ```
 "equations"
 
 #' @rdname equations

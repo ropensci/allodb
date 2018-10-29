@@ -5,7 +5,13 @@
 \alias{equations}
 \alias{equations_metadata}
 \title{Tables of allometric equations and associated metadata for ForestGEO sites.}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 168 rows and 22 columns.}
+\format{A data frame with 154 observations on 6 variables.\preformatted{[,1]	Ozone	 numeric	 Ozone (ppb)
+[,2]	Solar.R	 numeric	 Solar R (lang)
+[,3]	Wind	 numeric	 Wind (mph)
+[,4]	Temp	 numeric	 Temperature (degrees F)
+[,5]	Month	 numeric	 Month (1--12)
+[,6]	Day	 numeric	 Day of month (1--31)
+}}
 \usage{
 equations
 
