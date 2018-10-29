@@ -1,6 +1,7 @@
 #' SCBI plot stem data (census 1)
 #'
 #'Dataset of stem data for census 1 at SCBI. Data is also public in Bourg et al. 2013.
+#'
 "scbi_stem1":
 
 
@@ -18,7 +19,8 @@
 #' A data frame with 168 rows and 22 variables:
 #'
 #' Darn I don't know how to make a table like in dataset::airquality!
-#'
+
+
 #' Table of metadata associated to the table `missing_values`.
 #'
 #'  Example of alternative format for meta-data documentation:
