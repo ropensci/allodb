@@ -3,12 +3,16 @@
 \docType{data}
 \name{missing_values_metadata}
 \alias{missing_values_metadata}
-\title{Table of metadata associated to the table \code{missing_values}.}
+\title{A data frame with 168 rows and 22 variables:}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4 rows and 3 columns.}
 \usage{
 missing_values_metadata
 }
 \description{
+Darn I don't know how to make a table like in dataset::airquality!
+Table of metadata associated to the table \code{missing_values}.
+}
+\details{
 Example of alternative format for meta-data documentation:
 \itemize{
 \item NA: Not Applicable; Data does not apply to that particular case

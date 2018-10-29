@@ -16,10 +16,13 @@
 #' @rdname equations
 "equations_metadata"
 
-#' A data frame with 168 rows and 22 variables:
+#' @format A data frame with 168 rows and 22 variables:
+#' \describe{
+#'   \item{equation_id}{Unique equation identification number given arbitrarely.}
+#'   \item{equation_form}{Darn I don't know how to make a table like in dataset::airquality!}
+#'   ...
+#' }
 #'
-#' Darn I don't know how to make a table like in dataset::airquality!
-
 
 #' Table of metadata associated to the table `missing_values`.
 #'
