@@ -15,7 +15,7 @@
 #' @rdname equations
 "equations_metadata"
 
-#'@format A data frame with 168 rows and 22 variables:
+#' A data frame with 168 rows and 22 variables:
 #'
 #' Darn I don't know how to make a table like in dataset::airquality!
 #'
