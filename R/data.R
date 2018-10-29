@@ -4,19 +4,12 @@
 #'
 "scbi_stem1"
 
-<<<<<<< HEAD
 
-#' Table of allometric equations and associated metadata for ForestGEO sites.
-=======
 #' Tables of allometric equations and associated metadata for ForestGEO sites.
->>>>>>> dev
 #'
 #' A compilation of best available allometry equations to calculate tree above-ground biomass (AGB)
 #'  per species at ForestGEO sites:
 #' * `equations`: Table of allometric equations.
-<<<<<<< HEAD
-#' * `equations_metadata`: Metadata for `equations` table.
-=======
 #' * `equations_metadata`: Table of metadata of `equations`.
 #'
 #' @format
@@ -29,7 +22,6 @@
 #' [,5]	Month	 numeric	 Month (1--12)
 #' [,6]	Day	 numeric	 Day of month (1--31)
 #' ```
->>>>>>> dev
 "equations"
 
 #' @rdname equations
