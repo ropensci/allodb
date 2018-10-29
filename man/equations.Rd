@@ -4,7 +4,7 @@
 \name{equations}
 \alias{equations}
 \alias{equations_metadata}
-\title{Tables of allometric equations and associated metadata for ForestGEO sites.}
+\title{Table of allometric equations and associated metadata for ForestGEO sites.}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 168 rows and 22 columns.}
 \usage{
 equations
@@ -12,11 +12,11 @@ equations
 equations_metadata
 }
 \description{
-A dataset of best available allometry equations to calculate AGB per species
-per ForestGEO site:
+A compilation of best available allometry equations to calculate tree above-ground biomass (AGB)
+per species at ForestGEO sites:
 \itemize{
 \item \code{equations}: Table of allometric equations.
-\item \code{equations_metadata}: Table of metadata of \code{equations}.
+\item \code{equations_metadata}: Metadata for \code{equations} table.
 }
 }
 \keyword{datasets}
