@@ -2,7 +2,7 @@
 #'
 #'Dataset of stem data for census 1 at SCBI. Data is also public in Bourg et al. 2013.
 #'
-"scbi_stem1":
+"scbi_stem1"
 
 
 #' Table of allometric equations and associated metadata for ForestGEO sites.
