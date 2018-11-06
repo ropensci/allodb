@@ -36,12 +36,15 @@ navbar:
 
 reference:
 
-  - title: Datasets
+  - title: Database datasets
     contents:
-      - matches("[^type_allodb_master]")
+      - has_concept("database datasets")
 
   - title: Functions
     contents:
       - type_allodb_master
 
+  - title: Census datasets
+    contents:
+      - has_concept("census datasets")
 

@@ -1,9 +1,4 @@
-#' SCBI plot stem data (census 1)
-#'
-#'Dataset of stem data for census 1 at SCBI. Data is also public in Bourg et al. 2013.
-#'
-"scbi_stem1"
-
+# Database data -------------------------------------------------------------
 
 #' Tables of allometric equations and associated metadata for ForestGEO sites.
 #'
@@ -77,3 +72,40 @@
 #' @source Ervan Rutishauser (er.rutishauser@@gmail.com), received on Sat,
 #' Oct 28, 2017 at 4:05 AM.
 "sites_info"
+
+
+
+# Census data -------------------------------------------------------------
+
+#' Data from SCBI.
+#'
+#' @name scbi
+#'
+#' @source http://bit.ly/scbi-forestgeo-data
+#' @format Objects of class tbl_df (inherit from tbl, data.frame). See structure
+#'   in __Examples__.
+#'
+#' @family census datasets
+#'
+#' @examples
+#' dim(scbi_tree1)
+#' dim(scbi_tree2)
+#' str(scbi_tree2)
+#'
+#' dim(scbi_stem1)
+#' dim(scbi_stem2)
+#' str(scbi_stem2)
+#'
+#' str(scbi_species)
+NULL
+
+#' @rdname scbi
+"scbi_tree1"
+#' @rdname scbi
+"scbi_tree2"
+#' @rdname scbi
+"scbi_species"
+#' @rdname scbi
+"scbi_stem1"
+#' @rdname scbi
+"scbi_stem2"
