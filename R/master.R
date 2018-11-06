@@ -20,7 +20,9 @@
 #' View(master())
 #' }
 master <- function(.f = dplyr::full_join) {
-  eqn_site <- .f(allodb::equations, allodb::sitespecies, by = "equation_id")
-  .f(eqn_site, allodb::sites_info, by = "site")
+  suppressMessages({
+    eqn_site <- .f(allodb::equations, allodb::sitespecies)
+    .f(eqn_site, allodb::sites_info, by = "site")
+  })
 }
 
