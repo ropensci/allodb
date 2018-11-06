@@ -26,11 +26,13 @@ Depends:
     R (>= 3.1)
 Imports: 
     dplyr,
-    readr
+    readr,
+    utils,
+    rlang,
+    glue
 Suggests: 
     covr,
     fs,
-    glue,
     here,
     knitr (>= 1.17),
     purrr,

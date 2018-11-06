@@ -32,6 +32,7 @@ types of data, such as integers.
 }
 \examples{
 as_allodb(allodb::equations)
+class(as_allodb(allodb::equations))
 }
 \seealso{
 Other functions to interact with the database: \code{\link{master}}

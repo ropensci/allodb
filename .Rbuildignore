@@ -1,3 +1,4 @@
+^ship\.sh$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$

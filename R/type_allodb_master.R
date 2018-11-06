@@ -23,6 +23,7 @@
 #'
 #' @examples
 #' as_allodb(allodb::equations)
+#' class(as_allodb(allodb::equations))
 as_allodb <- function(x) {
   allodb_na <- unique(allodb::missing_values_metadata$Code)
   expected_na <- c("", "NA", allodb_na[!is.na(allodb_na)])
