@@ -114,7 +114,7 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-datasets" class="hasAnchor"><a href="#section-datasets" class="anchor"></a>Datasets</h2>
+          <h2 id="section-database-datasets" class="hasAnchor"><a href="#section-database-datasets" class="anchor"></a>Database datasets</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
@@ -130,12 +130,6 @@
           <p><code><a href="references_metadata.html">references_metadata</a></code> </p>
         </td>
         <td><p>Table of metadata associated to the table <code>references</code>.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scbi.html">scbi</a></code> </p>
-        </td>
-        <td><p>Data from SCBI.</p></td>
       </tr><tr>
         
         <td>
@@ -158,16 +152,36 @@
     </tbody><tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-functions" class="hasAnchor"><a href="#section-functions" class="anchor"></a>Functions</h2>
+          <h2 id="section-functions-to-interact-with-the-database" class="hasAnchor"><a href="#section-functions-to-interact-with-the-database" class="anchor"></a>Functions to interact with the database</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
       <tr>
         
         <td>
-          <p><code><a href="type_allodb_master.html">type_allodb_master()</a></code> </p>
+          <p><code><a href="as_allodb.html">as_allodb()</a></code> </p>
         </td>
-        <td><p>Help read allodb data safely.</p></td>
+        <td><p>Create objects of class allodb.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="master.html">master()</a></code> </p>
+        </td>
+        <td><p>Join the main allodb tables: <code>equations``, </code>sitespecies<code>, and </code>sites_info`.</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-census-datasets" class="hasAnchor"><a href="#section-census-datasets" class="anchor"></a>Census datasets</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="scbi.html">scbi_tree1</a></code> <code><a href="scbi.html">scbi_tree2</a></code> <code><a href="scbi.html">scbi_species</a></code> <code><a href="scbi.html">scbi_stem1</a></code> <code><a href="scbi.html">scbi_stem2</a></code> </p>
+        </td>
+        <td><p>Data from SCBI.</p></td>
       </tr>
     </tbody>
     </table>
@@ -176,8 +190,9 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-datasets">Datasets</a></li>
-      <li><a href="#section-functions">Functions</a></li>
+      <li><a href="#section-database-datasets">Database datasets</a></li>
+      <li><a href="#section-functions-to-interact-with-the-database">Functions to interact with the database</a></li>
+      <li><a href="#section-census-datasets">Census datasets</a></li>
     </ul>
   </div>
 </div>

@@ -16,6 +16,8 @@
 #'
 #' @param x A dataframe from __allodb__.
 #'
+#' @family functions to interact with the database
+#'
 #' @return A dataframe subclass "allodb".
 #' @export
 #'

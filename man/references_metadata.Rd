@@ -11,4 +11,10 @@ references_metadata
 \description{
 Table of metadata associated to the table \code{references}.
 }
+\seealso{
+Other database datasets: \code{\link{equations}},
+  \code{\link{sites_info}}, \code{\link{sitespecies}},
+  \code{\link{wsg}}
+}
+\concept{database datasets}
 \keyword{datasets}

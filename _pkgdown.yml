@@ -40,9 +40,9 @@ reference:
     contents:
       - has_concept("database datasets")
 
-  - title: Functions
+  - title: Functions to interact with the database
     contents:
-      - type_allodb_master
+      - has_concept("functions to interact with the database")
 
   - title: Census datasets
     contents:

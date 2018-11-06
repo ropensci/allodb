@@ -17,4 +17,10 @@ wsg_metadata
 \item \code{wsg_metadata}: Table of metadata of \code{wsg}.
 }
 }
+\seealso{
+Other database datasets: \code{\link{equations}},
+  \code{\link{references_metadata}},
+  \code{\link{sites_info}}, \code{\link{sitespecies}}
+}
+\concept{database datasets}
 \keyword{datasets}

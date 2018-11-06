@@ -15,4 +15,10 @@ sites_info
 \description{
 Table of information on sites from tropical forests.
 }
+\seealso{
+Other database datasets: \code{\link{equations}},
+  \code{\link{references_metadata}},
+  \code{\link{sitespecies}}, \code{\link{wsg}}
+}
+\concept{database datasets}
 \keyword{datasets}

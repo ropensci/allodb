@@ -18,11 +18,17 @@ equations
 equations_metadata
 }
 \description{
-A dataset of best available allometry equations to calculate AGB per species
-per ForestGEO site:
+A compilation of best available allometry equations to calculate tree
+above-ground biomass (AGB) per species at ForestGEO sites:
 \itemize{
 \item \code{equations}: Table of allometric equations.
 \item \code{equations_metadata}: Table of metadata of \code{equations}.
 }
 }
+\seealso{
+Other database datasets: \code{\link{references_metadata}},
+  \code{\link{sites_info}}, \code{\link{sitespecies}},
+  \code{\link{wsg}}
+}
+\concept{database datasets}
 \keyword{datasets}

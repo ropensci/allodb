@@ -2,8 +2,8 @@
 
 #' Tables of allometric equations and associated metadata for ForestGEO sites.
 #'
-#' A compilation of best available allometry equations to calculate tree above-ground biomass (AGB)
-#'  per species at ForestGEO sites:
+#' A compilation of best available allometry equations to calculate tree
+#' above-ground biomass (AGB) per species at ForestGEO sites:
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Table of metadata of `equations`.
 #'
@@ -17,6 +17,7 @@
 #' [,5]	Month	 numeric	 Month (1--12)
 #' [,6]	Day	 numeric	 Day of month (1--31)
 #' ```
+#' @family database datasets
 "equations"
 
 #' @rdname equations
@@ -35,10 +36,12 @@
 #'  Example of alternative format for meta-data documentation:
 #' * NA: Not Applicable; Data does not apply to that particular case
 #'
+#' @family database datasets
 "missing_values_metadata"
 
 #' Table of metadata associated to the table `references`.
 #'
+#' @family database datasets
 "references_metadata"
 
 
@@ -48,6 +51,7 @@
 #' * `sitespecies`: Table of ForestGEO sites and tree species.
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
+#' @family database datasets
 "sitespecies"
 
 #' @name sitespecies
@@ -60,6 +64,7 @@
 #' * `wsg`: Table of allometric equations.
 #' * `wsg_metadata`: Table of metadata of `wsg`.
 #'
+#' @family database datasets
 "wsg"
 
 #' @name wsg
@@ -71,6 +76,8 @@
 #'
 #' @source Ervan Rutishauser (er.rutishauser@@gmail.com), received on Sat,
 #' Oct 28, 2017 at 4:05 AM.
+#'
+#' @family database datasets
 "sites_info"
 
 

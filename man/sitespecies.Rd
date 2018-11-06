@@ -4,7 +4,7 @@
 \name{sitespecies}
 \alias{sitespecies}
 \alias{sitespecies_metadata}
-\title{Tables of sites and species and associated metadata.}
+\title{Tables of ForestGEO sites and tree species and associated metadata.}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 600 rows and 16 columns.}
 \usage{
 sitespecies
@@ -13,8 +13,14 @@ sitespecies_metadata
 }
 \description{
 \itemize{
-\item \code{sitespecies}: Table of sites and species.
-\item \code{sitespecies_metadata}: Table of metadata of \code{sitespecies}.
+\item \code{sitespecies}: Table of ForestGEO sites and tree species.
+\item \code{sitespecies_metadata}: Metadata for \code{sitespecies} table.
 }
 }
+\seealso{
+Other database datasets: \code{\link{equations}},
+  \code{\link{references_metadata}},
+  \code{\link{sites_info}}, \code{\link{wsg}}
+}
+\concept{database datasets}
 \keyword{datasets}
