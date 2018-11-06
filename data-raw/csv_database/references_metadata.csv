@@ -1,7 +1,8 @@
-Column,Field,Description,Colum_type,Notes to be deleted later
-1 / A,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric,NA
-2 / B,ref_author,Last name of first author of a cited publication,character (string),NA
-3 / C,ref_year,Year of publication,numeric,NA
-4 / D,ref_title,Title of publication,character (string),NA
-5 / E,ref_journal,"Journal, book, report where published",character (string),EG: Keep this for now 02/14/2018
-6 / F,ref_doi,Publication DOI (Digital object identifier),character (string),NA
+Column,Field,Description,Colum_type
+1 / A,ref_id,Unique reference identification number to our data source. Links to multiple tables.,numeric
+2 / B,ref_doi,Publication DOI (Digital object identifier),character (string)
+3 / C,ref_author,Last name of first author of a cited publication,character (string)
+4 / D,ref_year,Year of publication,numeric
+5 / E,ref_title,Title of publication,character (string)
+6 / F,ref_journal,"Journal, book, report where published",character (string)
+7 / G,References full citation,Full citation (kept for easy use),character (string)
