@@ -8,9 +8,11 @@ eval_eqn <- function(text, envir) {
 }
 
 eqn <- allodb::equations$equation_allometry
-contents <- eqn %>%
-  map(safely(eval_eqn)) %>%
-  transpose()
+contents <- suppressWarnings({
+  eqn %>%
+    map(safely(eval_eqn)) %>%
+    transpose()
+})
 
 bad_eqn <- !map_lgl(contents$error, is.null)
 bad_eqn_id <- allodb::equations %>%
@@ -27,7 +29,9 @@ test_that("bad equations haven't changed", {
 
 test_that("all except known bad equations can be evaluated", {
   good_equations <- eqn[!bad_eqn]
-  expect_error(out <- map_dbl(good_equations, eval_eqn), NA)
+  suppressWarnings(
+    expect_error(out <- map_dbl(good_equations, eval_eqn), NA)
+  )
   expect_is(out, "numeric")
 })
 

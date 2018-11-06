@@ -1,21 +1,24 @@
-  Column       Field
-1  1 / A      ref_id
-2  2 / B  ref_author
-3  3 / C    ref_year
-4  4 / D   ref_title
-5  5 / E ref_journal
-6  6 / F     ref_doi
+  Column                    Field
+1  1 / A                   ref_id
+2  2 / B                  ref_doi
+3  3 / C               ref_author
+4  4 / D                 ref_year
+5  5 / E                ref_title
+6  6 / F              ref_journal
+7  7 / G References full citation
                                                                            Description
 1 Unique reference identification number to our data source. Links to multiple tables.
-2                                     Last name of first author of a cited publication
-3                                                                  Year of publication
-4                                                                 Title of publication
-5                                                Journal, book, report where published
-6                                          Publication DOI (Digital object identifier)
-          Colum_type        Notes to be deleted later
-1            numeric                             <NA>
-2 character (string)                             <NA>
-3            numeric                             <NA>
-4 character (string)                             <NA>
-5 character (string) EG: Keep this for now 02/14/2018
-6 character (string)                             <NA>
+2                                          Publication DOI (Digital object identifier)
+3                                     Last name of first author of a cited publication
+4                                                                  Year of publication
+5                                                                 Title of publication
+6                                                Journal, book, report where published
+7                                                    Full citation (kept for easy use)
+          Colum_type
+1            numeric
+2 character (string)
+3 character (string)
+4            numeric
+5 character (string)
+6 character (string)
+7 character (string)

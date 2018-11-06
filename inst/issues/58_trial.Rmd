@@ -22,16 +22,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-Packages.
-
 ```{r packages, message=FALSE}
 library(tidyverse)
-library(here)
 library(bmss)
 library(allodb)
 ```
 
-Helpers.
+Maybe add some of these helpers to __allodb__, __bmss__, or elsewhere.
 
 ```{r helpers}
 # List all datasets of a package.
@@ -73,37 +70,28 @@ All datasets.
 datasets("allodb")
 ```
 
-The core table of __allodb__ is `equaitons`.
+The core table of __allodb__ is `equations`.
 
 ```{r}
 glimpse(equations)
 ```
 
-Some equaitons need to be fixed. Here we'll use the good ones.
+Some equations need to be fixed. Here we'll use the good ones.
 
 ```{r}
-good_equations <- drop_bad_equations(equations)
-
-# Compare
-list(good_equations, equations) %>% 
-  map_dbl(nrow) %>% 
-  set_names(c("n_good", "n_all"))
+drop_bad_equations(equations)
 ```
 
 `master()` combines multiple database tables. Glimpse excluding problematic equations.
 
 ```{r}
-master() %>% 
-  drop_bad_equations() %>% 
-  glimpse()
+drop_bad_equations(master())
 ```
 
 ### Census data
 
-Census.
-
 ```{r}
-glimpse(scbi_tree1)
+scbi_tree1
 ```
 
 This dataset is not structured exactly as a reference dataset from Luquillo but the difference is irrelevant to calculating biomass. The column `agb` is not useful and `DBHID` is equivalent to `MeasureID`.
@@ -129,22 +117,21 @@ scbi <- scbi_tree1 %>%
 scbi %>% select(site, species, everything())
 ```
 
-FIXME: Modify `get_allometry()`:
+* FIXME: Update `bmss::get_allometry()` to no longer default to use the dummy dataset build in __bmss__ but `allodb::equation` (or `allodb::master()` or similar).
 
-* Use `master()` by default.
-* Rename as needed:
-    * `eqn` = `equation_allometry`, 
-    * `eqn_source` = `eqn_source` 
-    * `eqn_type` = `allometry_specificity`
+* FIXME: Rename as needed internals to work with new names (`old` = `new`):
+   * `eqn` = `equation_allometry`.
+   * `eqn_source` = `eqn_source`.
+   * `eqn_type` = `allometry_specificity`.
 
 ```{r}
+# FIXME
 get_allometry(scbi, "site", "species", "dbh")
 ```
 
-Run with a general category. Then update __bmss__ to deal with all other categories.
+* FIXME: Update __bmss__ to work with one category, say, "Family", or "Species". Then further update to deal with all other categories.
 
 ```{r}
 master()$allometry_specificity %>% unique()
 ```
-
 

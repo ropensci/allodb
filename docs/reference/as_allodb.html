@@ -156,26 +156,26 @@ types of data, such as integers.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>as_allodb</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/equations'>equations</a></span>)</div><div class='output co'>#&gt; # A tibble: 168 x 22
-#&gt;    equation_id equation_form equation_allome~ dependent_varia~ independent_var~
-#&gt;  * &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;            &lt;chr&gt;            &lt;chr&gt;           
-#&gt;  1 2060ea      10^(a+b*(log~ 10^(1.1891+1.41~ Total abovegrou~ DBH             
-#&gt;  2 a4d879      10^(a+b*(log~ 10^(1.2315+1.63~ Total abovegrou~ DBH             
-#&gt;  3 c59e03      exp(a+b*ln(D~ exp(7.217+1.514~ Stem biomass (w~ DBH             
-#&gt;  4 96c0af      10^(a+b*(log~ 10^(2.5368+1.31~ Branches (live,~ DBH             
-#&gt;  5 529234      10^(a+b*(log~ 10^(2.0865+0.94~ Foliage total    DBH             
-#&gt;  6 ae65ed      exp(a+b*ln(D~ exp(-2.48+2.483~ Total abovegrou~ DBH             
-#&gt;  7 9c4cc9      10^(a+b*(log~ 10^(-1.326+2.76~ Total abovegrou~ DBH             
-#&gt;  8 7913b8      a*(DBH^b)     2.034*(dbh^2.63~ Stem and branch~ DBH             
-#&gt;  9 7f7777      exp(a+b*ln(D~ exp(-2.5095+2.5~ Total abovegrou~ DBH             
-#&gt; 10 cf733d      exp(a+b*DBH+~ exp(5.67+1.97*d~ Total abovegrou~ DBH             
-#&gt; # ... with 158 more rows, and 17 more variables: allometry_specificity &lt;chr&gt;,
-#&gt; #   geographic_area &lt;chr&gt;, dbh_min_cm &lt;dbl&gt;, dbh_max_cm &lt;dbl&gt;,
-#&gt; #   sample_size &lt;int&gt;, dbh_units_original &lt;chr&gt;, biomass_units_original &lt;chr&gt;,
-#&gt; #   allometry_development_method &lt;chr&gt;, regression_model &lt;chr&gt;,
-#&gt; #   other_equations_tested &lt;chr&gt;, log_biomass &lt;chr&gt;, bias_corrected &lt;chr&gt;,
-#&gt; #   bias_correction_factor &lt;chr&gt;, notes_fitting_model &lt;chr&gt;,
-#&gt; #   original_data_availability &lt;chr&gt;, warning &lt;chr&gt;, ref_id &lt;chr&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>as_allodb</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/equations'>equations</a></span>)</div><div class='output co'>#&gt; # A tibble: 175 x 22
+#&gt;    ref_id equation_allome~ equation_id equation_form dependent_varia~
+#&gt;  * &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;           
+#&gt;  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
+#&gt;  2 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
+#&gt;  3 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
+#&gt;  4 jenki~ 10^(2.5368+1.31~ 96c0af      10^(a+b*(log~ Branches (live,~
+#&gt;  5 jenki~ 10^(2.0865+0.94~ 529234      10^(a+b*(log~ Foliage total   
+#&gt;  6 jenki~ exp(-2.48+2.483~ ae65ed      exp(a+b*ln(D~ Total abovegrou~
+#&gt;  7 marti~ 10^(-1.326+2.76~ 9c4cc9      10^(a+b*(log~ Total abovegrou~
+#&gt;  8 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
+#&gt;  9 chojn~ exp(-2.5095+2.5~ 7f7777      exp(a+b*ln(D~ Total abovegrou~
+#&gt; 10 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~
+#&gt; # ... with 165 more rows, and 17 more variables: independent_variable &lt;chr&gt;,
+#&gt; #   allometry_specificity &lt;chr&gt;, geographic_area &lt;chr&gt;, dbh_min_cm &lt;dbl&gt;,
+#&gt; #   dbh_max_cm &lt;dbl&gt;, sample_size &lt;int&gt;, dbh_units_original &lt;chr&gt;,
+#&gt; #   biomass_units_original &lt;chr&gt;, allometry_development_method &lt;chr&gt;,
+#&gt; #   regression_model &lt;chr&gt;, other_equations_tested &lt;chr&gt;, log_biomass &lt;chr&gt;,
+#&gt; #   bias_corrected &lt;chr&gt;, bias_correction_factor &lt;chr&gt;,
+#&gt; #   notes_fitting_model &lt;chr&gt;, original_data_availability &lt;chr&gt;, warning &lt;chr&gt;</div><div class='input'><span class='fu'>class</span>(<span class='fu'>as_allodb</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/equations'>equations</a></span>))</div><div class='output co'>#&gt; [1] "allodb"     "tbl_df"     "tbl"        "data.frame"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

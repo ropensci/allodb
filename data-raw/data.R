@@ -13,12 +13,15 @@ db_ls <- dir_ls(path_db) %>%
 
 list2env(db_ls, globalenv())
 
-use_data(equations, overwrite = TRUE)
-use_data(equations_metadata, overwrite = TRUE)
-use_data(missing_values_metadata, overwrite = TRUE)
-use_data(references_metadata, overwrite = TRUE)
-use_data(sitespecies, overwrite = TRUE)
-use_data(sitespecies_metadata, overwrite = TRUE)
-use_data(sites_info, overwrite = TRUE)
-use_data(wsg, overwrite = TRUE)
-use_data(wsg_metadata, overwrite = TRUE)
+use_data(
+  equations,
+  equations_metadata,
+  missing_values_metadata,
+  references_metadata,
+  sitespecies,
+  sitespecies_metadata,
+  sites_info,
+  wsg,
+  wsg_metadata,
+  overwrite = TRUE
+)

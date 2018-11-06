@@ -4,7 +4,7 @@
 \name{references_metadata}
 \alias{references_metadata}
 \title{Table of metadata associated to the table \code{references}.}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 6 rows and 5 columns.}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 7 rows and 4 columns.}
 \usage{
 references_metadata
 }
