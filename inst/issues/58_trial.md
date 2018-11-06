@@ -1,4 +1,4 @@
-Simplest path to calculating biomass using census data and allodb
+**allodb**, **bmss** and data from SCBI: A trial
 ================
 Mauro Lepore
 2018-11-06
@@ -192,11 +192,13 @@ compare_names(reference_tree, scbi_tree1)
 
 Let’s add columns `site` and `species`.
 
-FIXME: Wrap into a single `add_site_sp()` function, or
-`prepare_census()`, or `as_allodb_census()` (with corresponding
-`new_allodb_census()`, and `validate_allodb_census()` – which is
-responsible to check stuff that then no longer needs to be checked
-downstream in **bmss**)?
+  - FIXME: Wrap into a single `add_site_sp()` function, or
+    `prepare_census()`, or `as_allodb_census()` (with corresponding
+    `new_allodb_census()`, and `validate_allodb_census()` – which is
+    responsible to check stuff that then no longer needs to be checked
+    downstream in **bmss**)?
+
+<!-- end list -->
 
 ``` r
 scbi <- scbi_tree1 %>% 

@@ -1,5 +1,5 @@
 ---
-title: "Simplest path to calculating biomass using census data and allodb"
+title: "__allodb__, __bmss__ and data from SCBI: A trial"
 author: "Mauro Lepore"
 date: "`r Sys.Date()`"
 output: github_document
@@ -107,7 +107,7 @@ compare_names(reference_tree, scbi_tree1)
 
 Let's add columns `site` and `species`.
 
-FIXME: Wrap into a single `add_site_sp()` function, or `prepare_census()`, or `as_allodb_census()` (with corresponding `new_allodb_census()`, and `validate_allodb_census()` -- which is responsible to check stuff that then no longer needs to be checked downstream in __bmss__)?
+* FIXME: Wrap into a single `add_site_sp()` function, or `prepare_census()`, or `as_allodb_census()` (with corresponding `new_allodb_census()`, and `validate_allodb_census()` -- which is responsible to check stuff that then no longer needs to be checked downstream in __bmss__)?
 
 ```{r}
 scbi <- scbi_tree1 %>% 
