@@ -19,6 +19,7 @@ wsg_metadata
 }
 \seealso{
 Other database datasets: \code{\link{equations}},
+  \code{\link{missing_values_metadata}},
   \code{\link{references_metadata}},
   \code{\link{sites_info}}, \code{\link{sitespecies}}
 }

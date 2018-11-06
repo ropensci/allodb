@@ -17,6 +17,7 @@ Table of information on sites from tropical forests.
 }
 \seealso{
 Other database datasets: \code{\link{equations}},
+  \code{\link{missing_values_metadata}},
   \code{\link{references_metadata}},
   \code{\link{sitespecies}}, \code{\link{wsg}}
 }

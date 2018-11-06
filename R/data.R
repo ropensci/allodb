@@ -7,9 +7,15 @@
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Table of metadata of `equations`.
 #'
+#'
+#' @details
+#' * equation_id: Unique equation identification number given arbitrarely.
+#' * equation_form: FIXME.
+#'
 #' @format
-#' A data frame with 154 observations on 6 variables.
+#' A data frame with 168 rows and 22 variables:
 #' ```
+#' # FIXME: Replace with real data.
 #' [,1]	Ozone	 numeric	 Ozone (ppb)
 #' [,2]	Solar.R	 numeric	 Solar R (lang)
 #' [,3]	Wind	 numeric	 Wind (mph)
@@ -23,13 +29,7 @@
 #' @rdname equations
 "equations_metadata"
 
-#' @format A data frame with 168 rows and 22 variables:
-#' \describe{
-#'   \item{equation_id}{Unique equation identification number given arbitrarely.}
-#'   \item{equation_form}{Darn I don't know how to make a table like in dataset::airquality!}
-#'   ...
-#' }
-#'
+
 
 #' Table of metadata associated to the table `missing_values`.
 #'
@@ -38,6 +38,8 @@
 #'
 #' @family database datasets
 "missing_values_metadata"
+
+
 
 #' Table of metadata associated to the table `references`.
 #'

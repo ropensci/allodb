@@ -5,7 +5,8 @@
 \alias{equations}
 \alias{equations_metadata}
 \title{Tables of allometric equations and associated metadata for ForestGEO sites.}
-\format{A data frame with 154 observations on 6 variables.\preformatted{[,1]	Ozone	 numeric	 Ozone (ppb)
+\format{A data frame with 168 rows and 22 variables:\preformatted{# FIXME: Replace with real data.
+[,1]	Ozone	 numeric	 Ozone (ppb)
 [,2]	Solar.R	 numeric	 Solar R (lang)
 [,3]	Wind	 numeric	 Wind (mph)
 [,4]	Temp	 numeric	 Temperature (degrees F)
@@ -25,8 +26,15 @@ above-ground biomass (AGB) per species at ForestGEO sites:
 \item \code{equations_metadata}: Table of metadata of \code{equations}.
 }
 }
+\details{
+\itemize{
+\item equation_id: Unique equation identification number given arbitrarely.
+\item equation_form: FIXME.
+}
+}
 \seealso{
-Other database datasets: \code{\link{references_metadata}},
+Other database datasets: \code{\link{missing_values_metadata}},
+  \code{\link{references_metadata}},
   \code{\link{sites_info}}, \code{\link{sitespecies}},
   \code{\link{wsg}}
 }
