@@ -1,0 +1,150 @@
+---
+title: "Simplest path to calculating biomass using census data and allodb"
+author: "Mauro Lepore"
+date: "`r Sys.Date()`"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+# This chunk named setup will run before any other code (https://goo.gl/BeM2Uu)
+set.seed(1014)
+knitr::opts_chunk$set(
+  echo = TRUE,
+  comment = "#>",
+  collapse = TRUE,
+  cache = FALSE,
+  # Figures (http://r4ds.had.co.nz/)
+  out.width = "70%",
+  fig.align = "center",
+  fig.width = 6,
+  fig.asp = 0.618,
+  fig.show = "hold"
+)
+```
+
+Packages.
+
+```{r packages, message=FALSE}
+library(tidyverse)
+library(here)
+library(bmss)
+library(allodb)
+```
+
+Helpers.
+
+```{r helpers}
+# List all datasets of a package.
+datasets <- function(package) {
+  sort(utils::data(package = package)$results[ , "Item"])
+}
+
+compare_names <- function(x, y) {
+  list(x, y) %>% 
+    purrr::map(names) %>% 
+    purrr::reduce(setdiff)
+}
+
+add_species <- function(.census, .species) {
+  suppressMessages({
+    .species %>% 
+      tidyr::unite("species", Genus, Species, sep = " ") %>% 
+      dplyr::select(species, sp) %>% 
+      dplyr::right_join(.census)
+  })
+}
+
+add_site <- function(.census, site) {
+  found_site <- grep(site, allodb::sites_info$site, ignore.case = TRUE, value = TRUE)
+  if (identical(length(found_site), 0)) {
+    rlang::abort( glue::glue("Can't find any site mathing {site}."))
+  }
+  
+  rlang::inform(glue::glue("Using site {rlang::expr_label(found_site)}."))
+  tibble::add_column(.census, site = found_site)
+}
+```
+
+### Database data
+
+All datasets.
+
+```{r}
+datasets("allodb")
+```
+
+The core table of __allodb__ is `equaitons`.
+
+```{r}
+glimpse(equations)
+```
+
+Some equaitons need to be fixed. Here we'll use the good ones.
+
+```{r}
+good_equations <- drop_bad_equations(equations)
+
+# Compare
+list(good_equations, equations) %>% 
+  map_dbl(nrow) %>% 
+  set_names(c("n_good", "n_all"))
+```
+
+`master()` combines multiple database tables. Glimpse excluding problematic equations.
+
+```{r}
+master() %>% 
+  drop_bad_equations() %>% 
+  glimpse()
+```
+
+### Census data
+
+Census.
+
+```{r}
+glimpse(scbi_tree1)
+```
+
+This dataset is not structured exactly as a reference dataset from Luquillo but the difference is irrelevant to calculating biomass. The column `agb` is not useful and `DBHID` is equivalent to `MeasureID`.
+
+```{r}
+reference_tree <- fgeo.data::luquillo_tree5_random
+
+# In scbi but not luquillo
+compare_names(scbi_tree1, reference_tree)
+# In luquillo but not scbi
+compare_names(reference_tree, scbi_tree1)
+```
+
+Let's add columns `site` and `species`.
+
+FIXME: Wrap into a single `add_site_sp()` function, or `prepare_census()`, or `as_allodb_census()` (with corresponding `new_allodb_census()`, and `validate_allodb_census()` -- which is responsible to check stuff that then no longer needs to be checked downstream in __bmss__)?
+
+```{r}
+scbi <- scbi_tree1 %>% 
+  add_species(scbi_species) %>% 
+  add_site(site = "SCBI")
+
+scbi %>% select(site, species, everything())
+```
+
+FIXME: Modify `get_allometry()`:
+
+* Use `master()` by default.
+* Rename as needed:
+    * `eqn` = `equation_allometry`, 
+    * `eqn_source` = `eqn_source` 
+    * `eqn_type` = `allometry_specificity`
+
+```{r}
+get_allometry(scbi, "site", "species", "dbh")
+```
+
+Run with a general category. Then update __bmss__ to deal with all other categories.
+
+```{r}
+master()$allometry_specificity %>% unique()
+```
+
+
