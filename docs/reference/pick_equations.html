@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Drop rows known to contain problematic equations. — drop_bad_equations • allodb</title>
+<title>Pick equations from <strong>allodb</strong>. — pick_equations • allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,10 @@
 
 
 
-<meta property="og:title" content="Drop rows known to contain problematic equations. — drop_bad_equations" />
+<meta property="og:title" content="Pick equations from <strong>allodb</strong>. — pick_equations" />
 
-<meta property="og:description" content="Drop rows known to contain problematic equations." />
+<meta property="og:description" content="From all equations in allodb, pick equations for a given site and
+specificity." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,25 +104,31 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Drop rows known to contain problematic equations.</h1>
+    <h1>Pick equations from <strong>allodb</strong>.</h1>
     <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/drop_bad_equations.R'><code>R/drop_bad_equations.R</code></a></small>
-    <div class="hidden name"><code>drop_bad_equations.Rd</code></div>
+    <div class="hidden name"><code>pick_equations.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Drop rows known to contain problematic equations.</p>
+    <p>From all equations in <strong>allodb</strong>, pick equations for a given site and
+specificity.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>drop_bad_equations</span>(<span class='no'>.data</span>)</pre>
+    <pre class="usage"><span class='fu'>pick_equations</span>(<span class='no'>site_species</span>, <span class='no'>specificity</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>.data</th>
-      <td><p>An <strong>allodb</strong> dataframe with the variable <code>equation_id</code>.</p></td>
+      <th>site_species</th>
+      <td><p>Dataframe. The species table of a ForestGEO site.</p></td>
+    </tr>
+    <tr>
+      <th>specificity</th>
+      <td><p>String to match values from
+<code>allodb::equations$allometry_specificity</code>.</p></td>
     </tr>
     </table>
     
@@ -131,20 +138,20 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>drop_bad_equations</span>(<span class='fu'><a href='master.html'>master</a></span>())</div><div class='output co'>#&gt; # A tibble: 685 x 62
+    <pre class="examples"><div class='input'><span class='fu'>pick_equations</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='st'>"species"</span>)</div><div class='output co'>#&gt; # A tibble: 315 x 63
 #&gt;    ref_id equation_allome~ equation_id equation_form dependent_varia~
 #&gt;    &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;           
 #&gt;  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
 #&gt;  2 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
 #&gt;  3 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
 #&gt;  4 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
-#&gt;  5 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt;  6 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt;  7 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt;  8 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt;  9 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt; 10 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt; # ... with 675 more rows, and 57 more variables: independent_variable &lt;chr&gt;,
+#&gt;  5 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
+#&gt;  6 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
+#&gt;  7 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
+#&gt;  8 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~
+#&gt;  9 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~
+#&gt; 10 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~
+#&gt; # ... with 305 more rows, and 58 more variables: independent_variable &lt;chr&gt;,
 #&gt; #   allometry_specificity &lt;chr&gt;, geographic_area &lt;chr&gt;, dbh_min_cm &lt;chr&gt;,
 #&gt; #   dbh_max_cm &lt;chr&gt;, sample_size &lt;chr&gt;, dbh_units_original &lt;chr&gt;,
 #&gt; #   biomass_units_original &lt;chr&gt;, allometry_development_method &lt;chr&gt;,
@@ -159,7 +166,7 @@
 #&gt; #   X29 &lt;chr&gt;, X30 &lt;chr&gt;, X31 &lt;chr&gt;, X32 &lt;chr&gt;, X33 &lt;chr&gt;, X34 &lt;chr&gt;, id &lt;chr&gt;,
 #&gt; #   Site &lt;chr&gt;, lat &lt;chr&gt;, long &lt;chr&gt;, UTM_Zone &lt;chr&gt;, UTM_X &lt;chr&gt;,
 #&gt; #   UTM_Y &lt;chr&gt;, intertropical &lt;chr&gt;, size.ha &lt;chr&gt;, E &lt;chr&gt;,
-#&gt; #   wsg.site.name &lt;chr&gt;</div></pre>
+#&gt; #   wsg.site.name &lt;chr&gt;, sp &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

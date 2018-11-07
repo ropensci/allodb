@@ -29,7 +29,9 @@ Imports:
     readr,
     utils,
     rlang,
-    glue
+    glue,
+    fgeo.base,
+    magrittr
 Suggests: 
     covr,
     fs,
@@ -38,8 +40,7 @@ Suggests:
     purrr,
     rmarkdown (>= 1.7),
     testthat,
-    tidyr,
-    magrittr
+    tidyr
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

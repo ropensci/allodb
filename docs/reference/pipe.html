@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tables of allometric equations and associated metadata for ForestGEO sites. — equations • allodb</title>
+<title>Pipe operator — %&gt;% • allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,13 +30,9 @@
 
 
 
-<meta property="og:title" content="Tables of allometric equations and associated metadata for ForestGEO sites. — equations" />
+<meta property="og:title" content="Pipe operator — %&gt;%" />
 
-<meta property="og:description" content="A compilation of best available allometry equations to calculate tree
-above-ground biomass (AGB) per species at ForestGEO sites:
-equations: Table of allometric equations.
-equations_metadata: Table of metadata of equations.
-" />
+<meta property="og:description" content="See magrittr::%&amp;gt;% for details." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -107,62 +103,25 @@ equations_metadata: Table of metadata of equations.
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Tables of allometric equations and associated metadata for ForestGEO sites.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>equations.Rd</code></div>
+    <h1>Pipe operator</h1>
+    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/utils-pipe.R'><code>R/utils-pipe.R</code></a></small>
+    <div class="hidden name"><code>pipe.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>A compilation of best available allometry equations to calculate tree
-above-ground biomass (AGB) per species at ForestGEO sites:</p><ul>
-<li><p><code>equations</code>: Table of allometric equations.</p></li>
-<li><p><code>equations_metadata</code>: Table of metadata of <code>equations</code>.</p></li>
-</ul>
+    <p>See <code>magrittr::%&gt;%</code> for details.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>equations</span>
-
-<span class='no'>equations_metadata</span></pre>
+    <pre class="usage"><span class='no'>lhs</span> <span class='kw'>%&gt;%</span> <span class='no'>rhs</span></pre>
         
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
-
-    <p>A data frame with 168 rows and 22 variables:</p><pre># FIXME: Replace with real data.
-[,1]	Ozone	 numeric	 Ozone (ppb)
-[,2]	Solar.R	 numeric	 Solar R (lang)
-[,3]	Wind	 numeric	 Wind (mph)
-[,4]	Temp	 numeric	 Temperature (degrees F)
-[,5]	Month	 numeric	 Month (1--12)
-[,6]	Day	 numeric	 Day of month (1--31)
-</pre>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <ul>
-<li><p>equation_id: Random, unique equation-identifier.</p></li>
-<li><p>equation_form: FIXME.</p></li>
-</ul>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>Other database datasets: <code><a href='missing_values_metadata.html'>missing_values_metadata</a></code>,
-  <code><a href='references_metadata.html'>references_metadata</a></code>,
-  <code><a href='sites_info.html'>sites_info</a></code>, <code><a href='sitespecies.html'>sitespecies</a></code>,
-  <code><a href='wsg.html'>wsg</a></code></p></div>
-    
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-          </ul>
+                </ul>
 
   </div>
 </div>

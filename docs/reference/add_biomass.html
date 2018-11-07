@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tables of allometric equations and associated metadata for ForestGEO sites. — equations • allodb</title>
+<title>Add column <code>biomass</code>, by evaluating <code>equation_allomerty</code> for each <code>dbh</code>. — add_biomass • allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,13 +30,9 @@
 
 
 
-<meta property="og:title" content="Tables of allometric equations and associated metadata for ForestGEO sites. — equations" />
+<meta property="og:title" content="Add column <code>biomass</code>, by evaluating <code>equation_allomerty</code> for each <code>dbh</code>. — add_biomass" />
 
-<meta property="og:description" content="A compilation of best available allometry equations to calculate tree
-above-ground biomass (AGB) per species at ForestGEO sites:
-equations: Table of allometric equations.
-equations_metadata: Table of metadata of equations.
-" />
+<meta property="og:description" content="Add column biomass, by evaluating equation_allomerty for each dbh." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -107,62 +103,62 @@ equations_metadata: Table of metadata of equations.
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Tables of allometric equations and associated metadata for ForestGEO sites.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>equations.Rd</code></div>
+    <h1>Add column <code>biomass</code>, by evaluating <code>equation_allomerty</code> for each <code>dbh</code>.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/drop_bad_equations.R'><code>R/drop_bad_equations.R</code></a></small>
+    <div class="hidden name"><code>add_biomass.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>A compilation of best available allometry equations to calculate tree
-above-ground biomass (AGB) per species at ForestGEO sites:</p><ul>
-<li><p><code>equations</code>: Table of allometric equations.</p></li>
-<li><p><code>equations_metadata</code>: Table of metadata of <code>equations</code>.</p></li>
-</ul>
+    <p>Add column <code>biomass</code>, by evaluating <code>equation_allomerty</code> for each <code>dbh</code>.</p>
     
     </div>
 
-    <pre class="usage"><span class='no'>equations</span>
-
-<span class='no'>equations_metadata</span></pre>
-        
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
-
-    <p>A data frame with 168 rows and 22 variables:</p><pre># FIXME: Replace with real data.
-[,1]	Ozone	 numeric	 Ozone (ppb)
-[,2]	Solar.R	 numeric	 Solar R (lang)
-[,3]	Wind	 numeric	 Wind (mph)
-[,4]	Temp	 numeric	 Temperature (degrees F)
-[,5]	Month	 numeric	 Month (1--12)
-[,6]	Day	 numeric	 Day of month (1--31)
-</pre>
+    <pre class="usage"><span class='fu'>add_biomass</span>(<span class='no'>.data</span>)</pre>
     
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <ul>
-<li><p>equation_id: Random, unique equation-identifier.</p></li>
-<li><p>equation_form: FIXME.</p></li>
-</ul>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>.data</th>
+      <td><p>A dataframe with columns <code>equation_allometry</code> and <code>dbh</code>.</p></td>
+    </tr>
+    </table>
     
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <div class='dont-index'><p>Other database datasets: <code><a href='missing_values_metadata.html'>missing_values_metadata</a></code>,
-  <code><a href='references_metadata.html'>references_metadata</a></code>,
-  <code><a href='sites_info.html'>sites_info</a></code>, <code><a href='sitespecies.html'>sitespecies</a></code>,
-  <code><a href='wsg.html'>wsg</a></code></p></div>
+    <p>A dataframe.</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>equations</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pick_equations.html'>pick_equations</a></span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='st'>"species"</span>)
+
+<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_tree1</a></span> <span class='kw'>%&gt;%</span>
+  <span class='fu'><a href='add_equation.html'>add_equation</a></span>(<span class='no'>equations</span>) <span class='kw'>%&gt;%</span>
+  <span class='co'># Just a few for speed</span>
+  <span class='fu'>head</span>() <span class='kw'>%&gt;%</span>
+  <span class='fu'>add_biomass</span>()</div><div class='output co'>#&gt; <span class='message'>Joining, by = "sp"</span></div><div class='output co'>#&gt; # A tibble: 6 x 22
+#&gt;   treeID stemID tag   StemTag sp    quadrat    gx    gy DBHID CensusID   dbh
+#&gt;    &lt;int&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;    &lt;int&gt; &lt;dbl&gt;
+#&gt; 1      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
+#&gt; 2      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
+#&gt; 3      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
+#&gt; 4      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
+#&gt; 5      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
+#&gt; 6     21     21 20064 1       litu  0217     31.4  322.    69        1  232.
+#&gt; # ... with 11 more variables: pom &lt;chr&gt;, hom &lt;dbl&gt;, ExactDate &lt;chr&gt;,
+#&gt; #   DFstatus &lt;chr&gt;, codes &lt;chr&gt;, nostems &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;,
+#&gt; #   agb &lt;dbl&gt;, equation_allometry &lt;chr&gt;, biomass &lt;dbl&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-          </ul>
+      <li><a href="#value">Value</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

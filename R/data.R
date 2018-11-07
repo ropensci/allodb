@@ -7,9 +7,8 @@
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Table of metadata of `equations`.
 #'
-#'
 #' @details
-#' * equation_id: Unique equation identification number given arbitrarely.
+#' * equation_id: Random, unique equation-identifier.
 #' * equation_form: FIXME.
 #'
 #' @format

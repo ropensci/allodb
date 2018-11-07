@@ -2,7 +2,7 @@
 % Please edit documentation in R/drop_bad_equations.R
 \name{drop_bad_equations}
 \alias{drop_bad_equations}
-\title{Drop rows known to contain problematic equaitons.}
+\title{Drop rows known to contain problematic equations.}
 \usage{
 drop_bad_equations(.data)
 }
@@ -13,7 +13,7 @@ drop_bad_equations(.data)
 A dataframe.
 }
 \description{
-Drop rows known to contain problematic equaitons.
+Drop rows known to contain problematic equations.
 }
 \examples{
 drop_bad_equations(master())

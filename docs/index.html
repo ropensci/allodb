@@ -89,159 +89,200 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")</a></code></pre>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(allodb)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(tibble)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">equations</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; # A tibble: 175 x 22</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;    ref_id equation_allome~ equation_id equation_form dependent_varia~</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  2 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  3 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  4 jenki~ 10^(2.5368+1.31~ 96c0af      10^(a+b*(log~ Branches (live,~</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  5 jenki~ 10^(2.0865+0.94~ 529234      10^(a+b*(log~ Foliage total   </span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  6 jenki~ exp(-2.48+2.483~ ae65ed      exp(a+b*ln(D~ Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  7 marti~ 10^(-1.326+2.76~ 9c4cc9      10^(a+b*(log~ Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  8 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  9 chojn~ exp(-2.5095+2.5~ 7f7777      exp(a+b*ln(D~ Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; 10 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; # ... with 165 more rows, and 17 more variables:</span></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; #   independent_variable &lt;chr&gt;, allometry_specificity &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt; #   geographic_area &lt;chr&gt;, dbh_min_cm &lt;chr&gt;, dbh_max_cm &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt; #   sample_size &lt;chr&gt;, dbh_units_original &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-22" data-line-number="22"><span class="co">#&gt; #   biomass_units_original &lt;chr&gt;, allometry_development_method &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="co">#&gt; #   regression_model &lt;chr&gt;, other_equations_tested &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; #   log_biomass &lt;chr&gt;, bias_corrected &lt;chr&gt;, bias_correction_factor &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; #   notes_fitting_model &lt;chr&gt;, original_data_availability &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt; #   warning &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-27" data-line-number="27">equations_metadata</a>
-<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt; # A tibble: 22 x 7</span></a>
-<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;    Column Field     Description        Column_type Field_codes Units Range</span></a>
-<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;              &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  1 1 / A  equation~ Unique equation i~ &lt;NA&gt;        &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  2 2 / B  equation~ Algebraic form of~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  3 3 / C  equation~ Equation to calcu~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  4 4 / D  dependen~ Tree component ch~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  5 5 / E  independ~ Parameters includ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  6 6 / F  allometr~ Specific taxonomi~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt;  7 7 / G  geograph~ Geographic locati~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt;  8 8 / H  dbh_min_~ Minimun DBH in cm~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt;  9 9 / I  dbh_max_~ Maximun DBH in cm~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; 10 10 / J sample_s~ Number of trees s~ integer     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; # ... with 12 more rows</span></a>
-<a class="sourceLine" id="cb2-42" data-line-number="42"></a>
-<a class="sourceLine" id="cb2-43" data-line-number="43">missing_values_metadata</a>
-<a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt; # A tibble: 4 x 3</span></a>
-<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt;   Code  Definition        Description                                     </span></a>
-<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;             &lt;chr&gt;                                           </span></a>
-<a class="sourceLine" id="cb2-47" data-line-number="47"><span class="co">#&gt; 1 &lt;NA&gt;  Not Applicable    Data does not apply to that particular case     </span></a>
-<a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt; 2 NAC   Not Acquired      Information may be available but has not been a~</span></a>
-<a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt; 3 NRA   Not Readily Avai~ Information was not readily available to the au~</span></a>
-<a class="sourceLine" id="cb2-50" data-line-number="50"><span class="co">#&gt; 4 NI    No Information    No information available in original publication</span></a>
-<a class="sourceLine" id="cb2-51" data-line-number="51"></a>
-<a class="sourceLine" id="cb2-52" data-line-number="52">references_metadata</a>
-<a class="sourceLine" id="cb2-53" data-line-number="53"><span class="co">#&gt; # A tibble: 7 x 4</span></a>
-<a class="sourceLine" id="cb2-54" data-line-number="54"><span class="co">#&gt;   Column Field         Description                           Colum_type   </span></a>
-<a class="sourceLine" id="cb2-55" data-line-number="55"><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;                                 &lt;chr&gt;        </span></a>
-<a class="sourceLine" id="cb2-56" data-line-number="56"><span class="co">#&gt; 1 1 / A  ref_id        Unique reference identification numb~ numeric      </span></a>
-<a class="sourceLine" id="cb2-57" data-line-number="57"><span class="co">#&gt; 2 2 / B  ref_doi       Publication DOI (Digital object iden~ character (s~</span></a>
-<a class="sourceLine" id="cb2-58" data-line-number="58"><span class="co">#&gt; 3 3 / C  ref_author    Last name of first author of a cited~ character (s~</span></a>
-<a class="sourceLine" id="cb2-59" data-line-number="59"><span class="co">#&gt; 4 4 / D  ref_year      Year of publication                   numeric      </span></a>
-<a class="sourceLine" id="cb2-60" data-line-number="60"><span class="co">#&gt; 5 5 / E  ref_title     Title of publication                  character (s~</span></a>
-<a class="sourceLine" id="cb2-61" data-line-number="61"><span class="co">#&gt; 6 6 / F  ref_journal   Journal, book, report where published character (s~</span></a>
-<a class="sourceLine" id="cb2-62" data-line-number="62"><span class="co">#&gt; 7 7 / G  References f~ Full citation (kept for easy use)     character (s~</span></a>
-<a class="sourceLine" id="cb2-63" data-line-number="63"></a>
-<a class="sourceLine" id="cb2-64" data-line-number="64">sitespecies</a>
-<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt; # A tibble: 679 x 34</span></a>
-<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt;    site  family species species_code life_form dependent_varia~</span></a>
-<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;           </span></a>
-<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt;  1 Lill~ Sapin~ Acer r~ 316          Tree      Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt;  2 Lill~ Sapin~ Acer s~ 318          Tree      Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt;  3 Lill~ Rosac~ Amelan~ 356          Tree      Stem biomass (w~</span></a>
-<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;  4 Lill~ Rosac~ Amelan~ 356          Tree      Branches (live,~</span></a>
-<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;  5 Lill~ Rosac~ Amelan~ 356          Tree      Foliage total   </span></a>
-<a class="sourceLine" id="cb2-73" data-line-number="73"><span class="co">#&gt;  6 Lill~ Annon~ Asimin~ 367          Tree      Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="co">#&gt;  7 Lill~ Betul~ Carpin~ 391          Tree      Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt;  8 Lill~ Jugla~ Carya ~ 409          Tree      Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt;  9 Lill~ Jugla~ Carya ~ 402          Tree      Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-77" data-line-number="77"><span class="co">#&gt; 10 Lill~ Jugla~ Carya ~ 403          Tree      Total abovegrou~</span></a>
-<a class="sourceLine" id="cb2-78" data-line-number="78"><span class="co">#&gt; # ... with 669 more rows, and 28 more variables: equation_group &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-79" data-line-number="79"><span class="co">#&gt; #   equation_id &lt;chr&gt;, equation_taxa &lt;chr&gt;, allometry_specificity &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-80" data-line-number="80"><span class="co">#&gt; #   dbh_min_cm &lt;chr&gt;, dbh_max_cm &lt;chr&gt;, notes_on_species &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-81" data-line-number="81"><span class="co">#&gt; #   wsg_id &lt;chr&gt;, wsg_specificity &lt;chr&gt;, X16 &lt;chr&gt;, X17 &lt;chr&gt;, X18 &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-82" data-line-number="82"><span class="co">#&gt; #   X19 &lt;chr&gt;, X20 &lt;chr&gt;, X21 &lt;chr&gt;, X22 &lt;chr&gt;, X23 &lt;chr&gt;, X24 &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-83" data-line-number="83"><span class="co">#&gt; #   X25 &lt;chr&gt;, X26 &lt;chr&gt;, X27 &lt;chr&gt;, X28 &lt;chr&gt;, X29 &lt;chr&gt;, X30 &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-84" data-line-number="84"><span class="co">#&gt; #   X31 &lt;chr&gt;, X32 &lt;chr&gt;, X33 &lt;chr&gt;, X34 &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-85" data-line-number="85">sitespecies_metadata</a>
-<a class="sourceLine" id="cb2-86" data-line-number="86"><span class="co">#&gt; # A tibble: 15 x 8</span></a>
-<a class="sourceLine" id="cb2-87" data-line-number="87"><span class="co">#&gt;    Column Field Description Column_type Field_codes Units Range</span></a>
-<a class="sourceLine" id="cb2-88" data-line-number="88"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-89" data-line-number="89"><span class="co">#&gt;  1 1 / A  site  ForestGEO ~ character   -           -     -    </span></a>
-<a class="sourceLine" id="cb2-90" data-line-number="90"><span class="co">#&gt;  2 2 / B  fami~ Plant fami~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-91" data-line-number="91"><span class="co">#&gt;  3 3 / C  spec~ Plant scie~ character   -           -     -    </span></a>
-<a class="sourceLine" id="cb2-92" data-line-number="92"><span class="co">#&gt;  4 4 / D  spec~ Species co~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-93" data-line-number="93"><span class="co">#&gt;  5 5 / E  life~ Common gro~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-94" data-line-number="94"><span class="co">#&gt;  6 6 / F  depe~ Tree compo~ character   -           -     -    </span></a>
-<a class="sourceLine" id="cb2-95" data-line-number="95"><span class="co">#&gt;  7 7 / G  equa~ "Allometri~ character   G- generic~ -     -    </span></a>
-<a class="sourceLine" id="cb2-96" data-line-number="96"><span class="co">#&gt;  8 8 / H  equa~ Unique equ~ numeric     -           &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-97" data-line-number="97"><span class="co">#&gt;  9 9 / I  equa~ Species, g~ character ~ &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-98" data-line-number="98"><span class="co">#&gt; 10 10 / J allo~ Refers to ~ character ~ -           &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-99" data-line-number="99"><span class="co">#&gt; 11 11 / K dbh_~ Min DBH at~ numeric     -           -     &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-100" data-line-number="100"><span class="co">#&gt; 12 12 / L dbh_~ Max DBH at~ numeric     -           -     &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-101" data-line-number="101"><span class="co">#&gt; 13 13 / M note~ Informativ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-102" data-line-number="102"><span class="co">#&gt; 14 14 / N wsg_~ Wood densi~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-103" data-line-number="103"><span class="co">#&gt; 15 15 / O wsg_~ Refers to ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-104" data-line-number="104"><span class="co">#&gt; # ... with 1 more variable: `Erikas notes to delete before</span></a>
-<a class="sourceLine" id="cb2-105" data-line-number="105"><span class="co">#&gt; #   publication` &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-106" data-line-number="106"></a>
-<a class="sourceLine" id="cb2-107" data-line-number="107">wsg</a>
-<a class="sourceLine" id="cb2-108" data-line-number="108"><span class="co">#&gt; # A tibble: 549 x 8</span></a>
-<a class="sourceLine" id="cb2-109" data-line-number="109"><span class="co">#&gt;    wsg_id family  species   wsg   wsg_specificity sample_size site  ref_id</span></a>
-<a class="sourceLine" id="cb2-110" data-line-number="110"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; </span></a>
-<a class="sourceLine" id="cb2-111" data-line-number="111"><span class="co">#&gt;  1 &lt;NA&gt;   Sapind~ Acer rub~ 0.49  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-112" data-line-number="112"><span class="co">#&gt;  2 &lt;NA&gt;   Sapind~ Acer sac~ 0.56  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-113" data-line-number="113"><span class="co">#&gt;  3 &lt;NA&gt;   Rosace~ Amelanch~ 0.66  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-114" data-line-number="114"><span class="co">#&gt;  4 &lt;NA&gt;   Annona~ Asimina ~ 0.47  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-115" data-line-number="115"><span class="co">#&gt;  5 &lt;NA&gt;   Betula~ Carpinus~ 0.58  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-116" data-line-number="116"><span class="co">#&gt;  6 &lt;NA&gt;   Juglan~ Carya al~ 0.62  &lt;NA&gt;            10          Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-117" data-line-number="117"><span class="co">#&gt;  7 &lt;NA&gt;   Juglan~ Carya co~ 0.6   &lt;NA&gt;            10          Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-118" data-line-number="118"><span class="co">#&gt;  8 &lt;NA&gt;   Juglan~ Carya gl~ 0.66  &lt;NA&gt;            10          Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-119" data-line-number="119"><span class="co">#&gt;  9 &lt;NA&gt;   Juglan~ Carya ov~ 0.62  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-120" data-line-number="120"><span class="co">#&gt; 10 &lt;NA&gt;   Cannab~ Celtis o~ 0.49  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
-<a class="sourceLine" id="cb2-121" data-line-number="121"><span class="co">#&gt; # ... with 539 more rows</span></a>
-<a class="sourceLine" id="cb2-122" data-line-number="122">wsg_metadata</a>
-<a class="sourceLine" id="cb2-123" data-line-number="123"><span class="co">#&gt; # A tibble: 9 x 8</span></a>
-<a class="sourceLine" id="cb2-124" data-line-number="124"><span class="co">#&gt;   Column Field Description Column_type Field_codes Units Range</span></a>
-<a class="sourceLine" id="cb2-125" data-line-number="125"><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-126" data-line-number="126"><span class="co">#&gt; 1 1 / A  wsg_~ Wood speci~ numeric     -           -     &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-127" data-line-number="127"><span class="co">#&gt; 2 2 / B  fami~ Plant fami~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-128" data-line-number="128"><span class="co">#&gt; 3 3 / C  genus Plant genu~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-129" data-line-number="129"><span class="co">#&gt; 4 4 / D  spec~ Plant spec~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-130" data-line-number="130"><span class="co">#&gt; 5 5 / E  wsg   Wood speci~ numeric     &lt;NA&gt;        g/cm3 -    </span></a>
-<a class="sourceLine" id="cb2-131" data-line-number="131"><span class="co">#&gt; 6 6 / F  wsg_~ Specific t~ character   -           -     -    </span></a>
-<a class="sourceLine" id="cb2-132" data-line-number="132"><span class="co">#&gt; 7 7 / G  samp~ Number of ~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-133" data-line-number="133"><span class="co">#&gt; 8 8 / H  site  ForestGEO ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-134" data-line-number="134"><span class="co">#&gt; 9 9 / I  ref_~ Unique ref~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
-<a class="sourceLine" id="cb2-135" data-line-number="135"><span class="co">#&gt; # ... with 1 more variable: `Erikas notes to delete before</span></a>
-<a class="sourceLine" id="cb2-136" data-line-number="136"><span class="co">#&gt; #   publication` &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-137" data-line-number="137"></a>
-<a class="sourceLine" id="cb2-138" data-line-number="138">sites_info</a>
-<a class="sourceLine" id="cb2-139" data-line-number="139"><span class="co">#&gt; # A tibble: 63 x 12</span></a>
-<a class="sourceLine" id="cb2-140" data-line-number="140"><span class="co">#&gt;    id    Site  site  lat   long  UTM_Zone UTM_X UTM_Y intertropical size.ha</span></a>
-<a class="sourceLine" id="cb2-141" data-line-number="141"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  </span></a>
-<a class="sourceLine" id="cb2-142" data-line-number="142"><span class="co">#&gt;  1 42    Amac~ amac~ -3.81 -70.~ 19       3592~ 9578~ Tropical      25     </span></a>
-<a class="sourceLine" id="cb2-143" data-line-number="143"><span class="co">#&gt;  2 51    Bada~ bada~ 29.46 110.~ 49       4534~ 3259~ Other         25     </span></a>
-<a class="sourceLine" id="cb2-144" data-line-number="144"><span class="co">#&gt;  3 52    Baot~ baot~ 33.5  111.~ 49       5873~ 3706~ Other         25     </span></a>
-<a class="sourceLine" id="cb2-145" data-line-number="145"><span class="co">#&gt;  4 45    Barr~ barr~ 9.15  -79.~ 17       6267~ 1012~ Tropical      50     </span></a>
-<a class="sourceLine" id="cb2-146" data-line-number="146"><span class="co">#&gt;  5 18    Buki~ buki~ 1.35  103.~ 48       3642~ 1492~ Tropical      4      </span></a>
-<a class="sourceLine" id="cb2-147" data-line-number="147"><span class="co">#&gt;  6 53    Chan~ chan~ 42.38 128.~ 52       4245~ 4692~ Other         25     </span></a>
-<a class="sourceLine" id="cb2-148" data-line-number="148"><span class="co">#&gt;  7 46    Coco~ coco~ 8.99  -79.~ 17       6520~ 9937~ Tropical      4      </span></a>
-<a class="sourceLine" id="cb2-149" data-line-number="149"><span class="co">#&gt;  8 14    Danu~ danu~ 5.1   117.~ 50       5762~ 5639~ Tropical      50     </span></a>
-<a class="sourceLine" id="cb2-150" data-line-number="150"><span class="co">#&gt;  9 7     Ding~ ding~ 23.17 112.~ 49       6546~ 2563~ Tropical      20     </span></a>
-<a class="sourceLine" id="cb2-151" data-line-number="151"><span class="co">#&gt; 10 25    Doi ~ doi ~ 18.58 98.43 47       4402~ 2054~ Tropical      15     </span></a>
-<a class="sourceLine" id="cb2-152" data-line-number="152"><span class="co">#&gt; # ... with 53 more rows, and 2 more variables: E &lt;chr&gt;,</span></a>
-<a class="sourceLine" id="cb2-153" data-line-number="153"><span class="co">#&gt; #   wsg.site.name &lt;chr&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt; Attaching package: 'dplyr'</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt; The following objects are masked from 'package:stats':</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;     filter, lag</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; The following objects are masked from 'package:base':</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;     intersect, setdiff, setequal, union</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="kw">library</span>(allodb)</a></code></pre></div>
+<p>Workflow</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># Pick equations at the species-level from SCBI</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">equations &lt;-<span class="st"> </span><span class="kw"><a href="reference/pick_equations.html">pick_equations</a></span>(allodb<span class="op">::</span>scbi_species, <span class="st">"species"</span>)</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">census &lt;-<span class="st"> </span>allodb<span class="op">::</span>scbi_tree1</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">census <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="reference/add_equation.html">add_equation</a></span>(equations) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="st">  </span><span class="co"># Just a few for speed</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="st">  </span><span class="kw">head</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="st">  </span><span class="kw"><a href="reference/add_biomass.html">add_biomass</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="st">  </span><span class="kw">select</span>(biomass, equation_allometry, <span class="kw">everything</span>())</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; Joining, by = "sp"</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; # A tibble: 6 x 22</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;   biomass equation_allome~ treeID stemID tag   StemTag sp    quadrat    gx</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;     &lt;dbl&gt; &lt;chr&gt;             &lt;int&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt; 1 1.64e11 10^(1.1468+2.36~      4      4 12165 1       nysy  0122     14.2</span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt; 2 1.64e11 10^(1.1468+2.36~      4      4 12165 1       nysy  0122     14.2</span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt; 3 1.10e12 1.5416*(dbh^2)^~      4      4 12165 1       nysy  0122     14.2</span></a>
+<a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; 4 2.93e 5 2.56795*(dbh^2)~      4      4 12165 1       nysy  0122     14.2</span></a>
+<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co">#&gt; 5 2.93e 5 2.56795*(dbh^2)~      4      4 12165 1       nysy  0122     14.2</span></a>
+<a class="sourceLine" id="cb3-20" data-line-number="20"><span class="co">#&gt; 6 5.65e13 10^(0.8306+2.73~     21     21 20064 1       litu  0217     31.4</span></a>
+<a class="sourceLine" id="cb3-21" data-line-number="21"><span class="co">#&gt; # ... with 13 more variables: gy &lt;dbl&gt;, DBHID &lt;int&gt;, CensusID &lt;int&gt;,</span></a>
+<a class="sourceLine" id="cb3-22" data-line-number="22"><span class="co">#&gt; #   dbh &lt;dbl&gt;, pom &lt;chr&gt;, hom &lt;dbl&gt;, ExactDate &lt;chr&gt;, DFstatus &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb3-23" data-line-number="23"><span class="co">#&gt; #   codes &lt;chr&gt;, nostems &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;, agb &lt;dbl&gt;</span></a></code></pre></div>
+<p>Tables</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">equations</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; # A tibble: 315 x 63</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;    ref_id equation_allome~ equation_id equation_form dependent_varia~</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;           </span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt;  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt;  2 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt;  3 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  4 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt;  5 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  6 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  7 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  8 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  9 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt; 10 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt; # ... with 305 more rows, and 58 more variables:</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt; #   independent_variable &lt;chr&gt;, allometry_specificity &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; #   geographic_area &lt;chr&gt;, dbh_min_cm &lt;chr&gt;, dbh_max_cm &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; #   sample_size &lt;chr&gt;, dbh_units_original &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; #   biomass_units_original &lt;chr&gt;, allometry_development_method &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt; #   regression_model &lt;chr&gt;, other_equations_tested &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt; #   log_biomass &lt;chr&gt;, bias_corrected &lt;chr&gt;, bias_correction_factor &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt; #   notes_fitting_model &lt;chr&gt;, original_data_availability &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt; #   warning &lt;chr&gt;, site &lt;chr&gt;, family &lt;chr&gt;, species &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt; #   species_code &lt;chr&gt;, life_form &lt;chr&gt;, equation_group &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-25" data-line-number="25"><span class="co">#&gt; #   equation_taxa &lt;chr&gt;, notes_on_species &lt;chr&gt;, wsg_id &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-26" data-line-number="26"><span class="co">#&gt; #   wsg_specificity &lt;chr&gt;, X16 &lt;chr&gt;, X17 &lt;chr&gt;, X18 &lt;chr&gt;, X19 &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-27" data-line-number="27"><span class="co">#&gt; #   X20 &lt;chr&gt;, X21 &lt;chr&gt;, X22 &lt;chr&gt;, X23 &lt;chr&gt;, X24 &lt;chr&gt;, X25 &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-28" data-line-number="28"><span class="co">#&gt; #   X26 &lt;chr&gt;, X27 &lt;chr&gt;, X28 &lt;chr&gt;, X29 &lt;chr&gt;, X30 &lt;chr&gt;, X31 &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-29" data-line-number="29"><span class="co">#&gt; #   X32 &lt;chr&gt;, X33 &lt;chr&gt;, X34 &lt;chr&gt;, id &lt;chr&gt;, Site &lt;chr&gt;, lat &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-30" data-line-number="30"><span class="co">#&gt; #   long &lt;chr&gt;, UTM_Zone &lt;chr&gt;, UTM_X &lt;chr&gt;, UTM_Y &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-31" data-line-number="31"><span class="co">#&gt; #   intertropical &lt;chr&gt;, size.ha &lt;chr&gt;, E &lt;chr&gt;, wsg.site.name &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-32" data-line-number="32"><span class="co">#&gt; #   sp &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb4-33" data-line-number="33">equations_metadata</a>
+<a class="sourceLine" id="cb4-34" data-line-number="34"><span class="co">#&gt; # A tibble: 22 x 7</span></a>
+<a class="sourceLine" id="cb4-35" data-line-number="35"><span class="co">#&gt;    Column Field     Description        Column_type Field_codes Units Range</span></a>
+<a class="sourceLine" id="cb4-36" data-line-number="36"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;              &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb4-37" data-line-number="37"><span class="co">#&gt;  1 1 / A  equation~ Unique equation i~ &lt;NA&gt;        &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-38" data-line-number="38"><span class="co">#&gt;  2 2 / B  equation~ Algebraic form of~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-39" data-line-number="39"><span class="co">#&gt;  3 3 / C  equation~ Equation to calcu~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-40" data-line-number="40"><span class="co">#&gt;  4 4 / D  dependen~ Tree component ch~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-41" data-line-number="41"><span class="co">#&gt;  5 5 / E  independ~ Parameters includ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-42" data-line-number="42"><span class="co">#&gt;  6 6 / F  allometr~ Specific taxonomi~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-43" data-line-number="43"><span class="co">#&gt;  7 7 / G  geograph~ Geographic locati~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-44" data-line-number="44"><span class="co">#&gt;  8 8 / H  dbh_min_~ Minimun DBH in cm~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-45" data-line-number="45"><span class="co">#&gt;  9 9 / I  dbh_max_~ Maximun DBH in cm~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-46" data-line-number="46"><span class="co">#&gt; 10 10 / J sample_s~ Number of trees s~ integer     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-47" data-line-number="47"><span class="co">#&gt; # ... with 12 more rows</span></a>
+<a class="sourceLine" id="cb4-48" data-line-number="48"></a>
+<a class="sourceLine" id="cb4-49" data-line-number="49">missing_values_metadata</a>
+<a class="sourceLine" id="cb4-50" data-line-number="50"><span class="co">#&gt; # A tibble: 4 x 3</span></a>
+<a class="sourceLine" id="cb4-51" data-line-number="51"><span class="co">#&gt;   Code  Definition        Description                                     </span></a>
+<a class="sourceLine" id="cb4-52" data-line-number="52"><span class="co">#&gt;   &lt;chr&gt; &lt;chr&gt;             &lt;chr&gt;                                           </span></a>
+<a class="sourceLine" id="cb4-53" data-line-number="53"><span class="co">#&gt; 1 &lt;NA&gt;  Not Applicable    Data does not apply to that particular case     </span></a>
+<a class="sourceLine" id="cb4-54" data-line-number="54"><span class="co">#&gt; 2 NAC   Not Acquired      Information may be available but has not been a~</span></a>
+<a class="sourceLine" id="cb4-55" data-line-number="55"><span class="co">#&gt; 3 NRA   Not Readily Avai~ Information was not readily available to the au~</span></a>
+<a class="sourceLine" id="cb4-56" data-line-number="56"><span class="co">#&gt; 4 NI    No Information    No information available in original publication</span></a>
+<a class="sourceLine" id="cb4-57" data-line-number="57"></a>
+<a class="sourceLine" id="cb4-58" data-line-number="58">references_metadata</a>
+<a class="sourceLine" id="cb4-59" data-line-number="59"><span class="co">#&gt; # A tibble: 7 x 4</span></a>
+<a class="sourceLine" id="cb4-60" data-line-number="60"><span class="co">#&gt;   Column Field         Description                           Colum_type   </span></a>
+<a class="sourceLine" id="cb4-61" data-line-number="61"><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;                                 &lt;chr&gt;        </span></a>
+<a class="sourceLine" id="cb4-62" data-line-number="62"><span class="co">#&gt; 1 1 / A  ref_id        Unique reference identification numb~ numeric      </span></a>
+<a class="sourceLine" id="cb4-63" data-line-number="63"><span class="co">#&gt; 2 2 / B  ref_doi       Publication DOI (Digital object iden~ character (s~</span></a>
+<a class="sourceLine" id="cb4-64" data-line-number="64"><span class="co">#&gt; 3 3 / C  ref_author    Last name of first author of a cited~ character (s~</span></a>
+<a class="sourceLine" id="cb4-65" data-line-number="65"><span class="co">#&gt; 4 4 / D  ref_year      Year of publication                   numeric      </span></a>
+<a class="sourceLine" id="cb4-66" data-line-number="66"><span class="co">#&gt; 5 5 / E  ref_title     Title of publication                  character (s~</span></a>
+<a class="sourceLine" id="cb4-67" data-line-number="67"><span class="co">#&gt; 6 6 / F  ref_journal   Journal, book, report where published character (s~</span></a>
+<a class="sourceLine" id="cb4-68" data-line-number="68"><span class="co">#&gt; 7 7 / G  References f~ Full citation (kept for easy use)     character (s~</span></a>
+<a class="sourceLine" id="cb4-69" data-line-number="69"></a>
+<a class="sourceLine" id="cb4-70" data-line-number="70">sitespecies</a>
+<a class="sourceLine" id="cb4-71" data-line-number="71"><span class="co">#&gt; # A tibble: 679 x 34</span></a>
+<a class="sourceLine" id="cb4-72" data-line-number="72"><span class="co">#&gt;    site  family species species_code life_form dependent_varia~</span></a>
+<a class="sourceLine" id="cb4-73" data-line-number="73"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;           </span></a>
+<a class="sourceLine" id="cb4-74" data-line-number="74"><span class="co">#&gt;  1 Lill~ Sapin~ Acer r~ 316          Tree      Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-75" data-line-number="75"><span class="co">#&gt;  2 Lill~ Sapin~ Acer s~ 318          Tree      Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-76" data-line-number="76"><span class="co">#&gt;  3 Lill~ Rosac~ Amelan~ 356          Tree      Stem biomass (w~</span></a>
+<a class="sourceLine" id="cb4-77" data-line-number="77"><span class="co">#&gt;  4 Lill~ Rosac~ Amelan~ 356          Tree      Branches (live,~</span></a>
+<a class="sourceLine" id="cb4-78" data-line-number="78"><span class="co">#&gt;  5 Lill~ Rosac~ Amelan~ 356          Tree      Foliage total   </span></a>
+<a class="sourceLine" id="cb4-79" data-line-number="79"><span class="co">#&gt;  6 Lill~ Annon~ Asimin~ 367          Tree      Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-80" data-line-number="80"><span class="co">#&gt;  7 Lill~ Betul~ Carpin~ 391          Tree      Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-81" data-line-number="81"><span class="co">#&gt;  8 Lill~ Jugla~ Carya ~ 409          Tree      Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-82" data-line-number="82"><span class="co">#&gt;  9 Lill~ Jugla~ Carya ~ 402          Tree      Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-83" data-line-number="83"><span class="co">#&gt; 10 Lill~ Jugla~ Carya ~ 403          Tree      Total abovegrou~</span></a>
+<a class="sourceLine" id="cb4-84" data-line-number="84"><span class="co">#&gt; # ... with 669 more rows, and 28 more variables: equation_group &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-85" data-line-number="85"><span class="co">#&gt; #   equation_id &lt;chr&gt;, equation_taxa &lt;chr&gt;, allometry_specificity &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-86" data-line-number="86"><span class="co">#&gt; #   dbh_min_cm &lt;chr&gt;, dbh_max_cm &lt;chr&gt;, notes_on_species &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-87" data-line-number="87"><span class="co">#&gt; #   wsg_id &lt;chr&gt;, wsg_specificity &lt;chr&gt;, X16 &lt;chr&gt;, X17 &lt;chr&gt;, X18 &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-88" data-line-number="88"><span class="co">#&gt; #   X19 &lt;chr&gt;, X20 &lt;chr&gt;, X21 &lt;chr&gt;, X22 &lt;chr&gt;, X23 &lt;chr&gt;, X24 &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-89" data-line-number="89"><span class="co">#&gt; #   X25 &lt;chr&gt;, X26 &lt;chr&gt;, X27 &lt;chr&gt;, X28 &lt;chr&gt;, X29 &lt;chr&gt;, X30 &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-90" data-line-number="90"><span class="co">#&gt; #   X31 &lt;chr&gt;, X32 &lt;chr&gt;, X33 &lt;chr&gt;, X34 &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb4-91" data-line-number="91">sitespecies_metadata</a>
+<a class="sourceLine" id="cb4-92" data-line-number="92"><span class="co">#&gt; # A tibble: 15 x 8</span></a>
+<a class="sourceLine" id="cb4-93" data-line-number="93"><span class="co">#&gt;    Column Field Description Column_type Field_codes Units Range</span></a>
+<a class="sourceLine" id="cb4-94" data-line-number="94"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb4-95" data-line-number="95"><span class="co">#&gt;  1 1 / A  site  ForestGEO ~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb4-96" data-line-number="96"><span class="co">#&gt;  2 2 / B  fami~ Plant fami~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-97" data-line-number="97"><span class="co">#&gt;  3 3 / C  spec~ Plant scie~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb4-98" data-line-number="98"><span class="co">#&gt;  4 4 / D  spec~ Species co~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-99" data-line-number="99"><span class="co">#&gt;  5 5 / E  life~ Common gro~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-100" data-line-number="100"><span class="co">#&gt;  6 6 / F  depe~ Tree compo~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb4-101" data-line-number="101"><span class="co">#&gt;  7 7 / G  equa~ "Allometri~ character   G- generic~ -     -    </span></a>
+<a class="sourceLine" id="cb4-102" data-line-number="102"><span class="co">#&gt;  8 8 / H  equa~ Unique equ~ numeric     -           &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-103" data-line-number="103"><span class="co">#&gt;  9 9 / I  equa~ Species, g~ character ~ &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-104" data-line-number="104"><span class="co">#&gt; 10 10 / J allo~ Refers to ~ character ~ -           &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-105" data-line-number="105"><span class="co">#&gt; 11 11 / K dbh_~ Min DBH at~ numeric     -           -     &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-106" data-line-number="106"><span class="co">#&gt; 12 12 / L dbh_~ Max DBH at~ numeric     -           -     &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-107" data-line-number="107"><span class="co">#&gt; 13 13 / M note~ Informativ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-108" data-line-number="108"><span class="co">#&gt; 14 14 / N wsg_~ Wood densi~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-109" data-line-number="109"><span class="co">#&gt; 15 15 / O wsg_~ Refers to ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-110" data-line-number="110"><span class="co">#&gt; # ... with 1 more variable: `Erikas notes to delete before</span></a>
+<a class="sourceLine" id="cb4-111" data-line-number="111"><span class="co">#&gt; #   publication` &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb4-112" data-line-number="112"></a>
+<a class="sourceLine" id="cb4-113" data-line-number="113">wsg</a>
+<a class="sourceLine" id="cb4-114" data-line-number="114"><span class="co">#&gt; # A tibble: 549 x 8</span></a>
+<a class="sourceLine" id="cb4-115" data-line-number="115"><span class="co">#&gt;    wsg_id family  species   wsg   wsg_specificity sample_size site  ref_id</span></a>
+<a class="sourceLine" id="cb4-116" data-line-number="116"><span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; </span></a>
+<a class="sourceLine" id="cb4-117" data-line-number="117"><span class="co">#&gt;  1 &lt;NA&gt;   Sapind~ Acer rub~ 0.49  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-118" data-line-number="118"><span class="co">#&gt;  2 &lt;NA&gt;   Sapind~ Acer sac~ 0.56  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-119" data-line-number="119"><span class="co">#&gt;  3 &lt;NA&gt;   Rosace~ Amelanch~ 0.66  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-120" data-line-number="120"><span class="co">#&gt;  4 &lt;NA&gt;   Annona~ Asimina ~ 0.47  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-121" data-line-number="121"><span class="co">#&gt;  5 &lt;NA&gt;   Betula~ Carpinus~ 0.58  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-122" data-line-number="122"><span class="co">#&gt;  6 &lt;NA&gt;   Juglan~ Carya al~ 0.62  &lt;NA&gt;            10          Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-123" data-line-number="123"><span class="co">#&gt;  7 &lt;NA&gt;   Juglan~ Carya co~ 0.6   &lt;NA&gt;            10          Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-124" data-line-number="124"><span class="co">#&gt;  8 &lt;NA&gt;   Juglan~ Carya gl~ 0.66  &lt;NA&gt;            10          Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-125" data-line-number="125"><span class="co">#&gt;  9 &lt;NA&gt;   Juglan~ Carya ov~ 0.62  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-126" data-line-number="126"><span class="co">#&gt; 10 &lt;NA&gt;   Cannab~ Celtis o~ 0.49  &lt;NA&gt;            &lt;NA&gt;        Lill~ &lt;NA&gt;  </span></a>
+<a class="sourceLine" id="cb4-127" data-line-number="127"><span class="co">#&gt; # ... with 539 more rows</span></a>
+<a class="sourceLine" id="cb4-128" data-line-number="128">wsg_metadata</a>
+<a class="sourceLine" id="cb4-129" data-line-number="129"><span class="co">#&gt; # A tibble: 9 x 8</span></a>
+<a class="sourceLine" id="cb4-130" data-line-number="130"><span class="co">#&gt;   Column Field Description Column_type Field_codes Units Range</span></a>
+<a class="sourceLine" id="cb4-131" data-line-number="131"><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb4-132" data-line-number="132"><span class="co">#&gt; 1 1 / A  wsg_~ Wood speci~ numeric     -           -     &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-133" data-line-number="133"><span class="co">#&gt; 2 2 / B  fami~ Plant fami~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-134" data-line-number="134"><span class="co">#&gt; 3 3 / C  genus Plant genu~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-135" data-line-number="135"><span class="co">#&gt; 4 4 / D  spec~ Plant spec~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-136" data-line-number="136"><span class="co">#&gt; 5 5 / E  wsg   Wood speci~ numeric     &lt;NA&gt;        g/cm3 -    </span></a>
+<a class="sourceLine" id="cb4-137" data-line-number="137"><span class="co">#&gt; 6 6 / F  wsg_~ Specific t~ character   -           -     -    </span></a>
+<a class="sourceLine" id="cb4-138" data-line-number="138"><span class="co">#&gt; 7 7 / G  samp~ Number of ~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-139" data-line-number="139"><span class="co">#&gt; 8 8 / H  site  ForestGEO ~ character   &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-140" data-line-number="140"><span class="co">#&gt; 9 9 / I  ref_~ Unique ref~ numeric     &lt;NA&gt;        &lt;NA&gt;  &lt;NA&gt; </span></a>
+<a class="sourceLine" id="cb4-141" data-line-number="141"><span class="co">#&gt; # ... with 1 more variable: `Erikas notes to delete before</span></a>
+<a class="sourceLine" id="cb4-142" data-line-number="142"><span class="co">#&gt; #   publication` &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb4-143" data-line-number="143"></a>
+<a class="sourceLine" id="cb4-144" data-line-number="144">sites_info</a>
+<a class="sourceLine" id="cb4-145" data-line-number="145"><span class="co">#&gt; # A tibble: 63 x 12</span></a>
+<a class="sourceLine" id="cb4-146" data-line-number="146"><span class="co">#&gt;    id    Site  site  lat   long  UTM_Zone UTM_X UTM_Y intertropical size.ha</span></a>
+<a class="sourceLine" id="cb4-147" data-line-number="147"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  </span></a>
+<a class="sourceLine" id="cb4-148" data-line-number="148"><span class="co">#&gt;  1 42    Amac~ amac~ -3.81 -70.~ 19       3592~ 9578~ Tropical      25     </span></a>
+<a class="sourceLine" id="cb4-149" data-line-number="149"><span class="co">#&gt;  2 51    Bada~ bada~ 29.46 110.~ 49       4534~ 3259~ Other         25     </span></a>
+<a class="sourceLine" id="cb4-150" data-line-number="150"><span class="co">#&gt;  3 52    Baot~ baot~ 33.5  111.~ 49       5873~ 3706~ Other         25     </span></a>
+<a class="sourceLine" id="cb4-151" data-line-number="151"><span class="co">#&gt;  4 45    Barr~ barr~ 9.15  -79.~ 17       6267~ 1012~ Tropical      50     </span></a>
+<a class="sourceLine" id="cb4-152" data-line-number="152"><span class="co">#&gt;  5 18    Buki~ buki~ 1.35  103.~ 48       3642~ 1492~ Tropical      4      </span></a>
+<a class="sourceLine" id="cb4-153" data-line-number="153"><span class="co">#&gt;  6 53    Chan~ chan~ 42.38 128.~ 52       4245~ 4692~ Other         25     </span></a>
+<a class="sourceLine" id="cb4-154" data-line-number="154"><span class="co">#&gt;  7 46    Coco~ coco~ 8.99  -79.~ 17       6520~ 9937~ Tropical      4      </span></a>
+<a class="sourceLine" id="cb4-155" data-line-number="155"><span class="co">#&gt;  8 14    Danu~ danu~ 5.1   117.~ 50       5762~ 5639~ Tropical      50     </span></a>
+<a class="sourceLine" id="cb4-156" data-line-number="156"><span class="co">#&gt;  9 7     Ding~ ding~ 23.17 112.~ 49       6546~ 2563~ Tropical      20     </span></a>
+<a class="sourceLine" id="cb4-157" data-line-number="157"><span class="co">#&gt; 10 25    Doi ~ doi ~ 18.58 98.43 47       4402~ 2054~ Tropical      15     </span></a>
+<a class="sourceLine" id="cb4-158" data-line-number="158"><span class="co">#&gt; # ... with 53 more rows, and 2 more variables: E &lt;chr&gt;,</span></a>
+<a class="sourceLine" id="cb4-159" data-line-number="159"><span class="co">#&gt; #   wsg.site.name &lt;chr&gt;</span></a></code></pre></div>
 </div>
 <div id="code-of-conduct" class="section level2">
 <h2 class="hasAnchor">

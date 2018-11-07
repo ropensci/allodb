@@ -41,11 +41,11 @@ invalid <- tibble::tibble(
 )
 
 test_that("all equations depend on dbh (i.e. evaluation errors = 0) (#54)", {
-  skip("FIXME: Problematic equaitons remain (#54)")
+  skip("FIXME: Problematic equations remain (#54)")
   expect_equal(nrow(invalid), 0)
 })
 
-test_that("FIXME: Problems in equaitons (#54)", {
+test_that("FIXME: Problems in equations (#54)", {
   problems <- glue::glue_collapse(unique(invalid$messages), sep = '\n')
   rlang::warn(glue::glue("Problems to fix:\n {problems}"))
 })

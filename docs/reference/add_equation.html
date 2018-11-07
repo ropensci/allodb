@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Drop rows known to contain problematic equations. — drop_bad_equations • allodb</title>
+<title>Add the column <code>equation_allometry</code> to a census dataframe. — add_equation • allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Drop rows known to contain problematic equations. — drop_bad_equations" />
+<meta property="og:title" content="Add the column <code>equation_allometry</code> to a census dataframe. — add_equation" />
 
-<meta property="og:description" content="Drop rows known to contain problematic equations." />
+<meta property="og:description" content="Add the column equation_allometry to a census dataframe." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -103,25 +103,34 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Drop rows known to contain problematic equations.</h1>
+    <h1>Add the column <code>equation_allometry</code> to a census dataframe.</h1>
     <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/drop_bad_equations.R'><code>R/drop_bad_equations.R</code></a></small>
-    <div class="hidden name"><code>drop_bad_equations.Rd</code></div>
+    <div class="hidden name"><code>add_equation.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Drop rows known to contain problematic equations.</p>
+    <p>Add the column <code>equation_allometry</code> to a census dataframe.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>drop_bad_equations</span>(<span class='no'>.data</span>)</pre>
+    <pre class="usage"><span class='fu'>add_equation</span>(<span class='no'>census</span>, <span class='no'>equations</span>, <span class='kw'>.f</span> <span class='kw'>=</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='no'><a href='http://dplyr.tidyverse.org/reference/join.html'>inner_join</a></span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>.data</th>
-      <td><p>An <strong>allodb</strong> dataframe with the variable <code>equation_id</code>.</p></td>
+      <th>census</th>
+      <td><p>A ForestGEO-like census dataframe, with columns <code>sp</code> <code>dbh</code>.</p></td>
+    </tr>
+    <tr>
+      <th>equations</th>
+      <td><p>A dataframe with columns <code>sp</code> and <code>equation_allometry</code>.</p></td>
+    </tr>
+    <tr>
+      <th>.f</th>
+      <td><p>A <code>dplyr::*_join()</code> function -- e.g. <code><a href='http://dplyr.tidyverse.org/reference/join.html'>dplyr::left_join()</a></code>
+<code><a href='http://dplyr.tidyverse.org/reference/join.html'>dplyr::full_join()</a></code> <code><a href='http://dplyr.tidyverse.org/reference/join.html'>dplyr::inner_join()</a></code> (default).</p></td>
     </tr>
     </table>
     
@@ -131,35 +140,23 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>drop_bad_equations</span>(<span class='fu'><a href='master.html'>master</a></span>())</div><div class='output co'>#&gt; # A tibble: 685 x 62
-#&gt;    ref_id equation_allome~ equation_id equation_form dependent_varia~
-#&gt;    &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;           
-#&gt;  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
-#&gt;  2 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
-#&gt;  3 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
-#&gt;  4 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
-#&gt;  5 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt;  6 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt;  7 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt;  8 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt;  9 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt; 10 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#&gt; # ... with 675 more rows, and 57 more variables: independent_variable &lt;chr&gt;,
-#&gt; #   allometry_specificity &lt;chr&gt;, geographic_area &lt;chr&gt;, dbh_min_cm &lt;chr&gt;,
-#&gt; #   dbh_max_cm &lt;chr&gt;, sample_size &lt;chr&gt;, dbh_units_original &lt;chr&gt;,
-#&gt; #   biomass_units_original &lt;chr&gt;, allometry_development_method &lt;chr&gt;,
-#&gt; #   regression_model &lt;chr&gt;, other_equations_tested &lt;chr&gt;, log_biomass &lt;chr&gt;,
-#&gt; #   bias_corrected &lt;chr&gt;, bias_correction_factor &lt;chr&gt;,
-#&gt; #   notes_fitting_model &lt;chr&gt;, original_data_availability &lt;chr&gt;, warning &lt;chr&gt;,
-#&gt; #   site &lt;chr&gt;, family &lt;chr&gt;, species &lt;chr&gt;, species_code &lt;chr&gt;,
-#&gt; #   life_form &lt;chr&gt;, equation_group &lt;chr&gt;, equation_taxa &lt;chr&gt;,
-#&gt; #   notes_on_species &lt;chr&gt;, wsg_id &lt;chr&gt;, wsg_specificity &lt;chr&gt;, X16 &lt;chr&gt;,
-#&gt; #   X17 &lt;chr&gt;, X18 &lt;chr&gt;, X19 &lt;chr&gt;, X20 &lt;chr&gt;, X21 &lt;chr&gt;, X22 &lt;chr&gt;,
-#&gt; #   X23 &lt;chr&gt;, X24 &lt;chr&gt;, X25 &lt;chr&gt;, X26 &lt;chr&gt;, X27 &lt;chr&gt;, X28 &lt;chr&gt;,
-#&gt; #   X29 &lt;chr&gt;, X30 &lt;chr&gt;, X31 &lt;chr&gt;, X32 &lt;chr&gt;, X33 &lt;chr&gt;, X34 &lt;chr&gt;, id &lt;chr&gt;,
-#&gt; #   Site &lt;chr&gt;, lat &lt;chr&gt;, long &lt;chr&gt;, UTM_Zone &lt;chr&gt;, UTM_X &lt;chr&gt;,
-#&gt; #   UTM_Y &lt;chr&gt;, intertropical &lt;chr&gt;, size.ha &lt;chr&gt;, E &lt;chr&gt;,
-#&gt; #   wsg.site.name &lt;chr&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>equations</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pick_equations.html'>pick_equations</a></span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='st'>"species"</span>)
+<span class='fu'>add_equation</span>(<span class='kw'>census</span> <span class='kw'>=</span> <span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_tree1</a></span>, <span class='no'>equations</span>)</div><div class='output co'>#&gt; <span class='message'>Joining, by = "sp"</span></div><div class='output co'>#&gt; # A tibble: 56,765 x 21
+#&gt;    treeID stemID tag   StemTag sp    quadrat    gx    gy DBHID CensusID   dbh
+#&gt;     &lt;int&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;    &lt;int&gt; &lt;dbl&gt;
+#&gt;  1      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
+#&gt;  2      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
+#&gt;  3      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
+#&gt;  4      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
+#&gt;  5      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
+#&gt;  6     21     21 20064 1       litu  0217     31.4 322.     69        1  232.
+#&gt;  7     21     21 20064 1       litu  0217     31.4 322.     69        1  232.
+#&gt;  8     21     21 20064 1       litu  0217     31.4 322.     69        1  232.
+#&gt;  9     21     21 20064 1       litu  0217     31.4 322.     69        1  232.
+#&gt; 10     29     29 20151 1       acru  0203     31.5  45.8   130        1  326.
+#&gt; # ... with 56,755 more rows, and 10 more variables: pom &lt;chr&gt;, hom &lt;dbl&gt;,
+#&gt; #   ExactDate &lt;chr&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;, nostems &lt;dbl&gt;, date &lt;dbl&gt;,
+#&gt; #   status &lt;chr&gt;, agb &lt;dbl&gt;, equation_allometry &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

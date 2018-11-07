@@ -33,10 +33,44 @@ For details in how to install packages from GitHub see [this article](https://fg
 
 ## Example
 
-```{r}
+```{r, message=FALSE}
+library(dplyr)
 library(allodb)
-library(tibble)
+```
 
+### Workflow
+
+This workflow is had-hoc and incomplete. For now it is tested only for equaitons at the species-level.
+
+```{r}
+census <- scbi_tree1
+# Some equaitons are dropped via allodb:::drop_bad_equations()
+eqn <- pick_equations(scbi_species, "species")
+census_eqn <- add_equation(census, eqn)
+
+# Using head() to compute only on a few rows -- for speed
+result <- add_biomass(head(census_eqn))
+
+# Relevant columns
+select(
+  result, 
+  equation_allometry, dbh, biomass
+)
+```
+
+Same
+
+```{r}
+census %>% 
+  add_equation(eqn) %>% 
+  head() %>% 
+  add_biomass() %>% 
+  select(equation_allometry, dbh, biomass)
+```
+
+### Tables
+
+```{r}
 equations
 equations_metadata
 

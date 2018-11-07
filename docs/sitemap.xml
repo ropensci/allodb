@@ -4,6 +4,12 @@
     <loc>https://forestgeo.github.io/allodb//index.html</loc>
   </url>
   <url>
+    <loc>https://forestgeo.github.io/allodb//reference/add_biomass.html</loc>
+  </url>
+  <url>
+    <loc>https://forestgeo.github.io/allodb//reference/add_equation.html</loc>
+  </url>
+  <url>
     <loc>https://forestgeo.github.io/allodb//reference/allodb-package.html</loc>
   </url>
   <url>
@@ -23,6 +29,12 @@
   </url>
   <url>
     <loc>https://forestgeo.github.io/allodb//reference/missing_values_metadata.html</loc>
+  </url>
+  <url>
+    <loc>https://forestgeo.github.io/allodb//reference/pick_equations.html</loc>
+  </url>
+  <url>
+    <loc>https://forestgeo.github.io/allodb//reference/pipe.html</loc>
   </url>
   <url>
     <loc>https://forestgeo.github.io/allodb//reference/references_metadata.html</loc>

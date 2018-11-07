@@ -28,7 +28,7 @@ above-ground biomass (AGB) per species at ForestGEO sites:
 }
 \details{
 \itemize{
-\item equation_id: Unique equation identification number given arbitrarely.
+\item equation_id: Random, unique equation-identifier.
 \item equation_form: FIXME.
 }
 }
