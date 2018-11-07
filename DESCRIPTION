@@ -26,12 +26,12 @@ Depends:
     R (>= 3.1)
 Imports: 
     dplyr,
-    readr,
-    utils,
-    rlang,
-    glue,
     fgeo.base,
-    magrittr
+    glue,
+    magrittr,
+    readr,
+    rlang,
+    utils
 Suggests: 
     covr,
     fs,
@@ -43,6 +43,8 @@ Suggests:
     tidyr
 VignetteBuilder: 
     knitr
+Remotes: 
+    forestgeo/fgeo.base
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
