@@ -1,16 +1,15 @@
 context("drop_bad_equations")
 
-equations <- drop_bad_equations(master())
+library(purrr)
 
-test_that("drops bad equations", {
-  id <- equations$equation_id
-  expect_false(any(id %in% bad_eqn_id))
-})
+equations <- drop_bad_equations(master())
 
 test_that("errs with informative message", {
   eqn <- dplyr::rename(equations, bad_id = equation_id)
-  expect_error(drop_bad_equations(eqn), "must have.*equation_id")
+  expect_error(drop_bad_equations(eqn), "Ensure your data")
 })
+
+
 
 context("pick_specificity")
 
@@ -61,9 +60,4 @@ test_that("with census table adds dbh", {
   out <- add_equation(scbi_tree1, eqn_sp)
   expect_named(out, c(names(scbi_tree1), "equation_allometry"))
 })
-
-
-context("pick_equations")
-
-eqn <- pick_equations(allodb::scbi_species, "species")
 

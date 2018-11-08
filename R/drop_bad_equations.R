@@ -116,15 +116,40 @@ add_biomass <- function(.data) {
 #' @examples
 #' drop_bad_equations(master())
 drop_bad_equations <- function(.data) {
-  if (utils::hasName(.data, "equation_id"))
-    return(dplyr::filter(.data, ! .data$equation_id %in% bad_eqn_id))
+  check_crucial_names(.data, "equation_id")
 
-  col_nms <- glue::glue_collapse(
-    rlang::expr_label(names(.data)), sep = ', ', last = ' and '
-  )
-  rlang::abort(glue::glue("
-    `.data` must have the column `equation_id`
-    Columns found:
-    {col_nms}.
-  "))
+  bad_equations <- bad_eqn_id(.data)
+  dplyr::filter(.data, !.data$equation_id %in% bad_equations)
+}
+
+bad_eqn_id <- function(.data) {
+  funs <- c(eval_eqn, format_eqn)
+  funs %>%
+    purrr::map(~bad_eqn(.data, .x)) %>%
+    unlist() %>%
+    unique()
+}
+
+bad_eqn <- function(.data, .f) {
+  ok <- purrr::quietly(purrr::map_lgl)(some_error(.data, .f), is.null)$result
+  unique(.data[!ok, ][["equation_id"]])
+}
+
+some_error <- function(.data, .f) {
+  suppressWarnings({
+    .data %>%
+      dplyr::pull("equation_allometry") %>%
+      purrr::map(purrr::safely(.f)) %>%
+      purrr::transpose() %>%
+      purrr::pluck("error")
+  })
+}
+
+eval_eqn <- function(txt) {
+  out <- eval(parse(text = txt), envir = list(dbh = 10))
+  if (is.nan(out)) stop("Bad equation", call. = FALSE)
+}
+
+format_eqn <- function(text) {
+  formatR::tidy_source(text = text)$text.tidy
 }

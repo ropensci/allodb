@@ -25,4 +25,3 @@ master <- function(.f = dplyr::full_join) {
     .f(eqn_site, allodb::sites_info, by = "site")
   })
 }
-
