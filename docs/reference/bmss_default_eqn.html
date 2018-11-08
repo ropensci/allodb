@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pick equations from <strong>allodb</strong>. — pick_equations • allodb</title>
+<title>Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table. — bmss_default_eqn • allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,10 +30,17 @@
 
 
 
-<meta property="og:title" content="Pick equations from <strong>allodb</strong>. — pick_equations" />
+<meta property="og:title" content="Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table. — bmss_default_eqn" />
 
-<meta property="og:description" content="From all equations in allodb, pick equations for a given site and
-specificity." />
+<meta property="og:description" content="This function restructures an equations-table from allodb with columns as
+in allodb_eqn_crucial() (e.g. allodb::master()). It transforms its input
+into a default-equations table for bmss:
+It drops problematic equations that can't be evaluated.
+It adds and remove columns.
+It renames columns.
+It transforms text-values to lowercase.
+It formats equations using formatR::tidy_source().
+" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -104,31 +111,33 @@ specificity." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Pick equations from <strong>allodb</strong>.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/drop_bad_equations.R'><code>R/drop_bad_equations.R</code></a></small>
-    <div class="hidden name"><code>pick_equations.Rd</code></div>
+    <h1>Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/bmss_default_eqn.R'><code>R/bmss_default_eqn.R</code></a></small>
+    <div class="hidden name"><code>bmss_default_eqn.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>From all equations in <strong>allodb</strong>, pick equations for a given site and
-specificity.</p>
+    <p>This function restructures an equations-table from <strong>allodb</strong> with columns as
+in <code><a href='allodb_eqn_crucial.html'>allodb_eqn_crucial()</a></code> (e.g. <code><a href='master.html'>allodb::master()</a></code>). It transforms its input
+into a default-equations table for <strong>bmss</strong>:</p><ul>
+<li><p>It drops problematic equations that can't be evaluated.</p></li>
+<li><p>It adds and remove columns.</p></li>
+<li><p>It renames columns.</p></li>
+<li><p>It transforms text-values to lowercase.</p></li>
+<li><p>It formats equations using <code><a href='http://www.rdocumentation.org/packages/formatR/topics/tidy_source'>formatR::tidy_source()</a></code>.</p></li>
+</ul>
     
     </div>
 
-    <pre class="usage"><span class='fu'>pick_equations</span>(<span class='no'>site_species</span>, <span class='no'>specificity</span>)</pre>
+    <pre class="usage"><span class='fu'>bmss_default_eqn</span>(<span class='no'>.data</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>site_species</th>
-      <td><p>Dataframe. The species table of a ForestGEO site.</p></td>
-    </tr>
-    <tr>
-      <th>specificity</th>
-      <td><p>String to match values from
-<code>allodb::equations$allometry_specificity</code>.</p></td>
+      <th>.data</th>
+      <td><p><code><a href='master.html'>allodb::master()</a></code> or similar.</p></td>
     </tr>
     </table>
     
@@ -138,35 +147,20 @@ specificity.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>pick_equations</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='st'>"species"</span>)</div><div class='output co'>#&gt; # A tibble: 314 x 63
-#&gt;    ref_id equation_allome~ equation_id equation_form dependent_varia~
-#&gt;    &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;           
-#&gt;  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
-#&gt;  2 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
-#&gt;  3 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
-#&gt;  4 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
-#&gt;  5 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
-#&gt;  6 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
-#&gt;  7 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
-#&gt;  8 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~
-#&gt;  9 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~
-#&gt; 10 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~
-#&gt; # ... with 304 more rows, and 58 more variables: independent_variable &lt;chr&gt;,
-#&gt; #   allometry_specificity &lt;chr&gt;, geographic_area &lt;chr&gt;, dbh_min_cm &lt;chr&gt;,
-#&gt; #   dbh_max_cm &lt;chr&gt;, sample_size &lt;chr&gt;, dbh_units_original &lt;chr&gt;,
-#&gt; #   biomass_units_original &lt;chr&gt;, allometry_development_method &lt;chr&gt;,
-#&gt; #   regression_model &lt;chr&gt;, other_equations_tested &lt;chr&gt;, log_biomass &lt;chr&gt;,
-#&gt; #   bias_corrected &lt;chr&gt;, bias_correction_factor &lt;chr&gt;,
-#&gt; #   notes_fitting_model &lt;chr&gt;, original_data_availability &lt;chr&gt;, warning &lt;chr&gt;,
-#&gt; #   site &lt;chr&gt;, family &lt;chr&gt;, species &lt;chr&gt;, species_code &lt;chr&gt;,
-#&gt; #   life_form &lt;chr&gt;, equation_group &lt;chr&gt;, equation_taxa &lt;chr&gt;,
-#&gt; #   notes_on_species &lt;chr&gt;, wsg_id &lt;chr&gt;, wsg_specificity &lt;chr&gt;, X16 &lt;chr&gt;,
-#&gt; #   X17 &lt;chr&gt;, X18 &lt;chr&gt;, X19 &lt;chr&gt;, X20 &lt;chr&gt;, X21 &lt;chr&gt;, X22 &lt;chr&gt;,
-#&gt; #   X23 &lt;chr&gt;, X24 &lt;chr&gt;, X25 &lt;chr&gt;, X26 &lt;chr&gt;, X27 &lt;chr&gt;, X28 &lt;chr&gt;,
-#&gt; #   X29 &lt;chr&gt;, X30 &lt;chr&gt;, X31 &lt;chr&gt;, X32 &lt;chr&gt;, X33 &lt;chr&gt;, X34 &lt;chr&gt;, id &lt;chr&gt;,
-#&gt; #   Site &lt;chr&gt;, lat &lt;chr&gt;, long &lt;chr&gt;, UTM_Zone &lt;chr&gt;, UTM_X &lt;chr&gt;,
-#&gt; #   UTM_Y &lt;chr&gt;, intertropical &lt;chr&gt;, size.ha &lt;chr&gt;, E &lt;chr&gt;,
-#&gt; #   wsg.site.name &lt;chr&gt;, sp &lt;chr&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>bmss_default_eqn</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/allodb/topics/master'>master</a></span>())</div><div class='output co'>#&gt; # A tibble: 684 x 5
+#&gt;    site       sp                eqn                         eqn_source eqn_type
+#&gt;    &lt;chr&gt;      &lt;chr&gt;             &lt;chr&gt;                       &lt;chr&gt;      &lt;chr&gt;   
+#&gt;  1 lilly dic~ acer rubrum       10^(1.1891 + 1.419 * (log1~ default    species 
+#&gt;  2 tyson      acer rubrum       10^(1.1891 + 1.419 * (log1~ default    species 
+#&gt;  3 lilly dic~ acer saccharum    10^(1.2315 + 1.6376 * (log~ default    species 
+#&gt;  4 tyson      acer saccharum    10^(1.2315 + 1.6376 * (log~ default    species 
+#&gt;  5 lilly dic~ amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
+#&gt;  6 scbi       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
+#&gt;  7 serc       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
+#&gt;  8 serc       amelanchier cana~ exp(7.217 + 1.514 * log(db~ default    genus   
+#&gt;  9 tyson      amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
+#&gt; 10 umbc       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
+#&gt; # ... with 674 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

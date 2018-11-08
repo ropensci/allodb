@@ -2,19 +2,30 @@
 % Please edit documentation in R/bmss_default_eqn.R
 \name{bmss_default_eqn}
 \alias{bmss_default_eqn}
-\title{Structure equaitons from \strong{allodb} as a \strong{bmss} default-equations table.}
+\title{Structure equations from \strong{allodb} as a \strong{bmss} default-equations table.}
 \usage{
 bmss_default_eqn(.data)
 }
 \arguments{
-\item{.data}{An object of class 'allodb_eqn' built with \code{\link[allodb:master]{allodb::master()}}.}
+\item{.data}{\code{\link[allodb:master]{allodb::master()}} or similar.}
 }
 \value{
 A dataframe.
 }
 \description{
-Structure equaitons from \strong{allodb} as a \strong{bmss} default-equations table.
+This function restructures an equations-table from \strong{allodb} with columns as
+in \code{\link[=allodb_eqn_crucial]{allodb_eqn_crucial()}} (e.g. \code{\link[allodb:master]{allodb::master()}}). It transforms its input
+into a default-equations table for \strong{bmss}. Now this function is very
+strict and intrusive:
+\itemize{
+\item It drops problematic equations that can't be evaluated.
+\item It adds and remove columns.
+\item It renames columns.
+\item It transforms text-values to lowercase to simplify matching.
+\item It formats equations using \code{\link[formatR:tidy_source]{formatR::tidy_source()}}.
+\item It drops missing values.
+}
 }
 \examples{
-bmss_default_eqn()
+bmss_default_eqn(allodb::master())
 }

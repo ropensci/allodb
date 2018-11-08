@@ -32,7 +32,8 @@ Imports:
     readr,
     rlang,
     utils,
-    stats
+    stats,
+    formatR
 Suggests: 
     covr,
     fs,
@@ -50,4 +51,4 @@ Remotes:
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
