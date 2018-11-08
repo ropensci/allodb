@@ -24,14 +24,16 @@ pick_specificity <- function(.data, specificity) {
   check_specificity(.data, .specificity)
 
   .data %>%
-    dplyr::mutate(allometry_specificity = tolower(allometry_specificity)) %>%
-    dplyr::filter(allometry_specificity %in% .specificity)
+    dplyr::mutate(
+      allometry_specificity = tolower(.data$allometry_specificity)
+    ) %>%
+    dplyr::filter(.data$allometry_specificity %in% .specificity)
 }
 
 check_specificity <- function(.data, .specificity) {
   check_crucial_names(.data, "allometry_specificity")
 
-  valid <- tolower(na.omit(unique(.data$allometry_specificity)))
+  valid <- tolower(stats::na.omit(unique(.data$allometry_specificity)))
   if (!any(.specificity %in% valid)) {
     valid_values <- glue::glue_collapse(
       rlang::expr_label(valid),
@@ -93,11 +95,11 @@ add_equation <- function(census, equations, .f = dplyr::inner_join) {
 add_biomass <- function(.data) {
   check_crucial_names(.data, c("equation_allometry"))
 
-  biomass <- purrr::map2_dbl(
+  .biomass <- purrr::map2_dbl(
     .data$equation_allometry, .data$dbh,
     ~eval(parse(text = .x), envir = list(dbh = .y))
   )
-  tibble::add_column(.data, biomass)
+  dplyr::mutate(.data, biomass = .biomass)
 }
 
 

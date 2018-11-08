@@ -31,15 +31,17 @@ Imports:
     magrittr,
     readr,
     rlang,
-    utils
+    utils,
+    stats
 Suggests: 
     covr,
     fs,
     here,
-    knitr (>= 1.17),
+    knitr,
     purrr,
     rmarkdown (>= 1.7),
     testthat,
+    tibble,
     tidyr
 VignetteBuilder: 
     knitr

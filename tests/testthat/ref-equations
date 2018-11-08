@@ -44,6 +44,136 @@
 43        jenkins_2004_cdod
 44        jenkins_2004_cdod
 45        jenkins_2004_cdod
+46        jenkins_2004_cdod
+47        jenkins_2004_cdod
+48        jenkins_2004_cdod
+49        jenkins_2004_cdod
+50          smith_1983_abef
+51          smith_1983_abef
+52        jenkins_2004_cdod
+53        jenkins_2004_cdod
+54        jenkins_2004_cdod
+55          smith_1983_abef
+56        jenkins_2004_cdod
+57        jenkins_2004_cdod
+58        jenkins_2004_cdod
+59        jenkins_2004_cdod
+60        jenkins_2004_cdod
+61        jenkins_2004_cdod
+62        jenkins_2004_cdod
+63        jenkins_2004_cdod
+64        jenkins_2004_cdod
+65        jenkins_2004_cdod
+66        jenkins_2004_cdod
+67        jenkins_2004_cdod
+68        jenkins_2004_cdod
+69        jenkins_2004_cdod
+70         bridge_1979_fpom
+71      chojnacky_2014_ugbe
+72        jenkins_2004_cdod
+73         sneill_1983_pcwa
+74         sneill_1983_pcwa
+75         sneill_1983_pcwa
+76        halpern_1996_efpa
+77        russell_2005_ebic
+78             means_768_NA
+79        jenkins_2004_cdod
+80         sneill_1983_pcwa
+81         sneill_1983_pcwa
+82         sneill_1983_pcwa
+83        jenkins_2004_cdod
+84        jenkins_2004_cdod
+85      chojnacky_2014_ugbe
+86             means_301_NA
+87        jenkins_2004_cdod
+88             means_991_NA
+89      chojnacky_2014_ugbe
+90        coltrin_2010_bqol
+91             means_133_NA
+92        jenkins_2004_cdod
+93        jenkins_2004_cdod
+94        jenkins_2004_cdod
+95        jenkins_2004_cdod
+96      chojnacky_2014_ugbe
+97        jenkins_2004_cdod
+98        jenkins_2004_cdod
+99        jenkins_2004_cdod
+100       jenkins_2004_cdod
+101       jenkins_2004_cdod
+102       jenkins_2004_cdod
+103       jenkins_2004_cdod
+104       jenkins_2004_cdod
+105       jenkins_2004_cdod
+106       jenkins_2004_cdod
+107       jenkins_2004_cdod
+108       jenkins_2004_cdod
+109       jenkins_2004_cdod
+110             means_28_NA
+111             means_27_NA
+112            means_253_NA
+113             means_20_NA
+114             means_19_NA
+115             means_22_NA
+116             means_21_NA
+117       jenkins_2004_cdod
+118       jenkins_2004_cdod
+119            means_767_NA
+120     chojnacky_2014_ugbe
+121           means_1107_NA
+122     chojnacky_2014_ugbe
+123       jenkins_2004_cdod
+124       jenkins_2004_cdod
+125       jenkins_2004_cdod
+126            means_187_NA
+127          fenn_2014_tcco
+128          fenn_2014_tcco
+129          fenn_2014_tcco
+130          fenn_2014_tcco
+131       jenkins_2004_cdod
+132       westman_1998_absa
+133       jenkins_2004_cdod
+134            means_736_NA
+135       jenkins_2004_cdod
+136            means_740_NA
+137            means_784_NA
+138          lutz_2014_ccaa
+139          lutz_2014_ccaa
+140          lutz_2014_ccaa
+141     muukkonen_2007_gava
+142     muukkonen_2007_gava
+143            means_323_NA
+144     chojnacky_2014_ugbe
+145     chojnacky_1984_vabf
+146       jenkins_2004_cdod
+147     chojnacky_2014_ugbe
+148       jenkins_2004_cdod
+149     chojnacky_2014_ugbe
+150         grier_1992_bdap
+151         gower_1992_cdor
+152         gower_1992_cdor
+153         gower_1992_cdor
+154         gower_1992_cdor
+155     chojnacky_1993_cwvt
+156       jenkins_2004_cdod
+157   baskerville_1966_dnpi
+158         yarie_2007_abef
+159 bond-lamberty_2002_aabb
+160         singh_1984_befs
+161         singh_1984_befs
+162 bond-lamberty_2002_aabb
+163         singh_1984_befs
+164 bond-lamberty_2002_aabb
+165         singh_1984_befs
+166 bond-lamberty_2002_aabb
+167            he_2018_daef
+168            he_2018_daef
+169          bohn_2014_ocai
+170          bohn_2014_ocai
+171          bohn_2014_ocai
+172          bohn_2014_ocai
+173          bohn_2014_ocai
+174          bohn_2014_ocai
+175          bohn_2014_ocai
                                                     equation_allometry
 1                                     10^(1.1891+1.419*(log10(dbh^2)))
 2                                    10^(1.2315+1.6376*(log10(dbh^2)))
@@ -90,6 +220,136 @@
 43                                               1.5416*(dbh^2)^2.7818
 44                                         exp(5.2831+2.0369*log(dbh))
 45                                        10^(1.83+2.464*(log10(dbh)))
+46                                              2.49193*(dbh^2)^2.7727
+47                                                 1.8082*(dbh^2.6174)
+48                                              2.30252*(dbh^2)^1.6839
+49                                             2.23731*(dbh^2)^1.26394
+50                                                  37.637*(dba^2.779)
+51                                                   43.992*(dba^2.86)
+52                                   10^(1.3539+1.3412*(log10(dbh^2)))
+53                                              2.17565*(dbh^2)^1.2481
+54                                             2.04282*(dbh^2)^1.25462
+55                                                  29.615*(dba^3.243)
+56                                      10^(2.1112+2.462*(log10(dbh)))
+57                                             2.76583*(dbh^2)^1.15849
+58                                             1.72982*(dbh^2)^1.27422
+59                                      10^(-1.236+2.635*(log10(dbh)))
+60                                             2.56795*(dbh^2)^1.18685
+61                                             1.57573*(dbh^2)^1.29005
+62                                             2.51502*(dbh^2)^1.19256
+63                                   10^(1.2696+1.3889*(log10(dbh^2)))
+64                                      10^(-1.266+2.613*(log10(dbh)))
+65                                      10^(-1.283+2.685*(log10(dbh)))
+66                                             2.30252*(dbh^2)^1.25795
+67                                       10^(-1.587+2.91*(log10(dbh)))
+68                                         exp(4.9967+2.3944*log(dbh))
+69                                                 2.23*(dbh^2)^1.2153
+70                                      exp(-0.34052+2.65803*log(dbh))
+71                                        exp(-2.4441+2.4561*log(dbh))
+72                                                     4.72+(2.17*dbh)
+73                                         exp(3.8941+2.4839*log(dbh))
+74                                         exp(5.3224+2.2936*log(dbh))
+75                          exp(8.5385+(2.2969*log(dbh)))*645.704*1.05
+76                                           exp(2.025+3.527*log(dba))
+77                                                       51.68+0.02*BA
+78                                            exp(3.67+2.847*log(dba))
+79                                         exp(-2.5049+1.256*log(dbh))
+80                                         exp(3.2304+2.2774*log(dbh))
+81                                         exp(5.1792+2.0374*log(dbh))
+82                          exp(9.0717+(2.5169*log(dbh)))*419.814*1.22
+83                                  exp(-10.755+2.7308*dbh+1*log(dbh))
+84                                  exp(-0.4282+2.1772*dbh+1*log(dbh))
+85                                         exp(-2.677+2.4638*log(dbh))
+86                                       exp(4.98412+2.18584*log(dbh))
+87                                        exp(-3.9371+2.8427*log(dbh))
+88                                           exp(3.892+3.122*log(dba))
+89                                        exp(-2.7765+2.4195*log(dbh))
+90                                        exp(-2.1001+2.3996*log(dbh))
+91                                         exp(3.6123+2.9944*log(dba))
+92                                                  0.0752*(dbh^2.497)
+93                                    exp(-2.037+2.363*dbh+1*log(dbh))
+94                                    exp(-1.721+2.334*dbh+1*log(dbh))
+95                                         10^(-0.9+2.52*(log10(dbh)))
+96                                         exp(-2.5932+2.534*log(dbh))
+97                                                 0.08724*(dbh^2.587)
+98                                          exp(-2.474+2.555*log(dbh))
+99                                                   0.305*(dbh^2.014)
+100                                                 0.0777*(dbh^2.472)
+101                                                  0.153*(dbh^2.248)
+102                              9.1583+(-0.4291*dbh)+0.005799*(dbh^2)
+103                                     10^(-0.685+2.249*(log10(dbh)))
+104                             exp(-2.972-0.017*dbh+2.873*(log(dbh)))
+105                                                  0.091*(dbh^2.234)
+106                                  exp(6.9159+0.7003*dbh+1*log(dbh))
+107                                      10^(3.779+2.473*(log10(dbh)))
+108                         0.62+(0.8024*dbh)+0.1724*(dbh^2)+1*(dbh^3)
+109                                  exp(1.0152+1.6839*dbh+1*log(dbh))
+110                                        exp(2.7261+2.3324*log(dbh))
+111                                       exp(2.03496+2.1683*log(dbh))
+112                                      exp(3.892752+2.5812*log(dbh))
+113                                        exp(2.0791+2.5585*log(dbh))
+114                                        exp(3.4416+1.9278*log(dbh))
+115                                         exp(0.716+2.8796*log(dbh))
+116                                        exp(3.1689+2.6825*log(dbh))
+117                                        exp(7.2723+1.4835*log(dbh))
+118                                      exp(5.13118+2.15046*log(dbh))
+119                                          exp(3.769+3.033*log(dba))
+120                                       exp(-2.6177+2.4638*log(dbh))
+121                                          exp(2.855+2.334*log(dba))
+122                                       exp(-2.6327+2.4757*log(dbh))
+123                                exp(3.34884+2.45446*dbh+1*log(dbh))
+124                                       exp(-3463.8+1083.9*log(dbh))
+125                                       10^(3.68+2.135*(log10(dbh)))
+126                                        exp(3.761+2.37498*log(dba))
+127                             exp(-5.41227+(2.491767*(log(pi*dbh))))
+128                              exp(-5.644074+(2.5189*(log(pi*dbh))))
+129                              exp(-5.308133+(2.4882*(log(pi*dbh))))
+130                              exp(-5.284602+(2.4882*(log(pi*dbh))))
+131                                exp(-10.8036+2.7727*dbh+1*log(dbh))
+132                                       exp(4.36982+2.5043*log(dbh))
+133                                 exp(-10.7955+2.759*dbh+1*log(dbh))
+134                                        exp(3.3186+2.6846*log(dba))
+135                                exp(-11.7031+2.7818*dbh+1*log(dbh))
+136                                        exp(3.5247+2.2043*log(dba))
+137                                         exp(3.6471+2.532*log(dba))
+138                                          exp(5.965+1.469*log(dbh))
+139                                          exp(5.089+1.883*log(dbh))
+140                                          exp(2.749+2.306*log(dba))
+141                              exp(-1.694+10.825*(dbh/(dbh+11.816)))
+142                               exp(0.006+10.933*(dbh/(dbh+21.216)))
+143                                      exp(4.070762+2.4028*log(dba))
+144                                       exp(-3.1774+2.6426*log(dbh))
+145                                                0.0104*(dba^2.7105)
+146                                              (-36.94)+0.42*(dbh^2)
+147                                          exp(3.03+2.5567*log(dbh))
+148                                            exp(3.63+2.54*log(dbh))
+149                                        exp(2.1364+2.3233*log(dbh))
+150                           1.468+2.582*(log10((dbh-10.603)/0.9823))
+151                                     10^(-1.024+2.416*(log10(dbh)))
+152                                     10^(-1.234+2.128*(log10(dbh)))
+153                                     10^(-2.336+2.650*(log10(dbh)))
+154                                     10^(-2.347+2.478*(log10(dbh)))
+155                                    exp(-0.86896+1.652882*log(dbh))
+156                                                 0.1231*(dba^2.242)
+157                                        10^(0.15+2.48*(log10(dbh)))
+158                             (-16809)+(2656.48*dbh)+248.416*(dbh^2)
+159                                      10^(2.648+0.715*(log10(dbh)))
+160                     7.06302+(-3.01775*dbh)+(dbh^2)-0.00329*(dbh^3)
+161            36.56038+(-10.6275*dbh)+0.93837*(dbh^2)-0.01032*(dbh^3)
+162       10^(3.011+1.202*(log10(dbh)-0.01(AGE)+0.011(log10(dbh)*AGE))
+163              1.51752+(-0.9688*dbh)+0.29833*(dbh^2)+0.00092*(dbh^3)
+164      10^(2.889+0.789*(log10(dbh)-0.014(AGE)+0.025(log10(dbh)*AGE))
+165           (-95.5471)+(21.1602*dbh)-1.04327*(dbh^2)+0.02434*(dbh^3)
+166                                       10^(2.481+1.19*(log10(dbh)))
+167                                                  49.52*(dba^2.027)
+168                                                  44.06*(dba^2.395)
+169 exp((1.029*(dbh-3.171))*(2*3.204+(dbh-3.171))/(3.204+(dbh-3.171)))
+170 exp((1.185*(dbh-3.676))*(2*5.657+(dbh-3.676))/(5.657+(dbh-3.676)))
+171 exp((1.202*(dbh-3.475))*(2*5.727+(dbh-3.475))/(5.727+(dbh-3.475)))
+172 exp((1.151*(dbh-3.586))*(2*5.187+(dbh-3.586))/(5.187+(dbh-3.586)))
+173 exp((1.192*(dbh-3.534))*(2*5.957+(dbh-3.534))/(5.957+(dbh-3.534)))
+174 exp((1.091*(dbh-3.671))*(2*6.394+(dbh-3.671))/(6.394+(dbh-3.671)))
+175 exp((1.266*(dbh-3.809))*(2*5.636+(dbh-3.809))/(5.636+(dbh-3.809)))
     equation_id                                  equation_form
 1        2060ea                        10^(a+b*(log10(DBH^c)))
 2        a4d879                        10^(a+b*(log10(DBH^c)))
@@ -136,6 +396,136 @@
 43       8da09d                                    a*(DBH^2)^b
 44       21800b                               exp(a+b*ln(DBH))
 45       6ea81f                          10^(a+b*(log10(DBH)))
+46       d7f1a6                                    a*(DBH^2)^b
+47       508dfe                                      a*(DBH^b)
+48       81397c                                    a*(DBH^2)^b
+49       6943b4                                    a*(DBH^2)^b
+50       a1646f                                      a*(DBA^b)
+51       b61369                                      a*(DBA^b)
+52       2c092b                        10^(a+b*(log10(DBH^c)))
+53       8eca60                                    a*(DBH^2)^b
+54       455839                                    a*(DBH^2)^b
+55       5e2dea                                      a*(DBA^b)
+56       281635                          10^(a+b*(log10(DBH)))
+57       b521bd                                    a*(DBH^2)^b
+58       6f6bc3                                    a*(DBH^2)^b
+59       c48e81                          10^(a+b*(log10(DBH)))
+60       e8ebc2                                    a*(DBH^2)^b
+61       73325b                                    a*(DBH^2)^b
+62       0a1212                                    a*(DBH^2)^b
+63       3172f7                        10^(a+b*(log10(DBH^c)))
+64       524aca                          10^(a+b*(log10(DBH)))
+65       162ce7                          10^(a+b*(log10(DBH)))
+66       0cc678                                    a*(DBH^2)^b
+67       f21996                          10^(a+b*(log10(DBH)))
+68       1d7c4c                               exp(a+b*ln(DBH))
+69       b40702                                    a*(DBH^2)^b
+70       23ec05                               exp(a+b*ln(DBH))
+71       829bad                               exp(a+b*ln(DBH))
+72       bebe2e                                      a+(b*DBH)
+73       b45a32                               exp(a+b*ln(DBH))
+74       c8c6f1                               exp(a+b*ln(DBH))
+75       785080                exp(a+(b*ln(DBH)))*645.704*1.05
+76       3cb95a                               exp(a+b*ln(DBA))
+77       c94845                                         a+b*BA
+78       6b3b2a                               exp(a+b*ln(DBA))
+79       7da4c9                               exp(a+b*ln(DBH))
+80       870336                               exp(a+b*ln(DBH))
+81       748d94                               exp(a+b*ln(DBH))
+82       5a774d                exp(a+(b*ln(DBH)))*419.814*1.22
+83       5ea2c1                       exp(a+b*DBH+c*(ln(DBH)))
+84       0bdd5e                       exp(a+b*DBH+c*(ln(DBH)))
+85       15b165                               exp(a+b*ln(DBH))
+86       4d8e54                               exp(a+b*ln(DBH))
+87       f94e03                               exp(a+b*ln(DBH))
+88       b95baf                               exp(a+b*ln(DBA))
+89       2ee3ae                               exp(a+b*ln(DBH))
+90       8470d2                               exp(a+b*ln(DBH))
+91       e8f868                               exp(a+b*ln(DBA))
+92       1badac                                      a*(DBH^b)
+93       5084bd                       exp(a+b*DBH+c*(ln(DBH)))
+94       138258                       exp(a+b*DBH+c*(ln(DBH)))
+95       77e37e                          10^(a+b*(log10(DBH)))
+96       5caff8                               exp(a+b*ln(DBH))
+97       382ee9                                      a*(DBH^b)
+98       d3f7ed                               exp(a+b*ln(DBH))
+99       01e863                                      a*(DBH^b)
+100      bce95d                                      a*(DBH^b)
+101      1d3182                                      a*(DBH^b)
+102      ecd464                          a+(b*DBH)+c*(DBH ^ d)
+103      687843                          10^(a+b*(log10(DBH)))
+104      82e78c                       exp(a+b*DBH+c*(ln(DBH)))
+105      c078ca                                      a*(DBH^b)
+106      1d44c6                       exp(a+b*DBH+c*(ln(DBH)))
+107      b570d4                          10^(a+b*(log10(DBH)))
+108      cab5a8                  a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+109      6b7404                       exp(a+b*DBH+c*(ln(DBH)))
+110      171b02                               exp(a+b*ln(DBH))
+111      23a23d                               exp(a+b*ln(DBH))
+112      677eda                               exp(a+b*ln(DBH))
+113      51f4e4                               exp(a+b*ln(DBH))
+114      61f888                               exp(a+b*ln(DBH))
+115      2d2a14                               exp(a+b*ln(DBH))
+116      7afe68                               exp(a+b*ln(DBH))
+117      678f25                               exp(a+b*ln(DBH))
+118      b9ebe4                               exp(a+b*ln(DBH))
+119      b9b3b0                               exp(a+b*ln(DBA))
+120      90c207                               exp(a+b*ln(DBH))
+121      e7bf91                               exp(a+b*ln(DBA))
+122      c8f882                               exp(a+b*ln(DBH))
+123      19bb04                       exp(a+b*DBH+c*(ln(DBH)))
+124      dc04c7                               exp(a+b*ln(DBH))
+125      e3edf1                          10^(a+b*(log10(DBH)))
+126      12104c                               exp(a+b*ln(DBA))
+127      fc521f                        exp(a+(b*(ln(pi*DBH))))
+128      f49bcb                        exp(a+(b*(ln(pi*DBH))))
+129      7bb5bd                        exp(a+(b*(ln(pi*DBH))))
+130      d635f1                        exp(a+(b*(ln(pi*DBH))))
+131      7aaa22                       exp(a+b*DBH+c*(ln(DBH)))
+132      1b9161                               exp(a+b*ln(DBH))
+133      f2943e                       exp(a+b*DBH+c*(ln(DBH)))
+134      014bb7                               exp(a+b*ln(DBA))
+135      7992d5                       exp(a+b*DBH+c*(ln(DBH)))
+136      604854                               exp(a+b*ln(DBA))
+137      a1cfac                               exp(a+b*ln(DBA))
+138      398df4                               exp(a+b*ln(DBH))
+139      3b860c                               exp(a+b*ln(DBH))
+140      969226                               exp(a+b*ln(DBA))
+141      e44bb9                         exp(a+b*(DBH/(DBH+c)))
+142      7b7468                         exp(a+b*(DBH/(DBH+c)))
+143      b30744                               exp(a+b*ln(DBA))
+144      74dd65                               exp(a+b*ln(DBH))
+145      998abf                                      a*(DBA^b)
+146      9f4b7d                            a+(b*DBH)+c*(DBH^d)
+147      57488c                               exp(a+b*ln(DBH))
+148      4b4063                               exp(a+b*ln(DBH))
+149    8.91E+12                               exp(a+b*ln(DBH))
+150      da0e89                               a+b*(log10(DBH))
+151      48557b                          10^(a+b*(log10(DBH)))
+152      697035                          10^(a+b*(log10(DBH)))
+153      9a977b                          10^(a+b*(log10(DBH)))
+154      a59bd5                          10^(a+b*(log10(DBH)))
+155      ecef00                               exp(a+b*ln(DBH))
+156      aeebe9                                      a*(DBA^b)
+157      e2c7c7                          10^(a+b*(log10(DBH)))
+158      686376                            a+(b*DBH)+c*(DBH^2)
+159      726f1d                          10^(a+b*(log10(DBH)))
+160      a5d599                  a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+161      ae60e9                  a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+162      2a6b9b 10^(a+b*(log10(DBH)+c(AGE)+d(log10(DBH)*AGE)))
+163      b47d78                  a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+164      7901c0 10^(a+b*(log10(DBH)+c(AGE)+d(log10(DBH)*AGE)))
+165      a5de78                  a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
+166      390a5a                          10^(a+b*(log10(DBH)))
+167      a3a86f                                      a*(DBA^b)
+168      1f17bb                                      a*(DBA^b)
+169      e57b77     exp((a*(DBH-c))*(2*b+(DBH-c))/(b+(DBH-c)))
+170      307ec5     exp((a*(DBH-c))*(2*b+(DBH-c))/(b+(DBH-c)))
+171      9f138f     exp((a*(DBH-c))*(2*b+(DBH-c))/(b+(DBH-c)))
+172      6a7382     exp((a*(DBH-c))*(2*b+(DBH-c))/(b+(DBH-c)))
+173      9e3b6a     exp((a*(DBH-c))*(2*b+(DBH-c))/(b+(DBH-c)))
+174      e42e41     exp((a*(DBH-c))*(2*b+(DBH-c))/(b+(DBH-c)))
+175      786b7c     exp((a*(DBH-c))*(2*b+(DBH-c))/(b+(DBH-c)))
          dependent_variable_biomass_component independent_variable
 1                   Total aboveground biomass                  DBH
 2                   Total aboveground biomass                  DBH
@@ -182,6 +572,136 @@
 43                   Stem and branches (live)                  DBH
 44                  Total aboveground biomass                  DBH
 45                  Total aboveground biomass                  DBH
+46                   Stem and branches (live)                  DBH
+47                   Stem and branches (live)                  DBH
+48                   Whole tree (above stump)                  DBH
+49                   Whole tree (above stump)                  DBH
+50                  Total aboveground biomass                  DBA
+51                  Total aboveground biomass                  DBA
+52                   Whole tree (above stump)                  DBH
+53                   Whole tree (above stump)                  DBH
+54                   Stem and branches (live)                  DBH
+55                  Total aboveground biomass                  DBA
+56                  Total aboveground biomass                  DBH
+57                   Whole tree (above stump)                  DBH
+58                   Whole tree (above stump)                  DBH
+59                  Total aboveground biomass                  DBH
+60                  Total aboveground biomass                  DBH
+61                   Whole tree (above stump)                  DBH
+62                   Whole tree (above stump)                  DBH
+63                  Total aboveground biomass                  DBH
+64                  Total aboveground biomass                  DBH
+65                  Total aboveground biomass                  DBH
+66                   Whole tree (above stump)                  DBH
+67                  Total aboveground biomass                  DBH
+68                  Total aboveground biomass                  DBH
+69                  Total aboveground biomass                  DBH
+70                   Whole tree (above stump)                  DBH
+71                  Total aboveground biomass                  DBH
+72                   Stem and branches (live)                  DBH
+73                                 Live crown                  DBH
+74                                 Dead crown                  DBH
+75                   Stem biomass (with bark)                  DBH
+76                  Total aboveground biomass                  DBA
+77                  Total aboveground biomass                  DBH
+78                  Total aboveground biomass                  DBA
+79                  Total aboveground biomass                  DBH
+80                                 Live crown                  DBH
+81                                 Dead crown                  DBH
+82                   Stem biomass (with bark)                  DBH
+83                   Stem biomass (with bark)                  DBH
+84   Crown biomass (branches, foliage, twigs)                  DBH
+85                  Total aboveground biomass                  DBH
+86                  Total aboveground biomass                  DBH
+87                  Total aboveground biomass                  DBH
+88                  Total aboveground biomass                  DBA
+89                  Total aboveground biomass                  DBH
+90                  Total aboveground biomass                  DBH
+91  Total aboveground biomass (wood and bark)                  DBA
+92                   Whole tree (above stump)                  DBH
+93                  Total aboveground biomass                  DBH
+94                  Total aboveground biomass                  DBH
+95                  Total aboveground biomass                  DBH
+96                  Total aboveground biomass                  DBH
+97                   Whole tree (above stump)                  DBH
+98                   Whole tree (aboveground)                  DBH
+99                   Whole tree (above stump)                  DBH
+100                  Whole tree (above stump)                  DBH
+101                  Whole tree (above stump)                  DBH
+102                  Whole tree (above stump)                  DBH
+103                 Total aboveground biomass                  DBH
+104                 Total aboveground biomass                  DBH
+105                  Whole tree (above stump)                  DBH
+106                 Total aboveground biomass                  DBH
+107                  Whole tree (above stump)                  DBH
+108                  Stem biomass (with bark)                  DBH
+109  Crown biomass (branches, foliage, twigs)                  DBH
+110                           Branches (live)                  DBH
+111                             Foliage total                  DBH
+112                              Stem biomass                  DBH
+113                           Branches (live)                  DBH
+114                             Foliage total                  DBH
+115                         Stem bark biomass                  DBH
+116               Stem biomass (without bark)                  DBH
+117                 Total aboveground biomass                  DBH
+118                  Whole tree (above stump)                  DBH
+119                 Total aboveground biomass                  DBA
+120                 Total aboveground biomass                  DBH
+121                 Total aboveground biomass                  DBA
+122                 Total aboveground biomass                  DBH
+123                 Total aboveground biomass                  DBH
+124                 Total aboveground biomass                  DBH
+125                  Whole tree (above stump)                  DBH
+126                 Total aboveground biomass                  DBA
+127                 Total aboveground biomass                  DBH
+128                 Total aboveground biomass                  DBH
+129                 Total aboveground biomass                  DBH
+130                 Total aboveground biomass                  DBH
+131                  Stem biomass (with bark)                  DBH
+132                 Total aboveground biomass                  DBH
+133                  Stem biomass (with bark)                  DBH
+134                 Total aboveground biomass                  DBA
+135                  Stem biomass (with bark)                  DBH
+136                 Total aboveground biomass                  DBA
+137                 Total aboveground biomass                  DBA
+138                 Total aboveground biomass                  DBH
+139                 Total aboveground biomass                  DBH
+140                 Total aboveground biomass                  DBA
+141                 Total aboveground biomass                  DBH
+142                 Total aboveground biomass                  DBH
+143                  Stem biomass (with bark)                  DBH
+144                 Total aboveground biomass                  DBH
+145                 Total aboveground biomass                  DBH
+146                 Total aboveground biomass                  DBH
+147                 Total aboveground biomass                  DBH
+148                 Total aboveground biomass                  DBH
+149                 Total aboveground biomass                  DBH
+150                 Total aboveground biomass                  DBH
+151               Stem biomass (without bark)                  DBH
+152                         Stem bark biomass                  DBH
+153                     Branches (live, dead)                  DBH
+154                             Total foliage                  DBH
+155                 Total aboveground biomass                  DBH
+156                 Total aboveground biomass                  DBH
+157                 Total aboveground biomass                  DBH
+158                 Total aboveground biomass                  DBH
+159                 Total aboveground biomass                  DBH
+160                 Total aboveground biomass                  DBH
+161                 Total aboveground biomass                  DBH
+162                 Total aboveground biomass                  DBH
+163                 Total aboveground biomass                  DBH
+164                 Total aboveground biomass                  DBH
+165                 Total aboveground biomass                  DBH
+166                 Total aboveground biomass                  DBH
+167                 Total aboveground biomass                  DBA
+168                 Total aboveground biomass                  DBA
+169                 Total aboveground biomass                  DBH
+170                 Total aboveground biomass                  DBH
+171                 Total aboveground biomass                  DBH
+172                 Total aboveground biomass                  DBH
+173                 Total aboveground biomass                  DBH
+174                 Total aboveground biomass                  DBH
+175                 Total aboveground biomass                  DBH
     allometry_specificity                          geographic_area dbh_min_cm
 1                 Species                                Ohio, USA       0.21
 2                 Species                                Ohio, USA       0.19
@@ -228,6 +748,136 @@
 43                Species                      North Carolina, USA      14.48
 44                Species                              Eastern USA          1
 45                Species                      North Carolina, USA        3.5
+46                Species              Piedmont (Southeastern USA)      27.94
+47                Species                       West Virginia, USA       5.08
+48                Species              Piedmont (Southeastern USA)       5.84
+49                Species              Piedmont (Southeastern USA)      27.94
+50                  Genus                       Idaho/Montana, USA        0.2
+51                Species                       Idaho/Montana, USA        0.3
+52                Species                                Ohio, USA        0.4
+53                  Genus              Piedmont (Southeastern USA)       2.54
+54                  Genus              Piedmont (Southeastern USA)       2.54
+55                Species                                   Canada       0.28
+56                Species                       New Hampshire, USA          1
+57                Species    Gulf and Atlantic Coastal Plains, USA       2.54
+58                Species    Gulf and Atlantic Coastal Plains, USA      28.45
+59                Species                      North Carolina, USA       10.2
+60                Species                            Southeast USA       4.06
+61                Species              Piedmont (Southeastern USA)       4.83
+62                Species              Piedmont (Southeastern USA)      24.94
+63                Species                                Ohio, USA       0.68
+64                Species                      North Carolina, USA          7
+65                Species                      North Carolina, USA         15
+66                Species              Piedmont (Southeastern USA)       5.84
+67                Species                      North Carolina, USA       10.6
+68                Species                              Eastern USA        2.5
+69                Species                            Southeast USA        3.3
+70                Species                        Rhode Island, USA       7.62
+71                 Family                            North America          3
+72                Species                       New Hampshire, USA        1.6
+73                Species    Washington, Oregon, N California, USA        1.5
+74                Species    Washington, Oregon, N California, USA        1.5
+75                Species    Washington, Oregon, N California, USA        1.5
+76                Species                              Oregon, USA        0.5
+77                Species                          California, USA         NI
+78                Species                   Pacific Northwest, USA        0.6
+79                Species                              Hawaii, USA          2
+80                Species    Washington, Oregon, N California, USA        1.5
+81                Species    Washington, Oregon, N California, USA        1.5
+82                Species    Washington, Oregon, N California, USA        1.5
+83                Species                   Pacific Northwest, USA       24.1
+84                Species                     Rocky Mountains, USA       2.54
+85                  Genus                            North America          3
+86                Species                              Oregon, USA        1.4
+87                Species                              Oregon, USA         10
+88                  Genus                     Rocky Mountains, USA        0.4
+89                 Family                            North America          3
+90                Species                          California, USA        7.6
+91                Species                   Pacific Northwest, USA        0.6
+92                Species                North Central States, USA        2.5
+93                Species                 Wisconsin, Michigan, USA        3.1
+94                Species                 Wisconsin, Michigan, USA         10
+95                Species                           Wisconsin, USA        7.5
+96                 Family                            North America          3
+97                Species                North Central States, USA        2.5
+98                Species                North Central States, USA        3.5
+99                Species                           Wisconsin, USA       12.9
+100               Species                           Minessota, USA        1.1
+101               Species                           Minessota, USA        1.4
+102                 Genus                            New York, USA        2.5
+103               Species                           Wisconsin, USA       14.7
+104               Species                           Wisconsin, USA        2.8
+105               Species                North Central States, USA        2.5
+106               Species                               Maine, USA        0.1
+107               Species                Bristish Columbia, Canada         31
+108               Species                     Rocky Mountains, USA          0
+109               Species                     Rocky Mountains, USA       2.54
+110               Species                       West Cascades, USA       18.8
+111               Species                       West Cascades, USA       18.8
+112               Species                       West Cascades, USA       15.9
+113                 Genus                            North America        8.7
+114                 Genus                            North America        8.7
+115                 Genus                            North America        8.7
+116                 Genus                            North America        8.7
+117               Species                North Central States, USA        0.1
+118               Species                              Oregon, USA        1.7
+119               Species                     Rocky Mountains, USA        0.7
+120                 Genus                            North America          3
+121               Species                       West Cascades, USA        0.1
+122                Family                            North America          3
+123               Species                   Pacific Northwest, USA       0.18
+124               Species                   Pacific Northwest, USA        4.2
+125               Species                Bristish Columbia, Canada         16
+126               Species                  Oregon, Washington, USA        0.4
+127         Woody species                         Northern England         NI
+128               Species                         Northern England       11.5
+129               Species                         Northern England          9
+130               Species                         Northern England         14
+131               Species                   Pacific Northwest, USA       14.4
+132               Species                          California, USA          7
+133               Species                   Pacific Northwest, USA       18.8
+134               Species                  Oregon, Washington, USA        0.4
+135               Species                   Pacific Northwest, USA         25
+136               Species                   Pacific Northwest, USA        0.3
+137               Species                   Pacific Northwest, USA        0.3
+138               Species                          California, USA        0.8
+139               Species                          California, USA        0.9
+140               Species                          California, USA        0.5
+141               Species                                   Europe         NI
+142                 Genus                                   Europe         NI
+143               Species                     Rocky Mountains, USA       15.6
+144                 Genus                            North America          3
+145               Species                              Nevada, USA          5
+146               Species                            Colorado, USA          4
+147                 Genus                            North America          3
+148               Species                              Alaska, USA        1.5
+149                 Genus                            North America          3
+150               Species                             Arizona, USA          5
+151               Species                          New Mexico, USA        2.7
+152               Species                          New Mexico, USA        2.7
+153               Species                          New Mexico, USA        2.7
+154               Species                          New Mexico, USA        2.7
+155               Species                              Nevada, USA          3
+156               Species                                Utah, USA          3
+157               Species                    New Brunswick, Canada       2.54
+158               Species                              Alaska, USA        3.7
+159               Species                         Manitoba, Canada        0.2
+160               Species              Northwest Territory, Canada          5
+161               Species              Northwest Territory, Canada          5
+162               Species                         Manitoba, Canada        0.5
+163               Species              Northwest Territory, Canada          5
+164               Species                         Manitoba, Canada        0.3
+165               Species              Northwest Territory, Canada          5
+166               Species                         Manitoba, Canada        0.3
+167                 Genus                          Alberta, Canada       0.31
+168                 Genus                          Alberta, Canada       0.64
+169                 Genus                         Northern Germany        NRA
+170                 Genus                         Northern Germany        NRA
+171                 Genus                         Northern Germany        NRA
+172                 Genus                         Northern Germany        NRA
+173                 Genus                         Northern Germany        NRA
+174                 Genus                         Northern Germany        NRA
+175                 Genus                         Northern Germany        NRA
     dbh_max_cm sample_size dbh_units_original biomass_units_original
 1         5.73        <NA>                 cm                      g
 2         3.86        <NA>                 cm                      g
@@ -274,6 +924,136 @@
 43        25.4        <NA>                 in                     lb
 44          55        <NA>                 cm                      g
 45        35.6        <NA>                 cm                      g
+46       49.53        <NA>                 in                     lb
+47        50.8        <NA>                 in                     lb
+48        25.4        <NA>                 in                     lb
+49       47.75        <NA>                 in                     lb
+50         1.2          32                 cm                      g
+51         0.9          26                 cm                      g
+52        8.49          41                 cm                      g
+53       27.43        <NA>               in^2                     lb
+54       27.43        <NA>                 in                     lb
+55        1.59          19                 cm                      g
+56          63        <NA>                 cm                      g
+57       27.69        <NA>                 in                     lb
+58        50.8        <NA>                 in                     lb
+59        55.8        <NA>                 cm                     kg
+60       12.45        <NA>               in^2                     lb
+61       23.88        <NA>                 in                     lb
+62       49.53        <NA>                 in                     lb
+63        7.49        <NA>                 cm                      g
+64          63          10                 cm                     kg
+65        43.3        <NA>                 cm                     kg
+66        25.4        <NA>                 in                     lb
+67        57.5        <NA>                 cm                     kg
+68          55        <NA>                 cm                      g
+69       11.94        <NA>                 in                     lb
+70       30.48          26                 in                     kg
+71          70        <NA>                 cm                     kg
+72          10        <NA>                 cm                      g
+73        <NA>          31                 cm                     kg
+74        <NA>          31                 cm                     kg
+75        <NA>          31                 cm                     kg
+76         2.1          11                 cm                      g
+77          NI        <NA>               cm^2                      g
+78         2.5         NRA                 cm                      g
+79          16        <NA>                 cm                     kg
+80        <NA>        <NA>                 cm                     kg
+81        <NA>        <NA>                 cm                     kg
+82        <NA>        <NA>                 cm                     kg
+83       117.7        <NA>                 cm                     Mg
+84       30.48        <NA>                 in                     lb
+85         180         561                 cm                     kg
+86        13.4        <NA>                 cm                      g
+87          40        <NA>                 cm                     kg
+88         1.4         NRA                 cm                      g
+89         614        <NA>                 cm                     kg
+90          61          14                 cm                     kg
+91         3.6         NRA                 cm                      g
+92          40        <NA>                 cm                     kg
+93        24.6          41                 cm                     kg
+94        52.2        <NA>                 cm                     kg
+95        23.7        <NA>                 cm                     kg
+96          64        <NA>                 cm                     kg
+97          40           9                 cm                     kg
+98        26.3          21                 cm                     kg
+99          30        <NA>                 cm                     kg
+100       32.6        <NA>                 cm                     kg
+101       23.4        <NA>                 cm                     kg
+102         55          31                 mm                     kg
+103       39.7        <NA>                 cm                     kg
+104       69.5        <NA>                 cm                     kg
+105         40        <NA>                 cm                     kg
+106       2.54        <NA>                 in                      g
+107       90.4        <NA>                 cm                     kg
+108      10.16          12                 in                     lb
+109      30.48          15                 in                     lb
+110        111          26                 cm                      g
+111        111          25                 cm                      g
+112      235.5         310                 cm                      g
+113        111        <NA>                 cm                      g
+114        111        <NA>                 cm                      g
+115        111        <NA>                 cm                      g
+116        111        <NA>                 cm                      g
+117       2.54        <NA>                 in                      g
+118       13.2        <NA>                 cm                      g
+119        2.2         NRA                 cm                      g
+120        180        <NA>                 cm                     kg
+121        1.1         NRA                 cm                      g
+122        109          55                 cm                     kg
+123       2.23        <NA>                 cm                      g
+124          7        <NA>                 cm                      g
+125         49           8                 cm                     kg
+126        3.3         NRA                 cm                      g
+127         NI        <NA>                 cm                     kg
+128       96.5        <NA>                 cm                     kg
+129        104        <NA>                 cm                     kg
+130      162.5        <NA>                 cm                     kg
+131      158.4        <NA>                 cm                     Mg
+132         98        <NA>                 cm                      g
+133      143.2        <NA>                 cm                     Mg
+134       11.5         NRA                 cm                      g
+135      143.9        <NA>                 cm                     Mg
+136       11.7         NRA                 cm                      g
+137        6.5         NRA                 cm                      g
+138         13          40                 cm                     kg
+139        5.7          41                 cm                     kg
+140        2.6          40                 cm                     kg
+141         40         144                 cm                     kg
+142         50         240                 cm                     kg
+143       68.7        <NA>                 cm                     gm
+144        236         221                 cm                     kg
+145       55.8          52                 cm                     kg
+146         76          29                 cm                     kg
+147        283         128                 cm                     kg
+148         13          18                 cm                      g
+149         72         289                 cm                     kg
+150         45          15                 cm                     kg
+151       27.5          10                 cm                     kg
+152       27.5          10                 cm                     kg
+153       27.5          14                 cm                     kg
+154       27.5          14                 cm                     kg
+155        112         105                 cm                     kg
+156         36          20                 cm                     kg
+157       25.4          13                 in                     lb
+158       32.7          37                 cm                     kg
+159          2           7                 cm                      g
+160         35          56                 cm                     kg
+161         35          61                 cm                     kg
+162         17          40                 cm                      g
+163         35          51                 cm                     kg
+164         17          46                 cm                      g
+165         35          56                 cm                     kg
+166          1          10                 cm                      g
+167       1.37          25                 cm                      g
+168        5.7          27                 cm                      g
+169        NRA         NRA                  m                      t
+170        NRA         NRA                  m                      t
+171        NRA         NRA                  m                      t
+172        NRA         NRA                  m                      t
+173        NRA         NRA                  m                      t
+174        NRA         NRA                  m                      t
+175        NRA         NRA                  m                      t
     allometry_development_method              regression_model
 1                        harvest                          <NA>
 2                        harvest                          <NA>
@@ -320,6 +1100,136 @@
 43                       harvest                          <NA>
 44                       harvest                          <NA>
 45                       harvest                          <NA>
+46                       harvest                          <NA>
+47                       harvest                          <NA>
+48                       harvest                          <NA>
+49                       harvest                          <NA>
+50                       harvest                          <NA>
+51                       harvest                          <NA>
+52                       harvest                        linear
+53                       harvest                          <NA>
+54                       harvest                          <NA>
+55                       harvest                          <NA>
+56                       harvest                          <NA>
+57                       harvest                          <NA>
+58                       harvest                          <NA>
+59                       harvest                          <NA>
+60                       harvest                          <NA>
+61                       harvest                          <NA>
+62                       harvest                          <NA>
+63                       harvest                          <NA>
+64                       harvest                          <NA>
+65                       harvest                          <NA>
+66                       harvest                          <NA>
+67                       harvest                          <NA>
+68                       harvest                          <NA>
+69                       harvest                          <NA>
+70                       harvest linear, multiple and stepwise
+71                       harvest                          <NA>
+72                       harvest                          <NA>
+73                       harvest                          <NA>
+74                       harvest                          <NA>
+75                       harvest                          <NA>
+76                       harvest                          <NA>
+77                       harvest                          <NA>
+78                       harvest                          <NA>
+79                       harvest                          <NA>
+80                       harvest                          <NA>
+81                       harvest                          <NA>
+82                       harvest                          <NA>
+83                       harvest                          <NA>
+84                       harvest                          <NA>
+85                       harvest                          <NA>
+86                       harvest                          <NA>
+87                       harvest                          <NA>
+88                       harvest                          <NA>
+89                       harvest                          <NA>
+90                       harvest          least squares linear
+91                       harvest                          <NA>
+92                       harvest                          <NA>
+93                       harvest                          <NA>
+94                       harvest                          <NA>
+95                       harvest                          <NA>
+96                       harvest                          <NA>
+97                       harvest                          <NA>
+98                       harvest                          <NA>
+99                       harvest                          <NA>
+100                      harvest                          <NA>
+101                      harvest                          <NA>
+102                      harvest                          <NA>
+103                      harvest                          <NA>
+104                      harvest                          <NA>
+105                      harvest                          <NA>
+106                      harvest                          <NA>
+107                      harvest                          <NA>
+108                      harvest                          <NA>
+109                      harvest                          <NA>
+110                      harvest                          <NA>
+111                      harvest                          <NA>
+112                      harvest                          <NA>
+113                      harvest                          <NA>
+114                      harvest                          <NA>
+115                      harvest                          <NA>
+116                      harvest                          <NA>
+117                      harvest                          <NA>
+118                      harvest                          <NA>
+119                      harvest                          <NA>
+120                      harvest                          <NA>
+121                      harvest                          <NA>
+122                      harvest                          <NA>
+123                      harvest                          <NA>
+124                      harvest                          <NA>
+125                      harvest                          <NA>
+126                      harvest                          <NA>
+127                      harvest                        linear
+128                      harvest                        linear
+129                      harvest                        linear
+130                      harvest                        linear
+131                      harvest                          <NA>
+132                      harvest                          <NA>
+133                      harvest                          <NA>
+134                      harvest                          <NA>
+135                      harvest                          <NA>
+136                      harvest                          <NA>
+137                      harvest                          <NA>
+138                      harvest                          <NA>
+139                      harvest                          <NA>
+140                      harvest                          <NA>
+141                      harvest                          <NA>
+142                      harvest                          <NA>
+143                      harvest                          <NA>
+144                      harvest                          <NA>
+145                      harvest                          <NA>
+146                      harvest                          <NA>
+147                      harvest                          <NA>
+148                      harvest                          <NA>
+149                      harvest                          <NA>
+150                      harvest                          <NA>
+151                      harvest                          <NA>
+152                      harvest                          <NA>
+153                      harvest                          <NA>
+154                      harvest                          <NA>
+155                      harvest                          <NA>
+156                      harvest                          <NA>
+157                      harvest                          <NA>
+158                      harvest                          <NA>
+159                      harvest                          <NA>
+160                      harvest                          <NA>
+161                      harvest                          <NA>
+162                      harvest                          <NA>
+163                      harvest                          <NA>
+164                      harvest                          <NA>
+165                      harvest                          <NA>
+166                      harvest                          <NA>
+167                      harvest        ordinary least squares
+168                      harvest        ordinary least squares
+169                     harvest?                          <NA>
+170                     harvest?                          <NA>
+171                     harvest?                          <NA>
+172                     harvest?                          <NA>
+173                     harvest?                          <NA>
+174                     harvest?                          <NA>
+175                     harvest?                          <NA>
           other_equations_tested log_biomass bias_corrected
 1                           <NA>        <NA>              1
 2                           <NA>        <NA>              1
@@ -366,6 +1276,136 @@
 43                          <NA>        <NA>              1
 44                          <NA>        <NA>              0
 45                          <NA>        <NA>              0
+46                          <NA>        <NA>              1
+47                          <NA>        <NA>              1
+48                          <NA>        <NA>              1
+49                          <NA>        <NA>              1
+50                          <NA>        <NA>              1
+51                          <NA>        <NA>              1
+52                          <NA>           1              1
+53                          <NA>        <NA>              1
+54                          <NA>        <NA>              1
+55                          <NA>        <NA>              1
+56                          <NA>        <NA>              0
+57                          <NA>        <NA>              1
+58                          <NA>        <NA>              1
+59                          <NA>        <NA>              1
+60                          <NA>        <NA>              0
+61                          <NA>        <NA>              1
+62                          <NA>        <NA>              1
+63                          <NA>        <NA>              1
+64                          <NA>        <NA>              1
+65                          <NA>        <NA>              1
+66                          <NA>        <NA>              1
+67                          <NA>        <NA>              1
+68                          <NA>        <NA>              0
+69                          <NA>        <NA>              0
+70                          <NA>           0              0
+71                          <NA>        <NA>              1
+72                          <NA>        <NA>              0
+73                          <NA>        <NA>              1
+74                          <NA>        <NA>              1
+75                          <NA>        <NA>              1
+76                          <NA>        <NA>              1
+77                          <NA>        <NA>              1
+78                          <NA>        <NA>              1
+79                          <NA>        <NA>              1
+80                          <NA>        <NA>              1
+81                          <NA>        <NA>              1
+82                          <NA>        <NA>              1
+83                          <NA>        <NA>              1
+84                          <NA>        <NA>              1
+85                          <NA>        <NA>              1
+86                          <NA>        <NA>              0
+87                          <NA>        <NA>              1
+88                          <NA>        <NA>              1
+89                          <NA>        <NA>              1
+90                          <NA>        <NA>              1
+91                          <NA>        <NA>              1
+92                          <NA>        <NA>              0
+93                          <NA>        <NA>              1
+94                          <NA>        <NA>              1
+95                          <NA>        <NA>              0
+96                          <NA>        <NA>              1
+97                          <NA>        <NA>              0
+98                          <NA>        <NA>              1
+99                          <NA>        <NA>              0
+100                         <NA>        <NA>              0
+101                         <NA>        <NA>              0
+102                         <NA>        <NA>              0
+103                         <NA>        <NA>              0
+104                         <NA>        <NA>              1
+105                         <NA>        <NA>              0
+106                         <NA>        <NA>              0
+107                         <NA>        <NA>              0
+108                         <NA>        <NA>              0
+109                         <NA>        <NA>              0
+110                         <NA>        <NA>              1
+111                         <NA>        <NA>              0
+112                         <NA>        <NA>              1
+113                         <NA>        <NA>           <NA>
+114                         <NA>        <NA>           <NA>
+115                         <NA>        <NA>           <NA>
+116                         <NA>        <NA>           <NA>
+117                         <NA>        <NA>              0
+118                         <NA>        <NA>              0
+119                         <NA>        <NA>              1
+120                         <NA>        <NA>              1
+121                         <NA>        <NA>              1
+122                         <NA>        <NA>              1
+123                         <NA>        <NA>              0
+124                         <NA>        <NA>              0
+125                         <NA>        <NA>              0
+126                         <NA>        <NA>              1
+127                         <NA>        <NA>              1
+128                         <NA>        <NA>              1
+129                         <NA>        <NA>              1
+130                         <NA>        <NA>              1
+131                         <NA>        <NA>              0
+132                         <NA>        <NA>              1
+133                         <NA>        <NA>              0
+134                         <NA>        <NA>              1
+135                         <NA>        <NA>              1
+136                         <NA>        <NA>              1
+137                         <NA>        <NA>              1
+138                         <NA>        <NA>              1
+139                         <NA>        <NA>              1
+140                         <NA>        <NA>              1
+141                         <NA>        <NA>              1
+142                         <NA>        <NA>              1
+143                         <NA>        <NA>           <NA>
+144                         <NA>        <NA>              0
+145                         <NA>        <NA>              0
+146                         <NA>        <NA>              0
+147                         <NA>        <NA>              0
+148                         <NA>        <NA>              0
+149                         <NA>        <NA>              0
+150                         <NA>        <NA>              0
+151                         <NA>        <NA>              1
+152                         <NA>        <NA>              1
+153                         <NA>        <NA>              1
+154                         <NA>        <NA>              1
+155                         <NA>        <NA>              0
+156                         <NA>        <NA>              1
+157                         <NA>        <NA>              0
+158                         <NA>        <NA>           <NA>
+159                         <NA>        <NA>              1
+160                         <NA>        <NA>              0
+161                         <NA>        <NA>              0
+162                         <NA>        <NA>              1
+163                         <NA>        <NA>              0
+164                         <NA>        <NA>              1
+165                         <NA>        <NA>              0
+166                         <NA>        <NA>              1
+167                  mixed model        <NA>              1
+168                  mixed model        <NA>              1
+169                         <NA>        <NA>           <NA>
+170                         <NA>        <NA>           <NA>
+171                         <NA>        <NA>           <NA>
+172                         <NA>        <NA>           <NA>
+173                         <NA>        <NA>           <NA>
+174                         <NA>        <NA>           <NA>
+175                         <NA>        <NA>           <NA>
     bias_correction_factor
 1                    1.056
 2                    1.016
@@ -412,6 +1452,136 @@
 43       included in model
 44                    <NA>
 45                    <NA>
+46       included in model
+47       included in model
+48       included in model
+49       included in model
+50       included in model
+51       included in model
+52                   1.004
+53       included in model
+54       included in model
+55       included in model
+56                    <NA>
+57       included in model
+58       included in model
+59                   1.008
+60                    <NA>
+61       included in model
+62       included in model
+63                   1.012
+64       included in model
+65                   1.003
+66       included in model
+67                   1.013
+68                    <NA>
+69                    <NA>
+70                    <NA>
+71       included in model
+72                    <NA>
+73       included in model
+74       included in model
+75       included in model
+76       included in model
+77       included in model
+78       included in model
+79       included in model
+80       included in model
+81       included in model
+82       included in model
+83       included in model
+84       included in model
+85       included in model
+86                    <NA>
+87       included in model
+88       included in model
+89       included in model
+90                  0.2497
+91       included in model
+92                    <NA>
+93                    1.01
+94                   1.007
+95                    <NA>
+96       included in model
+97                    <NA>
+98                   1.006
+99                    <NA>
+100                   <NA>
+101                   <NA>
+102                      0
+103                   <NA>
+104                   1.05
+105                   <NA>
+106                   <NA>
+107                   <NA>
+108                   <NA>
+109                   <NA>
+110      included in model
+111                    NRA
+112      included in model
+113                    NRA
+114                    NRA
+115                    NRA
+116                    NRA
+117                   <NA>
+118                   <NA>
+119      included in model
+120      included in model
+121      included in model
+122      included in model
+123                   <NA>
+124                   <NA>
+125                   <NA>
+126      included in model
+127      included in model
+128      included in model
+129      included in model
+130      included in model
+131                   <NA>
+132                  1.014
+133                   <NA>
+134      included in model
+135      included in model
+136      included in model
+137      included in model
+138                  0.102
+139                  0.124
+140                  0.165
+141                   <NA>
+142                   <NA>
+143                    NRA
+144                   <NA>
+145                   <NA>
+146                   <NA>
+147                   <NA>
+148                   <NA>
+149                   <NA>
+150      included in model
+151                  1.014
+152                  0.004
+153                  0.088
+154                  1.053
+155                   <NA>
+156                  1.046
+157                      0
+158                   <NA>
+159                  1.027
+160                      0
+161                      0
+162                  1.057
+163                      0
+164                  1.032
+165                      0
+166                  1.121
+167                   <NA>
+168                   <NA>
+169                   <NA>
+170                   <NA>
+171                   <NA>
+172                   <NA>
+173                   <NA>
+174                   <NA>
+175                   <NA>
                                                                                                                                                                                                                                                                                                                                                                                                                                                              notes_fitting_model
 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <NA>
 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <NA>
@@ -458,6 +1628,136 @@
 43                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
 44                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
 45                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+46                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+47                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+48                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+49                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+50                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+51                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+52                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+53                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+54                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+55                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+56                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+57                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+58                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+59                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+60                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+61                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+62                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+63                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+64                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+65                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+66                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+67                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+68                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+69                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+70                                                                                                                                                                                                                                     Linear regressions for species were tested for differences in slope and level according to Freese (1967) . Differences were found to be not significant, and data were combined to produce a single regression applicable to all species.
+71                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+72                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+73                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+74                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+75                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+76                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+77                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+78                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+79                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+80                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+81                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+82                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+83                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+84                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+85                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+86                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+87                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+88                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+89                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+90                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+91                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+92                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+93                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+94                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+95                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+96                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+97                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+98                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+99                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <NA>
+100                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+101                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+102                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+103                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+104                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+105                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+106                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+107                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+108                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+109                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+110                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+111                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+112                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+113                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+114                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+115                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+116                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+117                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+118                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+119                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+120                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+121                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+122                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+123                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+124                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+125                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+126                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+127                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+128                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+129                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+130                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+131                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+132                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+133                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+134                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+135                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+136                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+137                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+138                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+139                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+140                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+141                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+142                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+143                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+144                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+145                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+146                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+147                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+148                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+149                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+150                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+151                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+152                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+153                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+154                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+155                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+156                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+157                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+158                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+159                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+160                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+161                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+162                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+163                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+164                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+165                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+166                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+167                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+168                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+169                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+170                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+171                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+172                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+173                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+174                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
+175                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <NA>
     original_data_availability
 1                         <NA>
 2                         <NA>
@@ -504,6 +1804,136 @@
 43                        <NA>
 44                        <NA>
 45                        <NA>
+46                        <NA>
+47                        <NA>
+48                        <NA>
+49                        <NA>
+50                        <NA>
+51                        <NA>
+52                        <NA>
+53                        <NA>
+54                        <NA>
+55                        <NA>
+56                        <NA>
+57                        <NA>
+58                        <NA>
+59                        <NA>
+60                        <NA>
+61                        <NA>
+62                        <NA>
+63                        <NA>
+64                        <NA>
+65                        <NA>
+66                        <NA>
+67                        <NA>
+68                        <NA>
+69                        <NA>
+70                        <NA>
+71                        <NA>
+72                        <NA>
+73                        <NA>
+74                        <NA>
+75                        <NA>
+76                        <NA>
+77                        <NA>
+78                        <NA>
+79                        <NA>
+80                        <NA>
+81                        <NA>
+82                        <NA>
+83                        <NA>
+84                        <NA>
+85                        <NA>
+86                        <NA>
+87                        <NA>
+88                        <NA>
+89                        <NA>
+90                        <NA>
+91                        <NA>
+92                        <NA>
+93                        <NA>
+94                        <NA>
+95                        <NA>
+96                        <NA>
+97                        <NA>
+98                        <NA>
+99                        <NA>
+100                       <NA>
+101                       <NA>
+102                       <NA>
+103                       <NA>
+104                       <NA>
+105                       <NA>
+106                       <NA>
+107                       <NA>
+108                       <NA>
+109                       <NA>
+110                       <NA>
+111                          0
+112                       <NA>
+113                          0
+114                          0
+115                          0
+116                          0
+117                       <NA>
+118                       <NA>
+119                       <NA>
+120                       <NA>
+121                       <NA>
+122                       <NA>
+123                       <NA>
+124                       <NA>
+125                       <NA>
+126                       <NA>
+127                       <NA>
+128                       <NA>
+129                       <NA>
+130                       <NA>
+131                       <NA>
+132                       <NA>
+133                       <NA>
+134                       <NA>
+135                       <NA>
+136                       <NA>
+137                       <NA>
+138                       <NA>
+139                       <NA>
+140                       <NA>
+141                       <NA>
+142                       <NA>
+143                       <NA>
+144                       <NA>
+145                       <NA>
+146                       <NA>
+147                       <NA>
+148                       <NA>
+149                       <NA>
+150                       <NA>
+151                       <NA>
+152                       <NA>
+153                       <NA>
+154                       <NA>
+155                       <NA>
+156                       <NA>
+157                       <NA>
+158                       <NA>
+159                       <NA>
+160                       <NA>
+161                       <NA>
+162                       <NA>
+163                       <NA>
+164                       <NA>
+165                       <NA>
+166                       <NA>
+167                       <NA>
+168                       <NA>
+169                       <NA>
+170                       <NA>
+171                       <NA>
+172                       <NA>
+173                       <NA>
+174                       <NA>
+175                       <NA>
                                                                                                                                                                                                                            warning
 1                                                                                                                                                                                                                             <NA>
 2                                                                                                                                                                                                                             <NA>
@@ -550,4 +1980,133 @@
 43                                                                                                                                                                                                                            <NA>
 44                                                                                                                                                                                                                            <NA>
 45                                                                                                                                                                                                                            <NA>
- [ reached getOption("max.print") -- omitted 130 rows ]
+46                                                                                                                                                                                                                            <NA>
+47                                                                                                                                                                                                                            <NA>
+48                                                                                                                                                                                                                            <NA>
+49                                                                                                                                                                                                                            <NA>
+50                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
+51                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
+52                                                                                                                                                                                       Equation built for seedlings and saplings
+53                                                                                                                                                                                                                            <NA>
+54                                                                                                                                                                                                                            <NA>
+55                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
+56                                                                                                                                                                                                                            <NA>
+57                                                                                                                                                                                                                            <NA>
+58                                                                                                                                                                                                                            <NA>
+59                                                                                                                                                                                                                            <NA>
+60                                                                                                                                                                                                                            <NA>
+61                                                                                                                                                                                                                            <NA>
+62                                                                                                                                                                                                                            <NA>
+63                                                                                                                                                                                                                            <NA>
+64                                                                                                                                                                                                                            <NA>
+65                                                                                                                                                                                                                            <NA>
+66                                                                                                                                                                                                                            <NA>
+67                                                                                                                                                                                                                            <NA>
+68                                                                                                                                                                                                                            <NA>
+69                                                                                                                                                                                                                            <NA>
+70                                                                                                                                                                                                                            <NA>
+71                                                                                                                                                                                                                            <NA>
+72                                                                                                                                                                                                                            <NA>
+73                                                                                                                                                                                                                            <NA>
+74                                                                                                                                                                                                                            <NA>
+75                                                                                                                                                                                                                            <NA>
+76                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
+77                                                     Original publication uses Basal area (BA)=Diameter of all stems measured 5 cm above ground in a 1x1m plot then sum to obtain basal area. Use shrub function in this package
+78                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
+79                                                                                                                                                                                                                            <NA>
+80                                                                                                                                                                                                                            <NA>
+81                                                                                                                                                                                                                            <NA>
+82                                                                                                                                                                                                                            <NA>
+83                                                                                                                                                                                                                            <NA>
+84                                                                                                                                                                                                                            <NA>
+85                                                                                                                                                                                                                            <NA>
+86                                                                                                                                                                                                                            <NA>
+87                                                                                                                                                                                                                            <NA>
+88                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
+89                                                                                                                                                                                                                            <NA>
+90                                                                                                                                                                                                                            <NA>
+91                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
+92                                                                                                                                                                                                                            <NA>
+93                                                                                                                                                                                                                            <NA>
+94                                                                                                                                                                                                                            <NA>
+95                                                                                                                                                                                                                            <NA>
+96                                                                                                                                                                                                                            <NA>
+97                                                                                                                                                                                                                            <NA>
+98                                                                                                                                                                                                                            <NA>
+99                                                                                                                                                                                                                            <NA>
+100                                                                                                                                                                                                                           <NA>
+101                                                                                                                                                                                                                           <NA>
+102                                                                                                                                                                                                                           <NA>
+103                                                                                                                                                                                                                           <NA>
+104                                                                                                                                                                                                                           <NA>
+105                                                                                                                                                                                                                           <NA>
+106                                                                                                                                                                                                                           <NA>
+107                                                                                                                                                                                                                           <NA>
+108                                                                                                                                                                                                                           <NA>
+109                                                                                                                                                                                                                           <NA>
+110                                                                                                                                                                                                                           <NA>
+111                                                                                                                                                                  Unable to extract correction factor from original publication
+112                                                                                                                                                                                                                           <NA>
+113                                                                                                                                                                  Unable to extract correction factor from original publication
+114                                                                                                                                                                  Unable to extract correction factor from original publication
+115                                                                                                                                                                  Unable to extract correction factor from original publication
+116                                                                                                                                                                  Unable to extract correction factor from original publication
+117                                                                                                                                                                                                                           <NA>
+118                                                                                                                                                                                                                           <NA>
+119                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+120                                                                                                                                                                                                                           <NA>
+121                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+122                                                                                                                                                                                                                           <NA>
+123                                                                                                                                                                                                                           <NA>
+124                                                                                                                                                                                                                           <NA>
+125                                                                                                                                                                                                                           <NA>
+126                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+127                                                                                                                                                                                                                           <NA>
+128                                                                                                                                                                                                                           <NA>
+129                                                                                                                                                                                                                           <NA>
+130                                                                                                                                                                                                                           <NA>
+131                                                                                                                                                                                                                           <NA>
+132                                                                                                                                                                                                                           <NA>
+133                                                                                                                                                                                                                           <NA>
+134                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+135                                                                                                                                                                                                                           <NA>
+136                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+137                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+138                                                                                                                                                                                                                           <NA>
+139                                                                                                                                                                                                                           <NA>
+140                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+141                                                                                                                                                                                                                           <NA>
+142                                                                                                                                                                                                                           <NA>
+143                                                                                                                                                                                                                           <NA>
+144                                                                                                                                                                                                                           <NA>
+145                                                                                                                                                                                                                           <NA>
+146                                                                                                                                                                                                                           <NA>
+147                                                                                                                                                                                                                           <NA>
+148                                                                                                                                                                                                                           <NA>
+149                                                                                                                                                                                                                           <NA>
+150 Original biomass equation uses DRC (diameter root collar). Chojnacky & Rogers, 1999 equation to do the oposite, convert dcr to dbh (dbh=6.818+1.0222*drc+1.88791.8971-0.0399*drc) so we rewrote Chojnaky to convert dbh to dcr
+151                                                                                                                                                                                                                           <NA>
+152                                                                                                                                                                                                                           <NA>
+153                                                                                                                                                                                                                           <NA>
+154                                                                                                                                                                                                                           <NA>
+155                                                                                                                                                                                                                           <NA>
+156                                                                                                                                                                                                                           <NA>
+157                                                                                                                                                                                                                           <NA>
+158                                                                                                                                                                                                                           <NA>
+159                                                                                                                                                                                                                           <NA>
+160                                                                                                                                                                                                                           <NA>
+161                                                                                                                                                                                                                           <NA>
+162                                                                                                                                                                                                                Need stand age!
+163                                                                                                                                                                                                                           <NA>
+164                                                                                                                                                                                                                Need stand age!
+165                                                                                                                                                                                                                           <NA>
+166                                                                                                                                                                                                                           <NA>
+167                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+168                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
+169                                                                                                                                                                                                                           <NA>
+170                                                                                                                                                                                                                           <NA>
+171                                                                                                                                                                                                                           <NA>
+172                                                                                                                                                                                                                           <NA>
+173                                                                                                                                                                                                                           <NA>
+174                                                                                                                                                                                                                           <NA>
+175                                                                                                                                                                                                                           <NA>
