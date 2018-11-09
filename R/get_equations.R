@@ -11,7 +11,7 @@
 #' get_equations(dbh_species)
 get_equations <- function(dbh_species) {
   default_eqn <- allodb::default_eqn
-  type_data <- default_eqn %>%
+  default_eqn %>%
     dplyr::filter(!is.na(.data$eqn_type)) %>%
     dplyr::group_by(.data$eqn_type) %>%
     tidyr::nest() %>%
