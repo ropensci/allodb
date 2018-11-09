@@ -86,29 +86,3 @@ test_that("the winner can be determined by reordering the list", {
   expect_equal(purrr::reduce(prio[rev(order)], bind_winner_loser), prio[[2]])
 })
 
-test_that("winner rows depend on the order of the list-elements", {
-  prio <- list(
-    prio1 = tibble(rowid = 1:1, x = "prio1"),
-    prio2 = tibble(rowid = 1:2, x = "prio2"),
-    prio3 = tibble(rowid = 1:3, x = "prio3")
-  )
-  combo <- dplyr::bind_rows(
-    prio[[1]][1, ],
-    prio[[2]][2, ],
-    prio[[3]][3, ]
-  )
-  expect_equal(purrr::reduce(prio, bind_winner_loser), combo)
-
-  prio <- list(
-    prio1 = tibble(rowid = 1:3, x = "prio1"),
-    prio2 = tibble(rowid = 1:2, x = "prio2"),
-    prio3 = tibble(rowid = 1:1, x = "prio3")
-  )
-  order <- c("prio1", "prio2", "prio3")
-  combo <- dplyr::bind_rows(
-    prio[[3]][1, ],
-    prio[[2]][2, ],
-    prio[[1]][3, ]
-  )
-  expect_equal(purrr::reduce(prio[rev(order)], bind_winner_loser), combo)
-})
