@@ -110,7 +110,7 @@ jenkins_2004_cdod,0.62+(0.8024*dbh)+0.1724*(dbh^2)+1*(dbh^3),cab5a8,a+(b*DBH)+c*
 jenkins_2004_cdod,exp(1.0152+1.6839*dbh+1*log(dbh)),6b7404,exp(a+b*DBH+c*(ln(DBH))),"Crown biomass (branches, foliage, twigs)",DBH,Species,"Rocky Mountains, USA",2.54,30.48,15,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA
 means_28_NA,exp(2.7261+2.3324*log(dbh)),171b02,exp(a+b*ln(DBH)),Branches (live),DBH,Species,"West Cascades, USA",18.8,111,26,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 means_27_NA,exp(2.03496+2.1683*log(dbh)),23a23d,exp(a+b*ln(DBH)),Foliage total,DBH,Species,"West Cascades, USA",18.8,111,25,cm,g,harvest,NA,NA,NA,0,NRA,NA,0,Unable to extract correction factor from original publication
-means_253_NA,exp(3.892752+2.5812*log(dbh)),677eda,exp(a+b*ln(DBH)),Stem biomass,DBH,Species,"West Cascades, USA",15.9,235.5,310,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,NA
+means_253_NA,exp(3.892752+2.5812*log(dbh)),677eda,exp(a+b*ln(DBH)),Stem biomass (with bark),DBH,Species,"West Cascades, USA",15.9,235.5,310,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 means_20_NA,exp(2.0791+2.5585*log(dbh)),51f4e4,exp(a+b*ln(DBH)),Branches (live),DBH,Genus,North America,8.7,111,NA,cm,g,harvest,NA,NA,NA,NA,NRA,NA,0,Unable to extract correction factor from original publication
 means_19_NA,exp(3.4416+1.9278*log(dbh)),61f888,exp(a+b*ln(DBH)),Foliage total,DBH,Genus,North America,8.7,111,NA,cm,g,harvest,NA,NA,NA,NA,NRA,NA,0,Unable to extract correction factor from original publication
 means_22_NA,exp(0.716+2.8796*log(dbh)),2d2a14,exp(a+b*ln(DBH)),Stem bark biomass,DBH,Genus,North America,8.7,111,NA,cm,g,harvest,NA,NA,NA,NA,NRA,NA,0,Unable to extract correction factor from original publication
