@@ -24,6 +24,8 @@ strict and intrusive:
 \item It transforms text-values to lowercase to simplify matching.
 \item It formats equations using \code{\link[formatR:tidy_source]{formatR::tidy_source()}}.
 \item It drops missing values.
+\item It replaces spaces (" ") with underscore ("_") in values of
+allometry_specificity for easier manipulation.
 }
 }
 \examples{

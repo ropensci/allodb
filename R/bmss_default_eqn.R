@@ -10,6 +10,8 @@
 #' * It transforms text-values to lowercase to simplify matching.
 #' * It formats equations using [formatR::tidy_source()].
 #' * It drops missing values.
+#' * It replaces spaces (" ") with underscore ("_") in values of
+#' allometry_specificity for easier manipulation.
 #'
 #' @param .data [allodb::master()] or similar.
 #'
@@ -26,6 +28,7 @@ bmss_default_eqn <- function(.data) {
     dplyr::mutate(
       eqn_source = "default",
       eqn = format_equations(good$equation_allometry),
+      allometry_specificity = gsub(" ", "_", .data$allometry_specificity),
       equation_allometry = NULL
     ) %>%
     dplyr::rename(
