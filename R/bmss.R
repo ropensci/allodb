@@ -15,7 +15,7 @@ bmss <- function(dbh_sp, default_eqn) {
 
   eqn_dbh <- dbh_sp %>%
     bmss::get_allometry("site", "sp", "dbh", default_eqn = default_eqn) %>%
-    dplyr::filter(complete.cases(.))
+    dplyr::filter(stats::complete.cases(.))
 
   .biomass <- purrr::map2_dbl(
     eqn_dbh$eqn, eqn_dbh$dbh,

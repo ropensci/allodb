@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table. — bmss_default_eqn • allodb</title>
+<title>Create a census table of the kind useful in <strong>bmss</strong>. — bmss_cns • allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,19 +30,9 @@
 
 
 
-<meta property="og:title" content="Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table. — bmss_default_eqn" />
+<meta property="og:title" content="Create a census table of the kind useful in <strong>bmss</strong>. — bmss_cns" />
 
-<meta property="og:description" content="This function restructures an equations-table from allodb with columns as
-in allodb_eqn_crucial() (e.g. allodb::master()). It transforms its input
-into a default-equations table for bmss. Now this function is very
-strict and intrusive:
-It drops problematic equations that can't be evaluated.
-It adds and remove columns.
-It renames columns.
-It transforms text-values to lowercase to simplify matching.
-It formats equations using formatR::tidy_source().
-It drops missing values.
-" />
+<meta property="og:description" content="Create a census table of the kind useful in bmss." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -113,35 +103,33 @@ It drops missing values.
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table.</h1>
+    <h1>Create a census table of the kind useful in <strong>bmss</strong>.</h1>
     <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/bmss_default_eqn.R'><code>R/bmss_default_eqn.R</code></a></small>
-    <div class="hidden name"><code>bmss_default_eqn.Rd</code></div>
+    <div class="hidden name"><code>bmss_cns.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>This function restructures an equations-table from <strong>allodb</strong> with columns as
-in <code><a href='allodb_eqn_crucial.html'>allodb_eqn_crucial()</a></code> (e.g. <code><a href='master.html'>allodb::master()</a></code>). It transforms its input
-into a default-equations table for <strong>bmss</strong>. Now this function is very
-strict and intrusive:</p><ul>
-<li><p>It drops problematic equations that can't be evaluated.</p></li>
-<li><p>It adds and remove columns.</p></li>
-<li><p>It renames columns.</p></li>
-<li><p>It transforms text-values to lowercase to simplify matching.</p></li>
-<li><p>It formats equations using <code><a href='http://www.rdocumentation.org/packages/formatR/topics/tidy_source'>formatR::tidy_source()</a></code>.</p></li>
-<li><p>It drops missing values.</p></li>
-</ul>
+    <p>Create a census table of the kind useful in <strong>bmss</strong>.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>bmss_default_eqn</span>(<span class='no'>.data</span>)</pre>
+    <pre class="usage"><span class='fu'>bmss_cns</span>(<span class='no'>census</span>, <span class='no'>species</span>, <span class='no'>site</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>.data</th>
-      <td><p><code><a href='master.html'>allodb::master()</a></code> or similar.</p></td>
+      <th>census</th>
+      <td><p>A ForestGEO-like census-dataframe.</p></td>
+    </tr>
+    <tr>
+      <th>species</th>
+      <td><p>A ForestGEO-like species-dataframe.</p></td>
+    </tr>
+    <tr>
+      <th>site</th>
+      <td><p>The name of the site. One of <code>allodb::sites_info$site</code>.</p></td>
     </tr>
     </table>
     
@@ -151,20 +139,20 @@ strict and intrusive:</p><ul>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bmss_default_eqn</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/allodb/topics/master'>master</a></span>())</div><div class='output co'>#&gt; # A tibble: 619 x 5
-#&gt;    site       sp                eqn                         eqn_source eqn_type
-#&gt;  * &lt;chr&gt;      &lt;chr&gt;             &lt;chr&gt;                       &lt;chr&gt;      &lt;chr&gt;   
-#&gt;  1 lilly dic~ acer rubrum       10^(1.1891 + 1.419 * (log1~ default    species 
-#&gt;  2 tyson      acer rubrum       10^(1.1891 + 1.419 * (log1~ default    species 
-#&gt;  3 lilly dic~ acer saccharum    10^(1.2315 + 1.6376 * (log~ default    species 
-#&gt;  4 tyson      acer saccharum    10^(1.2315 + 1.6376 * (log~ default    species 
-#&gt;  5 lilly dic~ amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt;  6 scbi       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt;  7 serc       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt;  8 serc       amelanchier cana~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt;  9 tyson      amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt; 10 umbc       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt; # ... with 609 more rows</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>bmss_cns</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_tree1</a></span>, <span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='kw'>site</span> <span class='kw'>=</span> <span class='st'>"scbi"</span>)</div><div class='output co'>#&gt; # A tibble: 40,283 x 3
+#&gt;    site  sp                     dbh
+#&gt;  * &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;
+#&gt;  1 scbi  lindera benzoin       27.9
+#&gt;  2 scbi  lindera benzoin       23.7
+#&gt;  3 scbi  lindera benzoin       22.2
+#&gt;  4 scbi  nyssa sylvatica      135  
+#&gt;  5 scbi  hamamelis virginiana  87  
+#&gt;  6 scbi  hamamelis virginiana  22.5
+#&gt;  7 scbi  unidentified unk      42.6
+#&gt;  8 scbi  lindera benzoin       51.4
+#&gt;  9 scbi  viburnum prunifolium  38.3
+#&gt; 10 scbi  asimina triloba       14.5
+#&gt; # ... with 40,273 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

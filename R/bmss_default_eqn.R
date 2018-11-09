@@ -38,7 +38,7 @@ bmss_default_eqn <- function(.data) {
     purrr::modify_if(is.character, tolower) %>%
     # Order
     dplyr::select(bmss_default_vars()) %>%
-    dplyr::filter(complete.cases(.)) %>%
+    dplyr::filter(stats::complete.cases(.)) %>%
     unique() %>%
     dplyr::as_tibble() %>%
     new_bmss_default_eqn()

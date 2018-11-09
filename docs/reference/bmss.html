@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table. — bmss_default_eqn • allodb</title>
+<title>Calculate biomass. — bmss • allodb</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,19 +30,9 @@
 
 
 
-<meta property="og:title" content="Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table. — bmss_default_eqn" />
+<meta property="og:title" content="Calculate biomass. — bmss" />
 
-<meta property="og:description" content="This function restructures an equations-table from allodb with columns as
-in allodb_eqn_crucial() (e.g. allodb::master()). It transforms its input
-into a default-equations table for bmss. Now this function is very
-strict and intrusive:
-It drops problematic equations that can't be evaluated.
-It adds and remove columns.
-It renames columns.
-It transforms text-values to lowercase to simplify matching.
-It formats equations using formatR::tidy_source().
-It drops missing values.
-" />
+<meta property="og:description" content="Calculate biomass." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -113,35 +103,29 @@ It drops missing values.
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Structure equations from <strong>allodb</strong> as a <strong>bmss</strong> default-equations table.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/bmss_default_eqn.R'><code>R/bmss_default_eqn.R</code></a></small>
-    <div class="hidden name"><code>bmss_default_eqn.Rd</code></div>
+    <h1>Calculate biomass.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/bmss.R'><code>R/bmss.R</code></a></small>
+    <div class="hidden name"><code>bmss.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>This function restructures an equations-table from <strong>allodb</strong> with columns as
-in <code><a href='allodb_eqn_crucial.html'>allodb_eqn_crucial()</a></code> (e.g. <code><a href='master.html'>allodb::master()</a></code>). It transforms its input
-into a default-equations table for <strong>bmss</strong>. Now this function is very
-strict and intrusive:</p><ul>
-<li><p>It drops problematic equations that can't be evaluated.</p></li>
-<li><p>It adds and remove columns.</p></li>
-<li><p>It renames columns.</p></li>
-<li><p>It transforms text-values to lowercase to simplify matching.</p></li>
-<li><p>It formats equations using <code><a href='http://www.rdocumentation.org/packages/formatR/topics/tidy_source'>formatR::tidy_source()</a></code>.</p></li>
-<li><p>It drops missing values.</p></li>
-</ul>
+    <p>Calculate biomass.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>bmss_default_eqn</span>(<span class='no'>.data</span>)</pre>
+    <pre class="usage"><span class='fu'>bmss</span>(<span class='no'>dbh_sp</span>, <span class='no'>default_eqn</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>.data</th>
-      <td><p><code><a href='master.html'>allodb::master()</a></code> or similar.</p></td>
+      <th>dbh_sp</th>
+      <td><p>A dataframe created with <code><a href='bmss_cns.html'>bmss_cns()</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>default_eqn</th>
+      <td><p>A dataframe created with <code><a href='bmss_default_eqn.html'>bmss_default_eqn()</a></code>.</p></td>
     </tr>
     </table>
     
@@ -151,20 +135,23 @@ strict and intrusive:</p><ul>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bmss_default_eqn</span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/allodb/topics/master'>master</a></span>())</div><div class='output co'>#&gt; # A tibble: 619 x 5
-#&gt;    site       sp                eqn                         eqn_source eqn_type
-#&gt;  * &lt;chr&gt;      &lt;chr&gt;             &lt;chr&gt;                       &lt;chr&gt;      &lt;chr&gt;   
-#&gt;  1 lilly dic~ acer rubrum       10^(1.1891 + 1.419 * (log1~ default    species 
-#&gt;  2 tyson      acer rubrum       10^(1.1891 + 1.419 * (log1~ default    species 
-#&gt;  3 lilly dic~ acer saccharum    10^(1.2315 + 1.6376 * (log~ default    species 
-#&gt;  4 tyson      acer saccharum    10^(1.2315 + 1.6376 * (log~ default    species 
-#&gt;  5 lilly dic~ amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt;  6 scbi       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt;  7 serc       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt;  8 serc       amelanchier cana~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt;  9 tyson      amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt; 10 umbc       amelanchier arbo~ exp(7.217 + 1.514 * log(db~ default    genus   
-#&gt; # ... with 609 more rows</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>dbh_sp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='bmss_cns.html'>bmss_cns</a></span>(<span class='no'>scbi_tree1</span>, <span class='no'>scbi_species</span>, <span class='kw'>site</span> <span class='kw'>=</span> <span class='st'>"scbi"</span>)
+<span class='no'>default_eqn</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='bmss_default_eqn.html'>bmss_default_eqn</a></span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/allodb/topics/master'>master</a></span>())
+<span class='fu'>bmss</span>(<span class='no'>dbh_sp</span>, <span class='no'>default_eqn</span>)</div><div class='output co'>#&gt; <span class='message'>You gave no custom equations.</span>
+#&gt; <span class='message'>  * Using default equations.</span></div><div class='output co'>#&gt; # A tibble: 30,229 x 7
+#&gt;    site  sp            dbh eqn                   eqn_source eqn_type    biomass
+#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;                 &lt;chr&gt;      &lt;chr&gt;         &lt;dbl&gt;
+#&gt;  1 scbi  lindera be~  27.9 exp(-2.2118 + 2.4133~ default    family      3.37e 2
+#&gt;  2 scbi  lindera be~  23.7 exp(-2.2118 + 2.4133~ default    family      2.28e 2
+#&gt;  3 scbi  lindera be~  22.2 exp(-2.2118 + 2.4133~ default    family      1.94e 2
+#&gt;  4 scbi  nyssa sylv~ 135   1.5416 * (dbh^2)^2.7~ default    species     1.10e12
+#&gt;  5 scbi  lindera be~  51.4 exp(-2.2118 + 2.4133~ default    family      1.47e 3
+#&gt;  6 scbi  asimina tr~  14.5 exp(-2.48 + 2.4835 *~ default    mixed hard~ 6.42e 1
+#&gt;  7 scbi  asimina tr~  11.8 exp(-2.48 + 2.4835 *~ default    mixed hard~ 3.85e 1
+#&gt;  8 scbi  asimina tr~  17.7 exp(-2.48 + 2.4835 *~ default    mixed hard~ 1.05e 2
+#&gt;  9 scbi  lindera be~  15.4 exp(-2.2118 + 2.4133~ default    family      8.04e 1
+#&gt; 10 scbi  lindera be~  14.8 exp(-2.2118 + 2.4133~ default    family      7.30e 1
+#&gt; # ... with 30,219 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
