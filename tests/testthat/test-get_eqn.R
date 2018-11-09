@@ -1,3 +1,3 @@
-context("get_eqn")
+context("get_quations")
 
 
