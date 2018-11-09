@@ -39,7 +39,14 @@ bmss_default_eqn <- function(.data) {
     # Order
     dplyr::select(bmss_default_vars()) %>%
     dplyr::filter(complete.cases(.)) %>%
-    unique()
+    unique() %>%
+    dplyr::as_tibble() %>%
+    new_bmss_default_eqn()
+}
+
+new_bmss_default_eqn <- function(x) {
+  stopifnot(tibble::is.tibble(x))
+  structure(x, class = c("bmss_default_eqn", class(x)))
 }
 
 bmss_default_vars <- function() {
@@ -72,7 +79,13 @@ bmss_cns <- function(census, species, site) {
   all <- dplyr::left_join(.census, .species, by = "sp")
   all$sp <- tolower(all$latin)
   all$site <- .site
-  all[c("site", "sp", "dbh")]
+  out <- all[c("site", "sp", "dbh")]
+  new_bmss_cns(dplyr::as_tibble(out))
+}
+
+new_bmss_cns <- function(x) {
+  stopifnot(tibble::is.tibble(x))
+  structure(x, class = c("bmss_cns", class(x)))
 }
 
 check_bms_cns <- function(census, species, site) {
@@ -98,7 +111,4 @@ check_bms_cns <- function(census, species, site) {
 allodb_eqn_crucial <- function() {
   c("site", "species", "equation_allometry", "allometry_specificity")
 }
-
-
-
 

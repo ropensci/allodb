@@ -35,38 +35,57 @@ For details in how to install packages from GitHub see [this article](https://fg
 
 ```{r, message=FALSE}
 library(dplyr)
+library(purrr)
+library(bmss)
 library(allodb)
 ```
 
-### Workflow
+### Workflow reusing code from the __bmss__ package
 
-This workflow is had-hoc and incomplete. For now it is tested only for equaitons at the species-level.
+This workflow is ad-hoc and incomplete.
 
-```{r}
-census <- scbi_tree1
-# Some equaitons are dropped via allodb:::drop_bad_equations()
-eqn <- pick_equations(scbi_species, "species")
-census_eqn <- add_equation(census, eqn)
-
-# Using head() to compute only on a few rows -- for speed
-result <- add_biomass(head(census_eqn))
-
-# Relevant columns
-select(
-  result, 
-  equation_allometry, dbh, biomass
-)
-```
-
-Same
+* For `allometry_specificity == "Species"`
 
 ```{r}
-census %>% 
-  add_equation(eqn) %>% 
-  head() %>% 
-  add_biomass() %>% 
-  select(equation_allometry, dbh, biomass)
+# Restructure equations table and pick species-specific equations
+default_eqn <- master() %>% 
+  filter(allometry_specificity == "Species") %>% 
+  bmss_default_eqn()
+
+# Restructure census to translate species codes to latin names
+dbh_sp <- bmss_cns(scbi_tree1, scbi_species, site = "scbi")
+
+# Evauate each equation with its corresponding dbh value
+bmss(dbh_sp, default_eqn)
 ```
+
+* For each category of `allometry_specificity` (`bmss()` could be vectorized to do this automatically -- given a vector of values to match in `allometry_specificity`).
+
+```{r}
+bmss_type <- function(dbh_sp, .type) {
+  default_type <- master() %>% 
+    filter(allometry_specificity == .type) %>% 
+    bmss_default_eqn()
+  
+  suppressMessages(
+    bmss(dbh_sp, default_type)
+  )
+}
+
+types <- master() %>% 
+  pull(allometry_specificity) %>% 
+  unique() %>% 
+  na.omit()
+
+by_type <- types %>% 
+  map(~bmss_type(dbh_sp, .type = .x)) %>% 
+  set_names(types)
+
+by_type
+```
+
+
+
 
 ### Tables
 

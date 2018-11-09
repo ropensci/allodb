@@ -26,58 +26,143 @@ article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from
 
 ``` r
 library(dplyr)
+library(purrr)
+library(bmss)
 library(allodb)
 ```
 
-### Workflow
+### Workflow reusing code from the **bmss** package
 
-This workflow is had-hoc and incomplete. For now it is tested only for
-equaitons at the species-level.
+This workflow is ad-hoc and incomplete.
+
+  - For `allometry_specificity == "Species"`
+
+<!-- end list -->
 
 ``` r
-census <- scbi_tree1
-# Some equaitons are dropped via allodb:::drop_bad_equations()
-eqn <- pick_equations(scbi_species, "species")
-census_eqn <- add_equation(census, eqn)
-#> Joining, by = "sp"
+# Restructure equations table and pick species-specific equations
+default_eqn <- master() %>% 
+  filter(allometry_specificity == "Species") %>% 
+  bmss_default_eqn()
 
-# Using head() to compute only on a few rows -- for speed
-result <- add_biomass(head(census_eqn))
+# Restructure census to translate species codes to latin names
+dbh_sp <- bmss_cns(scbi_tree1, scbi_species, site = "scbi")
 
-# Relevant columns
-select(
-  result, 
-  equation_allometry, dbh, biomass
-)
-#> # A tibble: 6 x 3
-#>   equation_allometry                  dbh biomass
-#>   <chr>                             <dbl>   <dbl>
-#> 1 10^(1.1468+2.363*(log10(dbh^2)))   135  1.64e11
-#> 2 10^(1.1468+2.363*(log10(dbh^2)))   135  1.64e11
-#> 3 1.5416*(dbh^2)^2.7818              135  1.10e12
-#> 4 2.56795*(dbh^2)^1.18685            135  2.93e 5
-#> 5 2.56795*(dbh^2)^1.18685            135  2.93e 5
-#> 6 10^(0.8306+2.7308*(log10(dbh^2)))  232. 5.65e13
+# Evauate each equation with its corresponding dbh value
+bmss(dbh_sp, default_eqn)
+#> You gave no custom equations.
+#>   * Using default equations.
+#> # A tibble: 8,930 x 7
+#>    site  sp               dbh eqn              eqn_source eqn_type biomass
+#>    <chr> <chr>          <dbl> <chr>            <chr>      <chr>      <dbl>
+#>  1 scbi  nyssa sylvati~ 135   1.5416 * (dbh^2~ default    species  1.10e12
+#>  2 scbi  liriodendron ~ 232.  1.0259 * (dbh^2~ default    species  2.99e 6
+#>  3 scbi  acer rubrum    326.  exp(4.5893 + 2.~ default    species  1.26e 8
+#>  4 scbi  fraxinus nigra  42.8 0.1634 * (dbh^2~ default    species  1.11e 3
+#>  5 scbi  acer rubrum    289.  exp(4.5893 + 2.~ default    species  9.38e 7
+#>  6 scbi  quercus alba   636.  1.5647 * (dbh^2~ default    species  5.41e 7
+#>  7 scbi  tilia america~ 475   1.4416 * (dbh^2~ default    species  2.97e 7
+#>  8 scbi  tilia america~ 475   0.004884 * (dbh~ default    species  1.97e 3
+#>  9 scbi  fraxinus nigra 170.  0.1634 * (dbh^2~ default    species  2.81e 4
+#> 10 scbi  fagus grandif~  27.2 2.0394 * (dbh^2~ default    species  9.97e 3
+#> # ... with 8,920 more rows
 ```
 
-Same
+  - For each category of `allometry_specificity` (`bmss()` could be
+    vectorized to do this automatically – given a vector of values to
+    match in `allometry_specificity`).
+
+<!-- end list -->
 
 ``` r
-census %>% 
-  add_equation(eqn) %>% 
-  head() %>% 
-  add_biomass() %>% 
-  select(equation_allometry, dbh, biomass)
-#> Joining, by = "sp"
-#> # A tibble: 6 x 3
-#>   equation_allometry                  dbh biomass
-#>   <chr>                             <dbl>   <dbl>
-#> 1 10^(1.1468+2.363*(log10(dbh^2)))   135  1.64e11
-#> 2 10^(1.1468+2.363*(log10(dbh^2)))   135  1.64e11
-#> 3 1.5416*(dbh^2)^2.7818              135  1.10e12
-#> 4 2.56795*(dbh^2)^1.18685            135  2.93e 5
-#> 5 2.56795*(dbh^2)^1.18685            135  2.93e 5
-#> 6 10^(0.8306+2.7308*(log10(dbh^2)))  232. 5.65e13
+bmss_type <- function(dbh_sp, .type) {
+  default_type <- master() %>% 
+    filter(allometry_specificity == .type) %>% 
+    bmss_default_eqn()
+  
+  suppressMessages(
+    bmss(dbh_sp, default_type)
+  )
+}
+
+types <- master() %>% 
+  pull(allometry_specificity) %>% 
+  unique() %>% 
+  na.omit()
+
+by_type <- types %>% 
+  map(~bmss_type(dbh_sp, .type = .x)) %>% 
+  set_names(types)
+
+by_type
+#> $Species
+#> # A tibble: 8,930 x 7
+#>    site  sp               dbh eqn              eqn_source eqn_type biomass
+#>    <chr> <chr>          <dbl> <chr>            <chr>      <chr>      <dbl>
+#>  1 scbi  nyssa sylvati~ 135   1.5416 * (dbh^2~ default    species  1.10e12
+#>  2 scbi  liriodendron ~ 232.  1.0259 * (dbh^2~ default    species  2.99e 6
+#>  3 scbi  acer rubrum    326.  exp(4.5893 + 2.~ default    species  1.26e 8
+#>  4 scbi  fraxinus nigra  42.8 0.1634 * (dbh^2~ default    species  1.11e 3
+#>  5 scbi  acer rubrum    289.  exp(4.5893 + 2.~ default    species  9.38e 7
+#>  6 scbi  quercus alba   636.  1.5647 * (dbh^2~ default    species  5.41e 7
+#>  7 scbi  tilia america~ 475   1.4416 * (dbh^2~ default    species  2.97e 7
+#>  8 scbi  tilia america~ 475   0.004884 * (dbh~ default    species  1.97e 3
+#>  9 scbi  fraxinus nigra 170.  0.1634 * (dbh^2~ default    species  2.81e 4
+#> 10 scbi  fagus grandif~  27.2 2.0394 * (dbh^2~ default    species  9.97e 3
+#> # ... with 8,920 more rows
+#> 
+#> $Genus
+#> # A tibble: 5,642 x 7
+#>    site  sp             dbh eqn                eqn_source eqn_type biomass
+#>    <chr> <chr>        <dbl> <chr>              <chr>      <chr>      <dbl>
+#>  1 scbi  amelanchier~  13.8 exp(7.217 + 1.514~ default    genus     7.25e4
+#>  2 scbi  amelanchier~  13.8 10^(2.5368 + 1.31~ default    genus     1.10e4
+#>  3 scbi  amelanchier~  13.8 10^(2.0865 + 0.94~ default    genus     1.46e3
+#>  4 scbi  carya glabra  25.8 10^(-1.326 + 2.76~ default    genus     3.74e2
+#>  5 scbi  carya cordi~ 453.  10^(-1.326 + 2.76~ default    genus     1.02e6
+#>  6 scbi  ulmus rubra   21   2.04282 * (dbh^2)~ default    genus     4.25e3
+#>  7 scbi  amelanchier~  36.1 exp(7.217 + 1.514~ default    genus     3.11e5
+#>  8 scbi  amelanchier~  36.1 10^(2.5368 + 1.31~ default    genus     3.91e4
+#>  9 scbi  amelanchier~  36.1 10^(2.0865 + 0.94~ default    genus     3.62e3
+#> 10 scbi  carya tomen~ 368.  10^(-1.326 + 2.76~ default    genus     5.79e5
+#> # ... with 5,632 more rows
+#> 
+#> $`Mixed hardwood`
+#> # A tibble: 5,516 x 7
+#>    site  sp             dbh eqn              eqn_source eqn_type   biomass
+#>    <chr> <chr>        <dbl> <chr>            <chr>      <chr>        <dbl>
+#>  1 scbi  asimina tri~  14.5 exp(-2.48 + 2.4~ default    mixed har~    64.2
+#>  2 scbi  asimina tri~  11.8 exp(-2.48 + 2.4~ default    mixed har~    38.5
+#>  3 scbi  asimina tri~  17.7 exp(-2.48 + 2.4~ default    mixed har~   105. 
+#>  4 scbi  sambucus ca~  18   exp(-2.48 + 2.4~ default    mixed har~   110. 
+#>  5 scbi  sambucus ca~  15.4 exp(-2.48 + 2.4~ default    mixed har~    74.5
+#>  6 scbi  carpinus ca~ 110.  exp(-2.48 + 2.4~ default    mixed har~  9768. 
+#>  7 scbi  berberis th~  13.1 exp(-2.48 + 2.4~ default    mixed har~    49.9
+#>  8 scbi  carpinus ca~  45.6 exp(-2.48 + 2.4~ default    mixed har~  1104. 
+#>  9 scbi  carpinus ca~ 102.  exp(-2.48 + 2.4~ default    mixed har~  8074. 
+#> 10 scbi  sambucus ca~  10.7 exp(-2.48 + 2.4~ default    mixed har~    30.2
+#> # ... with 5,506 more rows
+#> 
+#> $Family
+#> # A tibble: 10,141 x 7
+#>    site  sp            dbh eqn                 eqn_source eqn_type biomass
+#>    <chr> <chr>       <dbl> <chr>               <chr>      <chr>      <dbl>
+#>  1 scbi  lindera be~  27.9 exp(-2.2118 + 2.41~ default    family     337. 
+#>  2 scbi  lindera be~  23.7 exp(-2.2118 + 2.41~ default    family     228. 
+#>  3 scbi  lindera be~  22.2 exp(-2.2118 + 2.41~ default    family     194. 
+#>  4 scbi  lindera be~  51.4 exp(-2.2118 + 2.41~ default    family    1474. 
+#>  5 scbi  lindera be~  15.4 exp(-2.2118 + 2.41~ default    family      80.4
+#>  6 scbi  lindera be~  14.8 exp(-2.2118 + 2.41~ default    family      73.0
+#>  7 scbi  lindera be~  15.5 exp(-2.2118 + 2.41~ default    family      81.7
+#>  8 scbi  lindera be~  17.4 exp(-2.2118 + 2.41~ default    family     108. 
+#>  9 scbi  lindera be~  68.2 exp(-2.2118 + 2.41~ default    family    2917. 
+#> 10 scbi  lindera be~  19.3 exp(-2.2118 + 2.41~ default    family     139. 
+#> # ... with 10,131 more rows
+#> 
+#> $`Woody species`
+#> # A tibble: 0 x 7
+#> # ... with 7 variables: site <chr>, sp <chr>, dbh <dbl>, eqn <chr>,
+#> #   eqn_source <chr>, eqn_type <chr>, biomass <dbl>
 ```
 
 ### Tables
