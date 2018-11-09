@@ -19,6 +19,7 @@ A dataframe.
 Keep rows from a dataframe and add missing rows from another dataframe.
 }
 \examples{
+library(dplyr)
 winner <- tibble(rowid = 1, x = "from winner")
 loser <- tibble(rowid = 1:2, x = "from loser")
 bind_winner_loser(winner, loser)

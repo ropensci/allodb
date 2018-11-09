@@ -7,17 +7,18 @@
 #' @export
 #'
 #' @examples
-#' dbh_species <- census_species(dbh_sp, species, site)
-#' get_equaitons(dbh_species)
+#' dbh_species <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
+#' get_equations(dbh_species)
 get_equations <- function(dbh_species) {
   default_eqn <- allodb::default_eqn
   type_data <- default_eqn %>%
     dplyr::filter(!is.na(.data$eqn_type)) %>%
     dplyr::group_by(.data$eqn_type) %>%
     tidyr::nest() %>%
-    dplyr::mutate(data = purrr::map(data, ~get_this_eqn(.x, dbh_species)))
-
-  add_eqn_type(type_data)
+    dplyr::mutate(
+      data = purrr::map(.data$data, ~get_this_eqn(.x, dbh_species))
+    ) %>%
+    add_eqn_type()
 }
 
 get_this_eqn <- function(.type, dbh_species) {
@@ -29,6 +30,9 @@ add_eqn_type <- function(type_data) {
   types <- type_data$eqn_type
   dplyr::mutate(
     type_data,
-    data = purrr::map2(data, types, ~tibble::add_column(.x, eqn_type = .y))
+    data = purrr::map2(
+      .data$data, types,
+      ~tibble::add_column(.x, eqn_type = .y)
+    )
   )
 }

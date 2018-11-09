@@ -23,6 +23,8 @@ row-binding each dataframe with the following one and using
 \code{\link[=bind_winner_loser]{bind_winner_loser()}}.
 }
 \examples{
+library(dplyr)
+
 prio <- list(
   prio1 = tibble(rowid = 1:1, x = "prio1"),
   prio2 = tibble(rowid = 1:2, x = "prio2"),

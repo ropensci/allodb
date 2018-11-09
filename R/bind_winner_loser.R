@@ -8,6 +8,7 @@
 #' @export
 #'
 #' @examples
+#' library(dplyr)
 #' winner <- tibble(rowid = 1, x = "from winner")
 #' loser <- tibble(rowid = 1:2, x = "from loser")
 #' bind_winner_loser(winner, loser)

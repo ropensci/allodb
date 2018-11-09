@@ -17,6 +17,6 @@ type.
 Get default equations of each type.
 }
 \examples{
-dbh_species <- census_species(dbh_sp, species, site)
-get_equaitons(dbh_species)
+dbh_species <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
+get_equations(dbh_species)
 }

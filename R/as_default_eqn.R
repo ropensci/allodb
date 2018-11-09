@@ -84,12 +84,12 @@ census_species <- function(census, species, site) {
   all$site <- .site
   out <- all[c("site", "sp", "dbh")]
   out <- tibble::rowid_to_column(out)
-  new_(dplyr::as_tibble(out))
+  new_census_species(dplyr::as_tibble(out))
 }
 
-new_ <- function(x) {
+new_census_species <- function(x) {
   stopifnot(tibble::is.tibble(x))
-  structure(x, class = c("", class(x)))
+  structure(x, class = c("census_species", class(x)))
 }
 
 check_bms_cns <- function(census, species, site) {
@@ -120,22 +120,4 @@ allodb_eqn_crucial <- function() {
     "equation_allometry",
     "allometry_specificity"
   )
-}
-
-#' Find duplicated equations.
-#'
-#' @param .data A dataframe -- usually of subclass "default_eqn".
-#'
-#' @return A dataframe.
-#' @export
-#'
-#' @examples
-#' find_duplicated_eqn()
-find_duplicated_eqn <- function(.data = allodb::default_eqn) {
-  check_crucial_names(.data, c("sp", "site"))
-
-  .data %>%
-    unique() %>%
-    dplyr::add_count(site, sp, sort = TRUE) %>%
-    dplyr::filter(n > 1)
 }

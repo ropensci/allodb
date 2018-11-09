@@ -35,77 +35,65 @@ For details in how to install packages from GitHub see [this article](https://fg
 
 ```{r, message=FALSE}
 library(dplyr)
-library(purrr)
-library(bmss)
 library(allodb)
 ```
 
-### Workflow reusing code from the __bmss__ package
-
-This workflow is ad-hoc and incomplete.
-
-* For `allometry_specificity == "Species"`
-
 ```{r}
-# Restructure equations table and pick species-specific equations
-default_eqn <- master() %>% 
-  filter(allometry_specificity == "Species") %>% 
-  bmss_default_eqn()
-
-# Restructure census to translate species codes to latin names
-dbh_sp <- bmss_cns(scbi_tree1, scbi_species, site = "scbi")
-
-# Evauate each equation with its corresponding dbh value
-bmss(dbh_sp, default_eqn)
+cns_sp <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
+cns_sp
 ```
 
-* For each category of `allometry_specificity` (`bmss()` could be vectorized to do this automatically -- given a vector of values to match in `allometry_specificity`).
-
 ```{r}
-bmss_type <- function(dbh_sp, .type) {
-  default_type <- master() %>% 
-    filter(allometry_specificity == .type) %>% 
-    bmss_default_eqn()
-  
-  suppressMessages(
-    bmss(dbh_sp, default_type)
-  )
-}
-
-types <- master() %>% 
-  pull(allometry_specificity) %>% 
-  unique() %>% 
-  na.omit()
-
-by_type <- types %>% 
-  map(~bmss_type(dbh_sp, .type = .x)) %>% 
-  set_names(types)
-
-by_type
+eqn <- get_equations(cns_sp)
+eqn
 ```
 
-
-
-
-### Tables
-
 ```{r}
-equations
-equations_metadata
-
-missing_values_metadata
-
-references_metadata
-
-sitespecies
-sitespecies_metadata
-
-wsg
-wsg_metadata
-
-sites_info
+best <- pick_best_equations(eqn)
+best
 ```
 
-## Code of conduct
+Deal with duplicated equations
 
-Please note that this project is released with a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+```{r}
+find_duplicated_rowid(best)
+```
+
+```{r}
+# NO duplicated rowid
+eqn_1rowid <- pick_one_row_by_rowid(best)
+eqn_1rowid
+
+find_duplicated_rowid(eqn_1rowid)
+```
+
+Now you may add the equations to the census data.
+
+```{r}
+census_equations <- left_join(cns_sp, eqn_1rowid)
+census_equations
+```
+
+```{r}
+nrow(census_equations)
+# Same 
+nrow(allodb::scbi_tree1)
+# Not the same 
+nrow(eqn_1rowid)
+```
+
+Finally you can evaluate the equations in the context of `dbh`.
+
+```{r}
+biomass <- evaluate_equations(census_equations)
+biomass
+```
+
+And you can summarize the result with __dplyr__ or any other tool.
+
+```{r}
+biomass %>% 
+  group_by(sp) %>% 
+  summarize(biomass = sum(biomass, na.rm = TRUE))
+```
+

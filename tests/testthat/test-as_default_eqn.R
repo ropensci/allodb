@@ -10,15 +10,9 @@ test_that("outputs the expected data structure", {
 context("census_species")
 
 test_that("outputs the expected data structure", {
-  out <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
+  expect_output({
+    out <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
+  }, NA)
   expect_named(out, c("rowid", names(bmss::user_data)))
 })
 
-
-
-context("find_duplicated_eqn")
-
-test_that("errs with informative message", {
-  new_eqn <- dplyr::rename(default_eqn, spp = sp)
-  expect_error(find_duplicated_eqn(new_eqn), "Ensure your data")
-})
