@@ -1,3 +1,7 @@
+bmss_lst <- function(dbh_sp, default_eqn) {
+
+}
+
 #' Calculate biomass.
 #'
 #' @param dbh_sp A dataframe created with [bmss_cns()].

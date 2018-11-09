@@ -80,6 +80,7 @@ bmss_cns <- function(census, species, site) {
   all$sp <- tolower(all$latin)
   all$site <- .site
   out <- all[c("site", "sp", "dbh")]
+  out <- tibble::rowid_to_column(out)
   new_bmss_cns(dplyr::as_tibble(out))
 }
 
