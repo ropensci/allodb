@@ -2,7 +2,7 @@
 % Please edit documentation in R/bmss_default_eqn.R
 \name{allodb_eqn_crucial}
 \alias{allodb_eqn_crucial}
-\title{Crucial columns form \strong{allodb} equations-table used by \code{bmss_default_eqn()}.}
+\title{Crucial columns form \strong{allodb} equations-table used by \code{as_default_eqn()}.}
 \usage{
 allodb_eqn_crucial()
 }
@@ -10,7 +10,7 @@ allodb_eqn_crucial()
 A string.
 }
 \description{
-Crucial columns form \strong{allodb} equations-table used by \code{bmss_default_eqn()}.
+Crucial columns form \strong{allodb} equations-table used by \code{as_default_eqn()}.
 }
 \examples{
 allodb_eqn_crucial()

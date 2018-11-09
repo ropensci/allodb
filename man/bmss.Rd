@@ -9,7 +9,7 @@ bmss(dbh_sp, default_eqn)
 \arguments{
 \item{dbh_sp}{A dataframe created with \code{\link[=bmss_cns]{bmss_cns()}}.}
 
-\item{default_eqn}{A dataframe created with \code{\link[=bmss_default_eqn]{bmss_default_eqn()}}.}
+\item{default_eqn}{A dataframe created with \code{\link[=as_default_eqn]{as_default_eqn()}}.}
 }
 \value{
 A dataframe.
@@ -19,6 +19,6 @@ Calculate biomass.
 }
 \examples{
 dbh_sp <- bmss_cns(scbi_tree1, scbi_species, site = "scbi")
-default_eqn <- bmss_default_eqn(allodb::master())
+default_eqn <- as_default_eqn(allodb::master())
 bmss(dbh_sp, default_eqn)
 }

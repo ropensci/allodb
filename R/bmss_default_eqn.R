@@ -19,12 +19,12 @@
 #' @export
 #'
 #' @examples
-#' bmss_default_eqn(allodb::master())
-bmss_default_eqn <- function(.data) {
+#' as_default_eqn(allodb::master())
+as_default_eqn <- function(.data) {
   check_crucial_names(.data, allodb_eqn_crucial())
 
   good <- .data[!.data$equation_id %in% .bad_eqn_id , allodb_eqn_crucial()]
-  good %>%
+  out <- good %>%
     dplyr::mutate(
       eqn_source = "default",
       eqn = format_equations(good$equation_allometry),
@@ -42,18 +42,18 @@ bmss_default_eqn <- function(.data) {
     # Order
     dplyr::select(bmss_default_vars()) %>%
     dplyr::filter(stats::complete.cases(.)) %>%
-    unique() %>%
-    dplyr::as_tibble() %>%
-    new_bmss_default_eqn()
+    unique()
+
+  new_default_eqn(dplyr::as_tibble(out))
 }
 
-new_bmss_default_eqn <- function(x) {
+new_default_eqn <- function(x) {
   stopifnot(tibble::is.tibble(x))
-  structure(x, class = c("bmss_default_eqn", class(x)))
+  structure(x, class = c("default_eqn", class(x)))
 }
 
 bmss_default_vars <- function() {
-  c("site", "sp", "eqn", "eqn_source", "eqn_type")
+  c("equation_id", "site", "sp", "eqn", "eqn_source", "eqn_type")
 }
 
 format_equations <- function(eqn) {
@@ -105,7 +105,7 @@ check_bms_cns <- function(census, species, site) {
 
 
 
-#' Crucial columns form __allodb__ equations-table used by `bmss_default_eqn()`.
+#' Crucial columns form __allodb__ equations-table used by `as_default_eqn()`.
 #'
 #' @return A string.
 #' @export
@@ -113,6 +113,29 @@ check_bms_cns <- function(census, species, site) {
 #' @examples
 #' allodb_eqn_crucial()
 allodb_eqn_crucial <- function() {
-  c("site", "species", "equation_allometry", "allometry_specificity")
+  c(
+    "equation_id",
+    "site",
+    "species",
+    "equation_allometry",
+    "allometry_specificity"
+  )
 }
 
+#' Find duplicated equations.
+#'
+#' @param .data A dataframe -- usually of subclass "default_eqn".
+#'
+#' @return A dataframe.
+#' @export
+#'
+#' @examples
+#' find_duplicated_eqn()
+find_duplicated_eqn <- function(.data = allodb::default_eqn) {
+  check_crucial_names(.data, c("sp", "site"))
+
+  .data %>%
+    unique() %>%
+    dplyr::add_count(site, sp, sort = TRUE) %>%
+    dplyr::filter(n > 1)
+}
