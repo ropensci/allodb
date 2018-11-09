@@ -72,8 +72,8 @@ format_equations <- function(eqn) {
 #' @export
 #'
 #' @examples
-#' bmss_cns(allodb::scbi_tree1, allodb::scbi_species, site = "scbi")
-bmss_cns <- function(census, species, site) {
+#' census_species(allodb::scbi_tree1, allodb::scbi_species, site = "scbi")
+census_species <- function(census, species, site) {
   .census <- rlang::set_names(census, tolower)
   .species <- rlang::set_names(species, tolower)
   .site <- tolower(site)
@@ -84,12 +84,12 @@ bmss_cns <- function(census, species, site) {
   all$site <- .site
   out <- all[c("site", "sp", "dbh")]
   out <- tibble::rowid_to_column(out)
-  new_bmss_cns(dplyr::as_tibble(out))
+  new_(dplyr::as_tibble(out))
 }
 
-new_bmss_cns <- function(x) {
+new_ <- function(x) {
   stopifnot(tibble::is.tibble(x))
-  structure(x, class = c("bmss_cns", class(x)))
+  structure(x, class = c("", class(x)))
 }
 
 check_bms_cns <- function(census, species, site) {

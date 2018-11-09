@@ -7,7 +7,7 @@
 get_eqn(dbh_species)
 }
 \arguments{
-\item{dbh_species}{A dataframe as those created with \code{\link[=bmss_cns]{bmss_cns()}}.}
+\item{dbh_species}{A dataframe as those created with \code{\link[=census_species]{census_species()}}.}
 }
 \value{
 A nested dataframe with each row containing the data of an equation
@@ -17,6 +17,6 @@ type.
 Get default equations of each type.
 }
 \examples{
-dbh_species <- bmss_cns(dbh_sp, species, site)
+dbh_species <- census_species(dbh_sp, species, site)
 get_eqn(dbh_species)
 }

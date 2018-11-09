@@ -1,13 +1,13 @@
 #' Calculate biomass.
 #'
-#' @param dbh_sp A dataframe created with [bmss_cns()].
+#' @param dbh_sp A dataframe created with [census_species()].
 #' @param default_eqn A dataframe created with [as_default_eqn()].
 #'
 #' @return A dataframe.
 #' @export
 #'
 #' @examples
-#' dbh_sp <- bmss_cns(scbi_tree1, scbi_species, site = "scbi")
+#' dbh_sp <- census_species(scbi_tree1, scbi_species, site = "scbi")
 #' default_eqn <- as_default_eqn(allodb::master())
 #' bmss(dbh_sp, default_eqn)
 bmss <- function(dbh_sp, default_eqn) {
@@ -25,8 +25,8 @@ bmss <- function(dbh_sp, default_eqn) {
 }
 
 check_bmss <- function(dbh_sp, default_eqn) {
-  if (!inherits(dbh_sp, "bmss_cns")) {
-    inform("Did you use `bmss_cns()` to create `dbh_sp`?")
+  if (!inherits(dbh_sp, "")) {
+    inform("Did you use `()` to create `dbh_sp`?")
   }
 
   if (!inherits(default_eqn, "default_eqn")) {
