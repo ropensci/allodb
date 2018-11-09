@@ -9,7 +9,7 @@
 #' @examples
 #' dbh_species <- census_species(dbh_sp, species, site)
 #' get_equaitons(dbh_species)
-get_equaitons <- function(dbh_species) {
+get_equations <- function(dbh_species) {
   default_eqn <- allodb::default_eqn
   type_data <- default_eqn %>%
     dplyr::filter(!is.na(.data$eqn_type)) %>%
