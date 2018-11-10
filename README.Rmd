@@ -34,7 +34,7 @@ For details in how to install packages from GitHub see [this article](https://fg
 
 ## Plan
 
-* TODO: Move to new package __allo__
+* TODO: Move to new package __fgeo.biomass__
 
 * TODO: Rename/refactor so the pipeline becomes:
 

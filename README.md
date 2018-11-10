@@ -24,7 +24,7 @@ article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from
 
 ## Plan
 
-  - TODO: Move to new package **allo**
+  - TODO: Move to new package **fgeo.biomass**
 
   - TODO: Rename/refactor so the pipeline becomes:
 
