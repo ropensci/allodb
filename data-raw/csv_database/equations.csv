@@ -82,7 +82,7 @@ sneill_1983_pcwa,exp(3.2304+2.2774*log(dbh)),870336,exp(a+b*ln(DBH)),Live crown,
 sneill_1983_pcwa,exp(5.1792+2.0374*log(dbh)),748d94,exp(a+b*ln(DBH)),Dead crown,DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 sneill_1983_pcwa,exp(9.0717+(2.5169*log(dbh)))*419.814*1.22,5a774d,exp(a+(b*ln(DBH)))*419.814*1.22,Stem biomass (with bark),DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,exp(-10.755+2.7308*log(dbh)),5ea2c1,exp(a+b*ln(DBH)),Stem biomass (with bark),DBH,Species,"Pacific Northwest, USA",24.1,117.7,NA,cm,Mg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
-jenkins_2004_cdod,exp(-0.4282+2.1772*dbh+1*log(dbh)),0bdd5e,exp(a+b*DBH+c*(ln(DBH))),"Crown biomass (branches, foliage, twigs)",DBH,Species,"Rocky Mountains, USA",2.54,30.48,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA
+jenkins_2004_cdod,exp(-0.4282+2.1772*log(dbh)),0bdd5e,exp(a+b*ln(DBH)),"Crown biomass (branches, foliage, twigs)",DBH,Species,"Rocky Mountains, USA",2.54,30.48,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 chojnacky_2014_ugbe,exp(-2.677+2.4638*log(dbh)),15b165,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Genus,North America,3,180,561,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 means_301_NA,exp(4.98412+2.18584*log(dbh)),4d8e54,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Species,"Oregon, USA",1.4,13.4,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,exp(-3.9371+2.8427*log(dbh)),f94e03,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Species,"Oregon, USA",10,40,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
