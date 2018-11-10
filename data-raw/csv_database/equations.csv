@@ -8,7 +8,7 @@ jenkins_2004_cdod,exp(-2.48+2.4835*log(dbh)),ae65ed,exp(a+b*ln(DBH)),Total above
 martin_1998_aban,10^(-1.326+2.762*(log10(dbh))),9c4cc9,10^(a+b*(log10(DBH))),Total aboveground biomass,DBH,Genus,"North Carolina, USA",8.2,52.3,10,cm,kg,harvest,linear,NA,1,1,1.005,NA,NA,NA
 jenkins_2004_cdod,2.034*(dbh^2.6349),7913b8,a*(DBH^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,1,0,NA,NA,NA
 chojnacky_2014_ugbe,exp(-2.5095+2.5437*log(dbh)),7f7777,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Family,North America,4,42,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
-jenkins_2004_cdod,exp(5.67+1.97*dbh+1*log(dbh)),cf733d,exp(a+b*DBH+c*(ln(DBH))),Total aboveground biomass,DBH,Species,"Ohio, USA",1.85,7.25,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
+jenkins_2004_cdod,exp(5.67+1.97*log(dbh)),cf733d,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Species,"Ohio, USA",1.85,7.25,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 chojnacky_2014_ugbe,exp(-2.2118+2.4133*log(dbh)),f08fff,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Family,North America,3,64,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,2.0394*(dbh^2.5715),74186d,a*(DBH^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,3.203+(-0.234*dbh)+0.006*(dbh^2),122ba6,a+(b*DBH)+c*(DBH^d),Whole tree (above stump),DBH,Species,"New York, USA",25,550,32,mm,kg,harvest,NA,NA,NA,0,NA,NA,0,NA
