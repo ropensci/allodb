@@ -16,8 +16,6 @@ navbar:
   type: default
 
   right:
-    - text: news
-      href: news/index.html
 
     - icon: fa-gavel
       href: https://github.com/maurolepore

@@ -11,23 +11,116 @@ status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://c
 [![CRAN
 status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb)
 
-The goal of allodb is to develop, host and give access to tables of
-allometric equations for ForestGEO’s network.
+**allodb** is a database of allometric equations. To manipulate these
+equations and calculate biomass see
+[fgeo.biomass](https://forestgeo.github.io/fgeo.biomass/).
 
 ## Installation
 
     # install.pkgs("remotes")
     remotes::install_github("forestgeo/allodb", auth_token = "abc")
 
-For details in how to install pkgs from GitHub see [this
+For details in how to install packages from GitHub see [this
 article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-pkgs-from-github/).
 
 ## Example
 
 ``` r
 library(allodb)
-# For a nice print method
+
+# Just for these examples
 library(tibble)
+library(purrr)
+library(glue)
+```
+
+Combined data-base tables.
+
+``` r
+master()
+#> # A tibble: 743 x 62
+#>    ref_id equation_allome~ equation_id equation_form dependent_varia~
+#>    <chr>  <chr>            <chr>       <chr>         <chr>           
+#>  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
+#>  2 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
+#>  3 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
+#>  4 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
+#>  5 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
+#>  6 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
+#>  7 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
+#>  8 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
+#>  9 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
+#> 10 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
+#> # ... with 733 more rows, and 57 more variables:
+#> #   independent_variable <chr>, allometry_specificity <chr>,
+#> #   geographic_area <chr>, dbh_min_cm <chr>, dbh_max_cm <chr>,
+#> #   sample_size <chr>, dbh_units_original <chr>,
+#> #   biomass_units_original <chr>, allometry_development_method <chr>,
+#> #   regression_model <chr>, other_equations_tested <chr>,
+#> #   log_biomass <chr>, bias_corrected <chr>, bias_correction_factor <chr>,
+#> #   notes_fitting_model <chr>, original_data_availability <chr>,
+#> #   warning <chr>, site <chr>, family <chr>, species <chr>,
+#> #   species_code <chr>, life_form <chr>, equation_group <chr>,
+#> #   equation_taxa <chr>, notes_on_species <chr>, wsg_id <chr>,
+#> #   wsg_specificity <chr>, X16 <chr>, X17 <chr>, X18 <chr>, X19 <chr>,
+#> #   X20 <chr>, X21 <chr>, X22 <chr>, X23 <chr>, X24 <chr>, X25 <chr>,
+#> #   X26 <chr>, X27 <chr>, X28 <chr>, X29 <chr>, X30 <chr>, X31 <chr>,
+#> #   X32 <chr>, X33 <chr>, X34 <chr>, id <chr>, Site <chr>, lat <chr>,
+#> #   long <chr>, UTM_Zone <chr>, UTM_X <chr>, UTM_Y <chr>,
+#> #   intertropical <chr>, size.ha <chr>, E <chr>, wsg.site.name <chr>
+```
+
+Conservatively, all columns of `master()` are character vectors.
+
+``` r
+all(map_lgl(master(), is.character))
+#> [1] TRUE
+```
+
+This is to preserve different representations of missing
+values.
+
+``` r
+na_type <- glue("^{missing_values_metadata$Code}$") %>% glue_collapse("|")
+na_type
+#> ^NA$|^NAC$|^NRA$|^NI$
+
+found <- map(master(), ~unique(grep(na_type, .x, value = TRUE)))
+keep(found, ~length(.x) > 0)
+#> $dbh_min_cm
+#> [1] "NI"  "NRA"
+#> 
+#> $dbh_max_cm
+#> [1] "NI"  "NRA"
+#> 
+#> $sample_size
+#> [1] "NRA"
+#> 
+#> $other_equations_tested
+#> [1] "NRA"
+#> 
+#> $bias_correction_factor
+#> [1] "NRA"
+```
+
+For analysis, set the correct type of each column with `set_type()`.
+Then not all columns will be character vectors.
+
+``` r
+converted <- set_type(master())
+all(map_lgl(converted, is.character))
+#> [1] FALSE
+```
+
+Notice that all types to missing values will be coerced to `NA`.
+
+``` r
+found <- map(converted, ~unique(grep(na_type, .x, value = TRUE)))
+result <- keep(found, ~length(.x) > 0)
+
+if (length(result) == 0)
+  message(glue("No values match {na_type}"))
+#> No values match ^NA$|^NAC$|^NRA$|^NI$
 ```
 
 All datasets.
@@ -36,26 +129,10 @@ All datasets.
 # Helper
 datasets <- function(pkg) {
   dts <- sort(utils::data(package = pkg)$results[ , "Item"])
-  stats::setNames(lapply(dts, get), dts)
+  set_names(map(dts, get), dts)
 }
 
 datasets("allodb")
-#> $default_eqn
-#> # A tibble: 619 x 6
-#>    equation_id site     sp           eqn               eqn_source eqn_type
-#>  * <chr>       <chr>    <chr>        <chr>             <chr>      <chr>   
-#>  1 2060ea      lilly d~ acer rubrum  10^(1.1891 + 1.4~ default    species 
-#>  2 2060ea      tyson    acer rubrum  10^(1.1891 + 1.4~ default    species 
-#>  3 a4d879      lilly d~ acer saccha~ 10^(1.2315 + 1.6~ default    species 
-#>  4 a4d879      tyson    acer saccha~ 10^(1.2315 + 1.6~ default    species 
-#>  5 c59e03      lilly d~ amelanchier~ exp(7.217 + 1.51~ default    genus   
-#>  6 c59e03      scbi     amelanchier~ exp(7.217 + 1.51~ default    genus   
-#>  7 c59e03      serc     amelanchier~ exp(7.217 + 1.51~ default    genus   
-#>  8 c59e03      serc     amelanchier~ exp(7.217 + 1.51~ default    genus   
-#>  9 c59e03      tyson    amelanchier~ exp(7.217 + 1.51~ default    genus   
-#> 10 c59e03      umbc     amelanchier~ exp(7.217 + 1.51~ default    genus   
-#> # ... with 609 more rows
-#> 
 #> $equations
 #> # A tibble: 175 x 22
 #>    ref_id equation_allome~ equation_id equation_form dependent_varia~
@@ -298,43 +375,3 @@ datasets("allodb")
 #> # ... with 1 more variable: `Erikas notes to delete before
 #> #   publication` <chr>
 ```
-
-``` r
-# sapply(datasets, function(x) names(get(x)))
-# 
-# show(datasets, glimpse)
-```
-
-## Planpkgpackage **fgeo.biomass**
-
-  - TODO: Rename/refactor so the pipeline becomes:
-
-<!-- end list -->
-
-``` r
-<census> %>% 
-  # May be a new class of object defined in fgeo.tool, and reexported by allo
-  add_species(<species>) %>%      # from census_species()
-  
-  # Could include an argument `default_eqn` to use different default equations,
-  # e.g. different versions of allodb stored in allodb.
-  allo_find() %>%         # from get_equations()
-  <allo_customize()> %>%  # New: Inserts custom equations
-  allo_prioritize()       # from pick_best_equations()
-  allo_evaluate()         # biomass?
-```
-
-  - TODO: Rename column from sp to species.
-
-  - TODO: Document when a function creates or uses an S3 class.
-
-ENHANCEMENTS
-
-  - TODO: add\_species may be a generic with methods for census and vft
-    – which should be classified from reading with read\_censuses,
-    as\_censuses.
-
-  - Add class vft and taxa to read\_vft() and read\_taxa().
-
-  - Add methods for filter() (and maybe the other 4 main verbes) so that
-    new classes aren’t dropped.
