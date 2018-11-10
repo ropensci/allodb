@@ -104,7 +104,7 @@ jenkins_2004_cdod,9.1583+(-0.4291*dbh)+0.005799*(dbh^2),ecd464,a+(b*DBH)+c*(DBH 
 jenkins_2004_cdod,10^(-0.685+2.249*(log10(dbh))),687843,10^(a+b*(log10(DBH))),Total aboveground biomass,DBH,Species,"Wisconsin, USA",14.7,39.7,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,exp(-2.972-0.017*dbh+2.873*(log(dbh))),82e78c,exp(a+b*DBH+c*(ln(DBH))),Total aboveground biomass,DBH,Species,"Wisconsin, USA",2.8,69.5,NA,cm,kg,harvest,NA,NA,NA,1,1.05,NA,NA,NA
 jenkins_2004_cdod,0.091*(dbh^2.234),c078ca,a*(DBH^b),Whole tree (above stump),DBH,Species,"North Central States, USA",2.5,40,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
-jenkins_2004_cdod,exp(6.9159+0.7003*dbh+1*log(dbh)),1d44c6,exp(a+b*DBH+c*(ln(DBH))),Total aboveground biomass,DBH,Species,"Maine, USA",0.1,2.54,NA,in,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
+jenkins_2004_cdod,exp(6.9159+0.7003*log(dbh)),1d44c6,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Species,"Maine, USA",0.1,2.54,NA,in,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,10^(3.779+2.473*(log10(dbh))),b570d4,10^(a+b*(log10(DBH))),Whole tree (above stump),DBH,Species,"Bristish Columbia, Canada",31,90.4,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,0.62+(0.8024*dbh)+0.1724*(dbh^2)+1*(dbh^3),cab5a8,a+(b*DBH)+c*(DBH^2)+d*(DBH^3),Stem biomass (with bark),DBH,Species,"Rocky Mountains, USA",0,10.16,12,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,exp(1.0152+1.6839*dbh+1*log(dbh)),6b7404,exp(a+b*DBH+c*(ln(DBH))),"Crown biomass (branches, foliage, twigs)",DBH,Species,"Rocky Mountains, USA",2.54,30.48,15,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA
