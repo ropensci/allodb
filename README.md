@@ -22,6 +22,154 @@ allometric equations for ForestGEO’s network.
 For details in how to install packages from GitHub see [this
 article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
 
+## Example
+
+``` r
+library(allodb)
+```
+
+Helpers.
+
+``` r
+# Helpers
+show <- function(...) {
+  out <- lapply(...)
+  invisible(out)
+}
+
+allodb_datasets <- function() {
+  sort(utils::data(package = "allodb")$results[ , "Item"])
+}
+
+glimpse <- function(x) {
+  out <- capture.output(str(get(x), give.attr = FALSE, list.len = 3))
+  cat(x, out, "\n", sep = "\n")
+}
+```
+
+All datasets.
+
+``` r
+show(allodb_datasets(), glimpse)
+#> default_eqn
+#> Classes 'default_eqn', 'tbl_df', 'tbl' and 'data.frame': 619 obs. of  6 variables:
+#>  $ equation_id: chr  "2060ea" "2060ea" "a4d879" "a4d879" ...
+#>  $ site       : chr  "lilly dicky" "tyson" "lilly dicky" "tyson" ...
+#>  $ sp         : chr  "acer rubrum" "acer rubrum" "acer saccharum" "acer saccharum" ...
+#>   [list output truncated]
+#> 
+#> 
+#> equations
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    175 obs. of  22 variables:
+#>  $ ref_id                              : chr  "jenkins_2004_cdod" "jenkins_2004_cdod" "jenkins_2004_cdod" "jenkins_2004_cdod" ...
+#>  $ equation_allometry                  : chr  "10^(1.1891+1.419*(log10(dbh^2)))" "10^(1.2315+1.6376*(log10(dbh^2)))" "exp(7.217+1.514*log(dbh))" "10^(2.5368+1.3197*(log10(dbh)))" ...
+#>  $ equation_id                         : chr  "2060ea" "a4d879" "c59e03" "96c0af" ...
+#>   [list output truncated]
+#> 
+#> 
+#> equations_metadata
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    22 obs. of  7 variables:
+#>  $ Column     : chr  "1 / A" "2 / B" "3 / C" "4 / D" ...
+#>  $ Field      : chr  "equation_id" "equation_form" "equation_allometry" "dependent_variable_biomass_component" ...
+#>  $ Description: chr  "Unique equation identification number given arbitrarely. Links to Site_Species table." "Algebraic form of the biomass equation as function of DBH" "Equation to calculate biomass (includes coeficients given in original publication)" "Tree component characterized by the equation" ...
+#>   [list output truncated]
+#> 
+#> 
+#> missing_values_metadata
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    4 obs. of  3 variables:
+#>  $ Code       : chr  NA "NAC" "NRA" "NI"
+#>  $ Definition : chr  "Not Applicable" "Not Acquired" "Not Readily Available" "No Information"
+#>  $ Description: chr  "Data does not apply to that particular case" "Information may be available but has not been acquired." "Information was not readily available to the authors (e.g., no ready access to the publication, language barrier)." "No information available in original publication"
+#> 
+#> 
+#> references_metadata
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    7 obs. of  4 variables:
+#>  $ Column     : chr  "1 / A" "2 / B" "3 / C" "4 / D" ...
+#>  $ Field      : chr  "ref_id" "ref_doi" "ref_author" "ref_year" ...
+#>  $ Description: chr  "Unique reference identification number to our data source. Links to multiple tables." "Publication DOI (Digital object identifier)" "Last name of first author of a cited publication" "Year of publication" ...
+#>   [list output truncated]
+#> 
+#> 
+#> scbi_species
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    73 obs. of  10 variables:
+#>  $ sp       : chr  "acne" "acpl" "acru" "acsp" ...
+#>  $ Latin    : chr  "Acer negundo" "Acer platanoides" "Acer rubrum" "Acer sp" ...
+#>  $ Genus    : chr  "Acer" "Acer" "Acer" "Acer" ...
+#>   [list output truncated]
+#> 
+#> 
+#> scbi_stem1
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    55295 obs. of  20 variables:
+#>  $ treeID   : int  1 1 2 2 3 3 3 4 4 5 ...
+#>  $ stemID   : int  1 31194 2 31195 3 31196 40394 4 31197 5 ...
+#>  $ tag      : chr  "10079" "10079" "10168" "10168" ...
+#>   [list output truncated]
+#> 
+#> 
+#> scbi_stem2
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    55295 obs. of  20 variables:
+#>  $ treeID   : int  1 1 2 2 3 3 3 4 4 5 ...
+#>  $ stemID   : int  1 31194 2 31195 3 31196 40394 4 31197 5 ...
+#>  $ tag      : chr  "10079" "10079" "10168" "10168" ...
+#>   [list output truncated]
+#> 
+#> 
+#> scbi_tree1
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    40283 obs. of  20 variables:
+#>  $ treeID   : int  1 2 3 4 5 6 7 8 9 10 ...
+#>  $ stemID   : int  1 2 3 4 5 6 7 8 9 10 ...
+#>  $ tag      : chr  "10079" "10168" "10567" "12165" ...
+#>   [list output truncated]
+#> 
+#> 
+#> scbi_tree2
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    40283 obs. of  20 variables:
+#>  $ treeID   : int  1 2 3 4 5 6 7 8 9 10 ...
+#>  $ stemID   : int  1 2 3 4 5 6 31200 31201 31202 10 ...
+#>  $ tag      : chr  "10079" "10168" "10567" "12165" ...
+#>   [list output truncated]
+#> 
+#> 
+#> sites_info
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    63 obs. of  12 variables:
+#>  $ id           : chr  "42" "51" "52" "45" ...
+#>  $ Site         : chr  "Amacayacu" "Badagongshan" "Baotianman" "Barro Colorado Island" ...
+#>  $ site         : chr  "amacayacu" "badagongshan" "baotianman" "barro colorado island" ...
+#>   [list output truncated]
+#> 
+#> 
+#> sitespecies
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    679 obs. of  34 variables:
+#>  $ site                                : chr  "Lilly Dicky" "Lilly Dicky" "Lilly Dicky" "Lilly Dicky" ...
+#>  $ family                              : chr  "Sapindaceae" "Sapindaceae" "Rosaceae" "Rosaceae" ...
+#>  $ species                             : chr  "Acer rubrum" "Acer saccharum" "Amelanchier arborea" "Amelanchier arborea" ...
+#>   [list output truncated]
+#> 
+#> 
+#> sitespecies_metadata
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    15 obs. of  8 variables:
+#>  $ Column                                   : chr  "1 / A" "2 / B" "3 / C" "4 / D" ...
+#>  $ Field                                    : chr  "site" "family" "species" "species_code" ...
+#>  $ Description                              : chr  "ForestGEO site name (corresponds to name in ForestGEO sites master table)" "Plant family name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names." "Plant scientific name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names." "Species code used at the ForestGEO site, variable per site, even if representing same species ." ...
+#>   [list output truncated]
+#> 
+#> 
+#> wsg
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    549 obs. of  8 variables:
+#>  $ wsg_id         : chr  NA NA NA NA ...
+#>  $ family         : chr  "Sapindaceae" "Sapindaceae" "Rosaceae" "Annonaceae" ...
+#>  $ species        : chr  "Acer rubrum" "Acer saccharum" "Amelanchier arborea" "Asimina triloba" ...
+#>   [list output truncated]
+#> 
+#> 
+#> wsg_metadata
+#> Classes 'tbl_df', 'tbl' and 'data.frame':    9 obs. of  8 variables:
+#>  $ Column                                   : chr  "1 / A" "2 / B" "3 / C" "4 / D" ...
+#>  $ Field                                    : chr  "wsg_id" "family" "genus" "species" ...
+#>  $ Description                              : chr  "Wood specific gravity unique identification number" "Plant family name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names." "Plant genus name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names." "Plant species name as Taxonomic Name Resolution Services an online free tool for correcting and standardizing plant names." ...
+#>   [list output truncated]
+```
+
 ## Plan
 
   - TODO: Move to new package **fgeo.biomass**
@@ -57,190 +205,3 @@ ENHANCEMENTS
 
   - Add methods for filter() (and maybe the other 4 main verbes) so that
     new classes aren’t dropped.
-
-## Example
-
-This example shows how to to calculate biomass using ForestGEO-like
-census data and allometric equations from the **allodb** package.
-
-``` r
-library(allodb)
-# General purpose tools
-library(dplyr)
-```
-
-Create a dataset with information on the dbh and latin species
-name.
-
-``` r
-dbh_species <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
-dbh_species
-#> # A tibble: 40,283 x 4
-#>    rowid site  sp                     dbh
-#>  * <int> <chr> <chr>                <dbl>
-#>  1     1 scbi  lindera benzoin       27.9
-#>  2     2 scbi  lindera benzoin       23.7
-#>  3     3 scbi  lindera benzoin       22.2
-#>  4     4 scbi  nyssa sylvatica      135  
-#>  5     5 scbi  hamamelis virginiana  87  
-#>  6     6 scbi  hamamelis virginiana  22.5
-#>  7     7 scbi  unidentified unk      42.6
-#>  8     8 scbi  lindera benzoin       51.4
-#>  9     9 scbi  viburnum prunifolium  38.3
-#> 10    10 scbi  asimina triloba       14.5
-#> # ... with 40,273 more rows
-```
-
-``` r
-eqn <- get_equations(dbh_species)
-eqn
-#> # A tibble: 5 x 2
-#>   eqn_type       data                 
-#>   <chr>          <list>               
-#> 1 species        <tibble [8,930 x 8]> 
-#> 2 genus          <tibble [5,642 x 8]> 
-#> 3 mixed_hardwood <tibble [5,516 x 8]> 
-#> 4 family         <tibble [10,141 x 8]>
-#> 5 woody_species  <tibble [0 x 8]>
-```
-
-``` r
-best <- pick_best_equations(eqn)
-best
-#> # A tibble: 30,229 x 8
-#>    rowid site  sp           dbh equation_id eqn        eqn_source eqn_type
-#>    <int> <chr> <chr>      <dbl> <chr>       <chr>      <chr>      <chr>   
-#>  1     4 scbi  nyssa syl~ 135   8da09d      1.5416 * ~ default    species 
-#>  2    21 scbi  liriodend~ 232.  34fe5a      1.0259 * ~ default    species 
-#>  3    29 scbi  acer rubr~ 326.  7c72ed      exp(4.589~ default    species 
-#>  4    38 scbi  fraxinus ~  42.8 0edaff      0.1634 * ~ default    species 
-#>  5    72 scbi  acer rubr~ 289.  7c72ed      exp(4.589~ default    species 
-#>  6    77 scbi  quercus a~ 636.  07dba7      1.5647 * ~ default    species 
-#>  7    79 scbi  tilia ame~ 475   3f99ba      1.4416 * ~ default    species 
-#>  8    79 scbi  tilia ame~ 475   76d19b      0.004884 ~ default    species 
-#>  9    84 scbi  fraxinus ~ 170.  0edaff      0.1634 * ~ default    species 
-#> 10    89 scbi  fagus gra~  27.2 74186d      2.0394 * ~ default    species 
-#> # ... with 30,219 more rows
-```
-
-Deal with duplicated equations
-
-``` r
-find_duplicated_rowid(best)
-#> # A tibble: 1,809 x 9
-#>    rowid site  sp        dbh equation_id eqn     eqn_source eqn_type     n
-#>    <int> <chr> <chr>   <dbl> <chr>       <chr>   <chr>      <chr>    <int>
-#>  1   106 scbi  amelan~  13.8 c59e03      exp(7.~ default    genus        3
-#>  2   106 scbi  amelan~  13.8 96c0af      10^(2.~ default    genus        3
-#>  3   106 scbi  amelan~  13.8 529234      10^(2.~ default    genus        3
-#>  4   125 scbi  amelan~  36.1 c59e03      exp(7.~ default    genus        3
-#>  5   125 scbi  amelan~  36.1 96c0af      10^(2.~ default    genus        3
-#>  6   125 scbi  amelan~  36.1 529234      10^(2.~ default    genus        3
-#>  7   131 scbi  amelan~  79.1 c59e03      exp(7.~ default    genus        3
-#>  8   131 scbi  amelan~  79.1 96c0af      10^(2.~ default    genus        3
-#>  9   131 scbi  amelan~  79.1 529234      10^(2.~ default    genus        3
-#> 10   132 scbi  amelan~  24   c59e03      exp(7.~ default    genus        3
-#> # ... with 1,799 more rows
-```
-
-``` r
-# NO duplicated rowid
-eqn_1rowid <- pick_one_row_by_rowid(best)
-eqn_1rowid
-#> # A tibble: 29,203 x 8
-#>    rowid site  sp           dbh equation_id eqn        eqn_source eqn_type
-#>    <int> <chr> <chr>      <dbl> <chr>       <chr>      <chr>      <chr>   
-#>  1     4 scbi  nyssa syl~ 135   8da09d      1.5416 * ~ default    species 
-#>  2    21 scbi  liriodend~ 232.  34fe5a      1.0259 * ~ default    species 
-#>  3    29 scbi  acer rubr~ 326.  7c72ed      exp(4.589~ default    species 
-#>  4    38 scbi  fraxinus ~  42.8 0edaff      0.1634 * ~ default    species 
-#>  5    72 scbi  acer rubr~ 289.  7c72ed      exp(4.589~ default    species 
-#>  6    77 scbi  quercus a~ 636.  07dba7      1.5647 * ~ default    species 
-#>  7    79 scbi  tilia ame~ 475   3f99ba      1.4416 * ~ default    species 
-#>  8    84 scbi  fraxinus ~ 170.  0edaff      0.1634 * ~ default    species 
-#>  9    89 scbi  fagus gra~  27.2 74186d      2.0394 * ~ default    species 
-#> 10    95 scbi  quercus r~ 520.  839012      2.4601 * ~ default    species 
-#> # ... with 29,193 more rows
-
-find_duplicated_rowid(eqn_1rowid)
-#> # A tibble: 0 x 9
-#> # ... with 9 variables: rowid <int>, site <chr>, sp <chr>, dbh <dbl>,
-#> #   equation_id <chr>, eqn <chr>, eqn_source <chr>, eqn_type <chr>,
-#> #   n <int>
-```
-
-Now you may add the equations to the census data.
-
-``` r
-census_equations <- left_join(dbh_species, eqn_1rowid)
-#> Joining, by = c("rowid", "site", "sp", "dbh")
-census_equations
-#> # A tibble: 40,283 x 8
-#>    rowid site  sp          dbh equation_id eqn        eqn_source eqn_type 
-#>    <int> <chr> <chr>     <dbl> <chr>       <chr>      <chr>      <chr>    
-#>  1     1 scbi  lindera ~  27.9 f08fff      exp(-2.21~ default    family   
-#>  2     2 scbi  lindera ~  23.7 f08fff      exp(-2.21~ default    family   
-#>  3     3 scbi  lindera ~  22.2 f08fff      exp(-2.21~ default    family   
-#>  4     4 scbi  nyssa sy~ 135   8da09d      1.5416 * ~ default    species  
-#>  5     5 scbi  hamameli~  87   <NA>        <NA>       <NA>       <NA>     
-#>  6     6 scbi  hamameli~  22.5 <NA>        <NA>       <NA>       <NA>     
-#>  7     7 scbi  unidenti~  42.6 <NA>        <NA>       <NA>       <NA>     
-#>  8     8 scbi  lindera ~  51.4 f08fff      exp(-2.21~ default    family   
-#>  9     9 scbi  viburnum~  38.3 <NA>        <NA>       <NA>       <NA>     
-#> 10    10 scbi  asimina ~  14.5 ae65ed      exp(-2.48~ default    mixed_ha~
-#> # ... with 40,273 more rows
-```
-
-``` r
-nrow(census_equations)
-#> [1] 40283
-# Same 
-nrow(allodb::scbi_tree1)
-#> [1] 40283
-# Not the same 
-nrow(eqn_1rowid)
-#> [1] 29203
-```
-
-Finally you can evaluate the equations in the context of `dbh`.
-
-``` r
-biomass <- evaluate_equations(census_equations)
-biomass
-#> # A tibble: 40,283 x 9
-#>    rowid site  sp       dbh equation_id eqn   eqn_source eqn_type  biomass
-#>    <int> <chr> <chr>  <dbl> <chr>       <chr> <chr>      <chr>       <dbl>
-#>  1     1 scbi  linde~  27.9 f08fff      exp(~ default    family    3.37e 2
-#>  2     2 scbi  linde~  23.7 f08fff      exp(~ default    family    2.28e 2
-#>  3     3 scbi  linde~  22.2 f08fff      exp(~ default    family    1.94e 2
-#>  4     4 scbi  nyssa~ 135   8da09d      1.54~ default    species   1.10e12
-#>  5     5 scbi  hamam~  87   <NA>        <NA>  <NA>       <NA>     NA      
-#>  6     6 scbi  hamam~  22.5 <NA>        <NA>  <NA>       <NA>     NA      
-#>  7     7 scbi  unide~  42.6 <NA>        <NA>  <NA>       <NA>     NA      
-#>  8     8 scbi  linde~  51.4 f08fff      exp(~ default    family    1.47e 3
-#>  9     9 scbi  vibur~  38.3 <NA>        <NA>  <NA>       <NA>     NA      
-#> 10    10 scbi  asimi~  14.5 ae65ed      exp(~ default    mixed_h~  6.42e 1
-#> # ... with 40,273 more rows
-```
-
-And you can summarize the result with **dplyr** or any other tool.
-
-``` r
-biomass %>% 
-  group_by(sp) %>% 
-  summarize(biomass = sum(biomass, na.rm = TRUE))
-#> # A tibble: 73 x 2
-#>    sp                         biomass
-#>    <chr>                        <dbl>
-#>  1 acer negundo              163405. 
-#>  2 acer platanoides          300436. 
-#>  3 acer rubrum          13080438140. 
-#>  4 acer sp                        0  
-#>  5 ailanthus altissima       299405. 
-#>  6 amelanchier arborea    155633434. 
-#>  7 asimina triloba          1151658. 
-#>  8 berberis thunbergii           49.9
-#>  9 carpinus caroliniana     6658184. 
-#> 10 carya cordiformis       79257258. 
-#> # ... with 63 more rows
-```

@@ -31,6 +31,36 @@ remotes::install_github("forestgeo/allodb", auth_token = "abc")
 
 For details in how to install packages from GitHub see [this article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
 
+## Example
+
+```{r}
+library(allodb)
+```
+
+Helpers.
+
+```{r}
+# Helpers
+show <- function(...) {
+  out <- lapply(...)
+  invisible(out)
+}
+
+allodb_datasets <- function() {
+  sort(utils::data(package = "allodb")$results[ , "Item"])
+}
+
+glimpse <- function(x) {
+  out <- capture.output(str(get(x), give.attr = FALSE, list.len = 3))
+  cat(x, out, "\n", sep = "\n")
+}
+```
+
+All datasets.
+
+```{r}
+show(allodb_datasets(), glimpse)
+```
 
 ## Plan
 
@@ -72,75 +102,4 @@ classes aren't dropped.
 
 
 
-
-## Example
-
-This example shows how to to calculate biomass using ForestGEO-like census data and allometric equations from the __allodb__ package.
-
-```{r, message=FALSE}
-library(allodb)
-# General purpose tools
-library(dplyr)
-```
-
-Create a dataset with information on the dbh and latin species name.
-
-```{r}
-dbh_species <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
-dbh_species
-```
-
-```{r}
-eqn <- get_equations(dbh_species)
-eqn
-```
-
-```{r}
-best <- pick_best_equations(eqn)
-best
-```
-
-Deal with duplicated equations
-
-```{r}
-find_duplicated_rowid(best)
-```
-
-```{r}
-# NO duplicated rowid
-eqn_1rowid <- pick_one_row_by_rowid(best)
-eqn_1rowid
-
-find_duplicated_rowid(eqn_1rowid)
-```
-
-Now you may add the equations to the census data.
-
-```{r}
-census_equations <- left_join(dbh_species, eqn_1rowid)
-census_equations
-```
-
-```{r}
-nrow(census_equations)
-# Same 
-nrow(allodb::scbi_tree1)
-# Not the same 
-nrow(eqn_1rowid)
-```
-
-Finally you can evaluate the equations in the context of `dbh`.
-
-```{r}
-biomass <- evaluate_equations(census_equations)
-biomass
-```
-
-And you can summarize the result with __dplyr__ or any other tool.
-
-```{r}
-biomass %>% 
-  group_by(sp) %>% 
-  summarize(biomass = sum(biomass, na.rm = TRUE))
-```
 
