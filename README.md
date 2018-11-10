@@ -22,16 +22,59 @@ allometric equations for ForestGEO’s network.
 For details in how to install packages from GitHub see [this
 article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
 
-## Example
+## Plan
+
+  - TODO: Move to new package **allo**
+
+  - TODO: Rename/refactor so the pipeline becomes:
+
+<!-- end list -->
 
 ``` r
-library(dplyr)
-library(allodb)
+<census> %>% 
+  # May be a new class of object defined in fgeo.tool, and reexported by allo
+  add_species(<species>) %>%      # from census_species()
+  
+  # Could include an argument `default_eqn` to use different default equations,
+  # e.g. different versions of allodb stored in allodb.
+  allo_find() %>%         # from get_equations()
+  <allo_customize()> %>%  # New: Inserts custom equations
+  allo_prioritize()       # from pick_best_equations()
+  allo_evaluate()         # biomass?
 ```
 
+  - TODO: Rename column from sp to species.
+
+  - TODO: Document when a function creates or uses an S3 class.
+
+ENHANCEMENTS
+
+  - TODO: add\_species may be a generic with methods for census and vft
+    – which should be classified from reading with read\_censuses,
+    as\_censuses.
+
+  - Add class vft and taxa to read\_vft() and read\_taxa().
+
+  - Add methods for filter() (and maybe the other 4 main verbes) so that
+    new classes aren’t dropped.
+
+## Example
+
+This example shows how to to calculate biomass using ForestGEO-like
+census data and allometric equations from the **allodb** package.
+
 ``` r
-cns_sp <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
-cns_sp
+library(allodb)
+# General purpose tools
+library(dplyr)
+```
+
+Create a dataset with information on the dbh and latin species
+name.
+
+``` r
+dbh_species <- census_species(allodb::scbi_tree1, allodb::scbi_species, "scbi")
+dbh_species
 #> # A tibble: 40,283 x 4
 #>    rowid site  sp                     dbh
 #>  * <int> <chr> <chr>                <dbl>
@@ -49,7 +92,7 @@ cns_sp
 ```
 
 ``` r
-eqn <- get_equations(cns_sp)
+eqn <- get_equations(dbh_species)
 eqn
 #> # A tibble: 5 x 2
 #>   eqn_type       data                 
@@ -129,7 +172,7 @@ find_duplicated_rowid(eqn_1rowid)
 Now you may add the equations to the census data.
 
 ``` r
-census_equations <- left_join(cns_sp, eqn_1rowid)
+census_equations <- left_join(dbh_species, eqn_1rowid)
 #> Joining, by = c("rowid", "site", "sp", "dbh")
 census_equations
 #> # A tibble: 40,283 x 8
