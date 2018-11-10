@@ -18,7 +18,7 @@ jenkins_2004_cdod,0.1632*(dbh^2.2454),c36a5b,a*(DBH^b),Total aboveground biomass
 jenkins_2004_cdod,10^(0.8306+2.7308*(log10(dbh^2))),94f593,10^(a+b*(log10(DBH^c))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.42,8.53,NA,cm,g,harvest,NA,NA,NA,1,1.014,NA,NA,NA
 jenkins_2004_cdod,10^(1.1468+2.363*(log10(dbh^2))),8c94e8,10^(a+b*(log10(DBH^c))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.24,6.72,NA,cm,g,harvest,NA,NA,NA,1,1.006,NA,NA,NA
 jenkins_2004_cdod,exp(4.97+2.34*log(dbh)),289f7c,exp(a+b*ln(DBH)),Stem and branches (live),DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA
-jenkins_2004_cdod,exp(1.92+1.86*dbh+1*log(dbh)),b9d4fc,exp(a+b*DBH+c*(ln(DBH))),Foliage total,DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA
+jenkins_2004_cdod,exp(1.92+1.86*log(dbh)),b9d4fc,exp(a+b*ln(DBH)),Foliage total,DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA
 jenkins_2004_cdod,10^(1.1981+1.5876*(log10(dbh))),8aecca,10^(a+b*(log10(DBH))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.37,6.83,NA,cm,g,harvest,NA,NA,NA,1,1.017,NA,NA,NA
 jenkins_2004_cdod,1.5647*(dbh^2.6887),07dba7,a*(DBH^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,29,in,lb,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,2.65743*(dbh^2.43948),cb0353,a*(DBH^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,40.64,NA,in,lb,harvest,NA,NA,NA,0,NA,NA,NA,NA
