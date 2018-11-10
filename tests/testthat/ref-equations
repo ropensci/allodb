@@ -129,7 +129,7 @@
 128          fenn_2014_tcco
 129          fenn_2014_tcco
 130          fenn_2014_tcco
-131       jenkins_2004_cdod
+131            means_380_NA
 132       westman_1998_absa
 133       jenkins_2004_cdod
 134            means_736_NA
@@ -184,7 +184,7 @@
 7                                       10^(-1.326+2.762*(log10(dbh)))
 8                                                   2.034*(dbh^2.6349)
 9                                         exp(-2.5095+2.5437*log(dbh))
-10                                       exp(5.67+1.97*dbh+1*log(dbh))
+10                                             exp(5.67+1.97*log(dbh))
 11                                        exp(-2.2118+2.4133*log(dbh))
 12                                                 2.0394*(dbh^2.5715)
 13                                    3.203+(-0.234*dbh)+0.006*(dbh^2)
@@ -193,8 +193,8 @@
 16                                                 0.1632*(dbh^2.2454)
 17                                   10^(0.8306+2.7308*(log10(dbh^2)))
 18                                    10^(1.1468+2.363*(log10(dbh^2)))
-19                                       exp(4.97+2.34*dbh+1*log(dbh))
-20                                       exp(1.92+1.86*dbh+1*log(dbh))
+19                                             exp(4.97+2.34*log(dbh))
+20                                             exp(1.92+1.86*log(dbh))
 21                                     10^(1.1981+1.5876*(log10(dbh)))
 22                                                 1.5647*(dbh^2.6887)
 23                                               2.65743*(dbh^2.43948)
@@ -257,8 +257,8 @@
 80                                         exp(3.2304+2.2774*log(dbh))
 81                                         exp(5.1792+2.0374*log(dbh))
 82                          exp(9.0717+(2.5169*log(dbh)))*419.814*1.22
-83                                  exp(-10.755+2.7308*dbh+1*log(dbh))
-84                                  exp(-0.4282+2.1772*dbh+1*log(dbh))
+83                                        exp(-10.755+2.7308*log(dbh))
+84                                        exp(-0.4282+2.1772*log(dbh))
 85                                         exp(-2.677+2.4638*log(dbh))
 86                                       exp(4.98412+2.18584*log(dbh))
 87                                        exp(-3.9371+2.8427*log(dbh))
@@ -267,8 +267,8 @@
 90                                        exp(-2.1001+2.3996*log(dbh))
 91                                         exp(3.6123+2.9944*log(dba))
 92                                                  0.0752*(dbh^2.497)
-93                                    exp(-2.037+2.363*dbh+1*log(dbh))
-94                                    exp(-1.721+2.334*dbh+1*log(dbh))
+93                                          exp(-2.037+2.363*log(dbh))
+94                                          exp(-1.721+2.334*log(dbh))
 95                                         10^(-0.9+2.52*(log10(dbh)))
 96                                         exp(-2.5932+2.534*log(dbh))
 97                                                 0.08724*(dbh^2.587)
@@ -280,10 +280,10 @@
 103                                     10^(-0.685+2.249*(log10(dbh)))
 104                             exp(-2.972-0.017*dbh+2.873*(log(dbh)))
 105                                                  0.091*(dbh^2.234)
-106                                  exp(6.9159+0.7003*dbh+1*log(dbh))
+106                                        exp(6.9159+0.7003*log(dbh))
 107                                      10^(3.779+2.473*(log10(dbh)))
 108                         0.62+(0.8024*dbh)+0.1724*(dbh^2)+1*(dbh^3)
-109                                  exp(1.0152+1.6839*dbh+1*log(dbh))
+109                                        exp(1.0152+1.6839*log(dbh))
 110                                        exp(2.7261+2.3324*log(dbh))
 111                                       exp(2.03496+2.1683*log(dbh))
 112                                      exp(3.892752+2.5812*log(dbh))
@@ -297,7 +297,7 @@
 120                                       exp(-2.6177+2.4638*log(dbh))
 121                                          exp(2.855+2.334*log(dba))
 122                                       exp(-2.6327+2.4757*log(dbh))
-123                                exp(3.34884+2.45446*dbh+1*log(dbh))
+123                                      exp(3.34884+2.45446*log(dbh))
 124                                       exp(-3463.8+1083.9*log(dbh))
 125                                       10^(3.68+2.135*(log10(dbh)))
 126                                        exp(3.761+2.37498*log(dba))
@@ -305,11 +305,11 @@
 128                              exp(-5.644074+(2.5189*(log(pi*dbh))))
 129                              exp(-5.308133+(2.4882*(log(pi*dbh))))
 130                              exp(-5.284602+(2.4882*(log(pi*dbh))))
-131                                exp(-10.8036+2.7727*dbh+1*log(dbh))
+131                                      exp(3.011904+2.7727*log(dbh))
 132                                       exp(4.36982+2.5043*log(dbh))
-133                                 exp(-10.7955+2.759*dbh+1*log(dbh))
+133                                       exp(-10.7955+2.759*log(dbh))
 134                                        exp(3.3186+2.6846*log(dba))
-135                                exp(-11.7031+2.7818*dbh+1*log(dbh))
+135                                      exp(-11.7031+2.7818*log(dbh))
 136                                        exp(3.5247+2.2043*log(dba))
 137                                         exp(3.6471+2.532*log(dba))
 138                                          exp(5.965+1.469*log(dbh))
@@ -324,7 +324,7 @@
 147                                          exp(3.03+2.5567*log(dbh))
 148                                            exp(3.63+2.54*log(dbh))
 149                                        exp(2.1364+2.3233*log(dbh))
-150                           1.468+2.582*(log10((dbh-10.603)/0.9823))
+150                            1.468+2.582*(log10((dbh+3.033)/0.9823))
 151                                     10^(-1.024+2.416*(log10(dbh)))
 152                                     10^(-1.234+2.128*(log10(dbh)))
 153                                     10^(-2.336+2.650*(log10(dbh)))
@@ -336,9 +336,9 @@
 159                                      10^(2.648+0.715*(log10(dbh)))
 160                     7.06302+(-3.01775*dbh)+(dbh^2)-0.00329*(dbh^3)
 161            36.56038+(-10.6275*dbh)+0.93837*(dbh^2)-0.01032*(dbh^3)
-162       10^(3.011+1.202*(log10(dbh)-0.01(AGE)+0.011(log10(dbh)*AGE))
+162      10^(3.011+1.202*(log10(dbh)-0.01(AGE)+0.011(log10(dbh)*AGE)))
 163              1.51752+(-0.9688*dbh)+0.29833*(dbh^2)+0.00092*(dbh^3)
-164      10^(2.889+0.789*(log10(dbh)-0.014(AGE)+0.025(log10(dbh)*AGE))
+164     10^(2.889+0.789*(log10(dbh)-0.014(AGE)+0.025(log10(dbh)*AGE)))
 165           (-95.5471)+(21.1602*dbh)-1.04327*(dbh^2)+0.02434*(dbh^3)
 166                                       10^(2.481+1.19*(log10(dbh)))
 167                                                  49.52*(dba^2.027)
@@ -360,7 +360,7 @@
 7        9c4cc9                          10^(a+b*(log10(DBH)))
 8        7913b8                                      a*(DBH^b)
 9        7f7777                               exp(a+b*ln(DBH))
-10       cf733d                       exp(a+b*DBH+c*(ln(DBH)))
+10       cf733d                               exp(a+b*ln(DBH))
 11       f08fff                               exp(a+b*ln(DBH))
 12       74186d                                      a*(DBH^b)
 13       122ba6                            a+(b*DBH)+c*(DBH^d)
@@ -369,8 +369,8 @@
 16       c36a5b                                      a*(DBH^b)
 17       94f593                        10^(a+b*(log10(DBH^c)))
 18       8c94e8                        10^(a+b*(log10(DBH^c)))
-19       289f7c                       exp(a+b*DBH+c*(ln(DBH)))
-20       b9d4fc                       exp(a+b*DBH+c*(ln(DBH)))
+19       289f7c                               exp(a+b*ln(DBH))
+20       b9d4fc                               exp(a+b*ln(DBH))
 21       8aecca                          10^(a+b*(log10(DBH)))
 22       07dba7                                      a*(DBH^b)
 23       cb0353                                      a*(DBH^b)
@@ -433,8 +433,8 @@
 80       870336                               exp(a+b*ln(DBH))
 81       748d94                               exp(a+b*ln(DBH))
 82       5a774d                exp(a+(b*ln(DBH)))*419.814*1.22
-83       5ea2c1                       exp(a+b*DBH+c*(ln(DBH)))
-84       0bdd5e                       exp(a+b*DBH+c*(ln(DBH)))
+83       5ea2c1                               exp(a+b*ln(DBH))
+84       0bdd5e                               exp(a+b*ln(DBH))
 85       15b165                               exp(a+b*ln(DBH))
 86       4d8e54                               exp(a+b*ln(DBH))
 87       f94e03                               exp(a+b*ln(DBH))
@@ -443,8 +443,8 @@
 90       8470d2                               exp(a+b*ln(DBH))
 91       e8f868                               exp(a+b*ln(DBA))
 92       1badac                                      a*(DBH^b)
-93       5084bd                       exp(a+b*DBH+c*(ln(DBH)))
-94       138258                       exp(a+b*DBH+c*(ln(DBH)))
+93       5084bd                               exp(a+b*ln(DBH))
+94       138258                               exp(a+b*ln(DBH))
 95       77e37e                          10^(a+b*(log10(DBH)))
 96       5caff8                               exp(a+b*ln(DBH))
 97       382ee9                                      a*(DBH^b)
@@ -456,10 +456,10 @@
 103      687843                          10^(a+b*(log10(DBH)))
 104      82e78c                       exp(a+b*DBH+c*(ln(DBH)))
 105      c078ca                                      a*(DBH^b)
-106      1d44c6                       exp(a+b*DBH+c*(ln(DBH)))
+106      1d44c6                               exp(a+b*ln(DBH))
 107      b570d4                          10^(a+b*(log10(DBH)))
 108      cab5a8                  a+(b*DBH)+c*(DBH^2)+d*(DBH^3)
-109      6b7404                       exp(a+b*DBH+c*(ln(DBH)))
+109      6b7404                               exp(a+b*ln(DBH))
 110      171b02                               exp(a+b*ln(DBH))
 111      23a23d                               exp(a+b*ln(DBH))
 112      677eda                               exp(a+b*ln(DBH))
@@ -473,7 +473,7 @@
 120      90c207                               exp(a+b*ln(DBH))
 121      e7bf91                               exp(a+b*ln(DBA))
 122      c8f882                               exp(a+b*ln(DBH))
-123      19bb04                       exp(a+b*DBH+c*(ln(DBH)))
+123      19bb04                               exp(a+b*ln(DBH))
 124      dc04c7                               exp(a+b*ln(DBH))
 125      e3edf1                          10^(a+b*(log10(DBH)))
 126      12104c                               exp(a+b*ln(DBA))
@@ -481,11 +481,11 @@
 128      f49bcb                        exp(a+(b*(ln(pi*DBH))))
 129      7bb5bd                        exp(a+(b*(ln(pi*DBH))))
 130      d635f1                        exp(a+(b*(ln(pi*DBH))))
-131      7aaa22                       exp(a+b*DBH+c*(ln(DBH)))
+131      7aaa22                               exp(a+b*ln(DBH))
 132      1b9161                               exp(a+b*ln(DBH))
-133      f2943e                       exp(a+b*DBH+c*(ln(DBH)))
+133      f2943e                               exp(a+b*ln(DBH))
 134      014bb7                               exp(a+b*ln(DBA))
-135      7992d5                       exp(a+b*DBH+c*(ln(DBH)))
+135      7992d5                               exp(a+b*ln(DBH))
 136      604854                               exp(a+b*ln(DBA))
 137      a1cfac                               exp(a+b*ln(DBA))
 138      398df4                               exp(a+b*ln(DBH))
@@ -638,7 +638,7 @@
 109  Crown biomass (branches, foliage, twigs)                  DBH
 110                           Branches (live)                  DBH
 111                             Foliage total                  DBH
-112                              Stem biomass                  DBH
+112                  Stem biomass (with bark)                  DBH
 113                           Branches (live)                  DBH
 114                             Foliage total                  DBH
 115                         Stem bark biomass                  DBH
@@ -680,7 +680,7 @@
 151               Stem biomass (without bark)                  DBH
 152                         Stem bark biomass                  DBH
 153                     Branches (live, dead)                  DBH
-154                             Total foliage                  DBH
+154                             Foliage total                  DBH
 155                 Total aboveground biomass                  DBH
 156                 Total aboveground biomass                  DBH
 157                 Total aboveground biomass                  DBH
@@ -1009,7 +1009,7 @@
 128       96.5        <NA>                 cm                     kg
 129        104        <NA>                 cm                     kg
 130      162.5        <NA>                 cm                     kg
-131      158.4        <NA>                 cm                     Mg
+131      158.4          56                 cm                      g
 132         98        <NA>                 cm                      g
 133      143.2        <NA>                 cm                     Mg
 134       11.5         NRA                 cm                      g
@@ -1934,179 +1934,179 @@
 173                       <NA>
 174                       <NA>
 175                       <NA>
-                                                                                                                                                                                                                           warning
-1                                                                                                                                                                                                                             <NA>
-2                                                                                                                                                                                                                             <NA>
-3                                                                                                                                                                                                                             <NA>
-4                                                                                                                                                                                                                             <NA>
-5                                                                                                                                                                                                                             <NA>
-6                                                                                                                                                                                                                             <NA>
-7                                                                                                                                                                                                                             <NA>
-8                                                                                                                                                                                                                             <NA>
-9                                                                                                                                                                                                                             <NA>
-10                                                                                                                                                                                                                            <NA>
-11                                                                                                                                                                                                                            <NA>
-12                                                                                                                                                                                                                            <NA>
-13                                                                                                                                                                                                                            <NA>
-14                                                                                                                                                                                                                            <NA>
-15                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-16                                                                                                                                                                                                                            <NA>
-17                                                                                                                                                                                                                            <NA>
-18                                                                                                                                                                                                                            <NA>
-19                                                                                                                                                                                                                            <NA>
-20                                                                                                                                                                                                                            <NA>
-21                                                                                                                                                                                                                            <NA>
-22                                                                                                                                                                                                                            <NA>
-23                                                                                                                                                                                                                            <NA>
-24                                                                                                                                                                                                                            <NA>
-25                                                                                                                                                                                                                            <NA>
-26                                                                                                                                                                                                                            <NA>
-27                                                                                                                                                                                                                            <NA>
-28                                                                                                                                No specific location of sampled trees is given in publication. Geographic area may be too broad.
-29                                                                                                                                                                                                                            <NA>
-30                                                                                                                                                                                                                            <NA>
-31                                                                                                                                                                                       Equation built for seedlings and saplings
-32                                                                                                                                                                                                                            <NA>
-33                                                                                                                                                                                                                            <NA>
-34                                                                                                                                                                                                                            <NA>
-35                                                                                                                                                                                                                            <NA>
-36                                                                                                                                                                                                                            <NA>
-37                                                                                                                                                                                                                            <NA>
-38                                                                                                                                                                                                                            <NA>
-39                                                                                                                                                                                                                            <NA>
-40                                                                                                                                                                                                                            <NA>
-41                                                                                                                                                                                                                            <NA>
-42                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-43                                                                                                                                                                                                                            <NA>
-44                                                                                                                                                                                                                            <NA>
-45                                                                                                                                                                                                                            <NA>
-46                                                                                                                                                                                                                            <NA>
-47                                                                                                                                                                                                                            <NA>
-48                                                                                                                                                                                                                            <NA>
-49                                                                                                                                                                                                                            <NA>
-50                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-51                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-52                                                                                                                                                                                       Equation built for seedlings and saplings
-53                                                                                                                                                                                                                            <NA>
-54                                                                                                                                                                                                                            <NA>
-55                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-56                                                                                                                                                                                                                            <NA>
-57                                                                                                                                                                                                                            <NA>
-58                                                                                                                                                                                                                            <NA>
-59                                                                                                                                                                                                                            <NA>
-60                                                                                                                                                                                                                            <NA>
-61                                                                                                                                                                                                                            <NA>
-62                                                                                                                                                                                                                            <NA>
-63                                                                                                                                                                                                                            <NA>
-64                                                                                                                                                                                                                            <NA>
-65                                                                                                                                                                                                                            <NA>
-66                                                                                                                                                                                                                            <NA>
-67                                                                                                                                                                                                                            <NA>
-68                                                                                                                                                                                                                            <NA>
-69                                                                                                                                                                                                                            <NA>
-70                                                                                                                                                                                                                            <NA>
-71                                                                                                                                                                                                                            <NA>
-72                                                                                                                                                                                                                            <NA>
-73                                                                                                                                                                                                                            <NA>
-74                                                                                                                                                                                                                            <NA>
-75                                                                                                                                                                                                                            <NA>
-76                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-77                                                     Original publication uses Basal area (BA)=Diameter of all stems measured 5 cm above ground in a 1x1m plot then sum to obtain basal area. Use shrub function in this package
-78                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-79                                                                                                                                                                                                                            <NA>
-80                                                                                                                                                                                                                            <NA>
-81                                                                                                                                                                                                                            <NA>
-82                                                                                                                                                                                                                            <NA>
-83                                                                                                                                                                                                                            <NA>
-84                                                                                                                                                                                                                            <NA>
-85                                                                                                                                                                                                                            <NA>
-86                                                                                                                                                                                                                            <NA>
-87                                                                                                                                                                                                                            <NA>
-88                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-89                                                                                                                                                                                                                            <NA>
-90                                                                                                                                                                                                                            <NA>
-91                                                                                                                                                                    DBA= stem basal diameter. Use shrub function in this package
-92                                                                                                                                                                                                                            <NA>
-93                                                                                                                                                                                                                            <NA>
-94                                                                                                                                                                                                                            <NA>
-95                                                                                                                                                                                                                            <NA>
-96                                                                                                                                                                                                                            <NA>
-97                                                                                                                                                                                                                            <NA>
-98                                                                                                                                                                                                                            <NA>
-99                                                                                                                                                                                                                            <NA>
-100                                                                                                                                                                                                                           <NA>
-101                                                                                                                                                                                                                           <NA>
-102                                                                                                                                                                                                                           <NA>
-103                                                                                                                                                                                                                           <NA>
-104                                                                                                                                                                                                                           <NA>
-105                                                                                                                                                                                                                           <NA>
-106                                                                                                                                                                                                                           <NA>
-107                                                                                                                                                                                                                           <NA>
-108                                                                                                                                                                                                                           <NA>
-109                                                                                                                                                                                                                           <NA>
-110                                                                                                                                                                                                                           <NA>
-111                                                                                                                                                                  Unable to extract correction factor from original publication
-112                                                                                                                                                                                                                           <NA>
-113                                                                                                                                                                  Unable to extract correction factor from original publication
-114                                                                                                                                                                  Unable to extract correction factor from original publication
-115                                                                                                                                                                  Unable to extract correction factor from original publication
-116                                                                                                                                                                  Unable to extract correction factor from original publication
-117                                                                                                                                                                                                                           <NA>
-118                                                                                                                                                                                                                           <NA>
-119                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-120                                                                                                                                                                                                                           <NA>
-121                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-122                                                                                                                                                                                                                           <NA>
-123                                                                                                                                                                                                                           <NA>
-124                                                                                                                                                                                                                           <NA>
-125                                                                                                                                                                                                                           <NA>
-126                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-127                                                                                                                                                                                                                           <NA>
-128                                                                                                                                                                                                                           <NA>
-129                                                                                                                                                                                                                           <NA>
-130                                                                                                                                                                                                                           <NA>
-131                                                                                                                                                                                                                           <NA>
-132                                                                                                                                                                                                                           <NA>
-133                                                                                                                                                                                                                           <NA>
-134                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-135                                                                                                                                                                                                                           <NA>
-136                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-137                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-138                                                                                                                                                                                                                           <NA>
-139                                                                                                                                                                                                                           <NA>
-140                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-141                                                                                                                                                                                                                           <NA>
-142                                                                                                                                                                                                                           <NA>
-143                                                                                                                                                                                                                           <NA>
-144                                                                                                                                                                                                                           <NA>
-145                                                                                                                                                                                                                           <NA>
-146                                                                                                                                                                                                                           <NA>
-147                                                                                                                                                                                                                           <NA>
-148                                                                                                                                                                                                                           <NA>
-149                                                                                                                                                                                                                           <NA>
-150 Original biomass equation uses DRC (diameter root collar). Chojnacky & Rogers, 1999 equation to do the oposite, convert dcr to dbh (dbh=6.818+1.0222*drc+1.88791.8971-0.0399*drc) so we rewrote Chojnaky to convert dbh to dcr
-151                                                                                                                                                                                                                           <NA>
-152                                                                                                                                                                                                                           <NA>
-153                                                                                                                                                                                                                           <NA>
-154                                                                                                                                                                                                                           <NA>
-155                                                                                                                                                                                                                           <NA>
-156                                                                                                                                                                                                                           <NA>
-157                                                                                                                                                                                                                           <NA>
-158                                                                                                                                                                                                                           <NA>
-159                                                                                                                                                                                                                           <NA>
-160                                                                                                                                                                                                                           <NA>
-161                                                                                                                                                                                                                           <NA>
-162                                                                                                                                                                                                                Need stand age!
-163                                                                                                                                                                                                                           <NA>
-164                                                                                                                                                                                                                Need stand age!
-165                                                                                                                                                                                                                           <NA>
-166                                                                                                                                                                                                                           <NA>
-167                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-168                                                                                                                                                                   DBA= stem basal diameter. Use shrub function in this package
-169                                                                                                                                                                                                                           <NA>
-170                                                                                                                                                                                                                           <NA>
-171                                                                                                                                                                                                                           <NA>
-172                                                                                                                                                                                                                           <NA>
-173                                                                                                                                                                                                                           <NA>
-174                                                                                                                                                                                                                           <NA>
-175                                                                                                                                                                                                                           <NA>
+                                                                                                                                                                                                                                                warning
+1                                                                                                                                                                                                                                                  <NA>
+2                                                                                                                                                                                                                                                  <NA>
+3                                                                                                                                                                                                                                                  <NA>
+4                                                                                                                                                                                                                                                  <NA>
+5                                                                                                                                                                                                                                                  <NA>
+6                                                                                                                                                                                                                                                  <NA>
+7                                                                                                                                                                                                                                                  <NA>
+8                                                                                                                                                                                                                                                  <NA>
+9                                                                                                                                                                                                                                                  <NA>
+10                                                                                                                                                                                                                                                 <NA>
+11                                                                                                                                                                                                                                                 <NA>
+12                                                                                                                                                                                                                                                 <NA>
+13                                                                                                                                                                                                                                                 <NA>
+14                                                                                                                                                                                                                                                 <NA>
+15                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+16                                                                                                                                                                                                                                                 <NA>
+17                                                                                                                                                                                                                                                 <NA>
+18                                                                                                                                                                                                                                                 <NA>
+19                                                                                                                                                                                                                                                 <NA>
+20                                                                                                                                                                                                                                                 <NA>
+21                                                                                                                                                                                                                                                 <NA>
+22                                                                                                                                                                                                                                                 <NA>
+23                                                                                                                                                                                                                                                 <NA>
+24                                                                                                                                                                                                                                                 <NA>
+25                                                                                                                                                                                                                                                 <NA>
+26                                                                                                                                                                                                                                                 <NA>
+27                                                                                                                                                                                                                                                 <NA>
+28                                                                                                                                                     No specific location of sampled trees is given in publication. Geographic area may be too broad.
+29                                                                                                                                                                                                                                                 <NA>
+30                                                                                                                                                                                                                                                 <NA>
+31                                                                                                                                                                                                            Equation built for seedlings and saplings
+32                                                                                                                                                                                                                                                 <NA>
+33                                                                                                                                                                                                                                                 <NA>
+34                                                                                                                                                                                                                                                 <NA>
+35                                                                                                                                                                                                                                                 <NA>
+36                                                                                                                                                                                                                                                 <NA>
+37                                                                                                                                                                                                                                                 <NA>
+38                                                                                                                                                                                                                                                 <NA>
+39                                                                                                                                                                                                                                                 <NA>
+40                                                                                                                                                                                                                                                 <NA>
+41                                                                                                                                                                                                                                                 <NA>
+42                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+43                                                                                                                                                                                                                                                 <NA>
+44                                                                                                                                                                                                                                                 <NA>
+45                                                                                                                                                                                                                                                 <NA>
+46                                                                                                                                                                                                                                                 <NA>
+47                                                                                                                                                                                                                                                 <NA>
+48                                                                                                                                                                                                                                                 <NA>
+49                                                                                                                                                                                                                                                 <NA>
+50                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+51                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+52                                                                                                                                                                                                            Equation built for seedlings and saplings
+53                                                                                                                                                                                                                                                 <NA>
+54                                                                                                                                                                                                                                                 <NA>
+55                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+56                                                                                                                                                                                                                                                 <NA>
+57                                                                                                                                                                                                                                                 <NA>
+58                                                                                                                                                                                                                                                 <NA>
+59                                                                                                                                                                                                                                                 <NA>
+60                                                                                                                                                                                                                                                 <NA>
+61                                                                                                                                                                                                                                                 <NA>
+62                                                                                                                                                                                                                                                 <NA>
+63                                                                                                                                                                                                                                                 <NA>
+64                                                                                                                                                                                                                                                 <NA>
+65                                                                                                                                                                                                                                                 <NA>
+66                                                                                                                                                                                                                                                 <NA>
+67                                                                                                                                                                                                                                                 <NA>
+68                                                                                                                                                                                                                                                 <NA>
+69                                                                                                                                                                                                                                                 <NA>
+70                                                                                                                                                                                                                                                 <NA>
+71                                                                                                                                                                                                                                                 <NA>
+72                                                                                                                                                                                                                                                 <NA>
+73                                                                                                                                                                                                                                                 <NA>
+74                                                                                                                                                                                                                                                 <NA>
+75                                                                                                                                                                                                                                                 <NA>
+76                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+77                                                                          Original publication uses Basal area (BA)=Diameter of all stems measured 5 cm above ground in a 1x1m plot then sum to obtain basal area. Use shrub function in this package
+78                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+79                                                                                                                                                                                                                                                 <NA>
+80                                                                                                                                                                                                                                                 <NA>
+81                                                                                                                                                                                                                                                 <NA>
+82                                                                                                                                                                                                                                                 <NA>
+83                                                                                                                                                                                                                                                 <NA>
+84                                                                                                                                                                                                                                                 <NA>
+85                                                                                                                                                                                                                                                 <NA>
+86                                                                                                                                                                                                                                                 <NA>
+87                                                                                                                                                                                                                                                 <NA>
+88                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+89                                                                                                                                                                                                                                                 <NA>
+90                                                                                                                                                                                                                                                 <NA>
+91                                                                                                                                                                                         DBA= stem basal diameter. Use shrub function in this package
+92                                                                                                                                                                                                                                                 <NA>
+93                                                                                                                                                                                                                                                 <NA>
+94                                                                                                                                                                                                                                                 <NA>
+95                                                                                                                                                                                                                                                 <NA>
+96                                                                                                                                                                                                                                                 <NA>
+97                                                                                                                                                                                                                                                 <NA>
+98                                                                                                                                                                                                                                                 <NA>
+99                                                                                                                                                                                                                                                 <NA>
+100                                                                                                                                                                                                                                                <NA>
+101                                                                                                                                                                                                                                                <NA>
+102                                                                                                                                                                                                                                                <NA>
+103                                                                                                                                                                                                                                                <NA>
+104                                                                                                                                                                                                                                                <NA>
+105                                                                                                                                                                                                                                                <NA>
+106                                                                                                                                                                                                                                                <NA>
+107                                                                                                                                                                                                                                                <NA>
+108                                                                                                                                                                                                                                                <NA>
+109                                                                                                                                                                                                                                                <NA>
+110                                                                                                                                                                                                                                                <NA>
+111                                                                                                                                                                                       Unable to extract correction factor from original publication
+112                                                                                                                                                                                                                                                <NA>
+113                                                                                                                                                                                       Unable to extract correction factor from original publication
+114                                                                                                                                                                                       Unable to extract correction factor from original publication
+115                                                                                                                                                                                       Unable to extract correction factor from original publication
+116                                                                                                                                                                                       Unable to extract correction factor from original publication
+117                                                                                                                                                                                                                                                <NA>
+118                                                                                                                                                                                                                                                <NA>
+119                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+120                                                                                                                                                                                                                                                <NA>
+121                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+122                                                                                                                                                                                                                                                <NA>
+123                                                                                                                                                                                                                                                <NA>
+124                                                                                                                                                                                                                                                <NA>
+125                                                                                                                                                                                                                                                <NA>
+126                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+127                                                                                                                                                                                                                                                <NA>
+128                                                                                                                                                                                                                                                <NA>
+129                                                                                                                                                                                                                                                <NA>
+130                                                                                                                                                                                                                                                <NA>
+131                                                                                                                                                                                                                                                <NA>
+132                                                                                                                                                                                                                                                <NA>
+133                                                                                                                                                                                                                                                <NA>
+134                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+135                                                                                                                                                                                                                                                <NA>
+136                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+137                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+138                                                                                                                                                                                                                                                <NA>
+139                                                                                                                                                                                                                                                <NA>
+140                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+141                                                                                                                                                                                                                                                <NA>
+142                                                                                                                                                                                                                                                <NA>
+143                                                                                                                                                                                                                                                <NA>
+144                                                                                                                                                                                                                                                <NA>
+145                                                                                                                                                                                                                                                <NA>
+146                                                                                                                                                                                                                                                <NA>
+147                                                                                                                                                                                                                                                <NA>
+148                                                                                                                                                                                                                                                <NA>
+149                                                                                                                                                                                                                                                <NA>
+150 Original biomass equation uses drc (diameter root collar). Chojnacky & Rogers, 1999 equation converts dcr to dbh (dbh=-6.818+1.0222*drc+1.8879+1.8971+(-0.0399)*drc) so we rewrote Chojnaky's equation to convert dbh to dcr (dcr=dbh+3.033/0/9823)
+151                                                                                                                                                                                                                                                <NA>
+152                                                                                                                                                                                                                                                <NA>
+153                                                                                                                                                                                                                                                <NA>
+154                                                                                                                                                                                                                                                <NA>
+155                                                                                                                                                                                                                                                <NA>
+156                                                                                                                                                                                                                                                <NA>
+157                                                                                                                                                                                                                                                <NA>
+158                                                                                                                                                                                                                                                <NA>
+159                                                                                                                                                                                                                                                <NA>
+160                                                                                                                                                                                                                                                <NA>
+161                                                                                                                                                                                                                                                <NA>
+162                                                                                                                                                                                                                                     Need stand age!
+163                                                                                                                                                                                                                                                <NA>
+164                                                                                                                                                                                                                                     Need stand age!
+165                                                                                                                                                                                                                                                <NA>
+166                                                                                                                                                                                                                                                <NA>
+167                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+168                                                                                                                                                                                        DBA= stem basal diameter. Use shrub function in this package
+169                                                                                                                                                                                                                                                <NA>
+170                                                                                                                                                                                                                                                <NA>
+171                                                                                                                                                                                                                                                <NA>
+172                                                                                                                                                                                                                                                <NA>
+173                                                                                                                                                                                                                                                <NA>
+174                                                                                                                                                                                                                                                <NA>
+175                                                                                                                                                                                                                                                <NA>

@@ -1,6 +1,6 @@
 Package: allodb
 Title: A Database of Allometric Equations for ForestGEO
-Version: 0.0.0.9004
+Version: 0.0.0.9005
 Authors@R: 
     c(person(given = "Gonzalez-Akre",
              family = "Erika",
