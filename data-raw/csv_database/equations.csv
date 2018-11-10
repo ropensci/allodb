@@ -121,7 +121,7 @@ means_767_NA,exp(3.769+3.033*log(dba)),b9b3b0,exp(a+b*ln(DBA)),Total aboveground
 chojnacky_2014_ugbe,exp(-2.6177+2.4638*log(dbh)),90c207,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Genus,North America,3,180,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 means_1107_NA,exp(2.855+2.334*log(dba)),e7bf91,exp(a+b*ln(DBA)),Total aboveground biomass,DBA,Species,"West Cascades, USA",0.1,1.1,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
 chojnacky_2014_ugbe,exp(-2.6327+2.4757*log(dbh)),c8f882,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Family,North America,3,109,55,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
-jenkins_2004_cdod,exp(3.34884+2.45446*dbh+1*log(dbh)),19bb04,exp(a+b*DBH+c*(ln(DBH))),Total aboveground biomass,DBH,Species,"Pacific Northwest, USA",0.18,2.23,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
+jenkins_2004_cdod,exp(3.34884+2.45446*log(dbh)),19bb04,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Species,"Pacific Northwest, USA",0.18,2.23,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,exp(-3463.8+1083.9*log(dbh)),dc04c7,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Species,"Pacific Northwest, USA",4.2,7,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,10^(3.68+2.135*(log10(dbh))),e3edf1,10^(a+b*(log10(DBH))),Whole tree (above stump),DBH,Species,"Bristish Columbia, Canada",16,49,8,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
 means_187_NA,exp(3.761+2.37498*log(dba)),12104c,exp(a+b*ln(DBA)),Total aboveground biomass,DBA,Species,"Oregon, Washington, USA",0.4,3.3,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
