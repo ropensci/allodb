@@ -18,53 +18,48 @@ knitr::opts_chunk$set(
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
 [![Coverage status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/r/forestgeo/allodb?branch=master)
-[![CRAN status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/package=allodb)
+[![CRAN status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb)
 
 The goal of allodb is to develop, host and give access to tables of allometric equations for ForestGEO's network.
 
 ## Installation
 
 ```
-# install.packages("remotes")
+# install.pkgs("remotes")
 remotes::install_github("forestgeo/allodb", auth_token = "abc")
 ```
 
-For details in how to install packages from GitHub see [this article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-packages-from-github/).
+For details in how to install pkgs from GitHub see [this article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-pkgs-from-github/).
 
 ## Example
 
 ```{r}
 library(allodb)
-```
-
-Helpers.
-
-```{r}
-# Helpers
-show <- function(...) {
-  out <- lapply(...)
-  invisible(out)
-}
-
-allodb_datasets <- function() {
-  sort(utils::data(package = "allodb")$results[ , "Item"])
-}
-
-glimpse <- function(x) {
-  out <- capture.output(str(get(x), give.attr = FALSE, list.len = 3))
-  cat(x, out, "\n", sep = "\n")
-}
+# For a nice print method
+library(tibble)
 ```
 
 All datasets.
 
 ```{r}
-show(allodb_datasets(), glimpse)
+# Helper
+datasets <- function(pkg) {
+  dts <- sort(utils::data(package = pkg)$results[ , "Item"])
+  stats::setNames(lapply(dts, get), dts)
+}
+
+datasets("allodb")
 ```
 
-## Plan
 
-* TODO: Move to new package __fgeo.biomass__
+
+```{r}
+# sapply(datasets, function(x) names(get(x)))
+# 
+# show(datasets, glimpse)
+```
+
+## Planpkgpackage __fgeo.biomass__
 
 * TODO: Rename/refactor so the pipeline becomes:
 
