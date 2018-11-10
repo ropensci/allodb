@@ -92,7 +92,7 @@ coltrin_2010_bqol,exp(-2.1001+2.3996*log(dbh)),8470d2,exp(a+b*ln(DBH)),Total abo
 means_133_NA,exp(3.6123+2.9944*log(dba)),e8f868,exp(a+b*ln(DBA)),Total aboveground biomass (wood and bark),DBA,Species,"Pacific Northwest, USA",0.6,3.6,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
 jenkins_2004_cdod,0.0752*(dbh^2.497),1badac,a*(DBH^b),Whole tree (above stump),DBH,Species,"North Central States, USA",2.5,40,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,exp(-2.037+2.363*log(dbh)),5084bd,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Species,"Wisconsin, Michigan, USA",3.1,24.6,41,cm,kg,harvest,NA,NA,NA,1,1.01,NA,NA,NA
-jenkins_2004_cdod,exp(-1.721+2.334*dbh+1*log(dbh)),138258,exp(a+b*DBH+c*(ln(DBH))),Total aboveground biomass,DBH,Species,"Wisconsin, Michigan, USA",10,52.2,NA,cm,kg,harvest,NA,NA,NA,1,1.007,NA,NA,NA
+jenkins_2004_cdod,exp(-1.721+2.334*log(dbh)),138258,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Species,"Wisconsin, Michigan, USA",10,52.2,NA,cm,kg,harvest,NA,NA,NA,1,1.007,NA,NA,NA
 jenkins_2004_cdod,10^(-0.9+2.52*(log10(dbh))),77e37e,10^(a+b*(log10(DBH))),Total aboveground biomass,DBH,Species,"Wisconsin, USA",7.5,23.7,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
 chojnacky_2014_ugbe,exp(-2.5932+2.534*log(dbh)),5caff8,exp(a+b*ln(DBH)),Total aboveground biomass,DBH,Family,North America,3,64,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,0.08724*(dbh^2.587),382ee9,a*(DBH^b),Whole tree (above stump),DBH,Species,"North Central States, USA",2.5,40,9,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
