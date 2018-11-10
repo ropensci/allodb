@@ -104,7 +104,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Add the column <code>equation_allometry</code> to a census dataframe.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/drop_bad_equations.R'><code>R/drop_bad_equations.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/TOREMOVE-drop_bad_equations.R'><code>R/TOREMOVE-drop_bad_equations.R</code></a></small>
     <div class="hidden name"><code>add_equation.Rd</code></div>
     </div>
 
@@ -140,23 +140,7 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>equations</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pick_equations.html'>pick_equations</a></span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='st'>"species"</span>)
-<span class='fu'>add_equation</span>(<span class='kw'>census</span> <span class='kw'>=</span> <span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_tree1</a></span>, <span class='no'>equations</span>)</div><div class='output co'>#&gt; <span class='message'>Joining, by = "sp"</span></div><div class='output co'>#&gt; # A tibble: 56,765 x 21
-#&gt;    treeID stemID tag   StemTag sp    quadrat    gx    gy DBHID CensusID   dbh
-#&gt;     &lt;int&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;    &lt;int&gt; &lt;dbl&gt;
-#&gt;  1      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
-#&gt;  2      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
-#&gt;  3      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
-#&gt;  4      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
-#&gt;  5      4      4 12165 1       nysy  0122     14.2 428.      7        1  135 
-#&gt;  6     21     21 20064 1       litu  0217     31.4 322.     69        1  232.
-#&gt;  7     21     21 20064 1       litu  0217     31.4 322.     69        1  232.
-#&gt;  8     21     21 20064 1       litu  0217     31.4 322.     69        1  232.
-#&gt;  9     21     21 20064 1       litu  0217     31.4 322.     69        1  232.
-#&gt; 10     29     29 20151 1       acru  0203     31.5  45.8   130        1  326.
-#&gt; # ... with 56,755 more rows, and 10 more variables: pom &lt;chr&gt;, hom &lt;dbl&gt;,
-#&gt; #   ExactDate &lt;chr&gt;, DFstatus &lt;chr&gt;, codes &lt;chr&gt;, nostems &lt;dbl&gt;, date &lt;dbl&gt;,
-#&gt; #   status &lt;chr&gt;, agb &lt;dbl&gt;, equation_allometry &lt;chr&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>equations</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pick_equations.html'>pick_equations</a></span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='st'>"species"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in check_crucial_names(.data, "equation_id"): could not find function "check_crucial_names"</span></div><div class='input'><span class='fu'>add_equation</span>(<span class='kw'>census</span> <span class='kw'>=</span> <span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_tree1</a></span>, <span class='no'>equations</span>)</div><div class='output co'>#&gt; <span class='error'>Error in check_crucial_names(census, c("sp", "dbh")): could not find function "check_crucial_names"</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

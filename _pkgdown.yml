@@ -15,10 +15,6 @@ navbar:
 
   type: default
 
-  left:
-    - text: Datasets and Functions Index
-      href: reference/index.html
-
   right:
     - text: news
       href: news/index.html

@@ -104,7 +104,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Add column <code>biomass</code>, by evaluating <code>equation_allomerty</code> for each <code>dbh</code>.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/drop_bad_equations.R'><code>R/drop_bad_equations.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/TOREMOVE-drop_bad_equations.R'><code>R/TOREMOVE-drop_bad_equations.R</code></a></small>
     <div class="hidden name"><code>add_biomass.Rd</code></div>
     </div>
 
@@ -131,24 +131,12 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>equations</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pick_equations.html'>pick_equations</a></span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='st'>"species"</span>)
-
+    <pre class="examples"><div class='input'><span class='no'>equations</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='pick_equations.html'>pick_equations</a></span>(<span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_species</a></span>, <span class='st'>"species"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in check_crucial_names(.data, "equation_id"): could not find function "check_crucial_names"</span></div><div class='input'>
 <span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/allodb/topics/scbi'>scbi_tree1</a></span> <span class='kw'>%&gt;%</span>
   <span class='fu'><a href='add_equation.html'>add_equation</a></span>(<span class='no'>equations</span>) <span class='kw'>%&gt;%</span>
   <span class='co'># Just a few for speed</span>
   <span class='fu'>head</span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'>add_biomass</span>()</div><div class='output co'>#&gt; <span class='message'>Joining, by = "sp"</span></div><div class='output co'>#&gt; # A tibble: 6 x 22
-#&gt;   treeID stemID tag   StemTag sp    quadrat    gx    gy DBHID CensusID   dbh
-#&gt;    &lt;int&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;    &lt;int&gt; &lt;dbl&gt;
-#&gt; 1      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
-#&gt; 2      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
-#&gt; 3      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
-#&gt; 4      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
-#&gt; 5      4      4 12165 1       nysy  0122     14.2  428.     7        1  135 
-#&gt; 6     21     21 20064 1       litu  0217     31.4  322.    69        1  232.
-#&gt; # ... with 11 more variables: pom &lt;chr&gt;, hom &lt;dbl&gt;, ExactDate &lt;chr&gt;,
-#&gt; #   DFstatus &lt;chr&gt;, codes &lt;chr&gt;, nostems &lt;dbl&gt;, date &lt;dbl&gt;, status &lt;chr&gt;,
-#&gt; #   agb &lt;dbl&gt;, equation_allometry &lt;chr&gt;, biomass &lt;dbl&gt;</div></pre>
+  <span class='fu'>add_biomass</span>()</div><div class='output co'>#&gt; <span class='error'>Error in check_crucial_names(census, c("sp", "dbh")): could not find function "check_crucial_names"</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
