@@ -38,7 +38,7 @@ Combined data-base tables.
 
 ``` r
 master()
-#> # A tibble: 743 x 62
+#> # A tibble: 743 x 43
 #>    ref_id equation_allome~ equation_id equation_form dependent_varia~
 #>    <chr>  <chr>            <chr>       <chr>         <chr>           
 #>  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
@@ -51,7 +51,7 @@ master()
 #>  8 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
 #>  9 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
 #> 10 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#> # ... with 733 more rows, and 57 more variables:
+#> # ... with 733 more rows, and 38 more variables:
 #> #   independent_variable <chr>, allometry_specificity <chr>,
 #> #   geographic_area <chr>, dbh_min_cm <chr>, dbh_max_cm <chr>,
 #> #   sample_size <chr>, dbh_units_original <chr>,
@@ -62,12 +62,9 @@ master()
 #> #   warning <chr>, site <chr>, family <chr>, species <chr>,
 #> #   species_code <chr>, life_form <chr>, equation_group <chr>,
 #> #   equation_taxa <chr>, notes_on_species <chr>, wsg_id <chr>,
-#> #   wsg_specificity <chr>, X16 <chr>, X17 <chr>, X18 <chr>, X19 <chr>,
-#> #   X20 <chr>, X21 <chr>, X22 <chr>, X23 <chr>, X24 <chr>, X25 <chr>,
-#> #   X26 <chr>, X27 <chr>, X28 <chr>, X29 <chr>, X30 <chr>, X31 <chr>,
-#> #   X32 <chr>, X33 <chr>, X34 <chr>, id <chr>, Site <chr>, lat <chr>,
-#> #   long <chr>, UTM_Zone <chr>, UTM_X <chr>, UTM_Y <chr>,
-#> #   intertropical <chr>, size.ha <chr>, E <chr>, wsg.site.name <chr>
+#> #   wsg_specificity <chr>, id <chr>, Site <chr>, lat <chr>, long <chr>,
+#> #   UTM_Zone <chr>, UTM_X <chr>, UTM_Y <chr>, intertropical <chr>,
+#> #   size.ha <chr>, E <chr>, wsg.site.name <chr>
 ```
 
 Conservatively, all columns of `master()` are character vectors.
@@ -146,7 +143,7 @@ datasets("allodb")
 #>  7 marti~ 10^(-1.326+2.76~ 9c4cc9      10^(a+b*(log~ Total abovegrou~
 #>  8 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
 #>  9 chojn~ exp(-2.5095+2.5~ 7f7777      exp(a+b*ln(D~ Total abovegrou~
-#> 10 jenki~ exp(5.67+1.97*d~ cf733d      exp(a+b*DBH+~ Total abovegrou~
+#> 10 jenki~ exp(5.67+1.97*l~ cf733d      exp(a+b*ln(D~ Total abovegrou~
 #> # ... with 165 more rows, and 17 more variables:
 #> #   independent_variable <chr>, allometry_specificity <chr>,
 #> #   geographic_area <chr>, dbh_min_cm <chr>, dbh_max_cm <chr>,
@@ -194,94 +191,6 @@ datasets("allodb")
 #> 6 6 / F  ref_journal   Journal, book, report where published character (s~
 #> 7 7 / G  References f~ Full citation (kept for easy use)     character (s~
 #> 
-#> $scbi_species
-#> # A tibble: 73 x 10
-#>    sp    Latin Genus Species Family SpeciesID Authority IDLev~ syn   subsp
-#>  * <chr> <chr> <chr> <chr>   <chr>      <int> <chr>     <chr>  <lgl> <lgl>
-#>  1 acne  Acer~ Acer  negundo Sapin~         1 ""        speci~ NA    NA   
-#>  2 acpl  Acer~ Acer  platan~ Sapin~         2 ""        speci~ NA    NA   
-#>  3 acru  Acer~ Acer  rubrum  Sapin~         3 ""        speci~ NA    NA   
-#>  4 acsp  Acer~ Acer  sp      Sapin~         4 ""        Multi~ NA    NA   
-#>  5 aial  Aila~ Aila~ altiss~ Simar~         5 ""        speci~ NA    NA   
-#>  6 amar  Amel~ Amel~ arborea Rosac~         6 ""        speci~ NA    NA   
-#>  7 astr  Asim~ Asim~ triloba Annon~         7 ""        speci~ NA    NA   
-#>  8 beth  Berb~ Berb~ thunbe~ Berbe~         8 ""        speci~ NA    NA   
-#>  9 caca  Carp~ Carp~ caroli~ Betul~         9 ""        speci~ NA    NA   
-#> 10 caco  Cary~ Carya cordif~ Jugla~        10 ""        speci~ NA    NA   
-#> # ... with 63 more rows
-#> 
-#> $scbi_stem1
-#> # A tibble: 55,295 x 20
-#>    treeID stemID tag   StemTag sp    quadrat    gx    gy DBHID CensusID
-#>  *  <int>  <int> <chr> <chr>   <chr> <chr>   <dbl> <dbl> <int>    <int>
-#>  1      1      1 10079 1       libe  0104     3.70  73       1        1
-#>  2      1  31194 10079 2       libe  0104     3.70  73       2        1
-#>  3      2      2 10168 1       libe  0103    17.3   58.9     3        1
-#>  4      2  31195 10168 2       libe  0103    17.3   58.9     4        1
-#>  5      3      3 10567 1       libe  0110     9    197.      5        1
-#>  6      3  31196 10567 2       libe  0110     9    197.      6        1
-#>  7      3  40394 10567 3       libe  0110     9    197.     NA       NA
-#>  8      4      4 12165 1       nysy  0122    14.2  428.      7        1
-#>  9      4  31197 12165 2       nysy  0122    14.2  428.      8        1
-#> 10      5      5 12190 1       havi  0122     9.40 436.      9        1
-#> # ... with 55,285 more rows, and 10 more variables: dbh <dbl>, pom <chr>,
-#> #   hom <dbl>, ExactDate <chr>, DFstatus <chr>, codes <chr>,
-#> #   countPOM <dbl>, date <dbl>, status <chr>, agb <dbl>
-#> 
-#> $scbi_stem2
-#> # A tibble: 55,295 x 20
-#>    treeID stemID tag   StemTag sp    quadrat    gx    gy DBHID CensusID
-#>  *  <int>  <int> <chr> <chr>   <chr> <chr>   <dbl> <dbl> <int>    <int>
-#>  1      1      1 10079 1       libe  0104     3.70  73   41801        2
-#>  2      1  31194 10079 2       libe  0104     3.70  73   41802        2
-#>  3      2      2 10168 1       libe  0103    17.3   58.9 41723        2
-#>  4      2  31195 10168 2       libe  0103    17.3   58.9 41724        2
-#>  5      3      3 10567 1       libe  0110     9    197.  42501        2
-#>  6      3  31196 10567 2       libe  0110     9    197.  42502        2
-#>  7      3  40394 10567 3       libe  0110     9    197.  80573        2
-#>  8      4      4 12165 1       nysy  0122    14.2  428.  42869        2
-#>  9      4  31197 12165 2       nysy  0122    14.2  428.  42870        2
-#> 10      5      5 12190 1       havi  0122     9.40 436.  42904        2
-#> # ... with 55,285 more rows, and 10 more variables: dbh <dbl>, pom <chr>,
-#> #   hom <dbl>, ExactDate <chr>, DFstatus <chr>, codes <chr>,
-#> #   countPOM <dbl>, date <dbl>, status <chr>, agb <dbl>
-#> 
-#> $scbi_tree1
-#> # A tibble: 40,283 x 20
-#>    treeID stemID tag   StemTag sp    quadrat    gx    gy DBHID CensusID
-#>  *  <int>  <int> <chr> <chr>   <chr> <chr>   <dbl> <dbl> <int>    <int>
-#>  1      1      1 10079 1       libe  0104     3.70  73       1        1
-#>  2      2      2 10168 1       libe  0103    17.3   58.9     3        1
-#>  3      3      3 10567 1       libe  0110     9    197.      5        1
-#>  4      4      4 12165 1       nysy  0122    14.2  428.      7        1
-#>  5      5      5 12190 1       havi  0122     9.40 436.      9        1
-#>  6      6      6 12192 1       havi  0122     1.30 434      13        1
-#>  7      7      7 12212 1       unk   0123    17.8  447.     15        1
-#>  8      8      8 12261 1       libe  0125    18    484.     17        1
-#>  9      9      9 12456 1       vipr  0130    18    598.     19        1
-#> 10     10     10 12551 1       astr  0132     5.60 628.     22        1
-#> # ... with 40,273 more rows, and 10 more variables: dbh <dbl>, pom <chr>,
-#> #   hom <dbl>, ExactDate <chr>, DFstatus <chr>, codes <chr>,
-#> #   nostems <dbl>, date <dbl>, status <chr>, agb <dbl>
-#> 
-#> $scbi_tree2
-#> # A tibble: 40,283 x 20
-#>    treeID stemID tag   StemTag sp    quadrat    gx    gy DBHID CensusID
-#>  *  <int>  <int> <chr> <chr>   <chr> <chr>   <dbl> <dbl> <int>    <int>
-#>  1      1      1 10079 1       libe  0104     3.70  73   41801        2
-#>  2      2      2 10168 1       libe  0103    17.3   58.9 41723        2
-#>  3      3      3 10567 1       libe  0110     9    197.  42501        2
-#>  4      4      4 12165 1       nysy  0122    14.2  428.  42869        2
-#>  5      5      5 12190 1       havi  0122     9.40 436.  42904        2
-#>  6      6      6 12192 1       havi  0122     1.30 434   42909        2
-#>  7      7  31200 12212 2       unk   0123    17.8  447.  42946        2
-#>  8      8  31201 12261 2       libe  0125    18    484.  43023        2
-#>  9      9  31202 12456 2       vipr  0130    18    598.  43249        2
-#> 10     10     10 12551 1       astr  0132     5.60 628.  43346        2
-#> # ... with 40,273 more rows, and 10 more variables: dbh <dbl>, pom <chr>,
-#> #   hom <dbl>, ExactDate <chr>, DFstatus <chr>, codes <chr>,
-#> #   nostems <dbl>, date <dbl>, status <chr>, agb <dbl>
-#> 
 #> $sites_info
 #> # A tibble: 63 x 12
 #>    id    Site  site  lat   long  UTM_Zone UTM_X UTM_Y intertropical size.ha
@@ -300,7 +209,7 @@ datasets("allodb")
 #> #   wsg.site.name <chr>
 #> 
 #> $sitespecies
-#> # A tibble: 679 x 34
+#> # A tibble: 679 x 15
 #>    site  family species species_code life_form dependent_varia~
 #>    <chr> <chr>  <chr>   <chr>        <chr>     <chr>           
 #>  1 Lill~ Sapin~ Acer r~ 316          Tree      Total abovegrou~
@@ -313,13 +222,10 @@ datasets("allodb")
 #>  8 Lill~ Jugla~ Carya ~ 409          Tree      Total abovegrou~
 #>  9 Lill~ Jugla~ Carya ~ 402          Tree      Total abovegrou~
 #> 10 Lill~ Jugla~ Carya ~ 403          Tree      Total abovegrou~
-#> # ... with 669 more rows, and 28 more variables: equation_group <chr>,
+#> # ... with 669 more rows, and 9 more variables: equation_group <chr>,
 #> #   equation_id <chr>, equation_taxa <chr>, allometry_specificity <chr>,
 #> #   dbh_min_cm <chr>, dbh_max_cm <chr>, notes_on_species <chr>,
-#> #   wsg_id <chr>, wsg_specificity <chr>, X16 <chr>, X17 <chr>, X18 <chr>,
-#> #   X19 <chr>, X20 <chr>, X21 <chr>, X22 <chr>, X23 <chr>, X24 <chr>,
-#> #   X25 <chr>, X26 <chr>, X27 <chr>, X28 <chr>, X29 <chr>, X30 <chr>,
-#> #   X31 <chr>, X32 <chr>, X33 <chr>, X34 <chr>
+#> #   wsg_id <chr>, wsg_specificity <chr>
 #> 
 #> $sitespecies_metadata
 #> # A tibble: 15 x 8
