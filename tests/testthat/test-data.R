@@ -11,8 +11,9 @@ expect_output <- function(object, file, update = FALSE) {
 
 
 test_that("Exported datasets match known output", {
+  equations_in_use <- unique(allodb::equations$equation_id)
   expect_output(
-    as.data.frame(allodb::equations, stringsAsFactors = FALSE),
+    as.data.frame(equations_in_use, stringsAsFactors = FALSE),
     "ref-equations"
   )
   expect_output(
@@ -30,8 +31,9 @@ test_that("Exported datasets match known output", {
     "ref-references_metadata"
   )
 
+  sitespecies_in_use <- unique(allodb::sitespecies$equation_id)
   expect_output(
-    as.data.frame(allodb::sitespecies, stringsAsFactors = FALSE),
+    as.data.frame(sitespecies_in_use, stringsAsFactors = FALSE),
     "ref-sitespecies"
   )
   expect_output(
