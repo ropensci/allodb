@@ -1,16 +1,16 @@
-Column,Field,Description,Column_type,Field_codes,Units,Range,Erikas notes to delete before publication
-1 / A,site,ForestGEO site name (corresponds to name in ForestGEO sites master table),character,-,-,-,NA
-2 / B,family,"Plant family name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.",character,NA,NA,NA,NA
-3 / C,species,"Plant scientific name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.",character,-,-,-,NA
-4 / D,species_code,"Species code used at the ForestGEO site, variable per site, even if representing same species .",character,NA,NA,NA,NA
-5 / E,life_form,Common growth form for a given plant species,character,NA,NA,NA,NA
-6 / F,dependent_variable_biomass_component,Tree component characterized by the equation,character,-,-,-,NA
-7 / G,equation_group,"Allometric equation group that can be selected by the user. ""Generic"" equations are the current best equations or equation groups that can be applied to any site in a broad geographic area (e.g., pantropical, continental) and to any taxa at that site. ""Expert selected"" equations are the current best equations for specific taxa at a specific site, as identified by a botanist or forest ecologist. ""Other"" equations are potentially relevant (i.e., may be selected as best under different criteria) or were previously classified as best available.",character,G- generic; E- expert selected; O- other,-,-,its likely that we'll want a grouping variable like this for wood density
-8 / H,equation_id,Unique equation identification number given arbitrarely. Links Equations table.,numeric,-,NA,NA,need range before publishing
+Column,Field,Description,Column_type,Field_codes,Units,Range,Notes to delete before publication
+1 / A,site,ForestGEO site name (corresponds to name in ForestGEO sites master table),character,-,-,-,
+2 / B,family,"Plant family name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.",character,NA,NA,NA,
+3 / C,species,"Plant scientific name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.",character,-,-,-,
+4 / D,species_code,"Species code used at the ForestGEO site, variable per site, even if representing same species .",character,NA,NA,NA,
+5 / E,life_form,Common growth form for a given plant species,character,NA,NA,NA,
+6 / F,dependent_variable_biomass_component,Tree component characterized by the equation,character,-,-,-,
+7 / G,equation_group,"Allometric equation category that can be selected by the user. ""Generic"" equations are the current best equations or equation groups that can be applied to any site in a broad geographic area (e.g., pantropical, continental) and to any taxa at that site. ""Expert"" equations are the current best equations for specific taxa at a specific site, as identified by a botanist or forest ecologist. ""Other"" equations are potentially relevant (i.e., may be selected as best under different criteria) or were previously classified as best available.",character,Generic; Expert; Other,NA,NA,
+8 / H,equation_id,Unique equation identification number given arbitrarely. Links Equations table.,character,NA,NA,NA,
 9 / I,equation_taxa,"Species, genus, family, or plant group for which the allomery was developed (sometimes used as proxy species to calculate AGB when a specific-species equation is not available)",character (string),NA,NA,NA,
-10 / J,allometry_specificity,"Refers to the specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)",character (string),-,NA,NA,NA
+10 / J,allometry_specificity,"Refers to the specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)",character (string),-,NA,NA,
 11 / K,dbh_min_cm,Min DBH at which the equation should be applied,numeric,-,-,NA,Need range before publishing
 12 / L,dbh_max_cm,Max DBH at which the equation should be applied,numeric,-,-,NA,Need range before publishing
 13 / M,notes_on_species,"Informative notes on species and sites, non critical in biomass calculation",character,NA,NA,NA,
 14 / N,wsg_id,Wood density identification number. Links to id in Wood Density table.,numeric,NA,NA,NA,NA
-15 / O,wsg_specifity,"Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)",character,NA,NA,NA,I don't think needed in this table (in wood density table)
+15 / O,wsg_specifity,"Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)",character,NA,NA,NA,I don't think we need this vakue in this table (already in wsg table)
