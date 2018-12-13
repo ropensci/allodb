@@ -174,3 +174,11 @@ bohn_2014_ocai,exp((1.151*(dbh-3.586))*(2*(5.187+(dbh-3.586)))/(5.187+(dbh-3.586
 bohn_2014_ocai,exp((1.192*(dbh-3.534))*(2*(5.957+(dbh-3.534)))/(5.957+(dbh-3.534))),9e3b6a,exp((a*(DBH-c))*(2(*b+(DBH-c)))/(b+(DBH-c))),Total aboveground biomass,DBH,Genus,Northern Germany,NRA,NRA,NRA,m,t,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
 bohn_2014_ocai,exp((1.091*(dbh-3.671))*(2*(6.394+(dbh-3.671)))/(6.394+(dbh-3.671))),e42e41,exp((a*(DBH-c))*(2(*b+(DBH-c)))/(b+(DBH-c))),Total aboveground biomass,DBH,Genus,Northern Germany,NRA,NRA,NRA,m,t,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
 bohn_2014_ocai,exp((1.266*(dbh-3.809))*(2*(5.636+(dbh-3.809)))/(5.636+(dbh-3.809))),786b7c,exp((a*(DBH-c))*(2(*b+(DBH-c)))/(b+(DBH-c))),Total aboveground biomass,DBH,Genus,Northern Germany,NRA,NRA,NRA,m,t,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
+jansen_1996,(dbh^1.54291)*(h^1.24235)*(2.71828^-2.66506),c2b3e3,(dbh^a)*(h^b)*(e^c),Total aboveground biomass,,Genus,Netherland,NRA,NRA,NRA,cm,kg,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
+jansen_1997,(dbh^1.86116)*(h^1.04313)*(2.71828^-3.05257),bf5b8e,(dbh^a)*(h^b)*(e^c),Total aboveground biomass,,Species,Netherland,NRA,NRA,NRA,cm,kg,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
+jansen_1998,(dbh^1.77681)*(h^1.14282)*(2.71828^-3.07536),448bdf,(dbh^a)*(h^b)*(e^c),Total aboveground biomass,,Genus,Netherland,NRA,NRA,NRA,cm,kg,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
+jansen_1999,(dbh^1.870775)*(h^1.00616)*(2.71828^-2.8748),c3587c,(dbh^a)*(h^b)*(e^c),Total aboveground biomass,,Genus,Netherland,NRA,NRA,NRA,cm,kg,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
+jansen_2000,(dbh^1.82075)*(h^1.07427)*(2.71828^-2.88085),becaf9,(dbh^a)*(h^b)*(e^c),Total aboveground biomass,,Species,Netherland,NRA,NRA,NRA,cm,kg,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
+jansen_2001,(dbh^1.90053)*(h^0.80726)*(2.71828^-2.43151),99d03e,(dbh^a)*(h^b)*(e^c),Total aboveground biomass,,Species,Netherland,NRA,NRA,NRA,cm,kg,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
+jansen_2002,(dbh^1.82628)*(h^1.11342)*(2.71828^-3.04885),12b2a9,(dbh^a)*(h^b)*(e^c),Total aboveground biomass,,Genus,Netherland,NRA,NRA,NRA,cm,kg,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
+jansen_2003,(dbh^1.83932)*(h^0.9724)*(2.71828^-2.71877),6dd993,(dbh^a)*(h^b)*(e^c),Total aboveground biomass,,Species,Netherland,NRA,NRA,NRA,cm,kg,harvest?,NA,NA,NA,NA,NA,NA,NA,NA
