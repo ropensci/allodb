@@ -128,7 +128,7 @@ means_187_NA,exp(3.761+2.37498*log(dba)),12104c,exp(a+b*ln(DBA)),Total abovegrou
 fenn_2014_tcco,exp(-5.41227+(2.491767*(log(pi*dbh)))),fc521f,exp(a+(b*(ln(pi*dbh)))),Total aboveground biomass,DBH,Woody species,Northern England,NI,NI,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA
 fenn_2014_tcco,exp(-5.644074+(2.5189*(log(pi*dbh)))),f49bcb,exp(a+(b*(ln(pi*dbh)))),Total aboveground biomass,DBH,Species,Northern England,11.5,96.5,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA
 fenn_2014_tcco,exp(-5.308133+(2.4882*(log(pi*dbh)))),7bb5bd,exp(a+(b*(ln(pi*dbh)))),Total aboveground biomass,DBH,Species,Northern England,9,104,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA
-fenn_2014_tcco,exp(-5.284602+(2.4882*(log(pi*dbh)))),d635f1,exp(a+(b*(ln(pi*dbh)))),Total aboveground biomass,DBH,Species,Northern England,14,162.5,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA
+fenn_2014_tcco,exp(-5.284602+(2.4682*(log(pi*dbh)))),d635f1,exp(a+(b*(ln(pi*dbh)))),Total aboveground biomass,DBH,Species,Northern England,14,162.5,NA,cm,kg,harvest,linear,NA,NA,1,included in model,NA,NA,NA
 means_380_NA,exp(3.011904+2.7727*log(dbh)),7aaa22,exp(a+b*ln(dbh)),Stem biomass (with bark),DBH,Species,"Pacific Northwest, USA",14.4,158.4,56,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 westman_1998_absa,exp(4.36982+2.5043*log(dbh)),1b9161,exp(a+b*ln(dbh)),Total aboveground biomass,DBH,Species,"California, USA",7,98,NA,cm,g,harvest,NA,NA,NA,1,1.014,NA,NA,NA
 jenkins_2004_cdod,exp(-10.7955+2.759*log(dbh)),f2943e,exp(a+b*ln(dbh)),Stem biomass (with bark),DBH,Species,"Pacific Northwest, USA",18.8,143.2,NA,cm,Mg,harvest,NA,NA,NA,0,NA,NA,NA,NA
