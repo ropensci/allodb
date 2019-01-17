@@ -1,4 +1,4 @@
-site,family,species,species_code,life_form,dependent_variable_biomass_component,Expertquation_Genericroup,equation_id,equation_taxa,allometry_specificity,dbh_min_cm,dbh_max_cm,notes_on_species,wsg_id,wsg_specificity
+site,family,species,species_code,life_form,dependent_variable_biomass_component,equation_group,equation_id,equation_taxa,allometry_specificity,dbh_min_cm,dbh_max_cm,notes_on_species,wsg_id,wsg_specificity
 Lilly Dicky,Sapindaceae,Acer rubrum,316,Tree,Total aboveground biomass,Expert,2060ea,Acer rubrum,Species,0.21,5.73,NA,NA,NA
 Lilly Dicky,Sapindaceae,Acer saccharum,318,Tree,Total aboveground biomass,Expert,a4d879,Acer saccharum,Species,0.19,3.86,NA,NA,NA
 Lilly Dicky,Rosaceae,Amelanchier arborea,356,Tree,Stem biomass (with bark),Expert,c59e03,Amelanchier,Genus,8.9,25.4,NA,NA,NA
@@ -417,16 +417,16 @@ Yosemite,Salicaceae,Salix sp.,SALIX,Tree,Total aboveground biomass,Generic,829ba
 Yosemite,Adoxaceae,Sambucus racemosa,SARA,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 Yosemite,Ericaceae,Vaccinium uliginosum,VAUL,Shrub,Total aboveground biomass,Expert,969226,Leucothoe davisiae,Species,0.5,2.6,NA,NA,NA
 Zofin,Pinaceae,Abies alba,JD,Tree,Total aboveground biomass,Expert,e44bb9,Picea abies,Species,NI,40,NA,NA,NA
-Zofin,Aceraceae,Acer platanoides,JV,Tree,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
-Zofin,Aceraceae,Acer pseudoplatanus,KL,Tree,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
-Zofin,Betulaceae,Betula pendula,BR,Tree,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
-Zofin,Fagaceae,Fagus sylvatica,BK,Tree,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
+Zofin,Aceraceae,Acer platanoides,JV,Tree,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
+Zofin,Aceraceae,Acer pseudoplatanus,KL,Tree,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
+Zofin,Betulaceae,Betula pendula,BR,Tree,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
+Zofin,Fagaceae,Fagus sylvatica,BK,Tree,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
 Zofin,Pinaceae,Picea abies,SM,Tree,Total aboveground biomass,Expert,e44bb9,Picea abies,Species,NI,40,NA,NA,NA
-Zofin,Salicaceae,Populus tremula,TP,Tree,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
-Zofin,Salicaceae,Salix caprea,VR,Tree,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
-Zofin,Sambucaceae,Sambucus racemosa,BEZ,Shrub,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
-Zofin,Rosaceae,Sorbus aucuparia,JR,Tree,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
-Zofin,Ulmaceae,Ulmus glabra,JL,Tree,Total aboveground biomass,Expert,7b7468,Fagus spp.,Genus,NI,50,NA,NA,NA
+Zofin,Salicaceae,Populus tremula,TP,Tree,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
+Zofin,Salicaceae,Salix caprea,VR,Tree,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
+Zofin,Sambucaceae,Sambucus racemosa,BEZ,Shrub,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
+Zofin,Rosaceae,Sorbus aucuparia,JR,Tree,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
+Zofin,Ulmaceae,Ulmus glabra,JL,Tree,Total aboveground biomass,Expert,7b7468,Fagus,Genus,NI,50,NA,NA,NA
 Utah,Pinaceae,Abies bifolia,NA,Tree,Stem biomass (with bark),Expert,b30744,Abies lasiocarpa,Species,15.6,68.7,NA,NA,NA
 Utah,Pinaceae,Abies concolor,NA,Tree,Stem biomass (with bark),Expert,7aaa22,Abies concolor,Species,14.4,158.4,NA,NA,NA
 Utah,Pinaceae,Abies concolor,NA,Tree,Total aboveground biomass,Generic,74dd65,Abies,Genus,3,236,NA,NA,NA
@@ -514,7 +514,7 @@ UMBC,Oleaceae,Fraxinus pennsylvanica,NA,Tree,Whole tree (above stump),Expert,b52
 UMBC,Oleaceae,Ligustrum amurense,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Paulowniaceae,Paulownia tomentosa,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Pinaceae,Pinus thunbergii,NA,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
-UMBC,Pinaceae,Picea abies,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea abies,Species,2.54,25.4,NA,NA,NA
+UMBC,Pinaceae,Picea abies,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea glauca,Species,2.54,25.4,NA,NA,NA
 UMBC,Platanaceae,Platanus occidentalis,NA,Tree,Whole tree (above stump),Expert,0a1212,Platanus occidentalis,Species,24.94,49.53,NA,NA,NA
 UMBC,Rosaceae,Malus coronaria,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 UMBC,Rosaceae,Malus sylvestris,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
@@ -566,9 +566,9 @@ Harvard Forest,Lauraceae,Lindera benzoin,NA,Shrub,Total aboveground biomass,Gene
 Harvard Forest,Nyssaceae,Nyssa sylvatica,NA,Tree,Total aboveground biomass,Expert,8c94e8,Nyssa sylvatica,Species,0.24,6.72,NA,NA,NA
 Harvard Forest,Oleaceae,Fraxinus americana,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,25,550,NA,NA,NA
 Harvard Forest,Oleaceae,Fraxinus nigra,NA,Tree,Total aboveground biomass,Expert,0edaff,Fraxinus nigra,Species,4,32,NA,NA,NA
-Harvard Forest,Pinaceae,Picea abies,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea abies,Species,2.54,25.4,NA,NA,NA
-Harvard Forest,Pinaceae,Picea rubens,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea abies,Species,2.54,25.4,NA,NA,NA
-Harvard Forest,Pinaceae,Picea unknown,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea abies,Species,2.54,25.4,NA,NA,NA
+Harvard Forest,Pinaceae,Picea abies,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea glauca,Species,2.54,25.4,NA,NA,NA
+Harvard Forest,Pinaceae,Picea rubens,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea glauca,Species,2.54,25.4,NA,NA,NA
+Harvard Forest,Pinaceae,Picea unknown,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea glauca,Species,2.54,25.4,NA,NA,NA
 Harvard Forest,Pinaceae,Pinus resinosa,NA,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
 Harvard Forest,Pinaceae,Pinus strobus,NA,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
 Harvard Forest,Pinaceae,Pinus unknown,NA,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
