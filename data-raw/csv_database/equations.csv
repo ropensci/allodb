@@ -155,7 +155,7 @@ gower_1992_cdor,10^(-2.336+2.650*(log10(dbh))),9a977b,10^(a+b*(log10(dbh))),"Bra
 gower_1992_cdor,10^(-2.347+2.478*(log10(dbh))),a59bd5,10^(a+b*(log10(dbh))),Foliage total,DBH,Species,"New Mexico, USA",2.7,27.5,14,cm,kg,harvest,NA,NA,NA,1,1.053,NA,NA,NA
 chojnacky_1993_cwvt,exp(-0.86896+1.652882*log(dbh)),ecef00,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Species,"Nevada, USA",3,112,105,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,0.1231*(dbh^2.242),aeebe9,a*(dbh^b),Total aboveground biomass,DBH,Species,"Utah, USA",3,36,20,cm,kg,harvest,NA,NA,NA,1,1.046,NA,NA,NA
-baskerville_1966_dnpi,10^(0.15+2.48*(log10(dbh))),e2c7c7,10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Species,"New Brunswick, Canada",2.54,25.4,13,in,lb,harvest,NA,NA,NA,0,0,NA,NA,NA
+baskerville_1966_dmpi,exp(0.15+2.48*log(dbh)),e2c7c7,exp(a+b*(log(dbh)),Total aboveground biomass,DBH,Species,"New Brunswick, Canada",2.54,25.4,13,in,lb,harvest,NA,NA,NA,0,0,NA,NA,NA
 yarie_2007_abef,(-16809+2656.482*dbh+248.416*dbh^2),686376,a+b*dbh+c*dbh^2,Total aboveground biomass,DBH,Species,"Alaska, USA",3.7,32.7,37,cm,g,harvest,NA,NA,NA,NA,NA,NA,NA,NA
 bond-lamberty_2002_aabb,10^(2.648+0.715*(log10(dbh))),726f1d,10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Species,"Manitoba, Canada",0.2,2,7,cm,g,harvest,NA,NA,NA,1,1.027,NA,NA,NA
 singh_1984_befs,7.06302-(3.01775*dbh)+(0.48754*dbh^2)-(0.003298*dbh^3),a5d599,a+(b*dbh)+c*(dbh^2)+d*(dbh^3),Total aboveground biomass,DBH,Species,"Northwest Territory, Canada",5,35,56,cm,kg,harvest,NA,NA,NA,0,0,NA,NA,NA
