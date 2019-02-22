@@ -283,3 +283,9 @@ datasets("allodb")
 #> # ... with 1 more variable: `Erikas notes to delete before
 #> #   publication` <chr>
 ```
+
+## Information
+
+  - [Getting help](SUPPORT.md).
+  - [Contributing](CONTRIBUTING.md).
+  - [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
