@@ -2,22 +2,24 @@ Package: allodb
 Title: A Database of Allometric Equations for ForestGEO
 Version: 0.0.0.9005
 Authors@R: 
-    c(person(given = "Gonzalez-Akre",
-             family = "Erika",
+    c(person(given = "Erika",
+             family = "Gonzalez-Akre",
              role = "aut",
-             email = "GonzalezEB@@si.edu"),
-      person(given = "Rutishauser",
-             family = "Ervan",
+             email = "GonzalezEB@si.edu",
+             comment = c(ORCID = "0000-0001-8305-6672")),
+      person(given = "Ervan",
+             family = "Rutishauser",
              role = "aut",
-             email = "RutishauserE@@si.edu"),
+             email = "RutishauserE@si.edu"),
       person(given = "Mauro",
              family = "Lepore",
              role = c("aut", "ctr", "cre"),
-             email = "leporem@si.edu"),
+             email = "leporem@si.edu",
+             comment = c(ORCID = "0000-0002-1986-7988")),
       person(given = "Kristina",
              family = "Teixeira",
              role = "aut",
-             email = "TeixeiraK@@si.edu"))
+             email = "TeixeiraK@si.edu"))
 Description: A database of allometric equations for ForestGEO.
 License: GPL-3
 URL: https://github.com/forestgeo/allodb

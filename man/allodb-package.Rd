@@ -17,13 +17,13 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Mauro Lepore \email{leporem@si.edu} [contractor]
+\strong{Maintainer}: Mauro Lepore \email{leporem@si.edu} (0000-0002-1986-7988) [contractor]
 
 Authors:
 \itemize{
-  \item Gonzalez-Akre Erika \email{GonzalezEB@@si.edu}
-  \item Rutishauser Ervan \email{RutishauserE@@si.edu}
-  \item Kristina Teixeira \email{TeixeiraK@@si.edu}
+  \item Erika Gonzalez-Akre \email{GonzalezEB@si.edu} (0000-0001-8305-6672)
+  \item Ervan Rutishauser \email{RutishauserE@si.edu}
+  \item Kristina Teixeira \email{TeixeiraK@si.edu}
 }
 
 }
