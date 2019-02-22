@@ -33,7 +33,8 @@ Suggests:
     covr (>= 3.2.1),
     knitr (>= 1.21),
     testthat (>= 2.0.1),
-    spelling
+    spelling,
+    purrr
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
