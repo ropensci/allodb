@@ -3,6 +3,7 @@
 language: R
 sudo: false
 cache: packages
+latex: false
 
 matrix:
   include:
@@ -14,11 +15,6 @@ matrix:
       provider: script
       script: Rscript -e 'pkgdown::deploy_site_github()'
       skip_cleanup: true
-  - r: oldrel
-  - r: 3.3
-  - r: 3.2
-  allow_failure:
-  - r: devel
   - r: oldrel
   - r: 3.3
   - r: 3.2
