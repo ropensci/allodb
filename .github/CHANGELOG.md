@@ -11,3 +11,4 @@ This document records meaningful changes, both developer-facing changes and user
 * Spelling is now automatically checked during R CMD check.
 
 * The ORCID ID of Erika and Mauro now shows up on the website and DESCRIPTION.
+
