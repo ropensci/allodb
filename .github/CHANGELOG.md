@@ -9,3 +9,5 @@ This document records developer-facing changes (users: see [NEWS](../NEWS.md)).
 * The version of required packages is now specified.
 
 * Spelling is now automatically checked during R CMD check.
+
+* The ORCID ID of Erika and Mauro now shows up on the website and DESCRIPTION.
