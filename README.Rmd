@@ -24,9 +24,9 @@ __allodb__ is a database of allometric equations. To manipulate these equations 
 
 ## Installation
 
-```
-# install.pkgs("remotes")
-remotes::install_github("forestgeo/allodb", auth_token = "abc")
+```R
+# install.packages("remotes")
+remotes::install_github("forestgeo/allodb")
 ```
 
 For details in how to install packages from GitHub see [this article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-pkgs-from-github/).

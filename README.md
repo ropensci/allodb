@@ -17,8 +17,10 @@ equations and calculate biomass see
 
 ## Installation
 
-    # install.pkgs("remotes")
-    remotes::install_github("forestgeo/allodb", auth_token = "abc")
+``` r
+# install.packages("remotes")
+remotes::install_github("forestgeo/allodb")
+```
 
 For details in how to install packages from GitHub see [this
 article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-pkgs-from-github/).
@@ -156,40 +158,40 @@ datasets("allodb")
 #> 
 #> $equations_metadata
 #> # A tibble: 22 x 7
-#>    Column Field     Description        Column_type Field_codes Units Range
-#>    <chr>  <chr>     <chr>              <chr>       <chr>       <chr> <chr>
-#>  1 1 / A  equation~ Unique equation i~ <NA>        <NA>        <NA>  <NA> 
-#>  2 2 / B  equation~ Algebraic form of~ character   <NA>        <NA>  <NA> 
-#>  3 3 / C  equation~ Equation to calcu~ character   <NA>        <NA>  <NA> 
-#>  4 4 / D  dependen~ Tree component ch~ character   <NA>        <NA>  <NA> 
-#>  5 5 / E  independ~ Parameters includ~ character   <NA>        <NA>  <NA> 
-#>  6 6 / F  allometr~ Specific taxonomi~ character   <NA>        <NA>  <NA> 
-#>  7 7 / G  geograph~ Geographic locati~ character   <NA>        <NA>  <NA> 
-#>  8 8 / H  dbh_min_~ Minimun DBH in cm~ numeric     <NA>        <NA>  <NA> 
-#>  9 9 / I  dbh_max_~ Maximun DBH in cm~ numeric     <NA>        <NA>  <NA> 
-#> 10 10 / J sample_s~ Number of trees s~ integer     <NA>        <NA>  <NA> 
+#>    Column Field      Description        Column_type Field_codes Units Range
+#>    <chr>  <chr>      <chr>              <chr>       <chr>       <chr> <chr>
+#>  1 1 / A  equation_~ Unique equation i~ <NA>        <NA>        <NA>  <NA> 
+#>  2 2 / B  equation_~ Algebraic form of~ character   <NA>        <NA>  <NA> 
+#>  3 3 / C  equation_~ Equation to calcu~ character   <NA>        <NA>  <NA> 
+#>  4 4 / D  dependent~ Tree component ch~ character   <NA>        <NA>  <NA> 
+#>  5 5 / E  independe~ Parameters includ~ character   <NA>        <NA>  <NA> 
+#>  6 6 / F  allometry~ Specific taxonomi~ character   <NA>        <NA>  <NA> 
+#>  7 7 / G  geographi~ Geographic locati~ character   <NA>        <NA>  <NA> 
+#>  8 8 / H  dbh_min_cm Minimun DBH in cm~ numeric     <NA>        <NA>  <NA> 
+#>  9 9 / I  dbh_max_cm Maximun DBH in cm~ numeric     <NA>        <NA>  <NA> 
+#> 10 10 / J sample_si~ Number of trees s~ integer     <NA>        <NA>  <NA> 
 #> # ... with 12 more rows
 #> 
 #> $missing_values_metadata
 #> # A tibble: 4 x 3
-#>   Code  Definition        Description                                     
-#>   <chr> <chr>             <chr>                                           
-#> 1 <NA>  Not Applicable    Data does not apply to that particular case     
-#> 2 NAC   Not Acquired      Information may be available but has not been a~
-#> 3 NRA   Not Readily Avai~ Information was not readily available to the au~
-#> 4 NI    No Information    No information available in original publication
+#>   Code  Definition        Description                                      
+#>   <chr> <chr>             <chr>                                            
+#> 1 <NA>  Not Applicable    Data does not apply to that particular case      
+#> 2 NAC   Not Acquired      Information may be available but has not been ac~
+#> 3 NRA   Not Readily Avai~ Information was not readily available to the aut~
+#> 4 NI    No Information    No information available in original publication 
 #> 
 #> $references_metadata
 #> # A tibble: 7 x 4
-#>   Column Field         Description                           Colum_type   
-#>   <chr>  <chr>         <chr>                                 <chr>        
-#> 1 1 / A  ref_id        Unique reference identification numb~ numeric      
-#> 2 2 / B  ref_doi       Publication DOI (Digital object iden~ character (s~
-#> 3 3 / C  ref_author    Last name of first author of a cited~ character (s~
-#> 4 4 / D  ref_year      Year of publication                   numeric      
-#> 5 5 / E  ref_title     Title of publication                  character (s~
-#> 6 6 / F  ref_journal   Journal, book, report where published character (s~
-#> 7 7 / G  References f~ Full citation (kept for easy use)     character (s~
+#>   Column Field          Description                           Colum_type   
+#>   <chr>  <chr>          <chr>                                 <chr>        
+#> 1 1 / A  ref_id         Unique reference identification numb~ numeric      
+#> 2 2 / B  ref_doi        Publication DOI (Digital object iden~ character (s~
+#> 3 3 / C  ref_author     Last name of first author of a cited~ character (s~
+#> 4 4 / D  ref_year       Year of publication                   numeric      
+#> 5 5 / E  ref_title      Title of publication                  character (s~
+#> 6 6 / F  ref_journal    Journal, book, report where published character (s~
+#> 7 7 / G  References fu~ Full citation (kept for easy use)     character (s~
 #> 
 #> $sites_info
 #> # A tibble: 63 x 12
@@ -251,18 +253,18 @@ datasets("allodb")
 #> 
 #> $wsg
 #> # A tibble: 549 x 8
-#>    wsg_id family  species   wsg   wsg_specificity sample_size site  ref_id
-#>    <chr>  <chr>   <chr>     <chr> <chr>           <chr>       <chr> <chr> 
-#>  1 <NA>   Sapind~ Acer rub~ 0.49  <NA>            <NA>        Lill~ <NA>  
-#>  2 <NA>   Sapind~ Acer sac~ 0.56  <NA>            <NA>        Lill~ <NA>  
-#>  3 <NA>   Rosace~ Amelanch~ 0.66  <NA>            <NA>        Lill~ <NA>  
-#>  4 <NA>   Annona~ Asimina ~ 0.47  <NA>            <NA>        Lill~ <NA>  
-#>  5 <NA>   Betula~ Carpinus~ 0.58  <NA>            <NA>        Lill~ <NA>  
-#>  6 <NA>   Juglan~ Carya al~ 0.62  <NA>            10          Lill~ <NA>  
-#>  7 <NA>   Juglan~ Carya co~ 0.6   <NA>            10          Lill~ <NA>  
-#>  8 <NA>   Juglan~ Carya gl~ 0.66  <NA>            10          Lill~ <NA>  
-#>  9 <NA>   Juglan~ Carya ov~ 0.62  <NA>            <NA>        Lill~ <NA>  
-#> 10 <NA>   Cannab~ Celtis o~ 0.49  <NA>            <NA>        Lill~ <NA>  
+#>    wsg_id family  species    wsg   wsg_specificity sample_size site  ref_id
+#>    <chr>  <chr>   <chr>      <chr> <chr>           <chr>       <chr> <chr> 
+#>  1 <NA>   Sapind~ Acer rubr~ 0.49  <NA>            <NA>        Lill~ <NA>  
+#>  2 <NA>   Sapind~ Acer sacc~ 0.56  <NA>            <NA>        Lill~ <NA>  
+#>  3 <NA>   Rosace~ Amelanchi~ 0.66  <NA>            <NA>        Lill~ <NA>  
+#>  4 <NA>   Annona~ Asimina t~ 0.47  <NA>            <NA>        Lill~ <NA>  
+#>  5 <NA>   Betula~ Carpinus ~ 0.58  <NA>            <NA>        Lill~ <NA>  
+#>  6 <NA>   Juglan~ Carya alba 0.62  <NA>            10          Lill~ <NA>  
+#>  7 <NA>   Juglan~ Carya cor~ 0.6   <NA>            10          Lill~ <NA>  
+#>  8 <NA>   Juglan~ Carya gla~ 0.66  <NA>            10          Lill~ <NA>  
+#>  9 <NA>   Juglan~ Carya ova~ 0.62  <NA>            <NA>        Lill~ <NA>  
+#> 10 <NA>   Cannab~ Celtis oc~ 0.49  <NA>            <NA>        Lill~ <NA>  
 #> # ... with 539 more rows
 #> 
 #> $wsg_metadata
