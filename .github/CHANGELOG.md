@@ -1,4 +1,4 @@
-This document records developer-facing changes (users: see [NEWS](../NEWS.md)).
+This document records meaningful changes, both developer-facing changes and user-facing changes. This and the commit history may be the base for writing NEWS.md, which is only to summarise user-facing changes.
 
 # allodb (development version)
 
