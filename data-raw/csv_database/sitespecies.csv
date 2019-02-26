@@ -15,9 +15,9 @@ Lilly Dicky,Fabaceae,Cercis canadensis,471,Tree,Total aboveground biomass,Generi
 Lilly Dicky,Cornaceae,Cornus florida,491,Tree,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
 Lilly Dicky,Rosaceae,Crataegus sp.,500,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Lilly Dicky,Fagaceae,Fagus grandifolia,531,Tree,Stem and branches (live),Expert,74186d,Fagus grandifolia,Species,5.08,50.8,NA,NA,NA
-Lilly Dicky,Oleaceae,Fraxinus americana,541,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
+Lilly Dicky,Oleaceae,Fraxinus americana,541,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 Lilly Dicky,Oleaceae,Fraxinus americana,541,Tree,Whole tree (above stump),Expert,e3f3bf,Fraxinus americana,Species,0.5,6.14,NA,NA,NA
-Lilly Dicky,Oleaceae,Fraxinus pennsylvanica,544,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
+Lilly Dicky,Oleaceae,Fraxinus pennsylvanica,544,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 Lilly Dicky,Hamamelidaceae,Hamamelis virginiana,498,Shrub,Total aboveground biomass,Expert,76aa3c,Hamamelis virginiana,Species,0.18,4.31,NA,NA,NA
 Lilly Dicky,Cupressaceae,Juniperus virginiana,68,Tree,Total aboveground biomass,Expert,c36a5b,Juniperus virginiana,Species,14,43,NA,NA,NA
 Lilly Dicky,Lauraceae,Lindera benzoin,609,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
@@ -137,7 +137,7 @@ SERC,Cornaceae,Cornus florida,COFL2,Tree,Total aboveground biomass,Expert,f3e023
 SERC,Elaeagnaceae,Elaeagnus angustifolia,ELAN,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SERC,Elaeagnaceae,Elaeagnus umbellata,ELUM,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SERC,Fagaceae,Fagus grandifolia,FAGR,Tree,Total aboveground biomass,Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
-SERC,Oleaceae,Fraxinus americana,FRAM2,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
+SERC,Oleaceae,Fraxinus americana,FRAM2,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 SERC,Oleaceae,Fraxinus pennsylvanica,FRPE,Tree,Whole tree (above stump),Expert,b521bd,Fraxinus pennsylvanica,Species,2.54,27.69,NA,NA,NA
 SERC,Aquifoliaceae,Ilex opaca,ILOP,Shrub,Total aboveground biomass,Generic,f08fff,Aquifoliaceae,Family,3,64,NA,NA,NA
 SERC,Aquifoliaceae,Ilex verticillata,ILVE,Shrub,Total aboveground biomass,Generic,f08fff,Aquifoliaceae,Family,3,64,NA,NA,NA
@@ -208,7 +208,7 @@ Tyson,Cornaceae,Cornus florida,corflo,Tree,Total aboveground biomass,Expert,cf73
 Tyson,Rosaceae,Crataegus sp.,crasp,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Tyson,Ebenaceae,Diospyros virginiana,diovir,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 Tyson,Rhamnaceae,Frangula caroliniana,fracar,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Tyson,Oleaceae,Fraxinus americana,fraame,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
+Tyson,Oleaceae,Fraxinus americana,fraame,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 Tyson,Oleaceae,Fraxinus americana,fraame,Tree,Whole tree (above stump),Expert,e3f3bf,Fraxinus americana,Species,0.5,6.14,NA,NA,NA
 Tyson,Fabaceae,Gleditsia triacanthos,gletri,Tree,Total aboveground biomass,Generic,7f7777,Fabaceae,Family,4,42,NA,NA,NA
 Tyson,Juglandaceae,Juglans nigra,jugnig,Tree,Total aboveground biomass,Generic,7f7777,Juglandaceae,Family,4,42,NA,NA,NA
@@ -285,7 +285,7 @@ Wabikon,Betulaceae,Betula papyrifera,BETPAP,Tree,Whole tree (aboveground),Expert
 Wabikon,Cornaceae,Cornus alternifolia,CORALT,Tree,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
 Wabikon,Betulaceae,Corylus cornuta,CORCOR,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 Wabikon,Thymelaeaceae,Dirca palustris,DIRPAL,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Wabikon,Oleaceae,Fraxinus americana,FRAAME,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
+Wabikon,Oleaceae,Fraxinus americana,FRAAME,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 Wabikon,Oleaceae,Fraxinus americana,FRAAME,Tree,Whole tree (above stump),Expert,e3f3bf,Fraxinus americana,Species,0.5,6.14,NA,NA,NA
 Wabikon,Oleaceae,Fraxinus nigra,FRANIG,Tree,Total aboveground biomass,Expert,0edaff,Fraxinus nigra,Species,4,32,NA,NA,NA
 Wabikon,Aquifoliaceae,Ilex mucronata,ILEMUC,Shrub,Total aboveground biomass,Generic,f08fff,Aquifoliaceae,Family,3,64,NA,NA,NA
@@ -508,8 +508,8 @@ UMBC,Moraceae,Maclura pomifera,NA,Tree,Total aboveground biomass,Generic,ae65ed,
 UMBC,Moraceae,Morus rubra,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Moraceae,Morus alba,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Nyssaceae,Nyssa sylvatica,NA,Tree,Total aboveground biomass,Expert,e8ebc2,Nyssa sylvatica,Species,4.06,12.45,NA,NA,NA
-UMBC,Oleaceae,Fraxinus sp.,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
-UMBC,Oleaceae,Fraxinus americana,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
+UMBC,Oleaceae,Fraxinus sp.,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
+UMBC,Oleaceae,Fraxinus americana,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 UMBC,Oleaceae,Fraxinus pennsylvanica,NA,Tree,Whole tree (above stump),Expert,b521bd,Fraxinus pennsylvanica,Species,2.54,27.69,NA,NA,NA
 UMBC,Oleaceae,Ligustrum amurense,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Paulowniaceae,Paulownia tomentosa,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
@@ -564,7 +564,7 @@ Harvard Forest,Fagaceae,Quercus velutina,NA,Tree,Whole tree (above and belowgrou
 Harvard Forest,Hamamelidaceae,Hamamelis virginiana,NA,Shrub,Total aboveground biomass,Expert,76aa3c,Hamamelis virginiana,Species,0.18,4.31,NA,NA,NA
 Harvard Forest,Lauraceae,Lindera benzoin,NA,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
 Harvard Forest,Nyssaceae,Nyssa sylvatica,NA,Tree,Total aboveground biomass,Expert,8c94e8,Nyssa sylvatica,Species,0.24,6.72,NA,NA,NA
-Harvard Forest,Oleaceae,Fraxinus americana,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
+Harvard Forest,Oleaceae,Fraxinus americana,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 Harvard Forest,Oleaceae,Fraxinus nigra,NA,Tree,Total aboveground biomass,Expert,0edaff,Fraxinus nigra,Species,4,32,NA,NA,NA
 Harvard Forest,Pinaceae,Picea abies,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea glauca,Species,2.54,25.4,NA,NA,NA
 Harvard Forest,Pinaceae,Picea rubens,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea glauca,Species,2.54,25.4,NA,NA,NA
@@ -632,7 +632,7 @@ Michigan Big Woods,Juglandaceae,Carya ovata,,Tree,Stem and branches (live),Exper
 Michigan Big Woods,Juglandaceae,Juglans nigra,,Tree,Total aboveground biomass,Generic,7f7777,Juglandaceae,Family,4,42,NA,NA,NA
 Michigan Big Woods,Lauraceae,Lindera benzoin,,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
 Michigan Big Woods,Lauraceae,Sassafras albidum,,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
-Michigan Big Woods,Oleaceae,Fraxinus americana,,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,1.25,5.5,NA,NA,NA
+Michigan Big Woods,Oleaceae,Fraxinus americana,,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 Michigan Big Woods,Rosaceae,Amelanchier arborea,,Tree,Stem biomass (with bark),Expert,c59e03,Amelanchier,Genus,8.9,25.4,NA,NA,NA
 Michigan Big Woods,Rosaceae,Amelanchier arborea,,Tree,"Branches (live, dead)",Expert,96c0af,Amelanchier,Genus,5,45,NA,NA,NA
 Michigan Big Woods,Rosaceae,Amelanchier arborea,,Tree,Foliage total,Expert,529234,Amelanchier,Genus,5,45,NA,NA,NA
