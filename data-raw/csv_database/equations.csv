@@ -36,7 +36,7 @@ jenkins_2004_cdod,0.08248*(dbh^2.468),2473f9,a*(dbh^b),Whole tree (above stump),
 chojnacky_2014_ugbe,exp(-2.047+2.3852*log(dbh)),d6be5c,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,66,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,exp(4.5893+2.43*log(dbh)),7c72ed,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Species,Eastern USA,1,55,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 chojnacky_2014_ugbe,exp(-2.0705+2.441*log(dbh)),5edb7f,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,89,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
-jenkins_2004_cdod,3.08355*(dbh^2)^1.14915,f3e023,a*(dbh^2)^b,Total aboveground biomass,DBH,Species,Southeast USA,2.54,12.45,NA,in^2,lbs,harvest,NA,NA,NA,0,NA,NA,NA,NA
+jenkins_2004_cdod,3.08355*(dbh^2)^1.14915,f3e023,a*(dbh^2)^b,Total aboveground biomass,DBH,Species,Southeast USA,2.54,12.45,NA,inch,lbs,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,2.3626*(dbh^2.4798),973c05,a*(dbh^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,inch,lbs,harvest,NA,NA,NA,0,NA,NA,NA,NA
 ter-mikaelian_1997_befs,0.1634*(dbh^2.348),0edaff,a*(dbh^b),Total aboveground biomass,DBH,Species,"Upper Great Lakes, USA",4,32,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,1.0259*(dbh^2.7324),34fe5a,a*(dbh^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,inch,lbs,harvest,NA,NA,NA,0,NA,NA,NA,NA
@@ -51,14 +51,14 @@ jenkins_2004_cdod,2.23731*(dbh^2)^1.26394,6943b4,a*(dbh^2)^b,Whole tree (above s
 smith_1983_abef,37.637*(dba^2.779),a1646f,a*(dba^b),Total aboveground biomass,DBA,Genus,"Idaho/Montana, USA",0.2,1.2,32,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
 smith_1983_abef,43.992*(dba^2.86),b61369,a*(dba^b),Total aboveground biomass,DBA,Species,"Idaho/Montana, USA",0.3,0.9,26,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
 jenkins_2004_cdod,10^(1.3539+1.3412*(log10(dbh^2))),2c092b,10^(a+b*(log10(dbh^c))),Whole tree (above stump),DBH,Species,"Ohio, USA",0.4,8.49,41,cm,g,harvest,linear,NA,1,1,1.004,NA,NA,Equation built for seedlings and saplings
-jenkins_2004_cdod,2.17565*(dbh^2)^1.2481,8eca60,a*(dbh^2)^b,Whole tree (above stump),DBH,Genus,Piedmont (Southeastern USA),2.54,27.43,NA,in^2,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
+jenkins_2004_cdod,2.17565*(dbh^2)^1.2481,8eca60,a*(dbh^2)^b,Whole tree (above stump),DBH,Genus,Piedmont (Southeastern USA),2.54,27.43,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,2.04282*(dbh^2)^1.25462,455839,a*(dbh^2)^b,Stem and branches (live),DBH,Genus,Piedmont (Southeastern USA),2.54,27.43,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 smith_1983_abef,29.615*(dba^3.243),5e2dea,a*(dba^b),Total aboveground biomass,DBA,Species,Canada,0.28,1.59,19,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
 jenkins_2004_cdod,10^(2.1112+2.462*(log10(dbh))),281635,10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Species,"New Hampshire, USA",1,63,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,2.76583*(dbh^2)^1.15849,b521bd,a*(dbh^2)^b,Whole tree (above stump),DBH,Species,"Gulf and Atlantic Coastal Plains, USA",2.54,27.69,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,1.72982*(dbh^2)^1.27422,6f6bc3,a*(dbh^2)^b,Whole tree (above stump),DBH,Species,"Gulf and Atlantic Coastal Plains, USA",28.45,50.8,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,10^(-1.236+2.635*(log10(dbh))),c48e81,10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Species,"North Carolina, USA",10.2,55.8,NA,cm,kg,harvest,NA,NA,NA,1,1.008,NA,NA,NA
-jenkins_2004_cdod,2.56795*(dbh^2)^1.18685,e8ebc2,a*(dbh^2)^b,Total aboveground biomass,DBH,Species,Southeast USA,4.06,12.45,NA,in^2,lbs,harvest,NA,NA,NA,0,NA,NA,NA,NA
+jenkins_2004_cdod,2.56795*(dbh^2)^1.18685,e8ebc2,a*(dbh^2)^b,Total aboveground biomass,DBH,Species,Southeast USA,4.06,12.45,NA,inch,lbs,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,1.57573*(dbh^2)^1.29005,73325b,a*(dbh^2)^b,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),4.83,23.88,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,2.51502*(dbh^2)^1.19256,0a1212,a*(dbh^2)^b,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),24.94,49.53,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,10^(1.2696+1.3889*(log10(dbh^2))),3172f7,10^(a+b*(log10(dbh^c))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.68,7.49,NA,cm,g,harvest,NA,NA,NA,1,1.012,NA,NA,NA
@@ -75,7 +75,7 @@ sneill_1983_pcwa,exp(3.8941+2.4839*log(dbh)),b45a32,exp(a+b*log(dbh)),Live crown
 sneill_1983_pcwa,exp(5.3224+2.2936*log(dbh)),c8c6f1,exp(a+b*log(dbh)),Dead crown,DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,31,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 sneill_1983_pcwa,exp(8.5385+(2.2969*log(dbh)))*645.704*1.05,785080,exp(a+(b*log(dbh)))*645.704*1.05,Stem biomass (with bark),DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,31,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 halpern_1996_efpa,exp(2.025+3.527*log(dba)),3cb95a,exp(a+b*log(dba)),Total aboveground biomass,DBA,Species,"Oregon, USA",0.5,2.1,11,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
-russell_2005_ebic,51.68+0.02*BA,c94845,a+b*BA,Total aboveground biomass,DBH,Species,"California, USA",NI,NI,NA,cm^2,g,harvest,NA,NA,NA,1,included in model,NA,NA,Original publication uses Basal area (BA)=Diameter of all stems measured 5 cm above ground in a 1x1m plot then sum to obtain basal area. Use shrub function in this package
+russell_2005_ebic,51.68+0.02*BA,c94845,a+b*BA,Total aboveground biomass,DBH,Species,"California, USA",NI,NI,NA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,Original publication uses Basal area (BA)=Diameter of all stems measured 5 cm above ground in a 1x1m plot then sum to obtain basal area. Use shrub function in this package
 means_768_NA,exp(3.67+2.847*log(dba)),6b3b2a,exp(a+b*log(dba)),Total aboveground biomass,DBA,Species,"Pacific Northwest, USA",0.6,2.5,NRA,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
 jenkins_2004_cdod,exp(-2.5049+1.256*log(dbh)),7da4c9,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Species,"Hawaii, USA",2,16,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 sneill_1983_pcwa,exp(3.2304+2.2774*log(dbh)),870336,exp(a+b*log(dbh)),Live crown,DBH,Species,"Washington, Oregon, N California, USA",1.5,NA,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
