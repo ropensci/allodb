@@ -23,7 +23,7 @@ Authors:
 \itemize{
   \item Erika Gonzalez-Akre \email{GonzalezEB@si.edu} (0000-0001-8305-6672)
   \item Ervan Rutishauser \email{RutishauserE@si.edu}
-  \item Kristina Teixeira \email{TeixeiraK@si.edu}
+  \item Kristina Anderson-Teixeira \email{TeixeiraK@si.edu}
 }
 
 }

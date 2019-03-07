@@ -17,7 +17,7 @@ Authors@R:
              email = "leporem@si.edu",
              comment = c(ORCID = "0000-0002-1986-7988")),
       person(given = "Kristina",
-             family = "Teixeira",
+             family = "Anderson-Teixeira",
              role = "aut",
              email = "TeixeiraK@si.edu"))
 Description: A database of allometric equations for ForestGEO.
