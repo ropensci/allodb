@@ -1,1100 +1,1100 @@
     wsg_id           family                            species   wsg
-1     <NA>      Sapindaceae                        Acer rubrum  0.49
-2     <NA>      Sapindaceae                     Acer saccharum  0.56
-3     <NA>         Rosaceae                Amelanchier arborea  0.66
-4     <NA>       Annonaceae                    Asimina triloba  0.47
-5     <NA>       Betulaceae               Carpinus caroliniana  0.58
-6     <NA>     Juglandaceae                         Carya alba  0.62
-7     <NA>     Juglandaceae                  Carya cordiformis   0.6
-8     <NA>     Juglandaceae                       Carya glabra  0.66
-9     <NA>     Juglandaceae                        Carya ovata  0.62
-10    <NA>      Cannabaceae                Celtis occidentalis  0.49
-11    <NA>         Fabaceae                  Cercis canadensis  0.63
-12    <NA>        Cornaceae                     Cornus florida  0.64
-13    <NA>         Rosaceae                      Crataegus sp.  0.62
-14    <NA>         Fagaceae                  Fagus grandifolia  0.56
-15    <NA>         Oleaceae                 Fraxinus americana  0.51
-16    <NA>         Oleaceae                 Fraxinus americana  0.51
-17    <NA>         Oleaceae             Fraxinus pennsylvanica  0.53
-18    <NA>   Hamamelidaceae               Hamamelis virginiana  0.71
-19    <NA>     Cupressaceae               Juniperus virginiana  0.44
-20    <NA>        Lauraceae                    Lindera benzoin   0.5
-21    <NA>     Magnoliaceae            Liriodendron tulipifera   0.4
-22    <NA>        Nyssaceae                    Nyssa sylvatica  0.46
-23    <NA>       Betulaceae                  Ostrya virginiana  0.63
-24    <NA>    Paulowniaceae                Paulownia tomentosa  0.38
-25    <NA>         Rosaceae                    Prunus serotina  0.47
-26    <NA>         Fagaceae                       Quercus alba   0.6
-27    <NA>         Fagaceae                   Quercus coccinea   0.6
-28    <NA>         Fagaceae                     Quercus prinus  0.57
-29    <NA>         Fagaceae                      Quercus rubra  0.56
-30    <NA>         Fagaceae                   Quercus velutina  0.56
-31    <NA>         Fagaceae                   Quercus velutina  0.56
-32    <NA>         Fagaceae                   Quercus velutina  0.56
-33    <NA>    Anacardiaceae                       Rhus typhina   0.5
-34    <NA>         Fabaceae               Robinia pseudoacacia   0.6
-35    <NA>         Fabaceae               Robinia pseudoacacia  0.66
-36    <NA>        Lauraceae                  Sassafras albidum  0.42
-37    <NA>        Malvaceae                    Tilia americana  0.32
-38    <NA>         Ulmaceae                    Ulmus americana  0.46
-39    <NA>         Ulmaceae                        Ulmus rubra  0.48
-40    <NA>        Aceraceae                       Acer negundo  0.44
-41    <NA>        Aceraceae                   Acer platanoides  0.44
-42    <NA>        Aceraceae                        Acer rubrum  0.49
-43    <NA>    Simaroubaceae                Ailanthus altissima  0.33
-44    <NA>         Rosaceae                Amelanchier arborea  0.66
-45    <NA>       Annonaceae                    Asimina triloba  0.47
-46    <NA>    Berberidaceae                Berberis thunbergii   0.5
-47    <NA>       Betulaceae               Carpinus caroliniana  0.58
-48    <NA>     Juglandaceae                  Carya cordiformis   0.6
-49    <NA>     Juglandaceae                       Carya glabra  0.66
-50    <NA>     Juglandaceae                       Carya ovalis  0.62
-51    <NA>     Juglandaceae                    Carya tomentosa  0.64
-52    <NA>         Fagaceae                   Castanea dentata   0.4
-53    <NA>      Cannabaceae                Celtis occidentalis  0.49
-54    <NA>         Fabaceae                  Cercis canadensis  0.63
-55    <NA>         Oleaceae             Chionanthus virginicus   0.5
-56    <NA>        Cornaceae                Cornus alternifolia  0.64
-57    <NA>        Cornaceae                     Cornus florida  0.64
-58    <NA>       Betulaceae                  Corylus americana   0.5
-59    <NA>         Rosaceae                 Crataegus pruinosa  0.62
-60    <NA>        Ebenaceae               Diospyros virginiana  0.64
-61    <NA>     Elaeagnaceae                Elaeagnus umbellata   0.5
-62    <NA>     Celastraceae                    Euonymus alatus   0.5
-63    <NA>         Fagaceae                  Fagus grandifolia  0.56
-64    <NA>         Oleaceae                 Fraxinus americana  0.51
-65    <NA>         Oleaceae                     Fraxinus nigra  0.45
-66    <NA>         Oleaceae             Fraxinus pennsylvanica  0.53
-67    <NA>   Hamamelidaceae               Hamamelis virginiana  0.71
-68    <NA>    Aquifoliaceae                  Ilex verticillata   0.5
-69    <NA>     Juglandaceae                    Juglans cinerea  0.36
-70    <NA>     Juglandaceae                      Juglans nigra  0.51
-71    <NA>        Lauraceae                    Lindera benzoin   0.5
-72    <NA>     Magnoliaceae            Liriodendron tulipifera   0.4
-73    <NA>   Caprifoliaceae                   Lonicera maackii   NRA
-74    <NA>        Nyssaceae                    Nyssa sylvatica  0.46
-75    <NA>    Paulowniaceae                Paulownia tomentosa  0.38
-76    <NA>         Pinaceae                      Pinus pungens  0.49
-77    <NA>         Pinaceae                      Pinus strobus  0.34
-78    <NA>         Pinaceae                   Pinus virginiana  0.45
-79    <NA>      Platanaceae              Platanus occidentalis  0.46
-80    <NA>         Rosaceae                       Prunus avium  0.47
-81    <NA>         Rosaceae                     Prunus persica  0.47
-82    <NA>         Rosaceae                    Prunus serotina  0.47
-83    <NA>         Fagaceae                       Quercus alba   0.6
-84    <NA>         Fagaceae                   Quercus coccinea   0.6
-85    <NA>         Fagaceae                    Quercus falcata  0.52
-86    <NA>         Fagaceae                  Quercus michauxii   0.6
-87    <NA>         Fagaceae                    Quercus montana  0.57
-88    <NA>         Fagaceae              Quercus muehlenbergii   0.6
-89    <NA>         Fagaceae                      Quercus rubra  0.56
-90    <NA>         Fagaceae                   Quercus velutina  0.56
-91    <NA>         Fagaceae                   Quercus velutina  0.56
-92    <NA>         Fabaceae               Robinia pseudoacacia   0.6
-93    <NA>         Fabaceae               Robinia pseudoacacia  0.66
-94    <NA>         Rosaceae                    Rosa multiflora   NRA
-95    <NA>         Rosaceae               Rubus allegheniensis   NRA
-96    <NA>         Rosaceae                Rubus pensilvanicus   NRA
-97    <NA>         Rosaceae               Rubus phoenicolasius   NRA
-98    <NA>        Adoxaceae                Sambucus canadensis   0.5
-99    <NA>        Lauraceae                  Sassafras albidum  0.42
-100   <NA>        Malvaceae                    Tilia americana  0.32
-101   <NA>         Ulmaceae                    Ulmus americana  0.46
-102   <NA>         Ulmaceae                        Ulmus rubra  0.48
-103   <NA>        Adoxaceae               Viburnum acerifolium  0.83
-104   <NA>        Adoxaceae               Viburnum prunifolium  0.83
-105   <NA>        Adoxaceae                Viburnum recognitum  0.83
-106   <NA>        Aceraceae                       Acer negundo  0.44
-107   <NA>        Aceraceae                        Acer rubrum  0.49
-108   <NA>    Simaroubaceae                Ailanthus altissima  0.33
-109   <NA>         Fabaceae                Albizia julibrissin  0.57
-110   <NA>         Rosaceae                Amelanchier arborea  0.66
-111   <NA>         Rosaceae             Amelanchier canadensis  0.66
-112   <NA>       Araliaceae                     Aralia spinosa   0.5
-113   <NA>       Annonaceae                    Asimina triloba  0.47
-114   <NA>         Moraceae            Broussonetia papyrifera  0.59
-115   <NA>       Betulaceae               Carpinus caroliniana  0.58
-116   <NA>     Juglandaceae                         Carya alba  0.62
-117   <NA>     Juglandaceae                  Carya cordiformis   0.6
-118   <NA>     Juglandaceae                       Carya glabra  0.66
-119   <NA>     Juglandaceae                          Carya sp.  0.62
-120   <NA>      Cannabaceae                Celtis occidentalis  0.49
-121   <NA>        Rubiaceae          Cephalanthus occidentalis   0.5
-122   <NA>         Fabaceae                  Cercis canadensis  0.63
-123   <NA>        Cornaceae                     Cornus florida  0.64
-124   <NA>     Elaeagnaceae             Elaeagnus angustifolia   0.5
-125   <NA>     Elaeagnaceae                Elaeagnus umbellata   0.5
-126   <NA>         Fagaceae                  Fagus grandifolia  0.56
-127   <NA>         Oleaceae                 Fraxinus americana  0.51
-128   <NA>         Oleaceae             Fraxinus pennsylvanica  0.53
-129   <NA>    Aquifoliaceae                         Ilex opaca   0.5
-130   <NA>    Aquifoliaceae                  Ilex verticillata   0.5
-131   <NA>     Juglandaceae                      Juglans nigra  0.51
-132   <NA>     Cupressaceae               Juniperus virginiana  0.44
-133   <NA>        Ericaceae                   Kalmia latifolia   0.5
-134   <NA>         Oleaceae                      Ligustrum sp.   0.5
-135   <NA>        Lauraceae                    Lindera benzoin   0.5
-136   <NA>     Altingiaceae            Liquidambar styraciflua  0.46
-137   <NA>     Magnoliaceae            Liriodendron tulipifera   0.4
-138   <NA>   Caprifoliaceae                   Lonicera maackii   NRA
-139   <NA>         Moraceae                        Morus rubra  0.59
-140   <NA>        Nyssaceae                    Nyssa sylvatica  0.46
-141   <NA> Scrophulariaceae                Paulownia tomentosa  0.38
-142   <NA>         Pinaceae                        Pinus taeda  0.47
-143   <NA>         Pinaceae                   Pinus virginiana  0.45
-144   <NA>      Platanaceae              Platanus occidentalis  0.46
-145   <NA>       Salicaceae              Populus grandidentata  0.36
-146   <NA>         Rosaceae                       Prunus avium  0.47
-147   <NA>         Rosaceae                    Prunus serotina  0.47
-148   <NA>         Fagaceae                       Quercus alba   0.6
-149   <NA>         Fagaceae                   Quercus coccinea   0.6
-150   <NA>         Fagaceae                    Quercus falcata  0.52
-151   <NA>         Fagaceae                  Quercus michauxii   0.6
-152   <NA>         Fagaceae                    Quercus montana  0.57
-153   <NA>         Fagaceae                  Quercus palustris  0.58
-154   <NA>         Fagaceae                      Quercus rubra  0.56
-155   <NA>         Fagaceae                        Quercus sp.  0.59
-156   <NA>         Fagaceae                   Quercus stellata   0.6
-157   <NA>         Fagaceae                   Quercus velutina  0.56
-158   <NA>        Ericaceae           Rhododendron arborescens   0.5
-159   <NA>    Anacardiaceae                       Rhus typhina   0.5
-160   <NA>         Rosaceae                    Rosa multiflora   NRA
-161   <NA>       Salicaceae                        Salix nigra  0.36
-162   <NA>        Adoxaceae                     Sambucus nigra   0.5
-163   <NA>        Lauraceae                  Sassafras albidum  0.42
-164   <NA>        Malvaceae                    Tilia americana  0.32
-165   <NA>         Ulmaceae                    Ulmus americana  0.46
-166   <NA>         Ulmaceae                        Ulmus rubra  0.48
-167   <NA>        Ericaceae               Vaccinium corymbosum  0.47
-168   <NA>        Ericaceae                      Vaccinium sp.  0.47
-169   <NA>        Adoxaceae               Viburnum acerifolium  0.83
-170   <NA>        Adoxaceae                  Viburnum dentatum  0.83
-171   <NA>        Adoxaceae               Viburnum prunifolium  0.83
-172   <NA>      Sapindaceae                       Acer negundo  0.44
-173   <NA>      Sapindaceae                        Acer rubrum  0.49
-174   <NA>      Sapindaceae                     Acer saccharum  0.56
-175   <NA>    Simaroubaceae                Ailanthus altissima  0.33
-176   <NA>         Rosaceae                Amelanchier arborea  0.66
-177   <NA>       Annonaceae                    Asimina triloba  0.47
-178   <NA>     Juglandaceae                  Carya cordiformis   0.6
-179   <NA>     Juglandaceae                       Carya glabra  0.66
-180   <NA>     Juglandaceae                        Carya ovata  0.62
-181   <NA>     Juglandaceae                          Carya sp.  0.62
-182   <NA>     Juglandaceae                       Carya texana  0.54
-183   <NA>     Juglandaceae                    Carya tomentosa  0.64
-184   <NA>      Cannabaceae                Celtis occidentalis  0.49
-185   <NA>      Cannabaceae                  Celtis tenuifolia  0.49
-186   <NA>         Fabaceae                  Cercis canadensis  0.63
-187   <NA>        Cornaceae                  Cornus drummondii  0.64
-188   <NA>        Cornaceae                     Cornus florida  0.64
-189   <NA>         Rosaceae                      Crataegus sp.  0.62
-190   <NA>        Ebenaceae               Diospyros virginiana  0.64
-191   <NA>       Rhamnaceae               Frangula caroliniana  0.54
-192   <NA>         Oleaceae                 Fraxinus americana  0.51
-193   <NA>         Oleaceae                 Fraxinus americana  0.51
-194   <NA>         Fabaceae              Gleditsia triacanthos   0.6
-195   <NA>     Juglandaceae                      Juglans nigra  0.51
-196   <NA>     Cupressaceae               Juniperus virginiana  0.44
-197   <NA>        Lauraceae                    Lindera benzoin   0.5
-198   <NA>   Caprifoliaceae                   Lonicera maackii   NRA
-199   <NA>         Rosaceae                      Malus ioensis  0.61
-200   <NA>         Moraceae                        Morus rubra  0.59
-201   <NA>       Betulaceae                  Ostrya virginiana  0.63
-202   <NA>      Platanaceae              Platanus occidentalis  0.46
-203   <NA>         Rosaceae                   Prunus americana  0.47
-204   <NA>         Rosaceae                    Prunus serotina  0.47
-205   <NA>         Rosaceae                         Prunus sp.  0.47
-206   <NA>         Fagaceae                       Quercus alba   0.6
-207   <NA>         Fagaceae                Quercus marilandica  0.56
-208   <NA>         Fagaceae              Quercus muehlenbergii   0.6
-209   <NA>         Fagaceae                      Quercus rubra  0.56
-210   <NA>         Fagaceae                        Quercus sp.   0.6
-211   <NA>         Fagaceae                   Quercus stellata   0.6
-212   <NA>         Fagaceae                   Quercus velutina  0.56
-213   <NA>         Fagaceae                   Quercus velutina  0.56
-214   <NA>         Fagaceae                   Quercus velutina  0.56
-215   <NA>        Lauraceae                  Sassafras albidum  0.42
-216   <NA>       Sapotaceae            Sideroxylon lanuginosum  0.58
-217   <NA>        Malvaceae                    Tilia americana  0.32
-218   <NA>         Ulmaceae                        Ulmus rubra  0.46
-219   <NA>      Sapindaceae                  Acer macrophyllum  0.44
-220   <NA>        Ericaceae                  Arbutus menziesii  0.58
-221   <NA>        Ericaceae          Arctostaphylos andersonii  0.72
-222   <NA>        Ericaceae           Arctostaphylos tomentosa  0.72
-223   <NA>       Asteraceae                Baccharis pilularis   NRA
-224   <NA>       Rhamnaceae             Ceanothus thyrsiflorus  0.67
-225   <NA>       Betulaceae                    Corylus cornuta   0.5
-226   <NA>         Rosaceae             Cotoneaster franchetii   0.5
-227   <NA>         Rosaceae               Cotoneaster pannosus   0.5
-228   <NA>         Rosaceae                 Crataegus monogyna  0.62
-229   <NA>        Myrtaceae                Eucalyptus globulus  0.68
-230   <NA>         Rosaceae            Heteromeles arbutifolia   0.5
-231   <NA>    Aquifoliaceae                    Ilex aquifolium   0.5
-232   <NA>         Fagaceae            Lithocarpus densiflorus  0.56
-233   <NA>       Myricaceae                Morella californica   0.5
-234   <NA>         Pinaceae                    Pinus attenuata  0.42
-235   <NA>         Pinaceae                    Pinus ponderosa  0.38
-236   <NA>         Pinaceae                    Pinus ponderosa  0.38
-237   <NA>         Pinaceae              Pseudotsuga menziesii  0.45
-238   <NA>         Rosaceae            Pyracantha angustifolia   0.5
-239   <NA>         Fagaceae                  Quercus agrifolia   0.6
-240   <NA>         Fagaceae                    Quercus parvula  0.59
-241   <NA>       Rhamnaceae                Rhamnus californica   0.5
-242   <NA>  Grossulariaceae                  Ribes divaricatum  0.73
-243   <NA>       Salicaceae                    Salix lasiandra  0.36
-244   <NA>        Adoxaceae                     Sambucus nigra   0.5
-245   <NA>     Cupressaceae               Sequoia sempervirens  0.36
-246   <NA>        Lauraceae           Umbellularia californica  0.47
-247   <NA>        Ericaceae                   Vaccinium ovatum  0.47
-248   <NA>         Pinaceae                     Abies balsamea  0.34
-249   <NA>        Aceraceae                        Acer rubrum  0.49
-250   <NA>        Aceraceae                        Acer rubrum  0.49
-251   <NA>        Aceraceae                     Acer saccharum  0.56
-252   <NA>        Aceraceae                      Acer spicatum  0.44
-253   <NA>       Betulaceae                       Alnus incana  0.37
-254   <NA>         Rosaceae                 Amelanchier laevis  0.66
-255   <NA>         Rosaceae              Amelanchier sanguinea  0.66
-256   <NA>       Betulaceae              Betula alleghaniensis  0.55
-257   <NA>       Betulaceae                  Betula papyrifera  0.48
-258   <NA>        Cornaceae                Cornus alternifolia  0.64
-259   <NA>       Betulaceae                    Corylus cornuta   0.5
-260   <NA>    Thymelaeaceae                    Dirca palustris  0.33
-261   <NA>         Oleaceae                 Fraxinus americana  0.51
-262   <NA>         Oleaceae                 Fraxinus americana  0.51
-263   <NA>         Oleaceae                     Fraxinus nigra  0.45
-264   <NA>    Aquifoliaceae                     Ilex mucronata   0.5
-265   <NA>    Aquifoliaceae                  Ilex verticillata   0.5
-266   <NA>     Juglandaceae                    Juglans cinerea  0.36
-267   <NA>         Pinaceae                     Larix laricina  0.49
-268   <NA>   Caprifoliaceae                Lonicera canadensis   NRA
-269   <NA>         Rosaceae                       Malus pumila  0.61
-270   <NA>       Betulaceae                  Ostrya virginiana  0.63
-271   <NA>       Betulaceae                  Ostrya virginiana  1.63
-272   <NA>         Pinaceae                       Picea glauca  0.37
-273   <NA>         Pinaceae                      Picea mariana  0.38
-274   <NA>         Pinaceae                      Pinus strobus  0.34
-275   <NA>       Salicaceae                Populus balsamifera  0.31
-276   <NA>       Salicaceae              Populus grandidentata  0.36
-277   <NA>       Salicaceae                Populus tremuloides  0.35
-278   <NA>         Rosaceae                Prunus pensylvanica   0.5
-279   <NA>         Rosaceae                    Prunus serotina  0.47
-280   <NA>         Rosaceae                  Prunus virginiana  0.47
-281   <NA>         Fagaceae                      Quercus rubra  0.56
-282   <NA>  Grossulariaceae                    Ribes cynosbati  0.73
-283   <NA>        Adoxaceae                  Sambucus racemosa   0.5
-284   <NA>         Rosaceae                   Sorbus americana  0.42
-285   <NA>     Cupressaceae                 Thuja occidentalis  0.29
-286   <NA>        Malvaceae                    Tilia americana  0.32
-287   <NA>         Pinaceae                   Tsuga canadensis  0.38
-288   <NA>         Ulmaceae                    Ulmus americana  0.46
-289   <NA>         Pinaceae                     Abies amabilis   0.4
-290   <NA>         Pinaceae                      Abies grandis  0.35
-291   <NA>         Pinaceae                      Abies grandis  0.35
-292   <NA>         Pinaceae                      Abies procera  0.37
-293   <NA>         Pinaceae                      Abies procera  0.37
-294   <NA>         Pinaceae                      Abies procera  0.37
-295   <NA>         Pinaceae                          Abies sp.  0.36
-296   <NA>      Sapindaceae                    Acer circinatum   NRA
-297   <NA>      Sapindaceae                       Acer glabrum  0.44
-298   <NA>       Betulaceae                        Alnus rubra  0.37
-299   <NA>         Rosaceae              Amelanchier alnifolia  0.66
-300   <NA>        Cornaceae                   Cornus nuttallii  0.58
-301   <NA>       Betulaceae                    Corylus cornuta   0.5
-302   <NA>        Ericaceae                 Gaultheria shallon   0.5
-303   <NA>         Rosaceae                Holodiscus discolor  0.71
-304   <NA>   Caprifoliaceae                   Lonicera ciliosa   NRA
-305   <NA>        Ericaceae               Menziesia ferruginea   0.5
-306   <NA>         Rosaceae              Oemleria cerasiformis   0.5
-307   <NA>         Pinaceae                    Pinus monticola  0.35
-308   <NA>         Pinaceae              Pseudotsuga menziesii  0.45
-309   <NA>       Rhamnaceae                  Rhamnus purshiana   0.5
-310   <NA>        Ericaceae          Rhododendron macrophyllum   0.5
-311   <NA>         Rosaceae                    Rosa gymnocarpa   NRA
-312   <NA>         Rosaceae                  Rubus leucodermis   NRA
-313   <NA>         Rosaceae                  Rubus spectabilis   NRA
-314   <NA>         Taxaceae                   Taxus brevifolia   0.6
-315   <NA>     Cupressaceae                      Thuja plicata  0.31
-316   <NA>         Pinaceae                 Tsuga heterophylla  0.42
-317   <NA>        Ericaceae             Vaccinium membranaceum  0.47
-318   <NA>        Ericaceae              Vaccinium ovalifolium  0.47
-319   <NA>        Ericaceae              Vaccinium parvifolium  0.47
-320   <NA>      Sapindaceae                     Acer campestre  0.53
-321   <NA>      Sapindaceae                Acer pseudoplatanus  0.48
-322   <NA>       Betulaceae                         Betula sp.  0.55
-323   <NA>       Betulaceae                   Carpinus betulus  0.53
-324   <NA>         Fagaceae                    Castanea sativa   0.5
-325   <NA>        Cornaceae                   Cornus sanguinea  0.58
-326   <NA>       Betulaceae                   Corylus avellana  0.52
-327   <NA>         Rosaceae                 Crataegus monogyna  0.62
-328   <NA>     Celastraceae                 Euonymus europaeus   0.6
-329   <NA>         Fagaceae                    Fagus sylvatica  0.53
-330   <NA>       Rhamnaceae                     Frangula alnus  0.59
-331   <NA>         Oleaceae                 Fraxinus excelsior  0.49
-332   <NA>    Aquifoliaceae                    Ilex aquifolium  0.61
-333   <NA>         Pinaceae                      Larix decidua  0.45
-334   <NA>         Pinaceae                        Picea abies  0.32
-335   <NA>         Pinaceae                    Pinus sylvatica  0.53
-336   <NA>         Rosaceae                       Prunus avium  0.48
-337   <NA>         Rosaceae                     Prunus spinosa   0.7
-338   <NA>         Pinaceae              Pseudotsuga menziesii  0.45
-339   <NA>         Fagaceae                      Quercus robur  0.53
-340   <NA>       Salicaceae                          Salix sp.  0.36
-341   <NA>        Adoxaceae                     Sambucus nigra   0.5
-342   <NA>         Taxaceae                      Taxus baccata  0.55
-343   <NA>        Malvaceae                   Tilia x europaea  0.32
-344   <NA>         Pinaceae                     Abies concolor  0.37
-345   <NA>         Pinaceae                     Abies concolor  0.37
-346   <NA>         Pinaceae                     Abies concolor  0.37
-347   <NA>         Pinaceae                     Abies concolor  0.37
-348   <NA>         Pinaceae                    Abies magnifica  0.37
-349   <NA>         Pinaceae                    Abies magnifica  0.37
-350   <NA>         Pinaceae                    Abies magnifica  0.37
-351   <NA>         Pinaceae                    Abies magnifica  0.37
-352   <NA>         Pinaceae                          Abies sp.  0.36
-353   <NA>        Ericaceae              Arctostaphylos patula  0.72
-354   <NA>     Cupressaceae               Calocedrus decurrens  0.35
-355   <NA>       Rhamnaceae               Ceanothus cordulatus  0.67
-356   <NA>       Rhamnaceae             Ceanothus integerrimus  0.67
-357   <NA>       Rhamnaceae              Ceanothus parvifolius  0.67
-358   <NA>         Fagaceae           Chrysolepis sempervirens  0.42
-359   <NA>        Cornaceae                   Cornus nuttallii  0.58
-360   <NA>        Cornaceae                     Cornus sericea  0.58
-361   <NA>       Betulaceae Corylus cornuta subsp. californica   0.5
-362   <NA>         Rosaceae                Holodiscus discolor  0.71
-363   <NA>        Ericaceae                 Leucothoe davisiae 0.405
-364   <NA>         Pinaceae                  Pinus lambertiana  0.34
-365   <NA>         Pinaceae                    Pinus ponderosa  0.38
-366   <NA>         Pinaceae                    Pinus ponderosa  0.38
-367   <NA>         Rosaceae                  Prunus emarginata  0.47
-368   <NA>         Rosaceae                  Prunus virginiana  0.47
-369   <NA>         Pinaceae              Pseudotsuga menziesii  0.45
-370   <NA>       Rhamnaceae                Rhamnus californica   0.5
-371   <NA>        Ericaceae           Rhododendron occidentale   0.5
-372   <NA>  Grossulariaceae                   Ribes nevadaense   NRA
-373   <NA>  Grossulariaceae                      Ribes roezlii   NRA
-374   <NA>       Salicaceae                  Salix scouleriana  0.36
-375   <NA>       Salicaceae                          Salix sp.  0.36
-376   <NA>        Adoxaceae                  Sambucus racemosa   0.5
-377   <NA>        Ericaceae               Vaccinium uliginosum  0.47
-378   <NA>         Pinaceae                         Abies alba  0.35
-379   <NA>        Aceraceae                   Acer platanoides  0.51
-380   <NA>        Aceraceae                Acer pseudoplatanus  0.51
-381   <NA>       Betulaceae                     Betula pendula  0.52
-382   <NA>         Fagaceae                    Fagus sylvatica  0.59
-383   <NA>         Pinaceae                        Picea abies  0.37
-384   <NA>       Salicaceae                    Populus tremula  0.39
-385   <NA>       Salicaceae                       Salix caprea   0.4
-386   <NA>      Sambucaceae                  Sambucus racemosa  0.46
-387   <NA>         Rosaceae                   Sorbus aucuparia  0.63
-388   <NA>         Ulmaceae                       Ulmus glabra  0.55
-389   <NA>         Pinaceae                      Abies bifolia  0.31
-390   <NA>         Pinaceae                     Abies concolor  0.37
-391   <NA>         Pinaceae                     Abies concolor  0.37
-392   <NA>         Rosaceae              Amelanchier alnifolia  0.66
-393   <NA>         Rosaceae             Cercocarpus ledifolius  0.81
-394   <NA>     Cupressaceae                 Juniperus communis  0.44
-395   <NA>     Cupressaceae                 Juniperus communis  0.44
-396   <NA>     Cupressaceae               Juniperus scopulorum  0.44
-397   <NA>     Cupressaceae               Juniperus scopulorum  0.44
-398   <NA>         Pinaceae                  Picea engelmannii  0.33
-399   <NA>         Pinaceae                  Picea engelmannii  0.33
-400   <NA>         Pinaceae                      Picea pungens  0.38
-401   <NA>         Pinaceae                      Picea pungens  0.38
-402   <NA>         Pinaceae                       Pinus edulis  <NA>
-403   <NA>         Pinaceae                     Pinus flexilis  <NA>
-404   <NA>         Pinaceae                     Pinus flexilis  <NA>
-405   <NA>         Pinaceae                     Pinus flexilis  <NA>
-406   <NA>         Pinaceae                     Pinus longaeva  <NA>
-407   <NA>         Pinaceae                     Pinus longaeva  <NA>
-408   <NA>         Pinaceae                     Pinus longaeva  <NA>
-409   <NA>         Pinaceae                    Pinus ponderosa  0.38
-410   <NA>         Pinaceae                    Pinus ponderosa  0.38
-411   <NA>       Salicaceae                Populus tremuloides  0.35
-412   <NA>         Pinaceae              Pseudotsuga menziesii  0.45
-413   <NA>  Grossulariaceae                       Ribes cereum   NRA
-414   <NA>  Grossulariaceae                   Ribes montigenum   NRA
-415   <NA>        Adoxaceae                  Sambucus racemosa   0.5
-416   <NA>        Adoxaceae               Viburnum prunifolium  0.83
-417   <NA>        Adoxaceae               Viburnum acerifolium  0.83
-418   <NA>        Adoxaceae            Viburnum rhytidophyllum  0.83
-419   <NA>    Aquifoliaceae                         Ilex opaca   0.5
-420   <NA>       Betulaceae                       Betula nigra  0.55
-421   <NA>       Betulaceae                  Ostrya virginiana  0.63
-422   <NA>       Betulaceae               Carpinus caroliniana  0.58
-423   <NA>      Cannabaceae                Celtis occidentalis  0.49
-424   <NA>     Celastraceae             Euonymus atropurpureus   0.5
-425   <NA>        Cornaceae                     Cornus florida  0.64
-426   <NA>        Cornaceae                       Cornus kousa  0.64
-427   <NA>     Cupressaceae               Juniperus virginiana  0.44
-428   <NA>     Cupressaceae              Cupressus x leylandii  0.44
-429   <NA>        Ebenaceae               Diospyros virginiana  0.64
-430   <NA>     Elaeagnaceae                  Elaeagnus pungens   0.5
-431   <NA>     Elaeagnaceae             Elaeagnus angustifolia   0.5
-432   <NA>         Fabaceae              Gleditsia triacanthos  <NA>
-433   <NA>         Fabaceae              Gleditsia triacanthos  <NA>
-434   <NA>         Fabaceae               Robinia pseudoacacia   0.6
-435   <NA>         Fabaceae                  Cercis canadensis  0.63
-436   <NA>         Fagaceae                        Quercus sp.  0.56
-437   <NA>         Fagaceae                  Fagus grandifolia  0.56
-438   <NA>         Fagaceae                   Quercus coccinea   0.6
-439   <NA>         Fagaceae                    Quercus falcata  0.52
-440   <NA>         Fagaceae                 Quercus macrocarpa   0.6
-441   <NA>         Fagaceae                  Quercus palustris  0.58
-442   <NA>         Fagaceae                    Quercus phellos   0.6
-443   <NA>         Fagaceae                     Quercus prinus  0.57
-444   <NA>         Fagaceae                      Quercus rubra  0.56
-445   <NA>   Hamamelidaceae               Hamamelis virginiana  0.71
-446   <NA>     Juglandaceae                      Juglans nigra  0.51
-447   <NA>     Juglandaceae                  Carya cordiformis   0.6
-448   <NA>     Juglandaceae                       Carya glabra  0.66
-449   <NA>     Juglandaceae                          Carya sp.  0.66
-450   <NA>     Juglandaceae                    Carya tomentosa  0.64
-451   <NA>        Lauraceae                  Sassafras albidum  0.42
-452   <NA>        Lauraceae                    Lindera benzoin   0.5
-453   <NA>       Lythraceae               Lagerstroemia indica  0.47
-454   <NA>     Magnoliaceae            Liriodendron tulipifera   0.4
-455   <NA>        Malvaceae                    Tilia americana  0.32
-456   <NA>         Moraceae                   Maclura pomifera  <NA>
-457   <NA>         Moraceae                        Morus rubra  0.59
-458   <NA>         Moraceae                         Morus alba  0.59
-459   <NA>        Nyssaceae                    Nyssa sylvatica  0.46
-460   <NA>         Oleaceae                       Fraxinus sp.  0.51
-461   <NA>         Oleaceae                 Fraxinus americana  0.51
-462   <NA>         Oleaceae             Fraxinus pennsylvanica  0.53
-463   <NA>         Oleaceae                 Ligustrum amurense  <NA>
-464   <NA>    Paulowniaceae                Paulownia tomentosa  0.38
-465   <NA>         Pinaceae                   Pinus thunbergii  <NA>
-466   <NA>         Pinaceae                        Picea abies  <NA>
-467   <NA>      Platanaceae              Platanus occidentalis  0.46
-468   <NA>         Rosaceae                    Malus coronaria  0.61
-469   <NA>         Rosaceae                   Malus sylvestris  0.61
-470   <NA>         Rosaceae                      Crataegus sp.  0.62
-471   <NA>         Rosaceae                Amelanchier arborea  0.66
-472   <NA>         Rosaceae                    Prunus serotina  0.47
-473   <NA>         Rosaceae                       Prunus avium  0.47
-474   <NA>         Rosaceae                   Pyrus calleryana  <NA>
-475   <NA>         Rosaceae                     Pyrus communis  <NA>
-476   <NA>       Salicaceae                        Salix nigra  0.36
-477   <NA>       Salicaceae                  Populus deltoides  <NA>
-478   <NA>      Sapindaceae                       Acer negundo  0.44
-479   <NA>      Sapindaceae                   Acer platanoides  0.44
-480   <NA>      Sapindaceae                        Acer rubrum  0.49
-481   <NA>      Sapindaceae                   Acer saccharinum  0.56
-482   <NA>      Sapindaceae                     Acer saccharum  0.56
-483   <NA>    Simaroubaceae                Ailanthus altissima  0.33
-484   <NA>         Ulmaceae                    Ulmus americana  0.46
-485   <NA>         Ulmaceae    Ulmus parvifolia x carpinifolia  0.46
-486   <NA>         Vitaceae                      Vitis riparia  <NA>
-487   <NA>        Adoxaceae                  Sambucus racemosa   0.5
-488   <NA>        Adoxaceae                  Viburnum dentatum  0.83
-489   <NA>        Adoxaceae                Viburnum acerfolium  0.83
-490   <NA>    Anacardiaceae               Toxicodendron vernix  <NA>
-491   <NA>    Anacardiaceae             Toxicodendron radicans  <NA>
-492   <NA>    Aquifoliaceae                     Ilex laevigata   0.5
-493   <NA>    Aquifoliaceae                  Ilex verticillata   0.5
-494   <NA>       Betulaceae                       Alnus incana  0.37
-495   <NA>       Betulaceae              Betula alleghaniensis  0.55
-496   <NA>       Betulaceae                       Betula lenta  0.55
-497   <NA>       Betulaceae                  Betula papyrifera  0.48
-498   <NA>       Betulaceae                 Betula populifolia  0.45
-499   <NA>       Betulaceae                     Betula unknown  0.55
-500   <NA>       Betulaceae                  Ostrya virginiana  0.63
-501   <NA>     Cupressaceae                 Juniperus communis  0.44
-502   <NA>        Ericaceae                   Kalmia latifolia   0.5
-503   <NA>        Ericaceae                  Lyonia ligustrina   0.5
-504   <NA>        Ericaceae          Rhododendron prinophyllum   0.5
-505   <NA>        Ericaceae               Vaccinium corymbosum  0.47
-506   <NA>         Fagaceae                   Castanea dentata   0.4
-507   <NA>         Fagaceae                  Fagus grandifolia  0.56
-508   <NA>         Fagaceae                      Quercus rubra  0.56
-509   <NA>         Fagaceae                    Quercus unknown  0.56
-510   <NA>         Fagaceae                   Quercus velutina  0.56
-511   <NA>         Fagaceae                   Quercus velutina  0.56
-512   <NA>   Hamamelidaceae               Hamamelis virginiana  0.71
-513   <NA>        Lauraceae                    Lindera benzoin   0.5
-514   <NA>        Nyssaceae                    Nyssa sylvatica  0.46
-515   <NA>         Oleaceae                 Fraxinus americana  0.51
-516   <NA>         Oleaceae                     Fraxinus nigra  0.45
-517   <NA>         Pinaceae                        Picea abies  <NA>
-518   <NA>         Pinaceae                       Picea rubens  <NA>
-519   <NA>         Pinaceae                      Picea unknown  <NA>
-520   <NA>         Pinaceae                     Pinus resinosa  <NA>
-521   <NA>         Pinaceae                      Pinus strobus  <NA>
-522   <NA>         Pinaceae                      Pinus unknown  <NA>
-523   <NA>         Pinaceae                   Tsuga canadensis  0.38
-524   <NA>       Rhamnaceae                     Frangula alnus   0.5
-525   <NA>         Rosaceae                 Amelanchier laevis  0.66
-526   <NA>         Rosaceae                 Aronia melanocarpa  <NA>
-527   <NA>         Rosaceae                      Crataegus sp.  0.62
-528   <NA>         Rosaceae                    Prunus serotina  0.47
-529   <NA>         Rosaceae                   Sorbus americana  <NA>
-530   <NA>       Salicaceae              Populus grandidentata  0.36
-531   <NA>       Salicaceae                Populus tremuloides  <NA>
-532   <NA>       Salicaceae                      Salix species  0.36
-533   <NA>      Sapindaceae                        Acer rubrum  0.49
-534   <NA>      Sapindaceae                     Acer saccharum  0.56
-535   <NA>         Ulmaceae                    Ulmus americana  0.46
-536   <NA>       Betulaceae          Alnus viridis ssp. crispa  <NA>
-537   <NA>       Betulaceae                  Betula glandulosa  <NA>
-538   <NA>       Betulaceae                 Betula neoalaskana  <NA>
-539   <NA>       Betulaceae                Betula occidentalis  <NA>
-540   <NA>       Betulaceae                   Betula pubescens  <NA>
-541   <NA>       Betulaceae                        Betula spp.  <NA>
-542   <NA>         Pinaceae                     Larix laricina  <NA>
-543   <NA>         Pinaceae                     Larix laricina  <NA>
-544   <NA>         Pinaceae                       Picea glauca  <NA>
-545   <NA>         Pinaceae                      Picea mariana  <NA>
-546   <NA>         Pinaceae                      Picea mariana  <NA>
-547   <NA>         Pinaceae                    Pinus banksiana  <NA>
-548   <NA>         Pinaceae                    Pinus banksiana  <NA>
-549   <NA>       Salicaceae                          Salix sp.  <NA>
+1       NA      Sapindaceae                        Acer rubrum  0.49
+2       NA      Sapindaceae                     Acer saccharum  0.56
+3       NA         Rosaceae                Amelanchier arborea  0.66
+4       NA       Annonaceae                    Asimina triloba  0.47
+5       NA       Betulaceae               Carpinus caroliniana  0.58
+6       NA     Juglandaceae                         Carya alba  0.62
+7       NA     Juglandaceae                  Carya cordiformis   0.6
+8       NA     Juglandaceae                       Carya glabra  0.66
+9       NA     Juglandaceae                        Carya ovata  0.62
+10      NA      Cannabaceae                Celtis occidentalis  0.49
+11      NA         Fabaceae                  Cercis canadensis  0.63
+12      NA        Cornaceae                     Cornus florida  0.64
+13      NA         Rosaceae                      Crataegus sp.  0.62
+14      NA         Fagaceae                  Fagus grandifolia  0.56
+15      NA         Oleaceae                 Fraxinus americana  0.51
+16      NA         Oleaceae                 Fraxinus americana  0.51
+17      NA         Oleaceae             Fraxinus pennsylvanica  0.53
+18      NA   Hamamelidaceae               Hamamelis virginiana  0.71
+19      NA     Cupressaceae               Juniperus virginiana  0.44
+20      NA        Lauraceae                    Lindera benzoin   0.5
+21      NA     Magnoliaceae            Liriodendron tulipifera   0.4
+22      NA        Nyssaceae                    Nyssa sylvatica  0.46
+23      NA       Betulaceae                  Ostrya virginiana  0.63
+24      NA    Paulowniaceae                Paulownia tomentosa  0.38
+25      NA         Rosaceae                    Prunus serotina  0.47
+26      NA         Fagaceae                       Quercus alba   0.6
+27      NA         Fagaceae                   Quercus coccinea   0.6
+28      NA         Fagaceae                     Quercus prinus  0.57
+29      NA         Fagaceae                      Quercus rubra  0.56
+30      NA         Fagaceae                   Quercus velutina  0.56
+31      NA         Fagaceae                   Quercus velutina  0.56
+32      NA         Fagaceae                   Quercus velutina  0.56
+33      NA    Anacardiaceae                       Rhus typhina   0.5
+34      NA         Fabaceae               Robinia pseudoacacia   0.6
+35      NA         Fabaceae               Robinia pseudoacacia  0.66
+36      NA        Lauraceae                  Sassafras albidum  0.42
+37      NA        Malvaceae                    Tilia americana  0.32
+38      NA         Ulmaceae                    Ulmus americana  0.46
+39      NA         Ulmaceae                        Ulmus rubra  0.48
+40      NA        Aceraceae                       Acer negundo  0.44
+41      NA        Aceraceae                   Acer platanoides  0.44
+42      NA        Aceraceae                        Acer rubrum  0.49
+43      NA    Simaroubaceae                Ailanthus altissima  0.33
+44      NA         Rosaceae                Amelanchier arborea  0.66
+45      NA       Annonaceae                    Asimina triloba  0.47
+46      NA    Berberidaceae                Berberis thunbergii   0.5
+47      NA       Betulaceae               Carpinus caroliniana  0.58
+48      NA     Juglandaceae                  Carya cordiformis   0.6
+49      NA     Juglandaceae                       Carya glabra  0.66
+50      NA     Juglandaceae                       Carya ovalis  0.62
+51      NA     Juglandaceae                    Carya tomentosa  0.64
+52      NA         Fagaceae                   Castanea dentata   0.4
+53      NA      Cannabaceae                Celtis occidentalis  0.49
+54      NA         Fabaceae                  Cercis canadensis  0.63
+55      NA         Oleaceae             Chionanthus virginicus   0.5
+56      NA        Cornaceae                Cornus alternifolia  0.64
+57      NA        Cornaceae                     Cornus florida  0.64
+58      NA       Betulaceae                  Corylus americana   0.5
+59      NA         Rosaceae                 Crataegus pruinosa  0.62
+60      NA        Ebenaceae               Diospyros virginiana  0.64
+61      NA     Elaeagnaceae                Elaeagnus umbellata   0.5
+62      NA     Celastraceae                    Euonymus alatus   0.5
+63      NA         Fagaceae                  Fagus grandifolia  0.56
+64      NA         Oleaceae                 Fraxinus americana  0.51
+65      NA         Oleaceae                     Fraxinus nigra  0.45
+66      NA         Oleaceae             Fraxinus pennsylvanica  0.53
+67      NA   Hamamelidaceae               Hamamelis virginiana  0.71
+68      NA    Aquifoliaceae                  Ilex verticillata   0.5
+69      NA     Juglandaceae                    Juglans cinerea  0.36
+70      NA     Juglandaceae                      Juglans nigra  0.51
+71      NA        Lauraceae                    Lindera benzoin   0.5
+72      NA     Magnoliaceae            Liriodendron tulipifera   0.4
+73      NA   Caprifoliaceae                   Lonicera maackii   NRA
+74      NA        Nyssaceae                    Nyssa sylvatica  0.46
+75      NA    Paulowniaceae                Paulownia tomentosa  0.38
+76      NA         Pinaceae                      Pinus pungens  0.49
+77      NA         Pinaceae                      Pinus strobus  0.34
+78      NA         Pinaceae                   Pinus virginiana  0.45
+79      NA      Platanaceae              Platanus occidentalis  0.46
+80      NA         Rosaceae                       Prunus avium  0.47
+81      NA         Rosaceae                     Prunus persica  0.47
+82      NA         Rosaceae                    Prunus serotina  0.47
+83      NA         Fagaceae                       Quercus alba   0.6
+84      NA         Fagaceae                   Quercus coccinea   0.6
+85      NA         Fagaceae                    Quercus falcata  0.52
+86      NA         Fagaceae                  Quercus michauxii   0.6
+87      NA         Fagaceae                    Quercus montana  0.57
+88      NA         Fagaceae              Quercus muehlenbergii   0.6
+89      NA         Fagaceae                      Quercus rubra  0.56
+90      NA         Fagaceae                   Quercus velutina  0.56
+91      NA         Fagaceae                   Quercus velutina  0.56
+92      NA         Fabaceae               Robinia pseudoacacia   0.6
+93      NA         Fabaceae               Robinia pseudoacacia  0.66
+94      NA         Rosaceae                    Rosa multiflora   NRA
+95      NA         Rosaceae               Rubus allegheniensis   NRA
+96      NA         Rosaceae                Rubus pensilvanicus   NRA
+97      NA         Rosaceae               Rubus phoenicolasius   NRA
+98      NA        Adoxaceae                Sambucus canadensis   0.5
+99      NA        Lauraceae                  Sassafras albidum  0.42
+100     NA        Malvaceae                    Tilia americana  0.32
+101     NA         Ulmaceae                    Ulmus americana  0.46
+102     NA         Ulmaceae                        Ulmus rubra  0.48
+103     NA        Adoxaceae               Viburnum acerifolium  0.83
+104     NA        Adoxaceae               Viburnum prunifolium  0.83
+105     NA        Adoxaceae                Viburnum recognitum  0.83
+106     NA        Aceraceae                       Acer negundo  0.44
+107     NA        Aceraceae                        Acer rubrum  0.49
+108     NA    Simaroubaceae                Ailanthus altissima  0.33
+109     NA         Fabaceae                Albizia julibrissin  0.57
+110     NA         Rosaceae                Amelanchier arborea  0.66
+111     NA         Rosaceae             Amelanchier canadensis  0.66
+112     NA       Araliaceae                     Aralia spinosa   0.5
+113     NA       Annonaceae                    Asimina triloba  0.47
+114     NA         Moraceae            Broussonetia papyrifera  0.59
+115     NA       Betulaceae               Carpinus caroliniana  0.58
+116     NA     Juglandaceae                         Carya alba  0.62
+117     NA     Juglandaceae                  Carya cordiformis   0.6
+118     NA     Juglandaceae                       Carya glabra  0.66
+119     NA     Juglandaceae                          Carya sp.  0.62
+120     NA      Cannabaceae                Celtis occidentalis  0.49
+121     NA        Rubiaceae          Cephalanthus occidentalis   0.5
+122     NA         Fabaceae                  Cercis canadensis  0.63
+123     NA        Cornaceae                     Cornus florida  0.64
+124     NA     Elaeagnaceae             Elaeagnus angustifolia   0.5
+125     NA     Elaeagnaceae                Elaeagnus umbellata   0.5
+126     NA         Fagaceae                  Fagus grandifolia  0.56
+127     NA         Oleaceae                 Fraxinus americana  0.51
+128     NA         Oleaceae             Fraxinus pennsylvanica  0.53
+129     NA    Aquifoliaceae                         Ilex opaca   0.5
+130     NA    Aquifoliaceae                  Ilex verticillata   0.5
+131     NA     Juglandaceae                      Juglans nigra  0.51
+132     NA     Cupressaceae               Juniperus virginiana  0.44
+133     NA        Ericaceae                   Kalmia latifolia   0.5
+134     NA         Oleaceae                      Ligustrum sp.   0.5
+135     NA        Lauraceae                    Lindera benzoin   0.5
+136     NA     Altingiaceae            Liquidambar styraciflua  0.46
+137     NA     Magnoliaceae            Liriodendron tulipifera   0.4
+138     NA   Caprifoliaceae                   Lonicera maackii   NRA
+139     NA         Moraceae                        Morus rubra  0.59
+140     NA        Nyssaceae                    Nyssa sylvatica  0.46
+141     NA Scrophulariaceae                Paulownia tomentosa  0.38
+142     NA         Pinaceae                        Pinus taeda  0.47
+143     NA         Pinaceae                   Pinus virginiana  0.45
+144     NA      Platanaceae              Platanus occidentalis  0.46
+145     NA       Salicaceae              Populus grandidentata  0.36
+146     NA         Rosaceae                       Prunus avium  0.47
+147     NA         Rosaceae                    Prunus serotina  0.47
+148     NA         Fagaceae                       Quercus alba   0.6
+149     NA         Fagaceae                   Quercus coccinea   0.6
+150     NA         Fagaceae                    Quercus falcata  0.52
+151     NA         Fagaceae                  Quercus michauxii   0.6
+152     NA         Fagaceae                    Quercus montana  0.57
+153     NA         Fagaceae                  Quercus palustris  0.58
+154     NA         Fagaceae                      Quercus rubra  0.56
+155     NA         Fagaceae                        Quercus sp.  0.59
+156     NA         Fagaceae                   Quercus stellata   0.6
+157     NA         Fagaceae                   Quercus velutina  0.56
+158     NA        Ericaceae           Rhododendron arborescens   0.5
+159     NA    Anacardiaceae                       Rhus typhina   0.5
+160     NA         Rosaceae                    Rosa multiflora   NRA
+161     NA       Salicaceae                        Salix nigra  0.36
+162     NA        Adoxaceae                     Sambucus nigra   0.5
+163     NA        Lauraceae                  Sassafras albidum  0.42
+164     NA        Malvaceae                    Tilia americana  0.32
+165     NA         Ulmaceae                    Ulmus americana  0.46
+166     NA         Ulmaceae                        Ulmus rubra  0.48
+167     NA        Ericaceae               Vaccinium corymbosum  0.47
+168     NA        Ericaceae                      Vaccinium sp.  0.47
+169     NA        Adoxaceae               Viburnum acerifolium  0.83
+170     NA        Adoxaceae                  Viburnum dentatum  0.83
+171     NA        Adoxaceae               Viburnum prunifolium  0.83
+172     NA      Sapindaceae                       Acer negundo  0.44
+173     NA      Sapindaceae                        Acer rubrum  0.49
+174     NA      Sapindaceae                     Acer saccharum  0.56
+175     NA    Simaroubaceae                Ailanthus altissima  0.33
+176     NA         Rosaceae                Amelanchier arborea  0.66
+177     NA       Annonaceae                    Asimina triloba  0.47
+178     NA     Juglandaceae                  Carya cordiformis   0.6
+179     NA     Juglandaceae                       Carya glabra  0.66
+180     NA     Juglandaceae                        Carya ovata  0.62
+181     NA     Juglandaceae                          Carya sp.  0.62
+182     NA     Juglandaceae                       Carya texana  0.54
+183     NA     Juglandaceae                    Carya tomentosa  0.64
+184     NA      Cannabaceae                Celtis occidentalis  0.49
+185     NA      Cannabaceae                  Celtis tenuifolia  0.49
+186     NA         Fabaceae                  Cercis canadensis  0.63
+187     NA        Cornaceae                  Cornus drummondii  0.64
+188     NA        Cornaceae                     Cornus florida  0.64
+189     NA         Rosaceae                      Crataegus sp.  0.62
+190     NA        Ebenaceae               Diospyros virginiana  0.64
+191     NA       Rhamnaceae               Frangula caroliniana  0.54
+192     NA         Oleaceae                 Fraxinus americana  0.51
+193     NA         Oleaceae                 Fraxinus americana  0.51
+194     NA         Fabaceae              Gleditsia triacanthos   0.6
+195     NA     Juglandaceae                      Juglans nigra  0.51
+196     NA     Cupressaceae               Juniperus virginiana  0.44
+197     NA        Lauraceae                    Lindera benzoin   0.5
+198     NA   Caprifoliaceae                   Lonicera maackii   NRA
+199     NA         Rosaceae                      Malus ioensis  0.61
+200     NA         Moraceae                        Morus rubra  0.59
+201     NA       Betulaceae                  Ostrya virginiana  0.63
+202     NA      Platanaceae              Platanus occidentalis  0.46
+203     NA         Rosaceae                   Prunus americana  0.47
+204     NA         Rosaceae                    Prunus serotina  0.47
+205     NA         Rosaceae                         Prunus sp.  0.47
+206     NA         Fagaceae                       Quercus alba   0.6
+207     NA         Fagaceae                Quercus marilandica  0.56
+208     NA         Fagaceae              Quercus muehlenbergii   0.6
+209     NA         Fagaceae                      Quercus rubra  0.56
+210     NA         Fagaceae                        Quercus sp.   0.6
+211     NA         Fagaceae                   Quercus stellata   0.6
+212     NA         Fagaceae                   Quercus velutina  0.56
+213     NA         Fagaceae                   Quercus velutina  0.56
+214     NA         Fagaceae                   Quercus velutina  0.56
+215     NA        Lauraceae                  Sassafras albidum  0.42
+216     NA       Sapotaceae            Sideroxylon lanuginosum  0.58
+217     NA        Malvaceae                    Tilia americana  0.32
+218     NA         Ulmaceae                        Ulmus rubra  0.46
+219     NA      Sapindaceae                  Acer macrophyllum  0.44
+220     NA        Ericaceae                  Arbutus menziesii  0.58
+221     NA        Ericaceae          Arctostaphylos andersonii  0.72
+222     NA        Ericaceae           Arctostaphylos tomentosa  0.72
+223     NA       Asteraceae                Baccharis pilularis   NRA
+224     NA       Rhamnaceae             Ceanothus thyrsiflorus  0.67
+225     NA       Betulaceae                    Corylus cornuta   0.5
+226     NA         Rosaceae             Cotoneaster franchetii   0.5
+227     NA         Rosaceae               Cotoneaster pannosus   0.5
+228     NA         Rosaceae                 Crataegus monogyna  0.62
+229     NA        Myrtaceae                Eucalyptus globulus  0.68
+230     NA         Rosaceae            Heteromeles arbutifolia   0.5
+231     NA    Aquifoliaceae                    Ilex aquifolium   0.5
+232     NA         Fagaceae            Lithocarpus densiflorus  0.56
+233     NA       Myricaceae                Morella californica   0.5
+234     NA         Pinaceae                    Pinus attenuata  0.42
+235     NA         Pinaceae                    Pinus ponderosa  0.38
+236     NA         Pinaceae                    Pinus ponderosa  0.38
+237     NA         Pinaceae              Pseudotsuga menziesii  0.45
+238     NA         Rosaceae            Pyracantha angustifolia   0.5
+239     NA         Fagaceae                  Quercus agrifolia   0.6
+240     NA         Fagaceae                    Quercus parvula  0.59
+241     NA       Rhamnaceae                Rhamnus californica   0.5
+242     NA  Grossulariaceae                  Ribes divaricatum  0.73
+243     NA       Salicaceae                    Salix lasiandra  0.36
+244     NA        Adoxaceae                     Sambucus nigra   0.5
+245     NA     Cupressaceae               Sequoia sempervirens  0.36
+246     NA        Lauraceae           Umbellularia californica  0.47
+247     NA        Ericaceae                   Vaccinium ovatum  0.47
+248     NA         Pinaceae                     Abies balsamea  0.34
+249     NA        Aceraceae                        Acer rubrum  0.49
+250     NA        Aceraceae                        Acer rubrum  0.49
+251     NA        Aceraceae                     Acer saccharum  0.56
+252     NA        Aceraceae                      Acer spicatum  0.44
+253     NA       Betulaceae                       Alnus incana  0.37
+254     NA         Rosaceae                 Amelanchier laevis  0.66
+255     NA         Rosaceae              Amelanchier sanguinea  0.66
+256     NA       Betulaceae              Betula alleghaniensis  0.55
+257     NA       Betulaceae                  Betula papyrifera  0.48
+258     NA        Cornaceae                Cornus alternifolia  0.64
+259     NA       Betulaceae                    Corylus cornuta   0.5
+260     NA    Thymelaeaceae                    Dirca palustris  0.33
+261     NA         Oleaceae                 Fraxinus americana  0.51
+262     NA         Oleaceae                 Fraxinus americana  0.51
+263     NA         Oleaceae                     Fraxinus nigra  0.45
+264     NA    Aquifoliaceae                     Ilex mucronata   0.5
+265     NA    Aquifoliaceae                  Ilex verticillata   0.5
+266     NA     Juglandaceae                    Juglans cinerea  0.36
+267     NA         Pinaceae                     Larix laricina  0.49
+268     NA   Caprifoliaceae                Lonicera canadensis   NRA
+269     NA         Rosaceae                       Malus pumila  0.61
+270     NA       Betulaceae                  Ostrya virginiana  0.63
+271     NA       Betulaceae                  Ostrya virginiana  1.63
+272     NA         Pinaceae                       Picea glauca  0.37
+273     NA         Pinaceae                      Picea mariana  0.38
+274     NA         Pinaceae                      Pinus strobus  0.34
+275     NA       Salicaceae                Populus balsamifera  0.31
+276     NA       Salicaceae              Populus grandidentata  0.36
+277     NA       Salicaceae                Populus tremuloides  0.35
+278     NA         Rosaceae                Prunus pensylvanica   0.5
+279     NA         Rosaceae                    Prunus serotina  0.47
+280     NA         Rosaceae                  Prunus virginiana  0.47
+281     NA         Fagaceae                      Quercus rubra  0.56
+282     NA  Grossulariaceae                    Ribes cynosbati  0.73
+283     NA        Adoxaceae                  Sambucus racemosa   0.5
+284     NA         Rosaceae                   Sorbus americana  0.42
+285     NA     Cupressaceae                 Thuja occidentalis  0.29
+286     NA        Malvaceae                    Tilia americana  0.32
+287     NA         Pinaceae                   Tsuga canadensis  0.38
+288     NA         Ulmaceae                    Ulmus americana  0.46
+289     NA         Pinaceae                     Abies amabilis   0.4
+290     NA         Pinaceae                      Abies grandis  0.35
+291     NA         Pinaceae                      Abies grandis  0.35
+292     NA         Pinaceae                      Abies procera  0.37
+293     NA         Pinaceae                      Abies procera  0.37
+294     NA         Pinaceae                      Abies procera  0.37
+295     NA         Pinaceae                          Abies sp.  0.36
+296     NA      Sapindaceae                    Acer circinatum   NRA
+297     NA      Sapindaceae                       Acer glabrum  0.44
+298     NA       Betulaceae                        Alnus rubra  0.37
+299     NA         Rosaceae              Amelanchier alnifolia  0.66
+300     NA        Cornaceae                   Cornus nuttallii  0.58
+301     NA       Betulaceae                    Corylus cornuta   0.5
+302     NA        Ericaceae                 Gaultheria shallon   0.5
+303     NA         Rosaceae                Holodiscus discolor  0.71
+304     NA   Caprifoliaceae                   Lonicera ciliosa   NRA
+305     NA        Ericaceae               Menziesia ferruginea   0.5
+306     NA         Rosaceae              Oemleria cerasiformis   0.5
+307     NA         Pinaceae                    Pinus monticola  0.35
+308     NA         Pinaceae              Pseudotsuga menziesii  0.45
+309     NA       Rhamnaceae                  Rhamnus purshiana   0.5
+310     NA        Ericaceae          Rhododendron macrophyllum   0.5
+311     NA         Rosaceae                    Rosa gymnocarpa   NRA
+312     NA         Rosaceae                  Rubus leucodermis   NRA
+313     NA         Rosaceae                  Rubus spectabilis   NRA
+314     NA         Taxaceae                   Taxus brevifolia   0.6
+315     NA     Cupressaceae                      Thuja plicata  0.31
+316     NA         Pinaceae                 Tsuga heterophylla  0.42
+317     NA        Ericaceae             Vaccinium membranaceum  0.47
+318     NA        Ericaceae              Vaccinium ovalifolium  0.47
+319     NA        Ericaceae              Vaccinium parvifolium  0.47
+320     NA      Sapindaceae                     Acer campestre  0.53
+321     NA      Sapindaceae                Acer pseudoplatanus  0.48
+322     NA       Betulaceae                         Betula sp.  0.55
+323     NA       Betulaceae                   Carpinus betulus  0.53
+324     NA         Fagaceae                    Castanea sativa   0.5
+325     NA        Cornaceae                   Cornus sanguinea  0.58
+326     NA       Betulaceae                   Corylus avellana  0.52
+327     NA         Rosaceae                 Crataegus monogyna  0.62
+328     NA     Celastraceae                 Euonymus europaeus   0.6
+329     NA         Fagaceae                    Fagus sylvatica  0.53
+330     NA       Rhamnaceae                     Frangula alnus  0.59
+331     NA         Oleaceae                 Fraxinus excelsior  0.49
+332     NA    Aquifoliaceae                    Ilex aquifolium  0.61
+333     NA         Pinaceae                      Larix decidua  0.45
+334     NA         Pinaceae                        Picea abies  0.32
+335     NA         Pinaceae                    Pinus sylvatica  0.53
+336     NA         Rosaceae                       Prunus avium  0.48
+337     NA         Rosaceae                     Prunus spinosa   0.7
+338     NA         Pinaceae              Pseudotsuga menziesii  0.45
+339     NA         Fagaceae                      Quercus robur  0.53
+340     NA       Salicaceae                          Salix sp.  0.36
+341     NA        Adoxaceae                     Sambucus nigra   0.5
+342     NA         Taxaceae                      Taxus baccata  0.55
+343     NA        Malvaceae                   Tilia x europaea  0.32
+344     NA         Pinaceae                     Abies concolor  0.37
+345     NA         Pinaceae                     Abies concolor  0.37
+346     NA         Pinaceae                     Abies concolor  0.37
+347     NA         Pinaceae                     Abies concolor  0.37
+348     NA         Pinaceae                    Abies magnifica  0.37
+349     NA         Pinaceae                    Abies magnifica  0.37
+350     NA         Pinaceae                    Abies magnifica  0.37
+351     NA         Pinaceae                    Abies magnifica  0.37
+352     NA         Pinaceae                          Abies sp.  0.36
+353     NA        Ericaceae              Arctostaphylos patula  0.72
+354     NA     Cupressaceae               Calocedrus decurrens  0.35
+355     NA       Rhamnaceae               Ceanothus cordulatus  0.67
+356     NA       Rhamnaceae             Ceanothus integerrimus  0.67
+357     NA       Rhamnaceae              Ceanothus parvifolius  0.67
+358     NA         Fagaceae           Chrysolepis sempervirens  0.42
+359     NA        Cornaceae                   Cornus nuttallii  0.58
+360     NA        Cornaceae                     Cornus sericea  0.58
+361     NA       Betulaceae Corylus cornuta subsp. californica   0.5
+362     NA         Rosaceae                Holodiscus discolor  0.71
+363     NA        Ericaceae                 Leucothoe davisiae 0.405
+364     NA         Pinaceae                  Pinus lambertiana  0.34
+365     NA         Pinaceae                    Pinus ponderosa  0.38
+366     NA         Pinaceae                    Pinus ponderosa  0.38
+367     NA         Rosaceae                  Prunus emarginata  0.47
+368     NA         Rosaceae                  Prunus virginiana  0.47
+369     NA         Pinaceae              Pseudotsuga menziesii  0.45
+370     NA       Rhamnaceae                Rhamnus californica   0.5
+371     NA        Ericaceae           Rhododendron occidentale   0.5
+372     NA  Grossulariaceae                   Ribes nevadaense   NRA
+373     NA  Grossulariaceae                      Ribes roezlii   NRA
+374     NA       Salicaceae                  Salix scouleriana  0.36
+375     NA       Salicaceae                          Salix sp.  0.36
+376     NA        Adoxaceae                  Sambucus racemosa   0.5
+377     NA        Ericaceae               Vaccinium uliginosum  0.47
+378     NA         Pinaceae                         Abies alba  0.35
+379     NA        Aceraceae                   Acer platanoides  0.51
+380     NA        Aceraceae                Acer pseudoplatanus  0.51
+381     NA       Betulaceae                     Betula pendula  0.52
+382     NA         Fagaceae                    Fagus sylvatica  0.59
+383     NA         Pinaceae                        Picea abies  0.37
+384     NA       Salicaceae                    Populus tremula  0.39
+385     NA       Salicaceae                       Salix caprea   0.4
+386     NA      Sambucaceae                  Sambucus racemosa  0.46
+387     NA         Rosaceae                   Sorbus aucuparia  0.63
+388     NA         Ulmaceae                       Ulmus glabra  0.55
+389     NA         Pinaceae                      Abies bifolia  0.31
+390     NA         Pinaceae                     Abies concolor  0.37
+391     NA         Pinaceae                     Abies concolor  0.37
+392     NA         Rosaceae              Amelanchier alnifolia  0.66
+393     NA         Rosaceae             Cercocarpus ledifolius  0.81
+394     NA     Cupressaceae                 Juniperus communis  0.44
+395     NA     Cupressaceae                 Juniperus communis  0.44
+396     NA     Cupressaceae               Juniperus scopulorum  0.44
+397     NA     Cupressaceae               Juniperus scopulorum  0.44
+398     NA         Pinaceae                  Picea engelmannii  0.33
+399     NA         Pinaceae                  Picea engelmannii  0.33
+400     NA         Pinaceae                      Picea pungens  0.38
+401     NA         Pinaceae                      Picea pungens  0.38
+402     NA         Pinaceae                       Pinus edulis  <NA>
+403     NA         Pinaceae                     Pinus flexilis  <NA>
+404     NA         Pinaceae                     Pinus flexilis  <NA>
+405     NA         Pinaceae                     Pinus flexilis  <NA>
+406     NA         Pinaceae                     Pinus longaeva  <NA>
+407     NA         Pinaceae                     Pinus longaeva  <NA>
+408     NA         Pinaceae                     Pinus longaeva  <NA>
+409     NA         Pinaceae                    Pinus ponderosa  0.38
+410     NA         Pinaceae                    Pinus ponderosa  0.38
+411     NA       Salicaceae                Populus tremuloides  0.35
+412     NA         Pinaceae              Pseudotsuga menziesii  0.45
+413     NA  Grossulariaceae                       Ribes cereum   NRA
+414     NA  Grossulariaceae                   Ribes montigenum   NRA
+415     NA        Adoxaceae                  Sambucus racemosa   0.5
+416     NA        Adoxaceae               Viburnum prunifolium  0.83
+417     NA        Adoxaceae               Viburnum acerifolium  0.83
+418     NA        Adoxaceae            Viburnum rhytidophyllum  0.83
+419     NA    Aquifoliaceae                         Ilex opaca   0.5
+420     NA       Betulaceae                       Betula nigra  0.55
+421     NA       Betulaceae                  Ostrya virginiana  0.63
+422     NA       Betulaceae               Carpinus caroliniana  0.58
+423     NA      Cannabaceae                Celtis occidentalis  0.49
+424     NA     Celastraceae             Euonymus atropurpureus   0.5
+425     NA        Cornaceae                     Cornus florida  0.64
+426     NA        Cornaceae                       Cornus kousa  0.64
+427     NA     Cupressaceae               Juniperus virginiana  0.44
+428     NA     Cupressaceae              Cupressus x leylandii  0.44
+429     NA        Ebenaceae               Diospyros virginiana  0.64
+430     NA     Elaeagnaceae                  Elaeagnus pungens   0.5
+431     NA     Elaeagnaceae             Elaeagnus angustifolia   0.5
+432     NA         Fabaceae              Gleditsia triacanthos  <NA>
+433     NA         Fabaceae              Gleditsia triacanthos  <NA>
+434     NA         Fabaceae               Robinia pseudoacacia   0.6
+435     NA         Fabaceae                  Cercis canadensis  0.63
+436     NA         Fagaceae                        Quercus sp.  0.56
+437     NA         Fagaceae                  Fagus grandifolia  0.56
+438     NA         Fagaceae                   Quercus coccinea   0.6
+439     NA         Fagaceae                    Quercus falcata  0.52
+440     NA         Fagaceae                 Quercus macrocarpa   0.6
+441     NA         Fagaceae                  Quercus palustris  0.58
+442     NA         Fagaceae                    Quercus phellos   0.6
+443     NA         Fagaceae                     Quercus prinus  0.57
+444     NA         Fagaceae                      Quercus rubra  0.56
+445     NA   Hamamelidaceae               Hamamelis virginiana  0.71
+446     NA     Juglandaceae                      Juglans nigra  0.51
+447     NA     Juglandaceae                  Carya cordiformis   0.6
+448     NA     Juglandaceae                       Carya glabra  0.66
+449     NA     Juglandaceae                          Carya sp.  0.66
+450     NA     Juglandaceae                    Carya tomentosa  0.64
+451     NA        Lauraceae                  Sassafras albidum  0.42
+452     NA        Lauraceae                    Lindera benzoin   0.5
+453     NA       Lythraceae               Lagerstroemia indica  0.47
+454     NA     Magnoliaceae            Liriodendron tulipifera   0.4
+455     NA        Malvaceae                    Tilia americana  0.32
+456     NA         Moraceae                   Maclura pomifera  <NA>
+457     NA         Moraceae                        Morus rubra  0.59
+458     NA         Moraceae                         Morus alba  0.59
+459     NA        Nyssaceae                    Nyssa sylvatica  0.46
+460     NA         Oleaceae                       Fraxinus sp.  0.51
+461     NA         Oleaceae                 Fraxinus americana  0.51
+462     NA         Oleaceae             Fraxinus pennsylvanica  0.53
+463     NA         Oleaceae                 Ligustrum amurense  <NA>
+464     NA    Paulowniaceae                Paulownia tomentosa  0.38
+465     NA         Pinaceae                   Pinus thunbergii  <NA>
+466     NA         Pinaceae                        Picea abies  <NA>
+467     NA      Platanaceae              Platanus occidentalis  0.46
+468     NA         Rosaceae                    Malus coronaria  0.61
+469     NA         Rosaceae                   Malus sylvestris  0.61
+470     NA         Rosaceae                      Crataegus sp.  0.62
+471     NA         Rosaceae                Amelanchier arborea  0.66
+472     NA         Rosaceae                    Prunus serotina  0.47
+473     NA         Rosaceae                       Prunus avium  0.47
+474     NA         Rosaceae                   Pyrus calleryana  <NA>
+475     NA         Rosaceae                     Pyrus communis  <NA>
+476     NA       Salicaceae                        Salix nigra  0.36
+477     NA       Salicaceae                  Populus deltoides  <NA>
+478     NA      Sapindaceae                       Acer negundo  0.44
+479     NA      Sapindaceae                   Acer platanoides  0.44
+480     NA      Sapindaceae                        Acer rubrum  0.49
+481     NA      Sapindaceae                   Acer saccharinum  0.56
+482     NA      Sapindaceae                     Acer saccharum  0.56
+483     NA    Simaroubaceae                Ailanthus altissima  0.33
+484     NA         Ulmaceae                    Ulmus americana  0.46
+485     NA         Ulmaceae    Ulmus parvifolia x carpinifolia  0.46
+486     NA         Vitaceae                      Vitis riparia  <NA>
+487     NA        Adoxaceae                  Sambucus racemosa   0.5
+488     NA        Adoxaceae                  Viburnum dentatum  0.83
+489     NA        Adoxaceae                Viburnum acerfolium  0.83
+490     NA    Anacardiaceae               Toxicodendron vernix  <NA>
+491     NA    Anacardiaceae             Toxicodendron radicans  <NA>
+492     NA    Aquifoliaceae                     Ilex laevigata   0.5
+493     NA    Aquifoliaceae                  Ilex verticillata   0.5
+494     NA       Betulaceae                       Alnus incana  0.37
+495     NA       Betulaceae              Betula alleghaniensis  0.55
+496     NA       Betulaceae                       Betula lenta  0.55
+497     NA       Betulaceae                  Betula papyrifera  0.48
+498     NA       Betulaceae                 Betula populifolia  0.45
+499     NA       Betulaceae                     Betula unknown  0.55
+500     NA       Betulaceae                  Ostrya virginiana  0.63
+501     NA     Cupressaceae                 Juniperus communis  0.44
+502     NA        Ericaceae                   Kalmia latifolia   0.5
+503     NA        Ericaceae                  Lyonia ligustrina   0.5
+504     NA        Ericaceae          Rhododendron prinophyllum   0.5
+505     NA        Ericaceae               Vaccinium corymbosum  0.47
+506     NA         Fagaceae                   Castanea dentata   0.4
+507     NA         Fagaceae                  Fagus grandifolia  0.56
+508     NA         Fagaceae                      Quercus rubra  0.56
+509     NA         Fagaceae                    Quercus unknown  0.56
+510     NA         Fagaceae                   Quercus velutina  0.56
+511     NA         Fagaceae                   Quercus velutina  0.56
+512     NA   Hamamelidaceae               Hamamelis virginiana  0.71
+513     NA        Lauraceae                    Lindera benzoin   0.5
+514     NA        Nyssaceae                    Nyssa sylvatica  0.46
+515     NA         Oleaceae                 Fraxinus americana  0.51
+516     NA         Oleaceae                     Fraxinus nigra  0.45
+517     NA         Pinaceae                        Picea abies  <NA>
+518     NA         Pinaceae                       Picea rubens  <NA>
+519     NA         Pinaceae                      Picea unknown  <NA>
+520     NA         Pinaceae                     Pinus resinosa  <NA>
+521     NA         Pinaceae                      Pinus strobus  <NA>
+522     NA         Pinaceae                      Pinus unknown  <NA>
+523     NA         Pinaceae                   Tsuga canadensis  0.38
+524     NA       Rhamnaceae                     Frangula alnus   0.5
+525     NA         Rosaceae                 Amelanchier laevis  0.66
+526     NA         Rosaceae                 Aronia melanocarpa  <NA>
+527     NA         Rosaceae                      Crataegus sp.  0.62
+528     NA         Rosaceae                    Prunus serotina  0.47
+529     NA         Rosaceae                   Sorbus americana  <NA>
+530     NA       Salicaceae              Populus grandidentata  0.36
+531     NA       Salicaceae                Populus tremuloides  <NA>
+532     NA       Salicaceae                      Salix species  0.36
+533     NA      Sapindaceae                        Acer rubrum  0.49
+534     NA      Sapindaceae                     Acer saccharum  0.56
+535     NA         Ulmaceae                    Ulmus americana  0.46
+536     NA       Betulaceae          Alnus viridis ssp. crispa  <NA>
+537     NA       Betulaceae                  Betula glandulosa  <NA>
+538     NA       Betulaceae                 Betula neoalaskana  <NA>
+539     NA       Betulaceae                Betula occidentalis  <NA>
+540     NA       Betulaceae                   Betula pubescens  <NA>
+541     NA       Betulaceae                        Betula spp.  <NA>
+542     NA         Pinaceae                     Larix laricina  <NA>
+543     NA         Pinaceae                     Larix laricina  <NA>
+544     NA         Pinaceae                       Picea glauca  <NA>
+545     NA         Pinaceae                      Picea mariana  <NA>
+546     NA         Pinaceae                      Picea mariana  <NA>
+547     NA         Pinaceae                    Pinus banksiana  <NA>
+548     NA         Pinaceae                    Pinus banksiana  <NA>
+549     NA       Salicaceae                          Salix sp.  <NA>
     wsg_specificity sample_size           site ref_id
-1              <NA>        <NA>    Lilly Dicky   <NA>
-2              <NA>        <NA>    Lilly Dicky   <NA>
-3              <NA>        <NA>    Lilly Dicky   <NA>
-4              <NA>        <NA>    Lilly Dicky   <NA>
-5              <NA>        <NA>    Lilly Dicky   <NA>
-6              <NA>          10    Lilly Dicky   <NA>
-7              <NA>          10    Lilly Dicky   <NA>
-8              <NA>          10    Lilly Dicky   <NA>
-9              <NA>        <NA>    Lilly Dicky   <NA>
-10             <NA>        <NA>    Lilly Dicky   <NA>
-11             <NA>        <NA>    Lilly Dicky   <NA>
-12             <NA>        <NA>    Lilly Dicky   <NA>
-13             <NA>        <NA>    Lilly Dicky   <NA>
-14             <NA>        <NA>    Lilly Dicky   <NA>
-15             <NA>          32    Lilly Dicky   <NA>
-16             <NA>          40    Lilly Dicky   <NA>
-17             <NA>          32    Lilly Dicky   <NA>
-18             <NA>          21    Lilly Dicky   <NA>
-19             <NA>        <NA>    Lilly Dicky   <NA>
-20             <NA>        <NA>    Lilly Dicky   <NA>
-21             <NA>        <NA>    Lilly Dicky   <NA>
-22             <NA>        <NA>    Lilly Dicky   <NA>
-23             <NA>        <NA>    Lilly Dicky   <NA>
-24             <NA>        <NA>    Lilly Dicky   <NA>
-25             <NA>        <NA>    Lilly Dicky   <NA>
-26             <NA>          29    Lilly Dicky   <NA>
-27             <NA>        <NA>    Lilly Dicky   <NA>
-28             <NA>        <NA>    Lilly Dicky   <NA>
-29             <NA>        <NA>    Lilly Dicky   <NA>
-30          species          19    Lilly Dicky   <NA>
-31          species          34    Lilly Dicky   <NA>
-32          species          26    Lilly Dicky   <NA>
-33             <NA>        <NA>    Lilly Dicky   <NA>
-34          species           9    Lilly Dicky   <NA>
-35          species           9    Lilly Dicky   <NA>
-36             <NA>          41    Lilly Dicky   <NA>
-37             <NA>        <NA>    Lilly Dicky   <NA>
-38             <NA>        <NA>    Lilly Dicky   <NA>
-39             <NA>        <NA>    Lilly Dicky   <NA>
-40             <NA>        <NA>           SCBI   <NA>
-41             <NA>        <NA>           SCBI   <NA>
-42             <NA>        <NA>           SCBI   <NA>
-43             <NA>        <NA>           SCBI   <NA>
-44             <NA>        <NA>           SCBI   <NA>
-45             <NA>        <NA>           SCBI   <NA>
-46             <NA>        <NA>           SCBI   <NA>
-47             <NA>        <NA>           SCBI   <NA>
-48             <NA>          10           SCBI   <NA>
-49             <NA>          10           SCBI   <NA>
-50             <NA>          10           SCBI   <NA>
-51             <NA>          10           SCBI   <NA>
-52             <NA>        <NA>           SCBI   <NA>
-53             <NA>        <NA>           SCBI   <NA>
-54             <NA>        <NA>           SCBI   <NA>
-55             <NA>        <NA>           SCBI   <NA>
-56             <NA>        <NA>           SCBI   <NA>
-57             <NA>        <NA>           SCBI   <NA>
-58             <NA>        <NA>           SCBI   <NA>
-59             <NA>        <NA>           SCBI   <NA>
-60             <NA>        <NA>           SCBI   <NA>
-61             <NA>        <NA>           SCBI   <NA>
-62             <NA>        <NA>           SCBI   <NA>
-63             <NA>        <NA>           SCBI   <NA>
-64             <NA>        <NA>           SCBI   <NA>
-65             <NA>        <NA>           SCBI   <NA>
-66             <NA>        <NA>           SCBI   <NA>
-67             <NA>          21           SCBI   <NA>
-68             <NA>        <NA>           SCBI   <NA>
-69             <NA>        <NA>           SCBI   <NA>
-70             <NA>        <NA>           SCBI   <NA>
-71             <NA>        <NA>           SCBI   <NA>
-72             <NA>        <NA>           SCBI   <NA>
-73             <NA>          20           SCBI   <NA>
-74             <NA>        <NA>           SCBI   <NA>
-75             <NA>        <NA>           SCBI   <NA>
-76             <NA>        <NA>           SCBI   <NA>
-77             <NA>        <NA>           SCBI   <NA>
-78             <NA>        <NA>           SCBI   <NA>
-79             <NA>        <NA>           SCBI   <NA>
-80             <NA>        <NA>           SCBI   <NA>
-81             <NA>        <NA>           SCBI   <NA>
-82             <NA>        <NA>           SCBI   <NA>
-83             <NA>          29           SCBI   <NA>
-84             <NA>        <NA>           SCBI   <NA>
-85             <NA>        <NA>           SCBI   <NA>
-86             <NA>        <NA>           SCBI   <NA>
-87             <NA>        <NA>           SCBI   <NA>
-88             <NA>        <NA>           SCBI   <NA>
-89             <NA>        <NA>           SCBI   <NA>
-90          species          19           SCBI   <NA>
-91          species          26           SCBI   <NA>
-92          species           9           SCBI   <NA>
-93          species           9           SCBI   <NA>
-94             <NA>          32           SCBI   <NA>
-95             <NA>          26           SCBI   <NA>
-96             <NA>          26           SCBI   <NA>
-97             <NA>          26           SCBI   <NA>
-98             <NA>        <NA>           SCBI   <NA>
-99             <NA>          41           SCBI   <NA>
-100            <NA>        <NA>           SCBI   <NA>
-101            <NA>        <NA>           SCBI   <NA>
-102            <NA>        <NA>           SCBI   <NA>
-103            <NA>          19           SCBI   <NA>
-104            <NA>          19           SCBI   <NA>
-105            <NA>          19           SCBI   <NA>
-106            <NA>        <NA>           SERC   <NA>
-107            <NA>        <NA>           SERC   <NA>
-108            <NA>        <NA>           SERC   <NA>
-109            <NA>        <NA>           SERC   <NA>
-110            <NA>        <NA>           SERC   <NA>
-111            <NA>        <NA>           SERC   <NA>
-112            <NA>        <NA>           SERC   <NA>
-113            <NA>        <NA>           SERC   <NA>
-114            <NA>        <NA>           SERC   <NA>
-115            <NA>        <NA>           SERC   <NA>
-116            <NA>          10           SERC   <NA>
-117            <NA>          10           SERC   <NA>
-118            <NA>          10           SERC   <NA>
-119            <NA>          10           SERC   <NA>
-120            <NA>        <NA>           SERC   <NA>
-121            <NA>        <NA>           SERC   <NA>
-122            <NA>        <NA>           SERC   <NA>
-123            <NA>        <NA>           SERC   <NA>
-124            <NA>        <NA>           SERC   <NA>
-125            <NA>        <NA>           SERC   <NA>
-126            <NA>        <NA>           SERC   <NA>
-127            <NA>          32           SERC   <NA>
-128            <NA>        <NA>           SERC   <NA>
-129            <NA>        <NA>           SERC   <NA>
-130            <NA>        <NA>           SERC   <NA>
-131            <NA>        <NA>           SERC   <NA>
-132            <NA>        <NA>           SERC   <NA>
-133            <NA>        <NA>           SERC   <NA>
-134            <NA>        <NA>           SERC   <NA>
-135            <NA>        <NA>           SERC   <NA>
-136            <NA>        <NA>           SERC   <NA>
-137            <NA>        <NA>           SERC   <NA>
-138            <NA>          20           SERC   <NA>
-139            <NA>        <NA>           SERC   <NA>
-140            <NA>        <NA>           SERC   <NA>
-141            <NA>        <NA>           SERC   <NA>
-142            <NA>        <NA>           SERC   <NA>
-143            <NA>        <NA>           SERC   <NA>
-144            <NA>        <NA>           SERC   <NA>
-145            <NA>        <NA>           SERC   <NA>
-146            <NA>        <NA>           SERC   <NA>
-147            <NA>        <NA>           SERC   <NA>
-148            <NA>          10           SERC   <NA>
-149            <NA>        <NA>           SERC   <NA>
-150            <NA>        <NA>           SERC   <NA>
-151            <NA>        <NA>           SERC   <NA>
-152            <NA>        <NA>           SERC   <NA>
-153            <NA>        <NA>           SERC   <NA>
-154            <NA>        <NA>           SERC   <NA>
-155            <NA>        <NA>           SERC   <NA>
-156            <NA>        <NA>           SERC   <NA>
-157         species          26           SERC   <NA>
-158            <NA>        <NA>           SERC   <NA>
-159            <NA>        <NA>           SERC   <NA>
-160            <NA>          32           SERC   <NA>
-161            <NA>        <NA>           SERC   <NA>
-162            <NA>        <NA>           SERC   <NA>
-163            <NA>          41           SERC   <NA>
-164            <NA>        <NA>           SERC   <NA>
-165            <NA>        <NA>           SERC   <NA>
-166            <NA>        <NA>           SERC   <NA>
-167            <NA>        <NA>           SERC   <NA>
-168            <NA>        <NA>           SERC   <NA>
-169            <NA>          19           SERC   <NA>
-170            <NA>          19           SERC   <NA>
-171            <NA>          19           SERC   <NA>
-172            <NA>        <NA>          Tyson   <NA>
-173            <NA>        <NA>          Tyson   <NA>
-174            <NA>        <NA>          Tyson   <NA>
-175            <NA>        <NA>          Tyson   <NA>
-176            <NA>        <NA>          Tyson   <NA>
-177            <NA>        <NA>          Tyson   <NA>
-178            <NA>          10          Tyson   <NA>
-179            <NA>          10          Tyson   <NA>
-180            <NA>        <NA>          Tyson   <NA>
-181            <NA>          10          Tyson   <NA>
-182            <NA>          10          Tyson   <NA>
-183            <NA>          10          Tyson   <NA>
-184            <NA>        <NA>          Tyson   <NA>
-185            <NA>        <NA>          Tyson   <NA>
-186            <NA>        <NA>          Tyson   <NA>
-187            <NA>        <NA>          Tyson   <NA>
-188            <NA>        <NA>          Tyson   <NA>
-189            <NA>        <NA>          Tyson   <NA>
-190            <NA>        <NA>          Tyson   <NA>
-191            <NA>        <NA>          Tyson   <NA>
-192            <NA>          32          Tyson   <NA>
-193            <NA>          40          Tyson   <NA>
-194            <NA>        <NA>          Tyson   <NA>
-195            <NA>        <NA>          Tyson   <NA>
-196            <NA>        <NA>          Tyson   <NA>
-197            <NA>        <NA>          Tyson   <NA>
-198            <NA>          20          Tyson   <NA>
-199            <NA>        <NA>          Tyson   <NA>
-200            <NA>        <NA>          Tyson   <NA>
-201            <NA>        <NA>          Tyson   <NA>
-202            <NA>        <NA>          Tyson   <NA>
-203            <NA>        <NA>          Tyson   <NA>
-204            <NA>        <NA>          Tyson   <NA>
-205            <NA>        <NA>          Tyson   <NA>
-206            <NA>          29          Tyson   <NA>
-207            <NA>        <NA>          Tyson   <NA>
-208            <NA>          29          Tyson   <NA>
-209            <NA>        <NA>          Tyson   <NA>
-210            <NA>          29          Tyson   <NA>
-211            <NA>          29          Tyson   <NA>
-212         species          19          Tyson   <NA>
-213         species          34          Tyson   <NA>
-214         species          26          Tyson   <NA>
-215            <NA>          41          Tyson   <NA>
-216            <NA>        <NA>          Tyson   <NA>
-217            <NA>        <NA>          Tyson   <NA>
-218            <NA>        <NA>          Tyson   <NA>
-219            <NA>        <NA>           UCSC   <NA>
-220            <NA>          31           UCSC   <NA>
-221            <NA>          11           UCSC   <NA>
-222            <NA>          11           UCSC   <NA>
-223            <NA>        <NA>           UCSC   <NA>
-224            <NA>         NRA           UCSC   <NA>
-225            <NA>        <NA>           UCSC   <NA>
-226            <NA>        <NA>           UCSC   <NA>
-227            <NA>        <NA>           UCSC   <NA>
-228            <NA>        <NA>           UCSC   <NA>
-229            <NA>        <NA>           UCSC   <NA>
-230            <NA>        <NA>           UCSC   <NA>
-231            <NA>        <NA>           UCSC   <NA>
-232            <NA>        <NA>           UCSC   <NA>
-233            <NA>        <NA>           UCSC   <NA>
-234            <NA>        <NA>           UCSC   <NA>
-235            <NA>        <NA>           UCSC   <NA>
-236            <NA>         561           UCSC   <NA>
-237            <NA>        <NA>           UCSC   <NA>
-238            <NA>        <NA>           UCSC   <NA>
-239            <NA>        <NA>           UCSC   <NA>
-240            <NA>        <NA>           UCSC   <NA>
-241            <NA>        <NA>           UCSC   <NA>
-242            <NA>         NRA           UCSC   <NA>
-243            <NA>        <NA>           UCSC   <NA>
-244            <NA>        <NA>           UCSC   <NA>
-245            <NA>        <NA>           UCSC   <NA>
-246            <NA>          14           UCSC   <NA>
-247            <NA>         NRA           UCSC   <NA>
-248            <NA>        <NA>        Wabikon   <NA>
-249            <NA>          41        Wabikon   <NA>
-250            <NA>        <NA>        Wabikon   <NA>
-251            <NA>        <NA>        Wabikon   <NA>
-252            <NA>          41        Wabikon   <NA>
-253            <NA>        <NA>        Wabikon   <NA>
-254            <NA>        <NA>        Wabikon   <NA>
-255            <NA>        <NA>        Wabikon   <NA>
-256            <NA>           9        Wabikon   <NA>
-257            <NA>          21        Wabikon   <NA>
-258            <NA>        <NA>        Wabikon   <NA>
-259            <NA>        <NA>        Wabikon   <NA>
-260            <NA>        <NA>        Wabikon   <NA>
-261            <NA>          32        Wabikon   <NA>
-262            <NA>          40        Wabikon   <NA>
-263            <NA>        <NA>        Wabikon   <NA>
-264            <NA>        <NA>        Wabikon   <NA>
-265            <NA>        <NA>        Wabikon   <NA>
-266            <NA>        <NA>        Wabikon   <NA>
-267            <NA>        <NA>        Wabikon   <NA>
-268            <NA>          20        Wabikon   <NA>
-269            <NA>        <NA>        Wabikon   <NA>
-270            <NA>        <NA>        Wabikon   <NA>
-271            <NA>        <NA>        Wabikon   <NA>
-272            <NA>        <NA>        Wabikon   <NA>
-273            <NA>        <NA>        Wabikon   <NA>
-274            <NA>        <NA>        Wabikon   <NA>
-275            <NA>          31        Wabikon   <NA>
-276            <NA>        <NA>        Wabikon   <NA>
-277            <NA>        <NA>        Wabikon   <NA>
-278            <NA>        <NA>        Wabikon   <NA>
-279            <NA>        <NA>        Wabikon   <NA>
-280            <NA>        <NA>        Wabikon   <NA>
-281            <NA>        <NA>        Wabikon   <NA>
-282            <NA>        <NA>        Wabikon   <NA>
-283            <NA>        <NA>        Wabikon   <NA>
-284            <NA>        <NA>        Wabikon   <NA>
-285            <NA>        <NA>        Wabikon   <NA>
-286            <NA>        <NA>        Wabikon   <NA>
-287            <NA>        <NA>        Wabikon   <NA>
-288            <NA>        <NA>        Wabikon   <NA>
-289            <NA>        <NA>     Wind River   <NA>
-290            <NA>          12     Wind River   <NA>
-291            <NA>          15     Wind River   <NA>
-292            <NA>          26     Wind River   <NA>
-293            <NA>          25     Wind River   <NA>
-294            <NA>         310     Wind River   <NA>
-295            <NA>        <NA>     Wind River   <NA>
-296            <NA>        <NA>     Wind River   <NA>
-297            <NA>        <NA>     Wind River   <NA>
-298            <NA>        <NA>     Wind River   <NA>
-299            <NA>        <NA>     Wind River   <NA>
-300            <NA>        <NA>     Wind River   <NA>
-301            <NA>        <NA>     Wind River   <NA>
-302            <NA>        <NA>     Wind River   <NA>
-303            <NA>         NRA     Wind River   <NA>
-304            <NA>          20     Wind River   <NA>
-305            <NA>        <NA>     Wind River   <NA>
-306            <NA>        <NA>     Wind River   <NA>
-307            <NA>        <NA>     Wind River   <NA>
-308            <NA>        <NA>     Wind River   <NA>
-309            <NA>        <NA>     Wind River   <NA>
-310            <NA>        <NA>     Wind River   <NA>
-311            <NA>          32     Wind River   <NA>
-312            <NA>         NRA     Wind River   <NA>
-313            <NA>         NRA     Wind River   <NA>
-314            <NA>          55     Wind River   <NA>
-315            <NA>        <NA>     Wind River   <NA>
-316            <NA>           8     Wind River   <NA>
-317            <NA>         NRA     Wind River   <NA>
-318            <NA>         NRA     Wind River   <NA>
-319            <NA>         NRA     Wind River   <NA>
-320            <NA>        <NA>   Wytham Woods   <NA>
-321            <NA>        <NA>   Wytham Woods   <NA>
-322            <NA>        <NA>   Wytham Woods   <NA>
-323            <NA>        <NA>   Wytham Woods   <NA>
-324            <NA>        <NA>   Wytham Woods   <NA>
-325            <NA>        <NA>   Wytham Woods   <NA>
-326            <NA>        <NA>   Wytham Woods   <NA>
-327            <NA>        <NA>   Wytham Woods   <NA>
-328            <NA>        <NA>   Wytham Woods   <NA>
-329            <NA>        <NA>   Wytham Woods   <NA>
-330            <NA>        <NA>   Wytham Woods   <NA>
-331            <NA>        <NA>   Wytham Woods   <NA>
-332            <NA>        <NA>   Wytham Woods   <NA>
-333            <NA>        <NA>   Wytham Woods   <NA>
-334            <NA>        <NA>   Wytham Woods   <NA>
-335            <NA>        <NA>   Wytham Woods   <NA>
-336            <NA>        <NA>   Wytham Woods   <NA>
-337            <NA>        <NA>   Wytham Woods   <NA>
-338            <NA>        <NA>   Wytham Woods   <NA>
-339            <NA>        <NA>   Wytham Woods   <NA>
-340            <NA>        <NA>   Wytham Woods   <NA>
-341            <NA>        <NA>   Wytham Woods   <NA>
-342            <NA>        <NA>   Wytham Woods   <NA>
-343            <NA>        <NA>   Wytham Woods   <NA>
-344            <NA>          26       Yosemite   <NA>
-345            <NA>          25       Yosemite   <NA>
-346            <NA>         310       Yosemite   <NA>
-347            <NA>        <NA>       Yosemite   <NA>
-348            <NA>          26       Yosemite   <NA>
-349            <NA>          25       Yosemite   <NA>
-350            <NA>         310       Yosemite   <NA>
-351            <NA>        <NA>       Yosemite   <NA>
-352            <NA>        <NA>       Yosemite   <NA>
-353            <NA>         NRA       Yosemite   <NA>
-354            <NA>        <NA>       Yosemite   <NA>
-355            <NA>         NRA       Yosemite   <NA>
-356            <NA>         NRA       Yosemite   <NA>
-357            <NA>         NRA       Yosemite   <NA>
-358            <NA>          40       Yosemite   <NA>
-359            <NA>        <NA>       Yosemite   <NA>
-360            <NA>          41       Yosemite   <NA>
-361            <NA>        <NA>       Yosemite   <NA>
-362            <NA>         NRA       Yosemite   <NA>
-363            <NA>          40       Yosemite   <NA>
-364            <NA>        <NA>       Yosemite   <NA>
-365            <NA>        <NA>       Yosemite   <NA>
-366            <NA>         561       Yosemite   <NA>
-367            <NA>        <NA>       Yosemite   <NA>
-368            <NA>        <NA>       Yosemite   <NA>
-369            <NA>        <NA>       Yosemite   <NA>
-370            <NA>        <NA>       Yosemite   <NA>
-371            <NA>        <NA>       Yosemite   <NA>
-372            <NA>         NRA       Yosemite   <NA>
-373            <NA>         NRA       Yosemite   <NA>
-374            <NA>        <NA>       Yosemite   <NA>
-375            <NA>        <NA>       Yosemite   <NA>
-376            <NA>        <NA>       Yosemite   <NA>
-377            <NA>          40       Yosemite   <NA>
-378            <NA>         144          Zofin   <NA>
-379            <NA>         240          Zofin   <NA>
-380            <NA>         240          Zofin   <NA>
-381            <NA>         240          Zofin   <NA>
-382            <NA>         240          Zofin   <NA>
-383            <NA>         144          Zofin   <NA>
-384            <NA>         240          Zofin   <NA>
-385            <NA>         240          Zofin   <NA>
-386            <NA>         240          Zofin   <NA>
-387            <NA>         240          Zofin   <NA>
-388            <NA>         240          Zofin   <NA>
-389            <NA>        <NA>           Utah   <NA>
-390            <NA>        <NA>           Utah   <NA>
-391            <NA>         221           Utah   <NA>
-392            <NA>        <NA>           Utah   <NA>
-393            <NA>          52           Utah   <NA>
-394            <NA>        <NA>           Utah   <NA>
-395            <NA>          55           Utah   <NA>
-396            <NA>        <NA>           Utah   <NA>
-397            <NA>          55           Utah   <NA>
-398            <NA>          29           Utah   <NA>
-399            <NA>         128           Utah   <NA>
-400            <NA>          18           Utah   <NA>
-401            <NA>         289           Utah   <NA>
-402            <NA>          15           Utah   <NA>
-403            <NA>          10           Utah   <NA>
-404            <NA>          14           Utah   <NA>
-405            <NA>         105           Utah   <NA>
-406            <NA>          10           Utah   <NA>
-407            <NA>          14           Utah   <NA>
-408            <NA>         105           Utah   <NA>
-409            <NA>        <NA>           Utah   <NA>
-410            <NA>         561           Utah   <NA>
-411            <NA>          20           Utah   <NA>
-412            <NA>        <NA>           Utah   <NA>
-413            <NA>         NRA           Utah   <NA>
-414            <NA>         NRA           Utah   <NA>
-415            <NA>        <NA>           Utah   <NA>
-416            <NA>          19           UMBC   <NA>
-417            <NA>          19           UMBC   <NA>
-418            <NA>          19           UMBC   <NA>
-419            <NA>        <NA>           UMBC   <NA>
-420            <NA>           9           UMBC   <NA>
-421            <NA>        <NA>           UMBC   <NA>
-422            <NA>        <NA>           UMBC   <NA>
-423            <NA>        <NA>           UMBC   <NA>
-424            <NA>        <NA>           UMBC   <NA>
-425            <NA>        <NA>           UMBC   <NA>
-426            <NA>        <NA>           UMBC   <NA>
-427            <NA>          55           UMBC   <NA>
-428            <NA>          55           UMBC   <NA>
-429            <NA>        <NA>           UMBC   <NA>
-430            <NA>        <NA>           UMBC   <NA>
-431            <NA>        <NA>           UMBC   <NA>
-432            <NA>        <NA>           UMBC   <NA>
-433            <NA>           9           UMBC   <NA>
-434            <NA>           9           UMBC   <NA>
-435            <NA>        <NA>           UMBC   <NA>
-436            <NA>        <NA>           UMBC   <NA>
-437            <NA>        <NA>           UMBC   <NA>
-438            <NA>        <NA>           UMBC   <NA>
-439            <NA>        <NA>           UMBC   <NA>
-440            <NA>          10           UMBC   <NA>
-441            <NA>        <NA>           UMBC   <NA>
-442            <NA>          10           UMBC   <NA>
-443            <NA>        <NA>           UMBC   <NA>
-444            <NA>        <NA>           UMBC   <NA>
-445            <NA>          21           UMBC   <NA>
-446            <NA>        <NA>           UMBC   <NA>
-447            <NA>          10           UMBC   <NA>
-448            <NA>          10           UMBC   <NA>
-449            <NA>          10           UMBC   <NA>
-450            <NA>          10           UMBC   <NA>
-451            <NA>          41           UMBC   <NA>
-452            <NA>        <NA>           UMBC   <NA>
-453            <NA>        <NA>           UMBC   <NA>
-454            <NA>        <NA>           UMBC   <NA>
-455            <NA>        <NA>           UMBC   <NA>
-456            <NA>        <NA>           UMBC   <NA>
-457            <NA>        <NA>           UMBC   <NA>
-458            <NA>        <NA>           UMBC   <NA>
-459            <NA>        <NA>           UMBC   <NA>
-460            <NA>          32           UMBC   <NA>
-461            <NA>          32           UMBC   <NA>
-462            <NA>        <NA>           UMBC   <NA>
-463            <NA>        <NA>           UMBC   <NA>
-464            <NA>        <NA>           UMBC   <NA>
-465            <NA>        <NA>           UMBC   <NA>
-466            <NA>          13           UMBC   <NA>
-467            <NA>        <NA>           UMBC   <NA>
-468            <NA>        <NA>           UMBC   <NA>
-469            <NA>        <NA>           UMBC   <NA>
-470            <NA>        <NA>           UMBC   <NA>
-471            <NA>        <NA>           UMBC   <NA>
-472            <NA>        <NA>           UMBC   <NA>
-473            <NA>        <NA>           UMBC   <NA>
-474            <NA>        <NA>           UMBC   <NA>
-475            <NA>        <NA>           UMBC   <NA>
-476            <NA>        <NA>           UMBC   <NA>
-477            <NA>          31           UMBC   <NA>
-478            <NA>        <NA>           UMBC   <NA>
-479            <NA>        <NA>           UMBC   <NA>
-480            <NA>        <NA>           UMBC   <NA>
-481            <NA>        <NA>           UMBC   <NA>
-482            <NA>        <NA>           UMBC   <NA>
-483            <NA>        <NA>           UMBC   <NA>
-484            <NA>        <NA>           UMBC   <NA>
-485            <NA>        <NA>           UMBC   <NA>
-486            <NA>        <NA>           UMBC   <NA>
-487            <NA>        <NA> Harvard Forest   <NA>
-488            <NA>          19 Harvard Forest   <NA>
-489            <NA>          19 Harvard Forest   <NA>
-490            <NA>        <NA> Harvard Forest   <NA>
-491            <NA>        <NA> Harvard Forest   <NA>
-492            <NA>        <NA> Harvard Forest   <NA>
-493            <NA>        <NA> Harvard Forest   <NA>
-494            <NA>        <NA> Harvard Forest   <NA>
-495            <NA>           9 Harvard Forest   <NA>
-496            <NA>           9 Harvard Forest   <NA>
-497            <NA>          21 Harvard Forest   <NA>
-498            <NA>          21 Harvard Forest   <NA>
-499            <NA>           9 Harvard Forest   <NA>
-500            <NA>        <NA> Harvard Forest   <NA>
-501            <NA>          55 Harvard Forest   <NA>
-502            <NA>        <NA> Harvard Forest   <NA>
-503            <NA>        <NA> Harvard Forest   <NA>
-504            <NA>        <NA> Harvard Forest   <NA>
-505            <NA>        <NA> Harvard Forest   <NA>
-506            <NA>        <NA> Harvard Forest   <NA>
-507            <NA>        <NA> Harvard Forest   <NA>
-508            <NA>        <NA> Harvard Forest   <NA>
-509            <NA>        <NA> Harvard Forest   <NA>
-510         species          34 Harvard Forest   <NA>
-511         species          26 Harvard Forest   <NA>
-512            <NA>          21 Harvard Forest   <NA>
-513            <NA>        <NA> Harvard Forest   <NA>
-514            <NA>        <NA> Harvard Forest   <NA>
-515            <NA>          32 Harvard Forest   <NA>
-516            <NA>        <NA> Harvard Forest   <NA>
-517            <NA>          13 Harvard Forest   <NA>
-518            <NA>          13 Harvard Forest   <NA>
-519            <NA>          13 Harvard Forest   <NA>
-520            <NA>        <NA> Harvard Forest   <NA>
-521            <NA>        <NA> Harvard Forest   <NA>
-522            <NA>        <NA> Harvard Forest   <NA>
-523            <NA>        <NA> Harvard Forest   <NA>
-524            <NA>        <NA> Harvard Forest   <NA>
-525            <NA>        <NA> Harvard Forest   <NA>
-526            <NA>        <NA> Harvard Forest   <NA>
-527            <NA>        <NA> Harvard Forest   <NA>
-528            <NA>        <NA> Harvard Forest   <NA>
-529            <NA>        <NA> Harvard Forest   <NA>
-530            <NA>        <NA> Harvard Forest   <NA>
-531            <NA>        <NA> Harvard Forest   <NA>
-532            <NA>        <NA> Harvard Forest   <NA>
-533            <NA>        <NA> Harvard Forest   <NA>
-534            <NA>        <NA> Harvard Forest   <NA>
-535            <NA>        <NA> Harvard Forest   <NA>
-536            <NA>        <NA>   Scotty Creek   <NA>
-537            <NA>        <NA>   Scotty Creek   <NA>
-538            <NA>          37   Scotty Creek   <NA>
-539            <NA>           9   Scotty Creek   <NA>
-540            <NA>           9   Scotty Creek   <NA>
-541            <NA>        <NA>   Scotty Creek   <NA>
-542            <NA>           7   Scotty Creek   <NA>
-543            <NA>          56   Scotty Creek   <NA>
-544            <NA>          61   Scotty Creek   <NA>
-545            <NA>          40   Scotty Creek   <NA>
-546            <NA>          51   Scotty Creek   <NA>
-547            <NA>          46   Scotty Creek   <NA>
-548            <NA>          56   Scotty Creek   <NA>
-549            <NA>          10   Scotty Creek   <NA>
+1              <NA>        <NA>    Lilly Dicky     NA
+2              <NA>        <NA>    Lilly Dicky     NA
+3              <NA>        <NA>    Lilly Dicky     NA
+4              <NA>        <NA>    Lilly Dicky     NA
+5              <NA>        <NA>    Lilly Dicky     NA
+6              <NA>          10    Lilly Dicky     NA
+7              <NA>          10    Lilly Dicky     NA
+8              <NA>          10    Lilly Dicky     NA
+9              <NA>        <NA>    Lilly Dicky     NA
+10             <NA>        <NA>    Lilly Dicky     NA
+11             <NA>        <NA>    Lilly Dicky     NA
+12             <NA>        <NA>    Lilly Dicky     NA
+13             <NA>        <NA>    Lilly Dicky     NA
+14             <NA>        <NA>    Lilly Dicky     NA
+15             <NA>          32    Lilly Dicky     NA
+16             <NA>          40    Lilly Dicky     NA
+17             <NA>          32    Lilly Dicky     NA
+18             <NA>          21    Lilly Dicky     NA
+19             <NA>        <NA>    Lilly Dicky     NA
+20             <NA>        <NA>    Lilly Dicky     NA
+21             <NA>        <NA>    Lilly Dicky     NA
+22             <NA>        <NA>    Lilly Dicky     NA
+23             <NA>        <NA>    Lilly Dicky     NA
+24             <NA>        <NA>    Lilly Dicky     NA
+25             <NA>        <NA>    Lilly Dicky     NA
+26             <NA>          29    Lilly Dicky     NA
+27             <NA>        <NA>    Lilly Dicky     NA
+28             <NA>        <NA>    Lilly Dicky     NA
+29             <NA>        <NA>    Lilly Dicky     NA
+30          species          19    Lilly Dicky     NA
+31          species          34    Lilly Dicky     NA
+32          species          26    Lilly Dicky     NA
+33             <NA>        <NA>    Lilly Dicky     NA
+34          species           9    Lilly Dicky     NA
+35          species           9    Lilly Dicky     NA
+36             <NA>          41    Lilly Dicky     NA
+37             <NA>        <NA>    Lilly Dicky     NA
+38             <NA>        <NA>    Lilly Dicky     NA
+39             <NA>        <NA>    Lilly Dicky     NA
+40             <NA>        <NA>           SCBI     NA
+41             <NA>        <NA>           SCBI     NA
+42             <NA>        <NA>           SCBI     NA
+43             <NA>        <NA>           SCBI     NA
+44             <NA>        <NA>           SCBI     NA
+45             <NA>        <NA>           SCBI     NA
+46             <NA>        <NA>           SCBI     NA
+47             <NA>        <NA>           SCBI     NA
+48             <NA>          10           SCBI     NA
+49             <NA>          10           SCBI     NA
+50             <NA>          10           SCBI     NA
+51             <NA>          10           SCBI     NA
+52             <NA>        <NA>           SCBI     NA
+53             <NA>        <NA>           SCBI     NA
+54             <NA>        <NA>           SCBI     NA
+55             <NA>        <NA>           SCBI     NA
+56             <NA>        <NA>           SCBI     NA
+57             <NA>        <NA>           SCBI     NA
+58             <NA>        <NA>           SCBI     NA
+59             <NA>        <NA>           SCBI     NA
+60             <NA>        <NA>           SCBI     NA
+61             <NA>        <NA>           SCBI     NA
+62             <NA>        <NA>           SCBI     NA
+63             <NA>        <NA>           SCBI     NA
+64             <NA>        <NA>           SCBI     NA
+65             <NA>        <NA>           SCBI     NA
+66             <NA>        <NA>           SCBI     NA
+67             <NA>          21           SCBI     NA
+68             <NA>        <NA>           SCBI     NA
+69             <NA>        <NA>           SCBI     NA
+70             <NA>        <NA>           SCBI     NA
+71             <NA>        <NA>           SCBI     NA
+72             <NA>        <NA>           SCBI     NA
+73             <NA>          20           SCBI     NA
+74             <NA>        <NA>           SCBI     NA
+75             <NA>        <NA>           SCBI     NA
+76             <NA>        <NA>           SCBI     NA
+77             <NA>        <NA>           SCBI     NA
+78             <NA>        <NA>           SCBI     NA
+79             <NA>        <NA>           SCBI     NA
+80             <NA>        <NA>           SCBI     NA
+81             <NA>        <NA>           SCBI     NA
+82             <NA>        <NA>           SCBI     NA
+83             <NA>          29           SCBI     NA
+84             <NA>        <NA>           SCBI     NA
+85             <NA>        <NA>           SCBI     NA
+86             <NA>        <NA>           SCBI     NA
+87             <NA>        <NA>           SCBI     NA
+88             <NA>        <NA>           SCBI     NA
+89             <NA>        <NA>           SCBI     NA
+90          species          19           SCBI     NA
+91          species          26           SCBI     NA
+92          species           9           SCBI     NA
+93          species           9           SCBI     NA
+94             <NA>          32           SCBI     NA
+95             <NA>          26           SCBI     NA
+96             <NA>          26           SCBI     NA
+97             <NA>          26           SCBI     NA
+98             <NA>        <NA>           SCBI     NA
+99             <NA>          41           SCBI     NA
+100            <NA>        <NA>           SCBI     NA
+101            <NA>        <NA>           SCBI     NA
+102            <NA>        <NA>           SCBI     NA
+103            <NA>          19           SCBI     NA
+104            <NA>          19           SCBI     NA
+105            <NA>          19           SCBI     NA
+106            <NA>        <NA>           SERC     NA
+107            <NA>        <NA>           SERC     NA
+108            <NA>        <NA>           SERC     NA
+109            <NA>        <NA>           SERC     NA
+110            <NA>        <NA>           SERC     NA
+111            <NA>        <NA>           SERC     NA
+112            <NA>        <NA>           SERC     NA
+113            <NA>        <NA>           SERC     NA
+114            <NA>        <NA>           SERC     NA
+115            <NA>        <NA>           SERC     NA
+116            <NA>          10           SERC     NA
+117            <NA>          10           SERC     NA
+118            <NA>          10           SERC     NA
+119            <NA>          10           SERC     NA
+120            <NA>        <NA>           SERC     NA
+121            <NA>        <NA>           SERC     NA
+122            <NA>        <NA>           SERC     NA
+123            <NA>        <NA>           SERC     NA
+124            <NA>        <NA>           SERC     NA
+125            <NA>        <NA>           SERC     NA
+126            <NA>        <NA>           SERC     NA
+127            <NA>          32           SERC     NA
+128            <NA>        <NA>           SERC     NA
+129            <NA>        <NA>           SERC     NA
+130            <NA>        <NA>           SERC     NA
+131            <NA>        <NA>           SERC     NA
+132            <NA>        <NA>           SERC     NA
+133            <NA>        <NA>           SERC     NA
+134            <NA>        <NA>           SERC     NA
+135            <NA>        <NA>           SERC     NA
+136            <NA>        <NA>           SERC     NA
+137            <NA>        <NA>           SERC     NA
+138            <NA>          20           SERC     NA
+139            <NA>        <NA>           SERC     NA
+140            <NA>        <NA>           SERC     NA
+141            <NA>        <NA>           SERC     NA
+142            <NA>        <NA>           SERC     NA
+143            <NA>        <NA>           SERC     NA
+144            <NA>        <NA>           SERC     NA
+145            <NA>        <NA>           SERC     NA
+146            <NA>        <NA>           SERC     NA
+147            <NA>        <NA>           SERC     NA
+148            <NA>          10           SERC     NA
+149            <NA>        <NA>           SERC     NA
+150            <NA>        <NA>           SERC     NA
+151            <NA>        <NA>           SERC     NA
+152            <NA>        <NA>           SERC     NA
+153            <NA>        <NA>           SERC     NA
+154            <NA>        <NA>           SERC     NA
+155            <NA>        <NA>           SERC     NA
+156            <NA>        <NA>           SERC     NA
+157         species          26           SERC     NA
+158            <NA>        <NA>           SERC     NA
+159            <NA>        <NA>           SERC     NA
+160            <NA>          32           SERC     NA
+161            <NA>        <NA>           SERC     NA
+162            <NA>        <NA>           SERC     NA
+163            <NA>          41           SERC     NA
+164            <NA>        <NA>           SERC     NA
+165            <NA>        <NA>           SERC     NA
+166            <NA>        <NA>           SERC     NA
+167            <NA>        <NA>           SERC     NA
+168            <NA>        <NA>           SERC     NA
+169            <NA>          19           SERC     NA
+170            <NA>          19           SERC     NA
+171            <NA>          19           SERC     NA
+172            <NA>        <NA>          Tyson     NA
+173            <NA>        <NA>          Tyson     NA
+174            <NA>        <NA>          Tyson     NA
+175            <NA>        <NA>          Tyson     NA
+176            <NA>        <NA>          Tyson     NA
+177            <NA>        <NA>          Tyson     NA
+178            <NA>          10          Tyson     NA
+179            <NA>          10          Tyson     NA
+180            <NA>        <NA>          Tyson     NA
+181            <NA>          10          Tyson     NA
+182            <NA>          10          Tyson     NA
+183            <NA>          10          Tyson     NA
+184            <NA>        <NA>          Tyson     NA
+185            <NA>        <NA>          Tyson     NA
+186            <NA>        <NA>          Tyson     NA
+187            <NA>        <NA>          Tyson     NA
+188            <NA>        <NA>          Tyson     NA
+189            <NA>        <NA>          Tyson     NA
+190            <NA>        <NA>          Tyson     NA
+191            <NA>        <NA>          Tyson     NA
+192            <NA>          32          Tyson     NA
+193            <NA>          40          Tyson     NA
+194            <NA>        <NA>          Tyson     NA
+195            <NA>        <NA>          Tyson     NA
+196            <NA>        <NA>          Tyson     NA
+197            <NA>        <NA>          Tyson     NA
+198            <NA>          20          Tyson     NA
+199            <NA>        <NA>          Tyson     NA
+200            <NA>        <NA>          Tyson     NA
+201            <NA>        <NA>          Tyson     NA
+202            <NA>        <NA>          Tyson     NA
+203            <NA>        <NA>          Tyson     NA
+204            <NA>        <NA>          Tyson     NA
+205            <NA>        <NA>          Tyson     NA
+206            <NA>          29          Tyson     NA
+207            <NA>        <NA>          Tyson     NA
+208            <NA>          29          Tyson     NA
+209            <NA>        <NA>          Tyson     NA
+210            <NA>          29          Tyson     NA
+211            <NA>          29          Tyson     NA
+212         species          19          Tyson     NA
+213         species          34          Tyson     NA
+214         species          26          Tyson     NA
+215            <NA>          41          Tyson     NA
+216            <NA>        <NA>          Tyson     NA
+217            <NA>        <NA>          Tyson     NA
+218            <NA>        <NA>          Tyson     NA
+219            <NA>        <NA>           UCSC     NA
+220            <NA>          31           UCSC     NA
+221            <NA>          11           UCSC     NA
+222            <NA>          11           UCSC     NA
+223            <NA>        <NA>           UCSC     NA
+224            <NA>         NRA           UCSC     NA
+225            <NA>        <NA>           UCSC     NA
+226            <NA>        <NA>           UCSC     NA
+227            <NA>        <NA>           UCSC     NA
+228            <NA>        <NA>           UCSC     NA
+229            <NA>        <NA>           UCSC     NA
+230            <NA>        <NA>           UCSC     NA
+231            <NA>        <NA>           UCSC     NA
+232            <NA>        <NA>           UCSC     NA
+233            <NA>        <NA>           UCSC     NA
+234            <NA>        <NA>           UCSC     NA
+235            <NA>        <NA>           UCSC     NA
+236            <NA>         561           UCSC     NA
+237            <NA>        <NA>           UCSC     NA
+238            <NA>        <NA>           UCSC     NA
+239            <NA>        <NA>           UCSC     NA
+240            <NA>        <NA>           UCSC     NA
+241            <NA>        <NA>           UCSC     NA
+242            <NA>         NRA           UCSC     NA
+243            <NA>        <NA>           UCSC     NA
+244            <NA>        <NA>           UCSC     NA
+245            <NA>        <NA>           UCSC     NA
+246            <NA>          14           UCSC     NA
+247            <NA>         NRA           UCSC     NA
+248            <NA>        <NA>        Wabikon     NA
+249            <NA>          41        Wabikon     NA
+250            <NA>        <NA>        Wabikon     NA
+251            <NA>        <NA>        Wabikon     NA
+252            <NA>          41        Wabikon     NA
+253            <NA>        <NA>        Wabikon     NA
+254            <NA>        <NA>        Wabikon     NA
+255            <NA>        <NA>        Wabikon     NA
+256            <NA>           9        Wabikon     NA
+257            <NA>          21        Wabikon     NA
+258            <NA>        <NA>        Wabikon     NA
+259            <NA>        <NA>        Wabikon     NA
+260            <NA>        <NA>        Wabikon     NA
+261            <NA>          32        Wabikon     NA
+262            <NA>          40        Wabikon     NA
+263            <NA>        <NA>        Wabikon     NA
+264            <NA>        <NA>        Wabikon     NA
+265            <NA>        <NA>        Wabikon     NA
+266            <NA>        <NA>        Wabikon     NA
+267            <NA>        <NA>        Wabikon     NA
+268            <NA>          20        Wabikon     NA
+269            <NA>        <NA>        Wabikon     NA
+270            <NA>        <NA>        Wabikon     NA
+271            <NA>        <NA>        Wabikon     NA
+272            <NA>        <NA>        Wabikon     NA
+273            <NA>        <NA>        Wabikon     NA
+274            <NA>        <NA>        Wabikon     NA
+275            <NA>          31        Wabikon     NA
+276            <NA>        <NA>        Wabikon     NA
+277            <NA>        <NA>        Wabikon     NA
+278            <NA>        <NA>        Wabikon     NA
+279            <NA>        <NA>        Wabikon     NA
+280            <NA>        <NA>        Wabikon     NA
+281            <NA>        <NA>        Wabikon     NA
+282            <NA>        <NA>        Wabikon     NA
+283            <NA>        <NA>        Wabikon     NA
+284            <NA>        <NA>        Wabikon     NA
+285            <NA>        <NA>        Wabikon     NA
+286            <NA>        <NA>        Wabikon     NA
+287            <NA>        <NA>        Wabikon     NA
+288            <NA>        <NA>        Wabikon     NA
+289            <NA>        <NA>     Wind River     NA
+290            <NA>          12     Wind River     NA
+291            <NA>          15     Wind River     NA
+292            <NA>          26     Wind River     NA
+293            <NA>          25     Wind River     NA
+294            <NA>         310     Wind River     NA
+295            <NA>        <NA>     Wind River     NA
+296            <NA>        <NA>     Wind River     NA
+297            <NA>        <NA>     Wind River     NA
+298            <NA>        <NA>     Wind River     NA
+299            <NA>        <NA>     Wind River     NA
+300            <NA>        <NA>     Wind River     NA
+301            <NA>        <NA>     Wind River     NA
+302            <NA>        <NA>     Wind River     NA
+303            <NA>         NRA     Wind River     NA
+304            <NA>          20     Wind River     NA
+305            <NA>        <NA>     Wind River     NA
+306            <NA>        <NA>     Wind River     NA
+307            <NA>        <NA>     Wind River     NA
+308            <NA>        <NA>     Wind River     NA
+309            <NA>        <NA>     Wind River     NA
+310            <NA>        <NA>     Wind River     NA
+311            <NA>          32     Wind River     NA
+312            <NA>         NRA     Wind River     NA
+313            <NA>         NRA     Wind River     NA
+314            <NA>          55     Wind River     NA
+315            <NA>        <NA>     Wind River     NA
+316            <NA>           8     Wind River     NA
+317            <NA>         NRA     Wind River     NA
+318            <NA>         NRA     Wind River     NA
+319            <NA>         NRA     Wind River     NA
+320            <NA>        <NA>   Wytham Woods     NA
+321            <NA>        <NA>   Wytham Woods     NA
+322            <NA>        <NA>   Wytham Woods     NA
+323            <NA>        <NA>   Wytham Woods     NA
+324            <NA>        <NA>   Wytham Woods     NA
+325            <NA>        <NA>   Wytham Woods     NA
+326            <NA>        <NA>   Wytham Woods     NA
+327            <NA>        <NA>   Wytham Woods     NA
+328            <NA>        <NA>   Wytham Woods     NA
+329            <NA>        <NA>   Wytham Woods     NA
+330            <NA>        <NA>   Wytham Woods     NA
+331            <NA>        <NA>   Wytham Woods     NA
+332            <NA>        <NA>   Wytham Woods     NA
+333            <NA>        <NA>   Wytham Woods     NA
+334            <NA>        <NA>   Wytham Woods     NA
+335            <NA>        <NA>   Wytham Woods     NA
+336            <NA>        <NA>   Wytham Woods     NA
+337            <NA>        <NA>   Wytham Woods     NA
+338            <NA>        <NA>   Wytham Woods     NA
+339            <NA>        <NA>   Wytham Woods     NA
+340            <NA>        <NA>   Wytham Woods     NA
+341            <NA>        <NA>   Wytham Woods     NA
+342            <NA>        <NA>   Wytham Woods     NA
+343            <NA>        <NA>   Wytham Woods     NA
+344            <NA>          26       Yosemite     NA
+345            <NA>          25       Yosemite     NA
+346            <NA>         310       Yosemite     NA
+347            <NA>        <NA>       Yosemite     NA
+348            <NA>          26       Yosemite     NA
+349            <NA>          25       Yosemite     NA
+350            <NA>         310       Yosemite     NA
+351            <NA>        <NA>       Yosemite     NA
+352            <NA>        <NA>       Yosemite     NA
+353            <NA>         NRA       Yosemite     NA
+354            <NA>        <NA>       Yosemite     NA
+355            <NA>         NRA       Yosemite     NA
+356            <NA>         NRA       Yosemite     NA
+357            <NA>         NRA       Yosemite     NA
+358            <NA>          40       Yosemite     NA
+359            <NA>        <NA>       Yosemite     NA
+360            <NA>          41       Yosemite     NA
+361            <NA>        <NA>       Yosemite     NA
+362            <NA>         NRA       Yosemite     NA
+363            <NA>          40       Yosemite     NA
+364            <NA>        <NA>       Yosemite     NA
+365            <NA>        <NA>       Yosemite     NA
+366            <NA>         561       Yosemite     NA
+367            <NA>        <NA>       Yosemite     NA
+368            <NA>        <NA>       Yosemite     NA
+369            <NA>        <NA>       Yosemite     NA
+370            <NA>        <NA>       Yosemite     NA
+371            <NA>        <NA>       Yosemite     NA
+372            <NA>         NRA       Yosemite     NA
+373            <NA>         NRA       Yosemite     NA
+374            <NA>        <NA>       Yosemite     NA
+375            <NA>        <NA>       Yosemite     NA
+376            <NA>        <NA>       Yosemite     NA
+377            <NA>          40       Yosemite     NA
+378            <NA>         144          Zofin     NA
+379            <NA>         240          Zofin     NA
+380            <NA>         240          Zofin     NA
+381            <NA>         240          Zofin     NA
+382            <NA>         240          Zofin     NA
+383            <NA>         144          Zofin     NA
+384            <NA>         240          Zofin     NA
+385            <NA>         240          Zofin     NA
+386            <NA>         240          Zofin     NA
+387            <NA>         240          Zofin     NA
+388            <NA>         240          Zofin     NA
+389            <NA>        <NA>           Utah     NA
+390            <NA>        <NA>           Utah     NA
+391            <NA>         221           Utah     NA
+392            <NA>        <NA>           Utah     NA
+393            <NA>          52           Utah     NA
+394            <NA>        <NA>           Utah     NA
+395            <NA>          55           Utah     NA
+396            <NA>        <NA>           Utah     NA
+397            <NA>          55           Utah     NA
+398            <NA>          29           Utah     NA
+399            <NA>         128           Utah     NA
+400            <NA>          18           Utah     NA
+401            <NA>         289           Utah     NA
+402            <NA>          15           Utah     NA
+403            <NA>          10           Utah     NA
+404            <NA>          14           Utah     NA
+405            <NA>         105           Utah     NA
+406            <NA>          10           Utah     NA
+407            <NA>          14           Utah     NA
+408            <NA>         105           Utah     NA
+409            <NA>        <NA>           Utah     NA
+410            <NA>         561           Utah     NA
+411            <NA>          20           Utah     NA
+412            <NA>        <NA>           Utah     NA
+413            <NA>         NRA           Utah     NA
+414            <NA>         NRA           Utah     NA
+415            <NA>        <NA>           Utah     NA
+416            <NA>          19           UMBC     NA
+417            <NA>          19           UMBC     NA
+418            <NA>          19           UMBC     NA
+419            <NA>        <NA>           UMBC     NA
+420            <NA>           9           UMBC     NA
+421            <NA>        <NA>           UMBC     NA
+422            <NA>        <NA>           UMBC     NA
+423            <NA>        <NA>           UMBC     NA
+424            <NA>        <NA>           UMBC     NA
+425            <NA>        <NA>           UMBC     NA
+426            <NA>        <NA>           UMBC     NA
+427            <NA>          55           UMBC     NA
+428            <NA>          55           UMBC     NA
+429            <NA>        <NA>           UMBC     NA
+430            <NA>        <NA>           UMBC     NA
+431            <NA>        <NA>           UMBC     NA
+432            <NA>        <NA>           UMBC     NA
+433            <NA>           9           UMBC     NA
+434            <NA>           9           UMBC     NA
+435            <NA>        <NA>           UMBC     NA
+436            <NA>        <NA>           UMBC     NA
+437            <NA>        <NA>           UMBC     NA
+438            <NA>        <NA>           UMBC     NA
+439            <NA>        <NA>           UMBC     NA
+440            <NA>          10           UMBC     NA
+441            <NA>        <NA>           UMBC     NA
+442            <NA>          10           UMBC     NA
+443            <NA>        <NA>           UMBC     NA
+444            <NA>        <NA>           UMBC     NA
+445            <NA>          21           UMBC     NA
+446            <NA>        <NA>           UMBC     NA
+447            <NA>          10           UMBC     NA
+448            <NA>          10           UMBC     NA
+449            <NA>          10           UMBC     NA
+450            <NA>          10           UMBC     NA
+451            <NA>          41           UMBC     NA
+452            <NA>        <NA>           UMBC     NA
+453            <NA>        <NA>           UMBC     NA
+454            <NA>        <NA>           UMBC     NA
+455            <NA>        <NA>           UMBC     NA
+456            <NA>        <NA>           UMBC     NA
+457            <NA>        <NA>           UMBC     NA
+458            <NA>        <NA>           UMBC     NA
+459            <NA>        <NA>           UMBC     NA
+460            <NA>          32           UMBC     NA
+461            <NA>          32           UMBC     NA
+462            <NA>        <NA>           UMBC     NA
+463            <NA>        <NA>           UMBC     NA
+464            <NA>        <NA>           UMBC     NA
+465            <NA>        <NA>           UMBC     NA
+466            <NA>          13           UMBC     NA
+467            <NA>        <NA>           UMBC     NA
+468            <NA>        <NA>           UMBC     NA
+469            <NA>        <NA>           UMBC     NA
+470            <NA>        <NA>           UMBC     NA
+471            <NA>        <NA>           UMBC     NA
+472            <NA>        <NA>           UMBC     NA
+473            <NA>        <NA>           UMBC     NA
+474            <NA>        <NA>           UMBC     NA
+475            <NA>        <NA>           UMBC     NA
+476            <NA>        <NA>           UMBC     NA
+477            <NA>          31           UMBC     NA
+478            <NA>        <NA>           UMBC     NA
+479            <NA>        <NA>           UMBC     NA
+480            <NA>        <NA>           UMBC     NA
+481            <NA>        <NA>           UMBC     NA
+482            <NA>        <NA>           UMBC     NA
+483            <NA>        <NA>           UMBC     NA
+484            <NA>        <NA>           UMBC     NA
+485            <NA>        <NA>           UMBC     NA
+486            <NA>        <NA>           UMBC     NA
+487            <NA>        <NA> Harvard Forest     NA
+488            <NA>          19 Harvard Forest     NA
+489            <NA>          19 Harvard Forest     NA
+490            <NA>        <NA> Harvard Forest     NA
+491            <NA>        <NA> Harvard Forest     NA
+492            <NA>        <NA> Harvard Forest     NA
+493            <NA>        <NA> Harvard Forest     NA
+494            <NA>        <NA> Harvard Forest     NA
+495            <NA>           9 Harvard Forest     NA
+496            <NA>           9 Harvard Forest     NA
+497            <NA>          21 Harvard Forest     NA
+498            <NA>          21 Harvard Forest     NA
+499            <NA>           9 Harvard Forest     NA
+500            <NA>        <NA> Harvard Forest     NA
+501            <NA>          55 Harvard Forest     NA
+502            <NA>        <NA> Harvard Forest     NA
+503            <NA>        <NA> Harvard Forest     NA
+504            <NA>        <NA> Harvard Forest     NA
+505            <NA>        <NA> Harvard Forest     NA
+506            <NA>        <NA> Harvard Forest     NA
+507            <NA>        <NA> Harvard Forest     NA
+508            <NA>        <NA> Harvard Forest     NA
+509            <NA>        <NA> Harvard Forest     NA
+510         species          34 Harvard Forest     NA
+511         species          26 Harvard Forest     NA
+512            <NA>          21 Harvard Forest     NA
+513            <NA>        <NA> Harvard Forest     NA
+514            <NA>        <NA> Harvard Forest     NA
+515            <NA>          32 Harvard Forest     NA
+516            <NA>        <NA> Harvard Forest     NA
+517            <NA>          13 Harvard Forest     NA
+518            <NA>          13 Harvard Forest     NA
+519            <NA>          13 Harvard Forest     NA
+520            <NA>        <NA> Harvard Forest     NA
+521            <NA>        <NA> Harvard Forest     NA
+522            <NA>        <NA> Harvard Forest     NA
+523            <NA>        <NA> Harvard Forest     NA
+524            <NA>        <NA> Harvard Forest     NA
+525            <NA>        <NA> Harvard Forest     NA
+526            <NA>        <NA> Harvard Forest     NA
+527            <NA>        <NA> Harvard Forest     NA
+528            <NA>        <NA> Harvard Forest     NA
+529            <NA>        <NA> Harvard Forest     NA
+530            <NA>        <NA> Harvard Forest     NA
+531            <NA>        <NA> Harvard Forest     NA
+532            <NA>        <NA> Harvard Forest     NA
+533            <NA>        <NA> Harvard Forest     NA
+534            <NA>        <NA> Harvard Forest     NA
+535            <NA>        <NA> Harvard Forest     NA
+536            <NA>        <NA>   Scotty Creek     NA
+537            <NA>        <NA>   Scotty Creek     NA
+538            <NA>          37   Scotty Creek     NA
+539            <NA>           9   Scotty Creek     NA
+540            <NA>           9   Scotty Creek     NA
+541            <NA>        <NA>   Scotty Creek     NA
+542            <NA>           7   Scotty Creek     NA
+543            <NA>          56   Scotty Creek     NA
+544            <NA>          61   Scotty Creek     NA
+545            <NA>          40   Scotty Creek     NA
+546            <NA>          51   Scotty Creek     NA
+547            <NA>          46   Scotty Creek     NA
+548            <NA>          56   Scotty Creek     NA
+549            <NA>          10   Scotty Creek     NA

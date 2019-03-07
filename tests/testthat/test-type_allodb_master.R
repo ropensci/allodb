@@ -14,9 +14,9 @@ test_that("has same names as `master` (#62)", {
 
 
 
-context("type_allodb_master")
+context("set_type")
 
-test_that("creates objects of the expected class 'allodb'", {
+test_that("set_type creates objects of the expected class 'allodb'", {
   wsg <- allodb::wsg
   out <- set_type(wsg)
   expect_is(out, "allodb")
@@ -25,7 +25,7 @@ test_that("creates objects of the expected class 'allodb'", {
 })
 
 
-test_that("Numeric variables are of correct type (#46)", {
+test_that("set_type sets numeric variables of correct type (#46)", {
   library(dplyr)
   library(purrr)
 
