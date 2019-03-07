@@ -45,25 +45,25 @@
 21                                                                                                                             Warning or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected
 22                                                                                                                                             Unique reference identification number for biomass equation source. Links to Reference table.
    Column_type                 Field_codes Units Range
-1         <NA>                        <NA>    NA    NA
-2    character                        <NA>    NA    NA
-3    character                        <NA>    NA    NA
-4    character                        <NA>    NA    NA
-5    character                        <NA>    NA    NA
-6    character                        <NA>    NA    NA
-7    character                        <NA>    NA    NA
-8      numeric                        <NA>    NA    NA
-9      numeric                        <NA>    NA    NA
-10     integer                        <NA>    NA    NA
-11   character                        <NA>    NA    NA
-12   character                        <NA>    NA    NA
-13   character              harvest; lidar    NA    NA
-14   character                        <NA>    NA    NA
-15   character NRA - Not Readily Available    NA    NA
-16     numeric         0 - false; 1 - true    NA    NA
-17     numeric         0 - false; 1 - true    NA    NA
-18     numeric                        <NA>    NA    NA
-19   character                        <NA>    NA    NA
-20   character         0 - false; 1 - true    NA    NA
-21   character                        <NA>    NA    NA
-22   character                        <NA>    NA    NA
+1         <NA>                        <NA>  <NA>  <NA>
+2    character                        <NA>  <NA>  <NA>
+3    character                        <NA>  <NA>  <NA>
+4    character                        <NA>  <NA>  <NA>
+5    character                        <NA>  <NA>  <NA>
+6    character                        <NA>  <NA>  <NA>
+7    character                        <NA>  <NA>  <NA>
+8      numeric                        <NA>  <NA>  <NA>
+9      numeric                        <NA>  <NA>  <NA>
+10     integer                        <NA>  <NA>  <NA>
+11   character                        <NA>  <NA>  <NA>
+12   character                        <NA>  <NA>  <NA>
+13   character              harvest; lidar  <NA>  <NA>
+14   character                        <NA>  <NA>  <NA>
+15   character NRA - Not Readily Available  <NA>  <NA>
+16     numeric         0 - false; 1 - true  <NA>  <NA>
+17     numeric         0 - false; 1 - true  <NA>  <NA>
+18     numeric                        <NA>  <NA>  <NA>
+19   character                        <NA>  <NA>  <NA>
+20   character         0 - false; 1 - true  <NA>  <NA>
+21   character                        <NA>  <NA>  <NA>
+22   character                        <NA>  <NA>  <NA>
