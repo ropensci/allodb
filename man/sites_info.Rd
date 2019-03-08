@@ -4,7 +4,7 @@
 \name{sites_info}
 \alias{sites_info}
 \title{Table of information on sites from tropical forests.}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 63 rows and 12 columns.}
+\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 63 rows and 12 columns.}
 \source{
 Ervan Rutishauser (er.rutishauser@gmail.com), received on Sat,
 Oct 28, 2017 at 4:05 AM.

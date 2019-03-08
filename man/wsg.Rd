@@ -5,7 +5,7 @@
 \alias{wsg}
 \alias{wsg_metadata}
 \title{Tables of wood density and associated metadata.}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 549 rows and 8 columns.}
+\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 549 rows and 8 columns.}
 \usage{
 wsg
 
