@@ -35,8 +35,8 @@ Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above stump),Expert,7
 Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Total aboveground biomass,Expert,4b8afb,Quercus velutina,Species,0.55,7.76,NA,NA,species
 Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
 Lilly Dicky,Anacardiaceae,Rhus typhina,899,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Stem and branches (live),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,species
-Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Stem and branches (live),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,species
+Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,species
+Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Stem (wood and bark),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,species
 Lilly Dicky,Lauraceae,Sassafras albidum,931,Tree,Whole tree (above stump),Expert,c13e0f,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
 Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Stem and branches (live),Expert,3f99ba,Tilia americana,Species,5.08,50.8,NA,NA,NA
 Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
@@ -100,8 +100,8 @@ SCBI,Fagaceae,Quercus muehlenbergii,qumu,Tree,Stem and branches (live),Expert,76
 SCBI,Fagaceae,Quercus rubra,quru,Tree,Stem and branches (live),Expert,839012,Quercus rubra,Species,5.08,50.8,NA,NA,NA
 SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above stump),Expert,7640f0,Quercus velutina,Species,5.08,40.64,NA,NA,species
 SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
-SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem and branches (live),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,species
-SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem and branches (live),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,species
+SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,species
+SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem (wood and bark),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,species
 SCBI,Rosaceae,Rosa multiflora,romu,Shrub,Total aboveground biomass,Expert,a1646f,Rosa,Genus,0.2,1.2,NA,NA,NA
 SCBI,Rosaceae,Rubus allegheniensis,rual,Shrub,Total aboveground biomass,Expert,b61369,Rubus idaeus,Species,0.3,0.9,NA,NA,NA
 SCBI,Rosaceae,Rubus pensilvanicus,rupe,Shrub,Total aboveground biomass,Expert,b61369,Rubus idaeus,Species,0.3,0.9,NA,NA,NA
@@ -486,8 +486,8 @@ UMBC,Elaeagnaceae,Elaeagnus angustifolia,NA,"Shrub, small tree",Total abovegroun
 UMBC,Fabaceae,Gleditsia triacanthos,NA,Tree,Total aboveground biomass,Generic,7f7777,Fabaceae,Family,4,42,NA,NA,NA
 UMBC,Fabaceae,Gleditsia triacanthos,NA,Tree,Stem and branches (live),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,NA
 UMBC,Fabaceae,Gleditsia triacanthos,NA,Tree,Stem and branches (live),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,NA
-UMBC,Fabaceae,Robinia pseudoacacia,NA,Tree,Stem and branches (live),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,NA
-UMBC,Fabaceae,Robinia pseudoacacia,NA,Tree,Stem and branches (live),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,NA
+UMBC,Fabaceae,Robinia pseudoacacia,NA,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,NA
+UMBC,Fabaceae,Robinia pseudoacacia,NA,Tree,Stem (wood and bark),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,NA
 UMBC,Fabaceae,Cercis canadensis,NA,Tree,Total aboveground biomass,Generic,7f7777,Fabaceae,Family,4,42,NA,NA,NA
 UMBC,Fagaceae,Quercus sp.,NA,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
 UMBC,Fagaceae,Fagus grandifolia,NA,Tree,Total aboveground biomass,Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
@@ -624,8 +624,8 @@ Michigan Big Woods,Cupressaceae,Juniperus virginiana,,Tree,Total aboveground bio
 Michigan Big Woods,Cupressaceae,Thuja occidentalis,,Tree,Whole tree (above stump),Expert,c078ca,Thuja occidentalis,Species,2.5,40,NA,NA,NA
 Michigan Big Woods,Elaeagnaceae,Elaeagnus umbellata,,"Shrub, small tree",Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 Michigan Big Woods,Ericaceae,Vaccinium corymbosum,,Shrub,Total aboveground biomass,Generic,f08fff,Ericaceae,Family,3,64,NA,NA,NA
-Michigan Big Woods,Fabaceae,Robinia pseudoacacia,,Tree,Stem and branches (live),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,NA
-Michigan Big Woods,Fabaceae,Robinia pseudoacacia,,Tree,Stem and branches (live),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,NA
+Michigan Big Woods,Fabaceae,Robinia pseudoacacia,,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,NA
+Michigan Big Woods,Fabaceae,Robinia pseudoacacia,,Tree,Stem (wood and bark),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,NA
 Michigan Big Woods,Fagaceae,Fagus grandifolia,,Tree,Total aboveground biomass,Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
 Michigan Big Woods,Fagaceae,Quercus alba,,Tree,Stem and branches (live),Expert,07dba7,Quercus alba,Species,5.08,50.8,NA,NA,NA
 Michigan Big Woods,Fagaceae,Quercus rubra,,Tree,Total aboveground biomass,Expert,82e78c,Quercus rubra,Species,2.8,69.5,NA,NA,NA
