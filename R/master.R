@@ -20,12 +20,20 @@
 #' View(master())
 #' }
 master <- function(.f = dplyr::full_join) {
-  message(
-    "Joining `allodb::equations` with `allodb::sitespecies` by 'equation_id'.\n",
-    "Then joining with `allodb::sites_info` by 'site'."
+  vars <- c(
+    "equation_id",
+    "dependent_variable_biomass_component",
+    "allometry_specificity",
+    "dbh_min_cm",
+    "dbh_max_cm"
   )
+  message(sprintf(
+    "Joining `allodb::equations` with `allodb::sitespecies` by:\n %s.",
+    paste0(vars, collapse = ", ")
+  ))
+  message("Then joining with `allodb::sites_info` by 'site'.")
   suppressMessages({
-    eqn_site <- .f(allodb::equations, allodb::sitespecies, by = "equation_id")
+    eqn_site <- .f(allodb::equations, allodb::sitespecies, by = vars)
     .f(eqn_site, allodb::sites_info, by = "site")
   })
 }
