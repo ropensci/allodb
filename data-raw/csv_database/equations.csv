@@ -41,7 +41,6 @@ jenkins_2004_cdod,2.3626*(dbh^2.4798),973c05,a*(dbh^b),Stem and branches (live),
 ter-mikaelian_1997_befs,0.1634*(dbh^2.348),0edaff,a*(dbh^b),Total aboveground biomass,DBH,Species,"Upper Great Lakes, USA",4,32,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,1.0259*(dbh^2.7324),34fe5a,a*(dbh^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,inch,lbs,harvest,NA,NA,NA,0,NA,NA,NA,NA
 smith_1983_abef,51.996*(dba^2.77),28dce6,a*(dba^b),Total aboveground biomass,DBA,Species,Canada,0.12,0.69,20,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
-jenkins_2004_cdod,1.5416*(dbh^2)^2.7818,8da09d,a*(dbh^2)^b,Stem and branches (live),DBH,Species,"North Carolina, USA",14.48,25.4,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,exp(5.2831+2.0369*log(dbh)),21800b,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Species,Eastern USA,1,55,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,10^(1.83+2.464*(log10(dbh))),6ea81f,10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Species,"North Carolina, USA",3.5,35.6,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,1.8082*(dbh^2.6174),508dfe,a*(dbh^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA

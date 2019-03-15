@@ -78,7 +78,7 @@ SCBI,Juglandaceae,Juglans nigra,juni,Tree,Total aboveground biomass,Generic,7f77
 SCBI,Lauraceae,Lindera benzoin,libe,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
 SCBI,Magnoliaceae,Liriodendron tulipifera,litu,Tree,Stem and branches (live),Expert,34fe5a,Liriodendron tulipifera,Species,5.08,50.8,NA,NA,NA
 SCBI,Caprifoliaceae,Lonicera maackii,loma,Shrub,Total aboveground biomass,Expert,28dce6,Lonicera canadensis,Species,0.12,0.69,NA,NA,NA
-SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Stem and branches (live),Expert,8da09d,Nyssa sylvatica,Species,14.48,25.4,NA,NA,NA
+SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Total aboveground biomass,Expert,e8ebc2,Nyssa sylvatica,Species,4.06,12.45,NA,NA,NA
 SCBI,Paulowniaceae,Paulownia tomentosa,pato,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SCBI,Pinaceae,Pinus pungens,pipu,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
 SCBI,Pinaceae,Pinus strobus,pist,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
