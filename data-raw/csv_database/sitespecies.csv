@@ -111,7 +111,7 @@ SCBI,Lauraceae,Sassafras albidum,saal,Tree,Whole tree (above stump),Expert,2c092
 SCBI,Malvaceae,Tilia americana,tiam,Tree,Stem and branches (live),Expert,3f99ba,Tilia americana,Species,5.08,50.8,NA,NA,NA
 SCBI,Malvaceae,Tilia americana,tiam,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
 SCBI,Ulmaceae,Ulmus americana,ulam,Tree,Whole tree (above stump),Expert,8eca60,Ulmus,Genus,2.54,27.43,NA,NA,NA
-SCBI,Ulmaceae,Ulmus rubra,ulru,Tree,Stem and branches (live),Expert,455839,Ulmus,Genus,2.54,27.43,NA,NA,NA
+SCBI,Ulmaceae,Ulmus rubra,ulru,Tree,Stem and branches (live),Expert,8eca60,Ulmus,Genus,2.54,27.43,NA,NA,NA
 SCBI,Adoxaceae,Viburnum acerifolium,viac,Shrub,Total aboveground biomass,Expert,5e2dea,Virburnum lantanoides,Species,0.28,1.59,NA,NA,NA
 SCBI,Adoxaceae,Viburnum prunifolium,vipr,Shrub,Total aboveground biomass,Expert,5e2dea,Virburnum lantanoides,Species,0.28,1.59,NA,NA,NA
 SCBI,Adoxaceae,Viburnum recognitum,vire,Shrub,Total aboveground biomass,Expert,5e2dea,Virburnum lantanoides,Species,0.28,1.59,NA,NA,NA
@@ -185,7 +185,7 @@ SERC,Lauraceae,Sassafras albidum,SAAL5,Tree,Whole tree (above stump),Expert,2c09
 SERC,Malvaceae,Tilia americana,TIAM,Tree,Stem and branches (live),Expert,bebe2e,Tilia americana,Species,1.6,10,NA,NA,NA
 SERC,Malvaceae,Tilia americana,TIAM,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
 SERC,Ulmaceae,Ulmus americana,ULAM,Tree,Whole tree (above stump),Expert,8eca60,Ulmus,Genus,2.54,27.43,NA,NA,NA
-SERC,Ulmaceae,Ulmus rubra,ULRU,Tree,Stem and branches (live),Expert,455839,Ulmus,Genus,2.54,27.43,NA,NA,NA
+SERC,Ulmaceae,Ulmus rubra,ULRU,Tree,Stem and branches (live),Expert,8eca60,Ulmus,Genus,2.54,27.43,NA,NA,NA
 SERC,Ericaceae,Vaccinium corymbosum,VACO,Shrub,Total aboveground biomass,Generic,f08fff,Ericaceae,Family,3,64,NA,NA,NA
 SERC,Ericaceae,Vaccinium sp.,VACCI,Shrub,Total aboveground biomass,Generic,f08fff,Ericaceae,Family,3,64,NA,NA,NA
 SERC,Adoxaceae,Viburnum acerifolium,VIAC,Shrub,Total aboveground biomass,Expert,5e2dea,Virburnum lantanoides,Species,0.28,1.59,NA,NA,NA
