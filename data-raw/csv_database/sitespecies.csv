@@ -79,6 +79,8 @@ SCBI,Lauraceae,Lindera benzoin,libe,Shrub,Total aboveground biomass,Generic,f08f
 SCBI,Magnoliaceae,Liriodendron tulipifera,litu,Tree,Stem and branches (live),Expert,34fe5a,Liriodendron tulipifera,Species,5.08,50.8,NA,NA,NA
 SCBI,Caprifoliaceae,Lonicera maackii,loma,Shrub,Total aboveground biomass,Expert,28dce6,Lonicera canadensis,Species,0.12,0.69,NA,NA,NA
 SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Total aboveground biomass,Expert,e8ebc2,Nyssa sylvatica,Species,4.06,12.45,NA,NA,NA
+SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Stem (wood and bark),Expert,380d95,Nyssa sylvatica,Species,14.478,25.4,NA,NA,NA
+SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Stem (wood and bark),Expert,23ab74,Nyssa sylvatica,Species,30.48,45.212,NA,NA,NA
 SCBI,Paulowniaceae,Paulownia tomentosa,pato,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SCBI,Pinaceae,Pinus pungens,pipu,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
 SCBI,Pinaceae,Pinus strobus,pist,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
@@ -152,6 +154,8 @@ SERC,Magnoliaceae,Liriodendron tulipifera,LITU,Tree,Total aboveground biomass,Ex
 SERC,Caprifoliaceae,Lonicera maackii,LOMA6,Shrub,Total aboveground biomass,Expert,28dce6,Lonicera canadensis,Species,0.12,0.69,NA,NA,NA
 SERC,Moraceae,Morus rubra,MORU2,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SERC,Nyssaceae,Nyssa sylvatica,NYSY,Tree,Total aboveground biomass,Expert,e8ebc2,Nyssa sylvatica,Species,4.06,12.45,NA,NA,NA
+SERC,Nyssaceae,Nyssa sylvatica,NYSY,Tree,Stem (wood and bark),Expert,380d95,Nyssa sylvatica,Species,14.478,25.4,NA,NA,NA
+SERC,Nyssaceae,Nyssa sylvatica,NYSY,Tree,Stem (wood and bark),Expert,23ab74,Nyssa sylvatica,Species,30.48,45.212,NA,NA,NA
 SERC,Scrophulariaceae,Paulownia tomentosa,PATO2,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SERC,Pinaceae,Pinus taeda,PITA,Tree,Total aboveground biomass,Expert,6ea81f,Pinus taeda,Species,3.5,35.6,NA,NA,NA
 SERC,Pinaceae,Pinus virginiana,PIVI2,Tree,Total aboveground biomass,Expert,6ea81f,Pinus taeda,Species,3.5,35.6,NA,NA,NA
@@ -510,6 +514,8 @@ UMBC,Moraceae,Maclura pomifera,NA,Tree,Total aboveground biomass,Generic,ae65ed,
 UMBC,Moraceae,Morus rubra,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Moraceae,Morus alba,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Nyssaceae,Nyssa sylvatica,NA,Tree,Total aboveground biomass,Expert,e8ebc2,Nyssa sylvatica,Species,4.06,12.45,NA,NA,NA
+UMBC,Nyssaceae,Nyssa sylvatica,NA,Tree,Stem (wood and bark),Expert,380d95,Nyssa sylvatica,Species,14.478,25.4,NA,NA,NA
+UMBC,Nyssaceae,Nyssa sylvatica,NA,Tree,Stem (wood and bark),Expert,23ab74,Nyssa sylvatica,Species,30.48,45.212,NA,NA,NA
 UMBC,Oleaceae,Fraxinus sp.,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 UMBC,Oleaceae,Fraxinus americana,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 UMBC,Oleaceae,Fraxinus pennsylvanica,NA,Tree,Whole tree (above stump),Expert,b521bd,Fraxinus pennsylvanica,Species,2.54,27.69,NA,NA,NA
