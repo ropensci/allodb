@@ -83,7 +83,8 @@ SCBI,Paulowniaceae,Paulownia tomentosa,pato,Tree,Total aboveground biomass,Gener
 SCBI,Pinaceae,Pinus pungens,pipu,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
 SCBI,Pinaceae,Pinus strobus,pist,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
 SCBI,Pinaceae,Pinus virginiana,pivi,Tree,Total aboveground biomass,Expert,6ea81f,Pinus taeda,Species,3.5,35.6,NA,NA,NA
-SCBI,Platanaceae,Platanus occidentalis,ploc,Tree,Stem and branches (live),Expert,d7f1a6,Platanus occidentalis,Species,27.94,49.53,NA,NA,NA
+SCBI,Platanaceae,Platanus occidentalis,PLOC,Tree,Whole tree (above stump),Expert,73325b,Platanus occidentalis,Species,4.83,23.88,NA,NA,NA
+SCBI,Platanaceae,Platanus occidentalis,PLOC,Tree,Whole tree (above stump),Expert,0a1212,Platanus occidentalis,Species,24.94,49.53,NA,NA,NA
 SCBI,Rosaceae,Prunus avium,prav,Tree,Stem and branches (live),Expert,508dfe,Prunus serotina,Species,5.08,50.8,NA,NA,NA
 SCBI,Rosaceae,Prunus persica,prpe,Tree,Stem and branches (live),Expert,508dfe,Prunus serotina,Species,5.08,50.8,NA,NA,NA
 SCBI,Rosaceae,Prunus serotina,prse,Tree,Stem and branches (live),Expert,508dfe,Prunus serotina,Species,5.08,50.8,NA,NA,NA
@@ -219,6 +220,7 @@ Tyson,Rosaceae,Malus ioensis,malioe,Shrub,Total aboveground biomass,Generic,f08f
 Tyson,Moraceae,Morus rubra,morrub,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 Tyson,Betulaceae,Ostrya virginiana,ostvir,Tree,Stem and branches (live),Expert,289f7c,Ostrya virginiana,Species,1,9,NA,NA,NA
 Tyson,Betulaceae,Ostrya virginiana,ostvir,Tree,Foliage total,Expert,b9d4fc,Ostrya virginiana,Species,1,9,NA,NA,NA
+Tyson,Platanaceae,Platanus occidentalis,plaocc,Tree,Whole tree (above stump),Expert,73325b,Platanus occidentalis,Species,4.83,23.88,NA,NA,NA
 Tyson,Platanaceae,Platanus occidentalis,plaocc,Tree,Whole tree (above stump),Expert,0a1212,Platanus occidentalis,Species,24.94,49.53,NA,NA,NA
 Tyson,Rosaceae,Prunus americana,pruame,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 Tyson,Rosaceae,Prunus serotina,pruser,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
@@ -515,6 +517,7 @@ UMBC,Oleaceae,Ligustrum amurense,NA,Tree,Total aboveground biomass,Generic,ae65e
 UMBC,Paulowniaceae,Paulownia tomentosa,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Pinaceae,Pinus thunbergii,NA,Tree,Total aboveground biomass,Expert,21800b,Pinus strobus,Species,1,55,NA,NA,NA
 UMBC,Pinaceae,Picea abies,NA,Tree,Total aboveground biomass,Expert,e2c7c7,Picea glauca,Species,2.54,25.4,NA,NA,NA
+UMBC,Platanaceae,Platanus occidentalis,NA,Tree,Whole tree (above stump),Expert,73325b,Platanus occidentalis,Species,4.83,23.88,NA,NA,NA
 UMBC,Platanaceae,Platanus occidentalis,NA,Tree,Whole tree (above stump),Expert,0a1212,Platanus occidentalis,Species,24.94,49.53,NA,NA,NA
 UMBC,Rosaceae,Malus coronaria,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 UMBC,Rosaceae,Malus sylvestris,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA

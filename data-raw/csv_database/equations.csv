@@ -44,7 +44,6 @@ smith_1983_abef,51.996*(dba^2.77),28dce6,a*(dba^b),Total aboveground biomass,DBA
 jenkins_2004_cdod,1.5416*(dbh^2)^2.7818,8da09d,a*(dbh^2)^b,Stem and branches (live),DBH,Species,"North Carolina, USA",14.48,25.4,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,exp(5.2831+2.0369*log(dbh)),21800b,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Species,Eastern USA,1,55,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,10^(1.83+2.464*(log10(dbh))),6ea81f,10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Species,"North Carolina, USA",3.5,35.6,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
-jenkins_2004_cdod,2.49193*(dbh^2)^2.7727,d7f1a6,a*(dbh^2)^b,Stem and branches (live),DBH,Species,Piedmont (Southeastern USA),27.94,49.53,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,1.8082*(dbh^2.6174),508dfe,a*(dbh^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,2.30252*(dbh^2)^1.6839,81397c,a*(dbh^2)^b,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),5.84,25.4,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,2.23731*(dbh^2)^1.26394,6943b4,a*(dbh^2)^b,Whole tree (above stump),DBH,Species,Piedmont (Southeastern USA),27.94,47.75,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
