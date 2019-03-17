@@ -9,7 +9,7 @@ Lilly Dicky,Betulaceae,Carpinus caroliniana,391,Tree,Total aboveground biomass,G
 Lilly Dicky,Juglandaceae,Carya alba,409,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Lilly Dicky,Juglandaceae,Carya cordiformis,402,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Lilly Dicky,Juglandaceae,Carya glabra,403,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
-Lilly Dicky,Juglandaceae,Carya ovata,407,Tree,Stem and branches (live),Expert,7913b8,Carya ovata,Species,5.08,50.8,NA,NA,NA
+Lilly Dicky,Juglandaceae,Carya ovata,407,Tree,Stem and branches (live),Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Lilly Dicky,Cannabaceae,Celtis occidentalis,462,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 Lilly Dicky,Fabaceae,Cercis canadensis,471,Tree,Total aboveground biomass,Generic,7f7777,Fabaceae,Family,4,42,NA,NA,NA
 Lilly Dicky,Cornaceae,Cornus florida,491,Tree,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
@@ -201,7 +201,7 @@ Tyson,Rosaceae,Amelanchier arborea,amearb,Tree,Foliage total,Expert,529234,Amela
 Tyson,Annonaceae,Asimina triloba,asitri,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 Tyson,Juglandaceae,Carya cordiformis,carcor,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Tyson,Juglandaceae,Carya glabra,cargla,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
-Tyson,Juglandaceae,Carya ovata,carova,Tree,Stem and branches (live),Expert,7913b8,Carya ovata,Species,5.08,50.8,NA,NA,NA
+Tyson,Juglandaceae,Carya ovata,carova,Tree,Stem and branches (live),Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Tyson,Juglandaceae,Carya sp.,carsp,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Tyson,Juglandaceae,Carya texana,cartex,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Tyson,Juglandaceae,Carya tomentosa,cartom,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
@@ -640,7 +640,7 @@ Michigan Big Woods,Grossulariaceae,Ribes cynosbati,NA,Shrub,Total aboveground bi
 Michigan Big Woods,Hamamelidaceae,Hamamelis virginiana,NA,Shrub,Total aboveground biomass,Expert,76aa3c,Hamamelis virginiana,Species,0.18,4.31,NA,NA,NA
 Michigan Big Woods,Juglandaceae,Carya cordiformis,NA,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Michigan Big Woods,Juglandaceae,Carya glabra,NA,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
-Michigan Big Woods,Juglandaceae,Carya ovata,NA,Tree,Stem and branches (live),Expert,7913b8,Carya ovata,Species,5.08,50.8,NA,NA,NA
+Michigan Big Woods,Juglandaceae,Carya ovata,NA,Tree,Stem and branches (live),Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
 Michigan Big Woods,Juglandaceae,Juglans nigra,NA,Tree,Total aboveground biomass,Generic,7f7777,Juglandaceae,Family,4,42,NA,NA,NA
 Michigan Big Woods,Lauraceae,Lindera benzoin,NA,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
 Michigan Big Woods,Lauraceae,Sassafras albidum,NA,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
