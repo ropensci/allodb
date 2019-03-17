@@ -18,7 +18,8 @@ jenkins_2004_cdod,10^(1.1468+2.363*(log10(dbh^2))),8c94e8,10^(a+b*(log10(dbh^c))
 jenkins_2004_cdod,exp(4.89+2.3*log(dbh)),289f7c,exp(a+b*log(dbh)),Stem (wood and bark),DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA
 jenkins_2004_cdod,exp(1.92+1.86*log(dbh)),b9d4fc,exp(a+b*log(dbh)),Foliage total,DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA
 jenkins_2004_cdod,10^(1.1981+1.5876*(log10(dbh))),8aecca,10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.37,6.83,NA,cm,g,harvest,NA,NA,NA,1,1.017,NA,NA,NA
-jenkins_2004_cdod,2.93819*(dbh^2)^1.19746,76df22,a*(dbh^2)^b,Whole tree (above stump),DBH,Species,Southeast USA,3.81,11.938,24,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
+jenkins_2004_cdod,2.93819*(dbh^2)^1.19746,76df22,a*(dbh^2)^b,Whole tree (above stump),DBH,Species,Southeast USA,3.81,11.94,24,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
+jenkins_2004_cdod,10^(-1.587+2.91*(log10(dbh))),e94dab,10^(a+b*(log10(dbh))),Whole tree (above stump),DBH,Species,"North Carolina, USA",10.6,57.5,10,cm,kg,harvest,NA,NA,NA,1,NA,NA,NA,NA
 jenkins_2004_cdod,2.4601*(dbh^2.4572),839012,a*(dbh^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 williams_1984_bpef,10^(1.3069+1.3593*(log10(dbh^2))),4b8afb,10^(a+b*(log10(dbh^c))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.55,7.76,34,cm,g,harvest,linear,NA,1,1,1.006,NA,NA,NA
 jenkins_2004_cdod,10^(1.00005+2.10621*(log10(dbh))),c70dea,10^(a+b*(log10(dbh))),Whole tree (above and belowground),DBH,Species,"North Carolina, Kentucky, Tennessee, USA",30.48,88.9,26,inch,lbs,harvest,linear,NA,1,0,NA,NA,0,No specific location of sampled trees is given in publication. Geographic area may be too broad.
