@@ -14,7 +14,7 @@ Lilly Dicky,Cannabaceae,Celtis occidentalis,462,Tree,Total aboveground biomass,G
 Lilly Dicky,Fabaceae,Cercis canadensis,471,Tree,Total aboveground biomass,Generic,7f7777,Fabaceae,Family,4,42,NA,NA,NA
 Lilly Dicky,Cornaceae,Cornus florida,491,Tree,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
 Lilly Dicky,Rosaceae,Crataegus sp.,500,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
-Lilly Dicky,Fagaceae,Fagus grandifolia,531,Tree,Stem and branches (live),Expert,74186d,Fagus grandifolia,Species,5.08,50.8,NA,NA,NA
+Lilly Dicky,Fagaceae,Fagus grandifolia,531,Tree,Stem and branches (live),Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
 Lilly Dicky,Oleaceae,Fraxinus americana,541,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 Lilly Dicky,Oleaceae,Fraxinus americana,541,Tree,Whole tree (above stump),Expert,e3f3bf,Fraxinus americana,Species,0.5,6.14,NA,NA,NA
 Lilly Dicky,Oleaceae,Fraxinus pennsylvanica,544,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
@@ -67,7 +67,7 @@ SCBI,Rosaceae,Crataegus pruinosa,crpr,Shrub,Total aboveground biomass,Generic,f0
 SCBI,Ebenaceae,Diospyros virginiana,divi,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SCBI,Elaeagnaceae,Elaeagnus umbellata,elum,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SCBI,Celastraceae,Euonymus alatus,eual,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-SCBI,Fagaceae,Fagus grandifolia,fagr,Tree,Stem and branches (live),Expert,74186d,Fagus grandifolia,Species,5.08,50.8,NA,NA,NA
+SCBI,Fagaceae,Fagus grandifolia,fagr,Tree,Stem and branches (live),Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
 SCBI,Oleaceae,Fraxinus americana,fram,Tree,Stem and branches (live),Expert,973c05,Fraxinus americana,Species,5.08,50.8,NA,NA,NA
 SCBI,Oleaceae,Fraxinus nigra,frni,Tree,Total aboveground biomass,Expert,0edaff,Fraxinus nigra,Species,4,32,NA,NA,NA
 SCBI,Oleaceae,Fraxinus pennsylvanica,frpe,Tree,Total aboveground biomass,Expert,0edaff,Fraxinus nigra,Species,4,32,NA,NA,NA

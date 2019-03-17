@@ -9,7 +9,6 @@ martin_1998_aban,10^(-1.326+2.762*(log10(dbh))),9c4cc9,10^(a+b*(log10(dbh))),Tot
 chojnacky_2014_ugbe,exp(-2.5095+2.5437*log(dbh)),7f7777,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Family,North America,4,42,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,exp(5.67+1.97*log(dbh)),cf733d,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Species,"Ohio, USA",1.85,7.25,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 chojnacky_2014_ugbe,exp(-2.2118+2.4133*log(dbh)),f08fff,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,64,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
-jenkins_2004_cdod,2.0394*(dbh^2.5715),74186d,a*(dbh^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,inch,lbs,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,3.203+(-0.234*dbh)+0.006*(dbh^2),122ba6,a+(b*dbh)+c*(dbh^d),Whole tree (above stump),DBH,Species,"New York, USA",25,550,32,mm,kg,harvest,NA,NA,NA,0,NA,NA,0,NA
 jenkins_2004_cdod,10^(1.2784+1.4248*(log10(dbh^2))),e3f3bf,10^(a+b*(log10(dbh^c))),Whole tree (above stump),DBH,Species,"Ohio, USA",0.5,6.14,40,cm,g,harvest,NA,NA,NA,1,1.015,NA,NA,NA
 smith_1983_abef,38.111*(dba^2.9),76aa3c,a*(dba^b),Total aboveground biomass,DBA,Species,Canada,0.18,4.31,21,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
