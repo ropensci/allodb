@@ -166,7 +166,7 @@ SERC,Rosaceae,Prunus avium,PRAV,Tree,Total aboveground biomass,Expert,8aecca,Pru
 SERC,Rosaceae,Prunus serotina,PRSE2,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 SERC,Fagaceae,Quercus alba,QUAL,Tree,Total aboveground biomass,Expert,524aca,Quercus alba,Species,7,63,NA,NA,NA
 SERC,Fagaceae,Quercus coccinea,QUCO2,Tree,Total aboveground biomass,Expert,162ce7,Quercus coccinea,Species,15,43.3,NA,NA,NA
-SERC,Fagaceae,Quercus falcata,QUFA,Tree,Whole tree (above stump),Expert,0cc678,Quercus falcata,Species,5.84,25.4,NA,NA,NA
+SERC,Fagaceae,Quercus falcata,QUFA,Tree,Whole tree (above stump),Expert,81397c,Quercus falcata,Species,5.84,25.4,NA,NA,NA
 SERC,Fagaceae,Quercus falcata,QUFA,Tree,Whole tree (above stump),Expert,6943b4,Quercus falcata,Species,27.94,47.75,NA,NA,NA
 SERC,Fagaceae,Quercus michauxii,QUMI,Tree,Stem and branches (live),Expert,76df22,Quercus prinus,Species,5.08,50.8,NA,NA,NA
 SERC,Fagaceae,Quercus montana,QUMO4,Tree,Total aboveground biomass,Expert,f21996,Quercus montana,Species,10.6,57.5,NA,NA,NA
@@ -492,6 +492,7 @@ UMBC,Fabaceae,Cercis canadensis,NA,Tree,Total aboveground biomass,Generic,7f7777
 UMBC,Fagaceae,Quercus sp.,NA,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
 UMBC,Fagaceae,Fagus grandifolia,NA,Tree,Total aboveground biomass,Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
 UMBC,Fagaceae,Quercus coccinea,NA,Tree,Total aboveground biomass,Expert,162ce7,Quercus coccinea,Species,15,43.3,NA,NA,NA
+UMBC,Fagaceae,Quercus falcata,NA,Tree,Whole tree (above stump),Expert,81397c,Quercus falcata,Species,5.84,25.4,NA,NA,NA
 UMBC,Fagaceae,Quercus falcata,NA,Tree,Whole tree (above stump),Expert,6943b4,Quercus falcata,Species,27.94,47.75,NA,NA,NA
 UMBC,Fagaceae,Quercus macrocarpa,NA,Tree,Total aboveground biomass,Expert,524aca,Quercus alba,Species,7,63,NA,NA,NA
 UMBC,Fagaceae,Quercus palustris,NA,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
