@@ -31,7 +31,7 @@ Lilly Dicky,Fagaceae,Quercus alba,802,Tree,Stem and branches (live),Expert,07dba
 Lilly Dicky,Fagaceae,Quercus coccinea,806,Tree,Stem and branches (live),Expert,cb0353,Quercus coccinea,Species,5.08,40.64,NA,NA,NA
 Lilly Dicky,Fagaceae,Quercus prinus,832,Tree,Stem and branches (live),Expert,76df22,Quercus prinus,Species,5.08,50.8,NA,NA,NA
 Lilly Dicky,Fagaceae,Quercus rubra,833,Tree,Stem and branches (live),Expert,839012,Quercus rubra,Species,5.08,50.8,NA,NA,NA
-Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above stump),Expert,7640f0,Quercus velutina,Species,5.08,40.64,NA,NA,species
+Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above stump),Expert,23ec05,Quercus velutina,Species,7.62,30.48,NA,NA,species
 Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Total aboveground biomass,Expert,4b8afb,Quercus velutina,Species,0.55,7.76,NA,NA,species
 Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
 Lilly Dicky,Anacardiaceae,Rhus typhina,899,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
@@ -98,7 +98,7 @@ SCBI,Fagaceae,Quercus michauxii,qumi,Tree,Stem and branches (live),Expert,76df22
 SCBI,Fagaceae,Quercus montana,qupr,Tree,Stem and branches (live),Expert,76df22,Quercus montana,Species,5.08,50.8,NA,NA,NA
 SCBI,Fagaceae,Quercus muehlenbergii,qumu,Tree,Stem and branches (live),Expert,76df22,Quercus prinus,Species,5.08,50.8,NA,NA,NA
 SCBI,Fagaceae,Quercus rubra,quru,Tree,Stem and branches (live),Expert,839012,Quercus rubra,Species,5.08,50.8,NA,NA,NA
-SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above stump),Expert,7640f0,Quercus velutina,Species,5.08,40.64,NA,NA,species
+SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above stump),Expert,23ec05,Quercus velutina,Species,7.62,30.48,NA,NA,species
 SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
 SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,species
 SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem (wood and bark),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,species
@@ -235,7 +235,7 @@ Tyson,Fagaceae,Quercus muehlenbergii,quemue,Tree,Stem and branches (live),Expert
 Tyson,Fagaceae,Quercus rubra,querub,Tree,Stem and branches (live),Expert,839012,Quercus rubra,Species,5.08,50.8,NA,NA,NA
 Tyson,Fagaceae,Quercus sp.,quesp,Tree,Stem and branches (live),Expert,07dba7,Quercus alba,Species,5.08,50.8,NA,NA,NA
 Tyson,Fagaceae,Quercus stellata,queste,Tree,Stem and branches (live),Expert,07dba7,Quercus stellata,Species,5.08,50.8,NA,NA,NA
-Tyson,Fagaceae,Quercus velutina,quevel,Tree,Whole tree (above stump),Expert,7640f0,Quercus velutina,Species,5.08,40.64,NA,NA,species
+Tyson,Fagaceae,Quercus velutina,quevel,Tree,Whole tree (above stump),Expert,23ec05,Quercus velutina,Species,7.62,30.48,NA,NA,species
 Tyson,Fagaceae,Quercus velutina,quevel,Tree,Total aboveground biomass,Expert,4b8afb,Quercus velutina,Species,0.55,7.76,NA,NA,species
 Tyson,Fagaceae,Quercus velutina,quevel,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
 Tyson,Lauraceae,Sassafras albidum,sasalb,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
@@ -569,6 +569,7 @@ Harvard Forest,Fagaceae,Fagus grandifolia,NA,Tree,Total aboveground biomass,Expe
 Harvard Forest,Fagaceae,Quercus rubra,NA,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
 Harvard Forest,Fagaceae,Quercus unknown,NA,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
 Harvard Forest,Fagaceae,Quercus velutina,NA,Tree,Total aboveground biomass,Expert,4b8afb,Quercus velutina,Species,0.55,7.76,NA,NA,species
+Harvard Forest,Fagaceae,Quercus velutina,NA,Tree,Whole tree (above stump),Expert,23ec05,Quercus velutina,Species,7.62,30.48,NA,NA,species
 Harvard Forest,Fagaceae,Quercus velutina,NA,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
 Harvard Forest,Hamamelidaceae,Hamamelis virginiana,NA,Shrub,Total aboveground biomass,Expert,76aa3c,Hamamelis virginiana,Species,0.18,4.31,NA,NA,NA
 Harvard Forest,Lauraceae,Lindera benzoin,NA,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
@@ -608,56 +609,57 @@ Scotty Creek,Pinaceae,Picea mariana,NA,Tree,Total aboveground biomass,Expert,b47
 Scotty Creek,Pinaceae,Pinus banksiana,NA,Tree,Total aboveground biomass,Expert,7901c0,Pinus banksiana,Species,0.3,17,NA,NA,NA
 Scotty Creek,Pinaceae,Pinus banksiana,NA,Tree,Total aboveground biomass,Expert,a5de78,Pinus banksiana,Species,5,35,NA,NA,NA
 Scotty Creek,Salicaceae,Salix sp.,NA,Tree,Total aboveground biomass,Expert,390a5a,Salix,Genus,0.3,1,NA,NA,NA
-Michigan Big Woods,Adoxaceae,Sambucus canadensis,,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Michigan Big Woods,Aquifoliaceae,Ilex verticillata,,Shrub,Total aboveground biomass,Generic,f08fff,Aquifoliaceae,Family,3,64,NA,NA,NA
-Michigan Big Woods,Betulaceae,Betula alleghaniensis,,Tree,Whole tree (above stump),Expert,382ee9,Betula alleghaniensis,Species,2.5,40,NA,NA,NA
-Michigan Big Woods,Betulaceae,Carpinus caroliniana,,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Michigan Big Woods,Betulaceae,Corylus americana,,"Shrub, small tree",Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Michigan Big Woods,Betulaceae,Ostrya virginiana,,Tree,Stem and branches (live),Expert,289f7c,Ostrya virginiana,Species,1,9,NA,NA,NA
-Michigan Big Woods,Betulaceae,Ostrya virginiana,,Tree,Foliage total,Expert,b9d4fc,Ostrya virginiana,Species,1,9,NA,NA,NA
-Michigan Big Woods,Cornaceae,Cornus alternifolia,,Tree,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
-Michigan Big Woods,Cornaceae,Cornus amomum,,Shrub,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
-Michigan Big Woods,Cornaceae,Cornus florida,,Tree,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
-Michigan Big Woods,Cornaceae,Cornus racemosa,,Shrub,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
-Michigan Big Woods,Cupressaceae,Juniperus communis,,Shrub,Total aboveground biomass,Generic,c8f882,Cupressaceae,Family,3,109,NA,NA,NA
-Michigan Big Woods,Cupressaceae,Juniperus virginiana,,Tree,Total aboveground biomass,Generic,c8f882,Cupressaceae,Family,3,109,NA,NA,NA
-Michigan Big Woods,Cupressaceae,Thuja occidentalis,,Tree,Whole tree (above stump),Expert,c078ca,Thuja occidentalis,Species,2.5,40,NA,NA,NA
-Michigan Big Woods,Elaeagnaceae,Elaeagnus umbellata,,"Shrub, small tree",Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Michigan Big Woods,Ericaceae,Vaccinium corymbosum,,Shrub,Total aboveground biomass,Generic,f08fff,Ericaceae,Family,3,64,NA,NA,NA
-Michigan Big Woods,Fabaceae,Robinia pseudoacacia,,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,NA
-Michigan Big Woods,Fabaceae,Robinia pseudoacacia,,Tree,Stem (wood and bark),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,NA
-Michigan Big Woods,Fagaceae,Fagus grandifolia,,Tree,Total aboveground biomass,Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
-Michigan Big Woods,Fagaceae,Quercus alba,,Tree,Stem and branches (live),Expert,07dba7,Quercus alba,Species,5.08,50.8,NA,NA,NA
-Michigan Big Woods,Fagaceae,Quercus rubra,,Tree,Total aboveground biomass,Expert,82e78c,Quercus rubra,Species,2.8,69.5,NA,NA,NA
-Michigan Big Woods,Fagaceae,Quercus velutina,,Tree,Total aboveground biomass,Expert,4b8afb,Quercus velutina,Species,0.55,7.76,NA,NA,NA
-Michigan Big Woods,Fagaceae,Quercus velutina,,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,NA
-Michigan Big Woods,Fagaceae,Quercus x hawkinsiae,,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
-Michigan Big Woods,Fagaceae,Quercus x palaeolithicola,,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
-Michigan Big Woods,Grossulariaceae,Ribes cynosbati,,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Michigan Big Woods,Hamamelidaceae,Hamamelis virginiana,,Shrub,Total aboveground biomass,Expert,76aa3c,Hamamelis virginiana,Species,0.18,4.31,NA,NA,NA
-Michigan Big Woods,Juglandaceae,Carya cordiformis,,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
-Michigan Big Woods,Juglandaceae,Carya glabra,,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
-Michigan Big Woods,Juglandaceae,Carya ovata,,Tree,Stem and branches (live),Expert,7913b8,Carya ovata,Species,5.08,50.8,NA,NA,NA
-Michigan Big Woods,Juglandaceae,Juglans nigra,,Tree,Total aboveground biomass,Generic,7f7777,Juglandaceae,Family,4,42,NA,NA,NA
-Michigan Big Woods,Lauraceae,Lindera benzoin,,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
-Michigan Big Woods,Lauraceae,Sassafras albidum,,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
-Michigan Big Woods,Oleaceae,Fraxinus americana,,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
-Michigan Big Woods,Rosaceae,Amelanchier arborea,,Tree,Stem biomass (with bark),Expert,c59e03,Amelanchier,Genus,8.9,25.4,NA,NA,NA
-Michigan Big Woods,Rosaceae,Amelanchier arborea,,Tree,"Branches (live, dead)",Expert,96c0af,Amelanchier,Genus,5,45,NA,NA,NA
-Michigan Big Woods,Rosaceae,Amelanchier arborea,,Tree,Foliage total,Expert,529234,Amelanchier,Genus,5,45,NA,NA,NA
-Michigan Big Woods,Rosaceae,Malus sp,,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
-Michigan Big Woods,Rosaceae,Prunus serotina,,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
-Michigan Big Woods,Rosaceae,Prunus virginiana,,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
-Michigan Big Woods,Rosaceae,Pyrus sp,,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
-Michigan Big Woods,Rutaceae,Zanthoxylum americanum,,"Shrub, small tree",Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Michigan Big Woods,Salicaceae,Populus grandidentata,,Tree,Total aboveground biomass,Expert,3172f7,Populus grandidentata,Species,0.68,7.49,NA,NA,NA
-Michigan Big Woods,Sapindaceae,Acer rubrum,,Tree,Total aboveground biomass,Expert,5084bd,Acer rubrum,Species,3.1,24.6,NA,NA,NA
-Michigan Big Woods,Sapindaceae,Acer rubrum,,Tree,Total aboveground biomass,Expert,138258,Acer rubrum,Species,10,52.2,NA,NA,NA
-Michigan Big Woods,Sapindaceae,Acer saccharum,,Tree,Total aboveground biomass,Expert,77e37e,Acer saccharum,Species,7.5,23.7,NA,NA,NA
-Michigan Big Woods,Simaroubaceae,Ailanthus altissima,,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Michigan Big Woods,Tiliaceae,Tilia americana,,Tree,Stem and branches (live),Expert,bebe2e,Tilia americana,Species,1.6,10,NA,NA,NA
-Michigan Big Woods,Tiliaceae,Tilia americana,,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
-Michigan Big Woods,Ulmaceae,Ulmus americana,,Tree,Whole tree (above stump),Expert,2473f9,Ulmus americana,Species,2.5,40,NA,NA,NA
+Michigan Big Woods,Adoxaceae,Sambucus canadensis,NA,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+Michigan Big Woods,Aquifoliaceae,Ilex verticillata,NA,Shrub,Total aboveground biomass,Generic,f08fff,Aquifoliaceae,Family,3,64,NA,NA,NA
+Michigan Big Woods,Betulaceae,Betula alleghaniensis,NA,Tree,Whole tree (above stump),Expert,382ee9,Betula alleghaniensis,Species,2.5,40,NA,NA,NA
+Michigan Big Woods,Betulaceae,Carpinus caroliniana,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+Michigan Big Woods,Betulaceae,Corylus americana,NA,"Shrub, small tree",Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+Michigan Big Woods,Betulaceae,Ostrya virginiana,NA,Tree,Stem and branches (live),Expert,289f7c,Ostrya virginiana,Species,1,9,NA,NA,NA
+Michigan Big Woods,Betulaceae,Ostrya virginiana,NA,Tree,Foliage total,Expert,b9d4fc,Ostrya virginiana,Species,1,9,NA,NA,NA
+Michigan Big Woods,Cornaceae,Cornus alternifolia,NA,Tree,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
+Michigan Big Woods,Cornaceae,Cornus amomum,NA,Shrub,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
+Michigan Big Woods,Cornaceae,Cornus florida,NA,Tree,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
+Michigan Big Woods,Cornaceae,Cornus racemosa,NA,Shrub,Total aboveground biomass,Expert,cf733d,Cornus florida,Species,1.85,7.25,NA,NA,NA
+Michigan Big Woods,Cupressaceae,Juniperus communis,NA,Shrub,Total aboveground biomass,Generic,c8f882,Cupressaceae,Family,3,109,NA,NA,NA
+Michigan Big Woods,Cupressaceae,Juniperus virginiana,NA,Tree,Total aboveground biomass,Generic,c8f882,Cupressaceae,Family,3,109,NA,NA,NA
+Michigan Big Woods,Cupressaceae,Thuja occidentalis,NA,Tree,Whole tree (above stump),Expert,c078ca,Thuja occidentalis,Species,2.5,40,NA,NA,NA
+Michigan Big Woods,Elaeagnaceae,Elaeagnus umbellata,NA,"Shrub, small tree",Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+Michigan Big Woods,Ericaceae,Vaccinium corymbosum,NA,Shrub,Total aboveground biomass,Generic,f08fff,Ericaceae,Family,3,64,NA,NA,NA
+Michigan Big Woods,Fabaceae,Robinia pseudoacacia,NA,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,NA
+Michigan Big Woods,Fabaceae,Robinia pseudoacacia,NA,Tree,Stem (wood and bark),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,NA
+Michigan Big Woods,Fagaceae,Fagus grandifolia,NA,Tree,Total aboveground biomass,Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
+Michigan Big Woods,Fagaceae,Quercus alba,NA,Tree,Stem and branches (live),Expert,07dba7,Quercus alba,Species,5.08,50.8,NA,NA,NA
+Michigan Big Woods,Fagaceae,Quercus rubra,NA,Tree,Total aboveground biomass,Expert,82e78c,Quercus rubra,Species,2.8,69.5,NA,NA,NA
+Michigan Big Woods,Fagaceae,Quercus velutina,NA,Tree,Total aboveground biomass,Expert,4b8afb,Quercus velutina,Species,0.55,7.76,NA,NA,NA
+Michigan Big Woods,Fagaceae,Quercus velutina,NA,Tree,Whole tree (above stump),Expert,23ec05,Quercus velutina,Species,7.62,30.48,NA,NA,species
+Michigan Big Woods,Fagaceae,Quercus velutina,NA,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,NA
+Michigan Big Woods,Fagaceae,Quercus x hawkinsiae,NA,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
+Michigan Big Woods,Fagaceae,Quercus x palaeolithicola,NA,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
+Michigan Big Woods,Grossulariaceae,Ribes cynosbati,NA,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+Michigan Big Woods,Hamamelidaceae,Hamamelis virginiana,NA,Shrub,Total aboveground biomass,Expert,76aa3c,Hamamelis virginiana,Species,0.18,4.31,NA,NA,NA
+Michigan Big Woods,Juglandaceae,Carya cordiformis,NA,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
+Michigan Big Woods,Juglandaceae,Carya glabra,NA,Tree,Total aboveground biomass,Expert,9c4cc9,Carya,Genus,8.2,52.3,NA,NA,NA
+Michigan Big Woods,Juglandaceae,Carya ovata,NA,Tree,Stem and branches (live),Expert,7913b8,Carya ovata,Species,5.08,50.8,NA,NA,NA
+Michigan Big Woods,Juglandaceae,Juglans nigra,NA,Tree,Total aboveground biomass,Generic,7f7777,Juglandaceae,Family,4,42,NA,NA,NA
+Michigan Big Woods,Lauraceae,Lindera benzoin,NA,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
+Michigan Big Woods,Lauraceae,Sassafras albidum,NA,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
+Michigan Big Woods,Oleaceae,Fraxinus americana,NA,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
+Michigan Big Woods,Rosaceae,Amelanchier arborea,NA,Tree,Stem biomass (with bark),Expert,c59e03,Amelanchier,Genus,8.9,25.4,NA,NA,NA
+Michigan Big Woods,Rosaceae,Amelanchier arborea,NA,Tree,"Branches (live, dead)",Expert,96c0af,Amelanchier,Genus,5,45,NA,NA,NA
+Michigan Big Woods,Rosaceae,Amelanchier arborea,NA,Tree,Foliage total,Expert,529234,Amelanchier,Genus,5,45,NA,NA,NA
+Michigan Big Woods,Rosaceae,Malus sp,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+Michigan Big Woods,Rosaceae,Prunus serotina,NA,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
+Michigan Big Woods,Rosaceae,Prunus virginiana,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+Michigan Big Woods,Rosaceae,Pyrus sp,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+Michigan Big Woods,Rutaceae,Zanthoxylum americanum,NA,"Shrub, small tree",Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+Michigan Big Woods,Salicaceae,Populus grandidentata,NA,Tree,Total aboveground biomass,Expert,3172f7,Populus grandidentata,Species,0.68,7.49,NA,NA,NA
+Michigan Big Woods,Sapindaceae,Acer rubrum,NA,Tree,Total aboveground biomass,Expert,5084bd,Acer rubrum,Species,3.1,24.6,NA,NA,NA
+Michigan Big Woods,Sapindaceae,Acer rubrum,NA,Tree,Total aboveground biomass,Expert,138258,Acer rubrum,Species,10,52.2,NA,NA,NA
+Michigan Big Woods,Sapindaceae,Acer saccharum,NA,Tree,Total aboveground biomass,Expert,77e37e,Acer saccharum,Species,7.5,23.7,NA,NA,NA
+Michigan Big Woods,Simaroubaceae,Ailanthus altissima,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+Michigan Big Woods,Tiliaceae,Tilia americana,NA,Tree,Stem and branches (live),Expert,bebe2e,Tilia americana,Species,1.6,10,NA,NA,NA
+Michigan Big Woods,Tiliaceae,Tilia americana,NA,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
+Michigan Big Woods,Ulmaceae,Ulmus americana,NA,Tree,Whole tree (above stump),Expert,2473f9,Ulmus americana,Species,2.5,40,NA,NA,NA
 Traunstein ,Pinaceae,Picea abies,10,Tree,Total aboveground biomass,Expert,e57b77,Picea,Genus,NRA,NRA,NA,NA,NA
 Traunstein ,Pinaceae,Abies alba,20,Tree,Total aboveground biomass,Expert,307ec5,Pinus,Genus,NRA,NRA,NA,NA,NA
 Traunstein ,Pinaceae,Pinus sylvestris,30,Tree,Total aboveground biomass,Expert,307ec5,Pinus,Genus,NRA,NRA,NA,NA,NA
@@ -687,16 +689,16 @@ Traunstein ,Sapindaceae,Acer pseudoplatanus,811,Tree,Total aboveground biomass,E
 Traunstein ,Sapindaceae,Acer platanoides,812,Tree,Total aboveground biomass,Expert,9f138f,Fagus,Genus,NRA,NRA,NA,NA,NA
 Traunstein ,Sapindaceae,Acer campestre,813,Tree,Total aboveground biomass,Expert,9f138f,Fagus,Genus,NRA,NRA,NA,NA,NA
 Traunstein ,Juglandaceae,Juglans regia,971,Tree,Total aboveground biomass,Expert,9f138f,Fagus,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Betulaceae,Betula pendula,,Tree,Total aboveground biomass,Expert,c2b3e3,Betula,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Betulaceae,Betula pubescens,,Tree,Total aboveground biomass,Expert,c2b3e3,Betula,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Fagaceae,Fagus sylvatica,,Tree,Total aboveground biomass,Expert,bf5b8e,Fagus sylvatica,Species,NRA,NRA,NA,NA,NA
-Speulderbos,Aquifoliaceae,Ilex aquifolium,,Shrub,Total aboveground biomass,Expert,448bdf,Acer,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Pinaceae,Larix kaempferi,,Tree,Total aboveground biomass,Expert,c3587c,Larix,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Pinaceae,Larix x marschlinsii,,Tree,Total aboveground biomass,Expert,c3587c,Larix,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Pinaceae,Pinus sylvestris,,Tree,Total aboveground biomass,Expert,becaf9,Pinus sylvestris,Species,NRA,NRA,NA,NA,NA
-Speulderbos,Pinaceae,Pseudotsuga menziesii,,Tree,Total aboveground biomass,Expert,99d03e,Pseudotsuga menziesii,Species,NRA,NRA,NA,NA,NA
-Speulderbos,Fagaceae,Quercus petraea,,Tree,Total aboveground biomass,Expert,12b2a9,Quercus,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Fagaceae,Quercus robur,,Tree,Total aboveground biomass,Expert,12b2a9,Quercus,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Fagaceae,Quercus rubra,,Tree,Total aboveground biomass,Expert,6dd993,Quercus rubra,Species,NRA,NRA,NA,NA,NA
-Speulderbos,Rosaceae,Sorbus aucuparia,,Tree,Total aboveground biomass,Expert,448bdf,Acer,Genus,NRA,NRA,NA,NA,NA
-Speulderbos,Pinaceae,Tsuga heterophylla,,Tree,Total aboveground biomass,Expert,99d03e,Pseudotsuga menziesii,Species,NRA,NRA,NA,NA,NA
+Speulderbos,Betulaceae,Betula pendula,NA,Tree,Total aboveground biomass,Expert,c2b3e3,Betula,Genus,NRA,NRA,NA,NA,NA
+Speulderbos,Betulaceae,Betula pubescens,NA,Tree,Total aboveground biomass,Expert,c2b3e3,Betula,Genus,NRA,NRA,NA,NA,NA
+Speulderbos,Fagaceae,Fagus sylvatica,NA,Tree,Total aboveground biomass,Expert,bf5b8e,Fagus sylvatica,Species,NRA,NRA,NA,NA,NA
+Speulderbos,Aquifoliaceae,Ilex aquifolium,NA,Shrub,Total aboveground biomass,Expert,448bdf,Acer,Genus,NRA,NRA,NA,NA,NA
+Speulderbos,Pinaceae,Larix kaempferi,NA,Tree,Total aboveground biomass,Expert,c3587c,Larix,Genus,NRA,NRA,NA,NA,NA
+Speulderbos,Pinaceae,Larix x marschlinsii,NA,Tree,Total aboveground biomass,Expert,c3587c,Larix,Genus,NRA,NRA,NA,NA,NA
+Speulderbos,Pinaceae,Pinus sylvestris,NA,Tree,Total aboveground biomass,Expert,becaf9,Pinus sylvestris,Species,NRA,NRA,NA,NA,NA
+Speulderbos,Pinaceae,Pseudotsuga menziesii,NA,Tree,Total aboveground biomass,Expert,99d03e,Pseudotsuga menziesii,Species,NRA,NRA,NA,NA,NA
+Speulderbos,Fagaceae,Quercus petraea,NA,Tree,Total aboveground biomass,Expert,12b2a9,Quercus,Genus,NRA,NRA,NA,NA,NA
+Speulderbos,Fagaceae,Quercus robur,NA,Tree,Total aboveground biomass,Expert,12b2a9,Quercus,Genus,NRA,NRA,NA,NA,NA
+Speulderbos,Fagaceae,Quercus rubra,NA,Tree,Total aboveground biomass,Expert,6dd993,Quercus rubra,Species,NRA,NRA,NA,NA,NA
+Speulderbos,Rosaceae,Sorbus aucuparia,NA,Tree,Total aboveground biomass,Expert,448bdf,Acer,Genus,NRA,NRA,NA,NA,NA
+Speulderbos,Pinaceae,Tsuga heterophylla,NA,Tree,Total aboveground biomass,Expert,99d03e,Pseudotsuga menziesii,Species,NRA,NRA,NA,NA,NA
