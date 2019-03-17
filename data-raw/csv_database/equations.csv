@@ -6,7 +6,6 @@ jenkins_2004_cdod,10^(2.5368+1.3197*(log10(dbh))),96c0af,10^(a+b*(log10(dbh))),"
 jenkins_2004_cdod,10^(2.0865+0.9449*(log10(dbh))),529234,10^(a+b*(log10(dbh))),Foliage total,DBH,Genus,"Minessota, USA",5,45,NA,inch,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 jenkins_2004_cdod,exp(-2.48+2.4835*log(dbh)),ae65ed,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Mixed hardwood,North America,2.5,56,NA,cm,kg,harvest,NA,NA,NA,1,0.36,NA,NA,NA
 martin_1998_aban,10^(-1.326+2.762*(log10(dbh))),9c4cc9,10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Genus,"North Carolina, USA",8.2,52.3,10,cm,kg,harvest,linear,NA,1,1,1.005,NA,NA,NA
-jenkins_2004_cdod,2.034*(dbh^2.6349),7913b8,a*(dbh^b),Stem and branches (live),DBH,Species,"West Virginia, USA",5.08,50.8,NA,inch,lbs,harvest,NA,NA,NA,1,0,NA,NA,NA
 chojnacky_2014_ugbe,exp(-2.5095+2.5437*log(dbh)),7f7777,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Family,North America,4,42,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
 jenkins_2004_cdod,exp(5.67+1.97*log(dbh)),cf733d,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Species,"Ohio, USA",1.85,7.25,NA,cm,g,harvest,NA,NA,NA,0,NA,NA,NA,NA
 chojnacky_2014_ugbe,exp(-2.2118+2.4133*log(dbh)),f08fff,exp(a+b*log(dbh)),Total aboveground biomass,DBH,Family,North America,3,64,NA,cm,kg,harvest,NA,NA,NA,1,included in model,NA,NA,NA
