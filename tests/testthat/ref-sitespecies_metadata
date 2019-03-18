@@ -1,64 +1,36 @@
-   Column                                Field
-1   1 / A                                 site
-2   2 / B                               family
-3   3 / C                              species
-4   4 / D                         species_code
-5   5 / E                            life_form
-6   6 / F dependent_variable_biomass_component
-7   7 / G                       equation_group
-8   8 / H                          equation_id
-9   9 / I                        equation_taxa
-10 10 / J                allometry_specificity
-11 11 / K                           dbh_min_cm
-12 12 / L                           dbh_max_cm
-13 13 / M                     notes_on_species
-14 14 / N                               wsg_id
-15 15 / O                        wsg_specifity
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Description
-1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ForestGEO site name (corresponds to name in ForestGEO sites master table)
-2                                                                                                                                                                                                                                                                                                                                                                                                                                    Plant family name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.
-3                                                                                                                                                                                                                                                                                                                                                                                                                                Plant scientific name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.
-4                                                                                                                                                                                                                                                                                                                                                                                                                                                               Species code used at the ForestGEO site, variable per site, even if representing same species .
-5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Common growth form for a given plant species
-6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Tree component characterized by the equation
-7  Allometric equation category that can be selected by the user. "Generic" equations are the current best equations or equation groups that can be applied to any site in a broad geographic area (e.g., pantropical, continental) and to any taxa at that site. "Expert" equations are the current best equations for specific taxa at a specific site, as identified by a botanist or forest ecologist. "Other" equations are potentially relevant (i.e., may be selected as best under different criteria) or were previously classified as best available.
-8                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Unique equation identification number given arbitrarely. Links Equations table.
-9                                                                                                                                                                                                                                                                                                                                                                              Species, genus, family, or plant group for which the allomery was developed (sometimes used as proxy species to calculate AGB when a specific-species equation is not available)
-10                                                                                                                                                                                                                                                                                                                                                                                                                                  Refers to the specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)
-11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Min DBH at which the equation should be applied
-12                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Max DBH at which the equation should be applied
-13                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Informative notes on species and sites, non critical in biomass calculation
-14                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Wood density identification number. Links to id in Wood Density table.
-15                                                                                                                                                                                                                                                                                                                                                                                                                                   Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)
+   Column            Field
+1   1 / A             site
+2   2 / B           family
+3   3 / C          species
+4   4 / D     species_code
+5   5 / E        life_form
+6   6 / F   equation_group
+7   7 / G      equation_id
+8   8 / H    equation_taxa
+9   9 / I notes_on_species
+10 10 / J           wsg_id
+11 11 / K    wsg_specifity
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Description
+1                                                                                                                                                                                                                                                                                                                                                                                                                                                                ForestGEO site name (corresponds to name in ForestGEO sites master table)
+2                                                                                                                                                                                                                                                                                                                                                                                                               Plant family name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.
+3                                                                                                                                                                                                                                                                                                                                                                                                           Plant scientific name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.
+4                                                                                                                                                                                                                                                                                                                                                                                                                                          Species code used at the ForestGEO site, variable per site, even if representing same species .
+5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Common growth form for a given plant species
+6  Allometric equation category that can be selected by the user. "Generic" equations are the current best equations that can be applied to any site in a broad geographic area (e.g., pantropical, temperate) and to any taxa at that site. "Expert" equations are the current best equations for specific taxa at a specific site, as identified by a botanist or forest ecologist. "Other" equations are potentially relevant (i.e., may be selected as best under different criteria) or were previously classified as best available.
+7                                                                                                                                                                                                                                                                                                                                                                                                                                                 Unique equation identification number given arbitrarely. Links to id in Equations table.
+8                                                                                                                                                                                                                                                                                                                                                         Species, genus, family, or plant group for which the allomery was developed (sometimes used as proxy species to calculate AGB when a specific-species equation is not available)
+9                                                                                                                                                                                                                                                                                                                                                                                                                                                             Informative notes on species and sites, non critical for biomass calculation
+10                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Wood density identification number. Links to id in Wood Density table.
+11                                                                                                                                                                                                                                                                                                                                                                                                              Refers to the specific taxonomic level for which the wood specific gravity was estimated (species, genus, or family level)
           Column_type            Field_codes Units Range
-1           character                      -     -     -
+1           character                   <NA>  <NA>  <NA>
 2           character                   <NA>  <NA>  <NA>
-3           character                      -     -     -
+3           character                   <NA>  <NA>  <NA>
 4           character                   <NA>  <NA>  <NA>
 5           character                   <NA>  <NA>  <NA>
-6           character                      -     -     -
-7           character Generic; Expert; Other  <NA>  <NA>
-8           character                   <NA>  <NA>  <NA>
-9  character (string)                   <NA>  <NA>  <NA>
-10 character (string)                      -  <NA>  <NA>
-11            numeric                      -     -  <NA>
-12            numeric                      -     -  <NA>
-13          character                   <NA>  <NA>  <NA>
-14            numeric                   <NA>  <NA>  <NA>
-15          character                   <NA>  <NA>  <NA>
-                                      Notes to delete before publication
-1                                                                   <NA>
-2                                                                   <NA>
-3                                                                   <NA>
-4                                                                   <NA>
-5                                                                   <NA>
-6                                                                   <NA>
-7                                                                   <NA>
-8                                                                   <NA>
-9                                                                   <NA>
-10                                                                  <NA>
-11                                          Need range before publishing
-12                                          Need range before publishing
-13                                                                  <NA>
-14                                                                  <NA>
-15 I don't think we need this vakue in this table (already in wsg table)
+6           character Generic; Expert; Other  <NA>  <NA>
+7           character                   <NA>  <NA>  <NA>
+8  character (string)                   <NA>  <NA>  <NA>
+9           character                   <NA>  <NA>  <NA>
+10            numeric                   <NA>  <NA>  <NA>
+11          character                   <NA>  <NA>  <NA>

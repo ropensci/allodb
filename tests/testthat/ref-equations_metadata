@@ -1,69 +1,115 @@
    Column                                Field
-1   1 / A                          equation_id
-2   2 / B                        equation_form
+1   1 / A                               ref_id
+2   2 / B                          equation_id
 3   3 / C                   equation_allometry
-4   4 / D dependent_variable_biomass_component
-5   5 / E                 independent_variable
-6   6 / F                allometry_specificity
-7   7 / G                      geographic_area
-8   8 / H                           dbh_min_cm
-9   9 / I                           dbh_max_cm
-10 10 / J                          sample_size
-11 11 / K                   dbh_units_original
-12 12 / L               biomass_units_original
-13 13 / M         allometry_development_method
-14 14 / N                     regression_model
-15 15 / O               other_equations_tested
-16 16 / P                          log_biomass
-17 17 / Q                       bias_corrected
-18 18 / R               bias_correction_factor
-19 19 / S                  notes_fitting_model
-20 20 / T           original_data_availability
-21 21 / U                              warning
-22 22 / V                               ref_id
+4   4 / D                        equation_form
+5   5 / E dependent_variable_biomass_component
+6   6 / F                 independent_variable
+7   7 / G                allometry_specificity
+8   8 / H                      geographic_area
+9   9 / I                           dbh_min_cm
+10 10 / J                           dbh_max_cm
+11 11 / K                          sample_size
+12 12 / L                   dbh_units_original
+13 13 / M               biomass_units_original
+14 14 / N         allometry_development_method
+15 15 / O                     regression_model
+16 16 / P               other_equations_tested
+17 17 / Q                          log_biomass
+18 18 / R                       bias_corrected
+19 19 / S               bias_correction_factor
+20 20 / T                  notes_fitting_model
+21 21 / U           original_data_availability
+22 22 / V                              warning
                                                                                                                                                                                                                                  Description
-1                                                                                                                                                      Unique equation identification number given arbitrarely. Links to Site_Species table.
-2                                                                                                                                                                                  Algebraic form of the biomass equation as function of DBH
+1                                                                                                                                              Unique reference identification number for biomass equation source. Links to Reference table.
+2                                                                                                                                                      Unique equation identification number given arbitrarely. Links to Site_Species table.
 3                                                                                                                                                         Equation to calculate biomass (includes coeficients given in original publication)
-4                                                                                                                                                                                               Tree component characterized by the equation
-5                                                                                                     Parameters included in biomass model (H: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density)
-6                                                                                                                                      Specific taxonomic level for which the equation was developed (species, genus, family or plant group)
-7                                                                                                                                                         Geographic location from which trees were sampled to develop the original equation
-8                                                                                                                                                                                          Minimun DBH in cm sampled to develop the equation
-9                                                                                                                                                                                          Maximun DBH in cm sampled to develop the equation
-10                                                                                                                                                                                           Number of trees sampled to develop the equation
-11                                                                                                                                                                                                     DBH unit used in original publication
-12                                                                                                                                                                                                    Mass unit used in original publication
-13 Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing ("harvest").  However, we anticipate that many future allometries will be developed using ground-based LiDAR ("lidar").
-14                                                                                                                                                                                             Regression model used in original publication
-15                                                                                                                                                                        Comparable models if reported in publication (given equation form)
-16                                                                                                                                        Whether the regretion fit is done with biomass as the response variable (i.e log(biomass) base 10)
-17                                                                                                                                            Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model
-18                                                                                                                                                Correction factor for the specific equation, pulled from original publication, if included
-19                                                                                                                                                                                                      Other details on statistical methods
-20                                                                                                                                                                            Indicates whether or not the original source data is available
-21                                                                                                                             Warning or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected
-22                                                                                                                                             Unique reference identification number for biomass equation source. Links to Reference table.
-   Column_type                 Field_codes Units Range
-1         <NA>                        <NA>  <NA>  <NA>
-2    character                        <NA>  <NA>  <NA>
-3    character                        <NA>  <NA>  <NA>
-4    character                        <NA>  <NA>  <NA>
-5    character                        <NA>  <NA>  <NA>
-6    character                        <NA>  <NA>  <NA>
-7    character                        <NA>  <NA>  <NA>
-8      numeric                        <NA>  <NA>  <NA>
-9      numeric                        <NA>  <NA>  <NA>
-10     integer                        <NA>  <NA>  <NA>
-11   character                        <NA>  <NA>  <NA>
-12   character                        <NA>  <NA>  <NA>
-13   character              harvest; lidar  <NA>  <NA>
-14   character                        <NA>  <NA>  <NA>
-15   character NRA - Not Readily Available  <NA>  <NA>
-16     numeric         0 - false; 1 - true  <NA>  <NA>
-17     numeric         0 - false; 1 - true  <NA>  <NA>
-18     numeric                        <NA>  <NA>  <NA>
-19   character                        <NA>  <NA>  <NA>
-20   character         0 - false; 1 - true  <NA>  <NA>
-21   character                        <NA>  <NA>  <NA>
-22   character                        <NA>  <NA>  <NA>
+4                                                                                                                                                              Algebraic form of the biomass equation (as function of DBH, HT, WD or others)
+5                                                                                                                                                                                               Tree component characterized by the equation
+6                                                                                                    Parameters included in biomass model (HT: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density)
+7                                                                                                                              Specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)
+8                                                                                                                                                         Geographic location from which trees were sampled to develop the original equation
+9                                                                                                                                                                                           Minimun DBH (cm) sampled to develop the equation
+10                                                                                                                                                                                          Maximun DBH (cm) sampled to develop the equation
+11                                                                                                                                                                                           Number of trees sampled to develop the equation
+12                                                                                                                                                                                                     DBH unit used in original publication
+13                                                                                                                                                                                                    Mass unit used in original publication
+14 Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing ("harvest").  However, we anticipate that many future allometries will be developed using ground-based LiDAR ("lidar").
+15                                                                                                                                                                                             Regression model used in original publication
+16                                                                                                                                                                        Comparable models if reported in publication (given equation form)
+17                                                                                                                                       Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10)
+18                                                                                                                                            Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model
+19                                                                                                                                                Correction factor for the specific equation, pulled from original publication, if included
+20                                                                                                                                                                                                      Other details on statistical methods
+21                                                                                                                                                                            Indicates whether or not the original source data is available
+22                                                                                                                             Warning or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected
+   Column_type
+1    character
+2         <NA>
+3    character
+4    character
+5    character
+6    character
+7    character
+8    character
+9      numeric
+10     numeric
+11     integer
+12   character
+13   character
+14   character
+15   character
+16   character
+17     numeric
+18     numeric
+19     numeric
+20   character
+21   character
+22   character
+                                                                  Field_codes
+1                                                                        <NA>
+2                                                                        <NA>
+3                                                                        <NA>
+4                                                                        <NA>
+5                                                                        <NA>
+6                                                                        <NA>
+7                                                                        <NA>
+8                                                                        <NA>
+9                                                                        <NA>
+10                                                                       <NA>
+11                                                                       <NA>
+12                              cm: centimeters; inch: inches; mm: milimeters
+13 g: grams; kg:kilograms; lbs: pounds; metric_ton: metric ton; Mg: megagrams
+14                                                             harvest; lidar
+15                                                                       <NA>
+16                                                NRA - Not Readily Available
+17                                                        0 - false; 1 - true
+18                                                        0 - false; 1 - true
+19                                                                       <NA>
+20                                                                       <NA>
+21                                                        0 - false; 1 - true
+22                                                                       <NA>
+   Units                   Range
+1   <NA>                    <NA>
+2   <NA>                    <NA>
+3   <NA>                    <NA>
+4   <NA>                    <NA>
+5   <NA>                    <NA>
+6   <NA>                    <NA>
+7   <NA>                    <NA>
+8   <NA>                    <NA>
+9   <NA> Give before publication
+10  <NA> Give before publication
+11  <NA>                    <NA>
+12  <NA>                    <NA>
+13  <NA>                    <NA>
+14  <NA>                    <NA>
+15  <NA>                    <NA>
+16  <NA>                    <NA>
+17  <NA>                    <NA>
+18  <NA>                    <NA>
+19  <NA>                    <NA>
+20  <NA>                    <NA>
+21  <NA>                    <NA>
+22  <NA>                    <NA>

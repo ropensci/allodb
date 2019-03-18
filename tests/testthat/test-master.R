@@ -12,3 +12,10 @@ test_that("master outputs the expected object (allodb#78)", {
   expect_is(master(), "tbl")
   expect_length(master(), 43)
 })
+
+test_that("`equations` and `sitespecies` have no redundant columns (#78)", {
+  expect_equal(
+    intersect(names(equations), names(sitespecies)),
+    "equation_id"
+  )
+})
