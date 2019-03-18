@@ -19,3 +19,7 @@ test_that("`equations` and `sitespecies` have no redundant columns (#78)", {
     "equation_id"
   )
 })
+
+test_that("master outputs no missing `equation_id`", {
+  expect_false(any(is.na(allodb::master()$equation_id)))
+})

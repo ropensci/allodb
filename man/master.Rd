@@ -4,7 +4,7 @@
 \alias{master}
 \title{Join the main allodb tables: \code{equations``, }sitespecies\code{, and }sites_info`.}
 \usage{
-master(.f = dplyr::full_join)
+master()
 }
 \arguments{
 \item{.f}{A function, form the \strong{dplyr} package, used to join tables (e.g.
@@ -17,11 +17,8 @@ A dataframe.
 Join the main allodb tables: \code{equations``, }sitespecies\code{, and }sites_info`.
 }
 \examples{
-# Defaults to use `dplyr::full_join()`
 master()
 
-# But you can use other joins
-master(.f = dplyr::left_join)
 \dontrun{
 # Nice view in RStudio
 View(master())
