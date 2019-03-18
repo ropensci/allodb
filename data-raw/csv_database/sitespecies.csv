@@ -11,6 +11,7 @@ Lilly Dicky,Juglandaceae,Carya alba,409,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Lilly Dicky,Juglandaceae,Carya cordiformis,402,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Lilly Dicky,Juglandaceae,Carya glabra,403,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Lilly Dicky,Juglandaceae,Carya ovata,407,Tree,Expert,9c4cc9,Carya,NA,NA,NA
+Lilly Dicky,Juglandaceae,Carya sp.,,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 Lilly Dicky,Cannabaceae,Celtis occidentalis,462,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 Lilly Dicky,Fabaceae,Cercis canadensis,471,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 Lilly Dicky,Cornaceae,Cornus florida,491,Tree,Expert,cf733d,Cornus florida,NA,NA,NA
@@ -40,6 +41,7 @@ Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Expert,4b8afb,Quercus velutina,NA
 Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Expert,c70dea,Quercus velutina,NA,NA,NA
 Lilly Dicky,Anacardiaceae,Rhus typhina,899,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Expert,333c34,Robinia pseudoacacia,NA,NA,NA
+Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Expert,e9d686,Robinia pseudoacacia,NA,NA,NA
 Lilly Dicky,Lauraceae,Sassafras albidum,931,Tree,Expert,c13e0f,Sassafras albidum,NA,NA,NA
 Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Expert,3e6f4d,Tilia americana,NA,NA,NA
@@ -61,6 +63,8 @@ SCBI,Betulaceae,Carpinus caroliniana,caca,Tree,Generic,ae65ed,Mixed hardwood,NA,
 SCBI,Juglandaceae,Carya cordiformis,caco,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 SCBI,Juglandaceae,Carya glabra,cagl,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 SCBI,Juglandaceae,Carya ovalis,caovl,Tree,Expert,9c4cc9,Carya,NA,NA,NA
+SCBI,Juglandaceae,Carya sp.,casp,Tree,Expert,9c4cc9,Carya,NA,NA,NA
+SCBI,Juglandaceae,Carya sp.,casp,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 SCBI,Juglandaceae,Carya tomentosa,cato,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 SCBI,Fagaceae,Castanea dentata,cade,Tree,Generic,5edb7f,Fagaceae,NA,NA,NA
 SCBI,Cannabaceae,Celtis occidentalis,ceoc,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
@@ -79,8 +83,8 @@ SCBI,Oleaceae,Fraxinus nigra,frni,Tree,Expert,0edaff,Fraxinus nigra,NA,NA,NA
 SCBI,Oleaceae,Fraxinus pennsylvanica,frpe,Tree,Expert,0edaff,Fraxinus nigra,NA,NA,NA
 SCBI,Hamamelidaceae,Hamamelis virginiana,havi,Shrub,Expert,76aa3c,Hamamelis virginiana,NA,NA,NA
 SCBI,Aquifoliaceae,Ilex verticillata,ilve,Shrub,Generic,f08fff,Aquifoliaceae,NA,NA,NA
-SCBI,Juglandaceae,Juglans cinerea,juci,Tree,Generic,7f7777,Juglandaceae,NA,NA,NA
-SCBI,Juglandaceae,Juglans nigra,juni,Tree,Generic,7f7777,Juglandaceae,NA,NA,NA
+SCBI,Juglandaceae,Juglans cinerea,juci,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
+SCBI,Juglandaceae,Juglans nigra,juni,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 SCBI,Lauraceae,Lindera benzoin,libe,Shrub,Generic,f08fff,Lauraceae,NA,NA,NA
 SCBI,Magnoliaceae,Liriodendron tulipifera,litu,Tree,Expert,94f593,Liriodendron tulipifera,NA,NA,NA
 SCBI,Magnoliaceae,Liriodendron tulipifera,litu,Tree,Expert,c48e81,Liriodendron tulipifera,NA,NA,NA
@@ -91,6 +95,7 @@ SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Expert,23ab74,Nyssa sylvatica,NA,NA,NA
 SCBI,Paulowniaceae,Paulownia tomentosa,pato,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 SCBI,Pinaceae,Pinus pungens,pipu,Tree,Expert,21800b,Pinus strobus,NA,NA,NA
 SCBI,Pinaceae,Pinus strobus,pist,Tree,Expert,21800b,Pinus strobus,NA,NA,NA
+SCBI,Pinaceae,Pinus virginiana,pivi,Tree,Generic,90c207,Pinus,NA,NA,NA
 SCBI,Pinaceae,Pinus virginiana,pivi,Tree,Expert,6ea81f,Pinus taeda,NA,NA,NA
 SCBI,Platanaceae,Platanus occidentalis,PLOC,Tree,Expert,73325b,Platanus occidentalis,NA,NA,NA
 SCBI,Platanaceae,Platanus occidentalis,PLOC,Tree,Expert,0a1212,Platanus occidentalis,NA,NA,NA
@@ -114,6 +119,7 @@ SCBI,Fagaceae,Quercus rubra,quru,Tree,Expert,1d7c4c,Quercus rubra,NA,NA,NA
 SCBI,Fagaceae,Quercus velutina,quve,Tree,Expert,23ec05,Quercus velutina,NA,NA,NA
 SCBI,Fagaceae,Quercus velutina,quve,Tree,Expert,c70dea,Quercus velutina,NA,NA,NA
 SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Expert,333c34,Robinia pseudoacacia,NA,NA,NA
+SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Expert,e9d686,Robinia pseudoacacia,NA,NA,NA
 SCBI,Rosaceae,Rosa multiflora,romu,Shrub,Expert,a1646f,Rosa,NA,NA,NA
 SCBI,Rosaceae,Rubus allegheniensis,rual,Shrub,Expert,b61369,Rubus idaeus,NA,NA,NA
@@ -133,7 +139,7 @@ SCBI,Adoxaceae,Viburnum recognitum,vire,Shrub,Expert,5e2dea,Virburnum lantanoide
 SERC,Aceraceae,Acer negundo,ACNE2,Tree,Generic,d6be5c,Aceraceae,NA,NA,NA
 SERC,Aceraceae,Acer rubrum,ACRU,Tree,Expert,7c72ed,Acer rubrum,NA,NA,NA
 SERC,Simaroubaceae,Ailanthus altissima,AIAL,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
-SERC,Fabaceae,Albizia julibrissin,ALJU,Tree,Generic,5edb7f,Fabaceae,NA,NA,NA
+SERC,Fabaceae,Albizia julibrissin,ALJU,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 SERC,Rosaceae,Amelanchier arborea,AMAR3,Tree,Expert,c59e03,Amelanchier,NA,NA,NA
 SERC,Rosaceae,Amelanchier arborea,AMAR3,Tree,Expert,96c0af,Amelanchier,NA,NA,NA
 SERC,Rosaceae,Amelanchier arborea,AMAR3,Tree,Expert,529234,Amelanchier,NA,NA,NA
@@ -148,6 +154,7 @@ SERC,Juglandaceae,Carya alba,CAAL27,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 SERC,Juglandaceae,Carya cordiformis,CACO15,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 SERC,Juglandaceae,Carya glabra,CAGL8,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 SERC,Juglandaceae,Carya sp.,CARYA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
+SERC,Juglandaceae,Carya sp.,CARYA,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 SERC,Cannabaceae,Celtis occidentalis,CEOC,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 SERC,Rubiaceae,Cephalanthus occidentalis,CEOC2,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 SERC,Fabaceae,Cercis canadensis,CECA4,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
@@ -159,7 +166,7 @@ SERC,Oleaceae,Fraxinus americana,FRAM2,Tree,Expert,122ba6,Fraxinus americana,NA,
 SERC,Oleaceae,Fraxinus pennsylvanica,FRPE,Tree,Expert,b521bd,Fraxinus pennsylvanica,NA,NA,NA
 SERC,Aquifoliaceae,Ilex opaca,ILOP,Shrub,Generic,f08fff,Aquifoliaceae,NA,NA,NA
 SERC,Aquifoliaceae,Ilex verticillata,ILVE,Shrub,Generic,f08fff,Aquifoliaceae,NA,NA,NA
-SERC,Juglandaceae,Juglans nigra,JUNI,Tree,Generic,7f7777,Juglandaceae,NA,NA,NA
+SERC,Juglandaceae,Juglans nigra,JUNI,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 SERC,Cupressaceae,Juniperus virginiana,JUVI,Tree,Expert,c36a5b,Juniperus virginiana,NA,NA,NA
 SERC,Ericaceae,Kalmia latifolia,KALA,Shrub,Generic,f08fff,Ericaceae,NA,NA,NA
 SERC,Oleaceae,Ligustrum sp.,LIGUS2,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
@@ -174,6 +181,7 @@ SERC,Nyssaceae,Nyssa sylvatica,NYSY,Tree,Expert,380d95,Nyssa sylvatica,NA,NA,NA
 SERC,Nyssaceae,Nyssa sylvatica,NYSY,Tree,Expert,23ab74,Nyssa sylvatica,NA,NA,NA
 SERC,Scrophulariaceae,Paulownia tomentosa,PATO2,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 SERC,Pinaceae,Pinus taeda,PITA,Tree,Expert,6ea81f,Pinus taeda,NA,NA,NA
+SERC,Pinaceae,Pinus virginiana,PIVI2,Tree,Generic,90c207,Pinus,NA,NA,NA
 SERC,Pinaceae,Pinus virginiana,PIVI2,Tree,Expert,6ea81f,Pinus taeda,NA,NA,NA
 SERC,Platanaceae,Platanus occidentalis,PLOC,Tree,Expert,73325b,Platanus occidentalis,NA,NA,NA
 SERC,Platanaceae,Platanus occidentalis,PLOC,Tree,Expert,0a1212,Platanus occidentalis,NA,NA,NA
@@ -225,6 +233,7 @@ Tyson,Juglandaceae,Carya cordiformis,carcor,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Tyson,Juglandaceae,Carya glabra,cargla,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Tyson,Juglandaceae,Carya ovata,carova,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Tyson,Juglandaceae,Carya sp.,carsp,Tree,Expert,9c4cc9,Carya,NA,NA,NA
+Tyson,Juglandaceae,Carya sp.,carsp,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 Tyson,Juglandaceae,Carya texana,cartex,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Tyson,Juglandaceae,Carya tomentosa,cartom,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Tyson,Cannabaceae,Celtis occidentalis,celocc,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
@@ -238,7 +247,7 @@ Tyson,Rhamnaceae,Frangula caroliniana,fracar,Shrub,Generic,ae65ed,Mixed hardwood
 Tyson,Oleaceae,Fraxinus americana,fraame,Tree,Expert,122ba6,Fraxinus americana,NA,NA,NA
 Tyson,Oleaceae,Fraxinus americana,fraame,Tree,Expert,e3f3bf,Fraxinus americana,NA,NA,NA
 Tyson,Fabaceae,Gleditsia triacanthos,gletri,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
-Tyson,Juglandaceae,Juglans nigra,jugnig,Tree,Generic,7f7777,Juglandaceae,NA,NA,NA
+Tyson,Juglandaceae,Juglans nigra,jugnig,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 Tyson,Cupressaceae,Juniperus virginiana,junvir,Tree,Expert,c36a5b,Juniperus virginiana,NA,NA,NA
 Tyson,Lauraceae,Lindera benzoin,linben,Shrub,Generic,f08fff,Lauraceae,NA,NA,NA
 Tyson,Caprifoliaceae,Lonicera maackii,lonmaa,Shrub,Expert,28dce6,Lonicera canadensis,NA,NA,NA
@@ -303,6 +312,7 @@ UCSC,Adoxaceae,Sambucus nigra,SAMBNI,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,N
 UCSC,Cupressaceae,Sequoia sempervirens,SEQUSE,Tree,Generic,2ee3ae,Cupressaceae,NA,NA,NA
 UCSC,Lauraceae,Umbellularia californica,UMBECA,Tree,Expert,8470d2,Umbellularia californica,NA,NA,NA
 UCSC,Ericaceae,Vaccinium ovatum,VACCOV,Shrub,Expert,e8f868,Vaccinium alaskaense,NA,NA,NA
+Wabikon,Pinaceae,Abies balsamea,ABIBAL,Tree,Generic,4872ed,Abies,NA,NA,NA
 Wabikon,Pinaceae,Abies balsamea,ABIBAL,Tree,Expert,1badac,Abies balsamea,NA,NA,NA
 Wabikon,Aceraceae,Acer rubrum,ACERUB,Tree,Expert,5084bd,Acer rubrum,NA,NA,NA
 Wabikon,Aceraceae,Acer rubrum,ACERUB,Tree,Expert,138258,Acer rubrum,NA,NA,NA
@@ -321,7 +331,7 @@ Wabikon,Oleaceae,Fraxinus americana,FRAAME,Tree,Expert,e3f3bf,Fraxinus americana
 Wabikon,Oleaceae,Fraxinus nigra,FRANIG,Tree,Expert,0edaff,Fraxinus nigra,NA,NA,NA
 Wabikon,Aquifoliaceae,Ilex mucronata,ILEMUC,Shrub,Generic,f08fff,Aquifoliaceae,NA,NA,NA
 Wabikon,Aquifoliaceae,Ilex verticillata,ILEVER,Shrub,Generic,f08fff,Aquifoliaceae,NA,NA,NA
-Wabikon,Juglandaceae,Juglans cinerea,JUGCIN,Tree,Generic,7f7777,Juglandaceae,NA,NA,NA
+Wabikon,Juglandaceae,Juglans cinerea,JUGCIN,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 Wabikon,Pinaceae,Larix laricina,LARLAR,Tree,Expert,01e863,Larix laricina,NA,NA,NA
 Wabikon,Caprifoliaceae,Lonicera canadensis,LONCAN,Shrub,Expert,28dce6,Lonicera canadensis,NA,NA,NA
 Wabikon,Rosaceae,Malus pumila,MALPUM,Tree,Generic,f08fff,Rosaceae,NA,NA,NA
@@ -349,15 +359,20 @@ Wabikon,Malvaceae,Tilia americana,TILAME,Tree,Expert,bebe2e,Tilia americana,NA,N
 Wabikon,Pinaceae,Tsuga canadensis,TSUCAN,Tree,Expert,1d44c6,Tsuga canadensis,NA,NA,NA
 Wabikon,Ulmaceae,Ulmus americana,ULMAME,Tree,Expert,2473f9,Ulmus americana,NA,NA,NA
 Wind River,Pinaceae,Abies amabilis,ABAM,Tree,Expert,b570d4,Abies amabilis,NA,NA,NA
+Wind River,Pinaceae,Abies amabilis,ABAM,Tree,Generic,4872ed,Abies,NA,NA,NA
 Wind River,Pinaceae,Abies grandis,ABGR,Tree,Expert,cab5a8,Abies grandis,NA,NA,NA
 Wind River,Pinaceae,Abies grandis,ABGR,Tree,Expert,6b7404,Abies grandis,NA,NA,NA
+Wind River,Pinaceae,Abies grandis,ABGR,Tree,Generic,74dd65,Abies,NA,NA,NA
 Wind River,Pinaceae,Abies procera,ABPR,Tree,Expert,171b02,Abies procera,NA,NA,NA
 Wind River,Pinaceae,Abies procera,ABPR,Tree,Expert,23a23d,Abies procera,NA,NA,NA
 Wind River,Pinaceae,Abies procera,ABPR,Tree,Expert,677eda,Abies procera,NA,NA,NA
+Wind River,Pinaceae,Abies procera,ABPR,Tree,Generic,74dd65,Abies,NA,NA,NA
 Wind River,Pinaceae,Abies sp.,ABSP,Tree,Expert,51f4e4,Abies,NA,NA,NA
 Wind River,Pinaceae,Abies sp.,ABSP,Tree,Expert,61f888,Abies,NA,NA,NA
 Wind River,Pinaceae,Abies sp.,ABSP,Tree,Expert,2d2a14,Abies,NA,NA,NA
 Wind River,Pinaceae,Abies sp.,ABSP,Tree,Expert,7afe68,Abies,NA,NA,NA
+Wind River,Pinaceae,Abies sp.,ABSP,Tree,Generic,4872ed,Abies,NA,NA,NA
+Wind River,Pinaceae,Abies sp.,ABSP,Tree,Generic,74dd65,Abies,NA,NA,NA
 Wind River,Sapindaceae,Acer circinatum,ACCI,Shrub,Expert,678f25,Acer glabrum,NA,NA,NA
 Wind River,Sapindaceae,Acer glabrum,ACGL,Tree,Expert,678f25,Acer glabrum,NA,NA,NA
 Wind River,Betulaceae,Alnus rubra,ALRU,Tree,Expert,b9ebe4,Alnus rubra,NA,NA,NA
@@ -369,7 +384,7 @@ Wind River,Rosaceae,Holodiscus discolor,HODI,Shrub,Expert,b9b3b0,Holodiscus disc
 Wind River,Caprifoliaceae,Lonicera ciliosa,LOCI,Shrub,Expert,28dce6,Lonicera canadensis,NA,NA,NA
 Wind River,Ericaceae,Menziesia ferruginea,MEFE,Shrub,Generic,f08fff,Ericaceae,NA,NA,NA
 Wind River,Rosaceae,Oemleria cerasiformis,OECE,Shrub,Generic,f08fff,Rosaceae,NA,NA,NA
-Wind River,Pinaceae,Pinus monticola,PIMO,Tree,Generic,90c207,Pinus,NA,NA,NA
+Wind River,Pinaceae,Pinus monticola,PIMO,Tree,Generic,15b165,Pinus,NA,NA,NA
 Wind River,Pinaceae,Pseudotsuga menziesii,PSME,Tree,Expert,f94e03,Pseudotsuga menziesii,NA,NA,NA
 Wind River,Pinaceae,Pseudotsuga menziesii,PSME,Tree,Expert,4d8e54,Pseudotsuga menziesii,NA,NA,NA
 Wind River,Rhamnaceae,Rhamnus purshiana,RHPU,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
@@ -413,14 +428,18 @@ Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Expert,23a23d,Abies procera,NA,NA,NA
 Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Expert,677eda,Abies procera,NA,NA,NA
 Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Expert,7aaa22,Abies concolor,NA,NA,NA
 Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Expert,1b9161,Abies concolor,NA,NA,NA
+Yosemite,Pinaceae,Abies concolor,ABCO,Tree,Generic,74dd65,Abies,NA,NA,NA
 Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Expert,171b02,Abies procera,NA,NA,NA
 Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Expert,23a23d,Abies procera,NA,NA,NA
 Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Expert,677eda,Abies procera,NA,NA,NA
 Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Expert,f2943e,Abies magnifica,NA,NA,NA
+Yosemite,Pinaceae,Abies magnifica,ABMA,Tree,Generic,74dd65,Abies,NA,NA,NA
 Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Expert,51f4e4,Abies,NA,NA,NA
 Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Expert,61f888,Abies,NA,NA,NA
 Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Expert,2d2a14,Abies,NA,NA,NA
 Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Expert,7afe68,Abies,NA,NA,NA
+Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Generic,4872ed,Abies,NA,NA,NA
+Yosemite,Pinaceae,Abies sp.,ABSP,Tree,Generic,74dd65,Abies,NA,NA,NA
 Yosemite,Ericaceae,Arctostaphylos patula,ARPA,Shrub,Expert,014bb7,Arctostaphylos patula,NA,NA,NA
 Yosemite,Cupressaceae,Calocedrus decurrens,CADE,Tree,Expert,7992d5,Calocedrus decurrens,NA,NA,NA
 Yosemite,Rhamnaceae,Ceanothus cordulatus,CECO,Shrub,Expert,604854,Ceanothus velutinus,NA,NA,NA
@@ -461,6 +480,7 @@ Zofin,Salicaceae,Salix caprea,VR,Tree,Expert,7b7468,Fagus,NA,NA,NA
 Zofin,Sambucaceae,Sambucus racemosa,BEZ,Shrub,Expert,7b7468,Fagus,NA,NA,NA
 Zofin,Rosaceae,Sorbus aucuparia,JR,Tree,Expert,7b7468,Fagus,NA,NA,NA
 Zofin,Ulmaceae,Ulmus glabra,JL,Tree,Expert,7b7468,Fagus,NA,NA,NA
+Utah,Pinaceae,Abies bifolia,NA,Tree,Generic,4872ed,Abies,NA,NA,NA
 Utah,Pinaceae,Abies bifolia,NA,Tree,Expert,b30744,Abies lasiocarpa,NA,NA,NA
 Utah,Pinaceae,Abies concolor,NA,Tree,Expert,7aaa22,Abies concolor,NA,NA,NA
 Utah,Pinaceae,Abies concolor,NA,Tree,Generic,74dd65,Abies,NA,NA,NA
@@ -515,6 +535,7 @@ UMBC,Fabaceae,Gleditsia triacanthos,NA,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 UMBC,Fabaceae,Gleditsia triacanthos,NA,Tree,Expert,333c34,Robinia pseudoacacia,NA,NA,NA
 UMBC,Fabaceae,Gleditsia triacanthos,NA,Tree,Expert,e9d686,Robinia pseudoacacia,NA,NA,NA
 UMBC,Fabaceae,Robinia pseudoacacia,NA,Tree,Expert,333c34,Robinia pseudoacacia,NA,NA,NA
+UMBC,Fabaceae,Robinia pseudoacacia,NA,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 UMBC,Fabaceae,Robinia pseudoacacia,NA,Tree,Expert,e9d686,Robinia pseudoacacia,NA,NA,NA
 UMBC,Fabaceae,Cercis canadensis,NA,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 UMBC,Fagaceae,Quercus sp.,NA,Tree,Expert,1d7c4c,Quercus rubra,NA,NA,NA
@@ -529,10 +550,11 @@ UMBC,Fagaceae,Quercus prinus,NA,Tree,Expert,76df22,Quercus prinus,NA,NA,NA
 UMBC,Fagaceae,Quercus prinus,NA,Tree,Expert,e94dab,Quercus prinus,NA,NA,NA
 UMBC,Fagaceae,Quercus rubra,NA,Tree,Expert,1d7c4c,Quercus rubra,NA,NA,NA
 UMBC,Hamamelidaceae,Hamamelis virginiana,NA,Shrub,Expert,76aa3c,Hamamelis virginiana,NA,NA,NA
-UMBC,Juglandaceae,Juglans nigra,NA,Tree,Generic,7f7777,Juglandaceae,NA,NA,NA
+UMBC,Juglandaceae,Juglans nigra,NA,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 UMBC,Juglandaceae,Carya cordiformis,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 UMBC,Juglandaceae,Carya glabra,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 UMBC,Juglandaceae,Carya sp.,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
+UMBC,Juglandaceae,Carya sp.,NA,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 UMBC,Juglandaceae,Carya tomentosa,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 UMBC,Lauraceae,Sassafras albidum,NA,Tree,Expert,2c092b,Sassafras albidum,NA,NA,NA
 UMBC,Lauraceae,Lindera benzoin,NA,Shrub,Generic,f08fff,Lauraceae,NA,NA,NA
@@ -662,6 +684,7 @@ Michigan Big Woods,Cupressaceae,Thuja occidentalis,NA,Tree,Expert,c078ca,Thuja o
 Michigan Big Woods,Elaeagnaceae,Elaeagnus umbellata,NA,"Shrub, small tree",Generic,ae65ed,Mixed hardwood,NA,NA,NA
 Michigan Big Woods,Ericaceae,Vaccinium corymbosum,NA,Shrub,Generic,f08fff,Ericaceae,NA,NA,NA
 Michigan Big Woods,Fabaceae,Robinia pseudoacacia,NA,Tree,Expert,333c34,Robinia pseudoacacia,NA,NA,NA
+Michigan Big Woods,Fabaceae,Robinia pseudoacacia,NA,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 Michigan Big Woods,Fabaceae,Robinia pseudoacacia,NA,Tree,Expert,e9d686,Robinia pseudoacacia,NA,NA,NA
 Michigan Big Woods,Fagaceae,Fagus grandifolia,NA,Tree,Expert,281635,Fagus grandifolia,NA,NA,NA
 Michigan Big Woods,Fagaceae,Quercus alba,NA,Tree,Expert,524aca,Quercus alba,NA,NA,NA
@@ -676,7 +699,8 @@ Michigan Big Woods,Hamamelidaceae,Hamamelis virginiana,NA,Shrub,Expert,76aa3c,Ha
 Michigan Big Woods,Juglandaceae,Carya cordiformis,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Michigan Big Woods,Juglandaceae,Carya glabra,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Michigan Big Woods,Juglandaceae,Carya ovata,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
-Michigan Big Woods,Juglandaceae,Juglans nigra,NA,Tree,Generic,7f7777,Juglandaceae,NA,NA,NA
+Michigan Big Woods,Juglandaceae,Caryasp.,NA,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
+Michigan Big Woods,Juglandaceae,Juglans nigra,NA,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 Michigan Big Woods,Lauraceae,Lindera benzoin,NA,Shrub,Generic,f08fff,Lauraceae,NA,NA,NA
 Michigan Big Woods,Lauraceae,Sassafras albidum,NA,Tree,Expert,2c092b,Sassafras albidum,NA,NA,NA
 Michigan Big Woods,Oleaceae,Fraxinus americana,NA,Tree,Expert,122ba6,Fraxinus americana,NA,NA,NA
