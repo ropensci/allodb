@@ -22,16 +22,18 @@ Lilly Dicky,Hamamelidaceae,Hamamelis virginiana,498,Shrub,Total aboveground biom
 Lilly Dicky,Cupressaceae,Juniperus virginiana,68,Tree,Total aboveground biomass,Expert,c36a5b,Juniperus virginiana,Species,14,43,NA,NA,NA
 Lilly Dicky,Lauraceae,Lindera benzoin,609,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
 Lilly Dicky,Magnoliaceae,Liriodendron tulipifera,621,Tree,Total aboveground biomass,Expert,94f593,Liriodendron tulipifera,Species,0.42,8.53,NA,NA,NA
+Lilly Dicky,Magnoliaceae,Liriodendron tulipifera,621,Tree,Total aboveground biomass,Expert,c48e81,Liriodendron tulipifera,Species,10.2,55.8,NA,NA,NA
 Lilly Dicky,Nyssaceae,Nyssa sylvatica,693,Tree,Total aboveground biomass,Expert,8c94e8,Nyssa sylvatica,Species,0.24,6.72,NA,NA,NA
 Lilly Dicky,Betulaceae,Ostrya virginiana,701,Tree,Stem and branches (live),Expert,289f7c,Ostrya virginiana,Species,1,9,NA,NA,NA
 Lilly Dicky,Betulaceae,Ostrya virginiana,701,Tree,Foliage total,Expert,b9d4fc,Ostrya virginiana,Species,1,9,NA,NA,NA
 Lilly Dicky,Paulowniaceae,Paulownia tomentosa,712,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+Lilly Dicky,Rosaceae,Prunus serotina,762,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Lilly Dicky,Rosaceae,Prunus serotina,762,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 Lilly Dicky,Fagaceae,Quercus alba,802,Tree,Stem and branches (live),Expert,524aca,Quercus alba,Species,7,63,NA,NA,NA
 Lilly Dicky,Fagaceae,Quercus coccinea,806,Tree,Stem and branches (live),Expert,162ce7,Quercus coccinea,Species,15,43.3,NA,NA,NA
 Lilly Dicky,Fagaceae,Quercus prinus,832,Tree,Stem and branches (live),Expert,e94dab,Quercus prinus,Species,10.6,57.5,NA,NA,NA
 Lilly Dicky,Fagaceae,Quercus prinus,832,Tree,Stem and branches (live),Expert,76df22,Quercus prinus,Species,3.81,11.94,NA,NA,NA
-Lilly Dicky,Fagaceae,Quercus rubra,833,Tree,Stem and branches (live),Expert,839012,Quercus rubra,Species,5.08,50.8,NA,NA,NA
+Lilly Dicky,Fagaceae,Quercus rubra,833,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
 Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above stump),Expert,23ec05,Quercus velutina,Species,7.62,30.48,NA,NA,species
 Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Total aboveground biomass,Expert,4b8afb,Quercus velutina,Species,0.55,7.76,NA,NA,species
 Lilly Dicky,Fagaceae,Quercus velutina,837,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
@@ -39,7 +41,9 @@ Lilly Dicky,Anacardiaceae,Rhus typhina,899,Shrub,Total aboveground biomass,Gener
 Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,species
 Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Stem (wood and bark),Expert,e9d686,Robinia pseudoacacia,Species,29.46,41.66,NA,NA,species
 Lilly Dicky,Lauraceae,Sassafras albidum,931,Tree,Whole tree (above stump),Expert,c13e0f,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
-Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Stem and branches (live),Expert,3f99ba,Tilia americana,Species,5.08,50.8,NA,NA,NA
+Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Stem (wood and bark),Expert,3e6f4d,Tilia americana,Species,1.6,10,NA,NA,NA
+Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Stem (wood and bark),Expert,3f99ba,Tilia americana,Species,14.22,26.67,NA,NA,NA
+Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Stem (wood and bark),Expert,bebe2e,Tilia americana,Species,29.97,41.91,NA,NA,NA
 Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
 Lilly Dicky,Ulmaceae,Ulmus americana,972,Tree,Whole tree (above stump),Expert,2473f9,Ulmus americana,Species,2.5,40,NA,NA,NA
 Lilly Dicky,Ulmaceae,Ulmus rubra,975,Tree,Whole tree (above stump),Expert,2473f9,Ulmus americana,Species,2.5,40,NA,NA,NA
@@ -69,7 +73,7 @@ SCBI,Ebenaceae,Diospyros virginiana,divi,Tree,Total aboveground biomass,Generic,
 SCBI,Elaeagnaceae,Elaeagnus umbellata,elum,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SCBI,Celastraceae,Euonymus alatus,eual,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SCBI,Fagaceae,Fagus grandifolia,fagr,Tree,Stem and branches (live),Expert,281635,Fagus grandifolia,Species,1,63,NA,NA,NA
-SCBI,Oleaceae,Fraxinus americana,fram,Tree,Stem and branches (live),Expert,973c05,Fraxinus americana,Species,5.08,50.8,NA,NA,NA
+SCBI,Oleaceae,Fraxinus americana,fram,Tree,Whole tree (above stump),Expert,122ba6,Fraxinus americana,Species,2.5,55,NA,NA,NA
 SCBI,Oleaceae,Fraxinus nigra,frni,Tree,Total aboveground biomass,Expert,0edaff,Fraxinus nigra,Species,4,32,NA,NA,NA
 SCBI,Oleaceae,Fraxinus pennsylvanica,frpe,Tree,Total aboveground biomass,Expert,0edaff,Fraxinus nigra,Species,4,32,NA,NA,NA
 SCBI,Hamamelidaceae,Hamamelis virginiana,havi,Shrub,Total aboveground biomass,Expert,76aa3c,Hamamelis virginiana,Species,0.18,4.31,NA,NA,NA
@@ -77,7 +81,8 @@ SCBI,Aquifoliaceae,Ilex verticillata,ilve,Shrub,Total aboveground biomass,Generi
 SCBI,Juglandaceae,Juglans cinerea,juci,Tree,Total aboveground biomass,Generic,7f7777,Juglandaceae,Family,4,42,NA,NA,NA
 SCBI,Juglandaceae,Juglans nigra,juni,Tree,Total aboveground biomass,Generic,7f7777,Juglandaceae,Family,4,42,NA,NA,NA
 SCBI,Lauraceae,Lindera benzoin,libe,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
-SCBI,Magnoliaceae,Liriodendron tulipifera,litu,Tree,Stem and branches (live),Expert,34fe5a,Liriodendron tulipifera,Species,5.08,50.8,NA,NA,NA
+SCBI,Magnoliaceae,Liriodendron tulipifera,litu,Tree,Total aboveground biomass,Expert,94f593,Liriodendron tulipifera,Species,0.42,8.53,NA,NA,NA
+SCBI,Magnoliaceae,Liriodendron tulipifera,litu,Tree,Total aboveground biomass,Expert,c48e81,Liriodendron tulipifera,Species,10.2,55.8,NA,NA,NA
 SCBI,Caprifoliaceae,Lonicera maackii,loma,Shrub,Total aboveground biomass,Expert,28dce6,Lonicera canadensis,Species,0.12,0.69,NA,NA,NA
 SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Total aboveground biomass,Expert,e8ebc2,Nyssa sylvatica,Species,4.06,12.45,NA,NA,NA
 SCBI,Nyssaceae,Nyssa sylvatica,nysy,Tree,Stem (wood and bark),Expert,380d95,Nyssa sylvatica,Species,14.478,25.4,NA,NA,NA
@@ -88,9 +93,12 @@ SCBI,Pinaceae,Pinus strobus,pist,Tree,Total aboveground biomass,Expert,21800b,Pi
 SCBI,Pinaceae,Pinus virginiana,pivi,Tree,Total aboveground biomass,Expert,6ea81f,Pinus taeda,Species,3.5,35.6,NA,NA,NA
 SCBI,Platanaceae,Platanus occidentalis,PLOC,Tree,Whole tree (above stump),Expert,73325b,Platanus occidentalis,Species,4.83,23.88,NA,NA,NA
 SCBI,Platanaceae,Platanus occidentalis,PLOC,Tree,Whole tree (above stump),Expert,0a1212,Platanus occidentalis,Species,24.94,49.53,NA,NA,NA
-SCBI,Rosaceae,Prunus avium,prav,Tree,Stem and branches (live),Expert,508dfe,Prunus serotina,Species,5.08,50.8,NA,NA,NA
-SCBI,Rosaceae,Prunus persica,prpe,Tree,Stem and branches (live),Expert,508dfe,Prunus serotina,Species,5.08,50.8,NA,NA,NA
-SCBI,Rosaceae,Prunus serotina,prse,Tree,Stem and branches (live),Expert,508dfe,Prunus serotina,Species,5.08,50.8,NA,NA,NA
+SCBI,Rosaceae,Prunus avium,prav,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+SCBI,Rosaceae,Prunus avium,prav,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
+SCBI,Rosaceae,Prunus persica,prpe,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+SCBI,Rosaceae,Prunus persica,prpe,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
+SCBI,Rosaceae,Prunus serotina,prse,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+SCBI,Rosaceae,Prunus serotina,prse,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 SCBI,Fagaceae,Quercus alba,qual,Tree,Stem and branches (live),Expert,524aca,Quercus alba,Species,7,63,NA,NA,NA
 SCBI,Fagaceae,Quercus coccinea,quco,Tree,Stem and branches (live),Expert,162ce7,Quercus coccinea,Species,15,43.3,NA,NA,NA
 SCBI,Fagaceae,Quercus falcata,qufa,Tree,Whole tree (above stump),Expert,81397c,Quercus falcata,Species,5.84,25.4,NA,NA,NA
@@ -101,7 +109,7 @@ SCBI,Fagaceae,Quercus montana,qupr,Tree,Stem and branches (live),Expert,76df22,Q
 SCBI,Fagaceae,Quercus montana,qupr,Tree,Stem and branches (live),Expert,e94dab,Quercus prinus,Species,10.6,57.5,NA,NA,NA
 SCBI,Fagaceae,Quercus muehlenbergii,qumu,Tree,Stem and branches (live),Expert,76df22,Quercus prinus,Species,3.81,11.94,NA,NA,NA
 SCBI,Fagaceae,Quercus muehlenbergii,qumu,Tree,Stem and branches (live),Expert,e94dab,Quercus prinus,Species,10.6,57.5,NA,NA,NA
-SCBI,Fagaceae,Quercus rubra,quru,Tree,Stem and branches (live),Expert,839012,Quercus rubra,Species,5.08,50.8,NA,NA,NA
+SCBI,Fagaceae,Quercus rubra,quru,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
 SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above stump),Expert,23ec05,Quercus velutina,Species,7.62,30.48,NA,NA,species
 SCBI,Fagaceae,Quercus velutina,quve,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
 SCBI,Fabaceae,Robinia pseudoacacia,rops,Tree,Stem (wood and bark),Expert,333c34,Robinia pseudoacacia,Species,14.22,25.91,NA,NA,species
@@ -112,7 +120,9 @@ SCBI,Rosaceae,Rubus pensilvanicus,rupe,Shrub,Total aboveground biomass,Expert,b6
 SCBI,Rosaceae,Rubus phoenicolasius,ruph,Shrub,Total aboveground biomass,Expert,b61369,Rubus idaeus,Species,0.3,0.9,NA,NA,NA
 SCBI,Adoxaceae,Sambucus canadensis,saca,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SCBI,Lauraceae,Sassafras albidum,saal,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
-SCBI,Malvaceae,Tilia americana,tiam,Tree,Stem and branches (live),Expert,3f99ba,Tilia americana,Species,5.08,50.8,NA,NA,NA
+SCBI,Malvaceae,Tilia americana,tiam,Tree,Stem (wood and bark),Expert,3e6f4d,Tilia americana,Species,1.6,10,NA,NA,NA
+SCBI,Malvaceae,Tilia americana,tiam,Tree,Stem (wood and bark),Expert,3f99ba,Tilia americana,Species,14.22,26.67,NA,NA,NA
+SCBI,Malvaceae,Tilia americana,tiam,Tree,Stem (wood and bark),Expert,bebe2e,Tilia americana,Species,29.97,41.91,NA,NA,NA
 SCBI,Malvaceae,Tilia americana,tiam,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
 SCBI,Ulmaceae,Ulmus americana,ulam,Tree,Whole tree (above stump),Expert,8eca60,Ulmus,Genus,2.54,27.43,NA,NA,NA
 SCBI,Ulmaceae,Ulmus rubra,ulru,Tree,Stem and branches (live),Expert,8eca60,Ulmus,Genus,2.54,27.43,NA,NA,NA
@@ -154,6 +164,7 @@ SERC,Ericaceae,Kalmia latifolia,KALA,Shrub,Total aboveground biomass,Generic,f08
 SERC,Oleaceae,Ligustrum sp.,LIGUS2,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SERC,Lauraceae,Lindera benzoin,LIBE3,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
 SERC,Altingiaceae,Liquidambar styraciflua,LIST2,Tree,Whole tree (above stump),Expert,6f6bc3,Liquidambar styraciflua,Species,28.45,50.8,NA,NA,NA
+SERC,Magnoliaceae,Liriodendron tulipifera,LITU,Tree,Total aboveground biomass,Expert,94f593,Liriodendron tulipifera,Species,0.42,8.53,NA,NA,NA
 SERC,Magnoliaceae,Liriodendron tulipifera,LITU,Tree,Total aboveground biomass,Expert,c48e81,Liriodendron tulipifera,Species,10.2,55.8,NA,NA,NA
 SERC,Caprifoliaceae,Lonicera maackii,LOMA6,Shrub,Total aboveground biomass,Expert,28dce6,Lonicera canadensis,Species,0.12,0.69,NA,NA,NA
 SERC,Moraceae,Morus rubra,MORU2,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
@@ -166,7 +177,9 @@ SERC,Pinaceae,Pinus virginiana,PIVI2,Tree,Total aboveground biomass,Expert,6ea81
 SERC,Platanaceae,Platanus occidentalis,PLOC,Tree,Whole tree (above stump),Expert,73325b,Platanus occidentalis,Species,4.83,23.88,NA,NA,NA
 SERC,Platanaceae,Platanus occidentalis,PLOC,Tree,Whole tree (above stump),Expert,0a1212,Platanus occidentalis,Species,24.94,49.53,NA,NA,NA
 SERC,Salicaceae,Populus grandidentata,POGR4,Tree,Total aboveground biomass,Expert,3172f7,Populus grandidentata,Species,0.68,7.49,NA,NA,NA
+SERC,Rosaceae,Prunus avium,PRAV,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 SERC,Rosaceae,Prunus avium,PRAV,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
+SERC,Rosaceae,Prunus serotina,PRSE2,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 SERC,Rosaceae,Prunus serotina,PRSE2,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 SERC,Fagaceae,Quercus alba,QUAL,Tree,Total aboveground biomass,Expert,524aca,Quercus alba,Species,7,63,NA,NA,NA
 SERC,Fagaceae,Quercus coccinea,QUCO2,Tree,Total aboveground biomass,Expert,162ce7,Quercus coccinea,Species,15,43.3,NA,NA,NA
@@ -188,7 +201,9 @@ SERC,Rosaceae,Rosa multiflora,ROMU,Shrub,Total aboveground biomass,Expert,a1646f
 SERC,Salicaceae,Salix nigra,SANI,Shrub,Total aboveground biomass,Generic,829bad,Salicaceae,Family,3,70,NA,NA,NA
 SERC,Adoxaceae,Sambucus nigra,SANIC4,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 SERC,Lauraceae,Sassafras albidum,SAAL5,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
-SERC,Malvaceae,Tilia americana,TIAM,Tree,Stem and branches (live),Expert,bebe2e,Tilia americana,Species,1.6,10,NA,NA,NA
+SERC,Malvaceae,Tilia americana,TIAM,Tree,Stem (wood and bark),Expert,3e6f4d,Tilia americana,Species,1.6,10,NA,NA,NA
+SERC,Malvaceae,Tilia americana,TIAM,Tree,Stem (wood and bark),Expert,3f99ba,Tilia americana,Species,14.22,26.67,NA,NA,NA
+SERC,Malvaceae,Tilia americana,TIAM,Tree,Stem (wood and bark),Expert,bebe2e,Tilia americana,Species,29.97,41.91,NA,NA,NA
 SERC,Malvaceae,Tilia americana,TIAM,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
 SERC,Ulmaceae,Ulmus americana,ULAM,Tree,Whole tree (above stump),Expert,8eca60,Ulmus,Genus,2.54,27.43,NA,NA,NA
 SERC,Ulmaceae,Ulmus rubra,ULRU,Tree,Stem and branches (live),Expert,8eca60,Ulmus,Genus,2.54,27.43,NA,NA,NA
@@ -233,12 +248,13 @@ Tyson,Betulaceae,Ostrya virginiana,ostvir,Tree,Foliage total,Expert,b9d4fc,Ostry
 Tyson,Platanaceae,Platanus occidentalis,plaocc,Tree,Whole tree (above stump),Expert,73325b,Platanus occidentalis,Species,4.83,23.88,NA,NA,NA
 Tyson,Platanaceae,Platanus occidentalis,plaocc,Tree,Whole tree (above stump),Expert,0a1212,Platanus occidentalis,Species,24.94,49.53,NA,NA,NA
 Tyson,Rosaceae,Prunus americana,pruame,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
+Tyson,Rosaceae,Prunus serotina,pruser,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Tyson,Rosaceae,Prunus serotina,pruser,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 Tyson,Rosaceae,Prunus sp.,prusp,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 Tyson,Fagaceae,Quercus alba,quealb,Tree,Stem and branches (live),Expert,524aca,Quercus alba,Species,7,63,NA,NA,NA
-Tyson,Fagaceae,Quercus marilandica,quemar,Tree,Stem and branches (live),Expert,839012,Quercus rubra,Species,5.08,50.8,NA,NA,NA
+Tyson,Fagaceae,Quercus marilandica,quemar,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
 Tyson,Fagaceae,Quercus muehlenbergii,quemue,Tree,Stem and branches (live),Expert,07dba7,Quercus alba,Species,5.08,50.8,NA,NA,NA
-Tyson,Fagaceae,Quercus rubra,querub,Tree,Stem and branches (live),Expert,839012,Quercus rubra,Species,5.08,50.8,NA,NA,NA
+Tyson,Fagaceae,Quercus rubra,querub,Tree,Total aboveground biomass,Expert,1d7c4c,Quercus rubra,Species,2.5,55,NA,NA,NA
 Tyson,Fagaceae,Quercus sp.,quesp,Tree,Stem and branches (live),Expert,07dba7,Quercus alba,Species,5.08,50.8,NA,NA,NA
 Tyson,Fagaceae,Quercus stellata,queste,Tree,Stem and branches (live),Expert,07dba7,Quercus stellata,Species,5.08,50.8,NA,NA,NA
 Tyson,Fagaceae,Quercus velutina,quevel,Tree,Whole tree (above stump),Expert,23ec05,Quercus velutina,Species,7.62,30.48,NA,NA,species
@@ -246,7 +262,9 @@ Tyson,Fagaceae,Quercus velutina,quevel,Tree,Total aboveground biomass,Expert,4b8
 Tyson,Fagaceae,Quercus velutina,quevel,Tree,Whole tree (above and belowground),Expert,c70dea,Quercus velutina,Species,30.48,88.9,NA,NA,species
 Tyson,Lauraceae,Sassafras albidum,sasalb,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
 Tyson,Sapotaceae,Sideroxylon lanuginosum,sidlan,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Tyson,Malvaceae,Tilia americana,tilame,Tree,Stem and branches (live),Expert,3f99ba,Tilia americana,Species,5.08,50.8,NA,NA,NA
+Tyson,Malvaceae,Tilia americana,tilame,Tree,Stem (wood and bark),Expert,3e6f4d,Tilia americana,Species,1.6,10,NA,NA,NA
+Tyson,Malvaceae,Tilia americana,tilame,Tree,Stem (wood and bark),Expert,3f99ba,Tilia americana,Species,14.22,26.67,NA,NA,NA
+Tyson,Malvaceae,Tilia americana,tilame,Tree,Stem (wood and bark),Expert,bebe2e,Tilia americana,Species,29.97,41.91,NA,NA,NA
 Tyson,Malvaceae,Tilia americana,tilame,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
 Tyson,Ulmaceae,Ulmus rubra,ulmrub,Tree,Whole tree (above stump),Expert,2473f9,Ulmus americana,Species,2.5,40,NA,NA,NA
 UCSC,Sapindaceae,Acer macrophyllum,ACERMA,Tree,Total aboveground biomass,Generic,d6be5c,Sapindaceae,Family,3,66,NA,NA,NA
@@ -314,7 +332,8 @@ Wabikon,Pinaceae,Pinus strobus,PINSTR,Tree,Total aboveground biomass,Expert,2180
 Wabikon,Salicaceae,Populus balsamifera,POPBAL,Tree,Whole tree (above stump),Expert,ecd464,Populus,Genus,2.5,55,NA,NA,NA
 Wabikon,Salicaceae,Populus grandidentata,POPGRA,Tree,Total aboveground biomass,Expert,3172f7,Populus grandidentata,Species,0.68,7.49,NA,NA,NA
 Wabikon,Salicaceae,Populus tremuloides,POPTRE,Tree,Total aboveground biomass,Expert,687843,Populus tremuloides,Species,14.7,39.7,NA,NA,NA
-Wabikon,Rosaceae,Prunus pensylvanica,PRUPEN,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
+Wabikon,Rosaceae,Prunus pensylvanica,PRUPEN,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+Wabikon,Rosaceae,Prunus serotina,PRUSER,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Wabikon,Rosaceae,Prunus serotina,PRUSER,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 Wabikon,Rosaceae,Prunus virginiana,PRUVIR,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Wabikon,Fagaceae,Quercus rubra,QUERUB,Tree,Total aboveground biomass,Expert,82e78c,Quercus rubra,Species,2.8,69.5,NA,NA,NA
@@ -322,8 +341,10 @@ Wabikon,Grossulariaceae,Ribes cynosbati,RIBCYN,Shrub,Total aboveground biomass,G
 Wabikon,Adoxaceae,Sambucus racemosa,SAMRAC,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 Wabikon,Rosaceae,Sorbus americana,SORAME,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Wabikon,Cupressaceae,Thuja occidentalis,THUOCC,Tree,Whole tree (above stump),Expert,c078ca,Thuja occidentalis,Species,2.5,40,NA,NA,NA
+Wabikon,Malvaceae,Tilia americana,TILAME,Tree,Foliage total,Expert,3e6f4d,Tilia americana,Species,1.6,10,NA,NA,NA
 Wabikon,Malvaceae,Tilia americana,TILAME,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
-Wabikon,Malvaceae,Tilia americana,TILAME,Tree,Stem and branches (live),Expert,3f99ba,Tilia americana,Species,5.08,50.8,NA,NA,NA
+Wabikon,Malvaceae,Tilia americana,TILAME,Tree,Stem (wood and bark),Expert,3f99ba,Tilia americana,Species,14.22,26.67,NA,NA,NA
+Wabikon,Malvaceae,Tilia americana,TILAME,Tree,Stem (wood and bark),Expert,bebe2e,Tilia americana,Species,29.97,41.91,NA,NA,NA
 Wabikon,Pinaceae,Tsuga canadensis,TSUCAN,Tree,Total aboveground biomass,Expert,1d44c6,Tsuga canadensis,Species,0.1,2.54,NA,NA,NA
 Wabikon,Ulmaceae,Ulmus americana,ULMAME,Tree,Whole tree (above stump),Expert,2473f9,Ulmus americana,Species,2.5,40,NA,NA,NA
 Wind River,Pinaceae,Abies amabilis,ABAM,Tree,Whole tree (above stump),Expert,b570d4,Abies amabilis,Species,31,90.4,NA,NA,NA
@@ -515,8 +536,11 @@ UMBC,Juglandaceae,Carya tomentosa,NA,Tree,Total aboveground biomass,Expert,9c4cc
 UMBC,Lauraceae,Sassafras albidum,NA,Tree,Whole tree (above stump),Expert,2c092b,Sassafras albidum,Species,0.4,8.49,NA,NA,NA
 UMBC,Lauraceae,Lindera benzoin,NA,Shrub,Total aboveground biomass,Generic,f08fff,Lauraceae,Family,3,64,NA,NA,NA
 UMBC,Lythraceae,Lagerstroemia indica,NA,Shrub,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
+UMBC,Magnoliaceae,Liriodendron tulipifera,NA,Tree,Total aboveground biomass,Expert,94f593,Liriodendron tulipifera,Species,0.42,8.53,NA,NA,NA
 UMBC,Magnoliaceae,Liriodendron tulipifera,NA,Tree,Total aboveground biomass,Expert,c48e81,Liriodendron tulipifera,Species,10.2,55.8,NA,NA,NA
-UMBC,Malvaceae,Tilia americana,NA,Tree,Stem and branches (live),Expert,bebe2e,Tilia americana,Species,1.6,10,NA,NA,NA
+UMBC,Malvaceae,Tilia americana,NA,Tree,Stem (wood and bark),Expert,3e6f4d,Tilia americana,Species,1.6,10,NA,NA,NA
+UMBC,Malvaceae,Tilia americana,NA,Tree,Stem (wood and bark),Expert,3f99ba,Tilia americana,Species,14.22,26.67,NA,NA,NA
+UMBC,Malvaceae,Tilia americana,NA,Tree,Stem (wood and bark),Expert,bebe2e,Tilia americana,Species,29.97,41.91,NA,NA,NA
 UMBC,Malvaceae,Tilia americana,NA,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
 UMBC,Moraceae,Maclura pomifera,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
 UMBC,Moraceae,Morus rubra,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
@@ -539,7 +563,9 @@ UMBC,Rosaceae,Crataegus sp.,NA,Shrub,Total aboveground biomass,Generic,f08fff,Ro
 UMBC,Rosaceae,Amelanchier arborea,NA,Tree,Stem biomass (with bark),Expert,c59e03,Amelanchier,Genus,8.9,25.4,NA,NA,NA
 UMBC,Rosaceae,Amelanchier arborea,NA,Tree,"Branches (live, dead)",Expert,96c0af,Amelanchier,Genus,5,45,NA,NA,NA
 UMBC,Rosaceae,Amelanchier arborea,NA,Tree,Foliage total,Expert,529234,Amelanchier,Genus,5,45,NA,NA,NA
+UMBC,Rosaceae,Prunus serotina,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 UMBC,Rosaceae,Prunus serotina,NA,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
+UMBC,Rosaceae,Prunus avium,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 UMBC,Rosaceae,Prunus avium,NA,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 UMBC,Rosaceae,Pyrus calleryana,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 UMBC,Rosaceae,Pyrus communis,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
@@ -595,6 +621,7 @@ Harvard Forest,Rhamnaceae,Frangula alnus,NA,Shrub,Total aboveground biomass,Gene
 Harvard Forest,Rosaceae,Amelanchier laevis,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Harvard Forest,Rosaceae,Aronia melanocarpa,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Harvard Forest,Rosaceae,Crataegus sp.,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+Harvard Forest,Rosaceae,Prunus serotina,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Harvard Forest,Rosaceae,Prunus serotina,NA,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 Harvard Forest,Rosaceae,Sorbus americana,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Harvard Forest,Salicaceae,Populus grandidentata,NA,Tree,Total aboveground biomass,Expert,3172f7,Populus grandidentata,Species,0.68,7.49,NA,NA,NA
@@ -656,6 +683,7 @@ Michigan Big Woods,Rosaceae,Amelanchier arborea,NA,Tree,Stem biomass (with bark)
 Michigan Big Woods,Rosaceae,Amelanchier arborea,NA,Tree,"Branches (live, dead)",Expert,96c0af,Amelanchier,Genus,5,45,NA,NA,NA
 Michigan Big Woods,Rosaceae,Amelanchier arborea,NA,Tree,Foliage total,Expert,529234,Amelanchier,Genus,5,45,NA,NA,NA
 Michigan Big Woods,Rosaceae,Malus sp,NA,Shrub,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
+Michigan Big Woods,Rosaceae,Prunus serotina,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Michigan Big Woods,Rosaceae,Prunus serotina,NA,Tree,Total aboveground biomass,Expert,8aecca,Prunus serotina,Species,0.37,6.83,NA,NA,NA
 Michigan Big Woods,Rosaceae,Prunus virginiana,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
 Michigan Big Woods,Rosaceae,Pyrus sp,NA,Tree,Total aboveground biomass,Generic,f08fff,Rosaceae,Family,3,64,NA,NA,NA
@@ -665,7 +693,9 @@ Michigan Big Woods,Sapindaceae,Acer rubrum,NA,Tree,Total aboveground biomass,Exp
 Michigan Big Woods,Sapindaceae,Acer rubrum,NA,Tree,Total aboveground biomass,Expert,138258,Acer rubrum,Species,10,52.2,NA,NA,NA
 Michigan Big Woods,Sapindaceae,Acer saccharum,NA,Tree,Total aboveground biomass,Expert,77e37e,Acer saccharum,Species,7.5,23.7,NA,NA,NA
 Michigan Big Woods,Simaroubaceae,Ailanthus altissima,NA,Tree,Total aboveground biomass,Generic,ae65ed,Mixed hardwood,Mixed hardwood,2.5,56,NA,NA,NA
-Michigan Big Woods,Tiliaceae,Tilia americana,NA,Tree,Stem and branches (live),Expert,bebe2e,Tilia americana,Species,1.6,10,NA,NA,NA
+Michigan Big Woods,Tiliaceae,Tilia americana,NA,Tree,Stem (wood and bark),,3e6f4d,Tilia americana,Species,1.6,10,NA,NA,NA
+Michigan Big Woods,Tiliaceae,Tilia americana,NA,Tree,Stem (wood and bark),Expert,3f99ba,Tilia americana,Species,14.22,26.67,NA,NA,NA
+Michigan Big Woods,Tiliaceae,Tilia americana,NA,Tree,Stem (wood and bark),Expert,bebe2e,Tilia americana,Species,29.97,41.91,NA,NA,NA
 Michigan Big Woods,Tiliaceae,Tilia americana,NA,Tree,Foliage total,Expert,76d19b,Tilia americana,Species,2.5,40,NA,NA,NA
 Michigan Big Woods,Ulmaceae,Ulmus americana,NA,Tree,Whole tree (above stump),Expert,2473f9,Ulmus americana,Species,2.5,40,NA,NA,NA
 Traunstein ,Pinaceae,Picea abies,10,Tree,Total aboveground biomass,Expert,e57b77,Picea,Genus,NRA,NRA,NA,NA,NA
