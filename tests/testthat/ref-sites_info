@@ -1,192 +1,207 @@
-    id                          Site                          site   lat
-1   42                     Amacayacu                     amacayacu -3.81
-2   51                  Badagongshan                  badagongshan 29.46
-3   52                    Baotianman                    baotianman  33.5
-4   45         Barro Colorado Island         barro colorado island  9.15
-5   18                   Bukit Timah                   bukit timah  1.35
-6   53                  Changbaishan                  changbaishan 42.38
-7   46                        Cocoli                        cocoli  8.99
-8   14                  Danum Valley                  danum valley   5.1
-9    7                    Dinghushan                    dinghushan 23.17
-10  25                  Doi Inthanon                  doi inthanon 18.58
-11  54                  Donglingshan                  donglingshan 39.96
-12  20                        Fushan                        fushan 24.76
-13  55                    Gutianshan                    gutianshan 29.25
-14  29                    Haliburton                    haliburton 45.29
-15  31                Harvard Forest                harvard forest 42.54
-16   8                    Heishiding                    heishiding 23.27
-17   9                     Hong Kong                     hong kong 22.43
-18  26               Huai Kha Khaeng               huai kha khaeng 15.63
-19  40               Ilha do Cardoso               ilha do cardoso -25.1
-20   2 Ituri average (Edoro & Lenda) ituri average (edoro & lenda)  1.44
-21 2.1                  Ituri-Edoro1                  ituri-edoro1  1.56
-22 2.2                  Ituri-Edoro2                  ituri-edoro2  1.56
-23 2.3                  Ituri-Lenda1                  ituri-lenda1  1.32
-24 2.4                  Ituri-Lenda2                  ituri-lenda2  1.31
-25  10                  Jianfengling                  jianfengling 18.73
-26  21                       Kenting                       kenting 21.98
-27  27                    Khao Chong                    khao chong  7.54
-28   1                         Korup                         korup  5.07
-29   6                Kuala Belalong                kuala belalong  4.54
-30  43                    La Planada                    la planada  1.16
-31  15                        Lambir                        lambir  4.19
-32  49                   Laupahoehoe                   laupahoehoe 19.93
-33  22                   Lienhuachih                   lienhuachih 23.91
-34  32            Lilly Dickey Woods            lilly dickey woods 39.24
-35  48                      Luquillo                      luquillo 18.33
-36  41                        Manaus                        manaus -2.44
-37  28                     Mo Singto                     mo singto 14.43
-38   4                         Mpala                         mpala  0.29
-39  13                     Mudumalai                     mudumalai  11.6
-40  23                    Nanjenshan                    nanjenshan 22.06
-41  11                      Nonggang                      nonggang 22.43
-42  50                     Palamanui                     palamanui 19.74
-43  17                       Palanan                       palanan 17.04
-44  16                         Pasoh                         pasoh  2.98
-45   3                          Rabi                          rabi -1.92
-46  47          San Lorenzo/ Sherman          san lorenzo/ sherman  9.28
-47  33                    Santa Cruz                    santa cruz 37.01
-48  34                          SCBI                          scbi 38.89
-49  30                  Scotty Creek                  scotty creek  61.3
-50  35                          SERC                          serc 38.89
-51  19                     Sinharaja                     sinharaja   6.4
-52  58                   Speulderbos                   speulderbos 52.25
-53  56                  Tiantongshan                  tiantongshan 29.81
-54  36         Tyson Research Center         tyson research center 38.52
-55  37                       Wabikon                       wabikon 45.55
-56   5                        Wanang                        wanang -5.25
-57  38                    Wind River                    wind river 45.82
-58  59                  Wytham Woods                  wytham woods 51.77
-59  12                 Xishuangbanna                 xishuangbanna 21.61
-60  44                        Yasuni                        yasuni -0.69
-61  39        Yosemite National Park        yosemite national park 37.77
-62  24                        Zenlun                        zenlun 23.42
-63  57                         Zofin                         zofin 48.66
-      long UTM_Zone       UTM_X       UTM_Y intertropical size.ha            E
-1   -70.27       19 359223.7022 9578870.297      Tropical      25  -0.07928769
-2   110.52       49 453456.2453 3259047.312         Other      25  1.011620732
-3   111.94       49 587323.8348 3706005.813         Other      25  1.199599082
-4   -79.85       17 626783.7403 1012114.358      Tropical      50  0.049445487
-5   103.78       48 364271.6602 149249.8881      Tropical       4 -0.084798024
-6   128.08       52 424513.4019 4692742.225         Other      25  1.834148906
-7   -79.62       17 652074.2927 993779.1758      Tropical       4  0.070253499
-8   117.69       50 576257.6994 563967.7964      Tropical      50 -0.044607199
-9   112.51       49 654668.0285 2563086.118      Tropical      20  0.655347094
-10   98.43       47      440211     2054819      Tropical      15  0.405736946
-11  115.43       50 365470.3933 4424127.891         Other    <NA>    1.7615144
-12  121.56       51 353895.0124 2739300.107         Other      25  0.430479025
-13  118.12       50 608536.5224 3236200.982         Other      24  1.055180773
-14  -78.64       17 685242.9898 5017892.345         Other    13.5  1.869090628
-15  -72.18       18 731942.9165 4713468.255         Other      35  1.716028059
-16  111.53       49 554207.1143 2573508.247      Tropical      50  0.746411624
-17  114.18       50    209917.6   2482736.6      Tropical      21  0.490748617
-18   99.22       47 523259.1915 1728286.072      Tropical      50   0.31946635
-19  -47.96       23 201725.4144  7221210.87         Other    10.2  0.210911743
-20   28.58       35           -           -      Tropical    <NA>  0.003627707
-21   28.52       35      668563      172648      Tropical    <NA>  0.002745626
-22   28.52       35 669557.0001      172645      Tropical    <NA>  0.002745626
-23   28.65       35 683078.0004      145589      Tropical    <NA> -0.001571496
-24   28.65       35 683069.0005      144621      Tropical    <NA> -0.001315683
-25  108.91       49 279109.9787  2072338.72      Tropical      60   0.28396406
-26   120.8       51 272526.2425 2432250.629      Tropical      10  0.097674343
-27    99.8       47 588036.7725 833908.7871      Tropical      24  0.047869472
-28    8.85       32   483894.67   560834.91      Tropical      55 -0.089526908
-29  115.15       50   295190.97   501901.22      Tropical      25 -0.047395853
-30  -77.99       18 166813.2014 127926.4909      Tropical      25 -0.146312127
-31  114.02       50 168797.5144 463372.1445      Tropical      52 -0.105606113
-32 -155.29        5  260613.292 2205375.382      Tropical       4         <NA>
-33  120.88       51 284093.6913 2646281.327         Other      25  0.223115583
-34  -86.22       16 567481.1184 4343246.441         Other      25  1.686475838
-35  -65.82       20 202346.9856 2028576.873      Tropical      16  0.096506178
-36  -59.79       21 190167.2928 9729796.059      Tropical      25 -0.116549646
-37  101.35       47 753358.2549  1596943.59      Tropical    30.5  0.352063637
-38   36.88       37 264146.1264  32274.8907      Tropical     150  0.540809412
-39   76.53       43 667229.3428 1282651.532      Tropical      50   0.20541107
-40  120.85       51 278542.3832 2440915.528      Tropical       6  0.013545828
-41  106.95       48 700691.1024  2482092.06      Tropical      15  0.572216054
-42 -155.99        5  186188.785 2185414.698      Tropical       4         <NA>
-43  122.39       51 434869.6106 1884104.104      Tropical      16 -0.019430539
-44  102.31       48 201296.6791 329968.1588      Tropical      50 -0.094024937
-45    9.88       32 597875.4122 9787247.824      Tropical      25   0.01258341
-46  -79.97       17  612688.965 1026137.017      Tropical       6  -0.04491691
-47 -122.08       10 582290.4887 4096647.841         Other      16    0.6355596
-48  -78.15       17 747576.8353 4308832.418         Other    <NA>  1.571394901
-49  -121.3       10 591070.3047 6797388.659         Other      21  2.646941295
-50  -76.56       18 364754.7104 4305625.637         Other    <NA>  1.631266437
-51    80.4       44 433901.8141 707714.4623      Tropical      25 -0.118385938
-52     5.7       31 684429.1599 5792617.953         Other      27  0.951916465
-53  121.78       51 382397.5835 3298530.392         Other      20  1.110867343
-54  -90.56       15 712942.9979 4266096.106         Other      20  1.838340028
-55  -88.79       16 359937.4361  5046128.58         Other    25.6  1.731811064
-56  145.27       55  307935.092 9419435.135      Tropical      50 -0.176488947
-57 -121.96       10 581116.9193 5074545.366         Other    25.6    0.8436695
-58   -1.34       30 614673.2627 5737242.505         Other      18   0.90247604
-59  101.57       47 766473.4356 2392054.222      Tropical      20   0.33522321
-60   -76.4       18 344544.4378 9924164.715      Tropical      50  -0.02645997
-61 -119.82       11 251690.3705 4183617.761         Other    25.6  1.360057948
-62  120.55       51 249752.1018 2592662.301      Tropical      12  0.211963255
-63   14.71       33 478447.4731 5390124.453         Other      25  1.002541365
-   wsg.site.name
-1      amacayacu
-2           <NA>
-3           <NA>
-4            bci
-5     bukittimah
-6       changbai
-7           <NA>
-8           <NA>
-9           <NA>
-10          <NA>
-11          <NA>
-12        fushan
-13        gutian
-14    haliburton
-15 harvardforest
-16    heishiding
-17          <NA>
-18           hkk
-19          <NA>
-20         ituri
-21          <NA>
-22          <NA>
-23          <NA>
-24          <NA>
-25          <NA>
-26       kenting
-27     khaochong
-28         korup
-29          <NA>
-30     laplanada
-31        lambir
-32          <NA>
-33   lienhuachih
-34   lillydickey
-35      luquillo
-36        manaus
-37      mosingto
-38         mpala
-39     mudumalai
-40    nanjenshan
-41          <NA>
-42          <NA>
-43       palanan
-44         pasoh
-45          rabi
-46          <NA>
-47          <NA>
-48          <NA>
-49        scotty
-50          serc
-51     sinharaja
-52          <NA>
-53          <NA>
-54          <NA>
-55       wabikon
-56          <NA>
-57     windriver
-58        wytham
-59          xtbg
-60        yasuni
-61      yosemite
-62          <NA>
-63         zofin
+     id                                    Site                          site
+1    42                               Amacayacu                     amacayacu
+2    51                            Badagongshan                  badagongshan
+3    52                              Baotianman                    baotianman
+4    45                   Barro Colorado Island                           bci
+5    18                             Bukit Timah                   bukit timah
+6    53                            Changbaishan                  changbaishan
+7    46                                  Cocoli                        cocoli
+8    14                            Danum Valley                  danum valley
+9     7                              Dinghushan                    dinghushan
+10   25                            Doi Inthanon                  doi inthanon
+11   54                            Donglingshan                  donglingshan
+12   20                                  Fushan                        fushan
+13   55                              Gutianshan                    gutianshan
+14   29                              Haliburton                    haliburton
+15   31                          Harvard Forest                harvard forest
+16    8                              Heishiding                    heishiding
+17    9                               Hong Kong                     hong kong
+18   26                         Huai Kha Khaeng               huai kha khaeng
+19   40                         Ilha do Cardoso               ilha do cardoso
+20    2           Ituri average (Edoro & Lenda) ituri average (edoro & lenda)
+21  2.1                            Ituri-Edoro1                  ituri-edoro1
+22  2.2                            Ituri-Edoro2                  ituri-edoro2
+23  2.3                            Ituri-Lenda1                  ituri-lenda1
+24  2.4                            Ituri-Lenda2                  ituri-lenda2
+25   10                            Jianfengling                  jianfengling
+26   21                                 Kenting                       kenting
+27   27                              Khao Chong                    khao chong
+28    1                                   Korup                         korup
+29    6                          Kuala Belalong                kuala belalong
+30   43                              La Planada                    la planada
+31   15                                  Lambir                        lambir
+32   49                             Laupahoehoe                   laupahoehoe
+33   22                             Lienhuachih                   lienhuachih
+34   32                      Lilly Dickey Woods                  lilly dickey
+35   48                                Luquillo                      luquillo
+36   41                                  Manaus                        manaus
+37 <NA>                      Michigan Big Woods            michigan big woods
+38   28                               Mo Singto                     mo singto
+39    4                                   Mpala                         mpala
+40   13                               Mudumalai                     mudumalai
+41   23                              Nanjenshan                    nanjenshan
+42   11                                Nonggang                      nonggang
+43   50                               Palamanui                     palamanui
+44   17                                 Palanan                       palanan
+45   16                                   Pasoh                         pasoh
+46    3                                    Rabi                          rabi
+47   47                    San Lorenzo/ Sherman          san lorenzo/ sherman
+48   33                              Santa Cruz                    santa cruz
+49   34                                    SCBI                          scbi
+50   30                            Scotty Creek                  scotty creek
+51   35                                    SERC                          serc
+52   19                               Sinharaja                     sinharaja
+53   58                             Speulderbos                   speulderbos
+54   56                            Tiantongshan                  tiantongshan
+55 <NA>                              Traunstein                    traunstein
+56   36                   Tyson Research Center                         tyson
+57 <NA>     University of California-Santa Cruz                          ucsc
+58 <NA> University of Maryland-Baltimore County                          umbc
+59 <NA>                                    Utah                          utah
+60   37                                 Wabikon                       wabikon
+61    5                                  Wanang                        wanang
+62   38                              Wind River                    wind river
+63   59                            Wytham Woods                  wytham woods
+64   12                           Xishuangbanna                 xishuangbanna
+65   44                                  Yasuni                        yasuni
+66   39                  Yosemite National Park                      yosemite
+67   24                                  Zenlun                        zenlun
+68   57                                   Zofin                         zofin
+      lat     long UTM_Zone       UTM_X       UTM_Y intertropical size.ha
+1   -3.81   -70.27       19 359223.7022 9578870.297      Tropical      25
+2   29.46   110.52       49 453456.2453 3259047.312         Other      25
+3    33.5   111.94       49 587323.8348 3706005.813         Other      25
+4    9.15   -79.85       17 626783.7403 1012114.358      Tropical      50
+5    1.35   103.78       48 364271.6602 149249.8881      Tropical       4
+6   42.38   128.08       52 424513.4019 4692742.225         Other      25
+7    8.99   -79.62       17 652074.2927 993779.1758      Tropical       4
+8     5.1   117.69       50 576257.6994 563967.7964      Tropical      50
+9   23.17   112.51       49 654668.0285 2563086.118      Tropical      20
+10  18.58    98.43       47      440211     2054819      Tropical      15
+11  39.96   115.43       50 365470.3933 4424127.891         Other    <NA>
+12  24.76   121.56       51 353895.0124 2739300.107         Other      25
+13  29.25   118.12       50 608536.5224 3236200.982         Other      24
+14  45.29   -78.64       17 685242.9898 5017892.345         Other    13.5
+15  42.54   -72.18       18 731942.9165 4713468.255         Other      35
+16  23.27   111.53       49 554207.1143 2573508.247      Tropical      50
+17  22.43   114.18       50    209917.6   2482736.6      Tropical      21
+18  15.63    99.22       47 523259.1915 1728286.072      Tropical      50
+19  -25.1   -47.96       23 201725.4144  7221210.87         Other    10.2
+20   1.44    28.58       35           -           -      Tropical    <NA>
+21   1.56    28.52       35      668563      172648      Tropical    <NA>
+22   1.56    28.52       35 669557.0001      172645      Tropical    <NA>
+23   1.32    28.65       35 683078.0004      145589      Tropical    <NA>
+24   1.31    28.65       35 683069.0005      144621      Tropical    <NA>
+25  18.73   108.91       49 279109.9787  2072338.72      Tropical      60
+26  21.98    120.8       51 272526.2425 2432250.629      Tropical      10
+27   7.54     99.8       47 588036.7725 833908.7871      Tropical      24
+28   5.07     8.85       32   483894.67   560834.91      Tropical      55
+29   4.54   115.15       50   295190.97   501901.22      Tropical      25
+30   1.16   -77.99       18 166813.2014 127926.4909      Tropical      25
+31   4.19   114.02       50 168797.5144 463372.1445      Tropical      52
+32  19.93  -155.29        5  260613.292 2205375.382      Tropical       4
+33  23.91   120.88       51 284093.6913 2646281.327         Other      25
+34  39.24   -86.22       16 567481.1184 4343246.441         Other      25
+35  18.33   -65.82       20 202346.9856 2028576.873      Tropical      16
+36  -2.44   -59.79       21 190167.2928 9729796.059      Tropical      25
+37  42.46      -84     <NA>        <NA>        <NA>          <NA>      23
+38  14.43   101.35       47 753358.2549  1596943.59      Tropical    30.5
+39   0.29    36.88       37 264146.1264  32274.8907      Tropical     150
+40   11.6    76.53       43 667229.3428 1282651.532      Tropical      50
+41  22.06   120.85       51 278542.3832 2440915.528      Tropical       6
+42  22.43   106.95       48 700691.1024  2482092.06      Tropical      15
+43  19.74  -155.99        5  186188.785 2185414.698      Tropical       4
+44  17.04   122.39       51 434869.6106 1884104.104      Tropical      16
+45   2.98   102.31       48 201296.6791 329968.1588      Tropical      50
+46  -1.92     9.88       32 597875.4122 9787247.824      Tropical      25
+47   9.28   -79.97       17  612688.965 1026137.017      Tropical       6
+48  37.01  -122.08       10 582290.4887 4096647.841         Other      16
+49  38.89   -78.15       17 747576.8353 4308832.418         Other    25.6
+50   61.3   -121.3       10 591070.3047 6797388.659         Other      21
+51  38.89   -76.56       18 364754.7104 4305625.637         Other    <NA>
+52    6.4     80.4       44 433901.8141 707714.4623      Tropical      25
+53  52.25      5.7       31 684429.1599 5792617.953         Other      27
+54  29.81   121.78       51 382397.5835 3298530.392         Other      20
+55  47.93    12.66     <NA>        <NA>        <NA>          <NA>      25
+56  38.52   -90.56       15 712942.9979 4266096.106         Other      20
+57 37.012 -122.075     <NA>        <NA>        <NA>          <NA>      16
+58  39.25  -76.708     <NA>        <NA>        <NA>          <NA>    6.25
+59  37.66  -112.85     <NA>        <NA>        <NA>          <NA>   13.64
+60  45.55   -88.79       16 359937.4361  5046128.58         Other    25.6
+61  -5.25   145.27       55  307935.092 9419435.135      Tropical      50
+62  45.82  -121.96       10 581116.9193 5074545.366         Other    25.6
+63  51.77    -1.34       30 614673.2627 5737242.505         Other      18
+64  21.61   101.57       47 766473.4356 2392054.222      Tropical      20
+65  -0.69    -76.4       18 344544.4378 9924164.715      Tropical      50
+66  37.77  -119.82       11 251690.3705 4183617.761         Other    25.6
+67  23.42   120.55       51 249752.1018 2592662.301      Tropical      12
+68  48.66    14.71       33 478447.4731 5390124.453         Other      25
+              E wsg.site.name  X13  X14
+1   -0.07928769     amacayacu <NA> <NA>
+2   1.011620732          <NA> <NA> <NA>
+3   1.199599082          <NA> <NA> <NA>
+4   0.049445487           bci <NA> <NA>
+5  -0.084798024    bukittimah <NA> <NA>
+6   1.834148906      changbai <NA> <NA>
+7   0.070253499          <NA> <NA> <NA>
+8  -0.044607199          <NA> <NA> <NA>
+9   0.655347094          <NA> <NA> <NA>
+10  0.405736946          <NA> <NA> <NA>
+11    1.7615144          <NA> <NA> <NA>
+12  0.430479025        fushan <NA> <NA>
+13  1.055180773        gutian <NA> <NA>
+14  1.869090628    haliburton <NA> <NA>
+15  1.716028059 harvardforest <NA> <NA>
+16  0.746411624    heishiding <NA> <NA>
+17  0.490748617          <NA> <NA> <NA>
+18   0.31946635           hkk <NA> <NA>
+19  0.210911743          <NA> <NA> <NA>
+20  0.003627707         ituri <NA> <NA>
+21  0.002745626          <NA> <NA> <NA>
+22  0.002745626          <NA> <NA> <NA>
+23 -0.001571496          <NA> <NA> <NA>
+24 -0.001315683          <NA> <NA> <NA>
+25   0.28396406          <NA> <NA> <NA>
+26  0.097674343       kenting <NA> <NA>
+27  0.047869472     khaochong <NA> <NA>
+28 -0.089526908         korup <NA> <NA>
+29 -0.047395853          <NA> <NA> <NA>
+30 -0.146312127     laplanada <NA> <NA>
+31 -0.105606113        lambir <NA> <NA>
+32         <NA>          <NA> <NA> <NA>
+33  0.223115583   lienhuachih <NA> <NA>
+34  1.686475838   lillydickey <NA> <NA>
+35  0.096506178      luquillo <NA> <NA>
+36 -0.116549646        manaus <NA> <NA>
+37         <NA>          <NA> <NA> <NA>
+38  0.352063637      mosingto <NA> <NA>
+39  0.540809412         mpala <NA> <NA>
+40   0.20541107     mudumalai <NA> <NA>
+41  0.013545828    nanjenshan <NA> <NA>
+42  0.572216054          <NA> <NA> <NA>
+43         <NA>          <NA> <NA> <NA>
+44 -0.019430539       palanan <NA> <NA>
+45 -0.094024937         pasoh <NA> <NA>
+46   0.01258341          rabi <NA> <NA>
+47  -0.04491691          <NA> <NA> <NA>
+48    0.6355596          <NA> <NA> <NA>
+49  1.571394901          <NA> <NA> <NA>
+50  2.646941295        scotty <NA> <NA>
+51  1.631266437          serc <NA> <NA>
+52 -0.118385938     sinharaja <NA> <NA>
+53  0.951916465          <NA> <NA> <NA>
+54  1.110867343          <NA> <NA> <NA>
+55         <NA>          <NA> <NA> <NA>
+56  1.838340028          <NA> <NA> <NA>
+57         <NA>          <NA> <NA> <NA>
+58         <NA>          <NA> <NA> <NA>
+59         <NA>          <NA> <NA> <NA>
+60  1.731811064       wabikon <NA> <NA>
+61 -0.176488947          <NA> <NA> <NA>
+62    0.8436695     windriver <NA> <NA>
+63   0.90247604        wytham <NA> <NA>
+64   0.33522321          xtbg <NA> <NA>
+65  -0.02645997        yasuni <NA> <NA>
+66  1.360057948      yosemite <NA> <NA>
+67  0.211963255          <NA> <NA> <NA>
+68  1.002541365         zofin <NA> <NA>

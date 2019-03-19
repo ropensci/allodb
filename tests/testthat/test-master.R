@@ -9,19 +9,13 @@ test_that("master_tidy() returns correct column types", {
   )
 })
 
-test_that("FIXME master() has sites non matching sites in `sites_info` (#79)", {
+test_that("master() outputs sits that can be matched in `sites_info` (#79)", {
   master_sites <- sort(unique(master()$site))
   all_sites <- sort(unique(allodb::sites_info$site))
 
   # Sites in master that don't match sites in `sites_info`
   missmatching_sites <- setdiff(master_sites, all_sites)
-  expect_failure(
-    expect_equal(length(missmatching_sites), 0L)
-  )
-  warning(
-    "FIXME master() has sites not matching `sites_info` (#79)",
-    call. = FALSE
-  )
+  expect_equal(length(missmatching_sites), 0L)
 })
 
 test_that("master outputs lowercase values of site (#79)", {
