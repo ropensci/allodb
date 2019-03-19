@@ -13,7 +13,7 @@ jenkins_2004_cdod,122ba6,3.203+(-0.234*dbh)+0.006*(dbh^2),a+(b*dbh)+c*(dbh^d),Wh
 jenkins_2004_cdod,e3f3bf,10^(1.2784+1.4248*(log10(dbh^2))),10^(a+b*(log10(dbh^c))),Whole tree (above stump),DBH,Species,"Ohio, USA",0.5,6.14,40,cm,g,harvest,NA,NA,NA,1,1.015,NA,NA,NA
 smith_1983_abef,76aa3c,38.111*(dba^2.9),a*(dba^b),Total aboveground biomass,DBA,Species,Canada,0.18,4.31,21,cm,g,harvest,NA,NA,NA,1,included in model,NA,NA,DBA= stem basal diameter. Use shrub function in this package
 jenkins_2004_cdod,c36a5b,0.1632*(dbh^2.2454),a*(dbh^b),Total aboveground biomass,DBH,Species,"Tennessee, USA",14,43,NA,cm,kg,harvest,NA,NA,NA,0,NA,NA,NA,NA
-jenkins_2004_cdod,94f593,10^(0.8306+2.7308*(log10(dbh^2))),10^(a+b*(log10(dbh^c))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.42,8.53,NA,cm,g,harvest,NA,NA,NA,1,1.014,NA,NA,NA
+jenkins_2004_cdod,94f593,10^(0.8306+1.527*(log10(dbh^2))),10^(a+b*(log10(dbh^c))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.42,8.53,NA,cm,g,harvest,NA,NA,NA,1,1.014,NA,NA,NA
 jenkins_2004_cdod,8c94e8,10^(1.1468+2.363*(log10(dbh^2))),10^(a+b*(log10(dbh^c))),Total aboveground biomass,DBH,Species,"Ohio, USA",0.24,6.72,NA,cm,g,harvest,NA,NA,NA,1,1.006,NA,NA,NA
 jenkins_2004_cdod,289f7c,exp(4.89+2.3*log(dbh)),exp(a+b*log(dbh)),Stem (wood and bark),DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA
 jenkins_2004_cdod,b9d4fc,exp(1.92+1.86*log(dbh)),exp(a+b*log(dbh)),Foliage total,DBH,Species,"New Hampshire, USA",1,9,NA,cm,g,harvest,NA,NA,NA,1,0,NA,NA,NA
