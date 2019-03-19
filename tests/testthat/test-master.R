@@ -1,5 +1,14 @@
 context("master")
 
+test_that("master_tidy() returns correct column types", {
+  expect_false(
+    identical(
+      unique(purrr::map_chr(master_tidy(), typeof)),
+      "character"
+    )
+  )
+})
+
 test_that("FIXME master() has sites non matching sites in `sites_info` (#79)", {
   master_sites <- sort(unique(master()$site))
   all_sites <- sort(unique(allodb::sites_info$site))
@@ -42,4 +51,21 @@ test_that("`equations` and `sitespecies` have no redundant columns (#78)", {
 
 test_that("master outputs no missing `equation_id`", {
   expect_false(any(is.na(allodb::master()$equation_id)))
+})
+
+
+
+context("master_tidy")
+
+test_that("master_tidy returns no missing values in `dbh_*_cm`", {
+  expect_false(any(is.na(master_tidy()$dbh_min_cm)))
+  expect_false(any(is.na(master_tidy()$dbh_max_cm)))
+})
+
+test_that("master_tidy returns in `dbh_min_cm` some 0", {
+  expect_true(any(master_tidy()$dbh_min_cm == 0))
+})
+
+test_that("master_tidy returns in `dbh_max_cm` some Inf", {
+  expect_true(any(master_tidy()$dbh_max_cm == Inf))
 })

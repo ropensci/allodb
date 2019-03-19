@@ -2,23 +2,43 @@
 % Please edit documentation in R/master.R
 \name{master}
 \alias{master}
+\alias{master_tidy}
 \title{Join allodb tables: \code{equations}, \code{sitespecies}, and \code{sites_info}.}
 \usage{
 master()
+
+master_tidy()
 }
 \value{
 A dataframe.
 }
 \description{
-Join allodb tables: \code{equations}, \code{sitespecies}, and \code{sites_info}.
+\itemize{
+\item \code{master()} has all column types set as characters to preserve different
+kinds of missing values.
+\item \code{master_tidy()} has column types and missing optimized for computation.
+}
 }
 \examples{
+library(dplyr)
+library(purrr)
+
 master()
 
-\dontrun{
-# Nice view in RStudio
-View(master())
-}
+# Columns are of type "character"
+master() \%>\%
+  purrr::map_chr(typeof) \%>\%
+  unique()
+
+# This preserves preserve different kinds of NAs
+unique(grep("N", master()$dbh_min_cm, value = TRUE))
+allodb::missing_values_metadata
+
+# For computation, use `master_tidy()`, which has column types and missing
+# values already optimized for computation on the data
+master_tidy() \%>\%
+  map_chr(typeof) \%>\%
+  unique()
 }
 \seealso{
 \code{\link[dplyr:full_join]{dplyr::full_join()}}.

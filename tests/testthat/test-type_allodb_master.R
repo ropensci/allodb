@@ -24,7 +24,6 @@ test_that("set_type creates objects of the expected class 'allodb'", {
   expect_false(all(unlist(lapply(out, is.character))))
 })
 
-
 test_that("set_type sets numeric variables of correct type (#46)", {
   library(dplyr)
   library(purrr)
