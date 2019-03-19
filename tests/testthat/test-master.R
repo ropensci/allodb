@@ -1,5 +1,12 @@
 context("master")
 
+test_that("All master() sites match sites in `sites_info` (#79)", {
+  master_sites <- sort(unique(master()$site))
+  all_sites <- sort(unique(allodb::sites_info$site))
+  # Sites in master that don't match sites in `sites_info`
+  expect_length(setdiff(master_sites, similar_sites), 0L)
+})
+
 test_that("master outputs lowercase values of site (#79)", {
   out <- unique(master()$site)
   expect_equal(out, tolower(out))
