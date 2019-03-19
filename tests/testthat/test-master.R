@@ -1,5 +1,16 @@
 context("master")
 
+
+test_that("master outputs lowercase values of site", {
+  library(tidyverse)
+  # https://github.com/forestgeo/allodb/issues/79
+  out <- master() %>%
+    pull(site) %>%
+    unique()
+
+  expect_equal(out, tolower(out))
+})
+
 test_that("master doesn't duplicate names", {
   names_dot_y <- any(grepl(".*\\.y", names(master())))
   expect_false(names_dot_y)
