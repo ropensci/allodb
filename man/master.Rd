@@ -2,19 +2,15 @@
 % Please edit documentation in R/master.R
 \name{master}
 \alias{master}
-\title{Join the main allodb tables: \code{equations``, }sitespecies\code{, and }sites_info`.}
+\title{Join allodb tables: \code{equations}, \code{sitespecies}, and \code{sites_info}.}
 \usage{
 master()
-}
-\arguments{
-\item{.f}{A function, form the \strong{dplyr} package, used to join tables (e.g.
-\code{dplyr::full_join()}).}
 }
 \value{
 A dataframe.
 }
 \description{
-Join the main allodb tables: \code{equations``, }sitespecies\code{, and }sites_info`.
+Join allodb tables: \code{equations}, \code{sitespecies}, and \code{sites_info}.
 }
 \examples{
 master()

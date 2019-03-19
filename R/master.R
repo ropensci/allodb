@@ -1,10 +1,7 @@
-#' Join the main allodb tables: `equations``, `sitespecies`, and `sites_info`.
+#' Join allodb tables: `equations`, `sitespecies`, and `sites_info`.
 #'
-#' @param .f A function, form the __dplyr__ package, used to join tables (e.g.
-#'   `dplyr::full_join()`).
 #' @seealso [dplyr::full_join()].
 #' @family functions to interact with the database
-#'
 #'
 #' @return A dataframe.
 #' @export
