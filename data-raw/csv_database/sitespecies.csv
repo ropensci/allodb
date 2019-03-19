@@ -43,7 +43,8 @@ Lilly Dicky,Anacardiaceae,Rhus typhina,899,Shrub,Generic,ae65ed,Mixed hardwood,N
 Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Expert,333c34,Robinia pseudoacacia,NA,NA,NA
 Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Generic,7f7777,Fabaceae,NA,NA,NA
 Lilly Dicky,Fabaceae,Robinia pseudoacacia,901,Tree,Expert,e9d686,Robinia pseudoacacia,NA,NA,NA
-Lilly Dicky,Lauraceae,Sassafras albidum,931,Tree,Expert,c13e0f,Sassafras albidum,NA,NA,NA
+Lilly Dicky,Lauraceae,Sassafras albidum,931,Tree,Generic,f08fff,Lauraceae,NA,NA,NA
+Lilly Dicky,Lauraceae,Sassafras albidum,931,Tree,Expert,2c092b,Sassafras albidum,NA,NA,NA
 Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Expert,3e6f4d,Tilia americana,NA,NA,NA
 Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Expert,3f99ba,Tilia americana,NA,NA,NA
 Lilly Dicky,Malvaceae,Tilia americana,951,Tree,Expert,bebe2e,Tilia americana,NA,NA,NA
@@ -126,6 +127,7 @@ SCBI,Rosaceae,Rubus allegheniensis,rual,Shrub,Expert,b61369,Rubus idaeus,NA,NA,N
 SCBI,Rosaceae,Rubus pensilvanicus,rupe,Shrub,Expert,b61369,Rubus idaeus,NA,NA,NA
 SCBI,Rosaceae,Rubus phoenicolasius,ruph,Shrub,Expert,b61369,Rubus idaeus,NA,NA,NA
 SCBI,Adoxaceae,Sambucus canadensis,saca,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
+SCBI,Lauraceae,Sassafras albidum,saal,Tree,Generic,f08fff,Lauraceae,NA,NA,NA
 SCBI,Lauraceae,Sassafras albidum,saal,Tree,Expert,2c092b,Sassafras albidum,NA,NA,NA
 SCBI,Malvaceae,Tilia americana,tiam,Tree,Expert,3e6f4d,Tilia americana,NA,NA,NA
 SCBI,Malvaceae,Tilia americana,tiam,Tree,Expert,3f99ba,Tilia americana,NA,NA,NA
@@ -209,6 +211,7 @@ SERC,Anacardiaceae,Rhus typhina,RHTY,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,N
 SERC,Rosaceae,Rosa multiflora,ROMU,Shrub,Expert,a1646f,Rosa,NA,NA,NA
 SERC,Salicaceae,Salix nigra,SANI,Shrub,Generic,829bad,Salicaceae,NA,NA,NA
 SERC,Adoxaceae,Sambucus nigra,SANIC4,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
+SERC,Lauraceae,Sassafras albidum,SAAL5,Tree,Generic,f08fff,Lauraceae,NA,NA,NA
 SERC,Lauraceae,Sassafras albidum,SAAL5,Tree,Expert,2c092b,Sassafras albidum,NA,NA,NA
 SERC,Malvaceae,Tilia americana,TIAM,Tree,Expert,3e6f4d,Tilia americana,NA,NA,NA
 SERC,Malvaceae,Tilia americana,TIAM,Tree,Expert,3f99ba,Tilia americana,NA,NA,NA
@@ -270,6 +273,7 @@ Tyson,Fagaceae,Quercus stellata,queste,Tree,Expert,07dba7,Quercus stellata,NA,NA
 Tyson,Fagaceae,Quercus velutina,quevel,Tree,Expert,23ec05,Quercus velutina,NA,NA,NA
 Tyson,Fagaceae,Quercus velutina,quevel,Tree,Expert,4b8afb,Quercus velutina,NA,NA,NA
 Tyson,Fagaceae,Quercus velutina,quevel,Tree,Expert,c70dea,Quercus velutina,NA,NA,NA
+Tyson,Lauraceae,Sassafras albidum,sasalb,Tree,Generic,f08fff,Lauraceae,NA,NA,NA
 Tyson,Lauraceae,Sassafras albidum,sasalb,Tree,Expert,2c092b,Sassafras albidum,NA,NA,NA
 Tyson,Sapotaceae,Sideroxylon lanuginosum,sidlan,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 Tyson,Malvaceae,Tilia americana,tilame,Tree,Expert,3e6f4d,Tilia americana,NA,NA,NA
@@ -557,6 +561,7 @@ UMBC,Juglandaceae,Carya sp.,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 UMBC,Juglandaceae,Carya sp.,NA,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 UMBC,Juglandaceae,Carya tomentosa,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 UMBC,Lauraceae,Sassafras albidum,NA,Tree,Expert,2c092b,Sassafras albidum,NA,NA,NA
+UMBC,Lauraceae,Sassafras albidum,NA,Tree,Generic,f08fff,Lauraceae,NA,NA,NA
 UMBC,Lauraceae,Lindera benzoin,NA,Shrub,Generic,f08fff,Lauraceae,NA,NA,NA
 UMBC,Lythraceae,Lagerstroemia indica,NA,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 UMBC,Magnoliaceae,Liriodendron tulipifera,NA,Tree,Expert,94f593,Liriodendron tulipifera,NA,NA,NA
@@ -702,6 +707,7 @@ Michigan Big Woods,Juglandaceae,Carya ovata,NA,Tree,Expert,9c4cc9,Carya,NA,NA,NA
 Michigan Big Woods,Juglandaceae,Caryasp.,NA,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 Michigan Big Woods,Juglandaceae,Juglans nigra,NA,Tree,Generic,1c1ac8,Juglandaceae,NA,NA,NA
 Michigan Big Woods,Lauraceae,Lindera benzoin,NA,Shrub,Generic,f08fff,Lauraceae,NA,NA,NA
+Michigan Big Woods,Lauraceae,Sassafras albidum,NA,Tree,Generic,f08fff,Lauraceae,NA,NA,NA
 Michigan Big Woods,Lauraceae,Sassafras albidum,NA,Tree,Expert,2c092b,Sassafras albidum,NA,NA,NA
 Michigan Big Woods,Oleaceae,Fraxinus americana,NA,Tree,Expert,122ba6,Fraxinus americana,NA,NA,NA
 Michigan Big Woods,Rosaceae,Amelanchier arborea,NA,Tree,Expert,c59e03,Amelanchier,NA,NA,NA
