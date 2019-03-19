@@ -26,7 +26,14 @@ master <- function() {
     eqn_site <- dplyr::left_join(
       allodb::equations, allodb::sitespecies, by = "equation_id"
     )
-    dplyr::left_join(eqn_site, allodb::sites_info, by = "site")
+    dplyr::left_join(
+      lowercase_site(eqn_site),
+      lowercase_site(allodb::sites_info),
+      by = "site"
+    )
   })
 }
 
+lowercase_site <- function(data) {
+  dplyr::mutate(data, site = tolower(site))
+}
