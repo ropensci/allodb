@@ -24,8 +24,11 @@ master <- function() {
 
   suppressMessages({
     eqn_site <- dplyr::left_join(
-      allodb::equations, allodb::sitespecies, by = "equation_id"
+      allodb::equations,
+      allodb::sitespecies,
+      by = "equation_id"
     )
+
     dplyr::left_join(
       lowercase_site(eqn_site),
       lowercase_site(allodb::sites_info),
@@ -35,5 +38,6 @@ master <- function() {
 }
 
 lowercase_site <- function(data) {
-  dplyr::mutate(data, site = tolower(site))
+  data$site <- tolower(data$site)
+  data
 }

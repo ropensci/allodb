@@ -1,13 +1,7 @@
 context("master")
 
-
-test_that("master outputs lowercase values of site", {
-  library(tidyverse)
-  # https://github.com/forestgeo/allodb/issues/79
-  out <- master() %>%
-    pull(site) %>%
-    unique()
-
+test_that("master outputs lowercase values of site (#79)", {
+  out <- unique(master()$site)
   expect_equal(out, tolower(out))
 })
 
