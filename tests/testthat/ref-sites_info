@@ -136,72 +136,72 @@
 66  37.77  -119.82       11 251690.3705 4183617.761         Other    25.6
 67  23.42   120.55       51 249752.1018 2592662.301      Tropical      12
 68  48.66    14.71       33 478447.4731 5390124.453         Other      25
-              E wsg.site.name  X13  X14
-1   -0.07928769     amacayacu <NA> <NA>
-2   1.011620732          <NA> <NA> <NA>
-3   1.199599082          <NA> <NA> <NA>
-4   0.049445487           bci <NA> <NA>
-5  -0.084798024    bukittimah <NA> <NA>
-6   1.834148906      changbai <NA> <NA>
-7   0.070253499          <NA> <NA> <NA>
-8  -0.044607199          <NA> <NA> <NA>
-9   0.655347094          <NA> <NA> <NA>
-10  0.405736946          <NA> <NA> <NA>
-11    1.7615144          <NA> <NA> <NA>
-12  0.430479025        fushan <NA> <NA>
-13  1.055180773        gutian <NA> <NA>
-14  1.869090628    haliburton <NA> <NA>
-15  1.716028059 harvardforest <NA> <NA>
-16  0.746411624    heishiding <NA> <NA>
-17  0.490748617          <NA> <NA> <NA>
-18   0.31946635           hkk <NA> <NA>
-19  0.210911743          <NA> <NA> <NA>
-20  0.003627707         ituri <NA> <NA>
-21  0.002745626          <NA> <NA> <NA>
-22  0.002745626          <NA> <NA> <NA>
-23 -0.001571496          <NA> <NA> <NA>
-24 -0.001315683          <NA> <NA> <NA>
-25   0.28396406          <NA> <NA> <NA>
-26  0.097674343       kenting <NA> <NA>
-27  0.047869472     khaochong <NA> <NA>
-28 -0.089526908         korup <NA> <NA>
-29 -0.047395853          <NA> <NA> <NA>
-30 -0.146312127     laplanada <NA> <NA>
-31 -0.105606113        lambir <NA> <NA>
-32         <NA>          <NA> <NA> <NA>
-33  0.223115583   lienhuachih <NA> <NA>
-34  1.686475838   lillydickey <NA> <NA>
-35  0.096506178      luquillo <NA> <NA>
-36 -0.116549646        manaus <NA> <NA>
-37         <NA>          <NA> <NA> <NA>
-38  0.352063637      mosingto <NA> <NA>
-39  0.540809412         mpala <NA> <NA>
-40   0.20541107     mudumalai <NA> <NA>
-41  0.013545828    nanjenshan <NA> <NA>
-42  0.572216054          <NA> <NA> <NA>
-43         <NA>          <NA> <NA> <NA>
-44 -0.019430539       palanan <NA> <NA>
-45 -0.094024937         pasoh <NA> <NA>
-46   0.01258341          rabi <NA> <NA>
-47  -0.04491691          <NA> <NA> <NA>
-48    0.6355596          <NA> <NA> <NA>
-49  1.571394901          <NA> <NA> <NA>
-50  2.646941295        scotty <NA> <NA>
-51  1.631266437          serc <NA> <NA>
-52 -0.118385938     sinharaja <NA> <NA>
-53  0.951916465          <NA> <NA> <NA>
-54  1.110867343          <NA> <NA> <NA>
-55         <NA>          <NA> <NA> <NA>
-56  1.838340028          <NA> <NA> <NA>
-57         <NA>          <NA> <NA> <NA>
-58         <NA>          <NA> <NA> <NA>
-59         <NA>          <NA> <NA> <NA>
-60  1.731811064       wabikon <NA> <NA>
-61 -0.176488947          <NA> <NA> <NA>
-62    0.8436695     windriver <NA> <NA>
-63   0.90247604        wytham <NA> <NA>
-64   0.33522321          xtbg <NA> <NA>
-65  -0.02645997        yasuni <NA> <NA>
-66  1.360057948      yosemite <NA> <NA>
-67  0.211963255          <NA> <NA> <NA>
-68  1.002541365         zofin <NA> <NA>
+              E wsg.site.name
+1   -0.07928769     amacayacu
+2   1.011620732          <NA>
+3   1.199599082          <NA>
+4   0.049445487           bci
+5  -0.084798024    bukittimah
+6   1.834148906      changbai
+7   0.070253499          <NA>
+8  -0.044607199          <NA>
+9   0.655347094          <NA>
+10  0.405736946          <NA>
+11    1.7615144          <NA>
+12  0.430479025        fushan
+13  1.055180773        gutian
+14  1.869090628    haliburton
+15  1.716028059 harvardforest
+16  0.746411624    heishiding
+17  0.490748617          <NA>
+18   0.31946635           hkk
+19  0.210911743          <NA>
+20  0.003627707         ituri
+21  0.002745626          <NA>
+22  0.002745626          <NA>
+23 -0.001571496          <NA>
+24 -0.001315683          <NA>
+25   0.28396406          <NA>
+26  0.097674343       kenting
+27  0.047869472     khaochong
+28 -0.089526908         korup
+29 -0.047395853          <NA>
+30 -0.146312127     laplanada
+31 -0.105606113        lambir
+32         <NA>          <NA>
+33  0.223115583   lienhuachih
+34  1.686475838   lillydickey
+35  0.096506178      luquillo
+36 -0.116549646        manaus
+37         <NA>          <NA>
+38  0.352063637      mosingto
+39  0.540809412         mpala
+40   0.20541107     mudumalai
+41  0.013545828    nanjenshan
+42  0.572216054          <NA>
+43         <NA>          <NA>
+44 -0.019430539       palanan
+45 -0.094024937         pasoh
+46   0.01258341          rabi
+47  -0.04491691          <NA>
+48    0.6355596          <NA>
+49  1.571394901          <NA>
+50  2.646941295        scotty
+51  1.631266437          serc
+52 -0.118385938     sinharaja
+53  0.951916465          <NA>
+54  1.110867343          <NA>
+55         <NA>          <NA>
+56  1.838340028          <NA>
+57         <NA>          <NA>
+58         <NA>          <NA>
+59         <NA>          <NA>
+60  1.731811064       wabikon
+61 -0.176488947          <NA>
+62    0.8436695     windriver
+63   0.90247604        wytham
+64   0.33522321          xtbg
+65  -0.02645997        yasuni
+66  1.360057948      yosemite
+67  0.211963255          <NA>
+68  1.002541365         zofin
