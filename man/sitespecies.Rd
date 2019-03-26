@@ -5,7 +5,7 @@
 \alias{sitespecies}
 \alias{sitespecies_metadata}
 \title{Tables of ForestGEO sites and tree species and associated metadata.}
-\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 772 rows and 11 columns.}
+\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 783 rows and 11 columns.}
 \usage{
 sitespecies
 
