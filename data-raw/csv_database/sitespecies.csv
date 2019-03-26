@@ -771,3 +771,14 @@ speulderbos,Fagaceae,Quercus robur,NA,Tree,Expert,12b2a9,Quercus,NA,NA,NA
 speulderbos,Fagaceae,Quercus rubra,NA,Tree,Expert,6dd993,Quercus rubra,NA,NA,NA
 speulderbos,Rosaceae,Sorbus aucuparia,NA,Tree,Expert,448bdf,Acer,NA,NA,NA
 speulderbos,Pinaceae,Tsuga heterophylla,NA,Tree,Expert,99d03e,Pseudotsuga menziesii,NA,NA,NA
+any temperate NA,Fabaceae,NA,NA,Tree,Generic,7f7777,"Fabaceae/ Juglandaceae, other",NA,NA,NA
+any temperate NA,Juglandaceae,NA,NA,Tree,Generic,1c1ac8,"Fabaceae/ Juglandaceae, Carya",NA,NA,NA
+any temperate NA,Pinaceae,Abies balsamea,NA,Tree,Generic,4872ed,Abies < 0.35 spg ,NA,NA,NA
+any temperate NA,Pinaceae,Abies fraseri,NA,Tree,Generic,4872ed,Abies < 0.35 spg ,NA,NA,NA
+any temperate NA,Pinaceae,Abies lasiocarpa,NA,Tree,Generic,4872ed,Abies < 0.35 spg ,NA,NA,NA
+any temperate NA,Pinaceae,Abies amabilis,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
+any temperate NA,Pinaceae,Abies concolor,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
+any temperate NA,Pinaceae,Abies grandis,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
+any temperate NA,Pinaceae,Abies magnifica,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
+any temperate NA,Pinaceae,Abies procera,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
+any temperate NA,Pinaceae,Abies sp.,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
