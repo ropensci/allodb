@@ -1,3 +1,4 @@
+^\.buildignore$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
@@ -9,7 +10,4 @@
 ^codecov\.yml$
 ^README\.Rmd$
 ^\.github$
-^inst/buildignore$
-^tmp\.R$
-^tmp\.sh$
-^ship\.sh$
+

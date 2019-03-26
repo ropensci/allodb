@@ -1,3 +1,4 @@
+tmp.Rmd
 tmp.sh
 .Rproj.user
 .Rhistory
@@ -9,3 +10,5 @@ tmp.R
 data-raw/.DS_Store
 data-raw/csv_database/sitespecies_metadata.csv
 ship.sh
+tmp.md
+tmp_files
