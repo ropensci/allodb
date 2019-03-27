@@ -9,13 +9,15 @@ test_that("master_tidy() returns correct column types", {
   )
 })
 
-test_that("master() outputs sits that can be matched in `sites_info` (#79)", {
+test_that(
+  "master() sites match `sites_info$site` (#79),
+  except 'any*' (fgeo.biomass#31)", {
   master_sites <- sort(unique(master()$site))
   all_sites <- sort(unique(allodb::sites_info$site))
 
   # Sites in master that don't match sites in `sites_info`
   missmatching_sites <- setdiff(master_sites, all_sites)
-  expect_equal(length(missmatching_sites), 0L)
+  expect_equal(missmatching_sites, "any temperate na")
 })
 
 test_that("master outputs lowercase values of site (#79)", {
