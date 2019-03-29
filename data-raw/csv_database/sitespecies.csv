@@ -396,7 +396,7 @@ wind river,Ericaceae,Rhododendron macrophyllum,RHMA,Shrub,Generic,f08fff,Cornace
 wind river,Rosaceae,Rosa gymnocarpa,ROGY,Shrub,Expert,a1646f,Rosa,NA,NA,NA
 wind river,Rosaceae,Rubus leucodermis,RULE,Shrub,Expert,e7bf91,Rubus leucodermis,NA,NA,NA
 wind river,Rosaceae,Rubus spectabilis,RUSP,Shrub,Expert,e7bf91,Rubus leucodermis,NA,NA,NA
-wind river,Taxaceae,Taxus brevifolia,TABR,Tree,Generic,c8f882,Cupressaceae,NA,NA,NA
+wind river,Taxaceae,Taxus brevifolia,TABR,Tree,Generic,c8f882,Cupressaceae >=0.40 spg,NA,NA,NA
 wind river,Cupressaceae,Thuja plicata,THPL,Tree,Expert,19bb04,Thuja plicata,NA,NA,NA
 wind river,Cupressaceae,Thuja plicata,THPL,Tree,Expert,dc04c7,Thuja plicata,NA,NA,NA
 wind river,Pinaceae,Tsuga heterophylla,TSHE,Tree,Expert,e3edf1,Tsuga heterophylla,NA,NA,NA
