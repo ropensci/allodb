@@ -4,7 +4,7 @@ context("test-data.R")
 # use_updated_data()
 
 # * Update test references: Temporarily change default `update = T`
-expect_output <- function(object, file, update = T) {
+expect_output <- function(object, file, update = FALSE) {
   expect_known_output(object, file, update = update, print = TRUE)
 }
 
