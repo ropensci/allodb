@@ -1,5 +1,6 @@
 # Source this file to update all exported data.
 
+library(usethis)
 library(readr)
 library(purrr)
 library(fs)
