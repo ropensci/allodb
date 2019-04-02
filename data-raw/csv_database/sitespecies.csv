@@ -497,7 +497,7 @@ utah,Cupressaceae,Juniperus scopulorum,NA,Tree,Generic,c8f882,Cupressaceae >=0.4
 utah,Pinaceae,Picea engelmannii,NA,Tree,Expert,9f4b7d,Picea engelmannii,NA,NA,NA
 utah,Pinaceae,Picea engelmannii,NA,Tree,Generic,57488c,Picea,NA,NA,NA
 utah,Pinaceae,Picea pungens,NA,Tree,Expert,4b4063,Picea mariana,NA,NA,NA
-utah,Pinaceae,Picea pungens,NA,Tree,Generic,8.91E+12,Picea,NA,NA,NA
+utah,Pinaceae,Picea pungens,NA,Tree,Generic,df928f,Picea >=0.35,NA,NA,NA
 utah,Pinaceae,Pinus edulis,NA,Tree,Expert,da0e89,Pinus edulis,NA,NA,NA
 utah,Pinaceae,Pinus flexilis,NA,Tree,Expert,48557b,Pseudotsuga menziesii,using allometries for Pseudotsuga menziesii as generic small conifer proxy,NA,NA
 utah,Pinaceae,Pinus flexilis,NA,Tree,Expert,697035,Pseudotsuga menziesii,using allometries for Pseudotsuga menziesii as generic small conifer proxy,NA,NA
@@ -802,3 +802,8 @@ any-temperate-North America,Cupressaceae,Calocedrus decurrens,NA,Tree,Generic,2e
 any-temperate-North America,Cupressaceae,Taxus plicata,NA,Tree,Generic,2ee3ae,Cupressaceae 0.3-0.39 spg,NA,NA,NA
 any-temperate-North America,Cupressaceae,Juniperus spp.,NA,Tree,Generic,c8f882,Cupressaceae >=0.40 spg,NA,NA,NA
 any-temperate-North America,Cupressaceae,Chamaecyparis nootkatensis,NA,Tree,Generic,c8f882,Cupressaceae >=0.40 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Picea spp,NA,Tree,Generic,57488c,Picea <0.35 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Picea abies,NA,Tree,Generic,df928f,Picea >=0.35,NA,NA,NA
+any-temperate-North America,Pinaceae,Picea glauca,NA,Tree,Generic,df928f,Picea >=0.35,NA,NA,NA
+any-temperate-North America,Pinaceae,Picea mariana,NA,Tree,Generic,df928f,Picea >=0.35,NA,NA,NA
+any-temperate-North America,Pinaceae,Picea rubens,NA,Tree,Generic,df928f,Picea >=0.35,NA,NA,NA
