@@ -782,10 +782,18 @@ any-temperate-North America,Pinaceae,Abies grandis,NA,Tree,Generic,74dd65,Abies 
 any-temperate-North America,Pinaceae,Abies magnifica,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
 any-temperate-North America,Pinaceae,Abies procera,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
 any-temperate-North America,Pinaceae,Abies sp.,NA,Tree,Generic,74dd65,Abies >= 0.35 spg ,NA,NA,NA
-any-temperate-North America,Cornaceae,NA,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
-any-temperate-North America,Ericaceae,NA,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
-any-temperate-North America,Lauraceae,NA,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
-any-temperate-North America,Platanaceae,NA,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
-any-temperate-North America,Rosaceae,NA,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
-any-temperate-North America,Ulmaceae,NA,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Cornaceae,Nyssa sylvatica,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Cornaceae,Nyssa aquatica,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Ericaceae,Arbutus menziesii,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Ericaceae,Oxydendrum arboreum,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Lauraceae,Umbellularia californica,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Lauraceae,Sassafras albidum,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Platanaceae,Platanus occidentalis,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Rosaceae,Amelanchier spp.,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Rosaceae,Prunus pensylvanica,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Rosaceae,Prunus serotina,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Rosaceae,Prunus virginiana,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Rosaceae,Sorbus americana,NA,Tree or Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Ulmaceae,Ulmus americana,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
+any-temperate-North America,Ulmaceae,Ulmus spp.,NA,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
 any-temperate-North America,Cupressaceae,NA,NA,Tree,Generic,b040b4,Cupressaceae <0.3 spg,NA,NA,NA
