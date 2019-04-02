@@ -96,7 +96,7 @@ scbi,Nyssaceae,Nyssa sylvatica,nysy,Tree,Expert,23ab74,Nyssa sylvatica,NA,NA,NA
 scbi,Paulowniaceae,Paulownia tomentosa,pato,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 scbi,Pinaceae,Pinus pungens,pipu,Tree,Expert,21800b,Pinus strobus,NA,NA,NA
 scbi,Pinaceae,Pinus strobus,pist,Tree,Expert,21800b,Pinus strobus,NA,NA,NA
-scbi,Pinaceae,Pinus virginiana,pivi,Tree,Generic,90c207,Pinus,NA,NA,NA
+scbi,Pinaceae,Pinus virginiana,pivi,Tree,Generic,90c207,Pinus >=0.45 spg,NA,NA,NA
 scbi,Pinaceae,Pinus virginiana,pivi,Tree,Expert,6ea81f,Pinus taeda,NA,NA,NA
 scbi,Platanaceae,Platanus occidentalis,PLOC,Tree,Expert,73325b,Platanus occidentalis,NA,NA,NA
 scbi,Platanaceae,Platanus occidentalis,PLOC,Tree,Expert,0a1212,Platanus occidentalis,NA,NA,NA
@@ -183,7 +183,7 @@ serc,Nyssaceae,Nyssa sylvatica,NYSY,Tree,Expert,380d95,Nyssa sylvatica,NA,NA,NA
 serc,Nyssaceae,Nyssa sylvatica,NYSY,Tree,Expert,23ab74,Nyssa sylvatica,NA,NA,NA
 serc,Scrophulariaceae,Paulownia tomentosa,PATO2,Tree,Generic,ae65ed,Mixed hardwood,NA,NA,NA
 serc,Pinaceae,Pinus taeda,PITA,Tree,Expert,6ea81f,Pinus taeda,NA,NA,NA
-serc,Pinaceae,Pinus virginiana,PIVI2,Tree,Generic,90c207,Pinus,NA,NA,NA
+serc,Pinaceae,Pinus virginiana,PIVI2,Tree,Generic,90c207,Pinus >=0.45 spg,NA,NA,NA
 serc,Pinaceae,Pinus virginiana,PIVI2,Tree,Expert,6ea81f,Pinus taeda,NA,NA,NA
 serc,Platanaceae,Platanus occidentalis,PLOC,Tree,Expert,73325b,Platanus occidentalis,NA,NA,NA
 serc,Platanaceae,Platanus occidentalis,PLOC,Tree,Expert,0a1212,Platanus occidentalis,NA,NA,NA
@@ -303,7 +303,7 @@ ucsc,Myricaceae,Morella californica,MORECA,Shrub,Generic,ae65ed,Mixed hardwood,A
 ucsc,Pinaceae,Pinus attenuata,PINUAT,Tree,Expert,5ea2c1,Pinus ponderosa,NA,NA,NA
 ucsc,Pinaceae,Pinus ponderosa,PINUPO,Tree,Expert,5ea2c1,Pinus ponderosa,NA,NA,NA
 ucsc,Pinaceae,Pinus ponderosa,PINUPO,Tree,Expert,0bdd5e,Pinus ponderosa,NA,NA,NA
-ucsc,Pinaceae,Pinus ponderosa,PINUPO,Tree,Generic,15b165,Pinus,NA,NA,NA
+ucsc,Pinaceae,Pinus ponderosa,PINUPO,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
 ucsc,Pinaceae,Pseudotsuga menziesii,PSEUME,Tree,Expert,4d8e54,Pseudotsuga menziesii,NA,NA,NA
 ucsc,Pinaceae,Pseudotsuga menziesii,PSEUME,Tree,Expert,f94e03,Pseudotsuga menziesii,NA,NA,NA
 ucsc,Rosaceae,Pyracantha angustifolia,PYRAAN,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
@@ -388,7 +388,7 @@ wind river,Rosaceae,Holodiscus discolor,HODI,Shrub,Expert,b9b3b0,Holodiscus disc
 wind river,Caprifoliaceae,Lonicera ciliosa,LOCI,Shrub,Expert,28dce6,Lonicera canadensis,NA,NA,NA
 wind river,Ericaceae,Menziesia ferruginea,MEFE,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
 wind river,Rosaceae,Oemleria cerasiformis,OECE,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
-wind river,Pinaceae,Pinus monticola,PIMO,Tree,Generic,15b165,Pinus,NA,NA,NA
+wind river,Pinaceae,Pinus monticola,PIMO,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
 wind river,Pinaceae,Pseudotsuga menziesii,PSME,Tree,Expert,f94e03,Pseudotsuga menziesii,NA,NA,NA
 wind river,Pinaceae,Pseudotsuga menziesii,PSME,Tree,Expert,4d8e54,Pseudotsuga menziesii,NA,NA,NA
 wind river,Rhamnaceae,Rhamnus purshiana,RHPU,Shrub,Generic,ae65ed,Mixed hardwood,NA,NA,NA
@@ -459,7 +459,7 @@ yosemite,Pinaceae,Pinus lambertiana,PILA,Tree,Expert,f94e03,Pseudotsuga menziesi
 yosemite,Pinaceae,Pinus lambertiana,PILA,Tree,Expert,4d8e54,Pseudotsuga menziesii,NA,NA,NA
 yosemite,Pinaceae,Pinus ponderosa,PIPO,Tree,Expert,5ea2c1,Pinus ponderosa,NA,NA,NA
 yosemite,Pinaceae,Pinus ponderosa,PIPO,Tree,Expert,0bdd5e,Pinus ponderosa,NA,NA,NA
-yosemite,Pinaceae,Pinus ponderosa,PIPO,Tree,Generic,15b165,Pinus,NA,NA,NA
+yosemite,Pinaceae,Pinus ponderosa,PIPO,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
 yosemite,Rosaceae,Prunus emarginata,PREM,Tree,Expert,b9ebe4,Alnus rubra,Use Alnus allomery for small stems of Prunus emarginata @ Yosemite,NA,NA
 yosemite,Rosaceae,Prunus emarginata,PREM,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
 yosemite,Rosaceae,Prunus virginiana,PRVI,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
@@ -511,7 +511,7 @@ utah,Pinaceae,Pinus longaeva,NA,Tree,Expert,a59bd5,Pseudotsuga menziesii,using a
 utah,Pinaceae,Pinus longaeva,NA,Tree,Expert,ecef00,Juniperus osteosperma,using allometries for Juniperus osteosperma as proxy for big trees,NA,NA
 utah,Pinaceae,Pinus ponderosa,NA,Tree,Expert,5ea2c1,Pinus ponderosa,NA,NA,NA
 utah,Pinaceae,Pinus ponderosa,NA,Tree,Expert,0bdd5e,Pinus ponderosa,NA,NA,NA
-utah,Pinaceae,Pinus ponderosa,NA,Tree,Generic,15b165,Pinus,NA,NA,NA
+utah,Pinaceae,Pinus ponderosa,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
 utah,Salicaceae,Populus tremuloides,NA,Tree,Expert,aeebe9,Populus tremuloides,NA,NA,NA
 utah,Pinaceae,Pseudotsuga menziesii,NA,Tree,Expert,f94e03,Pseudotsuga menziesii,NA,NA,NA
 utah,Grossulariaceae,Ribes cereum,NA,Shrub,Expert,b95baf,Ribes,NA,NA,NA
@@ -808,4 +808,26 @@ any-temperate-North America,Pinaceae,Picea abies,NA,Tree,Generic,df928f,Picea >=
 any-temperate-North America,Pinaceae,Picea glauca,NA,Tree,Generic,df928f,Picea >=0.35,NA,NA,NA
 any-temperate-North America,Pinaceae,Picea mariana,NA,Tree,Generic,df928f,Picea >=0.35,NA,NA,NA
 any-temperate-North America,Pinaceae,Picea rubens,NA,Tree,Generic,df928f,Picea >=0.35,NA,NA,NA
-any-temperate-North America,Pinaceae,Larix,NA,Tree,Generic,1aad71,Larix,NA,NA,NA
+any-temperate-North America,Pinaceae,Larix spp.,NA,Tree,Generic,1aad71,Larix,NA,NA,NA
+any-temperate-North America,Pinaceae,Pseudotsuga spp.,NA,Tree,Generic,3376f0,Pseudotsuga spp.,NA,NA,NA
+any-temperate-North America,Pinaceae,Tsuga canadensis,NA,Tree,Generic,b5c1c6,Tsuga spp.,NA,NA,NA
+any-temperate-North America,Pinaceae,Tsuga heterophylla,NA,Tree,Generic,5db42d,Tsuga spp.,NA,NA,NA
+any-temperate-North America,Pinaceae,Tsuga mertensiana,NA,Tree,Generic,5db42d,Tsuga spp.,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus virginiana,NA,Tree,Generic,90c207,Pinus >=0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus echinata,NA,Tree,Generic,90c207,Pinus >=0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus elliottii,NA,Tree,Generic,90c207,Pinus >=0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus palustris,NA,Tree,Generic,90c207,Pinus >=0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus rigida,NA,Tree,Generic,90c207,Pinus >=0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus taeda,NA,Tree,Generic,90c207,Pinus >=0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus albicaulis,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus arizonica,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus banksiana,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus contorta,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus jeffreyi,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus lambertiana,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus leiophylla,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus monticola,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus ponderosa,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus resinosa,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus strobus,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
+any-temperate-North America,Pinaceae,Pinus spp,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA,NA,NA
