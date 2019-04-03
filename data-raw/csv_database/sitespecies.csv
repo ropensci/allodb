@@ -133,7 +133,7 @@ scbi,Malvaceae,Tilia americana,tiam,Tree,Expert,3e6f4d,Tilia americana,NA,NA,NA
 scbi,Malvaceae,Tilia americana,tiam,Tree,Expert,3f99ba,Tilia americana,NA,NA,NA
 scbi,Malvaceae,Tilia americana,tiam,Tree,Expert,bebe2e,Tilia americana,NA,NA,NA
 scbi,Malvaceae,Tilia americana,tiam,Tree,Expert,76d19b,Tilia americana,NA,NA,NA
-scbi,Ulmaceae,Ulmus americana,ulam,Tree,Expert,8eca60,Ulmus,NA,NA,NA
+scbi,Ulmaceae,Ulmus americana,ulam,Tree,Expert,2473f9,Ulmus americana,NA,NA,NA
 scbi,Ulmaceae,Ulmus rubra,ulru,Tree,Expert,8eca60,Ulmus,NA,NA,NA
 scbi,Adoxaceae,Viburnum acerifolium,viac,Shrub,Expert,5e2dea,Virburnum lantanoides,NA,NA,NA
 scbi,Adoxaceae,Viburnum prunifolium,vipr,Shrub,Expert,5e2dea,Virburnum lantanoides,NA,NA,NA
@@ -217,7 +217,7 @@ serc,Malvaceae,Tilia americana,TIAM,Tree,Expert,3e6f4d,Tilia americana,NA,NA,NA
 serc,Malvaceae,Tilia americana,TIAM,Tree,Expert,3f99ba,Tilia americana,NA,NA,NA
 serc,Malvaceae,Tilia americana,TIAM,Tree,Expert,bebe2e,Tilia americana,NA,NA,NA
 serc,Malvaceae,Tilia americana,TIAM,Tree,Expert,76d19b,Tilia americana,NA,NA,NA
-serc,Ulmaceae,Ulmus americana,ULAM,Tree,Expert,8eca60,Ulmus,NA,NA,NA
+serc,Ulmaceae,Ulmus americana,ULAM,Tree,Expert,2473f9,Ulmus americana,NA,NA,NA
 serc,Ulmaceae,Ulmus rubra,ULRU,Tree,Expert,8eca60,Ulmus,NA,NA,NA
 serc,Ericaceae,Vaccinium corymbosum,VACO,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
 serc,Ericaceae,Vaccinium sp.,VACCI,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,NA,NA
