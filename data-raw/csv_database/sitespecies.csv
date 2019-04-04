@@ -28,6 +28,7 @@ lilly dickey,Magnoliaceae,Liriodendron tulipifera,621,Tree,Expert,c48e81,Liriode
 lilly dickey,Nyssaceae,Nyssa sylvatica,693,Tree,Expert,8c94e8,Nyssa sylvatica,NA
 lilly dickey,Betulaceae,Ostrya virginiana,701,Tree,Expert,289f7c,Ostrya virginiana,NA
 lilly dickey,Betulaceae,Ostrya virginiana,701,Tree,Expert,b9d4fc,Ostrya virginiana,NA
+lilly dickey,Betulaceae,Ostrya virginiana,NA,Tree,Generic,e64b74,Betulaceae,NA
 lilly dickey,Paulowniaceae,Paulownia tomentosa,712,Tree,Generic,ae65ed,Mixed hardwood,NA
 lilly dickey,Rosaceae,Prunus serotina,762,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 lilly dickey,Rosaceae,Prunus serotina,762,Tree,Expert,8aecca,Prunus serotina,NA
@@ -258,6 +259,7 @@ tyson,Rosaceae,Malus ioensis,malioe,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lau
 tyson,Moraceae,Morus rubra,morrub,Tree,Generic,ae65ed,Mixed hardwood,NA
 tyson,Betulaceae,Ostrya virginiana,ostvir,Tree,Expert,289f7c,Ostrya virginiana,NA
 tyson,Betulaceae,Ostrya virginiana,ostvir,Tree,Expert,b9d4fc,Ostrya virginiana,NA
+tyson,Betulaceae,Ostrya virginiana,NA,Tree,Generic,e64b74,Betulaceae,NA
 tyson,Platanaceae,Platanus occidentalis,plaocc,Tree,Expert,73325b,Platanus occidentalis,NA
 tyson,Platanaceae,Platanus occidentalis,plaocc,Tree,Expert,0a1212,Platanus occidentalis,NA
 tyson,Rosaceae,Prunus americana,pruame,Tree,Expert,8aecca,Prunus serotina,NA
@@ -341,6 +343,7 @@ wabikon,Caprifoliaceae,Lonicera canadensis,LONCAN,Shrub,Expert,28dce6,Lonicera c
 wabikon,Rosaceae,Malus pumila,MALPUM,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 wabikon,Betulaceae,Ostrya virginiana,OSTVIR,Tree,Expert,289f7c,Ostrya virginiana,NA
 wabikon,Betulaceae,Ostrya virginiana,OSTVIR,Tree,Expert,b9d4fc,Ostrya virginiana,NA
+wabikon,Betulaceae,Ostrya virginiana,NA,Tree,Generic,e64b74,Betulaceae,NA
 wabikon,Pinaceae,Picea glauca,PICGLA,Tree,Expert,bce95d,Picea glauca,NA
 wabikon,Pinaceae,Picea mariana,PICMAR,Tree,Expert,1d3182,Picea mariana,NA
 wabikon,Pinaceae,Pinus strobus,PINSTR,Tree,Expert,21800b,Pinus strobus,NA
@@ -525,6 +528,7 @@ umbc,Aquifoliaceae,Ilex opaca,NA,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Laurac
 umbc,Betulaceae,Betula nigra,NA,Tree,Expert,382ee9,Betula alleghaniensis,NA
 umbc,Betulaceae,Ostrya virginiana,NA,Tree,Expert,289f7c,Ostrya virginiana,NA
 umbc,Betulaceae,Ostrya virginiana,NA,Tree,Expert,b9d4fc,Ostrya virginiana,NA
+umbc,Betulaceae,Ostrya virginiana,NA,Tree,Generic,e64b74,Betulaceae,NA
 umbc,Betulaceae,Carpinus caroliniana,NA,Tree,Generic,ae65ed,Mixed hardwood,NA
 umbc,Cannabaceae,Celtis occidentalis,NA,Tree,Generic,ae65ed,Mixed hardwood,NA
 umbc,Celastraceae,Euonymus atropurpureus,NA,Shrub,Generic,ae65ed,Mixed hardwood,NA
@@ -621,6 +625,7 @@ harvard forest,Betulaceae,Betula populifolia,NA,Tree,Expert,d3f7ed,Betula papyri
 harvard forest,Betulaceae,Betula unknown,NA,Tree,Expert,382ee9,Betula alleghaniensis,NA
 harvard forest,Betulaceae,Ostrya virginiana,NA,Tree,Expert,289f7c,Ostrya virginiana,NA
 harvard forest,Betulaceae,Ostrya virginiana,NA,Tree,Expert,b9d4fc,Ostrya virginiana,NA
+harvard forest,Betulaceae,Ostrya virginiana,NA,Tree,Generic,e64b74,Betulaceae,NA
 harvard forest,Cupressaceae,Juniperus communis,NA,Shrub,Generic,c8f882,Cupressaceae >=0.40 spg,NA
 harvard forest,Ericaceae,Kalmia latifolia,NA,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 harvard forest,Ericaceae,Lyonia ligustrina,NA,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
@@ -679,6 +684,7 @@ michigan big woods,Betulaceae,Carpinus caroliniana,NA,Tree,Generic,ae65ed,Mixed 
 michigan big woods,Betulaceae,Corylus americana,NA,"Shrub, small tree",Generic,ae65ed,Mixed hardwood,NA
 michigan big woods,Betulaceae,Ostrya virginiana,NA,Tree,Expert,289f7c,Ostrya virginiana,NA
 michigan big woods,Betulaceae,Ostrya virginiana,NA,Tree,Expert,b9d4fc,Ostrya virginiana,NA
+michigan big woods,Betulaceae,Ostrya virginiana,NA,Tree,Generic,e64b74,Betulaceae,NA
 michigan big woods,Cornaceae,Cornus alternifolia,NA,Tree,Expert,cf733d,Cornus florida,NA
 michigan big woods,Cornaceae,Cornus amomum,NA,Shrub,Expert,cf733d,Cornus florida,NA
 michigan big woods,Cornaceae,Cornus florida,NA,Tree,Expert,cf733d,Cornus florida,NA
@@ -831,3 +837,16 @@ any-temperate-North America,Pinaceae,Pinus ponderosa,NA,Tree,Generic,15b165,Pinu
 any-temperate-North America,Pinaceae,Pinus resinosa,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA
 any-temperate-North America,Pinaceae,Pinus strobus,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA
 any-temperate-North America,Pinaceae,Pinus spp,NA,Tree,Generic,15b165,Pinus <0.45 spg,NA
+any-temperate-North America,Sapindaceae,Acer  macrophyllum,NA,Tree,Generic,d6be5c,Sapindaceae,NA
+any-temperate-North America,Sapindaceae,Acer pensylvanicum,NA,Tree,Generic,d6be5c,Sapindaceae,NA
+any-temperate-North America,Sapindaceae,Acer rubrum,NA,Tree,Generic,d6be5c,Sapindaceae,NA
+any-temperate-North America,Sapindaceae,Acer saccarinum,NA,Tree,Generic,d6be5c,Sapindaceae,NA
+any-temperate-North America,Sapindaceae,Acer spicatum,NA,Tree,Generic,d6be5c,Sapindaceae,NA
+any-temperate-North America,Sapindaceae,Acer saccarum,NA,Tree,Generic,a2fbbb,Sapindaceae,NA
+any-temperate-North America,Betulaceae,Alnus rubra,NA,Tree,Generic,5caff8,Betulaceae,NA
+any-temperate-North America,Betulaceae,Alnus spp.,NA,Tree,Generic,5caff8,Betulaceae,NA
+any-temperate-North America,Betulaceae,Betula papyrifera,NA,Tree,Generic,d09c77,Betulaceae,NA
+any-temperate-North America,Betulaceae,Betula populifolia,NA,Tree,Generic,d09c77,Betulaceae,NA
+any-temperate-North America,Betulaceae,Betula alleghaniensis,NA,Tree,Generic,476d9a,Betulaceae,NA
+any-temperate-North America,Betulaceae,Betula lenta,NA,Tree,Generic,e64b74,Betulaceae,NA
+any-temperate-North America,Betulaceae,Ostrya virginiana,NA,Tree,Generic,e64b74,Betulaceae,NA
