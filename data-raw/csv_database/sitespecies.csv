@@ -777,8 +777,9 @@ speulderbos,Fagaceae,Quercus robur,NA,Tree,Expert,12b2a9,Quercus,NA
 speulderbos,Fagaceae,Quercus rubra,NA,Tree,Expert,6dd993,Quercus rubra,NA
 speulderbos,Rosaceae,Sorbus aucuparia,NA,Tree,Expert,448bdf,Acer,NA
 speulderbos,Pinaceae,Tsuga heterophylla,NA,Tree,Expert,99d03e,Pseudotsuga menziesii,NA
-any-temperate-North America,Fabaceae,NA,NA,Tree,Generic,7f7777,"Fabaceae/ Juglandaceae, other",NA
-any-temperate-North America,Juglandaceae,NA,NA,Tree,Generic,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
+any-temperate-North America,Fabaceae,Robinia pseudoacacia,NA,Tree,Generic,7f7777,"Fabaceae/ Juglandaceae, other",NA
+any-temperate-North America,Juglandaceae,Carya spp.,NA,Tree,Generic,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
+any-temperate-North America,Juglandaceae,Juglans spp.,NA,Tree,Generic,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
 any-temperate-North America,Pinaceae,Abies balsamea,NA,Tree,Generic,4872ed,Abies < 0.35 spg ,NA
 any-temperate-North America,Pinaceae,Abies fraseri,NA,Tree,Generic,4872ed,Abies < 0.35 spg ,NA
 any-temperate-North America,Pinaceae,Abies lasiocarpa,NA,Tree,Generic,4872ed,Abies < 0.35 spg ,NA
@@ -867,11 +868,24 @@ any-temperate-North America,Fagaceae,Lithocarpus densiflorus,NA,Tree,Generic,acb
 any-temperate-North America,Fagaceae,Quercus douglasii,NA,Tree,Generic,acbfa4,Fagaceae,NA
 any-temperate-North America,Fagaceae,Quercus laurifolia,NA,Tree,Generic,acbfa4,Fagaceae,NA
 any-temperate-North America,Fagaceae,Quercus minima,NA,Tree,Generic,acbfa4,Fagaceae,NA
-any-temperate-North America,Hamamelidaceae,Liquidambar styraciflua,NA,Tree,Generic,6daeb7,,Liquidambar recently placed in family Altingiaceae
-any-temperate-North America,Hamamelidaceae,Hamamelis virginiana,NA,Tree,Generic,6daeb7,,Liquidambar recently placed in family Altingiaceae
+any-temperate-North America,Hamamelidaceae,Liquidambar styraciflua,NA,Tree,Generic,6daeb7,Liquidambar styraciflua,Liquidambar recently placed in family Altingiaceae
+any-temperate-North America,Hamamelidaceae,Hamamelis virginiana,NA,Tree,Generic,6daeb7,Hamamelis virginiana,Liquidambar recently placed in family Altingiaceae
 any-temperate-North America,Hippocastanaceae,Aesculus flava,NA,Tree,Generic,c86d1d,Aesculus flava,NA
 any-temperate-North America,Malvaceae,Tilia americana,NA,Tree,Generic,c86d1d,Tilia americana,NA
 any-temperate-North America,Malvaceae,Tilia americana var. heterophylla,NA,Tree,Generic,c86d1d,Tilia americana,NA
 any-temperate-North America,Magnoliaceae,Liriodendron tulipifera,NA,Tree,Generic,7af3ba,Liriodendron tulipifera,NA
 any-temperate-North America,Magnoliaceae,Magnolia fraseri,NA,Tree,Generic,7af3ba,Liriodendron tulipifera,NA
 any-temperate-North America,Magnoliaceae,Magnolia virginiana,NA,Tree,Generic,7af3ba,Liriodendron tulipifera,NA
+any-temperate-North America,Oleaceae,Fraxinus nigra,NA,Tree,Generic,4979fe,Fraxinus nigra,NA
+any-temperate-North America,Oleaceae,Fraxinus pennsylvanica,NA,Tree,Generic,4979fe,Fraxinus pennsylvanica,NA
+any-temperate-North America,Oleaceae,Fraxinus spp.,NA,Tree,Generic,4979fe,Fraxinus spp.,NA
+any-temperate-North America,Oleaceae,Fraxinus americana,NA,Tree,Generic,81dc34,Fraxinus americana,NA
+any-temperate-North America,Salicaceae,Populus balsamifera,NA,Tree,Generic,048a87,Populus balsamifera,NA
+any-temperate-North America,Salicaceae,Populus balsamifera ssp. trichocarpa,NA,Tree,Generic,048a87,Populus balsamifera ssp. trichocarpa,NA
+any-temperate-North America,Salicaceae,Populus spp.,NA,Tree,Generic,048a87,Populus spp.,NA
+any-temperate-North America,Salicaceae,Populus deltoides,NA,Tree,Generic,829bad,Populus deltoides,NA
+any-temperate-North America,Salicaceae,Populus grandidentata,NA,Tree,Generic,829bad,Populus grandidentata,NA
+any-temperate-North America,Salicaceae,Populus spp.,NA,Tree,Generic,829bad,Populus spp.,NA
+any-temperate-North America,Salicaceae,Populus tremuloides,NA,Tree,Generic,829bad,Populus tremuloides,NA
+any-temperate-North America,Salicaceae,Salix alba,NA,Tree,Generic,829bad,Salix alba,NA
+any-temperate-North America,Salicaceae,Salix spp,NA,Tree,Generic,829bad,Salix spp,NA
