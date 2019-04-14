@@ -762,19 +762,19 @@ traunstein ,Sapindaceae,Acer pseudoplatanus,811,Tree,Expert,9f138f,Fagus,NA
 traunstein ,Sapindaceae,Acer platanoides,812,Tree,Expert,9f138f,Fagus,NA
 traunstein ,Sapindaceae,Acer campestre,813,Tree,Expert,9f138f,Fagus,NA
 traunstein ,Juglandaceae,Juglans regia,971,Tree,Expert,9f138f,Fagus,NA
-speulderbos,Betulaceae,Betula pendula,NA,Tree,Expert,c2b3e3,Betula,NA
-speulderbos,Betulaceae,Betula pubescens,NA,Tree,Expert,c2b3e3,Betula,NA
-speulderbos,Fagaceae,Fagus sylvatica,NA,Tree,Expert,bf5b8e,Fagus sylvatica,NA
-speulderbos,Aquifoliaceae,Ilex aquifolium,NA,Shrub,Expert,448bdf,Acer,NA
-speulderbos,Pinaceae,Larix kaempferi,NA,Tree,Expert,c3587c,Larix,NA
-speulderbos,Pinaceae,Larix x marschlinsii,NA,Tree,Expert,c3587c,Larix,NA
-speulderbos,Pinaceae,Pinus sylvestris,NA,Tree,Expert,becaf9,Pinus sylvestris,NA
-speulderbos,Pinaceae,Pseudotsuga menziesii,NA,Tree,Expert,99d03e,Pseudotsuga menziesii,NA
-speulderbos,Fagaceae,Quercus petraea,NA,Tree,Expert,12b2a9,Quercus,NA
-speulderbos,Fagaceae,Quercus robur,NA,Tree,Expert,12b2a9,Quercus,NA
-speulderbos,Fagaceae,Quercus rubra,NA,Tree,Expert,6dd993,Quercus rubra,NA
-speulderbos,Rosaceae,Sorbus aucuparia,NA,Tree,Expert,448bdf,Acer,NA
-speulderbos,Pinaceae,Tsuga heterophylla,NA,Tree,Expert,99d03e,Pseudotsuga menziesii,NA
+speulderbos,Betulaceae,Betula pendula,NA,Tree,Expert,c2b3e3,Betula,Using Betula height allometries from Bonh 2014 (allodb eq 2bc879)
+speulderbos,Betulaceae,Betula pubescens,NA,Tree,Expert,c2b3e3,Betula,Using Betula height allometries from Bonh 2014 (allodb eq 2bc879)
+speulderbos,Fagaceae,Fagus sylvatica,NA,Tree,Expert,bf5b8e,Fagus sylvatica,Using Fagus height allometries from Bonh 2014 (allodb eq 7a3dce)
+speulderbos,Aquifoliaceae,Ilex aquifolium,NA,Shrub,Expert,448bdf,Acer,Using Fagus height allometries from Bonh 2014 (allodb eq 7a3dce)
+speulderbos,Pinaceae,Larix kaempferi,NA,Tree,Expert,c3587c,Larix,Using Pinus height allometries from Bonh 2014 (allodb eq b4a502)
+speulderbos,Pinaceae,Larix x marschlinsii,NA,Tree,Expert,c3587c,Larix,Using Pinus height allometries from Bonh 2014 (allodb eq b4a502)
+speulderbos,Pinaceae,Pinus sylvestris,NA,Tree,Expert,becaf9,Pinus sylvestris,Using Pinus height allometries from Bonh 2014 (allodb eq b4a502)
+speulderbos,Pinaceae,Pseudotsuga menziesii,NA,Tree,Expert,99d03e,Pseudotsuga menziesii,Using Pinus height allometries from Bonh 2014 (allodb eq b4a502)
+speulderbos,Fagaceae,Quercus petraea,NA,Tree,Expert,12b2a9,Quercus,Using Quercus height allometries from Bonh 2014 (allodb eq f96447)
+speulderbos,Fagaceae,Quercus robur,NA,Tree,Expert,12b2a9,Quercus,Using Quercus height allometries from Bonh 2014 (allodb eq f96447)
+speulderbos,Fagaceae,Quercus rubra,NA,Tree,Expert,6dd993,Quercus rubra,Using Quercus height allometries from Bonh 2014 (allodb eq f96447)
+speulderbos,Rosaceae,Sorbus aucuparia,NA,Tree,Expert,448bdf,Acer,Using Fagus height allometries from Bonh 2014 (allodb eq 7a3dce)
+speulderbos,Pinaceae,Tsuga heterophylla,NA,Tree,Expert,99d03e,Pseudotsuga menziesii,Using Pinus height allometries from Bonh 2014 (allodb eq b4a502)
 any-temperate-North America,Fabaceae,Robinia pseudoacacia,NA,Tree,Generic,7f7777,"Fabaceae/ Juglandaceae, other",NA
 any-temperate-North America,Fabaceae,Any,NA,Tree,Generic,7f7777,"Fabaceae/ Juglandaceae, other",NA
 any-temperate-North America,Juglandaceae,Carya spp.,NA,Tree,Generic,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
@@ -904,3 +904,11 @@ any-temperate-North America,Fagaceae,Quercus spp.,NA,Tree,Generic,17a2c9,Quercus
 any-temperate-North America,Pinaceae,Pinus cembroides,NA,Tree,Generic,babd81,Pinus cembroides,NA
 any-temperate-North America,Pinaceae,Pinus edulis,NA,Tree,Generic,babd81,Pinus edulis,NA
 any-temperate-North America,Pinaceae,Pinus monophylla,NA,Tree,Generic,babd81,Pinus monophylla,NA
+Any-temperate-Europe,Fagaceae,Quercus spp.,NA,Tree,Expert,f96447,Quercus,NA
+Any-temperate-Europe,Fagaceae,Fagus spp.,NA,Tree,Expert,7a3dce,Fagus,NA
+Any-temperate-Europe,Pinaceae,Pinus spp.,NA,Tree,Expert,b4a502,Pinus,NA
+Any-temperate-Europe,Betulaceae,Betula spp.,NA,Tree,Expert,2bc879,Betula,NA
+Any-temperate-Europe,Pinaceae,Picea spp.,NA,Tree,Expert,0a236c,Picea,NA
+Any-temperate-Europe,Salicaceae,Populus spp.,NA,Tree,Expert,4c72f7,Populus,NA
+Any-temperate-Europe,Oleaceae,Fraxinus spp.,NA,Tree,Expert,d02bd0,Fraxinus,NA
+Any-temperate-Europe,Fabaceae,Robinia spp.,NA,Tree,Expert,191ec9,Robinia,NA
