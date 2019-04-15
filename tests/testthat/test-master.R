@@ -17,7 +17,10 @@ test_that(
 
   # Sites in master that don't match sites in `sites_info`
   missmatching_sites <- setdiff(master_sites, all_sites)
-  expect_equal(missmatching_sites, "any-temperate-north america")
+  expect_equal(
+    missmatching_sites,
+    sort(c("any-temperate-north america", "any-temperate-europe"))
+  )
 })
 
 test_that("master outputs lowercase values of site (#79)", {
@@ -35,7 +38,7 @@ test_that("master doesn't duplicate names", {
 
 test_that("master outputs the expected object (allodb#78)", {
   expect_is(master(), "tbl")
-  expect_length(master(), 44)
+  expect_length(master(), 43)
 })
 
 test_that("`equations` and `sitespecies` have no redundant columns (#78)", {
