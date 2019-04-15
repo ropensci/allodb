@@ -1,0 +1,26 @@
+# A tibble: 913 x 43
+   ref_id equation_id equation_allome~ equation_form dependent_varia~
+   <chr>  <chr>       <chr>            <chr>         <chr>           
+ 1 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+ 2 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+ 3 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+ 4 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+ 5 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+ 6 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+ 7 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+ 8 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+ 9 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+10 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+# ... with 903 more rows, and 38 more variables: independent_variable <chr>,
+#   equation_taxa <chr>, allometry_specificity <chr>, geographic_area <chr>,
+#   dbh_min_cm <chr>, dbh_max_cm <chr>, sample_size <chr>,
+#   dbh_units_original <chr>, biomass_units_original <chr>,
+#   allometry_development_method <chr>, regression_model <chr>,
+#   other_equations_tested <chr>, log_biomass <chr>, bias_corrected <chr>,
+#   bias_correction_factor <chr>, notes_fitting_model <chr>,
+#   original_equation_id <chr>, original_data_availability <chr>, notes <chr>,
+#   site <chr>, family <chr>, species <chr>, species_code <chr>,
+#   life_form <chr>, equation_group <chr>, `to delete` <chr>, warning <chr>,
+#   id <chr>, Site <chr>, lat <chr>, long <chr>, UTM_Zone <chr>, UTM_X <chr>,
+#   UTM_Y <chr>, intertropical <chr>, size.ha <chr>, E <chr>,
+#   wsg.site.name <chr>

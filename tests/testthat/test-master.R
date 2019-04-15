@@ -52,7 +52,13 @@ test_that("master outputs no missing `equation_id`", {
   expect_false(any(is.na(allodb::master()$equation_id)))
 })
 
-
+test_that("master returns known output", {
+  expect_known_output(
+    tibble::as_tibble(master()), "ref-master",
+    print = TRUE,
+    update = FALSE
+  )
+})
 
 context("master_tidy")
 
