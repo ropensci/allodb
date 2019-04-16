@@ -55,6 +55,7 @@ lilly dickey,Ulmaceae,Ulmus rubra,975,Tree,Expert,2473f9,Ulmus americana,NA
 scbi,Sapindaceae,Acer negundo,acne,Tree,Generic,d6be5c,Sapindaceae,NA
 scbi,Sapindaceae,Acer platanoides,acpl,Tree,Generic,d6be5c,Sapindaceae,NA
 scbi,Sapindaceae,Acer rubrum,acru,Tree,Expert,7c72ed,Acer rubrum,NA
+scbi,Sapindaceae,Acer sp.,acsp,Tree,Generic,d6be5c,Sapindaceae,NA
 scbi,Simaroubaceae,Ailanthus altissima,aial,Tree,Generic,ae65ed,Mixed hardwood,NA
 scbi,Rosaceae,Amelanchier arborea,amar,Tree,Expert,c59e03,Amelanchier,NA
 scbi,Rosaceae,Amelanchier arborea,amar,Tree,Expert,96c0af,Amelanchier,NA
@@ -66,7 +67,7 @@ scbi,Juglandaceae,Carya cordiformis,caco,Tree,Expert,9c4cc9,Carya,NA
 scbi,Juglandaceae,Carya glabra,cagl,Tree,Expert,9c4cc9,Carya,NA
 scbi,Juglandaceae,Carya ovalis,caovl,Tree,Expert,9c4cc9,Carya,NA
 scbi,Juglandaceae,Carya sp.,casp,Tree,Expert,9c4cc9,Carya,NA
-scbi,Juglandaceae,Carya spp.,casp,Tree,Generic,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
+scbi,Juglandaceae,Carya sp.,casp,Tree,Generic,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
 scbi,Juglandaceae,Carya tomentosa,cato,Tree,Expert,9c4cc9,Carya,NA
 scbi,Fagaceae,Castanea dentata,cade,Tree,Generic,5edb7f,Fagaceae,NA
 scbi,Cannabaceae,Celtis occidentalis,ceoc,Tree,Generic,ae65ed,Mixed hardwood,NA
@@ -83,6 +84,7 @@ scbi,Fagaceae,Fagus grandifolia,fagr,Tree,Expert,281635,Fagus grandifolia,NA
 scbi,Oleaceae,Fraxinus americana,fram,Tree,Expert,122ba6,Fraxinus americana,NA
 scbi,Oleaceae,Fraxinus nigra,frni,Tree,Expert,0edaff,Fraxinus nigra,NA
 scbi,Oleaceae,Fraxinus pennsylvanica,frpe,Tree,Expert,0edaff,Fraxinus nigra,NA
+scbi,Oleaceae,Fraxinus sp.,frsp,Tree,Expert,0edaff,Fraxinus nigra,NA
 scbi,Hamamelidaceae,Hamamelis virginiana,havi,Shrub,Expert,76aa3c,Hamamelis virginiana,NA
 scbi,Aquifoliaceae,Ilex verticillata,ilve,Shrub,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 scbi,Juglandaceae,Juglans cinerea,juci,Tree,Generic,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
@@ -107,19 +109,21 @@ scbi,Rosaceae,Prunus persica,prpe,Tree,Generic,f08fff,Cornaceae/Ericaceae/Laurac
 scbi,Rosaceae,Prunus persica,prpe,Tree,Expert,8aecca,Prunus serotina,NA
 scbi,Rosaceae,Prunus serotina,prse,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 scbi,Rosaceae,Prunus serotina,prse,Tree,Expert,8aecca,Prunus serotina,NA
+scbi,Rosaceae,Prunus sp.,prsp,Tree,Generic,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 scbi,Fagaceae,Quercus alba,qual,Tree,Expert,524aca,Quercus alba,NA
 scbi,Fagaceae,Quercus coccinea,quco,Tree,Expert,162ce7,Quercus coccinea,NA
 scbi,Fagaceae,Quercus falcata,qufa,Tree,Expert,81397c,Quercus falcata,NA
 scbi,Fagaceae,Quercus falcata,qufa,Tree,Expert,6943b4,Quercus falcata,NA
 scbi,Fagaceae,Quercus michauxii,qumi,Tree,Expert,76df22,Quercus prinus,NA
 scbi,Fagaceae,Quercus michauxii,qumi,Tree,Expert,e94dab,Quercus prinus,NA
-scbi,Fagaceae,Quercus montana,qupr,Tree,Expert,76df22,Quercus prinus,NA
-scbi,Fagaceae,Quercus montana,qupr,Tree,Expert,e94dab,Quercus prinus,NA
+scbi,Fagaceae,Quercus prinus,qupr,Tree,Expert,76df22,Quercus prinus,Accepted name Quercus montana
+scbi,Fagaceae,Quercus prinus,qupr,Tree,Expert,e94dab,Quercus prinus,Accepted name Quercus montana
 scbi,Fagaceae,Quercus muehlenbergii,qumu,Tree,Expert,76df22,Quercus prinus,NA
 scbi,Fagaceae,Quercus muehlenbergii,qumu,Tree,Expert,e94dab,Quercus prinus,NA
 scbi,Fagaceae,Quercus rubra,quru,Tree,Expert,1d7c4c,Quercus rubra,NA
 scbi,Fagaceae,Quercus velutina,quve,Tree,Expert,23ec05,Quercus velutina,NA
 scbi,Fagaceae,Quercus velutina,quve,Tree,Expert,c70dea,Quercus velutina,NA
+scbi,Fagaceae,Quercus sp.,qusp,Tree,Expert,1d7c4c,Quercus rubra,NA
 scbi,Fabaceae,Robinia pseudoacacia,rops,Tree,Expert,333c34,Robinia pseudoacacia,NA
 scbi,Fabaceae,Robinia pseudoacacia,rops,Tree,Generic,7f7777,"Fabaceae/ Juglandaceae, other",NA
 scbi,Fabaceae,Robinia pseudoacacia,rops,Tree,Expert,e9d686,Robinia pseudoacacia,NA
@@ -136,9 +140,11 @@ scbi,Malvaceae,Tilia americana,tiam,Tree,Expert,bebe2e,Tilia americana,NA
 scbi,Malvaceae,Tilia americana,tiam,Tree,Expert,76d19b,Tilia americana,NA
 scbi,Ulmaceae,Ulmus americana,ulam,Tree,Expert,2473f9,Ulmus americana,NA
 scbi,Ulmaceae,Ulmus rubra,ulru,Tree,Expert,8eca60,Ulmus,NA
+scbi,Ulmaceae,Ulmus sp.,ulsp,Tree,Expert,8eca60,Ulmus,NA
 scbi,Adoxaceae,Viburnum acerifolium,viac,Shrub,Expert,5e2dea,Virburnum lantanoides,NA
 scbi,Adoxaceae,Viburnum prunifolium,vipr,Shrub,Expert,5e2dea,Virburnum lantanoides,NA
 scbi,Adoxaceae,Viburnum recognitum,vire,Shrub,Expert,5e2dea,Virburnum lantanoides,NA
+scbi,Unidentified unk,Unidentified,unk,Tree,Generic,ae65ed,Mixed hardwood,NA
 serc,Sapindaceae,Acer negundo,ACNE2,Tree,Generic,d6be5c,Sapindaceae,NA
 serc,Sapindaceae,Acer rubrum,ACRU,Tree,Expert,7c72ed,Acer rubrum,NA
 serc,Simaroubaceae,Ailanthus altissima,AIAL,Tree,Generic,ae65ed,Mixed hardwood,NA
@@ -199,8 +205,8 @@ serc,Fagaceae,Quercus falcata,QUFA,Tree,Expert,81397c,Quercus falcata,NA
 serc,Fagaceae,Quercus falcata,QUFA,Tree,Expert,6943b4,Quercus falcata,NA
 serc,Fagaceae,Quercus michauxii,QUMI,Tree,Expert,76df22,Quercus prinus,NA
 serc,Fagaceae,Quercus michauxii,QUMI,Tree,Expert,e94dab,Quercus prinus,NA
-serc,Fagaceae,Quercus montana,QUMO4,Tree,Expert,76df22,Quercus prinus,NA
-serc,Fagaceae,Quercus montana,QUMO4,Tree,Expert,f21996,Quercus prinus,NA
+serc,Fagaceae,Quercus montana,QUMO4,Tree,Expert,76df22,Quercus prinus,Synonym Quercus prinus
+serc,Fagaceae,Quercus montana,QUMO4,Tree,Expert,f21996,Quercus prinus,Synonym Quercus prinus
 serc,Fagaceae,Quercus palustris,QUPA2,Tree,Expert,1d7c4c,Quercus rubra,NA
 serc,Fagaceae,Quercus rubra,QURU,Tree,Expert,1d7c4c,Quercus rubra,NA
 serc,Fagaceae,Quercus spp.,QUERC,Tree,Generic,5edb7f,Fagaceae,NA
