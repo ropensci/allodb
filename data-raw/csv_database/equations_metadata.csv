@@ -10,7 +10,7 @@ Column,Field,Description,Column_type,Field_codes,Units,Range
 9 / I,geographic_area,Geographic location from which trees were sampled to develop the original equation,character,NA,NA,NA
 10 / J,dbh_min_cm,Minimun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-31
 11 / K,dbh_max_cm,Maximun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-614
-12 / L,sample_size,Number of trees sampled to develop the equation,integer,NA,NA,4-2635
+12 / L,sample_size,Number of trees sampled to develop the equation,integer,NA,NA,4 to 2635
 13 / M,dbh_units_original,DBH unit used in original publication,character,cm: centimeters; inch: inches; mm: milimeters,"cm, inch, mm",NA
 14 / N,units_original,Mass or length unit used in original publication,character,g: grams; kg: kilograms; lbs: pounds; metric_ton: metric ton; Mg: megagrams,"g, kg, Mg",NA
 15 / O,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character,harvest; lidar,NA,NA
