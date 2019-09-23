@@ -1,4 +1,4 @@
-site,family,species,species_code,life_form,equation_group,equation_id,to delete,warning
+site,family,species,species_code,life_form,equation_group,equation_id,equation_taxa,warning
 lilly dickey,Sapindaceae,Acer rubrum,316,Tree,Expert,7c72ed,Acer rubrum,NA
 lilly dickey,Sapindaceae,Acer rubrum,316,Tree,Expert,2060ea,Acer rubrum,NA
 lilly dickey,Sapindaceae,Acer saccharum,318,Tree,Expert,a4d879,Acer saccharum,NA
@@ -918,25 +918,27 @@ any-temperate-Europe,Pinaceae,Picea spp.,NA,Tree,Expert,0a236c,Picea,NA
 any-temperate-Europe,Salicaceae,Populus spp.,NA,Tree,Expert,4c72f7,Populus,NA
 any-temperate-Europe,Oleaceae,Fraxinus spp.,NA,Tree,Expert,d02bd0,Fraxinus,NA
 any-temperate-Europe,Fabaceae,Robinia spp.,NA,Tree,Expert,191ec9,Robinia,NA
-any-temperate-Europe,Pinaceae,Abies alba,NA,Tree,Generic,fb61c6,NA,NA
-any-temperate-Europe,Betulaceae,Alnus glutinosa,NA,Tree,Generic,90bcae,NA,NA
-any-temperate-Europe,Betulaceae,Alnus glutinosa Or A. incana,NA,Tree,Generic,64edc8,NA,NA
-any-temperate-Europe,Betulaceae,Alnus incana,NA,Tree,Generic,bf52d2,NA,NA
-any-temperate-Europe,Betulaceae,Betula pendula,NA,Tree,Generic,980d52,NA,NA
-any-temperate-Europe,Betulaceae,Betula pubescens,NA,Tree,Generic,41481b,NA,NA
-any-temperate-Europe,Angiosperms,Broad-leaved species,NA,Tree,Generic,ed748f,NA,NA
-any-temperate-Europe,Fagaceae,Castanea sativa,NA,Tree,Generic,09fbb7,NA,NA
-any-temperate-Europe,Gymnosperms,Conifers,NA,Tree,Generic,ccded3,NA,NA
-any-temperate-Europe,Fagaceae,Fagus sylvatica,NA,Tree,Generic,fa4bc7,NA,NA
-any-temperate-Europe,Oleaceae,Fraxinus excelsior,NA,Tree,Generic,d323d7,NA,NA
-any-temperate-Europe,Pinaceae,Larix decidua,NA,Tree,Generic,5efe28,NA,NA
-any-temperate-Europe,Pinaceae,Picea abies,NA,Tree,Generic,e7b136,NA,NA
-any-temperate-Europe,Pinaceae,Pinus cembra,NA,Tree,Generic,31232e,NA,NA
-any-temperate-Europe,Pinaceae,Pinus nigra,NA,Tree,Generic,2287eb,NA,NA
-any-temperate-Europe,Pinaceae,Pinus pinaster,NA,Tree,Generic,4d8552,NA,NA
-any-temperate-Europe,Pinaceae,Pinus sylvestris,NA,Tree,Generic,fb10ae,NA,NA
-any-temperate-Europe,Salicaceae,Populus spp.,NA,Tree,Generic,665c24,NA,NA
-any-temperate-Europe,Pinaceae,Pseudotuga menziesii,NA,Tree,Generic,b75b24,NA,NA
-any-temperate-Europe,Fagaceae,Quercus ilex,NA,Tree,Generic,26f83a,NA,NA
-any-temperate-Europe,Fagaceae,Quercus petraea Or Q. robur,NA,Tree,Generic,353e4d,NA,NA
-any-temperate-Europe,Fabaceae,Robinia pseudoacacia,NA,Tree,Generic,fa2c29,NA,NA
+any-temperate-Europe,Pinaceae,Abies alba,NA,Tree,Generic,fb61c6,Abies alba,NA
+any-temperate-Europe,Betulaceae,Alnus glutinosa,NA,Tree,Generic,90bcae,Alnus glutinosa,NA
+any-temperate-Europe,Betulaceae,Alnus glutinosa,NA,Tree,Generic,64edc8,Alnus glutinosa,NA
+any-temperate-Europe,Betulaceae,Alnus incana,NA,Tree,Generic,64edc9,Alnus incana,NA
+any-temperate-Europe,Betulaceae,Alnus incana,NA,Tree,Generic,bf52d2,Alnus incana,NA
+any-temperate-Europe,Betulaceae,Betula pendula,NA,Tree,Generic,980d52,Betula pendula,NA
+any-temperate-Europe,Betulaceae,Betula pubescens,NA,Tree,Generic,41481b,Betula pubescens,NA
+any-temperate-Europe,Angiosperms,Broad-leaved species,NA,Tree,Generic,ed748f,Mixed hardwood,NA
+any-temperate-Europe,Fagaceae,Castanea sativa,NA,Tree,Generic,09fbb7,Castanea sativa,NA
+any-temperate-Europe,Gymnosperms,Conifers,NA,Tree,Generic,ccded3,Mixed conifers,NA
+any-temperate-Europe,Fagaceae,Fagus sylvatica,NA,Tree,Generic,fa4bc7,Fagus sylvatica,NA
+any-temperate-Europe,Oleaceae,Fraxinus excelsior,NA,Tree,Generic,d323d7,Fraxinus excelsior,NA
+any-temperate-Europe,Pinaceae,Larix decidua,NA,Tree,Generic,5efe28,Larix decidua,NA
+any-temperate-Europe,Pinaceae,Picea abies,NA,Tree,Generic,e7b136,Picea abies,NA
+any-temperate-Europe,Pinaceae,Pinus cembra,NA,Tree,Generic,31232e,Pinus cembra,NA
+any-temperate-Europe,Pinaceae,Pinus nigra,NA,Tree,Generic,2287eb,Pinus nigra,NA
+any-temperate-Europe,Pinaceae,Pinus pinaster,NA,Tree,Generic,4d8552,Pinus pinaster,NA
+any-temperate-Europe,Pinaceae,Pinus sylvestris,NA,Tree,Generic,fb10ae,Pinus sylvestris,NA
+any-temperate-Europe,Salicaceae,Populus spp.,NA,Tree,Generic,665c24,Populus spp.,NA
+any-temperate-Europe,Pinaceae,Pseudotuga menziesii,NA,Tree,Generic,b75b24,Pseudotuga menziesii,NA
+any-temperate-Europe,Fagaceae,Quercus ilex,NA,Tree,Generic,26f83a,Quercus ilex,NA
+any-temperate-Europe,Fagaceae,Quercus petraea,NA,Tree,Generic,353e4d,Quercus petraea,NA
+any-temperate-Europe,Fagaceae,Quercus robur,NA,Tree,Generic,353e4d,Quercus robur,NA
+any-temperate-Europe,Fabaceae,Robinia pseudoacacia,NA,Tree,Generic,fa2c29,Robinia pseudoacacia,NA
