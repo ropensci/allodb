@@ -203,7 +203,7 @@ williams_1984_bpef,4b8afb,10^(1.3069+1.3593*(log10(dbh^2))),10^(a+b*(log10(dbh^c
 yarie_2007_abef,686376,(-16809+2656.482*dbh+248.416*dbh^2),a+b*dbh+c*dbh^2,Total aboveground biomass,DBH,Betula neoalaskana,Species,"Alaska, USA",,3.7,32.7,37,cm,g,harvest,NA,NA,NA,NA,NA,NA,,NA,NA
 forrester_2017_gbal,fb61c6,exp(-2.3958+(log(dbh)*2.4497)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Abies alba,Species,Europe,,5.7,57.7,132,cm,kg,harvest?,linear mixed model,NA,NA,1,0.44,NA,,NA,NA
 forrester_2017_gbal,90bcae,exp(-2.2353+(log(dbh)*2.3772)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Alnus glutinosa,Species,Europe,,1,47.3,132,cm,kg,harvest?,linear mixed model,NA,NA,1,4.53,NA,,NA,NA
-forrester_2017_gbal,64edc8,exp(-2.3914+(log(dbh)*2.4204)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Alnus glutinosa Or A. incana,Species,Europe,,0.7,47.3,264,cm,kg,harvest?,linear mixed model,NA,NA,1,2.74,NA,,NA,NA
+forrester_2017_gbal,64edc8,exp(-2.3914+(log(dbh)*2.4204)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Alnus incana,Species,Europe,,0.7,47.3,264,cm,kg,harvest?,linear mixed model,NA,NA,1,2.74,NA,,NA,Equation also applicable to Alnus glutinosa
 forrester_2017_gbal,bf52d2,exp(-2.5273+(log(dbh)*2.4667)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Alnus incana,Species,Europe,,0.7,24.6,132,cm,kg,harvest?,linear mixed model,NA,NA,1,0.2,NA,,NA,NA
 forrester_2017_gbal,980d52,exp(-2.0013+(log(dbh)*2.3683)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Betula pendula,Species,Europe,,1,14,99,cm,kg,harvest?,linear mixed model,NA,NA,1,4.07,NA,,NA,NA
 forrester_2017_gbal,41481b,exp(-1.9147+(log(dbh)*2.2081)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Betula pubescens,Species,Europe,,0.5,9,264,cm,kg,harvest?,linear mixed model,NA,NA,1,3.1,NA,,NA,NA
