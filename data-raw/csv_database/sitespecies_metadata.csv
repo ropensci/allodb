@@ -1,9 +1,19 @@
-Column,Field,Description,Column_type,Field_codes,Units,Range
-1 / A,site,ForestGEO site name (corresponds to name in ForestGEO sites master table),character,NA,NA,NA
-2 / B,family,"Plant family name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.",character,NA,NA,NA
-3 / C,species,"Plant scientific name as Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.",character,NA,NA,NA
-4 / D,species_code,"Species code used at the ForestGEO site, variable per site, even if representing same species .",character,NA,NA,NA
-5 / E,life_form,Common growth form for a given plant species,character,NA,NA,NA
-6 / F,equation_category,"Allometric equation category that can be selected by the user. ""Generic"" equations are the current best equations that can be applied to any site in a broad geographic area (e.g., pantropical, temperate) and to any taxa (or group of taxa) at that site. ""Expert"" equations are the current best equations for specific taxa at a specific site, as identified by a botanist or forest ecologist. ""Other"" equations are potentially relevant (i.e., may be selected as best under different criteria) or were previously classified as best available.",character,Generic; Expert; Other,NA,NA
-7 / G,equation_id,Unique equation identification number given arbitrarely. Links to id in Equations table.,character,NA,NA,NA
-9 / I,warning,Informative notes sometimes critical for biomass calculation,character,NA,NA,NA
+Column,Field,Description,Column_type,Field_codes,Units,Range,,
+1 / A,site,ForestGEO site name (corresponds to name in ForestGEO sites master table),character,NA,NA,NA,,
+2 / B,family,"Plant family name revised in Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.",character,NA,NA,NA,,
+3 / C,genus,Genus name revised in Taxonomic Name Resolution Services.,,,NA,NA,,
+4 / D,species,Plant scientific name revised in Taxonomic Name Resolution Services.,character,NA,NA,NA,,
+5 / E,species_code,"Species code used at the ForestGEO site, variable per site, even if representing same species.",character,NA,NA,NA,,
+6 / F,life_form,Common growth form for a given plant species,character,NA,NA,NA,,
+7 / G,equation_category,"Allometric equation category that can be selected by the user. ""Generic"" equations are the current best equations that can be applied to any site in a broad geographic area (e.g., pantropical, temperate) and to any taxa (or group of taxa) at that site. ""Expert"" equations are the current best equations for specific taxa at a specific site, as identified by a botanist or forest ecologist. ""Other"" equations are potentially relevant (i.e., may be selected as best under different criteria) or were previously classified as best available.",character,Generic; Expert; Other,NA,NA,,
+9 / I,preceding_equation_id,Preceding equation needed to calculate tree biomass (applied before biomass allometry),character,NA,NA,NA,,
+10 / J,equation_id,Unique equation identification number given arbitrarely. Links to id in Equations table.,character,NA,NA,NA,,
+11 / K,equation_taxa,"Taxa for which the equation was generated, included sometimes specific wood gravity limit values.",character,NA,NA,NA,Revise description and delete comment before publication,
+12 / L,warning,"Informative notes, sometimes critical for biomass calculation",character,NA,NA,NA,,
+13 / M,input_variable,Variable and unit needed to calculate desired output.,character,NA,NA,NA,Revise description and delete comment before publication,
+14 / N,output_variable,Final variable (and unit) calculated. See Appendixe 1 for details.,character,NA,NA,NA,Revise description and delete comment before publication,
+15 / O,min_input_variable,Estimated minimun dbh over which the equation could be applied (which may or may not match the range over which the equation was developed),numeric,NA,NA,NA,Revise description and delete comment before publication,
+16 / P,max_input_variable,Estimated maximum dbh over which the equation could be applied (which may or may not match the range over which the equation was developed),numeric,NA,NA,NA,Revise description and delete comment before publication,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
