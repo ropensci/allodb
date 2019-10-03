@@ -12,14 +12,16 @@ Column,Field,Description,Column_type,Field_codes,Units,Range
 11 / K,dbh_max_cm,Maximun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-614
 12 / L,sample_size,Number of trees sampled to develop the equation,integer,NA,NA,4 to 2635
 13 / M,dbh_units_original,DBH unit used in original publication,character,cm: centimeters; inch: inches; mm: milimeters,"cm, inch, mm",NA
-14 / N,units_original,Mass or length unit used in original publication,character,g: grams; kg: kilograms; lbs: pounds; metric_ton: metric ton; Mg: megagrams,"g, kg, Mg",NA
-15 / O,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character,harvest; lidar,NA,NA
-16 / P,regression_model,Regression model used in original publication,character,NA,NA,NA
-17 / Q,other_equations_tested,Comparable models if reported in publication (given equation form),character,NRA - Not Readily Available,NA,NA
-18 / R,log_biomass,Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10),numeric,0 - false; 1 - true,NA,NA
-19 / S,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 - false; 1 - true,NA,NA
-20 / T,bias_correction_factor,"Correction factor for the specific equation, pulled from original publication, if included",numeric,NA,NA,NA
-21 / U,notes_fitting_model,Other details on statistical methods,character,NA,NA,NA
-22 / V,original_equation_id,Unique identification  or clues given in original publications,character,NA,NA,NA
-23 / W,original_data_availability,Indicates whether or not the original source data is available,character,0 - false; 1 - true,NA,NA
-24 / X,notes,Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected,character,NA,NA,NA
+14 / N,dbh_unit_convert,Conversion factor applied to convert DBH unit used in original publication into an equivalent expressed in cm. Multiply by number given in table.,numeric,NA,NA,NA
+15 / O,units_original,Mass or length unit used in original publication,character,g= grams; kg= kilograms; lbs= pounds; metric_ton= metric ton; Mg= megagrams; m= meters,"g, kg, Mg, m",NA
+16 / P,units_original_convert,Conversion factor applied to convert unit used in original publication (mass or length) into an equivalent expressed in kg or m. Multiply by number given in table.,numeric,NA,NA,NA
+17 / Q,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character,harvest; lidar,NA,NA
+18 / R,regression_model,Regression model used in original publication,character,NA,NA,NA
+19 / S,other_equations_tested,Comparable models if reported in publication (given equation form),character,NRA - Not Readily Available,NA,NA
+20 / T,log_biomass,Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10),numeric,0 - false; 1 - true,NA,NA
+21 / U,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 - false; 1 - true,NA,NA
+22 / V,bias_correction_factor,"Correction factor for the specific equation, pulled from original publication, if included",numeric,NA,NA,NA
+23 / W,notes_fitting_model,Other details on statistical methods,character,NA,NA,NA
+24 / X,original_equation_id,Unique identification  or clues given in original publications,character,NA,NA,NA
+25 / Y,original_data_availability,Indicates whether or not the original source data is available,character,0 - false; 1 - true,NA,NA
+26 / Z,notes,Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected,character,NA,NA,NA
