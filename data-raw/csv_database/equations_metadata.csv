@@ -1,33 +1,34 @@
-Column,Field,Description,Column_type,Field_codes,Units,Range
-1 / A,ref_id,Unique reference identification number for biomass equation source. Links to Reference table.,character,NA,NA,NA
-2 / B,equation_id,Unique equation identification number given arbitrarely. Links to Site_Species table.,character,NA,NA,NA
-3 / C,equation_allometry,Equation to calculate biomass (includes coeficients given in original publication),character,NA,NA,NA
-4 / D,equation_form,"Algebraic form of the biomass equation (as function of DBH, HT, WD or others)",character,NA,NA,NA
-5 / E,dependent_variable,Tree component characterized by the equation,character,NA,NA,NA
-6 / F,independent_variable,Parameters included in biomass model (HT: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density),character,NA,"mm, cm, inch",NA
-7 / G,equation_taxa,"Species, genus, family, or plant group for which the allomery was developed (sometimes used as proxy species to calculate AGB when a specific-species equation is not available)",character (string),NA,NA,NA
-8 / H,allometry_specificity,"Specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)",character,NA,NA,NA
-9 / I,geographic_area,Geographic location from which trees were sampled to develop the original equation,character,NA,NA,NA
-10 / J,lat,Latitude in decimal degrees,,,,
-11 / K,long,Longitude in decimal degrees,,,,
-12 / L,elev_m,Elevacion in meters.,,,,
-13 / M,ecosystem_type,Generalize clasification on type of ecosystem,,,,
-14 / N,forest_description,"Brief drescription of forest, summarized from original publication",,,,
-15 / O,dbh_min_cm,Minimun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-31
-16 / P,dbh_max_cm,Maximun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-614
-17 / Q,sample_size,Number of trees sampled to develop the equation,integer,NA,NA,4 to 2635
-18 / R,dbh_units_original,DBH unit used in original publication,character,cm: centimeters; inch: inches; mm: milimeters,"cm, inch, mm",NA
-19 / S,dbh_unit_convert,Conversion factor applied to convert DBH unit used in original publication into an equivalent expressed in cm. Multiply by number given in table.,numeric,NA,NA,NA
-20 / T,units_original,Mass or length unit used in original publication,character,g= grams; kg= kilograms; lbs= pounds; metric_ton= metric ton; Mg= megagrams; m= meters,"g, kg, Mg, m",NA
-21 / U,units_original_convert,Conversion factor applied to convert unit used in original publication (mass or length) into an equivalent expressed in kg or m. Multiply by number given in table.,numeric,NA,NA,NA
-22 / V,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character,harvest; lidar,NA,NA
-23 / W,regression_model,Regression model used in original publication,character,NA,NA,NA
-24 / X,r_square,Original R-squared value given in publication,,,,
-25 / Y,other_equations_tested,Comparable models if reported in publication (given equation form),character,NRA - Not Readily Available,NA,NA
-26 / Z,log_biomass,Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10),numeric,0 - false; 1 - true,NA,NA
-27 / AA,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 - false; 1 - true,NA,NA
-28 / AB,bias_correction_factor,"Correction factor for the specific equation, pulled from original publication, if included",numeric,NA,NA,NA
-29 / AC,notes_fitting_model,Other details on statistical methods,character,NA,NA,NA
-30 / AD,original_equation_id,Unique identification  or clues given in original publications,character,NA,NA,NA
-31 / AE,original_data_availability,Indicates whether or not the original source data is available,character,0 - false; 1 - true,NA,NA
-32 / AF,notes,Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected,character,NA,NA,NA
+Column,Field,Description,Column_type,Field_codes,Units,Range,
+1 / A,ref_id,Unique reference identification number for biomass equation source. Links to Reference table.,character,NA,NA,NA,
+2 / B,equation_id,Unique equation identification number given arbitrarely. Links to Site_Species table.,character,NA,NA,NA,
+3 / C,equation_allometry,Equation to calculate biomass (includes coeficients given in original publication),character,NA,NA,NA,
+4 / D,equation_form,"Algebraic form of the biomass equation (as function of DBH, HT, WD or others)",character,NA,NA,NA,
+5 / E,dependent_variable,Tree component characterized by the equation,character,NA,NA,NA,
+6 / F,independent_variable,Parameters included in biomass model (HT: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density),character,NA,"mm, cm, inch",NA,
+7 / G,equation_taxa,"Species, genus, family, or plant group for which the allomery was developed (sometimes used as proxy species to calculate AGB when a specific-species equation is not available)",character (string),NA,NA,NA,
+8 / H,allometry_specificity,"Specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)",character,NA,NA,NA,
+9 / I,geographic_area,Geographic location from which trees were sampled to develop the original equation,character,NA,NA,NA,
+10 / J,lat,Latitude in decimal degrees,,,,,
+11 / K,long,Longitude in decimal degrees,,,,,
+12 / L,elev_m,Elevacion in meters.,,,,,
+13 / M,ecosystem_type,Generalize clasification on type of ecosystem,,,,,
+14 / N,forest_description,"Brief drescription of forest, summarized from original publication",,,,,
+15 / O,dbh_min_cm,Minimun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-31,Change before publication
+16 / P,dbh_max_cm,Maximun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-614,Change before publication
+17 / Q,sample_size,Number of trees sampled to develop the equation,integer,NA,NA,4 to 2635,Change before publication
+18 / R,collection_year,Year(s) of measurement if  in publication,integer,NA,NA,NA,
+19 / S,dbh_units_original,DBH unit used in original publication,character,cm: centimeters; inch: inches; mm: milimeters,"cm, inch, mm",NA,
+20 / T,dbh_unit_convert,Conversion factor applied to convert DBH unit used in original publication into an equivalent expressed in cm. Multiply by number given in table.,numeric,NA,NA,NA,
+21 / U,units_original,Mass or length unit used in original publication,character,g= grams; kg= kilograms; lbs= pounds; metric_ton= metric ton; Mg= megagrams; m= meters,"g, kg, Mg, m",NA,
+22 / V,units_original_convert,Conversion factor applied to convert unit used in original publication (mass or length) into an equivalent expressed in kg or m. Multiply by number given in table.,numeric,NA,NA,NA,
+23 / W,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character,harvest; lidar,NA,NA,
+24 / X,regression_model,Regression model used in original publication,character,NA,NA,NA,
+25 / Y,r_square,Original R-squared value given in publication,,,,,
+26 / Z,other_equations_tested,Comparable models if reported in publication (given equation form),character,NRA - Not Readily Available,NA,NA,
+27 / AA,log_biomass,Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10),numeric,0 - false; 1 - true,NA,NA,
+28 / AB,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 - false; 1 - true,NA,NA,
+29 / AC,bias_correction_factor,"Correction factor for the specific equation, pulled from original publication, if included",numeric,NA,NA,NA,
+30 / AD,notes_fitting_model,Other details on statistical methods,character,NA,NA,NA,
+31 / AE,original_equation_id,Unique identification  or clues given in original publications,character,NA,NA,NA,
+32 / AF,original_data_availability,Indicates whether or not the original source data is available,character,0 - false; 1 - true,NA,NA,
+33 / AG,notes,Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected,character,NA,NA,NA,
