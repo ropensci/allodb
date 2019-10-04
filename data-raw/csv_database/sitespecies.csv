@@ -5,7 +5,7 @@ lilly dickey,Sapindaceae,Acer,Acer saccharum,318,Tree,Expert,NA,a4d879,Acer sacc
 lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,stem_biomass_kg,8.9,25.4,range exacly as in pub (delete comment)
 lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg,5,45,range exacly as in pub (delete comment)
 lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg,5,45,range exacly as in pub (delete comment)
-lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,"c59e03, 96c0af, 529234",Amelanchier,NA,dbh_cm,agb_kg,x,x,shall we use here the min and max dbh of combined equations? YES (KAT)
+lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,"c59e03, 96c0af, 529234",Amelanchier,NA,dbh_cm,agb_kg,5,45,
 lilly dickey,Annonaceae,Asimina,Asimina triloba,367,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 lilly dickey,Betulaceae,Carpinus,Carpinus caroliniana,391,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 lilly dickey,Juglandaceae,Carya,Carya alba,409,Tree,Expert,NA,9c4cc9,Carya,NA,dbh_cm,,,,
@@ -54,12 +54,12 @@ lilly dickey,Ulmaceae,Ulmus,Ulmus americana,972,Tree,Expert,NA,2473f9,Ulmus amer
 lilly dickey,Ulmaceae,Ulmus,Ulmus rubra,975,Tree,Expert,NA,2473f9,Ulmus americana,NA,dbh_cm,,,,
 scbi,Sapindaceae,Acer,Acer negundo,acne,Tree,Generic,NA,d6be5c,Sapindaceae,NA,dbh_cm,,,,
 scbi,Sapindaceae,Acer,Acer platanoides,acpl,Tree,Generic,NA,d6be5c,Sapindaceae,NA,dbh_cm,,,,
-scbi,Sapindaceae,Acer,Acer rubrum,acru,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,,,,
+scbi,Sapindaceae,Acer,Acer rubrum,acru,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,agb_kg,1,55,range exacly as in pub (delete comment)
 scbi,Sapindaceae,Acer,Acer sp.,acsp,Tree,Generic,NA,d6be5c,Sapindaceae,NA,dbh_cm,,,,
 scbi,Simaroubaceae,Ailanthus,Ailanthus altissima,aial,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
-scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,,,,
-scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,,,,
-scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,,,,
+scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,stem_biomass_kg,8.9,25.4,range exacly as in pub (delete comment)
+scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg,5,45,range exacly as in pub (delete comment)
+scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg,5,45,range exacly as in pub (delete comment)
 scbi,Annonaceae,Asimina,Asimina triloba,astr,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 scbi,Berberidaceae,Berberis,Berberis thunbergii,beth,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 scbi,Betulaceae,Carpinus,Carpinus caroliniana,caca,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
@@ -146,15 +146,15 @@ scbi,Adoxaceae,Viburnum,Viburnum prunifolium,vipr,Shrub,Expert,NA,5e2dea,Virburn
 scbi,Adoxaceae,Viburnum,Viburnum recognitum,vire,Shrub,Expert,NA,5e2dea,Virburnum lantanoides,NA,dba_cm,agb_kg,,,
 scbi,Unidentified unk,Unidentified,Unidentified,unk,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 serc,Sapindaceae,Acer,Acer negundo,ACNE2,Tree,Generic,NA,d6be5c,Sapindaceae,NA,dbh_cm,,,,
-serc,Sapindaceae,Acer,Acer rubrum,ACRU,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,,,,
+serc,Sapindaceae,Acer,Acer rubrum,ACRU,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,agb_kg,1,55,range exacly as in pub (delete comment)
 serc,Simaroubaceae,Ailanthus,Ailanthus altissima,AIAL,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 serc,Fabaceae,Albizia,Albizia julibrissin,ALJU,Tree,Generic,NA,7f7777,"Fabaceae/ Juglandaceae, other",NA,dbh_cm,,,,
-serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,,,,
-serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,,,,
-serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,,,,
-serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,,,,
-serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,,,,
-serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,,,,
+serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,stem_biomass_kg,8.9,25.4,range exacly as in pub (delete comment)
+serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg,5,45,range exacly as in pub (delete comment)
+serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg,5,45,range exacly as in pub (delete comment)
+serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,stem_biomass_kg,8.9,25.4,range exacly as in pub (delete comment)
+serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg,5,45,range exacly as in pub (delete comment)
+serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg,5,45,range exacly as in pub (delete comment)
 serc,Araliaceae,Aralia,Aralia spinosa,ARSP2,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 serc,Annonaceae,Asimina,Asimina triloba,ASTR,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 serc,Moraceae,Broussonetia,Broussonetia papyrifera,BRPA4,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
@@ -232,12 +232,12 @@ serc,Adoxaceae,Viburnum,Viburnum acerifolium,VIAC,Shrub,Expert,NA,5e2dea,Virburn
 serc,Adoxaceae,Viburnum,Viburnum dentatum,VIDE,Shrub,Expert,NA,5e2dea,Virburnum lantanoides,NA,dba_cm,agb_kg,,,
 serc,Adoxaceae,Viburnum,Viburnum prunifolium,VIPR,Shrub,Expert,NA,5e2dea,Virburnum lantanoides,NA,dba_cm,agb_kg,,,
 tyson,Sapindaceae,Acer,Acer negundo,aceneg,Tree,Generic,NA,d6be5c,Sapindaceae,NA,dbh_cm,,,,
-tyson,Sapindaceae,Acer,Acer rubrum,acerub,Tree,Expert,NA,2060ea,Acer rubrum,NA,dbh_cm,,,,
-tyson,Sapindaceae,Acer,Acer saccharum,acesac,Tree,Expert,NA,a4d879,Acer saccharum,NA,dbh_cm,,,,
+tyson,Sapindaceae,Acer,Acer rubrum,acerub,Tree,Expert,NA,2060ea,Acer rubrum,NA,dbh_cm,agb_kg,0.25,5.73,range exacly as in pub (delete comment)
+tyson,Sapindaceae,Acer,Acer saccharum,acesac,Tree,Expert,NA,a4d879,Acer saccharum,NA,dbh_cm,agb_kg,0.19,3.86,range exacly as in pub (delete comment)
 tyson,Simaroubaceae,Ailanthus,Ailanthus altissima,ailalt,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
-tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,,,,
-tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,,,,
-tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,,,,
+tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,stem_biomass_kg,8.9,25.4,range exacly as in pub (delete comment)
+tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg,5,45,range exacly as in pub (delete comment)
+tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg,5,45,range exacly as in pub (delete comment)
 tyson,Annonaceae,Asimina,Asimina triloba,asitri,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 tyson,Juglandaceae,Carya,Carya cordiformis,carcor,Tree,Expert,NA,9c4cc9,Carya,NA,dbh_cm,,,,
 tyson,Juglandaceae,Carya,Carya glabra,cargla,Tree,Expert,NA,9c4cc9,Carya,NA,dbh_cm,,,,
@@ -598,9 +598,9 @@ umbc,Platanaceae,Platanus,Platanus occidentalis,NA,Tree,Expert,NA,0a1212,Platanu
 umbc,Rosaceae,Malus,Malus coronaria,NA,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,,,,
 umbc,Rosaceae,Malus,Malus sylvestris,NA,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,,,,
 umbc,Rosaceae,Crataegus,Crataegus spp.,NA,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,,,,
-umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,,,,
-umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,,,,
-umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,,,,
+umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,stem_biomass_kg,8.9,25.4,range exacly as in pub (delete comment)
+umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg,5,45,range exacly as in pub (delete comment)
+umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg,5,45,range exacly as in pub (delete comment)
 umbc,Rosaceae,Prunus,Prunus serotina,NA,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,,,,
 umbc,Rosaceae,Prunus,Prunus serotina,NA,Tree,Expert,NA,8aecca,Prunus serotina,NA,dbh_cm,,,,
 umbc,Rosaceae,Prunus,Prunus avium,NA,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,,,,
@@ -611,7 +611,7 @@ umbc,Salicaceae,Salix,Salix nigra,NA,Tree,Generic,NA,829bad,Salicaceae,NA,dbh_cm
 umbc,Salicaceae,Populus,Populus deltoides,NA,Tree,Expert,NA,ecd464,Populus,NA,dbh_cm,,,,
 umbc,Sapindaceae,Acer,Acer negundo,NA,Tree,Generic,NA,d6be5c,Sapindaceae,NA,dbh_cm,,,,
 umbc,Sapindaceae,Acer,Acer platanoides,NA,Tree,Generic,NA,d6be5c,Sapindaceae,NA,dbh_cm,,,,
-umbc,Sapindaceae,Acer,Acer rubrum,NA,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,,,,
+umbc,Sapindaceae,Acer,Acer rubrum,NA,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,agb_kg,1,55,range exacly as in pub (delete comment)
 umbc,Sapindaceae,Acer,Acer saccharinum,NA,Tree,Expert,NA,77e37e,Acer saccharum,NA,dbh_cm,,,,
 umbc,Sapindaceae,Acer,Acer saccharum,NA,Tree,Expert,NA,77e37e,Acer saccharum,NA,dbh_cm,,,,
 umbc,Simaroubaceae,Ailanthus,Ailanthus altissima,NA,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
@@ -667,7 +667,7 @@ harvard forest,Rosaceae,Sorbus,Sorbus americana,NA,Shrub,Generic,NA,f08fff,Corna
 harvard forest,Salicaceae,Populus,Populus grandidentata,NA,Tree,Expert,NA,3172f7,Populus grandidentata,NA,dbh_cm,,,,
 harvard forest,Salicaceae,Populus,Populus tremuloides,NA,Tree,Expert,NA,3172f7,Populus grandidentata,NA,dbh_cm,,,,
 harvard forest,Salicaceae,Salix,Salix spp.,NA,Tree,Generic,NA,829bad,Salicaceae,NA,dbh_cm,,,,
-harvard forest,Sapindaceae,Acer,Acer rubrum,NA,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,,,,
+harvard forest,Sapindaceae,Acer,Acer rubrum,NA,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,agb_kg,1,55,range exacly as in pub (delete comment)
 harvard forest,Sapindaceae,Acer,Acer saccharum,NA,Tree,Expert,NA,77e37e,Acer saccharum,NA,dbh_cm,,,,
 harvard forest,Ulmaceae,Ulmus,Ulmus americana,NA,Tree,Expert,NA,2473f9,Ulmus americana,NA,dbh_cm,,,,
 scotty creek,Betulaceae,Alnus,Alnus viridis ssp. crispa,NA,Tree,Expert,NA,1f17bb,Alnus,NA,dba_cm,agb_kg,,,
@@ -721,9 +721,9 @@ michigan big woods,Lauraceae,Lindera,Lindera benzoin,NA,Shrub,Generic,NA,f08fff,
 michigan big woods,Lauraceae,Sassafras,Sassafras albidum,NA,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,,,,
 michigan big woods,Lauraceae,Sassafras,Sassafras albidum,NA,Tree,Expert,NA,2c092b,Sassafras albidum,NA,dbh_cm,,,,
 michigan big woods,Oleaceae,Fraxinus,Fraxinus americana,NA,Tree,Expert,NA,122ba6,Fraxinus americana,NA,dbh_cm,,,,
-michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,,,,
-michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,,,,
-michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,,,,
+michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,stem_biomass_kg,8.9,25.4,range exacly as in pub (delete comment)
+michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg,5,45,range exacly as in pub (delete comment)
+michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg,5,45,range exacly as in pub (delete comment)
 michigan big woods,Rosaceae,Malus,Malus sp.,NA,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,,,,
 michigan big woods,Rosaceae,Prunus,Prunus serotina,NA,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,,,,
 michigan big woods,Rosaceae,Prunus,Prunus serotina,NA,Tree,Expert,NA,8aecca,Prunus serotina,NA,dbh_cm,,,,
