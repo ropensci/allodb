@@ -105,7 +105,6 @@ jenkins_2004_cdod,b9d4fc,exp(1.92+1.86*log(dbh)),exp(a+b*log(dbh)),Foliage total
 jenkins_2004_cdod,2c092b,10^(1.3539+1.3412*(log10(dbh^2))),10^(a+b*(log10(dbh^c))),Whole tree (above stump),DBH,Sassafras albidum,Species,"Ohio, USA",,,,,,,0.4,8.49,41,,cm,1,g,0.001,harvest,linear,,NA,1,1,1.004,NA,,NA,Equation built for seedlings and saplings
 jenkins_2004_cdod,3172f7,10^(1.2696+1.3889*(log10(dbh^2))),10^(a+b*(log10(dbh^c))),Total aboveground biomass,DBH,Populus grandidentata,Species,"Ohio, USA",,,,,,,0.68,7.49,53,,cm,1,g,0.001,harvest,NA,,NA,NA,1,1.012,NA,,NA,NA
 jenkins_2004_cdod,382ee9,0.08724*(dbh^2.587),a*(dbh^b),Whole tree (above stump),DBH,Betula alleghaniensis,Species,"North Central States, USA",,,,,,,2.5,40,9,,cm,1,kg,1,harvest,NA,,NA,NA,0,NA,NA,,NA,NA
-jenkins_2004_cdod,3e6f4d,exp(4.29+2.29*log(dbh)),exp(a+b*log(dbh)),Stem biomass (with bark),DBH,Tilia americana,Species,"New Hampshire, USA",,,,,,,1.6,10,5,,cm,1,g,0.001,harvest,NA,,NA,NA,0,included in model,NA,,NA,NA
 jenkins_2004_cdod,4b4063,exp(3.63+2.54*log(dbh)),exp(a+b*log(dbh)),Total aboveground biomass,DBH,Picea mariana,Species,"Alaska, USA",,,,,,,1.5,13,18,,cm,1,g,0.001,harvest,NA,,NA,NA,0,NA,NA,,NA,NA
 jenkins_2004_cdod,5084bd,exp(-2.037+2.363*log(dbh)),exp(a+b*log(dbh)),Total aboveground biomass,DBH,Acer rubrum,Species,"Wisconsin, Michigan, USA",,,,,,,3.1,24.6,41,,cm,1,kg,1,harvest,NA,,NA,NA,1,1.01,NA,,NA,NA
 jenkins_2004_cdod,524aca,10^(-1.266+2.613*(log10(dbh))),10^(a+b*(log10(dbh))),Total aboveground biomass,DBH,Quercus alba,Species,"North Carolina, USA",,,,,,,7,63,10,,cm,1,kg,1,harvest,NA,,NA,NA,1,included in model,NA,,NA,NA
@@ -223,4 +222,3 @@ forrester_2017_gbal,b75b24,exp(-2.3298+(log(dbh)*2.4818)),exp(a+(log(dbh)*b),Tot
 forrester_2017_gbal,26f83a,exp(-1.7417+(log(dbh)*2.3699)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Quercus ilex,Species,Europe,,,,,,,1,90,210,,cm,1,kg,1,harvest?,linear mixed model,,NA,NA,1,3.64,NA,,NA,NA
 forrester_2017_gbal,353e4d,exp(-2.684+(log(dbh)*2.7274)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Quercus petraea Or Q. robur,Species,Europe,,,,,,,5.9,67.5,66,,cm,1,kg,1,harvest?,linear mixed model,,NA,NA,1,2.78,NA,,NA,NA
 forrester_2017_gbal,fa2c29,exp(-1.8468+(log(dbh)*2.2656)),exp(a+(log(dbh)*b),Total aboveground biomass,DBH,Robinia pseudoacacia,Species,Europe,,,,,,,0.1,40.1,132,,cm,1,kg,1,harvest?,linear mixed model,,NA,NA,1,-1.58,NA,,NA,NA
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
