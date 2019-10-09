@@ -1,5 +1,5 @@
 # October 8, 2019
-# Scrip to evaluate equations and how they behive above their dbh range.
+# Scrip to evaluate equations and how they behave above their dbh range.
 
 load("data/equations.rda")
 
