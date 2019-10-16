@@ -16,10 +16,10 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,
 15 / O,mat_C,Mean annual temperature in Celsius degrees as original publication or predicted using the latitude and longitude in the WorldClim database.,numeric,NA,celsius degrees,XX-XX,Change before publication
 16 / P,map_mm,Mean annual precipitation in milimeters (multiply by 25.4 to convert from inch to mm) or predicted using the latitude and longitude in the WorldClim database.,numeric,NA,mm,XX-XX,Change before publication
 17 / Q,frost_free_period_days,Frost free period (days) as reported or inferred from original publicacion,numeric,NA,NA,NA,
-18 / R,age_range_yr,Stand age (or range) as reported or inferred from original publication,numeric,NA,NA,NA,
+18 / R,stand_age_range_yr,Stand age (or range) as reported or inferred from original publication,numeric,NA,NA,NA,
 19 / S,stand_age_history,Qualitative description of the stand history reported or inferred from original publication,character,NA,NA,NA,
-20 / T,basal_area_m2_ha,,,,,,tentative field
-21 / U,trees_ha,,,,,,tentative field
+20 / T,stand_basal_area,Stand basal as reported in original publication (m2 x ha),,NA,NA,NA,tentative field
+21 / U,stand_trees_ha,Number of trees per hectare (average or absolute) as reported in original publication,,NA,NA,NA,tentative field
 22 / V,forest_description,"Brief drescription of stand, summarized from original publication, including species composition",character,NA,NA,NA,
 23 / W,ecosystem_type,Generalize clasification on type of ecosystem,character,NA,NA,NA,
 24 / X,dbh_min_cm,Minimun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-31,Change before publication
