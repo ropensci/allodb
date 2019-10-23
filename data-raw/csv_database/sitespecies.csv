@@ -1,11 +1,11 @@
-site,family,genus,latin_name,species_code,life_form,equation_group,preceding_equation_id,equation_id,TO DELETE,warning,input_variable,output_variable,min_input_variable,max_input_variable,
+site,family,genus,latin_name,species_code,life_form,equation_group,preceding_equation_id,equation_id,TO DELETE,warning,input_variable,output_variable,min_input_variable,max_input_variable,delete coumn before publication
 lilly dickey,Sapindaceae,Acer,Acer rubrum,316,Tree,Expert,NA,7c72ed,Acer rubrum,NA,dbh_cm,agb_kg,1,55,range exacly as in pub (delete comment)
 lilly dickey,Sapindaceae,Acer,Acer rubrum,316,Tree,Expert,NA,2060ea,Acer rubrum,NA,dbh_cm,agb_kg,0.25,5.73,range exacly as in pub (delete comment)
 lilly dickey,Sapindaceae,Acer,Acer saccharum,318,Tree,Expert,NA,a4d879,Acer saccharum,NA,dbh_cm,agb_kg,0.19,3.86,range exacly as in pub (delete comment)
 lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,c59e03,Amelanchier,NA,dbh_cm,stem_biomass_kg,8.9,25.4,range exacly as in pub (delete comment)
 lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg,5,45,range exacly as in pub (delete comment)
 lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg,5,45,range exacly as in pub (delete comment)
-lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,"c59e03, 96c0af, 529234",Amelanchier,NA,dbh_cm,agb_kg,5,45,
+lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,Expert,NA,"c59e03, 96c0af, 529234",Amelanchier,NA,dbh_cm,agb_kg,5,45,"testing having 3 equation_id in 1 line, is this necessary?"
 lilly dickey,Annonaceae,Asimina,Asimina triloba,367,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 lilly dickey,Betulaceae,Carpinus,Carpinus caroliniana,391,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 lilly dickey,Juglandaceae,Carya,Carya alba,409,Tree,Expert,NA,9c4cc9,Carya,NA,dbh_cm,,,,
@@ -1020,6 +1020,7 @@ indian cave,Adoxaceae,Viburnum,Viburnum opulus,VIBUOP,Shrub,Expert,NA,5e2dea,Vir
 ordway-swisher,Fabaceae,Amporpha,Amporpha fruticosa,AMFR,Shrub,,,,,,,,,,
 ordway-swisher,Ebenaceae,Diospyros,Diospyros virginiana,DIVI,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,,,,
 ordway-swisher,Pinaceae,Pinus,Pinus palustris,PIPA,Tree,Generic,NA,90c207,Pinus >=0.45 spg,NA,dbh_cm,agb_kg,,,
+ordway-swisher,Pinaceae,Pinus,Pinus palustris,PIPA,Tree,Expert,NA,418f13,,NA,dbh_cm,agb_kg,,,
 ordway-swisher,Fagaceae,Quercus,Quercus geminata,QUGE,Tree,,,,,,,,,,
 ordway-swisher,Fagaceae,Quercus,Quercus hemisphaerica,QUHE,Tree,,,,,,,,,,
 ordway-swisher,Fagaceae,Quercus,Quercus laevis,QULA,Tree,,,,,,,,,,
