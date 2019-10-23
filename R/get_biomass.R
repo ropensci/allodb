@@ -48,6 +48,7 @@ get_biomass = function(dbh = NULL,
   agb_all = agb_all * equations$units_original_convert
 
   # taxonomical distance
+  # TODO create function that deals with taxonimical distance
   equations$taxo_dist = equations$allometry_specificity
   equations$taxo_dist[grep("Mixed", equations$taxo_dist)] = "Mixed"
   equations$taxo_dist = factor(
@@ -91,15 +92,13 @@ weight_allom = function(Nobs,
   # b=0.03 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.03 = 100
   # implication: new observations will not increase weight_N much when Nobs > 100
 
-  meanD = rowMeans(dbhrange)
-  sdD = apply(dbhrange, 1, diff) / 4
-  weight_D = dnorm(dbh, meanD, sdD) / dnorm(meanD, meanD, sdD)
-  ## we use a weight proportional to the expected distribution density of DBH of trees
-  ## measured for each equation. The only information we have is the dbh range.
-  ## We hypothesize that measured DBH have a normal distribution and that the
-  ## mean is the middle of the dbh range, and the sd is dbhrange/4 so that all
-  ## measurements are in the 95% confidence interval of the distribution.
-  ## We then divide by dnorm(meanD, modeD, sdD) so that max(weight_D) = 1.
+  midD = rowMeans(dbhrange)
+  difD = apply(dbhrange, 1, diff) / 2 / (1-0.5^0.3333)^(1/15)
+  weight_D = max(0, (1-abs((dbh-midD)/difD)^15)^3)
+  ## This weight function is inspired of the tricube weight function in local regressions
+  ## it equals 1 inside the dbh range, quickly drops to 0 outside the dbh range. The parameters
+  # were chosen so that weight_D = 0.5 on the dbh range boundaries
+  # See: curve((1-abs((x-midD)/difD)^15)^3, xlim=c(dbhrange))
 
   weight_E = 0   # environmental distance
 
@@ -124,4 +123,4 @@ var = "Total aboveground biomass"
 
 not_na = which(!is.na(weight))
 plot(agb_all[not_na], weight[not_na])
-text(agb_all[not_na], weight[not_na], 1:nrow(equations)[not_na])
+text(agb_all[not_na], weight[not_na], not_na)
