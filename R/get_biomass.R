@@ -30,8 +30,8 @@ get_biomass = function(dbh = NULL,
     "dbh_min_cm",
     "dbh_max_cm",
     "sample_size",
-    "dbh_unit_convert",
-    "units_original_convert",
+    "dbh_unit_CF",
+    "output_units_CF",
     "r_squared"
   )
   suppressWarnings(equations[, numeric_columns] <-
@@ -41,11 +41,11 @@ get_biomass = function(dbh = NULL,
   # modifiy allometry to insert unit conversion
   for (i in 1:nrow(equations)) {
     orig_equation = equations$equation_allometry[i]
-    new_dbh = paste0("dbh*", equations$dbh_unit_convert[i])
+    new_dbh = paste0("dbh*", equations$dbh_unit_CF[i])
     new_equation = gsub("dbh", new_dbh, orig_equation)
     agb_all[i] = eval(parse(text = new_equation))
   }
-  agb_all = agb_all * equations$units_original_convert
+  agb_all = agb_all * equations$output_units_CF
 
   # taxonomical distance
   # TODO create function that deals with taxonimical distance
