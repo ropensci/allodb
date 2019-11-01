@@ -1,27 +1,21 @@
 get_biomass = function(dbh = NULL,
                        h = NULL,
-                       dba = NULL,
-                       BA = NULL,
                        species = NULL,
                        genus = NULL,
                        family = NULL,
                        conif = FALSE,
                        coords = NULL,
                        var = "Total aboveground biomass") {
-  if (is.null(dbh) & is.null(dba))
-    stop("You need to provide either DBH or DBA.")
+  if (is.null(dbh) 
+    stop("You need to provide DBH")
 
   load("data/equations.rda")
   equations = subset(equations, dependent_variable == var)
-  if (is.null(dba))
-    equations = subset(equations, !independent_variable == "DBA")
-  if (is.null(h) | is.null(dbh))
+    if (is.null(h) | is.null(dbh))
     equations = subset(equations, !independent_variable == "DBH, H")
   if (is.null(dbh))
     equations = subset(equations, !independent_variable == "DBH")
-  if (is.null(BA))
-    equations = subset(equations, !independent_variable == "BA")
-
+ 
   # transform columns to numeric
   numeric_columns = c(
     "lat",
@@ -112,8 +106,6 @@ weight_allom = function(Nobs,
 #### test ####
 dbh = 10
 h = NULL
-dba = NULL
-BA = NULL
 species = "Quercus ilex"
 genus = "Quercus"
 family = "Fagaceae"
