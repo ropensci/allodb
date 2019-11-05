@@ -688,6 +688,7 @@ michigan big woods,Betulaceae,Betula,Betula alleghaniensis,NA,Tree,Expert,NA,27b
 michigan big woods,Betulaceae,Carpinus,Carpinus caroliniana,NA,Tree,Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,
 michigan big woods,Betulaceae,Carpinus,Carpinus caroliniana,NA,Tree,Expert,NA,f7bf9a,,,,
 michigan big woods,Betulaceae,Corylus,Corylus americana,NA,"Shrub, small tree",Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,
+michigan big woods,Betulaceae,Corylus,Corylus americana,NA,"Shrub, small tree",Generic,NA,e37801,Woody species,NA,,
 michigan big woods,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,Expert,NA,289f7c,Ostrya virginiana,NA,dbh_cm,
 michigan big woods,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,Expert,NA,b9d4fc,Ostrya virginiana,NA,dbh_cm,
 michigan big woods,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,Expert,NA,fe5d4f,,,,
@@ -722,6 +723,7 @@ michigan big woods,Juglandaceae,Carya,Carya ovata,NA,Tree,Expert,NA,9c4cc9,Carya
 michigan big woods,Juglandaceae,Carya,Carya spp.,NA,Tree,Generic,NA,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA,dbh_cm,
 michigan big woods,Juglandaceae,Juglans,Juglans nigra,NA,Tree,Generic,NA,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA,dbh_cm,
 michigan big woods,Lauraceae,Lindera,Lindera benzoin,NA,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,
+michigan big woods,Lauraceae,Lindera,Lindera benzoin,NA,Shrub,Generic,NA,e37801,Woody species,NA,,
 michigan big woods,Lauraceae,Sassafras,Sassafras albidum,NA,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,
 michigan big woods,Lauraceae,Sassafras,Sassafras albidum,NA,Tree,Expert,NA,2c092b,Sassafras albidum,NA,dbh_cm,
 michigan big woods,Oleaceae,Fraxinus,Fraxinus americana,NA,Tree,Expert,NA,122ba6,Fraxinus americana,NA,dbh_cm,
@@ -730,6 +732,7 @@ michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,c5
 michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,96c0af,Amelanchier,NA,dbh_cm,branches_kg
 michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,Expert,NA,529234,Amelanchier,NA,dbh_cm,foliage_kg
 michigan big woods,Rosaceae,Malus,Malus sp.,NA,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,
+michigan big woods,Rosaceae,Malus,Malus sp.,NA,Shrub,Generic,NA,e37801,Woody species,NA,,
 michigan big woods,Rosaceae,Prunus,Prunus serotina,NA,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,
 michigan big woods,Rosaceae,Prunus,Prunus serotina,NA,Tree,Expert,NA,8aecca,Prunus serotina,NA,dbh_cm,
 michigan big woods,Rosaceae,Prunus,Prunus serotina,NA,Tree,Generic,NA,544d37,Woody species,,,
@@ -738,6 +741,7 @@ michigan big woods,Rosaceae,Prunus,Prunus virginiana,NA,Tree,Generic,NA,544d37,W
 michigan big woods,Rosaceae,Pyrus,Pyrus sp.,NA,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA,dbh_cm,
 michigan big woods,Rosaceae,Prunus,Pyrus sp.,NA,Tree,Generic,NA,544d37,Woody species,,,
 michigan big woods,Rutaceae,Zanthoxylum,Zanthoxylum americanum,NA,"Shrub, small tree",Generic,NA,ae65ed,Mixed hardwood,NA,dbh_cm,
+michigan big woods,Rutaceae,Zanthoxylum,Zanthoxylum americanum,NA,"Shrub, small tree",Generic,NA,e37801,Woody species,NA,,
 michigan big woods,Salicaceae,Populus,Populus grandidentata,NA,Tree,Expert,NA,3172f7,Populus grandidentata,NA,dbh_cm,
 michigan big woods,Salicaceae,Populus,Populus grandidentata,NA,Tree,Expert,NA,de1986,Salicaceae,,,
 michigan big woods,Salicaceae,Populus,Populus grandidentata,NA,Tree,Expert,NA,9524d0,Populus grandidentata,,,
