@@ -22,7 +22,7 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,
 21 / U,stand_trees_ha,Number of trees per hectare (average or absolute) as reported in original publication,,NA,NA,NA,tentative field
 22 / V,forest_description,"Brief drescription of stand, summarized from original publication, including species composition",character,NA,NA,NA,
 23 / W,ecosystem_type,Generalize clasification on type of ecosystem,character,NA,NA,NA,
-24 / X,vegetation_type,"Dominant vegetation type on sampling site, interpreted frm original publication",character,"BE=broadleaf evergreen, BdC=bradleaf drought deciduous, BcD= breadleaf cold deciduous, NE=needleaf evergree.",,,
+24 / X,vegetation_type,"Dominant vegetation type on sampling site, interpreted frm original publication",character,"BE=broadleaf evergreen, BdC=broadleaf drought deciduous, BcD= broadleaf cold deciduous, NE=needleaf evergreen",,,
 25 / Y,dbh_min_cm,Minimun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-31,Change before publication
 26 / Z,dbh_max_cm,Maximun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-614,Change before publication
 27 / AA,sample_size,Number of trees sampled to develop the equation,integer,NA,NA,4 to 2635,Change before publication
@@ -37,7 +37,7 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,
 36 /AJ,other_equations_tested,Comparable models if reported in publication (given equation form),character,NRA - Not Readily Available,NA,NA,
 37 / AK,log_biomass,Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10),numeric,0 - false; 1 - true,NA,NA,
 38 / AL,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 - false; 1 - true,NA,NA,
-39 / AM,bias_correction_factor,"Correction factor for the specific equation, pulled from original publication, if included",numeric,NA,NA,NA,
+39 / AM,bias_correction_factor,"Correction factor for a bias introduced by logarithmic transformation of the data; pulled from original publication, if reported",numeric,NA,NA,NA,
 40 / AN,notes_fitting_model,Other details on statistical methods,character,NA,NA,NA,
 41 / AO,original_equation_id,Unique identification  or clues given in original publications,character,NA,NA,NA,
 42 / AP,original_data_availability,Indicates whether or not the original source data is available,character,0 - false; 1 - true,NA,NA,
