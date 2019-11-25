@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 __allodb__ is a database of allometric equations focusin on ForestGEO sites. To manipulate these equations and calculate biomass see [fgeo.biomass](https://forestgeo.github.io/fgeo.biomass/).
 
 ## Warning
-These features are not ready for research. The resulting biomass is still meaningless. Contact gonzalezeb@si.edu or teixeirak@si.edu for updates.
+These features are not ready for research. The resulting biomass is still meaningless. 
 
 ## Installation
 
