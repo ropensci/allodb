@@ -20,10 +20,10 @@ knitr::opts_chunk$set(
 [![Coverage status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/r/forestgeo/allodb?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb)
 
-__allodb__ is a database of allometric equations focusin on ForestGEO sites. To manipulate these equations and calculate biomass see [fgeo.biomass](https://forestgeo.github.io/fgeo.biomass/).
+__allodb__ is a database of allometric equations focusing on ForestGEO sites. To manipulate these equations and calculate biomass see [fgeo.biomass](https://forestgeo.github.io/fgeo.biomass/).
 
 ## Warning
-These features are not ready for research. The resulting biomass is still meaningless. Contact gonzalezeb@si.edu or teixeirak@si.edu for updates.
+These features are not ready for research. Resulting biomass values are still incorrect. Contact gonzalezeb@si.edu or teixeirak@si.edu for updates.
 
 ## Installation
 

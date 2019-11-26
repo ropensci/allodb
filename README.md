@@ -11,9 +11,15 @@ status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://c
 [![CRAN
 status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb)
 
-**allodb** is a database of allometric equations. To manipulate these
-equations and calculate biomass see
+**allodb** is a database of allometric equations focusing on ForestGEO
+sites. To manipulate these equations and calculate biomass see
 [fgeo.biomass](https://forestgeo.github.io/fgeo.biomass/).
+
+## Warning
+
+These features are not ready for research. Resulting biomass values are
+still incorrect. Contact <gonzalezeb@si.edu> or <teixeirak@si.edu> for
+updates.
 
 ## Installation
 
@@ -40,44 +46,54 @@ Combined data-base tables.
 
 ``` r
 master()
-#> # A tibble: 743 x 43
-#>    ref_id equation_allome~ equation_id equation_form dependent_varia~
-#>    <chr>  <chr>            <chr>       <chr>         <chr>           
-#>  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
-#>  2 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
-#>  3 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
-#>  4 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
-#>  5 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#>  6 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#>  7 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#>  8 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#>  9 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#> 10 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#> # ... with 733 more rows, and 38 more variables:
-#> #   independent_variable <chr>, allometry_specificity <chr>,
-#> #   geographic_area <chr>, dbh_min_cm <chr>, dbh_max_cm <chr>,
-#> #   sample_size <chr>, dbh_units_original <chr>,
-#> #   biomass_units_original <chr>, allometry_development_method <chr>,
-#> #   regression_model <chr>, other_equations_tested <chr>,
-#> #   log_biomass <chr>, bias_corrected <chr>, bias_correction_factor <chr>,
-#> #   notes_fitting_model <chr>, original_data_availability <chr>,
-#> #   warning <chr>, site <chr>, family <chr>, species <chr>,
-#> #   species_code <chr>, life_form <chr>, equation_group <chr>,
-#> #   equation_taxa <chr>, notes_on_species <chr>, wsg_id <chr>,
-#> #   wsg_specificity <chr>, id <chr>, Site <chr>, lat <chr>, long <chr>,
-#> #   UTM_Zone <chr>, UTM_X <chr>, UTM_Y <chr>, intertropical <chr>,
-#> #   size.ha <chr>, E <chr>, wsg.site.name <chr>
+#> Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.
+#> # A tibble: 1,334 x 68
+#>    ref_id equation_id equation_allome~ equation_form dependent_varia~
+#>    <chr>  <chr>       <chr>            <chr>         <chr>           
+#>  1 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+#>  2 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+#>  3 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+#>  4 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+#>  5 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  6 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  7 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  8 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  9 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+#> 10 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+#> # ... with 1,324 more rows, and 63 more variables:
+#> #   independent_variable <chr>, equation_taxa <chr>,
+#> #   allometry_specificity <chr>, equation_categ <chr>,
+#> #   geographic_area <chr>, original_coord <chr>, lat.x <chr>,
+#> #   long.x <chr>, coord_precision <chr>, elev_min <chr>, elev_max <chr>,
+#> #   mat_C <chr>, map_mm <chr>, frost_free_period_days <chr>,
+#> #   stand_age_range_yr <chr>, stand_age_history <chr>,
+#> #   stand_basal_area_m2_ha <chr>, stand_trees_ha <chr>,
+#> #   forest_description <chr>, ecosystem_type <chr>, vegetation_type <chr>,
+#> #   dbh_min_cm <chr>, dbh_max_cm <chr>, sample_size <chr>,
+#> #   collection_year <chr>, dbh_units_original <chr>, dbh_unit_CF <chr>,
+#> #   output_units_original <chr>, output_units_CF <chr>,
+#> #   allometry_development_method <chr>, regression_model <chr>,
+#> #   r_squared <chr>, other_equations_tested <chr>, log_biomass <chr>,
+#> #   bias_corrected <chr>, bias_correction_factor <chr>,
+#> #   notes_fitting_model <chr>, original_equation_id <chr>,
+#> #   original_data_availability <chr>, notes <chr>, site <chr>,
+#> #   family <chr>, genus <chr>, latin_name <chr>, species_code <chr>,
+#> #   life_form <chr>, equation_group <chr>, preceding_equation_id <chr>,
+#> #   `TO DELETE` <chr>, warning <chr>, input_variable <chr>,
+#> #   output_variable <chr>, id <chr>, Site <chr>, lat.y <chr>,
+#> #   long.y <chr>, UTM_Zone <chr>, UTM_X <chr>, UTM_Y <chr>,
+#> #   intertropical <chr>, size.ha <chr>, E <chr>, wsg.site.name <chr>
 ```
 
 Conservatively, all columns of `master()` are character vectors.
 
 ``` r
 all(map_lgl(master(), is.character))
+#> Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.
 #> [1] TRUE
 ```
 
-This is to preserve different representations of missing
-values.
+This is to preserve different representations of missing values.
 
 ``` r
 na_type <- glue("^{missing_values_metadata$Code}$") %>% glue_collapse("|")
@@ -85,21 +101,79 @@ na_type
 #> ^NA$|^NAC$|^NRA$|^NI$
 
 found <- map(master(), ~unique(grep(na_type, .x, value = TRUE)))
+#> Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.
 keep(found, ~length(.x) > 0)
-#> $dbh_min_cm
+#> $original_coord
 #> [1] "NI"  "NRA"
+#> 
+#> $lat.x
+#> [1] "NRA"
+#> 
+#> $long.x
+#> [1] "NRA" "NI" 
+#> 
+#> $elev_min
+#> [1] "NRA" "NI" 
+#> 
+#> $elev_max
+#> [1] "NRA" "NI" 
+#> 
+#> $mat_C
+#> [1] "NRA"
+#> 
+#> $map_mm
+#> [1] "NRA"
+#> 
+#> $frost_free_period_days
+#> [1] "NRA" "NI" 
+#> 
+#> $stand_age_range_yr
+#> [1] "NRA" "NI" 
+#> 
+#> $stand_age_history
+#> [1] "NRA" "NI" 
+#> 
+#> $stand_basal_area_m2_ha
+#> [1] "NRA" "NI" 
+#> 
+#> $stand_trees_ha
+#> [1] "NRA" "NI" 
+#> 
+#> $forest_description
+#> [1] "NRA" "NI" 
+#> 
+#> $vegetation_type
+#> [1] "NRA" "NI" 
+#> 
+#> $dbh_min_cm
+#> [1] "NRA"
 #> 
 #> $dbh_max_cm
-#> [1] "NI"  "NRA"
+#> [1] "NRA"
 #> 
 #> $sample_size
+#> [1] "NRA" "NI" 
+#> 
+#> $collection_year
 #> [1] "NRA"
 #> 
+#> $r_squared
+#> [1] "NI"
+#> 
 #> $other_equations_tested
-#> [1] "NRA"
+#> [1] "NRA" "NI" 
 #> 
 #> $bias_correction_factor
 #> [1] "NRA"
+#> 
+#> $notes_fitting_model
+#> [1] "NI"
+#> 
+#> $original_equation_id
+#> [1] "NI"
+#> 
+#> $original_data_availability
+#> [1] "NRA" "NI"
 ```
 
 For analysis, set the correct type of each column with `set_type()`.
@@ -107,6 +181,7 @@ Then not all columns will be character vectors.
 
 ``` r
 converted <- set_type(master())
+#> Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.
 all(map_lgl(converted, is.character))
 #> [1] FALSE
 ```
@@ -133,44 +208,51 @@ datasets <- function(pkg) {
 
 datasets("allodb")
 #> $equations
-#> # A tibble: 175 x 22
-#>    ref_id equation_allome~ equation_id equation_form dependent_varia~
-#>    <chr>  <chr>            <chr>       <chr>         <chr>           
-#>  1 jenki~ 10^(1.1891+1.41~ 2060ea      10^(a+b*(log~ Total abovegrou~
-#>  2 jenki~ 10^(1.2315+1.63~ a4d879      10^(a+b*(log~ Total abovegrou~
-#>  3 jenki~ exp(7.217+1.514~ c59e03      exp(a+b*ln(D~ Stem biomass (w~
-#>  4 jenki~ 10^(2.5368+1.31~ 96c0af      10^(a+b*(log~ Branches (live,~
-#>  5 jenki~ 10^(2.0865+0.94~ 529234      10^(a+b*(log~ Foliage total   
-#>  6 jenki~ exp(-2.48+2.483~ ae65ed      exp(a+b*ln(D~ Total abovegrou~
-#>  7 marti~ 10^(-1.326+2.76~ 9c4cc9      10^(a+b*(log~ Total abovegrou~
-#>  8 jenki~ 2.034*(dbh^2.63~ 7913b8      a*(DBH^b)     Stem and branch~
-#>  9 chojn~ exp(-2.5095+2.5~ 7f7777      exp(a+b*ln(D~ Total abovegrou~
-#> 10 jenki~ exp(5.67+1.97*l~ cf733d      exp(a+b*ln(D~ Total abovegrou~
-#> # ... with 165 more rows, and 17 more variables:
-#> #   independent_variable <chr>, allometry_specificity <chr>,
-#> #   geographic_area <chr>, dbh_min_cm <chr>, dbh_max_cm <chr>,
-#> #   sample_size <chr>, dbh_units_original <chr>,
-#> #   biomass_units_original <chr>, allometry_development_method <chr>,
-#> #   regression_model <chr>, other_equations_tested <chr>,
-#> #   log_biomass <chr>, bias_corrected <chr>, bias_correction_factor <chr>,
-#> #   notes_fitting_model <chr>, original_data_availability <chr>,
-#> #   warning <chr>
+#> # A tibble: 266 x 45
+#>    ref_id equation_id equation_allome~ equation_form dependent_varia~
+#>    <chr>  <chr>       <chr>            <chr>         <chr>           
+#>  1 baske~ e2c7c7      exp(0.15+2.48*l~ exp(a+b*(log~ Total abovegrou~
+#>  2 bohn_~ 307ec5      exp((1.185*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  3 bohn_~ 6a7382      exp((1.151*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  4 bohn_~ 786b7c      exp((1.266*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  5 bohn_~ 9e3b6a      exp((1.192*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  6 bohn_~ 9f138f      exp((1.202*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  7 bohn_~ e42e41      exp((1.091*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  8 bohn_~ e57b77      exp((1.029*(log~ exp((a*(dbh-~ Total abovegrou~
+#>  9 bohn_~ f96447      dbh/((1/1.879)+~ dbh((1/a)+(d~ Height          
+#> 10 bohn_~ 7a3dce      dbh/((1/1.919)+~ dbh((1/a)+(d~ Height          
+#> # ... with 256 more rows, and 40 more variables:
+#> #   independent_variable <chr>, equation_taxa <chr>,
+#> #   allometry_specificity <chr>, equation_categ <chr>,
+#> #   geographic_area <chr>, original_coord <chr>, lat <chr>, long <chr>,
+#> #   coord_precision <chr>, elev_min <chr>, elev_max <chr>, mat_C <chr>,
+#> #   map_mm <chr>, frost_free_period_days <chr>, stand_age_range_yr <chr>,
+#> #   stand_age_history <chr>, stand_basal_area_m2_ha <chr>,
+#> #   stand_trees_ha <chr>, forest_description <chr>, ecosystem_type <chr>,
+#> #   vegetation_type <chr>, dbh_min_cm <chr>, dbh_max_cm <chr>,
+#> #   sample_size <chr>, collection_year <chr>, dbh_units_original <chr>,
+#> #   dbh_unit_CF <chr>, output_units_original <chr>, output_units_CF <chr>,
+#> #   allometry_development_method <chr>, regression_model <chr>,
+#> #   r_squared <chr>, other_equations_tested <chr>, log_biomass <chr>,
+#> #   bias_corrected <chr>, bias_correction_factor <chr>,
+#> #   notes_fitting_model <chr>, original_equation_id <chr>,
+#> #   original_data_availability <chr>, notes <chr>
 #> 
 #> $equations_metadata
-#> # A tibble: 22 x 7
-#>    Column Field      Description        Column_type Field_codes Units Range
-#>    <chr>  <chr>      <chr>              <chr>       <chr>       <chr> <chr>
-#>  1 1 / A  equation_~ Unique equation i~ <NA>        <NA>        <NA>  <NA> 
-#>  2 2 / B  equation_~ Algebraic form of~ character   <NA>        <NA>  <NA> 
-#>  3 3 / C  equation_~ Equation to calcu~ character   <NA>        <NA>  <NA> 
-#>  4 4 / D  dependent~ Tree component ch~ character   <NA>        <NA>  <NA> 
-#>  5 5 / E  independe~ Parameters includ~ character   <NA>        <NA>  <NA> 
-#>  6 6 / F  allometry~ Specific taxonomi~ character   <NA>        <NA>  <NA> 
-#>  7 7 / G  geographi~ Geographic locati~ character   <NA>        <NA>  <NA> 
-#>  8 8 / H  dbh_min_cm Minimun DBH in cm~ numeric     <NA>        <NA>  <NA> 
-#>  9 9 / I  dbh_max_cm Maximun DBH in cm~ numeric     <NA>        <NA>  <NA> 
-#> 10 10 / J sample_si~ Number of trees s~ integer     <NA>        <NA>  <NA> 
-#> # ... with 12 more rows
+#> # A tibble: 45 x 8
+#>    Column Field  Description    Column_type Field_codes   Units Range X8   
+#>    <chr>  <chr>  <chr>          <chr>       <chr>         <chr> <chr> <chr>
+#>  1 1 / A  ref_id Unique refere~ character   <NA>          <NA>  <NA>  <NA> 
+#>  2 2 / B  equat~ Unique equati~ character   <NA>          <NA>  <NA>  <NA> 
+#>  3 3 / C  equat~ Equation to c~ character   <NA>          <NA>  <NA>  <NA> 
+#>  4 4 / D  equat~ Algebraic for~ character   <NA>          <NA>  <NA>  <NA> 
+#>  5 5 / E  depen~ Tree componen~ character   <NA>          <NA>  <NA>  <NA> 
+#>  6 6 / F  indep~ Parameters in~ character   <NA>          mm, ~ <NA>  <NA> 
+#>  7 7 / G  equat~ Species, genu~ character ~ <NA>          <NA>  <NA>  <NA> 
+#>  8 8 / H  allom~ Specific taxo~ character   <NA>          <NA>  <NA>  <NA> 
+#>  9 9 / I  equat~ "Allometric e~ character   fa_spec; gen~ <NA>  <NA>  <NA> 
+#> 10 10 / J geogr~ Broad geograp~ character   <NA>          <NA>  <NA>  <NA> 
+#> # ... with 35 more rows
 #> 
 #> $missing_values_metadata
 #> # A tibble: 4 x 3
@@ -194,62 +276,59 @@ datasets("allodb")
 #> 7 7 / G  References fu~ Full citation (kept for easy use)     character (s~
 #> 
 #> $sites_info
-#> # A tibble: 63 x 12
+#> # A tibble: 68 x 12
 #>    id    Site  site  lat   long  UTM_Zone UTM_X UTM_Y intertropical size.ha
 #>    <chr> <chr> <chr> <chr> <chr> <chr>    <chr> <chr> <chr>         <chr>  
 #>  1 42    Amac~ amac~ -3.81 -70.~ 19       3592~ 9578~ Tropical      25     
 #>  2 51    Bada~ bada~ 29.46 110.~ 49       4534~ 3259~ Other         25     
 #>  3 52    Baot~ baot~ 33.5  111.~ 49       5873~ 3706~ Other         25     
-#>  4 45    Barr~ barr~ 9.15  -79.~ 17       6267~ 1012~ Tropical      50     
+#>  4 45    Barr~ bci   9.15  -79.~ 17       6267~ 1012~ Tropical      50     
 #>  5 18    Buki~ buki~ 1.35  103.~ 48       3642~ 1492~ Tropical      4      
 #>  6 53    Chan~ chan~ 42.38 128.~ 52       4245~ 4692~ Other         25     
 #>  7 46    Coco~ coco~ 8.99  -79.~ 17       6520~ 9937~ Tropical      4      
 #>  8 14    Danu~ danu~ 5.1   117.~ 50       5762~ 5639~ Tropical      50     
 #>  9 7     Ding~ ding~ 23.17 112.~ 49       6546~ 2563~ Tropical      20     
 #> 10 25    Doi ~ doi ~ 18.58 98.43 47       4402~ 2054~ Tropical      15     
-#> # ... with 53 more rows, and 2 more variables: E <chr>,
+#> # ... with 58 more rows, and 2 more variables: E <chr>,
 #> #   wsg.site.name <chr>
 #> 
 #> $sitespecies
-#> # A tibble: 679 x 15
-#>    site  family species species_code life_form dependent_varia~
-#>    <chr> <chr>  <chr>   <chr>        <chr>     <chr>           
-#>  1 Lill~ Sapin~ Acer r~ 316          Tree      Total abovegrou~
-#>  2 Lill~ Sapin~ Acer s~ 318          Tree      Total abovegrou~
-#>  3 Lill~ Rosac~ Amelan~ 356          Tree      Stem biomass (w~
-#>  4 Lill~ Rosac~ Amelan~ 356          Tree      Branches (live,~
-#>  5 Lill~ Rosac~ Amelan~ 356          Tree      Foliage total   
-#>  6 Lill~ Annon~ Asimin~ 367          Tree      Total abovegrou~
-#>  7 Lill~ Betul~ Carpin~ 391          Tree      Total abovegrou~
-#>  8 Lill~ Jugla~ Carya ~ 409          Tree      Total abovegrou~
-#>  9 Lill~ Jugla~ Carya ~ 402          Tree      Total abovegrou~
-#> 10 Lill~ Jugla~ Carya ~ 403          Tree      Total abovegrou~
-#> # ... with 669 more rows, and 9 more variables: equation_group <chr>,
-#> #   equation_id <chr>, equation_taxa <chr>, allometry_specificity <chr>,
-#> #   dbh_min_cm <chr>, dbh_max_cm <chr>, notes_on_species <chr>,
-#> #   wsg_id <chr>, wsg_specificity <chr>
+#> # A tibble: 1,045 x 13
+#>    site  family genus latin_name species_code life_form equation_group
+#>    <chr> <chr>  <chr> <chr>      <chr>        <chr>     <chr>         
+#>  1 lill~ Sapin~ Acer  Acer rubr~ 316          Tree      Expert        
+#>  2 lill~ Sapin~ Acer  Acer rubr~ 316          Tree      Expert        
+#>  3 lill~ Sapin~ Acer  Acer sacc~ 318          Tree      Expert        
+#>  4 lill~ Rosac~ Amel~ Amelanchi~ 356          Tree      Expert        
+#>  5 lill~ Rosac~ Amel~ Amelanchi~ 356          Tree      Expert        
+#>  6 lill~ Rosac~ Amel~ Amelanchi~ 356          Tree      Expert        
+#>  7 lill~ Annon~ Asim~ Asimina t~ 367          Tree      Generic       
+#>  8 lill~ Betul~ Carp~ Carpinus ~ 391          Tree      Generic       
+#>  9 lill~ Jugla~ Carya Carya alba 409          Tree      Expert        
+#> 10 lill~ Jugla~ Carya Carya cor~ 402          Tree      Expert        
+#> # ... with 1,035 more rows, and 6 more variables:
+#> #   preceding_equation_id <chr>, equation_id <chr>, `TO DELETE` <chr>,
+#> #   warning <chr>, input_variable <chr>, output_variable <chr>
 #> 
 #> $sitespecies_metadata
 #> # A tibble: 15 x 8
-#>    Column Field Description Column_type Field_codes Units Range
-#>    <chr>  <chr> <chr>       <chr>       <chr>       <chr> <chr>
-#>  1 1 / A  site  ForestGEO ~ character   -           -     -    
-#>  2 2 / B  fami~ Plant fami~ character   <NA>        <NA>  <NA> 
-#>  3 3 / C  spec~ Plant scie~ character   -           -     -    
-#>  4 4 / D  spec~ Species co~ character   <NA>        <NA>  <NA> 
-#>  5 5 / E  life~ Common gro~ character   <NA>        <NA>  <NA> 
-#>  6 6 / F  depe~ Tree compo~ character   -           -     -    
-#>  7 7 / G  equa~ "Allometri~ character   G- generic~ -     -    
-#>  8 8 / H  equa~ Unique equ~ numeric     -           <NA>  <NA> 
-#>  9 9 / I  equa~ Species, g~ character ~ <NA>        <NA>  <NA> 
-#> 10 10 / J allo~ Refers to ~ character ~ -           <NA>  <NA> 
-#> 11 11 / K dbh_~ Min DBH at~ numeric     -           -     <NA> 
-#> 12 12 / L dbh_~ Max DBH at~ numeric     -           -     <NA> 
-#> 13 13 / M note~ Informativ~ character   <NA>        <NA>  <NA> 
-#> 14 14 / N wsg_~ Wood densi~ numeric     <NA>        <NA>  <NA> 
-#> 15 15 / O wsg_~ Refers to ~ character   <NA>        <NA>  <NA> 
-#> # ... with 1 more variable: `Erikas notes to delete before
-#> #   publication` <chr>
+#>    Column Field  Description    Column_type Field_codes Units Range X8     
+#>    <chr>  <chr>  <chr>          <chr>       <chr>       <chr> <chr> <chr>  
+#>  1 1 / A  site   ForestGEO sit~ character   <NA>        <NA>  <NA>  <NA>   
+#>  2 2 / B  family Plant family ~ character   <NA>        <NA>  <NA>  <NA>   
+#>  3 3 / C  genus  Genus name re~ <NA>        <NA>        <NA>  <NA>  <NA>   
+#>  4 4 / D  speci~ Plant scienti~ character   <NA>        <NA>  <NA>  <NA>   
+#>  5 5 / E  speci~ Species code ~ character   <NA>        <NA>  <NA>  <NA>   
+#>  6 6 / F  life_~ Common growth~ character   <NA>        <NA>  <NA>  <NA>   
+#>  7 7 / G  equat~ "Allometric e~ character   Generic; E~ <NA>  <NA>  <NA>   
+#>  8 9 / I  prece~ Preceding equ~ character   <NA>        <NA>  <NA>  <NA>   
+#>  9 10 / J equat~ Unique equati~ character   <NA>        <NA>  <NA>  <NA>   
+#> 10 11 / K equat~ Taxa for whic~ character   <NA>        <NA>  <NA>  Revise~
+#> 11 12 / L warni~ Informative n~ character   <NA>        <NA>  <NA>  <NA>   
+#> 12 13 / M input~ Variable and ~ character   <NA>        <NA>  <NA>  Revise~
+#> 13 14 / N outpu~ Final variabl~ character   <NA>        <NA>  <NA>  Revise~
+#> 14 15 / O min_i~ Recommended m~ numeric     <NA>        <NA>  <NA>  Revise~
+#> 15 16 / P max_i~ Recommended m~ numeric     <NA>        <NA>  <NA>  Revise~
 #> 
 #> $wsg
 #> # A tibble: 549 x 8
