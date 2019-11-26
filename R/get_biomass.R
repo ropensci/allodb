@@ -113,6 +113,6 @@ conif = FALSE
 coords = NULL
 var = "Total aboveground biomass"
 
-not_na = which(!is.na(weight))
-plot(agb_all[not_na], weight[not_na])
-text(agb_all[not_na], weight[not_na], not_na)
+not_na = which(!is.na(weight_allom))
+#plot(agb_all[not_na], weight[not_na])
+#text(agb_all[not_na], weight[not_na], not_na)
