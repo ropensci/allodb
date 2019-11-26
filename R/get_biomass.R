@@ -6,7 +6,7 @@ get_biomass = function(dbh = NULL,
                        conif = FALSE,
                        coords = NULL,
                        var = "Total aboveground biomass") {
-  if (is.null(dbh) 
+  if (is.null(dbh))
     stop("You need to provide DBH")
 
   load("data/equations.rda")
@@ -15,7 +15,7 @@ get_biomass = function(dbh = NULL,
     equations = subset(equations, !independent_variable == "DBH, H")
   if (is.null(dbh))
     equations = subset(equations, !independent_variable == "DBH")
- 
+
   # transform columns to numeric
   numeric_columns = c(
     "lat",
