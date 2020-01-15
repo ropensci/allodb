@@ -11,6 +11,7 @@
 #install.packages("adephylo")
 #install.packages("ade4")
 #install.packages("tidyverse")
+install.packages("RCurl")
 library(tidyverse)
 library(tidyselect)
 library(ape)
@@ -19,6 +20,9 @@ library(phytools)
 library(maps)
 library(adephylo)
 library(ade4)
+library(RCurl)
+library(data.table)
+
 #install.packages("V.PhyloMaker") --this didn't work
 #so install github version
 install.packages("remotes")
@@ -69,13 +73,15 @@ edgelabels(round(tree$edge.length,3),cex=0.7, bg = "yellow")
 plotTree(tree,type="fan")
 
 ###################################################
-#using scbi as example
-scbi<-read.csv ("scbi.spptable.csv", stringsAsFactors = FALSE)
+#using scbi species table as example
+scbi<- read.csv("https://raw.githubusercontent.com/SCBI-ForestGEO/SCBI-ForestGEO-Data/master/tree_main_census/data/census-csv-files/scbi.spptable.csv", stringsAsFactors = FALSE)
+
 scbtree <- phylomatic(taxa=scbi$Latin, get = 'GET')
 plot(scbtree, no.margin=TRUE)
 str(scbtree)
 scbtree$node.label
 
+#now add distances as above
 scbtree<-modified.Grafen(scbtree, power=2)
 cophenetic(scbtree)
 dist.nodes(scbtree)
@@ -85,13 +91,12 @@ plotTree(scbtree,ftype="i",fsize=0.8,lwd=1, offset=2)
 edgelabels(round(scbtree$edge.length,3),cex=0.6, bg = "yellow")
 
 
+####################################
+#Ideas discussed on Dec 5, 2019 for allodb
+###Build a tree from equation table and species table, compare trees?? Let's see
+#Since equations are built at direfenct taxa levels we need to use "allometry_specificity" to built trees based on fam, or genus, or species, I htink..
 
-###########################Ideas discussed on Dec 5 for allodb #########
-###Build a tree for equation table
-#we need to use "allometry_specificity" to built trees based on fam, or genus, or species
-
-
-equations<-read.csv ("equations.csv")
+equations<-read.csv ("https://raw.githubusercontent.com/forestgeo/allodb/master/data-raw/csv_database/equations.csv", stringsAsFactors = FALSE)
 #check unique values for allometry_specificity
 unique(equations$allometry_specificity)
 
@@ -113,23 +118,30 @@ eqfam <- c("Betulaceae","Cornaceae", "Ericaceae", "Lauraceae", "Platanaceae", "R
 
 eqfamtree <- phylomatic(taxa=eqfam, get = 'POST')
 plot(eqfamtree, no.margin=TRUE)
-#apply edge lenght labels
-edgelabels(round(eqfamtree$edge.length,3,cex=0.6))
-
 #calculate distance then plot again
 eqfamtree<-modified.Grafen(eqfamtree, power=2)
 cophenetic(eqfamtree)
-dist.nodes(eqfamtree)
+
+#apply edge lenght labels
+plotTree(eqfamtree,ftype="i",fsize=0.8,lwd=1, offset=2)
+edgelabels(round(eqfamtree$edge.length,3,cex=0.6)) #this not working ut we don't need for now I think
 
 
-
-#now get unique family names from scbi to buil a family tree 
+#now get unique family names from scbi to build a family tree 
 unique(scbi$Family)
 scbifam <-c(unique(scbi$Family)) #build a vector with scbi families
 scbifamtree <- phylomatic(taxa=scbifam, get ='POST') #for some reason thsi exclude rosaceae and ericaceae
-plot(scbifamtree)
+plot(scbifamtree) #for some reason some families disapear (ie. Rosaceae, Annonaceae)
 
 #use "cophenetic" to calculate pairwise distance 
 scbifamtree<-modified.Grafen(scbifamtree, power=2)
-cophenetic(scbifamtree)
+scbtest<-cophenetic(scbifamtree)
+
+class(scbifamtree)
+
+#now compare two trees using the fuction comparePhylo in the package ape
+comparePhylo(eqfamtree, scbifamtree, plot = TRUE)
+
+#VOILA!!!
+
        
