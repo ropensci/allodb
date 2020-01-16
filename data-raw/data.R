@@ -5,6 +5,9 @@ library(readr)
 library(purrr)
 library(fs)
 
+#remember that your working directory should be allodb, use 'here" or getwd()
+here::here()
+
 path_db <- "data-raw/csv_database"
 db_nms <- path_ext_remove(path_file(dir_ls(path_db)))
 
