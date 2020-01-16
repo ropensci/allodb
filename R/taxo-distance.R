@@ -11,7 +11,7 @@
 #install.packages("adephylo")
 #install.packages("ade4")
 #install.packages("tidyverse")
-install.packages("RCurl")
+#install.packages("RCurl")
 library(tidyverse)
 library(tidyselect)
 library(ape)
@@ -51,7 +51,7 @@ str(tree)
 #between the pairs of tips from a phylogenetic tree using its branch lengths
 #dist.nodes does the same but between all nodes, internal and terminal, of the tree
 
-cophenetic(tree)
+cophenetic(tree) #same as cophenetic.phylo(tree)
 dist.nodes(tree)
 
 #We can also calculate different set of distances using the function 'distTips' fomr the pack-adephylo
@@ -93,14 +93,15 @@ edgelabels(round(scbtree$edge.length,3),cex=0.6, bg = "yellow")
 
 ####################################
 #Ideas discussed on Dec 5, 2019 for allodb
-###Build a tree from equation table and species table, compare trees?? Let's see
-#Since equations are built at direfenct taxa levels we need to use "allometry_specificity" to built trees based on fam, or genus, or species, I htink..
+## We want to calculate pairwise distances bewten two trees (really?)
+###Build a tree from equation table and species table to compare trees.. Let's explore:
+#bur since equations are built at diferent taxa levels we need to use "allometry_specificity" to built trees based on fam, or genus, or species, I think.
 
 equations<-read.csv ("https://raw.githubusercontent.com/forestgeo/allodb/master/data-raw/csv_database/equations.csv", stringsAsFactors = FALSE)
 #check unique values for allometry_specificity
 unique(equations$allometry_specificity)
 
-#as an example, lets create a dataframe for wich allometry_specifity is family
+#as an example, let create a dataframe for wich allometry_specifity is family
 eq_fam<-filter(equations, allometry_specificity == "Family")
 #check unique family names in dataframe
 unique(eq_fam$equation_taxa)
@@ -124,7 +125,7 @@ cophenetic(eqfamtree)
 
 #apply edge lenght labels
 plotTree(eqfamtree,ftype="i",fsize=0.8,lwd=1, offset=2)
-edgelabels(round(eqfamtree$edge.length,3,cex=0.6)) #this not working ut we don't need for now I think
+edgelabels(round(eqfamtree$edge.length,3,cex=0.6)) #this not working but we don't need it
 
 
 #now get unique family names from scbi to build a family tree 
@@ -135,13 +136,44 @@ plot(scbifamtree) #for some reason some families disapear (ie. Rosaceae, Annonac
 
 #use "cophenetic" to calculate pairwise distance 
 scbifamtree<-modified.Grafen(scbifamtree, power=2)
-scbtest<-cophenetic(scbifamtree)
+cophenetic(scbifamtree)
 
 class(scbifamtree)
 
-#now compare two trees using the fuction comparePhylo in the package ape
+#now compare two trees using the function comparePhylo in the package ape
+#this will return a detail report of the comparision and a plot
 comparePhylo(eqfamtree, scbifamtree, plot = TRUE)
+#and this fuctiion makes a global comparation of two trees
+all.equal.list(eqfamtree, scbifamtree, index.return = TRUE)
 
-#VOILA!!!
+#visualize the two trees on a diferent way
+##first create "the association" matrix:
+assoc <- cbind(eqfamtree$tip.label, scbifamtree$tip.label)
+#compare trees side by side
+cophyloplot(eqfamtree, scbifamtree, length.line = 4, space = 28, gap = 3)
+
+
+#but we want the distance, numerically, of such trees
+#dist.topo (eqfamtree, scbifamtree) #this function I though could work but it doesn't because trees has diferent numbers of tips.
+#same with cor_cophenetic(eqfamtree, scbifamtree) from the pack-dendextend which calculates correlation coef. btw two trees, they recommend to use the following function, but it doesn't work either:
+intersect_trees(eqfamtree, scbifamtree)
+
+
+#maybe we can compare two matrices of differnt size?? (need work)
+matrix1<-cophenetic(eqfamtree)
+matrix2<-cophenetic(scbifamtree)
+
+
+#and maybe check this: https://cran.r-project.org/web/packages/treespace/vignettes/tipCategories.html
+#install.packages("treespace")
+#install.packages("dendextend")
+library(treespace)
+library(dendextend)
+
+
+
+
+
+#VOILA (not actually)!!!
 
        
