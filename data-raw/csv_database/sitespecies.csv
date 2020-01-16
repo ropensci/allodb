@@ -977,7 +977,7 @@ niobara,Fagaceae,Quercus,Quercus macrocarpa,QUERMA,Tree,Generic,NA,5edb7f,Fagace
 niobara,Anacardiaceae,Rhus,Rhus aromatica,RHUSAR,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
 niobara,Anacardiaceae,Rhus,Rhus glabra,RHUSGL,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
 niobara,Grossulareaceae,Ribes,Ribes americanum,RIBEAM,Shrub,Expert,NA,b95baf,Ribes,NA
-niobara,Malvaceae,Tilia,Tilia americana,TILIAM,Tree,,,,,
+niobara,Malvaceae,Tilia,Tilia americana,TILIAM,Tree,Generic,NA,c86d1d,Tilia americana,NA
 niobara,Ulmaceae,Ulmus,Ulmus americana,ULMUAM,Tree,,,,,
 indian cave,Sapindaceae,Acer,Acer negundo,ACERNE,Tree,Generic,NA,d6be5c,Sapindaceae,NA
 indian cave,Sapindaceae,Acer,Acer saccharinum,ACERSA,Tree,,,,,
@@ -1023,7 +1023,7 @@ indian cave,Salicaceae,Salix,Salix amygdaloides,SALIAM,Tree,,,,,
 indian cave,Salicaceae,Salix,Salix nigra,SALINI,Tree,,,,,
 indian cave,Adoxaceae,Sambucus,Sambucus canadensis,SAMBCA,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
 indian cave,Staphyleaceae,Staphylea,Staphylea trifolia,STAPHTR,Shrub,,,,,
-indian cave,Malvaceae,Tilia,Tilia americana,TILIAM,Tree,,,,,
+indian cave,Malvaceae,Tilia,Tilia americana,TILIAM,Tree,Generic,NA,c86d1d,Tilia americana,NA
 indian cave,Ulmaceae,Ulmus,Ulmus americana,ULMUAM,Tree,,,,,
 indian cave,Ulmaceae,Ulmus,Ulmus rubra,ULMURU,Tree,,,,,
 indian cave,Ulmaceae,Ulmus,Ulmus thomasii,ULMUTH,Tree,,,,,
