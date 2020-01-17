@@ -13,7 +13,10 @@ get_biomass = function(dbh,  ## in cm
     equations = subset(equations, !independent_variable == "DBH, H")
 
   # for now, remove problematic equation dc04c7
-  equations = subset(equations, equation_id != "dc04c7")
+  equations = subset(equations, !equation_id %in% c("dc04c7", "398df4"))
+  # remove Lutz et al 2014 's shrub equations: something is wrong, agb values are too high
+  equations = subset(equations, !equation_id %in% c("dc04c7", "398df4"))
+  equations = subset(equations, ref_id != "lutz_2014_ccaa")
 
   # transform columns to numeric
   numeric_columns = c(
@@ -36,10 +39,9 @@ get_biomass = function(dbh,  ## in cm
     orig_equation = equations$equation_allometry[i]
     new_dbh = paste0("dbh*", equations$dbh_unit_CF[i])
     new_equation = gsub("dbh|DBH", new_dbh, orig_equation)
-    agb_all[,i] = eval(parse(text = new_equation))
+    agb_all[,i] = eval(parse(text = new_equation)) * equations$output_units_CF[i]
   }
-  agb_all = agb_all * equations$output_units_CF
-  # TODO chack why there is so much variation in outputs...
+  # TODO check why there is so much variation in outputs...
 
   # taxonomic distance - for now only at the genus level
   # TODO add species (genus = node) and families
@@ -113,14 +115,17 @@ weight_allom = function(Nobs,
 
 #### test ####
 library(data.table)
-data = data.table(expand.grid(dbh=1:100, genus=c("Acer", "Prunus", "Fraxinus","Quercus")))
+data = data.table(expand.grid(dbh=1:200, genus=c("Acer", "Prunus", "Fraxinus","Quercus")))
 data[, agb := get_biomass(dbh=data$dbh, genus=data$genus)/1000]
 library(BIOMASS)
 data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
 data[, agb_chave := exp(-2.023977 - 0.89563505 * 1.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
 
+logscale = TRUE
 library(ggplot2)
-ggplot(data, aes(x=dbh, y=agb, color=genus)) +
+g = ggplot(data, aes(x=dbh, y=agb, color=genus)) +
   geom_line() +
-  geom_line(aes(y=agb_chave), lty=2) +
-  scale_x_log10() + scale_y_log10()
+  geom_line(aes(y=agb_chave), lty=2)
+if (logscale)
+  g = g + scale_x_log10() + scale_y_log10()
+g
