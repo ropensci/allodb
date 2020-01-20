@@ -37,7 +37,7 @@ get_biomass = function(dbh,  ## in cm
   # modifiy allometry to insert unit conversion
   for (i in 1:nrow(equations)) {
     orig_equation = equations$equation_allometry[i]
-    new_dbh = paste0("dbh*", equations$dbh_unit_CF[i])
+    new_dbh = paste0("(dbh*", equations$dbh_unit_CF[i],")")
     new_equation = gsub("dbh|DBH", new_dbh, orig_equation)
     agb_all[,i] = eval(parse(text = new_equation)) * equations$output_units_CF[i]
   }
@@ -121,7 +121,7 @@ library(BIOMASS)
 data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
 data[, agb_chave := exp(-2.023977 - 0.89563505 * 1.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
 
-logscale = TRUE
+logscale = FALSE
 library(ggplot2)
 g = ggplot(data, aes(x=dbh, y=agb, color=genus)) +
   geom_line() +
