@@ -80,24 +80,25 @@ weight_allom = function(Nobs,
                         taxo_dist = NULL,
                         a = 1,
                         b = 0.03,
+                        steep = 4, ## controls the steepness of the dbh range transition, should be > 1
                         lambda = 2) {
 
-   Nobs = matrix(Nobs, nrow=length(dbh), ncol=length(Nobs), byrow = TRUE)
+  Nobs = matrix(Nobs, nrow=length(dbh), ncol=length(Nobs), byrow = TRUE)
   weight_N = a * (1 - exp(-b * Nobs))
   # a : max value that weight_N can reach (here: 1)
   # b=0.03 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.03 = 100
   # implication: new observations will not increase weight_N much when Nobs > 100
 
   midD = rowMeans(dbhrange)
-  difD = apply(dbhrange, 1, diff) / 2 / (1-0.5^0.3333)^(1/15)
+  difD = apply(dbhrange, 1, diff) / 2
   ## This weight function is inspired of the tricube weight function in local regressions
-  ## it equals 1 inside the dbh range, quickly drops to 0 outside the dbh range. The parameters
-  # were chosen so that weight_D = 0.5 on the dbh range boundaries
+  ## it equals 1 inside the dbh range, quickly drops to 0 outside the dbh range.
+  # steep controls how fast the weight decreases at the edges of the dbh range.
   # See: curve((1-abs((x-midD)/difD)^15)^3, xlim=c(dbhrange))
   Mdbh = matrix(dbh, nrow=length(dbh), ncol=length(midD))
   MmidD = matrix(midD, nrow=length(dbh), ncol=length(midD), byrow=TRUE)
   MdifD = matrix(difD, nrow=length(dbh), ncol=length(midD), byrow=TRUE)
-  weight_D =  (1-abs((Mdbh-MmidD)/MdifD)^15)^3
+  weight_D =  (1-abs((Mdbh-MmidD)/MdifD)^steep)^3
   # no negative value
   weight_D[which(weight_D<0)] = 0
 
@@ -119,13 +120,16 @@ data = data.table(expand.grid(dbh=1:200, genus=c("Acer", "Prunus", "Fraxinus","Q
 data[, agb := get_biomass(dbh=data$dbh, genus=data$genus)/1000]
 library(BIOMASS)
 data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
-data[, agb_chave := exp(-2.023977 - 0.89563505 * 1.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
+data[, agb_chave := exp(-2.023977 - 0.89563505 * 0.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
 
 logscale = FALSE
 library(ggplot2)
 g = ggplot(data, aes(x=dbh, y=agb, color=genus)) +
   geom_line() +
-  geom_line(aes(y=agb_chave), lty=2)
+  geom_line(aes(y=agb_chave), lty=2) +
+  labs(y="AGB (tons)") +
+  geom_text(x=10,y=40, label="Dotted lines: Chave equation with E = 0.5")
 if (logscale)
   g = g + scale_x_log10() + scale_y_log10()
 g
+ggsave("get_biomass_plot.pdf")

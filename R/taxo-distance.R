@@ -24,9 +24,9 @@ library(RCurl)
 library(data.table)
 
 #install.packages("V.PhyloMaker") --this didn't work
-#so install github version
-install.packages("remotes")
-remotes::install_github("jinyizju/V.PhyloMaker")
+# #so install github version
+# install.packages("remotes")
+# remotes::install_github("jinyizju/V.PhyloMaker")
 #also read this: https://github.com/jinyizju/S.PhyloMaker
 #for plotting: #http://www.phytools.org/anthrotree/plot/
 
@@ -42,12 +42,12 @@ str(tree)
 #but this tree has no edge.lenght (or branch lenght) therefore we cannot calculate distance
 #edge.lenght=a numeric vector giving the lengths of the branches given by edge
 
-#so use the function "modified.Grafen(tree, power=2)" from pack-phytools to compute edge lenghts 
+#so use the function "modified.Grafen(tree, power=2)" from pack-phytools to compute edge lenghts
 tree<-modified.Grafen(tree, power=2)
 node.paths(tree, node)#this could give an error (Error in Children(x, node) : object 'node' not found) but keep going
 str(tree)
 
-#Now use the fuction "cophenetic" from the pack-ape to calculate pairwise distance 
+#Now use the fuction "cophenetic" from the pack-ape to calculate pairwise distance
 #between the pairs of tips from a phylogenetic tree using its branch lengths
 #dist.nodes does the same but between all nodes, internal and terminal, of the tree
 
@@ -93,9 +93,9 @@ edgelabels(round(scbtree$edge.length,3),cex=0.6, bg = "yellow")
 
 ####################################
 #Ideas discussed on Dec 5, 2019 for allodb
-## We want to calculate pairwise distances bewten two trees (really?)
+## We want to calculate pairwise distances bewteen two trees (really?)
 ###Build a tree from equation table and species table to compare trees.. Let's explore:
-#bur since equations are built at diferent taxa levels we need to use "allometry_specificity" to built trees based on fam, or genus, or species, I think.
+#but since equations are built at different taxa levels we need to use "allometry_specificity" to built trees based on fam, or genus, or species, I think.
 
 equations<-read.csv ("https://raw.githubusercontent.com/forestgeo/allodb/master/data-raw/csv_database/equations.csv", stringsAsFactors = FALSE)
 #check unique values for allometry_specificity
@@ -107,6 +107,7 @@ eq_fam<-filter(equations, allometry_specificity == "Family")
 unique(eq_fam$equation_taxa)
 
 #create a tree for families
+load("data/equations.rda")
 eqfam <- c("Betulaceae","Cornaceae", "Ericaceae", "Lauraceae", "Platanaceae", "Rosaceae", "Ulmaceae", "Cupressaceae",
          "Fagaceae", "Hamamelidaceae", "Hippocastanaceae", "Tiliaceae", "Magnoliaceae", "Oleaceae", "Salicaceae",
          "Sapindaceae", "Fabaceae", "Pinaceae" )
@@ -128,13 +129,13 @@ plotTree(eqfamtree,ftype="i",fsize=0.8,lwd=1, offset=2)
 edgelabels(round(eqfamtree$edge.length,3,cex=0.6)) #this not working but we don't need it
 
 
-#now get unique family names from scbi to build a family tree 
+#now get unique family names from scbi to build a family tree
 unique(scbi$Family)
 scbifam <-c(unique(scbi$Family)) #build a vector with scbi families
 scbifamtree <- phylomatic(taxa=scbifam, get ='POST') #for some reason thsi exclude rosaceae and ericaceae
 plot(scbifamtree) #for some reason some families disapear (ie. Rosaceae, Annonaceae)
 
-#use "cophenetic" to calculate pairwise distance 
+#use "cophenetic" to calculate pairwise distance
 scbifamtree<-modified.Grafen(scbifamtree, power=2)
 cophenetic(scbifamtree)
 
@@ -176,4 +177,3 @@ library(dendextend)
 
 #VOILA (not actually)!!!
 
-       
