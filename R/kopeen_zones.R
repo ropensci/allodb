@@ -15,7 +15,7 @@ allodb$long <- as.numeric(as.character(allodb$long))
 
 str(allodb)
 
-#need this part of the ocde, but not in equation table..
+#need this part of the code, but not in equation table..
 allodb <- data.frame(allodb,
                    rndCoord.lon = RoundCoordinates(allodb$long),
                    rndCoord.lat = RoundCoordinates(allodb$lat))
