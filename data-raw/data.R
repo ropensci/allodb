@@ -7,6 +7,7 @@ library(fs)
 
 #remember that your working directory should be allodb, use 'here" or getwd()
 here::here()
+getwd()
 
 path_db <- "data-raw/csv_database"
 db_nms <- path_ext_remove(path_file(dir_ls(path_db)))
@@ -29,3 +30,4 @@ use_data(
   wsg_metadata,
   overwrite = TRUE
 )
+
