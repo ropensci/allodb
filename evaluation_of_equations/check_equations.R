@@ -9,7 +9,7 @@ load("data/equations.rda")
 equations = subset(equations, independent_variable == "DBH" & dependent_variable == "Total aboveground biomass")
 
 # for now, remove problematic equation dc04c7
-equations = subset(equations, equation_id != "dc04c7")
+#equations = subset(equations, equation_id != "dc04c7")
 
 # transform columns to numeric
 numeric_columns = c(
@@ -50,7 +50,9 @@ g = ggplot(allom, aes(x=dbh, y=agb, color=equ_id))  +
                                       2.79495823 * log(x) -
                                       0.04606298 * (log(x)^2))/1000, col=1)+
   geom_line() +
-  theme(legend.position = 'none')
+  theme(legend.position = 'none') +
+  labs(x="dbh (cm)", y="agb (Mg)")
+
 
 ## zoom on small dbh values (between 0 and 35): a few equations start with agb < 0, e.g. 9f4b7d
 gzoom = g + lims(x=c(0,10), y = c(-0.1, 0.1))

@@ -12,11 +12,6 @@ get_biomass = function(dbh,  ## in cm
   if (is.null(h))
     equations = subset(equations, !independent_variable == "DBH, H")
 
-  # for now, remove problematic equation dc04c7
-  equations = subset(equations, !equation_id %in% c("dc04c7", "398df4"))
-  # remove Lutz et al 2014 's shrub equations: something is wrong, agb values are too high
-  equations = subset(equations, !equation_id %in% c("dc04c7", "398df4"))
-  equations = subset(equations, ref_id != "lutz_2014_ccaa")
 
   # transform columns to numeric
   numeric_columns = c(
