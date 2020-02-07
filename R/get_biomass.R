@@ -128,8 +128,8 @@ g = ggplot(data, aes(x=dbh, y=agb, color=genus)) +
   geom_line() +
   geom_line(aes(y=agb_chave), lty=2) +
   labs(y="AGB (tons)") +
-  geom_text(x=10,y=40, label="Dotted lines: Chave equation with E = 0.5")
+  annotate(geom = "text", x=80,y=40, label="Dotted lines: Chave equation with E = 0.5")
 if (logscale)
   g = g + scale_x_log10() + scale_y_log10()
 g
-ggsave("get_biomass_plot.pdf")
+ggsave("get_biomass_plot.pdf", height=8, width=10)
