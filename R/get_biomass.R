@@ -1,10 +1,11 @@
 get_biomass = function(dbh,  ## in cm
-                       h = NULL, # same size as dbh
+                       h = NULL,       # same size as dbh
                        genus = NULL,   # same size as dbh
                        species = NULL, # same size as dbh
-                       family = NULL,  # same size as dbh
-                       conif = FALSE,  # same size as dbh
-                       coords = NULL,  # a vector of length 2 (longitude+latitude)
+                       family = NULL,  # same size as dbh,
+                       conif = FALSE,  # same size as dbh, is the tree a conifer?
+                       coords = NULL,  # a vector of size 2 (if all trees come from the same location)
+                       # or a matrix with 2 columns giving the coordinates (latitude and longitude) of each tree
                        var = "Total aboveground biomass") {
 
   load("data/equations.rda")
@@ -54,12 +55,35 @@ get_biomass = function(dbh,  ## in cm
   })
   taxo_dist = dmatrix[genus_in_matrix,eq_in_matrix]
 
+  # koppen climate
+  # (1) get koppen climate for all locations
+  load("data/koppenRaster.rda")
+  load("data/koppenMatrix.rda")
+  # if only one location, transform coords into matrix with 2 columns
+  if (length(coords) == 2) coords = t(coords)
+  ## extract koppen climate of every location
+  climates = levels(koppenRaster)[[1]][,2]
+  koppenSites = climates[raster::extract(koppenRaster, coords)]
+  ## climate similitude matrix (rows: sites, columns: equations)
+  koppen_simil = t(sapply(koppenSites, function (z1) {
+    m = subset(koppenMatrix, zone1==z1)
+    sapply(equations$koppen, function(z2) {
+      all_z2 = unlist(strsplit(z2, "; "))
+      max(c(subset(m, zone2 %in% all_z2)$simil, 0))
+    })
+  }))
+  if (length(coords) == 2) {
+    n=length(dbh)
+    koppen_simil = matrix(rep(koppen_simil, n), nrow=n, byrow = TRUE)
+  }
+
   # weight function
   weight = weight_allom(
     Nobs = equations$sample_size,
     dbh = dbh,
     dbhrange = equations[, c("dbh_min_cm", "dbh_max_cm")],
-    taxo_dist = taxo_dist
+    taxo_dist = taxo_dist,
+    weight_E = koppen_simil
   )
   relative_weight = weight/matrix(rowSums(weight, na.rm = TRUE), nrow=length(dbh), ncol=nrow(equations))
 
@@ -71,7 +95,7 @@ get_biomass = function(dbh,  ## in cm
 weight_allom = function(Nobs,
                         dbh,
                         dbhrange,
-                        envi_dist = NULL,
+                        weight_E = 1,
                         taxo_dist = NULL,
                         a = 1,
                         b = 0.03,
@@ -97,22 +121,19 @@ weight_allom = function(Nobs,
   # no negative value
   weight_D[which(weight_D<0)] = 0
 
-  weight_E = 1  # environmental distance
-
   weight_T = exp(-lambda*taxo_dist)      # taxonomic distance
   # lambda controls how the weight decreases with taxonomic distance:
   # the higher lambda, the lower the weight of distant relatives
 
   # multiplicative weights: if one is zero, the total weight should be zero too
   return(weight_N * weight_D * weight_E * weight_T)
-
 }
 
 
 #### test ####
 library(data.table)
 data = data.table(expand.grid(dbh=1:200, genus=c("Acer", "Prunus", "Fraxinus","Quercus")))
-data[, agb := get_biomass(dbh=data$dbh, genus=data$genus)/1000]
+data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, coords = c(-78.15, 38.9))/1000]
 library(BIOMASS)
 data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
 data[, agb_chave := exp(-2.023977 - 0.89563505 * 0.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
