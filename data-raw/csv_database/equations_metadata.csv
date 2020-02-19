@@ -12,7 +12,7 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,
 11 / K,original_coord,Latitude and longitude as given in original publication,character,NA,NA,NA,
 12 / L,lat,"Latitude expressed in decimal degrees. Positive latitudes are north of the equator, negative latitudes are south of the equator. Used NOAA for conversion: https://www.ngs.noaa.gov/NCAT/",numeric,NA,NA,XX-XX,Change before publication
 13 / M,long,"Longitude expressed in decimal degrees. Positive longitudes are east of Prime Meridian, negative longitudes are west of the Prime Meridian. Used NOAA for conversion: https://www.ngs.noaa.gov/NCAT/",numeric,NA,NA,XX-XX,Change before publication
-14 / N,elev_m,"Elevation in meters above sea level. When a range is given, midpoint is reported. Data from original publication) or estimated by using an online tool to get elevation from coordinates (https://www.maps.ie/coordinates.html)",numeric,NA,meters,XX-XX,Change before publication
+14 / N,elev_range_m,"Elevation in meters above sea level. When a range is given, midpoint is reported. Data from original publication) or estimated by using an online tool to get elevation from coordinates (https://www.maps.ie/coordinates.html)",numeric,NA,meters,XX-XX,Change before publication
 15 / O,geography.notes,"Notes pertaining to lat, long, location, or topography",character,NA,NA,NA,
 16 / P,mat_C,Mean annual temperature in Celsius degrees as original publication or predicted using the latitude and longitude in the WorldClim database.,numeric,NA,celsius degrees,XX-XX,Change before publication
 17 / Q,min.temp_C,Mean temperature of the coldest month,numeric,NA,celsius degrees,XX-XX,Change before publication
