@@ -2,8 +2,6 @@ get_biomass = function(dbh,  ## in cm
                        h = NULL,       # same size as dbh
                        genus = NULL,   # same size as dbh
                        species = NULL, # same size as dbh
-                       family = NULL,  # same size as dbh,
-                       conif = FALSE,  # same size as dbh, is the tree a conifer?
                        coords = NULL,  # a vector of size 2 (if all trees come from the same location)
                        # or a matrix with 2 columns giving the coordinates (latitude and longitude) of each tree
                        var = "Total aboveground biomass") {
@@ -37,33 +35,27 @@ get_biomass = function(dbh,  ## in cm
     new_equation = gsub("dbh|DBH", new_dbh, orig_equation)
     agb_all[,i] = eval(parse(text = new_equation)) * equations$output_units_CF[i]
   }
-  # TODO check why there is so much variation in outputs...
 
   # taxonomic distance - for now only at the genus level
-  # TODO add species (genus = node) and families
-  # TODO deal with large groups such as 'mixed hardwood'... = nightmare
-  load("data/taxo_dmatrix.rda")
-
-  genus_in_matrix = sapply(tolower(genus), function(g) which(rownames(dmatrix)==g))
-
-  equations$genus = unlist(lapply(strsplit(equations$equation_taxa, " "), first))
-  equations$genus = tolower(equations$genus)
-  eq_in_matrix = sapply(equations$genus, function(g){
-    x=which(colnames(dmatrix)==g)
-    if (length(x)==0) x = NA
-    return(x)
-  })
-  taxo_dist = dmatrix[genus_in_matrix,eq_in_matrix]
+  # TODO add generic equations
+  load("data/taxo_weight.rda")
+  names = paste(genus, species)
+  names = gsub(" $", "", names) # remove space at the end of genus names
+  idx = sapply(names, function(n) which(taxo_weight$nameC==n))
+  taxo_weight = taxo_weight[idx, -1]
 
   # koppen climate
   # (1) get koppen climate for all locations
+  # koppen climate raster downloaded from http://koeppen-geiger.vu-wien.ac.at/present.htm on the 2/10/2020
   load("data/koppenRaster.rda")
   load("data/koppenMatrix.rda")
   # if only one location, transform coords into matrix with 2 columns
-  if (length(coords) == 2) coords = t(coords)
+  if (length(coords) == 2) {
+    coordsSite = t(coords)
+  } else coordsSite = unique(coords)
   ## extract koppen climate of every location
-  climates = levels(koppenRaster)[[1]][,2]
-  koppenSites = climates[raster::extract(koppenRaster, coords)]
+  climates = koppenRaster@data@attributes[[1]][,2]
+  koppenSites = climates[raster::extract(koppenRaster, coordsSite)]
   ## climate similitude matrix (rows: sites, columns: equations)
   koppen_simil = t(sapply(koppenSites, function (z1) {
     m = subset(koppenMatrix, zone1==z1)
@@ -75,6 +67,10 @@ get_biomass = function(dbh,  ## in cm
   if (length(coords) == 2) {
     n=length(dbh)
     koppen_simil = matrix(rep(koppen_simil, n), nrow=n, byrow = TRUE)
+  } else {
+    koppen_simil = t(apply(coords, 1, function(c)
+      koppen_simil[which(coordsSite[,1]==c[1] & coordsSite[,2]==c[2]),]
+    ))
   }
 
   # weight function
@@ -82,7 +78,7 @@ get_biomass = function(dbh,  ## in cm
     Nobs = equations$sample_size,
     dbh = dbh,
     dbhrange = equations[, c("dbh_min_cm", "dbh_max_cm")],
-    taxo_dist = taxo_dist,
+    weight_T = taxo_weight,
     weight_E = koppen_simil
   )
   relative_weight = weight/matrix(rowSums(weight, na.rm = TRUE), nrow=length(dbh), ncol=nrow(equations))
@@ -96,18 +92,20 @@ weight_allom = function(Nobs,
                         dbh,
                         dbhrange,
                         weight_E = 1,
-                        taxo_dist = NULL,
+                        weight_T = 1,
                         a = 1,
                         b = 0.03,
                         steep = 4, ## controls the steepness of the dbh range transition, should be > 1
                         lambda = 2) {
 
+  Nobs = as.numeric(Nobs)
   Nobs = matrix(Nobs, nrow=length(dbh), ncol=length(Nobs), byrow = TRUE)
   weight_N = a * (1 - exp(-b * Nobs))
   # a : max value that weight_N can reach (here: 1)
   # b=0.03 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.03 = 100
   # implication: new observations will not increase weight_N much when Nobs > 100
 
+  dbhrange = matrix(as.numeric(unlist(dbhrange)), ncol = 2)
   midD = rowMeans(dbhrange)
   difD = apply(dbhrange, 1, diff) / 2
   ## This weight function is inspired of the tricube weight function in local regressions
@@ -121,10 +119,6 @@ weight_allom = function(Nobs,
   # no negative value
   weight_D[which(weight_D<0)] = 0
 
-  weight_T = exp(-lambda*taxo_dist)      # taxonomic distance
-  # lambda controls how the weight decreases with taxonomic distance:
-  # the higher lambda, the lower the weight of distant relatives
-
   # multiplicative weights: if one is zero, the total weight should be zero too
   return(weight_N * weight_D * weight_E * weight_T)
 }
@@ -132,8 +126,11 @@ weight_allom = function(Nobs,
 
 #### test ####
 library(data.table)
-data = data.table(expand.grid(dbh=1:200, genus=c("Acer", "Prunus", "Fraxinus","Quercus")))
-data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, coords = c(-78.15, 38.9))/1000]
+data = data.table(expand.grid(dbh=1:150, genus=c("Acer", "Prunus", "Fraxinus", "Quercus"), location = c("scbi", "zaragoza", "nice", "sivas")))
+data = merge(data, data.frame(location = c("scbi", "zaragoza", "nice", "ivas"),
+                              long = c(-78.15, -0.883, 7.266, 37.012),
+                              lat = c(38.9, 41.65, 43.70, 39.75)))
+data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, coords = cbind(data$long, data$lat))/1000]
 library(BIOMASS)
 data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
 data[, agb_chave := exp(-2.023977 - 0.89563505 * 0.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
@@ -144,8 +141,9 @@ g = ggplot(data, aes(x=dbh, y=agb, color=genus)) +
   geom_line() +
   geom_line(aes(y=agb_chave), lty=2) +
   labs(y="AGB (tons)") +
-  annotate(geom = "text", x=80,y=40, label="Dotted lines: Chave equation with E = 0.5")
+  facet_wrap( ~ location) +
+  # annotate(geom = "text", x=80,y=40, label="Dotted lines: Chave equation with E = 0.5")
 if (logscale)
   g = g + scale_x_log10() + scale_y_log10()
 g
-ggsave("get_biomass_plot.pdf", height=8, width=10)
+# ggsave("get_biomass_plot.pdf", height=8, width=10)
