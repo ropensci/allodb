@@ -45,6 +45,10 @@ koppen = c('Af', 'Am', 'As', 'Aw',
 df = data.table(expand.grid(zone1 = koppen, zone2 = koppen, simil = 0))
 
 ## break into letters
+# zone1 refers to the site, zone2 to the equation
+# we want to characterize the pairwise similarities
+# 'group' is the first letter of the zone, 'prec' (precipitation) is the
+# 2nd letter, 'heat' is the third value
 df[, group1 := substr(zone1, 1, 1)]; df[, group2 := substr(zone2, 1, 1)]
 df[, prec1 := substr(zone1, 2, 2)]; df[, prec2 := substr(zone2, 2, 2)]
 df[, heat1 := substr(zone1, 3, 3)]; df[, heat2 := substr(zone2, 3, 3)]
@@ -68,7 +72,7 @@ df[simil > 0 & group1 %in% c("A", "C", "D") & abs(prec1-prec2)*0.1 < Wprec,
 # for groups B and E: add Wprec only if it is the same precipitation level
 df[simil > 0 & group1 %in% c("B", "E") & prec1==prec2, simil := simil + Wprec]
 
-# temperature
+# temperature - heat
 # gradient - temperate+cold: a,b,c,d
 ## for groups C and D: add Wprec if same heat,
 ## and decrease by 0.1 when getting further away on the heat gradient

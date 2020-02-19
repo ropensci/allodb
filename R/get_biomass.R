@@ -119,6 +119,8 @@ weight_allom = function(Nobs,
   # no negative value
   weight_D[which(weight_D<0)] = 0
 
+  ## TODO add geographic weight?
+
   # multiplicative weights: if one is zero, the total weight should be zero too
   return(weight_N * weight_D * weight_E * weight_T)
 }
