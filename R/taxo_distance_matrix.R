@@ -14,7 +14,7 @@ lapply(packages_needed, require, character.only = TRUE)
 
 
 ## taxa in the equations
-equations <- read.csv("https://raw.githubusercontent.com/forestgeo/allodb/master/data/equations.csv", stringsAsFactors = FALSE)
+equations <- read.csv("data-raw/csv_database/equations.csv", stringsAsFactors = FALSE)
 
 # correct species names
 equations$equation_taxa = gsub(x = equations$equation_taxa, pattern = "Virburnum", replacement = "Viburnum")
@@ -40,19 +40,27 @@ equationTaxa[, familytemp := NULL]
 colnames(equationTaxa) = c("genusE", "eqID", "nameE", "specifE", "familyE", "speciesE")
 
 ## Taxa in ForestGEO temperate sites
-load("data/listSpeciesFGEO.rda")
-censusTaxa = data.table(listSpeciesFGEO, do.call(cbind, tstrsplit(listSpeciesFGEO, " ")))
-colnames(censusTaxa) = c("name", "genus", "species")
-censusTaxa[genus%in% c("Padus", "Cerasus"), genus := "Prunus"]
+load("data/sitespecies.rda")
+censusTaxa = data.table(unique(sitespecies[, c("family", "genus", "latin_name", "life_form")]))
+censusTaxa[latin_name == "Pinus sylvatica", latin_name := "Pinus sylvestris"]
 
-## find family based on genus
-temp = tax_name(query = unique(censusTaxa$genus), get = "family", db = "both")
-taxfam = unique(temp[!is.na(temp$family), -1])
-# correct duplicates
-taxfam = taxfam[!taxfam$family %in% c("Viscaceae", "Diervillaceae"),]
-# add missing info
-taxfam$family[taxfam$query == "Pentaphylloides"] = "Rosaceae"
-censusTaxa = merge(censusTaxa, taxfam, by.x = "genus", by.y = "query", all.x = TRUE)
+## correct names
+censusTaxa[, species := tstrsplit(latin_name, " ")[[2]]]
+censusTaxa[species %in% c("sp.", "spp.", "x", "unknown", "species"), species := NA]
+temp = BIOMASS::correctTaxo(genus=censusTaxa$genus, species = censusTaxa$species)
+censusTaxa[, c("genus", "species")] = temp[, c("genusCorrected", "speciesCorrected")]
+censusTaxa$latin_name = NULL
+censusTaxa[, name := genus]
+censusTaxa[!is.na(species), name := paste(genus, species)]
+# get updated family names from genus
+temp2 = tax_name(query = unique(censusTaxa$genus), get = "family", db = "ncbi")
+censusTaxa = merge(censusTaxa[, -"family"], temp2[, -1], by.x = "genus", by.y = "query")
+censusTaxa[, life_form := tolower(life_form)]
+censusTaxa[, life_form := gsub("treelet|small tree", "tree", life_form)]
+censusTaxa = unique(censusTaxa)
+dupnames = censusTaxa[duplicated(name)]$name
+censusTaxa[name %in% dupnames, life_form := "tree, shrub"]
+censusTaxa = unique(censusTaxa)
 # save(censusTaxa, file = "data/temp_censusTaxa.rda")
 colnames(censusTaxa) = paste0(colnames(censusTaxa), "C")
 
@@ -62,7 +70,7 @@ Wtaxo = merge(Wtaxo, censusTaxa, by = "nameC")
 Wtaxo = merge(Wtaxo, equationTaxa, by = "eqID")
 
 # define weights
-Wtaxo$weight = 0
+Wtaxo$weight = 1e-6
 ## when species has been indentified in census
 ## same species: weight = 1
 Wtaxo[!is.na(speciesC) & !is.na(speciesE) & genusE==genusC & speciesE==speciesC,
@@ -102,10 +110,22 @@ Wtaxo[nameE %in% c("Woody species"), weight := 0.1]
 ## conifer families
 conifers = c("Pinaceae", "Podocarpaceae", "Cupressaceae", "Araucariaceae", "Cephalotaxaceae",
              "Phyllocladaceae", "Sciadopityaceae", "Taxaceae")
-Wtaxo[familyC %in% conifers & nameE=="Conifers", weight := 0.2]
+Wtaxo[(familyC %in% conifers | grepl("onifer", nameC)) & nameE=="Conifers", weight := 0.2]
 
 # Shrubs
-# angiosperms
+Wtaxo[grepl("hrub", life_formC) & nameE == "Shrubs", weight := 0.2]
+## Shrubs (angiosperms)
+Wtaxo[grepl("hrub", life_formC) & nameE == "Shrubs (Angiosperms)" &
+        !(familyC %in% conifers | grepl("onifer", nameC)),
+      weight := 0.2]
+## Angiosperms
+Wtaxo[!(familyC %in% conifers | grepl("onifer", nameC)) & nameE %in% c("Broad-leaved species", "Trees and shrubs (Angiosperms)"),
+      weight := 0.2]
+## Trees
+Wtaxo[life_formC == "tree" & nameE == "Trees (Angio and Gymnosperms)", weight := 0.2]
+## Angiosperm trees
+Wtaxo[life_formC == "tree" & !(familyC %in% conifers | grepl("onifer", nameC)) & nameE == "Mixed hardwood", weight := 0.2]
+
 
 taxo_weight = dcast(Wtaxo, nameC ~ eqID, value.var = "weight")
 save(taxo_weight, file = "data/taxo_weight.rda")
