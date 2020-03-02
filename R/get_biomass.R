@@ -16,13 +16,13 @@ get_biomass = function(dbh,  ## in cm
   numeric_columns = c(
     "lat",
     "long",
-    "elev_m",
+    # "elev_m",
     "dbh_min_cm",
     "dbh_max_cm",
     "sample_size",
     "dbh_unit_CF",
-    "output_units_CF",
-    "r_squared"
+    "output_units_CF"#,
+    # "r_squared"
   )
   suppressWarnings(equations[, numeric_columns] <-
                      apply(equations[, numeric_columns], 2, as.numeric))
