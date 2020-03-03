@@ -96,7 +96,7 @@ Wtaxo[is.na(speciesC) & !is.na(genusE) & familyE==familyC & genusE!=genusC,
       weight := 0.2]
 
 ## when there are no equations corresponding to a particular taxon: use generic equations
-subset(equationTaxa, !specifE%in% c("Family", "Genus", "Species"))
+subset(equationTaxa, !specifE %in% c("Family", "Genus", "Species"))
 Wtaxo[nameE %in% c("Woody species"), weight := 0.1]
 
 ## conifer families
