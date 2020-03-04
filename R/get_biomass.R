@@ -39,8 +39,10 @@ get_biomass = function(dbh,  ## in cm
   # TODO check that all species have an associated equation
   load("data/taxo_weight.rda")
   names = paste(genus, species)
-  names = gsub(" $", "", names) # remove space at the end of genus names
-  idx = unlist(sapply(names, function(n) which(taxo_weight$nameC==n)))
+  names = gsub(" $| NA$", "", names) # remove space and NAs at the end of genus names
+  idx = sapply(names, function(n) which(taxo_weight$nameC==n))
+  unique(names(which(sapply(idx, length)==0)))
+  idx = unlist(idx)
   taxo_weight = taxo_weight[idx, -1]
 
   # koppen climate
@@ -73,7 +75,7 @@ get_biomass = function(dbh,  ## in cm
   }
 
   # weight function
-    ## TODO solve NA sample size and dbh range problem
+  ## TODO solve NA sample size and dbh range problem
   weight = weight_allom(
     Nobs = equations$sample_size,
     dbh = dbh,
@@ -119,72 +121,7 @@ weight_allom = function(Nobs,
   # no negative value
   weight_D[which(weight_D<0)] = 0
 
-  ## TODO add geographic weight?
-
   # multiplicative weights: if one is zero, the total weight should be zero too
   return(weight_N * weight_D * weight_E * weight_T)
 }
 
-
-#### test 1 ####
-library(data.table)
-data = data.table(expand.grid(dbh=1:150, genus=c("Acer", "Prunus", "Fraxinus", "Quercus"), location = c("scbi", "zaragoza", "nice", "sivas")))
-data = merge(data, data.frame(location = c("scbi", "zaragoza", "nice", "ivas"),
-                              long = c(-78.15, -0.883, 7.266, 37.012),
-                              lat = c(38.9, 41.65, 43.70, 39.75)))
-data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, coords = cbind(data$long, data$lat))/1000]
-library(BIOMASS)
-data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
-data[, agb_chave := exp(-2.023977 - 0.89563505 * 0.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
-
-logscale = FALSE
-library(ggplot2)
-g = ggplot(data, aes(x=dbh, y=agb, color=genus)) +
-  geom_line() +
-  geom_line(aes(y=agb_chave), lty=2) +
-  labs(y="AGB (tons)") +
-  facet_wrap( ~ location) +
-  # annotate(geom = "text", x=80, y=40, label="Dotted lines: Chave equation with E = 0.5")
-if (logscale)
-  g = g + scale_x_log10() + scale_y_log10()
-g
-# ggsave("get_biomass_plot.pdf", height=8, width=10)
-
-
-#### test 2 ####
-
-# species list per site ##
-load("data/sitespecies.rda")
-sitespecies = data.table(sitespecies)
-sitespecies$species = tstrsplit(sitespecies$latin_name, " ")[[2]]
-sitespecies[species %in% c("sp.", "spp.", "x", "", "species", "unknown"), species := NA]
-
-site_species = unique(sitespecies[-grep("any-", site), c("genus", "species", "site")])
-## merge with site coordinates
-load("data/sites_info.rda")
-site_species = merge(site_species, sites_info[, c("site", "lat", "long")], by = "site")
-site_species$nb = 1:nrow(site_species)
-## TODO add Asia sites?
-
-data = data.table(expand.grid(dbh=1:150, nb = 1:nrow(site_species)))
-data = merge(data, site_species, by = "nb")
-data$nb = NULL
-
-data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, species = data$species,
-                          coords = cbind(data$long, data$lat))/1000]
-
-# library(BIOMASS)
-# data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
-# data[, agb_chave := exp(-2.023977 - 0.89563505 * 0.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
-
-logscale = FALSE
-library(ggplot2)
-g = ggplot(data, aes(x=dbh, y=agb, color=genus)) +
-  geom_line() +
-  geom_line(aes(y=agb_chave), lty=2) +
-  labs(y="AGB (tons)") +
-  facet_wrap( ~ location) +
-  # annotate(geom = "text", x=80, y=40, label="Dotted lines: Chave equation with E = 0.5")
-  if (logscale)
-    g = g + scale_x_log10() + scale_y_log10()
-g

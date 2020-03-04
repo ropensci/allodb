@@ -1,39 +1,36 @@
 library(data.table)
 
-koppen = c('Af', 'Am', 'As', 'Aw', 'BSh', 'BSk', 'BWh', 'BWk', 'Cfa', 'Cfb','Cfc', 'Csa', 'Csb', 'Csc', 'Cwa','Cwb', 'Cwc', 'Dfa', 'Dfb', 'Dfc','Dfd', 'Dsa', 'Dsb', 'Dsc', 'Dsd','Dwa', 'Dwb', 'Dwc', 'Dwd')
-
-koppen_dist_0 = read.csv("data/koppen_krista.csv")
-
-## transform distance matrix into data.table
-koppen_dist = melt(data.table(koppen_dist_0))
-colnames(koppen_dist) = c("zone1T", "zone2T", "simil")
-koppen_dist[is.na(simil), simil := simil[zone1T]]
-
-## add moisture letter
-koppen_dist2 = expand.grid(zone1 = koppen, zone2 = koppen)
-moisture_letters = paste(unique(substr(koppen, 2,2)), collapse = "|")
-# temperature (1st and 3rd letter)
-koppen_dist2$zone1T = gsub(moisture_letters, "_", koppen_dist2$zone1)
-koppen_dist2$zone2T = gsub(moisture_letters, "_", koppen_dist2$zone2)
-# moisture (2nd letter)
-koppen_dist2$zone1M = substr(koppen_dist2$zone1, 2, 2)
-koppen_dist2$zone2M = substr(koppen_dist2$zone2, 2, 2)
-
-koppenMatrix = merge(koppen_dist, koppen_dist2, by = c("zone1T", "zone2T"))
-## add 1/3 to similarity when same zone
-koppenMatrix[zone1M==zone2M, simil := simil + 1/3]
-koppenMatrix = koppenMatrix[, c("zone1", "zone2", "simil")]
-
-## TODO add B__ climate zones
-missing = koppen[!koppen %in% unique(koppenMatrix$zone1)]
-koppenMatrix = rbind(koppenMatrix, data.table(zone1 = missing, zone2=missing, simil=1))
-
-# koppen = dcast(koppen_dist, zone1 ~ zone2)
-# write.csv(koppen, file = "data/koppen_dist.csv")
-
-save(koppenMatrix, file = "data/koppenMatrix.rda")
-
-
+# koppen = c('Af', 'Am', 'As', 'Aw', 'BSh', 'BSk', 'BWh', 'BWk', 'Cfa', 'Cfb','Cfc', 'Csa', 'Csb', 'Csc', 'Cwa','Cwb', 'Cwc', 'Dfa', 'Dfb', 'Dfc','Dfd', 'Dsa', 'Dsb', 'Dsc', 'Dsd','Dwa', 'Dwb', 'Dwc', 'Dwd')
+# koppen_dist_0 = read.csv("data/koppen_krista.csv")
+#
+# ## transform distance matrix into data.table
+# koppen_dist = melt(data.table(koppen_dist_0))
+# colnames(koppen_dist) = c("zone1T", "zone2T", "simil")
+# koppen_dist[is.na(simil), simil := simil[zone1T]]
+#
+# ## add moisture letter
+# koppen_dist2 = expand.grid(zone1 = koppen, zone2 = koppen)
+# moisture_letters = paste(unique(substr(koppen, 2,2)), collapse = "|")
+# # temperature (1st and 3rd letter)
+# koppen_dist2$zone1T = gsub(moisture_letters, "_", koppen_dist2$zone1)
+# koppen_dist2$zone2T = gsub(moisture_letters, "_", koppen_dist2$zone2)
+# # moisture (2nd letter)
+# koppen_dist2$zone1M = substr(koppen_dist2$zone1, 2, 2)
+# koppen_dist2$zone2M = substr(koppen_dist2$zone2, 2, 2)
+#
+# koppenMatrix = merge(koppen_dist, koppen_dist2, by = c("zone1T", "zone2T"))
+# ## add 1/3 to similarity when same zone
+# koppenMatrix[zone1M==zone2M, simil := simil + 1/3]
+# koppenMatrix = koppenMatrix[, c("zone1", "zone2", "simil")]
+#
+# ## TODO add B__ climate zones
+# missing = koppen[!koppen %in% unique(koppenMatrix$zone1)]
+# koppenMatrix = rbind(koppenMatrix, data.table(zone1 = missing, zone2=missing, simil=1))
+#
+# # koppen = dcast(koppen_dist, zone1 ~ zone2)
+# # write.csv(koppen, file = "data/koppen_dist.csv")
+#
+# save(koppenMatrix, file = "data/koppenMatrix.rda")
 
 ### new method
 
