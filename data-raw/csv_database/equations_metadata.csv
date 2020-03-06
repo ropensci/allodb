@@ -26,24 +26,23 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,
 25 / Y,stand_trees_ha,Number of trees per hectare (average or absolute) as reported in original publication,,NA,NA,NA,tentative field
 26 / Z,forest_description,"Brief drescription of stand, summarized from original publication, including species composition",character,NA,NA,NA,
 27 / AA,ecosystem_type,"General clasification on terrestrial ecosystem (tropical forest, temeparate forest, boreal forest, mountain forest, desert, grassland)",character,NA,NA,NA,
-28 / AB,vegetation_type,"Dominant vegetation type on sampling site, interpreted from original publication",character,"BE=broadleaf evergreen, BdC=broadleaf drought deciduous, BcD= broadleaf cold deciduous, NE=needleaf evergreen",,,
-29 / AC,koppen,"Koppen climate classification, estimated using the package 'kgc"" (based on lat/long) or by visual estimates from a Koppen zones map, specially for generic equations.",character,CFA= etc,NA,NA,COMPLETE CODES BEFORE PUBLICATION
-30 / AD,dbh_min_cm,Minimun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-31,Change before publication
-31 / AE,dbh_max_cm,Maximun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-614,Change before publication
-32 / AF,sample_size,Number of trees sampled to develop the equation,integer,NA,NA,4 to 2635,Change before publication
-33 / AG,collection_year,Year(s) of measurement if  in publication,integer,NA,NA,NA,
-34 / AH,dbh_units_original,DBH unit used in original publication,character,cm: centimeters; inch: inches; mm: milimeters,"cm, inch, mm",NA,
-35 / AI,dbh_unit_cf,Conversion factor applied to convert DBH unit used in original publication into an equivalent expressed in cm. Multiply by number given in table.,numeric,NA,NA,NA,
-36 /AJ,output_units_original,Mass or length unit used in original publication,character,g= grams; kg= kilograms; lbs= pounds; metric_ton= metric ton; Mg= megagrams; m= meters,"g, kg, Mg, m",NA,
-37 / AK,output_units_cf,Conversion factor applied to convert unit used in original publication (mass or length) into an equivalent expressed in kg or m. Multiply by number given in table.,numeric,NA,NA,NA,
-38 / AL,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character,harvest; lidar,NA,NA,
-39 / AM,regression_model,Regression model used in original publication,character,NA,NA,NA,
-40 / AN,r_squared,Original R-squared value given in publication for fitted regression,numeric,NA,NA,NA,
-41 / AO,other_equations_tested,Comparable models if reported in publication (given equation form),character,NRA - Not Readily Available,NA,NA,
-42 / AP,log_biomass,Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10),numeric,0 - false; 1 - true,NA,NA,
-43 / AQ,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 - false; 1 - true,NA,NA,
-44 / AR,bias_correction_factor,"Correction factor for a bias introduced by logarithmic transformation of the data; pulled from original publication, if reported",numeric,NA,NA,NA,
-45 / AS,notes_fitting_model,Other details on statistical methods,character,NA,NA,NA,
-46 / AT,original_equation_id,Unique identification  or clues given in original publications,character,NA,NA,NA,
-47 / AU,original_data_availability,Indicates whether or not the original source data is available,character,"NRA - Not Readily Available, Yes=data accesible",NA,NA,
-48 / AW,equation.notes,Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation,character,NA,NA,NA,
+28 / AB,koppen,"Koppen climate classification, estimated using the package 'kgc"" (based on lat/long) or by visual estimates from a Koppen zones map, specially for generic equations.",character,CFA= etc,NA,NA,COMPLETE CODES BEFORE PUBLICATION
+29 / AC,dbh_min_cm,Minimun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-31,Change before publication
+30 / AD,dbh_max_cm,Maximun DBH (cm) sampled to develop the equation,numeric,NA,cm,0-614,Change before publication
+31 / AE,sample_size,Number of trees sampled to develop the equation,integer,NA,NA,4 to 2635,Change before publication
+32 / AF,collection_year,Year(s) of measurement if  in publication,integer,NA,NA,NA,
+33 / AG,dbh_units_original,DBH unit used in original publication,character,cm: centimeters; inch: inches; mm: milimeters,"cm, inch, mm",NA,
+34 / AH,dbh_unit_cf,Conversion factor applied to convert DBH unit used in original publication into an equivalent expressed in cm. Multiply by number given in table.,numeric,NA,NA,NA,
+35 / AI,output_units_original,Mass or length unit used in original publication,character,g= grams; kg= kilograms; lbs= pounds; metric_ton= metric ton; Mg= megagrams; m= meters,"g, kg, Mg, m",NA,
+36 /AJ,output_units_cf,Conversion factor applied to convert unit used in original publication (mass or length) into an equivalent expressed in kg or m. Multiply by number given in table.,numeric,NA,NA,NA,
+37 / AK,allometry_development_method,"Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing (""harvest"").  However, we anticipate that many future allometries will be developed using ground-based LiDAR (""lidar"").",character,harvest; lidar,NA,NA,
+38 / AL,regression_model,Regression model used in original publication,character,NA,NA,NA,
+39 / AM,r_squared,Original R-squared value given in publication for fitted regression,numeric,NA,NA,NA,
+40 / AN,other_equations_tested,Comparable models if reported in publication (given equation form),character,NRA - Not Readily Available,NA,NA,
+41 / AO,log_biomass,Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10),numeric,0 - false; 1 - true,NA,NA,
+42 / AP,bias_corrected,Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model,numeric,0 - false; 1 - true,NA,NA,
+43 / AQ,bias_correction_factor,"Correction factor for a bias introduced by logarithmic transformation of the data; pulled from original publication, if reported",numeric,NA,NA,NA,
+44 / AR,notes_fitting_model,Other details on statistical methods,character,NA,NA,NA,
+45 / AS,original_equation_id,Unique identification  or clues given in original publications,character,NA,NA,NA,
+46 / AT,original_data_availability,Indicates whether or not the original source data is available,character,"NRA - Not Readily Available, Yes=data accesible",NA,NA,
+47 / AU,equation.notes,Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation,character,NA,NA,NA,
