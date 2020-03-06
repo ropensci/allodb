@@ -911,13 +911,13 @@ any-temperate-North America,Salicaceae,Salix,Salix spp.,NA,Tree,Generic,NA,829ba
 any-temperate-North America,Cupressaceae,Cupressus,Cupressus spp.,NA,Tree,Generic,NA,56aacf,Cupressus spp.,NA
 any-temperate-North America,Cupressaceae,Juniperus,Juniperus monosperma,NA,Tree,Generic,NA,56aacf,Juniperus monosperma,NA
 any-temperate-North America,Cupressaceae,Juniperus,Juniperus occidentalis,NA,Tree,Generic,NA,56aacf,Juniperus occidentalis,NA
-any-temperate-North America,Cupressaceae,Juniperus,Juniperus osteoperma,NA,Tree,Generic,NA,56aacf,Juniperus osteoperma,NA
+any-temperate-North America,Cupressaceae,Juniperus,Juniperus osteosperma,NA,Tree,Generic,NA,56aacf,Juniperus osteoperma,NA
 any-temperate-North America,Fabaceae,Cercidium,Cercidium microphyllum,NA,Tree,Generic,NA,14a1a7,Cercidium microphyllum,NA
 any-temperate-North America,Fabaceae,Prosopis,Prosopis spp.,NA,Tree,Generic,NA,14a1a7,Prosopis spp.,NA
 any-temperate-North America,Rosaceae,Cercocarpus,Cercocarpus ledifolius,NA,Tree,Generic,NA,14a1a7,Cercocarpus ledifolius,NA
 any-temperate-North America,Rosaceae,Cercocarpus,Cercocarpus montanus,NA,Tree,Generic,NA,14a1a7,Cercocarpus montanus,NA
 any-temperate-North America,Fagaceae,Quercus,Quercus douglasii,NA,Tree,Generic,NA,17a2c9,Quercus douglasii,NA
-any-temperate-North America,Fagaceae,Quercus,Quercus gambeli,NA,Tree,Generic,NA,17a2c9,Quercus gambeli,NA
+any-temperate-North America,Fagaceae,Quercus,Quercus gambelli,NA,Tree,Generic,NA,17a2c9,Quercus gambeli,NA
 any-temperate-North America,Fagaceae,Quercus,Quercus hypoleucoides,NA,Tree,Generic,NA,17a2c9,Quercus hypoleucoides,NA
 any-temperate-North America,Fagaceae,Quercus,Quercus spp.,NA,Tree,Generic,NA,17a2c9,Quercus spp.,NA
 any-temperate-North America,Pinaceae,Pinus,Pinus cembroides,NA,Tree,Generic,NA,babd81,Pinus cembroides,NA
@@ -1029,7 +1029,7 @@ indian cave,Ulmaceae,Ulmus,Ulmus rubra,ULMURU,Tree,,,,,
 indian cave,Ulmaceae,Ulmus,Ulmus thomasii,ULMUTH,Tree,,,,,
 indian cave,Adoxaceae,Viburnum,Viburnum lentago,VIBULE,Shrub,Expert,NA,5e2dea,Virburnum lantanoides,NA
 indian cave,Adoxaceae,Viburnum,Viburnum opulus,VIBUOP,Shrub,Expert,NA,5e2dea,Virburnum lantanoides,NA
-ordway-swisher,Fabaceae,Amporpha,Amporpha fruticosa,AMFR,Shrub,,,,,
+ordway-swisher,Fabaceae,Amorpha,Amorpha fruticosa,AMFR,Shrub,,,,,
 ordway-swisher,Ebenaceae,Diospyros,Diospyros virginiana,DIVI,Tree,Generic,NA,ae65ed,Mixed hardwood,NA
 ordway-swisher,Pinaceae,Pinus,Pinus palustris,PIPA,Tree,Generic,NA,90c207,Pinus >=0.45 spg,NA
 ordway-swisher,Pinaceae,Pinus,Pinus palustris,PIPA,Tree,Expert,NA,418f13,,NA
@@ -1039,7 +1039,7 @@ ordway-swisher,Fagaceae,Quercus,Quercus laevis,QULA,Tree,,,,,
 ordway-swisher,Fagaceae,Quercus,Quercus margarettae,QUMA,Tree,,,,,
 ordway-swisher,Ericaceae,Vaccinium,Vaccinium arboreum,VAAR,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 ordway-swisher,Ericaceae,Vaccinium,Vaccinium stamineum,VAST,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
-Florida,Fabaceae,Amporpha,Amporpha fruticosa,AMFR,Shrub,,,,,
+Florida,Fabaceae,Amorpha,Amorpha fruticosa,AMFR,Shrub,,,,,
 Florida,Ebenaceae,Diospyros,Diospyros virginiana,DIVI,Tree,Generic,NA,ae65ed,Mixed hardwood,NA
 Florida,Pinaceae,Pinus,Pinus palustris,PIPA,Tree,,,,,
 Florida,Fagaceae,Quercus,Quercus geminata,QUGE,Tree,,,,,
