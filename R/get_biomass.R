@@ -4,7 +4,8 @@ get_biomass = function(dbh,  ## in cm
                        species = NULL, # same size as dbh
                        coords = NULL,  # a vector of size 2 (if all trees come from the same location)
                        # or a matrix with 2 columns giving the coordinates (latitude and longitude) of each tree
-                       var = "Total aboveground biomass") {
+                       var = "Total aboveground biomass",
+                       add_weight = FALSE) {
 
   load("data/equations.rda")
   equations = subset(equations, dependent_variable == var)
@@ -87,7 +88,10 @@ get_biomass = function(dbh,  ## in cm
 
   agb = rowSums(agb_all * relative_weight, na.rm = TRUE)
 
-  return(agb)
+  if (!add_weight){
+    return(agb)
+  } else
+    return(cbind(agb, relative_weight))
 }
 
 weight_allom = function(Nobs,

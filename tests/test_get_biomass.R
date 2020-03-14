@@ -55,6 +55,7 @@ data$nb = NULL
 data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, species = data$species,
                           coords = cbind(data$long, data$lat))/1000]
 data[, name := paste(genus, species)]
+data[, name := gsub(" NA", "", name)]
 
 ## number of species/site pair of plots (natural + log scale) per page
 n_pplots = 3
@@ -66,23 +67,38 @@ if (!file.exists("tests/graphs"))
 ls_site_species = split(data, by = "site")
 
 # save graphs in this new directory
-# for (i in 1:ceiling(length(ls_site_species)/n_pplots)) {
 for (i in 1:length(ls_site_species)) {
-  # list_indices = (3*i-2):(3*i)
-  df = ls_site_species[[i]]
-  n_species = length(unique(df$name))
-  df = rbindlist(ls_site_species[list_indices])
-  g = ggplot(df, aes(x=dbh, y=agb)) +
-    geom_line() +
-    facet_wrap(~ name, ncol=3) +
-    theme_bw() +
-    theme(legend.position = "none") +
-    labs(y="AGB (tons)", x = "DBH (cm)")
-  # ggarrange(g, g + scale_x_log10() + scale_y_log10() + labs(y=""))
-  name_file = paste0("tests/graphs/test_get_biomass_", gsub(" ", "", names(ls_site_species)[i]))
-  g
-  ggsave(paste0(name_file, ".pdf"), height = n_species, width = 10)
-  g + scale_x_log10() + scale_y_log10()
-  ggsavepaste0(name_file, "_log.pdf"), height = n_species, width = 10)
-}
+  ## create folder for the site's graphs
+  dir_site = paste0("tests/graphs/",names(ls_site_species)[i])
+  if (!file.exists(dir_site))
+    dir.create(dir_site)
 
+  df_site = ls_site_species[[i]]
+
+  ## make plots by species
+  species_site = unique(paste(df_site$name))
+
+  for (sp in species_site) {
+    df = subset(df_site, name == sp)
+    g = ggplot(df, aes(x=dbh, y=agb)) +
+      geom_line() +
+      facet_wrap(~ name, ncol=3) +
+      theme_bw() +
+      theme(legend.position = "none") +
+      labs(y="AGB (tons)", x = "DBH (cm)")
+
+    # # equation weight
+    weight = get_biomass(dbh = df$dbh, genus =  df$genus, species = df$species,
+                         coords = df[1, c("long", "lat")], add_weight = TRUE)[, -1]
+    totalW = colSums(weight, na.rm=TRUE)
+    # ## first 20 equations
+    weightMax = weight[,order(totalW, decreasing = T)[1:20], with=FALSE]
+    dt = melt(cbind(dbh, weightMax), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
+    w = ggplot(dt, aes(x=dbh, y = equationID, fill=weight)) + geom_raster() +
+      scale_fill_gradientn(colours = rev(terrain.colors(10)))
+
+    ggarrange(g, g + scale_x_log10() + scale_y_log10() + labs(y=""), w, ncol = 3)
+    name_file = paste0(dir_site, "/", gsub(" ", "_", sp), ".pdf")
+    ggsave(name_file, height = 3, width = 10)
+  }
+}
