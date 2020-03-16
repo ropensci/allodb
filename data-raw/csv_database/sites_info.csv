@@ -18,11 +18,7 @@ id,Site,site,lat,long,UTM_Zone,UTM_X,UTM_Y,climate zone,size.ha,E,wsg.site.name
 9,Hong Kong,hong kong,22.43,114.18,50,209917.6,2482736.6,tropical,21,0.490748617,NA
 26,Huai Kha Khaeng,huai kha khaeng,15.63,99.22,47,523259.1915,1728286.072,tropical,50,0.31946635,hkk
 40,Ilha do Cardoso,ilha do cardoso,-25.1,-47.96,23,201725.4144,7221210.87,subtropical,10.2,0.210911743,NA
-2,Ituri,ituri average (edoro & lenda),1.44,28.58,35,675781.69,159224.52,tropical,40,0.003627707,ituri
-2.1,Ituri-Edoro1,ituri-edoro1,1.56,28.52,35,668563,172648,tropical,10,0.002745626,NA
-2.2,Ituri-Edoro2,ituri-edoro2,1.56,28.52,35,669557.0001,172645,tropical,10,0.002745626,NA
-2.3,Ituri-Lenda1,ituri-lenda1,1.32,28.65,35,683078.0004,145589,tropical,10,-0.001571496,NA
-2.4,Ituri-Lenda2,ituri-lenda2,1.31,28.65,35,683069.0005,144621,tropical,10,-0.001315683,NA
+2,Ituri,ituri (edoro & lenda),1.44,28.58,35,675781.69,159224.52,tropical,40,0.003627707,ituri
 10,Jianfengling,jianfengling,18.73,108.91,49,279109.9787,2072338.72,tropical,60,0.28396406,NA
 21,Kenting,kenting,21.98,120.8,51,272526.2425,2432250.629,tropical,10,0.097674343,kenting
 27,Khao Chong,khao chong,7.54,99.8,47,588036.7725,833908.7871,tropical,24,0.047869472,khaochong
@@ -30,7 +26,7 @@ id,Site,site,lat,long,UTM_Zone,UTM_X,UTM_Y,climate zone,size.ha,E,wsg.site.name
 6,Kuala Belalong,kuala belalong,4.54,115.15,50,295190.97,501901.22,tropical,25,-0.047395853,NA
 43,La Planada,la planada,1.16,-77.99,18,166813.2014,127926.4909,tropical,25,-0.146312127,laplanada
 15,Lambir,lambir,4.19,114.02,50,168797.5144,463372.1445,tropical,52,-0.105606113,lambir
-49,Laupahoehoe,laupahoehoe,19.93,-155.29,5,260613.292,2205375.382,tropical,4,NA,NA
+49,Laupahoehoe,laupahoehoe,19.93,-155.29,5,260613.292,2205375.382,tropical,4,,
 22,Lienhuachih,lienhuachih,23.91,120.88,51,284093.6913,2646281.327,subtropical,25,0.223115583,lienhuachih
 32,Lilly Dickey Woods,lilly dickey,39.24,-86.22,16,567481.1184,4343246.441,temperate,25,1.686475838,lillydickey
 48,Luquillo,luquillo,18.33,-65.82,20,202346.9856,2028576.873,tropical,16,0.096506178,luquillo
@@ -41,7 +37,7 @@ id,Site,site,lat,long,UTM_Zone,UTM_X,UTM_Y,climate zone,size.ha,E,wsg.site.name
 13,Mudumalai,mudumalai,11.6,76.53,43,667229.3428,1282651.532,tropical,50,0.20541107,mudumalai
 23,Nanjenshan,nanjenshan,22.06,120.85,51,278542.3832,2440915.528,tropical,6,0.013545828,nanjenshan
 11,Nonggang,nonggang,22.43,106.95,48,700691.1024,2482092.06,tropical,15,0.572216054,NA
-50,Palamanui,palamanui,19.74,-155.99,5,186188.785,2185414.698,tropical,4,NA,NA
+50,Palamanui,palamanui,19.74,-155.99,5,186188.785,2185414.698,tropical,4,,
 17,Palanan,palanan,17.04,122.39,51,434869.6106,1884104.104,tropical,16,-0.019430539,palanan
 16,Pasoh,pasoh,2.98,102.31,48,201296.6791,329968.1588,tropical,50,-0.094024937,pasoh
 3,Rabi,rabi,-1.92,9.88,32,597875.4122,9787247.824,tropical,25,0.01258341,rabi
