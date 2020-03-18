@@ -22,6 +22,7 @@ use_data(
   equations,
   equations_metadata,
   missing_values_metadata,
+  references,
   references_metadata,
   sitespecies,
   sitespecies_metadata,
