@@ -8,6 +8,16 @@ get_biomass = function(dbh,  ## in cm
                        add_weight = FALSE) {
 
   load("data/equations.rda")
+  load("data/taxo_weight.rda")
+  ## temp - make sure all matrices have the same equations in the same order
+  ## while equation table changes regularly
+  equations_ids = equations$equation_id
+  equations_ids = equations_ids[!is.na(equations_ids)]
+  equations_ids = equations_ids[equations_ids %in% colnames(taxo_weight)[-1]]
+  equations = subset(equations, equation_id %in% equations_ids)
+  taxo_weight = taxo_weight[, c("nameC", equations$equation_id), with=FALSE]
+
+  ## keep only useful equations
   equations = subset(equations, dependent_variable == var)
   if (is.null(h))
     equations = subset(equations, !independent_variable == "DBH, H")
@@ -38,13 +48,21 @@ get_biomass = function(dbh,  ## in cm
 
   # taxonomic distance - for now only at the genus level
   # TODO check that all species have an associated equation
-  load("data/taxo_weight.rda")
+  ## order by equation id, according to order in equation table
   names = paste(genus, species)
   names = gsub(" $| NA$", "", names) # remove space and NAs at the end of genus names
   idx = sapply(names, function(n) which(taxo_weight$nameC==n))
-  unique(names(which(sapply(idx, length)==0)))
+  ## replace integer(0) by NA -> taxo_weight = 1e-6 for all equations
+  idx[sapply(idx, length)==0] <- NA
   idx = unlist(idx)
-  taxo_weight = taxo_weight[idx, -1]
+  if (sum(!is.na(idx)) == 0) { ## when no species are in the table: only NAs (gives problem with data.table), do it manually
+    taxo_weight_census = data.table(matrix(1e-6, ncol=ncol(taxo_weight)-1, nrow = length(idx)))
+    colnames(taxo_weight_census) = colnames(taxo_weight)[-1]
+  } else
+    taxo_weight_census = taxo_weight[idx, -1]
+  # replace all NAs with 1e-6 (used only of no other equation is available)
+  for(col in names(taxo_weight_census)[-1])
+    set(taxo_weight_census, i=which(is.na(taxo_weight_census[[col]])), j=col, value=1e-6)
 
   # koppen climate
   # (1) get koppen climate for all locations
@@ -81,7 +99,7 @@ get_biomass = function(dbh,  ## in cm
     Nobs = equations$sample_size,
     dbh = dbh,
     dbhrange = equations[, c("dbh_min_cm", "dbh_max_cm")],
-    weight_T = taxo_weight,
+    weight_T = taxo_weight_census,
     weight_E = koppen_simil
   )
   relative_weight = weight/matrix(rowSums(weight, na.rm = TRUE), nrow=length(dbh), ncol=nrow(equations))

@@ -8,7 +8,6 @@ library(data.table)
 library(ggplot2)
 library(ggpubr)
 
-
 #### test 1 ####
 data = data.table(expand.grid(dbh=1:150, genus=c("Acer", "Prunus", "Fraxinus", "Quercus"), location = c("scbi", "zaragoza", "nice", "sivas")))
 data = merge(data, data.frame(location = c("scbi", "zaragoza", "nice", "ivas"),
@@ -37,18 +36,27 @@ g
 # species list per site ##
 load("data/sitespecies.rda")
 sitespecies = data.table(sitespecies)
-sitespecies[latin_name == "Pinus sylvatica", latin_name := "Pinus sylvestris"]
-sitespecies$species = tstrsplit(sitespecies$latin_name, " ")[[2]]
-sitespecies[species %in% c("sp.", "spp.", "x", "", "species", "unknown"), species := NA]
 
-site_species = unique(sitespecies[-grep("any-", site), c("genus", "species", "site")])
+## keep only non tropical sites
+load("data/sites_info.rda")
+tropical = sites_info$site[abs(as.numeric(sites_info$lat)) < 23.5]
+sitespecies = subset(sitespecies, ! site %in% tropical)
+
+sitespecies[latin_name == "Pinus sylvatica", latin_name := "Pinus sylvestris"]
+sitespecies[, genus := tstrsplit(latin_name, " ")[[1]]]
+sitespecies[, species := tstrsplit(latin_name, " ")[[2]]]
+sitespecies[species == "x", species := paste(tstrsplit(latin_name, " ")[[2]],
+                                             tstrsplit(latin_name, " ")[[3]])]
+sitespecies[species %in% c("sp.", "spp.", "", "species", "unknown"), species := NA]
+
+site_species = unique(sitespecies[, c("genus", "species", "site")])
 ## merge with site coordinates
 load("data/sites_info.rda")
 site_species = merge(site_species, sites_info[, c("site", "lat", "long")], by = "site")
 site_species$nb = 1:nrow(site_species)
 ## TODO add Asia sites?
 
-data = data.table(expand.grid(dbh=1:150, nb = 1:nrow(site_species)))
+data = data.table(expand.grid(dbh=1:200, nb = 1:nrow(site_species)))
 data = merge(data, site_species, by = "nb")
 data$nb = NULL
 
@@ -57,11 +65,11 @@ data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, species = data$species
 data[, name := paste(genus, species)]
 data[, name := gsub(" NA", "", name)]
 
-## number of species/site pair of plots (natural + log scale) per page
-n_pplots = 3
 # create folder if it does not already exist
 if (!file.exists("tests/graphs"))
   dir.create("tests/graphs")
+
+load("data/equations.rda")
 
 ## split data by site
 ls_site_species = split(data, by = "site")
@@ -93,12 +101,53 @@ for (i in 1:length(ls_site_species)) {
     totalW = colSums(weight, na.rm=TRUE)
     # ## first 20 equations
     weightMax = weight[,order(totalW, decreasing = T)[1:20], with=FALSE]
-    dt = melt(cbind(dbh, weightMax), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
-    w = ggplot(dt, aes(x=dbh, y = equationID, fill=weight)) + geom_raster() +
-      scale_fill_gradientn(colours = rev(terrain.colors(10)))
+    dt = melt(cbind(dbh = df$dbh, weightMax), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
+    dt = merge(dt, equations[, c("equation_id", "equation_taxa", "dbh_min_cm", "dbh_max_cm", "koppen")],
+               by.x = "equationID", by.y = "equation_id")
+    dt[, `:=`(dbh_min_cm = as.numeric(dbh_min_cm), dbh_max_cm = as.numeric(dbh_max_cm))]
 
-    ggarrange(g, g + scale_x_log10() + scale_y_log10() + labs(y=""), w, ncol = 3)
+    w = ggplot(dt, aes(x=dbh, y = paste(equationID, equation_taxa, sep=" - "), fill=weight)) +
+      geom_raster() +
+      scale_fill_gradientn(colours = rev(terrain.colors(10))) +
+      geom_point(aes(x=dbh_min_cm), col="blue") +
+      geom_point(aes(x=dbh_max_cm), col="red") +
+      labs(x="DBH (cm)", y = "")
+
+    ggarrange(g, g + scale_x_log10() + scale_y_log10() + labs(y=""), w, ncol = 3, widths = c(0.25,0.25,0.5))
     name_file = paste0(dir_site, "/", gsub(" ", "_", sp), ".pdf")
-    ggsave(name_file, height = 3, width = 10)
+    ggsave(name_file, height = 3, width = 15)
   }
 }
+
+### troubleshooting
+i = 1
+sp = "Acer rubrum"
+dftest = subset(data, site=="harvard forest" & name == "Acer rubrum")
+dbh = dftest$dbh
+h = NULL
+genus = dftest$genus
+species = dftest$species
+coords = unlist(dftest[1, c("long", "lat")])
+var = "Total aboveground biomass"
+
+wgh = get_biomass(dbh = dftest$dbh,
+                h = NULL,
+                genus = dftest$genus,
+                species = dftest$species,
+                coords = unlist(dftest[1, c("long", "lat")]),
+                var = "Total aboveground biomass",
+                add_weight = TRUE)
+wgh = wgh[, -1]
+
+keep = which(colSums(wgh)>1e-3)
+wgh = wgh[, keep, with = FALSE]
+dt = melt(cbind(dbh = dftest$dbh, wgh), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
+dt = merge(dt, equations[, c("equation_id", "equation_taxa", "dbh_min_cm", "dbh_max_cm")],
+           by.x = "equationID", by.y = "equation_id")
+dt[, `:=`(dbh_min_cm = as.numeric(dbh_min_cm), dbh_max_cm = as.numeric(dbh_max_cm))]
+ggplot(dt, aes(x=dbh, y = paste(equationID, equation_taxa, sep=" - "), fill=weight)) +
+  geom_raster() +
+  scale_fill_gradientn(colours = rev(terrain.colors(10))) +
+  geom_point(aes(x=dbh_min_cm), col="blue") +
+  geom_point(aes(x=dbh_max_cm), col="red") +
+  labs(x="DBH (cm)", y = "")
