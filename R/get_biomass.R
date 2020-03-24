@@ -130,18 +130,21 @@ weight_allom = function(Nobs,
   # implication: new observations will not increase weight_N much when Nobs > 100
 
   dbhrange = matrix(as.numeric(unlist(dbhrange)), ncol = 2)
-  midD = rowMeans(dbhrange)
-  difD = apply(dbhrange, 1, diff) / 2
   ## This weight function is inspired of the tricube weight function in local regressions
   ## it equals 1 inside the dbh range, quickly drops to 0 outside the dbh range.
   # steep controls how fast the weight decreases at the edges of the dbh range.
-  # See: curve((1-abs((x-midD)/difD)^15)^3, xlim=c(dbhrange))
-  Mdbh = matrix(dbh, nrow=length(dbh), ncol=length(midD))
-  MmidD = matrix(midD, nrow=length(dbh), ncol=length(midD), byrow=TRUE)
-  MdifD = matrix(difD, nrow=length(dbh), ncol=length(midD), byrow=TRUE)
-  weight_D =  (1-abs((Mdbh-MmidD)/MdifD)^steep)^3
-  # no negative value
-  weight_D[which(weight_D<0)] = 0
+  #
+  # f = function(x, min, max, steep=4, pow=3) {
+  #   y = (1-abs((x-(min+max)/2)/(max-min))^steep)^pow
+  #   return(apply(cbind(0,y), 1, max))
+  # }
+  # We log-transform it because dbhs are > 0
+  # See: curve(f(log(x), log(5), log(20)), xlim=c(0,50)); abline(v=c(5,20))
+  Mdbh = log(matrix(dbh, nrow=length(dbh), ncol=nrow(dbhrange)))
+  Mmin = log(matrix(dbhrange[,1], nrow=length(dbh), ncol=nrow(dbhrange), byrow = TRUE))
+  Mmax = log(matrix(dbhrange[,2], nrow=length(dbh), ncol=nrow(dbhrange), byrow = TRUE))
+  weight_D = (1-abs((Mdbh-(Mmin+Mmax)/2)/(Mmax-Mmin))^steep)^3
+  weight_D[weight_D < 0] = 0   ## keep only positive values, transform values < 0 into 0
 
   # multiplicative weights: if one is zero, the total weight should be zero too
   return(weight_N * weight_D * weight_E * weight_T)

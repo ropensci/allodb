@@ -118,36 +118,3 @@ for (i in 1:length(ls_site_species)) {
     ggsave(name_file, height = 3, width = 15)
   }
 }
-
-### troubleshooting
-i = 1
-sp = "Acer rubrum"
-dftest = subset(data, site=="harvard forest" & name == "Acer rubrum")
-dbh = dftest$dbh
-h = NULL
-genus = dftest$genus
-species = dftest$species
-coords = unlist(dftest[1, c("long", "lat")])
-var = "Total aboveground biomass"
-
-wgh = get_biomass(dbh = dftest$dbh,
-                h = NULL,
-                genus = dftest$genus,
-                species = dftest$species,
-                coords = unlist(dftest[1, c("long", "lat")]),
-                var = "Total aboveground biomass",
-                add_weight = TRUE)
-wgh = wgh[, -1]
-
-keep = which(colSums(wgh)>1e-3)
-wgh = wgh[, keep, with = FALSE]
-dt = melt(cbind(dbh = dftest$dbh, wgh), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
-dt = merge(dt, equations[, c("equation_id", "equation_taxa", "dbh_min_cm", "dbh_max_cm")],
-           by.x = "equationID", by.y = "equation_id")
-dt[, `:=`(dbh_min_cm = as.numeric(dbh_min_cm), dbh_max_cm = as.numeric(dbh_max_cm))]
-ggplot(dt, aes(x=dbh, y = paste(equationID, equation_taxa, sep=" - "), fill=weight)) +
-  geom_raster() +
-  scale_fill_gradientn(colours = rev(terrain.colors(10))) +
-  geom_point(aes(x=dbh_min_cm), col="blue") +
-  geom_point(aes(x=dbh_max_cm), col="red") +
-  labs(x="DBH (cm)", y = "")
