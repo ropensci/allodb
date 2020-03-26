@@ -819,55 +819,45 @@ niobara,Ulmaceae,Ulmus,Ulmus americana,ULMUAM,Tree,,,,,
 niobara,Ulmaceae,Ulmus,Ulmus rubra,ULMURU,Tree,,,,,
 niobara,Ulmaceae,Ulmus,Ulmus sp,ULMUXX,Tree,,,,,
 indian cave,Sapindaceae,Acer,Acer negundo,ACERNE,Tree,Generic,NA,d6be5c,Sapindaceae,NA
-indian cave,Sapindaceae,Acer,Acer saccharinum,ACERSA,Tree,,,,,
-indian cave,Sapindaceae,Acer,Acer saccharum,ACERSC,Tree,,,,,
-indian cave,Sapindaceae,Aesculus,Aesculus glabra,AESCGL,Tree,Generic,NA,c86d1d,Aesculus flava,NA
+indian cave,Simaroubaceae,Ailanthus,Ailanthus altissima,AILAAL,Tree,,,,,
+indian cave,Rosaceae,Amelanchier,Amelanchier arborea,AMELAR,Treelet,,,,,
 indian cave,Annonaceae,Asimina,Asimina triloba,ASIMTR,Treelet,Generic,NA,ae65ed,Mixed hardwood,NA
 indian cave,Juglandaceae,Carya,Carya cordiformis,CARYCO,Tree,,,,,
 indian cave,Juglandaceae,Carya,Carya ovata,CARYOV,Tree,,,,,
+indian cave,Bignoniaceae,Catalpa,Catalpa speciosa,CATASP,Tree,,,,,
 indian cave,Cannabaceae,Celtis,Celtis occidentalis,CELTOC,Tree,Generic,NA,ae65ed,Mixed hardwood,NA
 indian cave,Fabaceae,Cercis,Cercis canadensis,CERCCA,Treelet,Generic,NA,7f7777,"Fabaceae/ Juglandaceae, other",NA
-indian cave,Cornaceae,Cornus,Cornus alternifolia,CORNAL,"Shrub, treelet",Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
-indian cave,Cornaceae,Cornus,Cornus amomum,CORNAM,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 indian cave,Cornaceae,Cornus,Cornus drummondii,CORNDR,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 indian cave,Betulaceae,Corylus,Corylus americana,CORYAM,"Shrub, treelet",Generic,NA,ae65ed,Mixed hardwood,NA
-indian cave,Rosaceae,Crataegus,Crataegus crusgalli,CRATCR,"Shrub, treelet",Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 indian cave,Rosaceae,Crataegus,Crataegus mollis,CRATMO,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
+indian cave,Celastraceae,Euonymus,Euonymus atropurpureus,EUONAT,"Shrub, treelet",,,,,
 indian cave,Oleaceae,Fraxinus,Fraxinus americana,FRAXAM,Tree,Generic,NA,81dc34,Oleaceae,NA
-indian cave,Oleaceae,Fraxinus,Fraxinus pennsylvanica,FRAXPE,Tree,Generic,NA,4979fe,Oleaceae,NA
 indian cave,Fabaceae,Gleditsia,Gleditsia triacanthos,GLEDTR,Tree,Generic,NA,7f7777,"Fabaceae/ Juglandaceae, other",NA
 indian cave,Fabaceae,Gymnocladus,Gymnocladus dioicus,GYMNDI,Tree,Generic,NA,7f7777,"Fabaceae/ Juglandaceae, other",NA
 indian cave,Juglandaceae,Juglans,Juglans nigra,JUGLNI,Tree,Generic,NA,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
 indian cave,Cupressaceae,Juniperus,Juniperus virginiana,JUNIVI,Tree,Generic,NA,c8f882,Cupressaceae >=0.40 spg,NA
+indian cave,Caprifoliaceae,Lonicera,Lonicera maackii,LONIMA,"Shrub, treelet",,,,,
+indian cave,Moraceae,Maclura,Maclura pomifera,MACLPO,Tree,,,,,
 indian cave,Moraceae,Morus,Morus alba,MORUAL,Tree,Generic,NA,ae65ed,Mixed hardwood,NA
 indian cave,Moraceae,Morus,Morus rubra,MORURU,Tree,Generic,NA,ae65ed,Mixed hardwood,NA
 indian cave,Betulaceae,Ostrya,Ostrya virginiana,OSTRVI,Tree,Generic,NA,e64b74,Betulaceae,NA
 indian cave,Platanaceae,Platanus,Platanus occidentalis,PLATOC,Tree,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 indian cave,Salicaceae,Populus,Populus deltoides,POPUDE,Tree,Expert,NA,aeebe9,Populus tremuloides,NA
-indian cave,Rosaceae,Prunus,Prunus americana,PRUNAM,"Shrub, treelet",Expert,NA,8aecca,Prunus serotina,NA
-indian cave,Rosaceae,Prunus,Prunus americana,PRUNAM,"Shrub, treelet",Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
 indian cave,Rosaceae,Prunus,Prunus serotina,PRUNSE,Tree,,,,,
-indian cave,Rosaceae,Prunus,Prunus virginiana,PRUNVI,"Shrub, treelet",Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
-indian cave,Fagaceae,Quercus,Quercus alba,QUERAL,Tree,,,,,
 indian cave,Fagaceae,Quercus,Quercus macrocarpa,QUERMA,Tree,Expert,NA,524aca,Quercus alba,NA
-indian cave,Fagaceae,Quercus,Quercus macrocarpa,QUERMA,Tree,Generic,NA,5edb7f,Fagaceae,NA
 indian cave,Fagaceae,Quercus,Quercus muehlenbergii,QUERMU,Tree,,,,,
-indian cave,Fagaceae,Quercus,Quercus prinoides,QUERPR,Shrub,,,,,
 indian cave,Fagaceae,Quercus,Quercus rubra,QUERRU,Tree,,,,,
 indian cave,Fagaceae,Quercus,Quercus velutina,QUERVE,Tree,,,,,
-indian cave,Anacardiaceae,Rhus,Rhus aromatica,RHUSAR,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
-indian cave,Anacardiaceae,Rhus,Rhus copallina,RHUSCO,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
 indian cave,Anacardiaceae,Rhus,Rhus glabra,RHUSGL,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
-indian cave,Salicaceae,Salix,Salix amygdaloides,SALIAM,Tree,,,,,
-indian cave,Salicaceae,Salix,Salix nigra,SALINI,Tree,,,,,
+indian cave,Rosaceae,Rosa,Rosa multiflora,ROSAMU,Shrub,,,,,
+indian cave,Rosaceae,Rubus,Rubus allegheniensis,RUBUAL,Shrub,,,,,
 indian cave,Adoxaceae,Sambucus,Sambucus canadensis,SAMBCA,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
 indian cave,Staphyleaceae,Staphylea,Staphylea trifolia,STAPHTR,Shrub,,,,,
 indian cave,Malvaceae,Tilia,Tilia americana,TILIAM,Tree,Generic,NA,c86d1d,Tilia americana,NA
 indian cave,Ulmaceae,Ulmus,Ulmus americana,ULMUAM,Tree,,,,,
 indian cave,Ulmaceae,Ulmus,Ulmus rubra,ULMURU,Tree,,,,,
 indian cave,Ulmaceae,Ulmus,Ulmus thomasii,ULMUTH,Tree,,,,,
-indian cave,Adoxaceae,Viburnum,Viburnum lentago,VIBULE,Shrub,Expert,NA,5e2dea,Virburnum lantanoides,NA
-indian cave,Adoxaceae,Viburnum,Viburnum opulus,VIBUOP,Shrub,Expert,NA,5e2dea,Virburnum lantanoides,NA
+indian cave,Rutaceae,Zanthoxylum,Zanthoxylum americanum,ZANTAM,Shrub,,,,,
 ordway-swisher,Fabaceae,Amorpha,Amorpha fruticosa,AMFR,Shrub,,,,,
 ordway-swisher,Ebenaceae,Diospyros,Diospyros virginiana,DIVI,Tree,Generic,NA,ae65ed,Mixed hardwood,NA
 ordway-swisher,Pinaceae,Pinus,Pinus palustris,PIPA,Tree,Generic,NA,90c207,Pinus >=0.45 spg,NA
