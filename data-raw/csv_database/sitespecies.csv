@@ -794,30 +794,30 @@ speulderbos,Fagaceae,Quercus,Quercus robur,NA,Tree,Expert,f96447,12b2a9,Quercus,
 speulderbos,Fagaceae,Quercus,Quercus rubra,NA,Tree,Expert,f96447,6dd993,Quercus rubra,Using Quercus height allometries from Bonh 2014 (allodb eq f96447)
 speulderbos,Rosaceae,Sorbus,Sorbus aucuparia,NA,Tree,Expert,7a3dce,448bdf,Acer,Using Fagus height allometries from Bonh 2014 (allodb eq 7a3dce)
 speulderbos,Pinaceae,Tsuga,Tsuga heterophylla,NA,Tree,Expert,b4a502,99d03e,Pseudotsuga menziesii,Using Pinus height allometries from Bonh 2014 (allodb eq b4a502)
-niobara,Sapindaceae,Acer,Acer negundo,ACERNE,Tree,Generic,NA,d6be5c,Sapindaceae,NA
-niobara,Betulaceae,Betula,Betula papyrifera,BETUPA,Tree,Expert,NA,d3f7ed,Betula papyrifera,NA
-niobara,Cannabaceae,Celtis,Celtis occidentalis,CELTOC,Tree,Generic,NA,ae65ed,Mixed hardwood,NA
-niobara,Cornaceae,Cornus,Cornus sericea,CORNSE,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
-niobara,Oleaceae,Fraxinus,Fraxinus pennsylvanica,FRAXPE,Tree,Generic,NA,4979fe,Oleaceae,NA
-niobara,Juglandaceae,Juglans,Juglans nigra,JUGLNI,Tree,Generic,NA,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
-niobara,Cupressaceae,Juniperus,Juniperus virginiana,JUNIVI,Tree,Generic,NA,c8f882,Cupressaceae >=0.40 spg,NA
-niobara,Moraceae,Morus,Morus alba,MORUAL,Tree,,,,,
-niobara,Betulaceae,Ostrya,Ostrya virginiana,OSTRVI,Tree,Generic,NA,e64b74,Betulaceae,NA
-niobara,Rosaceae,Physocarpus,Physocarpus opulifolius ,PHYSOP,Shrub,,,,,
-niobara,Pinaceae,Pinus,Pinus ponderosa,PINUPO,Tree,Expert,NA,5ea2c1,Pinus ponderosa,NA
-niobara,Salicaceae,Populus,Populus deltoides,POPUDE,Tree,Expert,NA,aeebe9,Populus tremuloides,NA
-niobara,Rosaceae,Prunus,Prunus americana,PRUNAM,"Treelet, shrub",Expert,NA,8aecca,Prunus serotina,NA
-niobara,Rosaceae,Prunus,Prunus virginiana,PRUNVI,"Treelet, shrub",Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
-niobara,Fagaceae,Quercus,Quercus macrocarpa,QUERMA,Tree,Expert,NA,524aca,Quercus alba,NA
-niobara,Anacardiaceae,Rhus,Rhus aromatica,RHUSAR,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
-niobara,Anacardiaceae,Rhus,Rhus glabra,RHUSGL,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
-niobara,Salicaceae,Salix,Salix amygdaloides,SALIAM,"Treelet, shrub",,,,,
-niobara,Salicaceae,Salix,Salix eriocephala,SALIER,"Treelet, shrub",,,,,
-niobara,Salicaceae,Salix,Salix interior,SALIIN,"Treelet, shrub",,,,,
-niobara,Malvaceae,Tilia,Tilia americana,TILIAM,Tree,Generic,NA,c86d1d,Tilia americana,NA
-niobara,Ulmaceae,Ulmus,Ulmus americana,ULMUAM,Tree,,,,,
-niobara,Ulmaceae,Ulmus,Ulmus rubra,ULMURU,Tree,,,,,
-niobara,Ulmaceae,Ulmus,Ulmus sp,ULMUXX,Tree,,,,,
+niobrara,Sapindaceae,Acer,Acer negundo,ACERNE,Tree,Generic,NA,d6be5c,Sapindaceae,NA
+niobrara,Betulaceae,Betula,Betula papyrifera,BETUPA,Tree,Expert,NA,d3f7ed,Betula papyrifera,NA
+niobrara,Cannabaceae,Celtis,Celtis occidentalis,CELTOC,Tree,Generic,NA,ae65ed,Mixed hardwood,NA
+niobrara,Cornaceae,Cornus,Cornus sericea,CORNSE,Shrub,Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
+niobrara,Oleaceae,Fraxinus,Fraxinus pennsylvanica,FRAXPE,Tree,Generic,NA,4979fe,Oleaceae,NA
+niobrara,Juglandaceae,Juglans,Juglans nigra,JUGLNI,Tree,Generic,NA,1c1ac8,"Fabaceae/ Juglandaceae, Carya, Juglans",NA
+niobrara,Cupressaceae,Juniperus,Juniperus virginiana,JUNIVI,Tree,Generic,NA,c8f882,Cupressaceae >=0.40 spg,NA
+niobrara,Moraceae,Morus,Morus alba,MORUAL,Tree,,,,,
+niobrara,Betulaceae,Ostrya,Ostrya virginiana,OSTRVI,Tree,Generic,NA,e64b74,Betulaceae,NA
+niobrara,Rosaceae,Physocarpus,Physocarpus opulifolius ,PHYSOP,Shrub,,,,,
+niobrara,Pinaceae,Pinus,Pinus ponderosa,PINUPO,Tree,Expert,NA,5ea2c1,Pinus ponderosa,NA
+niobrara,Salicaceae,Populus,Populus deltoides,POPUDE,Tree,Expert,NA,aeebe9,Populus tremuloides,NA
+niobrara,Rosaceae,Prunus,Prunus americana,PRUNAM,"Treelet, shrub",Expert,NA,8aecca,Prunus serotina,NA
+niobrara,Rosaceae,Prunus,Prunus virginiana,PRUNVI,"Treelet, shrub",Generic,NA,f08fff,Cornaceae/Ericaceae/Lauraceae/Platanaceae/Rosaceae/Ulmaceae,NA
+niobrara,Fagaceae,Quercus,Quercus macrocarpa,QUERMA,Tree,Expert,NA,524aca,Quercus alba,NA
+niobrara,Anacardiaceae,Rhus,Rhus aromatica,RHUSAR,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
+niobrara,Anacardiaceae,Rhus,Rhus glabra,RHUSGL,Shrub,Generic,NA,ae65ed,Mixed hardwood,NA
+niobrara,Salicaceae,Salix,Salix amygdaloides,SALIAM,"Treelet, shrub",,,,,
+niobrara,Salicaceae,Salix,Salix eriocephala,SALIER,"Treelet, shrub",,,,,
+niobrara,Salicaceae,Salix,Salix interior,SALIIN,"Treelet, shrub",,,,,
+niobrara,Malvaceae,Tilia,Tilia americana,TILIAM,Tree,Generic,NA,c86d1d,Tilia americana,NA
+niobrara,Ulmaceae,Ulmus,Ulmus americana,ULMUAM,Tree,,,,,
+niobrara,Ulmaceae,Ulmus,Ulmus rubra,ULMURU,Tree,,,,,
+niobrara,Ulmaceae,Ulmus,Ulmus sp,ULMUXX,Tree,,,,,
 indian cave,Sapindaceae,Acer,Acer negundo,ACERNE,Tree,Generic,NA,d6be5c,Sapindaceae,NA
 indian cave,Simaroubaceae,Ailanthus,Ailanthus altissima,AILAAL,Tree,,,,,
 indian cave,Rosaceae,Amelanchier,Amelanchier arborea,AMELAR,Treelet,,,,,
