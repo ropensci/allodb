@@ -63,3 +63,6 @@ id,Site,site,lat,long,UTM_Zone,UTM_X,UTM_Y,climate zone,size.ha,E,wsg.site.name,
 39,Yosemite National Park,yosemite,37.77,-119.82,11,251690.3705,4183617.761,temperate,25.6,1.360057948,yosemite,Csb
 24,Zenlun,zenlun,23.42,120.55,51,249752.1018,2592662.301,tropical,12,0.211963255,NA,Cfb
 57,Zofin,zofin,48.66,14.71,33,478447.4731,5390124.453,temperate,25,1.002541365,zofin,Cfb
+,Niobrara,niobara,42.78,-100.02,14,416483.33,4736890.07,temperate,20.16,,NA,Dfa
+,Indian Cave,indian cave,40.25,-95.54,15,284222.48,4458593.14,temperate,18.4,,NA,Dfa
+,Ordway-Swisher,ordway-swisher,29.692414,-81.993419,17,403890.47,3285115.87,temperate,17.25,,NA,Cfa
