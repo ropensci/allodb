@@ -36,6 +36,8 @@ g
 # species list per site ##
 load("data/sitespecies.rda")
 sitespecies = data.table(sitespecies)
+## correct spelling in sitespecies: niobrara instead of niobara
+sitespecies[site == "niobara", site := "niobrara"]
 
 ## keep only non tropical sites
 load("data/sites_info.rda")
@@ -51,7 +53,6 @@ sitespecies[species %in% c("sp.", "spp.", "", "species", "unknown"), species := 
 
 site_species = unique(sitespecies[, c("genus", "species", "site")])
 ## merge with site coordinates
-load("data/sites_info.rda")
 site_species = merge(site_species, sites_info[, c("site", "lat", "long")], by = "site")
 site_species$nb = 1:nrow(site_species)
 ## TODO add Asia sites?
