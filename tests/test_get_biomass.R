@@ -119,3 +119,19 @@ for (i in 1:length(ls_site_species)) {
     ggsave(name_file, height = 3, width = 15)
   }
 }
+
+## test 3 - agb in scbi data base vs allodb equations
+scbi = read.csv("tests/scbi.stem1-agb.csv")
+load("tests/scbi.spptable.rdata")
+scbi = merge(subset(scbi, !is.na(dbh)), scbi.spptable, by = "sp")
+## use get_biomass function
+scbi$agb_allodb = get_biomass(dbh=scbi$dbh/10, ## !! dbh in mm
+                                 genus=scbi$genus,
+                                 species = scbi$species,
+                                 coords = c(-78.15, 38.9))/1000
+gscbi = ggplot(scbi, aes(x = agb, y = agb_allodb, color = paste(genus, species))) +
+  geom_abline(slope=1, intercept=0, lty=2) +
+  geom_point() +
+  theme(legend.position = "none")
+library(plotly)
+ggplotly(gscbi)
