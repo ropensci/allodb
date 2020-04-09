@@ -7,6 +7,8 @@ get_biomass = function(dbh,  ## in cm
                        var = "Total aboveground biomass",
                        add_weight = FALSE) {
 
+  library(data.table)
+
   load("data/equations.rda")
   load("data/taxo_weight.rda")
   ## temp - make sure all matrices have the same equations in the same order
