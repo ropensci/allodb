@@ -1,9 +1,6 @@
 site,family,genus,latin_name,species_code,life_form,warning
 lilly dickey,Sapindaceae,Acer,Acer rubrum,316,Tree,NA
-lilly dickey,Sapindaceae,Acer,Acer rubrum,316,Tree,NA
 lilly dickey,Sapindaceae,Acer,Acer saccharum,318,Tree,NA
-lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,NA
-lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,NA
 lilly dickey,Rosaceae,Amelanchier,Amelanchier arborea,356,Tree,NA
 lilly dickey,Annonaceae,Asimina,Asimina triloba,367,Tree,NA
 lilly dickey,Betulaceae,Carpinus,Carpinus caroliniana,391,Tree,NA
@@ -17,36 +14,24 @@ lilly dickey,Cornaceae,Cornus,Cornus florida,491,Tree,NA
 lilly dickey,Rosaceae,Crataegus,Crataegus spp.,500,Shrub,NA
 lilly dickey,Fagaceae,Fagus,Fagus grandifolia,531,Tree,NA
 lilly dickey,Oleaceae,Fraxinus,Fraxinus americana,541,Tree,NA
-lilly dickey,Oleaceae,Fraxinus,Fraxinus americana,541,Tree,NA
 lilly dickey,Oleaceae,Fraxinus,Fraxinus pennsylvanica,544,Tree,NA
 lilly dickey,Hamamelidaceae,Hamamelis,Hamamelis virginiana,498,Shrub,NA
 lilly dickey,Cupressaceae,Juniperus,Juniperus virginiana,68,Tree,NA
 lilly dickey,Lauraceae,Lindera,Lindera benzoin,609,Shrub,NA
 lilly dickey,Magnoliaceae,Liriodendron,Liriodendron tulipifera,621,Tree,NA
-lilly dickey,Magnoliaceae,Liriodendron,Liriodendron tulipifera,621,Tree,NA
 lilly dickey,Nyssaceae,Nyssa,Nyssa sylvatica,693,Tree,NA
-lilly dickey,Betulaceae,Ostrya,Ostrya virginiana,701,Tree,NA
 lilly dickey,Betulaceae,Ostrya,Ostrya virginiana,701,Tree,NA
 lilly dickey,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 lilly dickey,Paulowniaceae,Paulownia,Paulownia tomentosa,712,Tree,NA
 lilly dickey,Rosaceae,Prunus,Prunus serotina,762,Tree,NA
-lilly dickey,Rosaceae,Prunus,Prunus serotina,762,Tree,NA
 lilly dickey,Fagaceae,Quercus,Quercus alba,802,Tree,NA
 lilly dickey,Fagaceae,Quercus,Quercus coccinea,806,Tree,NA
 lilly dickey,Fagaceae,Quercus,Quercus prinus,832,Tree,NA
-lilly dickey,Fagaceae,Quercus,Quercus prinus,832,Tree,NA
 lilly dickey,Fagaceae,Quercus,Quercus rubra,833,Tree,NA
-lilly dickey,Fagaceae,Quercus,Quercus velutina,837,Tree,NA
-lilly dickey,Fagaceae,Quercus,Quercus velutina,837,Tree,NA
 lilly dickey,Fagaceae,Quercus,Quercus velutina,837,Tree,NA
 lilly dickey,Anacardiaceae,Rhus,Rhus typhina,899,Shrub,NA
 lilly dickey,Fabaceae,Robinia,Robinia pseudoacacia,901,Tree,NA
-lilly dickey,Fabaceae,Robinia,Robinia pseudoacacia,901,Tree,NA
-lilly dickey,Fabaceae,Robinia,Robinia pseudoacacia,901,Tree,NA
 lilly dickey,Lauraceae,Sassafras,Sassafras albidum,931,Tree,NA
-lilly dickey,Lauraceae,Sassafras,Sassafras albidum,931,Tree,NA
-lilly dickey,Malvaceae,Tilia,Tilia americana,951,Tree,NA
-lilly dickey,Malvaceae,Tilia,Tilia americana,951,Tree,NA
 lilly dickey,Malvaceae,Tilia,Tilia americana,951,Tree,NA
 lilly dickey,Ulmaceae,Ulmus,Ulmus americana,972,Tree,NA
 lilly dickey,Ulmaceae,Ulmus,Ulmus rubra,975,Tree,NA
@@ -56,15 +41,12 @@ scbi,Sapindaceae,Acer,Acer rubrum,acru,Tree,NA
 scbi,Sapindaceae,Acer,Acer sp.,acsp,Tree,NA
 scbi,Simaroubaceae,Ailanthus,Ailanthus altissima,aial,Tree,NA
 scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,NA
-scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,NA
-scbi,Rosaceae,Amelanchier,Amelanchier arborea,amar,Tree,NA
 scbi,Annonaceae,Asimina,Asimina triloba,astr,Tree,NA
 scbi,Berberidaceae,Berberis,Berberis thunbergii,beth,Shrub,NA
 scbi,Betulaceae,Carpinus,Carpinus caroliniana,caca,Tree,NA
 scbi,Juglandaceae,Carya,Carya cordiformis,caco,Tree,NA
 scbi,Juglandaceae,Carya,Carya glabra,cagl,Tree,NA
 scbi,Juglandaceae,Carya,Carya ovalis,caovl,Tree,NA
-scbi,Juglandaceae,Carya,Carya sp.,casp,Tree,NA
 scbi,Juglandaceae,Carya,Carya sp.,casp,Tree,NA
 scbi,Juglandaceae,Carya,Carya tomentosa,cato,Tree,NA
 scbi,Fagaceae,Castanea,Castanea dentata,cade,Tree,NA
@@ -89,41 +71,26 @@ scbi,Juglandaceae,Juglans,Juglans cinerea,juci,Tree,NA
 scbi,Juglandaceae,Juglans,Juglans nigra,juni,Tree,NA
 scbi,Lauraceae,Lindera,Lindera benzoin,libe,Shrub,NA
 scbi,Magnoliaceae,Liriodendron,Liriodendron tulipifera,litu,Tree,NA
-scbi,Magnoliaceae,Liriodendron,Liriodendron tulipifera,litu,Tree,NA
 scbi,Caprifoliaceae,Lonicera,Lonicera maackii,loma,Shrub,NA
-scbi,Nyssaceae,Nyssa,Nyssa sylvatica,nysy,Tree,NA
-scbi,Nyssaceae,Nyssa,Nyssa sylvatica,nysy,Tree,NA
 scbi,Nyssaceae,Nyssa,Nyssa sylvatica,nysy,Tree,NA
 scbi,Paulowniaceae,Paulownia,Paulownia tomentosa,pato,Tree,NA
 scbi,Pinaceae,Pinus,Pinus pungens,pipu,Tree,NA
 scbi,Pinaceae,Pinus,Pinus strobus,pist,Tree,NA
 scbi,Pinaceae,Pinus,Pinus virginiana,pivi,Tree,NA
-scbi,Pinaceae,Pinus,Pinus virginiana,pivi,Tree,NA
-scbi,Platanaceae,Platanus,Platanus occidentalis,PLOC,Tree,NA
 scbi,Platanaceae,Platanus,Platanus occidentalis,PLOC,Tree,NA
 scbi,Rosaceae,Prunus,Prunus avium,prav,Tree,NA
-scbi,Rosaceae,Prunus,Prunus avium,prav,Tree,NA
 scbi,Rosaceae,Prunus,Prunus persica,prpe,Tree,NA
-scbi,Rosaceae,Prunus,Prunus persica,prpe,Tree,NA
-scbi,Rosaceae,Prunus,Prunus serotina,prse,Tree,NA
 scbi,Rosaceae,Prunus,Prunus serotina,prse,Tree,NA
 scbi,Rosaceae,Prunus,Prunus sp.,prsp,Tree,NA
 scbi,Fagaceae,Quercus,Quercus alba,qual,Tree,NA
 scbi,Fagaceae,Quercus,Quercus coccinea,quco,Tree,NA
 scbi,Fagaceae,Quercus,Quercus falcata,qufa,Tree,NA
-scbi,Fagaceae,Quercus,Quercus falcata,qufa,Tree,NA
-scbi,Fagaceae,Quercus,Quercus michauxii,qumi,Tree,NA
 scbi,Fagaceae,Quercus,Quercus michauxii,qumi,Tree,NA
 scbi,Fagaceae,Quercus,Quercus prinus,qupr,Tree,Accepted name Quercus montana
-scbi,Fagaceae,Quercus,Quercus prinus,qupr,Tree,Accepted name Quercus montana
-scbi,Fagaceae,Quercus,Quercus muehlenbergii,qumu,Tree,NA
 scbi,Fagaceae,Quercus,Quercus muehlenbergii,qumu,Tree,NA
 scbi,Fagaceae,Quercus,Quercus rubra,quru,Tree,NA
 scbi,Fagaceae,Quercus,Quercus velutina,quve,Tree,NA
-scbi,Fagaceae,Quercus,Quercus velutina,quve,Tree,NA
 scbi,Fagaceae,Quercus,Quercus sp.,qusp,Tree,NA
-scbi,Fabaceae,Robinia,Robinia pseudoacacia,rops,Tree,NA
-scbi,Fabaceae,Robinia,Robinia pseudoacacia,rops,Tree,NA
 scbi,Fabaceae,Robinia,Robinia pseudoacacia,rops,Tree,NA
 scbi,Rosaceae,Rosa,Rosa multiflora,romu,Shrub,NA
 scbi,Rosaceae,Rubus,Rubus allegheniensis,rual,Shrub,NA
@@ -131,9 +98,6 @@ scbi,Rosaceae,Rubus,Rubus pensilvanicus,rupe,Shrub,NA
 scbi,Rosaceae,Rubus,Rubus phoenicolasius,ruph,Shrub,NA
 scbi,Adoxaceae,Sambucus,Sambucus canadensis,saca,Shrub,NA
 scbi,Lauraceae,Sassafras,Sassafras albidum,saal,Tree,NA
-scbi,Lauraceae,Sassafras,Sassafras albidum,saal,Tree,NA
-scbi,Malvaceae,Tilia,Tilia americana,tiam,Tree,NA
-scbi,Malvaceae,Tilia,Tilia americana,tiam,Tree,NA
 scbi,Malvaceae,Tilia,Tilia americana,tiam,Tree,NA
 scbi,Ulmaceae,Ulmus,Ulmus americana,ulam,Tree,NA
 scbi,Ulmaceae,Ulmus,Ulmus rubra,ulru,Tree,NA
@@ -147,10 +111,6 @@ serc,Sapindaceae,Acer,Acer rubrum,ACRU,Tree,NA
 serc,Simaroubaceae,Ailanthus,Ailanthus altissima,AIAL,Tree,NA
 serc,Fabaceae,Albizia,Albizia julibrissin,ALJU,Tree,NA
 serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,NA
-serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,NA
-serc,Rosaceae,Amelanchier,Amelanchier arborea,AMAR3,Tree,NA
-serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,NA
-serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,NA
 serc,Rosaceae,Amelanchier,Amelanchier canadensis,AMCA4,Tree,NA
 serc,Araliaceae,Aralia,Aralia spinosa,ARSP2,Shrub,NA
 serc,Annonaceae,Asimina,Asimina triloba,ASTR,Tree,NA
@@ -179,36 +139,25 @@ serc,Oleaceae,Ligustrum,Ligustrum spp.,LIGUS2,Shrub,NA
 serc,Lauraceae,Lindera,Lindera benzoin,LIBE3,Shrub,NA
 serc,Altingiaceae,Liquidambar,Liquidambar styraciflua,LIST2,Tree,NA
 serc,Magnoliaceae,Liriodendron,Liriodendron tulipifera,LITU,Tree,NA
-serc,Magnoliaceae,Liriodendron,Liriodendron tulipifera,LITU,Tree,NA
 serc,Caprifoliaceae,Lonicera,Lonicera maackii,LOMA6,Shrub,NA
 serc,Moraceae,Morus,Morus rubra,MORU2,Tree,NA
-serc,Nyssaceae,Nyssa,Nyssa sylvatica,NYSY,Tree,NA
-serc,Nyssaceae,Nyssa,Nyssa sylvatica,NYSY,Tree,NA
 serc,Nyssaceae,Nyssa,Nyssa sylvatica,NYSY,Tree,NA
 serc,Scrophulariaceae,Paulownia,Paulownia tomentosa,PATO2,Tree,NA
 serc,Pinaceae,Pinus,Pinus taeda,PITA,Tree,NA
 serc,Pinaceae,Pinus,Pinus virginiana,PIVI2,Tree,NA
-serc,Pinaceae,Pinus,Pinus virginiana,PIVI2,Tree,NA
-serc,Platanaceae,Platanus,Platanus occidentalis,PLOC,Tree,NA
 serc,Platanaceae,Platanus,Platanus occidentalis,PLOC,Tree,NA
 serc,Salicaceae,Populus,Populus grandidentata,POGR4,Tree,NA
 serc,Rosaceae,Prunus,Prunus avium,PRAV,Tree,NA
-serc,Rosaceae,Prunus,Prunus avium,PRAV,Tree,NA
-serc,Rosaceae,Prunus,Prunus serotina,PRSE2,Tree,NA
 serc,Rosaceae,Prunus,Prunus serotina,PRSE2,Tree,NA
 serc,Fagaceae,Quercus,Quercus alba,QUAL,Tree,NA
 serc,Fagaceae,Quercus,Quercus coccinea,QUCO2,Tree,NA
 serc,Fagaceae,Quercus,Quercus falcata,QUFA,Tree,NA
-serc,Fagaceae,Quercus,Quercus falcata,QUFA,Tree,NA
 serc,Fagaceae,Quercus,Quercus michauxii,QUMI,Tree,NA
-serc,Fagaceae,Quercus,Quercus michauxii,QUMI,Tree,NA
-serc,Fagaceae,Quercus,Quercus montana,QUMO4,Tree,Synonym Quercus prinus
 serc,Fagaceae,Quercus,Quercus montana,QUMO4,Tree,Synonym Quercus prinus
 serc,Fagaceae,Quercus,Quercus palustris,QUPA2,Tree,NA
 serc,Fagaceae,Quercus,Quercus rubra,QURU,Tree,NA
 serc,Fagaceae,Quercus,Quercus spp.,QUERC,Tree,NA
 serc,Fagaceae,Quercus,Quercus stellata,QUST,Tree,NA
-serc,Fagaceae,Quercus,Quercus velutina,QUVE,Tree,NA
 serc,Fagaceae,Quercus,Quercus velutina,QUVE,Tree,NA
 serc,Ericaceae,Rhododendron,Rhododendron arborescens,RHAR3,Shrub,NA
 serc,Anacardiaceae,Rhus,Rhus typhina,RHTY,Shrub,NA
@@ -216,10 +165,6 @@ serc,Rosaceae,Rosa,Rosa multiflora,ROMU,Shrub,NA
 serc,Salicaceae,Salix,Salix nigra,SANI,Shrub,NA
 serc,Adoxaceae,Sambucus,Sambucus nigra,SANIC4,Shrub,NA
 serc,Lauraceae,Sassafras,Sassafras albidum,SAAL5,Tree,NA
-serc,Lauraceae,Sassafras,Sassafras albidum,SAAL5,Tree,NA
-serc,Malvaceae,Tilia,Tilia americana,TIAM,Tree,NA
-serc,Malvaceae,Tilia,Tilia americana,TIAM,Tree,NA
-serc,Malvaceae,Tilia,Tilia americana,TIAM,Tree,NA
 serc,Malvaceae,Tilia,Tilia americana,TIAM,Tree,NA
 serc,Ulmaceae,Ulmus,Ulmus americana,ULAM,Tree,NA
 serc,Ulmaceae,Ulmus,Ulmus rubra,ULRU,Tree,NA
@@ -232,8 +177,6 @@ tyson,Sapindaceae,Acer,Acer negundo,aceneg,Tree,NA
 tyson,Sapindaceae,Acer,Acer rubrum,acerub,Tree,NA
 tyson,Sapindaceae,Acer,Acer saccharum,acesac,Tree,NA
 tyson,Simaroubaceae,Ailanthus,Ailanthus altissima,ailalt,Tree,NA
-tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,NA
-tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,NA
 tyson,Rosaceae,Amelanchier,Amelanchier arborea,amearb,Tree,NA
 tyson,Annonaceae,Asimina,Asimina triloba,asitri,Tree,NA
 tyson,Juglandaceae,Carya,Carya cordiformis,carcor,Tree,NA
@@ -252,7 +195,6 @@ tyson,Rosaceae,Crataegus,Crataegus spp.,crasp,Shrub,NA
 tyson,Ebenaceae,Diospyros,Diospyros virginiana,diovir,Tree,NA
 tyson,Rhamnaceae,Frangula,Frangula caroliniana,fracar,Shrub,NA
 tyson,Oleaceae,Fraxinus,Fraxinus americana,fraame,Tree,NA
-tyson,Oleaceae,Fraxinus,Fraxinus americana,fraame,Tree,NA
 tyson,Fabaceae,Gleditsia,Gleditsia triacanthos,gletri,Tree,NA
 tyson,Juglandaceae,Juglans,Juglans nigra,jugnig,Tree,NA
 tyson,Cupressaceae,Juniperus,Juniperus virginiana,junvir,Tree,NA
@@ -261,12 +203,9 @@ tyson,Caprifoliaceae,Lonicera,Lonicera maackii,lonmaa,Shrub,NA
 tyson,Rosaceae,Malus,Malus ioensis,malioe,Shrub,NA
 tyson,Moraceae,Morus,Morus rubra,morrub,Tree,NA
 tyson,Betulaceae,Ostrya,Ostrya virginiana,ostvir,Tree,NA
-tyson,Betulaceae,Ostrya,Ostrya virginiana,ostvir,Tree,NA
 tyson,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 tyson,Platanaceae,Platanus,Platanus occidentalis,plaocc,Tree,NA
-tyson,Platanaceae,Platanus,Platanus occidentalis,plaocc,Tree,NA
 tyson,Rosaceae,Prunus,Prunus americana,pruame,Tree,NA
-tyson,Rosaceae,Prunus,Prunus serotina,pruser,Tree,NA
 tyson,Rosaceae,Prunus,Prunus serotina,pruser,Tree,NA
 tyson,Rosaceae,Prunus,Prunus sp.,prusp,Tree,NA
 tyson,Fagaceae,Quercus,Quercus alba,quealb,Tree,NA
@@ -276,18 +215,11 @@ tyson,Fagaceae,Quercus,Quercus rubra,querub,Tree,NA
 tyson,Fagaceae,Quercus,Quercus sp.,quesp,Tree,NA
 tyson,Fagaceae,Quercus,Quercus stellata,queste,Tree,NA
 tyson,Fagaceae,Quercus,Quercus velutina,quevel,Tree,NA
-tyson,Fagaceae,Quercus,Quercus velutina,quevel,Tree,NA
-tyson,Fagaceae,Quercus,Quercus velutina,quevel,Tree,NA
-tyson,Lauraceae,Sassafras,Sassafras albidum,sasalb,Tree,NA
 tyson,Lauraceae,Sassafras,Sassafras albidum,sasalb,Tree,NA
 tyson,Sapotaceae,Sideroxylon,Sideroxylon lanuginosum,sidlan,Shrub,NA
 tyson,Malvaceae,Tilia,Tilia americana,tilame,Tree,NA
-tyson,Malvaceae,Tilia,Tilia americana,tilame,Tree,NA
-tyson,Malvaceae,Tilia,Tilia americana,tilame,Tree,NA
 tyson,Ulmaceae,Ulmus,Ulmus rubra,ulmrub,Tree,NA
 ucsc,Sapindaceae,Acer,Acer macrophyllum,ACERMA,Tree,NA
-ucsc,Ericaceae,Arbutus,Arbutus menziesii,ARBUME,Tree,NA
-ucsc,Ericaceae,Arbutus,Arbutus menziesii,ARBUME,Tree,NA
 ucsc,Ericaceae,Arbutus,Arbutus menziesii,ARBUME,Tree,NA
 ucsc,Ericaceae,Arctostaphylos,Arctostaphylos andersonii,ARCTAN,Shrub,NA
 ucsc,Ericaceae,Arctostaphylos,Arctostaphylos tomentosa,ARCTCR,Shrub,NA
@@ -301,14 +233,9 @@ ucsc,Myrtaceae,Eucalyptus,Eucalyptus globulus,EUCAGL,Tree,NA
 ucsc,Rosaceae,Heteromeles,Heteromeles arbutifolia,HETEAR,Shrub,Biomass on Heteromeles arbutifolia is usually measured using crown dimension
 ucsc,Aquifoliaceae,Ilex,Ilex aquifolium,ILEXAQ,Shrub,NA
 ucsc,Fagaceae,Lithocarpus,Lithocarpus densiflorus,LITHDE,Tree,NA
-ucsc,Fagaceae,Lithocarpus,Lithocarpus densiflorus,LITHDE,Tree,NA
-ucsc,Fagaceae,Lithocarpus,Lithocarpus densiflorus,LITHDE,Tree,NA
 ucsc,Myricaceae,Morella,Morella californica,MORECA,Shrub,Accepted name Myrica californica.
 ucsc,Pinaceae,Pinus,Pinus attenuata,PINUAT,Tree,NA
 ucsc,Pinaceae,Pinus,Pinus ponderosa,PINUPO,Tree,NA
-ucsc,Pinaceae,Pinus,Pinus ponderosa,PINUPO,Tree,NA
-ucsc,Pinaceae,Pinus,Pinus ponderosa,PINUPO,Tree,NA
-ucsc,Pinaceae,Pseudotsuga,Pseudotsuga menziesii,PSEUME,Tree,NA
 ucsc,Pinaceae,Pseudotsuga,Pseudotsuga menziesii,PSEUME,Tree,NA
 ucsc,Rosaceae,Pyracantha,Pyracantha angustifolia,PYRAAN,Shrub,NA
 ucsc,Fagaceae,Quercus,Quercus agrifolia,QUERAG,Tree,NA
@@ -321,8 +248,6 @@ ucsc,Cupressaceae,Sequoia,Sequoia sempervirens,SEQUSE,Tree,NA
 ucsc,Lauraceae,Umbellularia,Umbellularia californica,UMBECA,Tree,NA
 ucsc,Ericaceae,Vaccinium,Vaccinium ovatum,VACCOV,Shrub,NA
 wabikon,Pinaceae,Abies,Abies balsamea,ABIBAL,Tree,NA
-wabikon,Pinaceae,Abies,Abies balsamea,ABIBAL,Tree,NA
-wabikon,Sapindaceae,Acer,Acer rubrum,ACERUB,Tree,NA
 wabikon,Sapindaceae,Acer,Acer rubrum,ACERUB,Tree,NA
 wabikon,Sapindaceae,Acer,Acer saccharum,ACESUG,Tree,NA
 wabikon,Sapindaceae,Acer,Acer spicatum,ACESPI,Shrub,NA
@@ -335,7 +260,6 @@ wabikon,Cornaceae,Cornus,Cornus alternifolia,CORALT,Tree,NA
 wabikon,Betulaceae,Corylus,Corylus cornuta,CORCOR,Shrub,NA
 wabikon,Thymelaeaceae,Dirca,Dirca palustris,DIRPAL,Shrub,NA
 wabikon,Oleaceae,Fraxinus,Fraxinus americana,FRAAME,Tree,NA
-wabikon,Oleaceae,Fraxinus,Fraxinus americana,FRAAME,Tree,NA
 wabikon,Oleaceae,Fraxinus,Fraxinus nigra,FRANIG,Tree,NA
 wabikon,Aquifoliaceae,Ilex,Ilex mucronata,ILEMUC,Shrub,NA
 wabikon,Aquifoliaceae,Ilex,Ilex verticillata,ILEVER,Shrub,NA
@@ -343,7 +267,6 @@ wabikon,Juglandaceae,Juglans,Juglans cinerea,JUGCIN,Tree,NA
 wabikon,Pinaceae,Larix,Larix laricina,LARLAR,Tree,NA
 wabikon,Caprifoliaceae,Lonicera,Lonicera canadensis,LONCAN,Shrub,NA
 wabikon,Rosaceae,Malus,Malus pumila,MALPUM,Tree,NA
-wabikon,Betulaceae,Ostrya,Ostrya virginiana,OSTVIR,Tree,NA
 wabikon,Betulaceae,Ostrya,Ostrya virginiana,OSTVIR,Tree,NA
 wabikon,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 wabikon,Pinaceae,Picea,Picea glauca,PICGLA,Tree,NA
@@ -354,7 +277,6 @@ wabikon,Salicaceae,Populus,Populus grandidentata,POPGRA,Tree,NA
 wabikon,Salicaceae,Populus,Populus tremuloides,POPTRE,Tree,NA
 wabikon,Rosaceae,Prunus,Prunus pensylvanica,PRUPEN,Tree,NA
 wabikon,Rosaceae,Prunus,Prunus serotina,PRUSER,Tree,NA
-wabikon,Rosaceae,Prunus,Prunus serotina,PRUSER,Tree,NA
 wabikon,Rosaceae,Prunus,Prunus virginiana,PRUVIR,Tree,NA
 wabikon,Fagaceae,Quercus,Quercus rubra,QUERUB,Tree,NA
 wabikon,Grossulariaceae,Ribes,Ribes cynosbati,RIBCYN,Shrub,NA
@@ -362,24 +284,12 @@ wabikon,Adoxaceae,Sambucus,Sambucus racemosa,SAMRAC,Shrub,NA
 wabikon,Rosaceae,Sorbus,Sorbus americana,SORAME,Tree,NA
 wabikon,Cupressaceae,Thuja,Thuja occidentalis,THUOCC,Tree,NA
 wabikon,Malvaceae,Tilia,Tilia americana,TILAME,Tree,NA
-wabikon,Malvaceae,Tilia,Tilia americana,TILAME,Tree,NA
-wabikon,Malvaceae,Tilia,Tilia americana,TILAME,Tree,NA
 wabikon,Pinaceae,Tsuga,Tsuga canadensis,TSUCAN,Tree,NA
 wabikon,Ulmaceae,Ulmus,Ulmus americana,ULMAME,Tree,NA
 wind river,Pinaceae,Abies,Abies amabilis,ABAM,Tree,NA
-wind river,Pinaceae,Abies,Abies amabilis,ABAM,Tree,NA
-wind river,Pinaceae,Abies,Abies grandis,ABGR,Tree,NA
-wind river,Pinaceae,Abies,Abies grandis,ABGR,Tree,NA
 wind river,Pinaceae,Abies,Abies grandis,ABGR,Tree,NA
 wind river,Pinaceae,Abies,Abies procera,ABPR,Tree,NA
-wind river,Pinaceae,Abies,Abies procera,ABPR,Tree,NA
-wind river,Pinaceae,Abies,Abies procera,ABPR,Tree,NA
-wind river,Pinaceae,Abies,Abies procera,ABPR,Tree,NA
 wind river,Pinaceae,Abies,Abies sp.,ABSP,Tree,NA
-wind river,Pinaceae,Abies,Abies sp.,ABSP,Tree,NA
-wind river,Pinaceae,Abies,Abies sp.,ABSP,Tree,NA
-wind river,Pinaceae,Abies,Abies sp.,ABSP,Tree,NA
-wind river,Pinaceae,Abies,Abies spp.,ABSP,Tree,NA
 wind river,Pinaceae,Abies,Abies spp.,ABSP,Tree,NA
 wind river,Sapindaceae,Acer,Acer circinatum,ACCI,Shrub,NA
 wind river,Sapindaceae,Acer,Acer glabrum,ACGL,Tree,NA
@@ -394,14 +304,12 @@ wind river,Ericaceae,Menziesia,Menziesia ferruginea,MEFE,Shrub,NA
 wind river,Rosaceae,Oemleria,Oemleria cerasiformis,OECE,Shrub,NA
 wind river,Pinaceae,Pinus,Pinus monticola,PIMO,Tree,NA
 wind river,Pinaceae,Pseudotsuga,Pseudotsuga menziesii,PSME,Tree,NA
-wind river,Pinaceae,Pseudotsuga,Pseudotsuga menziesii,PSME,Tree,NA
 wind river,Rhamnaceae,Rhamnus,Rhamnus purshiana,RHPU,Shrub,NA
 wind river,Ericaceae,Rhododendron,Rhododendron macrophyllum,RHMA,Shrub,NA
 wind river,Rosaceae,Rosa,Rosa gymnocarpa,ROGY,Shrub,NA
 wind river,Rosaceae,Rubus,Rubus leucodermis,RULE,Shrub,NA
 wind river,Rosaceae,Rubus,Rubus spectabilis,RUSP,Shrub,NA
 wind river,Taxaceae,Taxus,Taxus brevifolia,TABR,Tree,NA
-wind river,Cupressaceae,Thuja,Thuja plicata,THPL,Tree,NA
 wind river,Cupressaceae,Thuja,Thuja plicata,THPL,Tree,NA
 wind river,Pinaceae,Tsuga,Tsuga heterophylla,TSHE,Tree,NA
 wind river,Ericaceae,Vaccinium,Vaccinium membranaceum,VAME,Shrub,NA
@@ -432,21 +340,8 @@ wytham woods,Adoxaceae,Sambucus,Sambucus nigra,SAMBNI,Shrub,NA
 wytham woods,Taxaceae,Taxus,Taxus baccata,TAXUBA,Tree,NA
 wytham woods,Malvaceae,Tilia,Tilia x europaea,TILIEU,Tree,NA
 yosemite,Pinaceae,Abies,Abies concolor,ABCO,Tree,NA
-yosemite,Pinaceae,Abies,Abies concolor,ABCO,Tree,NA
-yosemite,Pinaceae,Abies,Abies concolor,ABCO,Tree,NA
-yosemite,Pinaceae,Abies,Abies concolor,ABCO,Tree,NA
-yosemite,Pinaceae,Abies,Abies concolor,ABCO,Tree,NA
-yosemite,Pinaceae,Abies,Abies concolor,ABCO,Tree,NA
-yosemite,Pinaceae,Abies,Abies magnifica,ABMA,Tree,NA
-yosemite,Pinaceae,Abies,Abies magnifica,ABMA,Tree,NA
-yosemite,Pinaceae,Abies,Abies magnifica,ABMA,Tree,NA
-yosemite,Pinaceae,Abies,Abies magnifica,ABMA,Tree,NA
 yosemite,Pinaceae,Abies,Abies magnifica,ABMA,Tree,NA
 yosemite,Pinaceae,Abies,Abies sp.,ABSP,Tree,NA
-yosemite,Pinaceae,Abies,Abies sp.,ABSP,Tree,NA
-yosemite,Pinaceae,Abies,Abies sp.,ABSP,Tree,NA
-yosemite,Pinaceae,Abies,Abies sp.,ABSP,Tree,NA
-yosemite,Pinaceae,Abies,Abies spp.,ABSP,Tree,NA
 yosemite,Pinaceae,Abies,Abies spp.,ABSP,Tree,NA
 yosemite,Ericaceae,Arctostaphylos,Arctostaphylos patula,ARPA,Shrub,NA
 yosemite,Cupressaceae,Calocedrus,Calocedrus decurrens,CADE,Tree,NA
@@ -460,14 +355,10 @@ yosemite,Betulaceae,Corylus,Corylus cornuta subsp. californica,COCOC,Shrub,NA
 yosemite,Rosaceae,Holodiscus,Holodiscus discolor,HODI,Shrub,NA
 yosemite,Ericaceae,Leucothoe,Leucothoe davisiae,LEDA,Shrub,NA
 yosemite,Pinaceae,Pinus,Pinus lambertiana,PILA,Tree,NA
-yosemite,Pinaceae,Pinus,Pinus lambertiana,PILA,Tree,NA
-yosemite,Pinaceae,Pinus,Pinus ponderosa,PIPO,Tree,NA
-yosemite,Pinaceae,Pinus,Pinus ponderosa,PIPO,Tree,NA
 yosemite,Pinaceae,Pinus,Pinus ponderosa,PIPO,Tree,NA
 yosemite,Rosaceae,Prunus,Prunus emarginata,PREM,Tree,using Alnus allometry for small stems of Prunus emarginata @ Yosemite
 yosemite,Rosaceae,Prunus,Prunus emarginata,PREM,Tree,NA
 yosemite,Rosaceae,Prunus,Prunus virginiana,PRVI,Tree,NA
-yosemite,Pinaceae,Pseudotsuga,Pseudotsuga menziesii,PSME,Tree,NA
 yosemite,Pinaceae,Pseudotsuga,Pseudotsuga menziesii,PSME,Tree,NA
 yosemite,Rhamnaceae,Rhamnus,Rhamnus californica,RHCA,Shrub,NA
 yosemite,Ericaceae,Rhododendron,Rhododendron occidentale,RHOC,Shrub,NA
@@ -489,46 +380,29 @@ zofin,Sambucaceae,Sambucus,Sambucus racemosa,BEZ,Shrub,NA
 zofin,Rosaceae,Sorbus,Sorbus aucuparia,JR,Tree,NA
 zofin,Ulmaceae,Ulmus,Ulmus glabra,JL,Tree,NA
 utah,Pinaceae,Abies,Abies bifolia,NA,Tree,NA
-utah,Pinaceae,Abies,Abies bifolia,NA,Tree,NA
-utah,Pinaceae,Abies,Abies concolor,NA,Tree,NA
 utah,Pinaceae,Abies,Abies concolor,NA,Tree,NA
 utah,Rosaceae,Amelanchier,Amelanchier alnifolia,NA,Tree,NA
 utah,Rosaceae,Cercocarpus,Cercocarpus ledifolius,NA,"Shrub, treelet",NA
 utah,Cupressaceae,Juniperus,Juniperus communis,NA,Shrub,NA
-utah,Cupressaceae,Juniperus,Juniperus communis,NA,Shrub,NA
-utah,Cupressaceae,Juniperus,Juniperus scopulorum,NA,Tree,NA
 utah,Cupressaceae,Juniperus,Juniperus scopulorum,NA,Tree,NA
 utah,Pinaceae,Picea,Picea engelmannii,NA,Tree,NA
-utah,Pinaceae,Picea,Picea engelmannii,NA,Tree,NA
-utah,Pinaceae,Picea,Picea pungens,NA,Tree,NA
 utah,Pinaceae,Picea,Picea pungens,NA,Tree,NA
 utah,Pinaceae,Pinus,Pinus edulis,NA,Tree,NA
 utah,Pinaceae,Pinus,Pinus flexilis,NA,Tree,using Pseudotsuga menziesii allometries as generic equation for small conifers @ Utah
-utah,Pinaceae,Pinus,Pinus flexilis,NA,Tree,using Pseudotsuga menziesii allometries as generic equation for small conifers @ Utah
-utah,Pinaceae,Pinus,Pinus flexilis,NA,Tree,using Pseudotsuga menziesii allometries as generic equation for small conifers @ Utah
-utah,Pinaceae,Pinus,Pinus flexilis,NA,Tree,using Pseudotsuga menziesii allometries as generic equation for small conifers @ Utah
 utah,Pinaceae,Pinus,Pinus flexilis,NA,Tree,using Juniperus osteosperma allometry as proxy for big trees
 utah,Pinaceae,Pinus,Pinus longaeva,NA,Tree,using Pseudotsuga menziesii allometries as generic equation for small conifers @ Utah
-utah,Pinaceae,Pinus,Pinus longaeva,NA,Tree,using Pseudotsuga menziesii allometries as generic equation for small conifers @ Utah
-utah,Pinaceae,Pinus,Pinus longaeva,NA,Tree,using Pseudotsuga menziesii allometries as generic equation for small conifers @ Utah
-utah,Pinaceae,Pinus,Pinus longaeva,NA,Tree,using Pseudotsuga menziesii allometries as generic equation for small conifers @ Utah
 utah,Pinaceae,Pinus,Pinus longaeva,NA,Tree,using Juniperus osteosperma allometry as proxy for big trees
-utah,Pinaceae,Pinus,Pinus ponderosa,NA,Tree,NA
-utah,Pinaceae,Pinus,Pinus ponderosa,NA,Tree,NA
 utah,Pinaceae,Pinus,Pinus ponderosa,NA,Tree,NA
 utah,Salicaceae,Populus,Populus tremuloides,NA,Tree,NA
 utah,Pinaceae,Pseudotsuga,Pseudotsuga menziesii,NA,Tree,NA
 utah,Grossulariaceae,Ribes,Ribes cereum,NA,Shrub,NA
 utah,Grossulariaceae,Ribes,Ribes montigenum,NA,Shrub,NA
 utah,Adoxaceae,Sambucus,Sambucus racemosa,NA,Shrub,NA
-utah,Pinaceae,Pseudotsuga,Pseudotsuga menziesii,NA,Tree,NA
 umbc,Adoxaceae,Viburnum,Viburnum prunifolium,NA,Shrub,NA
 umbc,Adoxaceae,Viburnum,Viburnum acerifolium,NA,Shrub,NA
 umbc,Adoxaceae,Viburnum,Viburnum rhytidophyllum,NA,Shrub,NA
 umbc,Aquifoliaceae,Ilex,Ilex opaca,NA,Shrub,NA
 umbc,Betulaceae,Betula,Betula nigra,NA,Tree,NA
-umbc,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
-umbc,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 umbc,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 umbc,Betulaceae,Carpinus,Carpinus caroliniana,NA,Tree,NA
 umbc,Cannabaceae,Celtis,Celtis occidentalis,NA,Tree,NA
@@ -541,21 +415,15 @@ umbc,Ebenaceae,Diospyros,Diospyros virginiana,NA,Tree,NA
 umbc,Elaeagnaceae,Elaeagnus,Elaeagnus pungens,NA,"Shrub, treelet",NA
 umbc,Elaeagnaceae,Elaeagnus,Elaeagnus angustifolia,NA,"Shrub, treelet",NA
 umbc,Fabaceae,Gleditsia,Gleditsia triacanthos,NA,Tree,NA
-umbc,Fabaceae,Gleditsia,Gleditsia triacanthos,NA,Tree,NA
-umbc,Fabaceae,Gleditsia,Gleditsia triacanthos,NA,Tree,NA
-umbc,Fabaceae,Robinia,Robinia pseudoacacia,NA,Tree,NA
-umbc,Fabaceae,Robinia,Robinia pseudoacacia,NA,Tree,NA
 umbc,Fabaceae,Robinia,Robinia pseudoacacia,NA,Tree,NA
 umbc,Fabaceae,Cercis,Cercis canadensis,NA,Tree,NA
 umbc,Fagaceae,Quercus,Quercus sp.,NA,Tree,NA
 umbc,Fagaceae,Fagus,Fagus grandifolia,NA,Tree,NA
 umbc,Fagaceae,Quercus,Quercus coccinea,NA,Tree,NA
 umbc,Fagaceae,Quercus,Quercus falcata,NA,Tree,NA
-umbc,Fagaceae,Quercus,Quercus falcata,NA,Tree,NA
 umbc,Fagaceae,Quercus,Quercus macrocarpa,NA,Tree,NA
 umbc,Fagaceae,Quercus,Quercus palustris,NA,Tree,NA
 umbc,Fagaceae,Quercus,Quercus phellos,NA,Tree,NA
-umbc,Fagaceae,Quercus,Quercus prinus,NA,Tree,NA
 umbc,Fagaceae,Quercus,Quercus prinus,NA,Tree,NA
 umbc,Fagaceae,Quercus,Quercus rubra,NA,Tree,NA
 umbc,Hamamelidaceae,Hamamelis,Hamamelis virginiana,NA,Shrub,NA
@@ -566,19 +434,13 @@ umbc,Juglandaceae,Carya,Carya sp.,NA,Tree,NA
 umbc,Juglandaceae,Carya,Carya spp.,NA,Tree,NA
 umbc,Juglandaceae,Carya,Carya tomentosa,NA,Tree,NA
 umbc,Lauraceae,Sassafras,Sassafras albidum,NA,Tree,NA
-umbc,Lauraceae,Sassafras,Sassafras albidum,NA,Tree,NA
 umbc,Lauraceae,Lindera,Lindera benzoin,NA,Shrub,NA
 umbc,Lythraceae,Lagerstroemia,Lagerstroemia indica,NA,Shrub,NA
 umbc,Magnoliaceae,Liriodendron,Liriodendron tulipifera,NA,Tree,NA
-umbc,Magnoliaceae,Liriodendron,Liriodendron tulipifera,NA,Tree,NA
-umbc,Malvaceae,Tilia,Tilia americana,NA,Tree,NA
-umbc,Malvaceae,Tilia,Tilia americana,NA,Tree,NA
 umbc,Malvaceae,Tilia,Tilia americana,NA,Tree,NA
 umbc,Moraceae,Maclura,Maclura pomifera,NA,Tree,NA
 umbc,Moraceae,Morus,Morus rubra,NA,Tree,NA
 umbc,Moraceae,Morus,Morus alba,NA,Tree,NA
-umbc,Nyssaceae,Nyssa,Nyssa sylvatica,NA,Tree,NA
-umbc,Nyssaceae,Nyssa,Nyssa sylvatica,NA,Tree,NA
 umbc,Nyssaceae,Nyssa,Nyssa sylvatica,NA,Tree,NA
 umbc,Oleaceae,Fraxinus,Fraxinus sp.,NA,Tree,NA
 umbc,Oleaceae,Fraxinus,Fraxinus americana,NA,Tree,NA
@@ -588,16 +450,11 @@ umbc,Paulowniaceae,Paulownia,Paulownia tomentosa,NA,Tree,NA
 umbc,Pinaceae,Pinus,Pinus thunbergii,NA,Tree,NA
 umbc,Pinaceae,Picea,Picea abies,NA,Tree,NA
 umbc,Platanaceae,Platanus,Platanus occidentalis,NA,Tree,NA
-umbc,Platanaceae,Platanus,Platanus occidentalis,NA,Tree,NA
 umbc,Rosaceae,Malus,Malus coronaria,NA,Shrub,NA
 umbc,Rosaceae,Malus,Malus sylvestris,NA,Shrub,NA
 umbc,Rosaceae,Crataegus,Crataegus spp.,NA,Shrub,NA
 umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,NA
-umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,NA
-umbc,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,NA
 umbc,Rosaceae,Prunus,Prunus serotina,NA,Tree,NA
-umbc,Rosaceae,Prunus,Prunus serotina,NA,Tree,NA
-umbc,Rosaceae,Prunus,Prunus avium,NA,Tree,NA
 umbc,Rosaceae,Prunus,Prunus avium,NA,Tree,NA
 umbc,Rosaceae,Pyrus,Pyrus calleryana,NA,Tree,NA
 umbc,Rosaceae,Pyrus,Pyrus communis,NA,Tree,NA
@@ -619,13 +476,10 @@ harvard forest,Aquifoliaceae,Ilex,Ilex laevigata,NA,Shrub,NA
 harvard forest,Aquifoliaceae,Ilex,Ilex verticillata,NA,Shrub,NA
 harvard forest,Betulaceae,Alnus,Alnus incana,NA,Tree,NA
 harvard forest,Betulaceae,Betula,Betula alleghaniensis,NA,Tree,NA
-harvard forest,Betulaceae,Betula,Betula alleghaniensis,NA,Tree,NA
 harvard forest,Betulaceae,Betula,Betula lenta,NA,Tree,NA
 harvard forest,Betulaceae,Betula,Betula papyrifera,NA,Tree,NA
 harvard forest,Betulaceae,Betula,Betula populifolia,NA,Tree,NA
 harvard forest,Betulaceae,Betula,Betula unknown,NA,Tree,NA
-harvard forest,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
-harvard forest,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 harvard forest,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 harvard forest,Cupressaceae,Juniperus,Juniperus communis,NA,Shrub,NA
 harvard forest,Ericaceae,Kalmia,Kalmia latifolia,NA,Shrub,NA
@@ -636,8 +490,6 @@ harvard forest,Fagaceae,Castanea,Castanea dentata,NA,Tree,NA
 harvard forest,Fagaceae,Fagus,Fagus grandifolia,NA,Tree,NA
 harvard forest,Fagaceae,Quercus,Quercus rubra,NA,Tree,NA
 harvard forest,Fagaceae,Quercus,Quercus unknown,NA,Tree,NA
-harvard forest,Fagaceae,Quercus,Quercus velutina,NA,Tree,NA
-harvard forest,Fagaceae,Quercus,Quercus velutina,NA,Tree,NA
 harvard forest,Fagaceae,Quercus,Quercus velutina,NA,Tree,NA
 harvard forest,Hamamelidaceae,Hamamelis,Hamamelis virginiana,NA,Shrub,NA
 harvard forest,Lauraceae,Lindera,Lindera benzoin,NA,Shrub,NA
@@ -656,7 +508,6 @@ harvard forest,Rosaceae,Amelanchier,Amelanchier laevis,NA,Shrub,NA
 harvard forest,Rosaceae,Aronia,Aronia melanocarpa,NA,Shrub,NA
 harvard forest,Rosaceae,Crataegus,Crataegus spp.,NA,Shrub,NA
 harvard forest,Rosaceae,Prunus,Prunus serotina,NA,Tree,NA
-harvard forest,Rosaceae,Prunus,Prunus serotina,NA,Tree,NA
 harvard forest,Rosaceae,Sorbus,Sorbus americana,NA,Shrub,NA
 harvard forest,Salicaceae,Populus,Populus grandidentata,NA,Tree,NA
 harvard forest,Salicaceae,Populus,Populus tremuloides,NA,Tree,NA
@@ -671,11 +522,9 @@ scotty creek,Betulaceae,Betula,Betula occidentalis,NA,Tree,NA
 scotty creek,Betulaceae,Betula,Betula pubescens,NA,Tree,NA
 scotty creek,Betulaceae,Betula,Betula spp.,NA,Shrub,NA
 scotty creek,Pinaceae,Larix,Larix laricina,NA,Tree,NA
-scotty creek,Pinaceae,Larix,Larix laricina,NA,Tree,NA
 scotty creek,Pinaceae,Picea,Picea glauca,NA,Tree,NA
 scotty creek,Pinaceae,Picea,Picea mariana,NA,Tree,NA
 scotty creek,Pinaceae,Pinus,Pinus banksiana,NA,Tree,NA
-scotty creek,Salicaceae,Salix,Salix sp.,NA,Shrub,NA
 scotty creek,Salicaceae,Salix,Salix sp.,NA,Shrub,NA
 michigan big woods,Adoxaceae,Sambucus,Sambucus canadensis,NA,Shrub,NA
 michigan big woods,Aquifoliaceae,Ilex,Ilex verticillata,NA,Shrub,NA
@@ -684,11 +533,8 @@ michigan big woods,Betulaceae,Betula,Betula alleghaniensis,NA,Tree,
 michigan big woods,Betulaceae,Carpinus,Carpinus caroliniana,NA,Tree,NA
 michigan big woods,Betulaceae,Carpinus,Carpinus caroliniana,NA,Tree,
 michigan big woods,Betulaceae,Corylus,Corylus americana,NA,"Shrub, treelet",NA
-michigan big woods,Betulaceae,Corylus,Corylus americana,NA,"Shrub, treelet",NA
-michigan big woods,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 michigan big woods,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 michigan big woods,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,
-michigan big woods,Betulaceae,Ostrya,Ostrya virginiana,NA,Tree,NA
 michigan big woods,Cornaceae,Cornus,Cornus alternifolia,NA,Tree,NA
 michigan big woods,Cornaceae,Cornus,Cornus amomum,NA,Shrub,NA
 michigan big woods,Cornaceae,Cornus,Cornus florida,NA,Tree,NA
@@ -696,18 +542,13 @@ michigan big woods,Cornaceae,Cornus,Cornus racemosa,NA,Shrub,NA
 michigan big woods,Cupressaceae,Juniperus,Juniperus communis,NA,Shrub,NA
 michigan big woods,Cupressaceae,Juniperus,Juniperus virginiana,NA,Tree,NA
 michigan big woods,Cupressaceae,Thuja,Thuja occidentalis,NA,Tree,NA
-michigan big woods,Cupressaceae,Thuja,Thuja occidentalis,NA,Tree,NA
 michigan big woods,Elaeagnaceae,Elaeagnus,Elaeagnus umbellata,NA,"Shrub, treelet",NA
 michigan big woods,Ericaceae,Vaccinium,Vaccinium corymbosum,NA,Shrub,NA
-michigan big woods,Fabaceae,Robinia,Robinia pseudoacacia,NA,Tree,NA
-michigan big woods,Fabaceae,Robinia,Robinia pseudoacacia,NA,Tree,NA
 michigan big woods,Fabaceae,Robinia,Robinia pseudoacacia,NA,Tree,NA
 michigan big woods,Fagaceae,Fagus,Fagus grandifolia,NA,Tree,NA
 michigan big woods,Fagaceae,Quercus,Quercus alba,NA,Tree,NA
 michigan big woods,Fagaceae,Quercus,Quercus rubra,NA,Tree,NA
 michigan big woods,Fagaceae,Quercus,Quercus rubra,NA,Tree,
-michigan big woods,Fagaceae,Quercus,Quercus velutina,NA,Tree,NA
-michigan big woods,Fagaceae,Quercus,Quercus velutina,NA,Tree,NA
 michigan big woods,Fagaceae,Quercus,Quercus velutina,NA,Tree,NA
 michigan big woods,Fagaceae,Quercus,Quercus x hawkinsiae,NA,Tree,NA
 michigan big woods,Fagaceae,Quercus,Quercus x palaeolithicola,NA,Tree,NA
@@ -719,17 +560,11 @@ michigan big woods,Juglandaceae,Carya,Carya ovata,NA,Tree,NA
 michigan big woods,Juglandaceae,Carya,Carya spp.,NA,Tree,NA
 michigan big woods,Juglandaceae,Juglans,Juglans nigra,NA,Tree,NA
 michigan big woods,Lauraceae,Lindera,Lindera benzoin,NA,Shrub,NA
-michigan big woods,Lauraceae,Lindera,Lindera benzoin,NA,Shrub,NA
-michigan big woods,Lauraceae,Sassafras,Sassafras albidum,NA,Tree,NA
 michigan big woods,Lauraceae,Sassafras,Sassafras albidum,NA,Tree,NA
 michigan big woods,Oleaceae,Fraxinus,Fraxinus americana,NA,Tree,NA
 michigan big woods,Oleaceae,Fraxinus,Fraxinus americana,NA,Tree,
 michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,NA
-michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,NA
-michigan big woods,Rosaceae,Amelanchier,Amelanchier arborea,NA,Tree,NA
 michigan big woods,Rosaceae,Malus,Malus sp.,NA,Shrub,NA
-michigan big woods,Rosaceae,Malus,Malus sp.,NA,Shrub,NA
-michigan big woods,Rosaceae,Prunus,Prunus serotina,NA,Tree,NA
 michigan big woods,Rosaceae,Prunus,Prunus serotina,NA,Tree,NA
 michigan big woods,Rosaceae,Prunus,Prunus serotina,NA,Tree,
 michigan big woods,Rosaceae,Prunus,Prunus virginiana,NA,Tree,NA
@@ -737,20 +572,14 @@ michigan big woods,Rosaceae,Prunus,Prunus virginiana,NA,Tree,
 michigan big woods,Rosaceae,Pyrus,Pyrus sp.,NA,Tree,NA
 michigan big woods,Rosaceae,Prunus,Pyrus sp.,NA,Tree,
 michigan big woods,Rutaceae,Zanthoxylum,Zanthoxylum americanum,NA,"Shrub, treelet",NA
-michigan big woods,Rutaceae,Zanthoxylum,Zanthoxylum americanum,NA,"Shrub, treelet",NA
 michigan big woods,Salicaceae,Populus,Populus grandidentata,NA,Tree,NA
 michigan big woods,Salicaceae,Populus,Populus grandidentata,NA,Tree,
-michigan big woods,Salicaceae,Populus,Populus grandidentata,NA,Tree,
-michigan big woods,Sapindaceae,Acer,Acer rubrum,NA,Tree,NA
 michigan big woods,Sapindaceae,Acer,Acer rubrum,NA,Tree,NA
 michigan big woods,Sapindaceae,Acer,Acer rubrum,NA,Tree,
 michigan big woods,Sapindaceae,Acer,Acer saccharum,NA,Tree,NA
 michigan big woods,Sapindaceae,Acer,Acer saccharum,NA,Tree,
 michigan big woods,Simaroubaceae,Ailanthus,Ailanthus altissima,NA,Tree,NA
 michigan big woods,Tiliaceae,Tilia,Tilia americana,NA,Tree,Accepted family Malvaceae
-michigan big woods,Tiliaceae,Tilia,Tilia americana,NA,Tree,Accepted family Malvaceae
-michigan big woods,Tiliaceae,Tilia,Tilia americana,NA,Tree,Accepted family Malvaceae
-michigan big woods,Ulmaceae,Ulmus,Ulmus americana,NA,Tree,NA
 michigan big woods,Ulmaceae,Ulmus,Ulmus americana,NA,Tree,NA
 traunstein ,Pinaceae,Picea,Picea abies,10,Tree,NA
 traunstein ,Pinaceae,Abies,Abies alba,20,Tree,NA
@@ -860,7 +689,6 @@ indian cave,Ulmaceae,Ulmus,Ulmus thomasii,ULMUTH,Tree,
 indian cave,Rutaceae,Zanthoxylum,Zanthoxylum americanum,ZANTAM,Shrub,
 ordway-swisher,Fabaceae,Amorpha,Amorpha fruticosa,AMFR,Shrub,
 ordway-swisher,Ebenaceae,Diospyros,Diospyros virginiana,DIVI,Tree,NA
-ordway-swisher,Pinaceae,Pinus,Pinus palustris,PIPA,Tree,NA
 ordway-swisher,Pinaceae,Pinus,Pinus palustris,PIPA,Tree,NA
 ordway-swisher,Fagaceae,Quercus,Quercus geminata,QUGE,Tree,
 ordway-swisher,Fagaceae,Quercus,Quercus hemisphaerica,QUHE,Tree,
