@@ -190,5 +190,3 @@ table(maxDist)/length(maxDist)*100
 
 library(plotly)
 ggplotly(gscbi)
-
-## TODO compare with Chojnacky 2014
