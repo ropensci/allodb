@@ -7,8 +7,6 @@ get_biomass = function(dbh,  ## in cm
                        var = "Total aboveground biomass",
                        add_weight = FALSE) {
 
-  library(data.table)
-
   load("data/equations.rda")
   load("data/taxo_weight.rda")
   ## temp - make sure all matrices have the same equations in the same order
@@ -17,7 +15,7 @@ get_biomass = function(dbh,  ## in cm
   equations_ids = equations_ids[!is.na(equations_ids)]
   equations_ids = equations_ids[equations_ids %in% colnames(taxo_weight)[-1]]
   equations = subset(equations, equation_id %in% equations_ids)
-  taxo_weight = taxo_weight[, c("nameC", equations$equation_id), with=FALSE]
+  taxo_weight = taxo_weight[, c("nameC", equations$equation_id)]
 
   ## keep only useful equations
   equations = subset(equations, dependent_variable == var)
