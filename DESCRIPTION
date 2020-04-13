@@ -19,7 +19,7 @@ Authors@R:
       person(given = "Camille",
              family = "Piponiot",
              role = "aut",
-             email = "camille.piponiot@gmail.com"",
+             email = "camille.piponiot@gmail.com",
              comment = c(ORCID = "0000-0002-3473-1982")),
       person(given = "Kristina",
              family = "Anderson-Teixeira",
