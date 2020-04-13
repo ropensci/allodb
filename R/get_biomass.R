@@ -23,19 +23,11 @@ get_biomass = function(dbh,  ## in cm
     equations = subset(equations, !independent_variable == "DBH, H")
 
   # transform columns to numeric
-  numeric_columns = c(
-    "lat",
-    "long",
-    "elev_m",
-    "dbh_min_cm",
-    "dbh_max_cm",
-    "sample_size",
-    "dbh_unit_CF",
-    "output_units_CF",
-    "r_squared"
-  )
-  suppressWarnings(equations[, numeric_columns] <-
-                     apply(equations[, numeric_columns], 2, as.numeric))
+  suppressWarnings(equations$dbh_min_cm <- as.numeric(equations$dbh_min_cm))
+  suppressWarnings(equations$dbh_max_cm <- as.numeric(equations$dbh_max_cm))
+  suppressWarnings(equations$sample_size <- as.numeric(equations$sample_size))
+  suppressWarnings(equations$dbh_unit_CF <- as.numeric(equations$dbh_unit_CF))
+  suppressWarnings(equations$output_units_CF <- as.numeric(equations$output_units_CF))
 
   agb_all = matrix(0, nrow = length(dbh), ncol = nrow(equations))
   # modifiy allometry to insert unit conversion
