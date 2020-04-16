@@ -1,12 +1,11 @@
-Column,Field,Description,Column_type,Field_codes,Units,Range,
-1 / A,site,ForestGEO site name (corresponds to name in ForestGEO sites master table),character,NA,NA,NA,
-2 / B,family,"Plant family name revised in Taxonomic Name Resolution Services, an online free tool for correcting and standardizing plant names.",character,NA,NA,NA,
-3 / C,genus,Genus name revised in Taxonomic Name Resolution Services.,,,NA,NA,
-4 / D,latin_name,Plant name as used by Forestgeo site. Scientific names revised using Taxonomic Name Resolution Services.,character,NA,NA,NA,
-5 / E,species_code,"Species code used at the ForestGEO site, variable per site, even if representing same species.",character,NA,NA,NA,
-6 / F,life_form,Common growth form for a given plant species,character,NA,NA,NA,
-7 / G,equation_category,"Allometric equation category that can be selected by the user. ""Generic"" equations are the current best equations that can be applied to any site in a broad geographic area (e.g., pantropical, temperate) and to any taxa (or group of taxa) at that site. ""Expert"" equations are the current best equations for specific taxa at a specific site, as identified by a botanist or forest ecologist. ""Other"" equations are potentially relevant (i.e., may be selected as best under different criteria) or were previously classified as best available.",character,Generic; Expert; Other,NA,NA,DELETE BEFORE PUBLICATION
-9 / I,preceding_equation_id,Preceding equation needed to calculate tree biomass (applied before biomass allometry),character,NA,NA,NA,DELETE BEFORE PUBLICATION
-10 / J,equation_id,Unique equation identification number given arbitrarely. Links to id in Equations table.,character,NA,NA,NA,DELETE BEFORE PUBLICATION
-11 / K,equation_taxa,"Taxa for which the equation was generated, included sometimes specific wood gravity limit values.",character,NA,NA,NA,DELETE BEFORE PUBLICATION
-12 / L,warning,"Informative notes, sometimes critical for biomass calculation",character,NA,NA,NA,
+Column,Field,Description,Column_type
+1 / A,site,ForestGEO site name (cfull site name or abbreviated),character
+2 / B,family,"Plant family name revised in Taxonomic Name Resolution Services (TNRS), an online free tool for correcting and standardizing plant names.",character
+3 / C,genus,Plant genus name,
+4 / D,species,"Plant specific name or epithet. When referring to a plant in a genus if the individual was not identified at the speices level, we use 'sp.' If an epithet is precedeed by the letter 'x' it indicates an hybrid form (i.e. Tilia x europaea)",
+5 / E,variety,Variation recognized within a species,
+6 / F,subspecies,Subspecies recogized within a species,
+7 / G,latin_name,"Plant name as used by Forestgeo sites (names corrected here using TNRS, when neccesary)",character
+9 / I,species_code,"Species code used at the ForestGEO site, variable per site, even if representing same species.",character
+10 / J,life_form,Common growth form for a given plant species,character
+11 / K,warning,"Informative notes, sometimes critical for biomass calculation",character
