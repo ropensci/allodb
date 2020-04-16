@@ -101,8 +101,8 @@ for (i in 1:length(ls_site_species)) {
                          coords = df[1, c("long", "lat")], add_weight = TRUE)[, -1]
     totalW = colSums(weight, na.rm=TRUE)
     # ## first 20 equations
-    weightMax = weight[,order(totalW, decreasing = T)[1:20], with=FALSE]
-    dt = melt(cbind(dbh = df$dbh, weightMax), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
+    weightMax = weight[,order(totalW, decreasing = T)[1:20]]
+    dt = melt(data.table(dbh = df$dbh, weightMax), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
     dt = merge(dt, equations[, c("equation_id", "equation_taxa", "dbh_min_cm", "dbh_max_cm", "koppen")],
                by.x = "equationID", by.y = "equation_id")
     dt[, `:=`(dbh_min_cm = as.numeric(dbh_min_cm), dbh_max_cm = as.numeric(dbh_max_cm))]
