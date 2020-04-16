@@ -1,9 +1,31 @@
-get_biomass = function(dbh,  ## in cm
-                       h = NULL,       # same size as dbh
-                       genus = NULL,   # same size as dbh
-                       species = NULL, # same size as dbh
-                       coords = NULL,  # a vector of size 2 (if all trees come from the same location)
-                       # or a matrix with 2 columns giving the coordinates (latitude and longitude) of each tree
+#' Function to use the allometries in the `equations` table.
+#'
+#' This function creates S3 objects of class "numeric".
+#'
+#' @param dbh A numerical vector containing tree diameter at breast height (dbh measurements, in cm
+#' @param h A numerical vector (same length as dbh) containing tree height measurements, in m. Default is NULL, when no measurement is available.
+#' @param genus A character vector (same length as dbh), containing the genus (e.g. "Quercus") of each tree. Default is NULL, when no identification is available.
+#' @param species A character vector (same length as dbh), containing the species (e.g. "rubra")  of each tree. Default is NULL, when no identification is available.
+#' @param coords A numerical vector of length 2 with longitude and latitude (if all trees were measured in the same location) or a matrix with 2 numerical columns giving the coordinates of each tree. Default is NULL when no information is available.
+#' @param var What dependent variable should be provided in the output? Default is "Total aboveground biomass", other possible values are: "Bark biomass", "Branches (dead)", "Branches (live)", "Branches total (live, dead)", "Foliage total", "Height", "Leaves", "Stem (wood only)", "Stem biomass", "Stem biomass (with bark)", "Stem biomass (without bark)", "Whole tree (above and belowground)" , "Whole tree (above stump)". Be aware that only a few equations exist for those other variables, so estimated values might not be very acurate.
+#' @param add_weight SHoulf the relative weigth given to each equation in the `equations` data frame be added to the output? Defalut in FALSE.
+#'
+#' @return A vector of class "numeric".
+#' @export
+#'
+#' @examples
+#' data(scbi_stem1)
+#' get_biomass(
+#' dbh = scbi_stem1$dbh,
+#' genus = scbi_stem1$genus,
+#' species = scbi_stem1$species,
+#' coords = c(-78.2, 38.9)
+#' )
+get_biomass = function(dbh,
+                       h = NULL,
+                       genus = NULL,
+                       species = NULL,
+                       coords = NULL,
                        var = "Total aboveground biomass",
                        add_weight = FALSE) {
 

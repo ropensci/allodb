@@ -5,7 +5,11 @@
 \alias{wsg}
 \alias{wsg_metadata}
 \title{Tables of wood density and associated metadata.}
-\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 549 rows and 8 columns.}
+\format{
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 549 rows and 8 columns.
+
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 9 rows and 8 columns.
+}
 \usage{
 wsg
 
@@ -18,10 +22,12 @@ wsg_metadata
 }
 }
 \seealso{
-Other database datasets: \code{\link{equations}},
-  \code{\link{missing_values_metadata}},
-  \code{\link{references_metadata}},
-  \code{\link{sites_info}}, \code{\link{sitespecies}}
+Other database datasets: 
+\code{\link{equations}},
+\code{\link{missing_values_metadata}},
+\code{\link{references_metadata}},
+\code{\link{sites_info}},
+\code{\link{sitespecies}}
 }
 \concept{database datasets}
 \keyword{datasets}

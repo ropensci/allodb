@@ -5,14 +5,41 @@
 \alias{equations}
 \alias{equations_metadata}
 \title{Tables of allometric equations and associated metadata for ForestGEO sites.}
-\format{A data frame with 168 rows and 22 variables:\preformatted{# FIXME: Replace with real data.
-[,1]	Ozone	 numeric	 Ozone (ppb)
-[,2]	Solar.R	 numeric	 Solar R (lang)
-[,3]	Wind	 numeric	 Wind (mph)
-[,4]	Temp	 numeric	 Temperature (degrees F)
-[,5]	Month	 numeric	 Month (1--12)
-[,6]	Day	 numeric	 Day of month (1--31)
-}}
+\format{
+A data frame with 225 rows and 24 variables:\preformatted{[,1]	ref_id	character
+[,2]	equation_id	character
+[,3]	equation_allometry	character
+[,4]	equation_form	character
+[,5]	dependent_variable	character
+[,6]	independent_variable	character
+[,7]	equation_taxa	character (string)
+[,8]	allometry_specificity	character
+[,9]	geographic_area	character
+[,10]	dbh_min_cm	numeric
+[,11]	dbh_max_cm	numeric
+[,12]	sample_size	integer
+[,13]	dbh_units_original	character
+[,14]	units_original	character
+[,15]	allometry_development_method	character
+[,16]	regression_model	character
+[,17]	other_equations_tested	character
+[,18]	log_biomass	numeric
+[,19]	bias_corrected	numeric
+[,20]	bias_correction_factor	numeric
+[,21]	notes_fitting_model	character
+[,22]	original_equation_id	character
+[,23]	original_data_availability	character
+[,24]	notes	character
+
+}
+
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 47 rows and 8 columns.
+}
+\source{
+\itemize{
+\item Go to \code{references} table for equations original sources.
+}
+}
 \usage{
 equations
 
@@ -23,20 +50,19 @@ A compilation of best available allometry equations to calculate tree
 above-ground biomass (AGB) per species at ForestGEO sites:
 \itemize{
 \item \code{equations}: Table of allometric equations.
-\item \code{equations_metadata}: Table of metadata of \code{equations}.
+\item \code{equations_metadata}: Metadata for \code{equations} table.
 }
 }
 \details{
-\itemize{
-\item equation_id: Random, unique equation-identifier.
-\item equation_form: FIXME.
-}
+
 }
 \seealso{
-Other database datasets: \code{\link{missing_values_metadata}},
-  \code{\link{references_metadata}},
-  \code{\link{sites_info}}, \code{\link{sitespecies}},
-  \code{\link{wsg}}
+Other database datasets: 
+\code{\link{missing_values_metadata}},
+\code{\link{references_metadata}},
+\code{\link{sites_info}},
+\code{\link{sitespecies}},
+\code{\link{wsg}}
 }
 \concept{database datasets}
 \keyword{datasets}

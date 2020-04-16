@@ -4,7 +4,9 @@
 \name{sites_info}
 \alias{sites_info}
 \title{Table of information on sites from tropical forests.}
-\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 68 rows and 12 columns.}
+\format{
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 67 rows and 13 columns.
+}
 \source{
 Ervan Rutishauser (er.rutishauser@gmail.com), received on Sat,
 Oct 28, 2017 at 4:05 AM.
@@ -16,10 +18,12 @@ sites_info
 Table of information on sites from tropical forests.
 }
 \seealso{
-Other database datasets: \code{\link{equations}},
-  \code{\link{missing_values_metadata}},
-  \code{\link{references_metadata}},
-  \code{\link{sitespecies}}, \code{\link{wsg}}
+Other database datasets: 
+\code{\link{equations}},
+\code{\link{missing_values_metadata}},
+\code{\link{references_metadata}},
+\code{\link{sitespecies}},
+\code{\link{wsg}}
 }
 \concept{database datasets}
 \keyword{datasets}

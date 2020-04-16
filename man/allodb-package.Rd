@@ -17,12 +17,13 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Mauro Lepore \email{leporem@si.edu} (0000-0002-1986-7988) [contractor]
+\strong{Maintainer}: Mauro Lepore \email{leporem@si.edu} (\href{https://orcid.org/0000-0002-1986-7988}{ORCID}) [contractor]
 
 Authors:
 \itemize{
-  \item Erika Gonzalez-Akre \email{GonzalezEB@si.edu} (0000-0001-8305-6672)
+  \item Erika Gonzalez-Akre \email{GonzalezEB@si.edu} (\href{https://orcid.org/0000-0001-8305-6672}{ORCID})
   \item Ervan Rutishauser \email{RutishauserE@si.edu}
+  \item Camille Piponiot \email{camille.piponiot@gmail.com} (\href{https://orcid.org/0000-0002-3473-1982}{ORCID})
   \item Kristina Anderson-Teixeira \email{TeixeiraK@si.edu}
 }
 
