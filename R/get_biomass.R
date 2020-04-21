@@ -28,7 +28,9 @@
 #' @param add_weight Should the relative weigth given to each equation in the
 #'   `equations` data frame be added to the output? Default is FALSE.
 #'
-#' @return A vector of class "numeric".
+#' @return A vector of class "numeric" of the same length as dbh, containing AGB
+#'   value (in kg) for every stem, or the dependent variable as defined in
+#'   `var`.
 #' @export
 #'
 #' @examples
@@ -104,7 +106,7 @@ get_biomass = function(dbh,
   } else
     taxo_weight_census = taxo_weight[idx,-1]
   # replace all NAs with 1e-6 (used only of no other equation is available)
-  for (col in names(taxo_weight_census)[-1])
+  for (col in names(taxo_weight_census))
     set(
       taxo_weight_census,
       i = which(is.na(taxo_weight_census[[col]])),
@@ -168,6 +170,8 @@ weight_allom = function(Nobs,
                         dbhrange,
                         weight_E = 1,
                         weight_T = 1,
+                        replace_dbhrange = 0.1,
+                        ## wieght value in weight_D matrix when there is no DBH range for the equation
                         a = 1,
                         b = 0.03,
                         steep = 4,
@@ -207,9 +211,9 @@ weight_allom = function(Nobs,
     ncol = nrow(dbhrange),
     byrow = TRUE
   ))
-  weight_D = (1 - abs((Mdbh - (Mmin + Mmax) / 2) / (Mmax - Mmin)) ^ steep) ^
-    3
+  weight_D = (1 - abs((Mdbh - (Mmin + Mmax) / 2) / (Mmax - Mmin)) ^ steep) ^ 3
   weight_D[weight_D < 0] = 0   ## keep only positive values, transform values < 0 into 0
+  weight_D[, which(apply(weight_D, 2, anyNA))] = replace_dbhrange ## weight (independent of DBH) when equation does not have DBH range
 
   # multiplicative weights: if one is zero, the total weight should be zero too
   return(weight_N * weight_D * weight_E * weight_T)

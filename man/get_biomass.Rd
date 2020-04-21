@@ -48,7 +48,9 @@ not be very acurate.}
 \code{equations} data frame be added to the output? Default is FALSE.}
 }
 \value{
-A vector of class "numeric".
+A vector of class "numeric" of the same length as dbh, containing AGB
+value (in kg) for every stem, or the dependent variable as defined in
+\code{var}.
 }
 \description{
 This function creates S3 objects of class "numeric".
