@@ -174,9 +174,8 @@ weight_allom = function(Nobs,
                         ## wieght value in weight_D matrix when there is no DBH range for the equation
                         a = 1,
                         b = 0.03,
-                        steep = 4,
-                        ## controls the steepness of the dbh range transition, should be > 1
-                        lambda = 2) {
+                        steep = 3  ## controls the steepness of the dbh range transition, should be > 1
+) {
   Nobs = as.numeric(Nobs)
   Nobs = matrix(Nobs,
                 nrow = length(dbh),
