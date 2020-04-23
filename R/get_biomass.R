@@ -43,14 +43,14 @@
 #' )
 get_biomass = function(dbh,
                        h = NULL,
-                       genus = NULL,
+                       genus = rep(NA, length(dbh)),
                        species = NULL,
-                       coords = NULL,
+                       coords,
                        var = "Total aboveground biomass",
                        add_weight = FALSE) {
   library(data.table)
-  load("data/equations.rda")
-  load("data/taxo_weight.rda")
+  data("equations")
+  data("taxo_weight")
   ## temp - make sure all matrices have the same equations in the same order
   ## while equation table changes regularly
   equations_ids = equations$equation_id
@@ -117,8 +117,8 @@ get_biomass = function(dbh,
   # koppen climate
   # (1) get koppen climate for all locations
   # koppen climate raster downloaded from http://koeppen-geiger.vu-wien.ac.at/present.htm on the 2/10/2020
-  load("data/koppenRaster.rda")
-  load("data/koppenMatrix.rda")
+  data("koppenRaster")
+  data("koppenMatrix")
   # if only one location, transform coords into matrix with 2 numeric columns
   if (length(coords) == 2) {
     coordsSite = t(as.numeric(coords))
