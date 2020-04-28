@@ -120,6 +120,20 @@ for (i in 1:length(ls_site_species)) {
   }
 }
 
+## subset data: species-site combination with non monotonous AGB allometry
+data = setorder(data, site, name, dbh)
+which_nonmon = subset(data[, .(non_mon = any(diff(agb) < 0)), .(site, name)], (non_mon))
+data_nonmon = merge(data, which_non_mon[, -"non_mon"], by = c("site", "name"))
+
+ggplot(data_nonmon, aes(x=dbh, y=agb)) +
+  geom_line() +
+  facet_wrap(~ site + name, ncol=5) +
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(y="AGB (tons)", x = "DBH (cm)") +
+  scale_x_log10() + scale_y_log10()
+ggsave("tests/graphs/non_monotonous_allometries.pdf", height=36, width=15)
+
 ## test 3 - agb in scbi data base vs allodb equations ####
 
 scbi = data.table(read.csv("tests/scbi.stem1-agb.csv"))
@@ -162,9 +176,9 @@ scbi[, agb_choj := exp(a + b*log(dbh/10))/1000]
 
 ## use get_biomass function
 scbi$agb_allodb = get_biomass(dbh=scbi$dbh/10, ## !! dbh in mm
-                                 genus=scbi$genus,
-                                 species = scbi$species,
-                                 coords = c(-78.15, 38.9))/1000
+                              genus=scbi$genus,
+                              species = scbi$species,
+                              coords = c(-78.15, 38.9))/1000
 gchave_allodb = ggplot(scbi, aes(x = agb, y = agb_allodb, color = paste(genus, species))) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point() +
@@ -189,4 +203,4 @@ table(maxDist)/length(maxDist)*100
 
 
 library(plotly)
-ggplotly(gscbi)
+ggplotly(gchave_allodb)
