@@ -47,12 +47,36 @@ get_biomass = function(dbh,
                        species = NULL,
                        coords,
                        var = "Total aboveground biomass",
-                       add_weight = FALSE) {
+                       add_weight = FALSE,
+                       use_height_allom = TRUE) {
   library(data.table)
   data("equations")
   data("taxo_weight")
-  ## temp - make sure all matrices have the same equations in the same order
-  ## while equation table changes regularly
+
+  ## replace height with height allometry from Bohn et al. 2014 in Jansen et al 1996
+  if (use_height_allom) {
+    eq_jansen = subset(equations, ref_id=="jansen_1996_otvb")
+    ## height allometries defined per genus -> get info in jansen allometries
+    eq_jansen$genus = tstrsplit(eq_jansen$equation_taxa, " ")[[1]]
+    ## vreate height allometry dataframe
+    hallom = subset(equations, ref_id=="bohn_2014_ocai" & dependent_variable == "Height" )
+    hallom = hallom[, c("equation_taxa", "equation_allometry")]
+    colnames(hallom) = c("genus", "hsub")
+    ## merge with jansen allometries (equations that do not have a corresponding height allometry will not be substituted)
+    eq_jansen = merge(eq_jansen, hallom, by = "genus")
+    # substitute H by its DBH-based estimation
+    toMerge = eq_jansen[, c("hsub", "equation_allometry")]
+    eq_jansen$equation_allometry = apply(toMerge, 1, function(X) {
+      gsub("\\(h", paste0("((", X[1], ")"), X[2])
+    })
+    # replace independent_variable column
+    eq_jansen$independent_variable = "DBH"
+    # replace in equation table
+    equations = rbind(subset(equations, !equation_id %in% eq_jansen$equation_id),
+                      eq_jansen[, colnames(equations)])
+  }
+
+
   equations_ids = equations$equation_id
   equations_ids = equations_ids[!is.na(equations_ids)]
   equations_ids = equations_ids[equations_ids %in% colnames(taxo_weight)[-1]]
