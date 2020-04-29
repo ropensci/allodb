@@ -61,7 +61,7 @@ get_biomass = function(dbh,
   if (use_height_allom) {
     eq_jansen = subset(equations, ref_id=="jansen_1996_otvb")
     ## height allometries defined per genus -> get info in jansen allometries
-    eq_jansen$genus = tstrsplit(eq_jansen$equation_taxa, " ")[[1]]
+    eq_jansen$genus = tstrsplit(eq_jansen$equation.notes, " ")[[5]]
     ## vreate height allometry dataframe
     hallom = subset(equations, ref_id=="bohn_2014_ocai" & dependent_variable == "Height" )
     hallom = hallom[, c("equation_taxa", "equation_allometry")]
