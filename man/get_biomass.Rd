@@ -8,11 +8,12 @@ equations.}
 get_biomass(
   dbh,
   h = NULL,
-  genus = NULL,
+  genus = rep(NA, length(dbh)),
   species = NULL,
-  coords = NULL,
+  coords,
   var = "Total aboveground biomass",
-  add_weight = FALSE
+  add_weight = FALSE,
+  use_height_allom = TRUE
 )
 }
 \arguments{
@@ -39,13 +40,17 @@ information is available.}
 is "Total aboveground biomass", other possible values are: "Bark biomass",
 "Branches (dead)", "Branches (live)", "Branches total (live, dead)",
 "Foliage total", "Height", "Leaves", "Stem (wood only)", "Stem biomass",
-"Stem biomass (with bark)", "Stem biomass (without bark)", "Whole tree
-(above and belowground)" , "Whole tree (above stump)". Be aware that only a
-few equations exist for those other variables, so estimated values might
-not be very acurate.}
+"Stem biomass (with bark)", "Stem biomass (without bark)", "Whole tree (above
+and belowground)" , "Whole tree (above stump)". Be aware that only a few
+equations exist for those other variables, so estimated values might not be
+very acurate.}
 
 \item{add_weight}{Should the relative weigth given to each equation in the
 \code{equations} data frame be added to the output? Default is FALSE.}
+
+\item{use_height_allom}{A logical value: should the height allometries from
+Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
+Default is TRUE.}
 }
 \value{
 A vector of class "numeric" of the same length as dbh, containing AGB

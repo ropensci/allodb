@@ -21,12 +21,16 @@
 #'   is "Total aboveground biomass", other possible values are: "Bark biomass",
 #'   "Branches (dead)", "Branches (live)", "Branches total (live, dead)",
 #'   "Foliage total", "Height", "Leaves", "Stem (wood only)", "Stem biomass",
-#'   "Stem biomass (with bark)", "Stem biomass (without bark)", "Whole tree
-#'   (above and belowground)" , "Whole tree (above stump)". Be aware that only a
-#'   few equations exist for those other variables, so estimated values might
-#'   not be very acurate.
+
+#' "Stem biomass (with bark)", "Stem biomass (without bark)", "Whole tree (above
+#' and belowground)" , "Whole tree (above stump)". Be aware that only a few
+#' equations exist for those other variables, so estimated values might not be
+#' very acurate.
 #' @param add_weight Should the relative weigth given to each equation in the
 #'   `equations` data frame be added to the output? Default is FALSE.
+#' @param use_height_allom A logical value: should the height allometries from
+#'   Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
+#'   Default is TRUE.
 #'
 #' @return A vector of class "numeric" of the same length as dbh, containing AGB
 #'   value (in kg) for every stem, or the dependent variable as defined in
