@@ -138,7 +138,7 @@ ggsave("tests/graphs/non_monotonous_allometries.pdf", height=36, width=15)
 ## do a 'sensitivity analysis': for all taxa that have monotony problems (and don't want to go see a doctor):
 ## remove one by one one the top 20 equations (based on dbh < 10 cm) and reevaluate monotony (or negative values)
 ## -> if problem is solved: that equation should be checked
-data_nonmon = data_nonmon[dbh < 10]
+# data_nonmon = data_nonmon[dbh < 10]
 
 
 

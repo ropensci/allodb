@@ -159,7 +159,7 @@ get_biomass = function(dbh,
   koppen_simil = t(sapply(koppenSites, function (z1) {
     m = subset(koppenMatrix, zone1 == z1)
     sapply(equations$koppen, function(z2) {
-      all_z2 = unlist(strsplit(z2, "; "))
+      all_z2 = gsub(" ", "", unlist(strsplit(z2, "[[:punct:]]")))
       max(c(subset(m, zone2 %in% all_z2)$simil, 0))
     })
   }))
