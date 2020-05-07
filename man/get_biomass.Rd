@@ -11,7 +11,7 @@ get_biomass(
   genus = rep(NA, length(dbh)),
   species = NULL,
   coords,
-  var = "Total aboveground biomass",
+  var = c("Total aboveground biomass", "Whole tree (above stump)"),
   add_weight = FALSE,
   use_height_allom = TRUE
 )
@@ -36,13 +36,12 @@ all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree. Default is NULL when no
 information is available.}
 
-\item{var}{What dependent variable should be provided in the output? Default
-is "Total aboveground biomass", other possible values are: "Bark biomass",
-"Branches (dead)", "Branches (live)", "Branches total (live, dead)",
-"Foliage total", "Height", "Leaves", "Stem (wood only)", "Stem biomass",
-"Stem biomass (with bark)", "Stem biomass (without bark)", "Whole tree (above
-and belowground)" , "Whole tree (above stump)". Be aware that only a few
-equations exist for those other variables, so estimated values might not be
+\item{var}{What dependent variable(s) should be provided in the output? Default
+is \verb{Total aboveground biomass} and \verb{Whole tree (above stump)}, other possible values are:
+\verb{Bark biomass}, \code{Branches (dead)}, \code{Branches (live)}, \verb{Branches total (live, dead)},
+\verb{Foliage total}, \code{Height}, \code{Leaves}, \verb{Stem (wood only)}, \verb{Stem biomass},
+\verb{Stem biomass (with bark)}, \verb{Stem biomass (without bark)}, \verb{Whole tree (above and belowground)}.
+Be aware that only a few equations exist for those other variables, so estimated values might not be
 very acurate.}
 
 \item{add_weight}{Should the relative weigth given to each equation in the
