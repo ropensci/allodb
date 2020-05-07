@@ -27,14 +27,16 @@ equationTaxa[allometry_specificity == "Species", `:=`(genus = tstrsplit(equation
                                                       species = tstrsplit(equation_taxa, " ")[[2]])]
 equationTaxa[allometry_specificity == "Species" & grepl("/", equation_taxa),
              species := paste(species, tstrsplit(equation_taxa, " |/")[[5]], sep = " /")]
+equationTaxaReal = equationTaxa
 
 # find family based on genus
 ## get previous families from temp data frames
 load("data/temp_equationTaxa.rda")
 load("data/temp_censusTaxa.rda")
 families = unique(rbind(equationTaxa[!is.na(genus), c("genus", "family")],
-                        censusTaxa[!is.na(family), c("genus", "family")]))
+                        censusTaxa[!is.na(censusTaxa$family), c("genus", "family")]))
 colnames(families) = c("genus", "familytemp")
+families = subset(families, !is.na(genus))
 
 genusList = unique(equationTaxa[!is.na(genus) & !genus %in% families$genus]$genus)
 if (length(genusList) > 0) {
@@ -42,7 +44,7 @@ if (length(genusList) > 0) {
   colnames(temp) = c("genus", "familytemp")
   families = rbind(families, temp)
 }
-equationTaxa = merge(equationTaxa, families, by = "genus", all.x = TRUE)
+equationTaxa = data.table(merge(equationTaxaReal, families, by = "genus", all.x = TRUE))
 equationTaxa[!is.na(genus) & is.na(family), family := familytemp]
 equationTaxa[, familytemp := NULL]
 # save(equationTaxa, file = "data/temp_equationTaxa.rda")
@@ -67,8 +69,8 @@ censusTaxa[!is.na(species), name := paste(genus, species)]
 genusList = unique(censusTaxa[!is.na(genus) & !genus %in% families$genus]$genus)
 genusList = genusList[! genusList %in% c("Unidentified", "Unk")]
 if (length(genusList) > 0) {
-  # temp2 = tax_name(query = genusList[1], get = "family", db = "ncbi")[,-1]
-  for (gen in genusList[-which(genusList %in% temp2$query)]) {
+  temp2 = tax_name(query = genusList[1], get = "family", db = "ncbi")[,-1]
+  for (gen in genusList[-1]) {
     temp2temp = tax_name(query = gen, get = "family", db = "ncbi")[,-1]
     temp2 = rbind(temp2, temp2temp)
   }
@@ -169,6 +171,6 @@ Wtaxo[life_formC == "tree" & nameE == "Trees (Angio and Gymnosperms)", weight :=
 Wtaxo[life_formC == "tree" & !(familyC %in% conifers | grepl("onifer", nameC)) & nameE == "Mixed hardwood", weight := 0.2]
 
 
-taxo_weight = dcast(Wtaxo, nameC ~ eqID, value.var = "weight")
+taxo_weight = as.data.frame(dcast(Wtaxo, nameC ~ eqID, value.var = "weight"))
 
 save(taxo_weight, file = "data/taxo_weight.rda")

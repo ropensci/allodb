@@ -78,7 +78,6 @@ get_biomass = function(dbh,
                       eq_jansen[, colnames(equations)])
   }
 
-
   equations_ids = equations$equation_id
   equations_ids = equations_ids[!is.na(equations_ids)]
   equations_ids = equations_ids[equations_ids %in% colnames(taxo_weight)[-1]]
