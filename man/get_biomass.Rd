@@ -11,6 +11,7 @@ get_biomass(
   genus = rep(NA, length(dbh)),
   species = NULL,
   coords,
+  new_equations = NULL,
   var = c("Total aboveground biomass", "Whole tree (above stump)"),
   add_weight = FALSE,
   use_height_allom = TRUE
@@ -35,6 +36,8 @@ identification is available.}
 all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree. Default is NULL when no
 information is available.}
+
+\item{new_equations}{Optional. An equation table created with the xxx function.}
 
 \item{var}{What dependent variable(s) should be provided in the output? Default
 is \verb{Total aboveground biomass} and \verb{Whole tree (above stump)}, other possible values are:

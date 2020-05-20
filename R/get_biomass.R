@@ -17,6 +17,7 @@
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree. Default is NULL when no
 #'   information is available.
+#' @param new_equations Optional. An equation table created with the xxx function.
 #' @param var What dependent variable(s) should be provided in the output? Default
 #'   is `Total aboveground biomass` and `Whole tree (above stump)`, other possible values are:
 #'   `Bark biomass`, `Branches (dead)`, `Branches (live)`, `Branches total (live, dead)`,
@@ -48,11 +49,14 @@ get_biomass = function(dbh,
                        genus = rep(NA, length(dbh)),
                        species = NULL,
                        coords,
+                       new_equations = NULL,
                        var = c("Total aboveground biomass", "Whole tree (above stump)"),
                        add_weight = FALSE,
                        use_height_allom = TRUE) {
   library(data.table)
   data("equations")
+  if (!is.null(new_equations))
+    equations = new_equations
   data("taxo_weight")
 
   ## replace height with height allometry from Bohn et al. 2014 in Jansen et al 1996
