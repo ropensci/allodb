@@ -14,6 +14,10 @@ data = merge(data, data.frame(location = c("scbi", "zaragoza", "nice", "ivas"),
                               long = c(-78.15, -0.883, 7.266, 37.012),
                               lat = c(38.9, 41.65, 43.70, 39.75)))
 data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, coords = cbind(data$long, data$lat))/1000]
+
+#if you want to check the weight given to each equation
+Mweigth =  get_biomass(dbh=data$dbh, genus=data$genus, species = data$species,            coords = cbind(data$long, data$lat), add_weight = TRUE)/1000
+
 library(BIOMASS)
 data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
 data[, agb_chave := exp(-2.023977 - 0.89563505 * 0.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2))/1000]
@@ -37,14 +41,14 @@ g
 load("data/sitespecies.rda")
 sitespecies = data.table(sitespecies)
 ## correct spelling in sitespecies: niobrara instead of niobara
-sitespecies[site == "niobara", site := "niobrara"]
+## sitespecies[site == "niobara", site := "niobrara"]
 
 ## keep only non tropical sites
 load("data/sites_info.rda")
 tropical = sites_info$site[abs(as.numeric(sites_info$lat)) < 23.5]
 sitespecies = subset(sitespecies, ! site %in% tropical)
 
-sitespecies[latin_name == "Pinus sylvatica", latin_name := "Pinus sylvestris"]
+#sitespecies[latin_name == "Pinus sylvatica", latin_name := "Pinus sylvestris"]
 sitespecies[, genus := tstrsplit(latin_name, " ")[[1]]]
 sitespecies[, species := tstrsplit(latin_name, " ")[[2]]]
 sitespecies[species == "x", species := paste(tstrsplit(latin_name, " ")[[2]],
@@ -55,7 +59,6 @@ site_species = unique(sitespecies[, c("genus", "species", "site")])
 ## merge with site coordinates
 site_species = merge(site_species, sites_info[, c("site", "lat", "long")], by = "site")
 site_species$nb = 1:nrow(site_species)
-## TODO add Asia sites?
 
 data = data.table(expand.grid(dbh=1:200, nb = 1:nrow(site_species)))
 data = merge(data, site_species, by = "nb")
@@ -142,7 +145,7 @@ ggsave("tests/graphs/non_monotonous_allometries.pdf", height=36, width=15)
 
 
 
-## test 3 - agb in scbi data base vs allodb equations ####
+## test 3 - agb in scbi-census-1 vs allodb equations ####
 
 scbi = data.table(read.csv("tests/scbi.stem1-agb.csv"))
 
@@ -209,6 +212,8 @@ minDist = apply(cbind(deltaCaCo, deltaCaA, deltaACo), 1, which.min)
 maxDist = c("allodb", "chojnacky", "chave")[minDist]
 table(maxDist)/length(maxDist)*100
 
-
 library(plotly)
 ggplotly(gchave_allodb)
+ggplotly(gchojn_allodb)
+ggplotly(gchojn_chave)
+
