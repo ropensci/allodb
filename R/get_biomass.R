@@ -149,10 +149,13 @@ get_biomass = function(dbh,
   data("koppenRaster")
   data("koppenMatrix")
   # if only one location, transform coords into matrix with 2 numeric columns
-  if (length(coords) == 2) {
+  if (length(unlist(coords)) == 2) {
     coordsSite = t(as.numeric(coords))
+  } else if (length(unlist(unique(coords))) == 2) {
+    coordsSite = t(apply(unique(coords), 2, as.numeric))
   } else
     coordsSite = apply(unique(coords), 2, as.numeric)
+
   ## extract koppen climate of every location
   climates = koppenRaster@data@attributes[[1]][, 2]
   koppenSites = climates[raster::extract(koppenRaster, coordsSite)]
@@ -164,7 +167,7 @@ get_biomass = function(dbh,
       max(c(subset(m, zone2 %in% all_z2)$simil, 0))
     })
   }))
-  if (length(coords) == 2) {
+  if (length(unlist(coords)) == 2) {
     n = length(dbh)
     koppen_simil = matrix(rep(koppen_simil, n), nrow = n, byrow = TRUE)
   } else {
