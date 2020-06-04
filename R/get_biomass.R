@@ -55,12 +55,12 @@ get_biomass = function(dbh,
                        use_height_allom = TRUE) {
   library(data.table)
   data("equations")
+  dfequation = equations
   if (!is.null(new_equations))
-    equations = new_equations
-  data("taxo_weight")
+    dfequation = new_equations
 
   ## replace height with height allometry from Bohn et al. 2014 in Jansen et al 1996
-  if (use_height_allom) {
+  if (use_height_allom & "jansen_1996_otvb" %in% dfequation$ref_id) {
     eq_jansen = subset(equations, ref_id=="jansen_1996_otvb")
     ## height allometries defined per genus -> get info in jansen allometries
     eq_jansen$genus = tstrsplit(eq_jansen$equation.notes, " ")[[5]]
@@ -78,76 +78,46 @@ get_biomass = function(dbh,
     # replace independent_variable column
     eq_jansen$independent_variable = "DBH"
     # replace in equation table
-    equations = rbind(subset(equations, !equation_id %in% eq_jansen$equation_id),
-                      eq_jansen[, colnames(equations)])
+    dfequation = rbind(subset(dfequation, !equation_id %in% eq_jansen$equation_id),
+                       eq_jansen[, colnames(dfequation)])
   }
 
-  equations_ids = equations$equation_id
+  equations_ids = dfequation$equation_id
   equations_ids = equations_ids[!is.na(equations_ids)]
   equations_ids = equations_ids[equations_ids %in% colnames(taxo_weight)[-1]]
-  equations = subset(equations, equation_id %in% equations_ids)
-  taxo_weight = taxo_weight[, c("nameC", equations$equation_id)]
+  dfequation = subset(dfequation, equation_id %in% equations_ids)
+  taxo_weight = taxo_weight[, c("nameC", dfequation$equation_id)]
 
   ## keep only useful equations
-  equations = subset(equations, dependent_variable %in% var)
+  dfequation = subset(dfequation, dependent_variable %in% var)
   if (is.null(h))
-    equations = subset(equations,!independent_variable == "DBH, H")
+    dfequation = subset(dfequation,!independent_variable == "DBH, H")
 
   # transform columns to numeric
-  suppressWarnings(equations$dbh_min_cm <-
-                     as.numeric(equations$dbh_min_cm))
-  suppressWarnings(equations$dbh_max_cm <-
-                     as.numeric(equations$dbh_max_cm))
-  suppressWarnings(equations$sample_size <-
-                     as.numeric(equations$sample_size))
-  suppressWarnings(equations$dbh_unit_CF <-
-                     as.numeric(equations$dbh_unit_CF))
-  suppressWarnings(equations$output_units_CF <-
-                     as.numeric(equations$output_units_CF))
+  suppressWarnings(dfequation$dbh_min_cm <-
+                     as.numeric(dfequation$dbh_min_cm))
+  suppressWarnings(dfequation$dbh_max_cm <-
+                     as.numeric(dfequation$dbh_max_cm))
+  suppressWarnings(dfequation$sample_size <-
+                     as.numeric(dfequation$sample_size))
+  suppressWarnings(dfequation$dbh_unit_CF <-
+                     as.numeric(dfequation$dbh_unit_CF))
+  suppressWarnings(dfequation$output_units_CF <-
+                     as.numeric(dfequation$output_units_CF))
 
-  agb_all = matrix(0, nrow = length(dbh), ncol = nrow(equations))
+  agb_all = matrix(0, nrow = length(dbh), ncol = nrow(dfequation))
   # modifiy allometry to insert unit conversion
-  for (i in 1:nrow(equations)) {
-    orig_equation = equations$equation_allometry[i]
-    new_dbh = paste0("(dbh*", equations$dbh_unit_CF[i], ")")
+  for (i in 1:nrow(dfequation)) {
+    orig_equation = dfequation$equation_allometry[i]
+    new_dbh = paste0("(dbh*", dfequation$dbh_unit_CF[i], ")")
     new_equation = gsub("dbh|DBH", new_dbh, orig_equation)
-    agb_all[, i] = eval(parse(text = new_equation)) * equations$output_units_CF[i]
+    agb_all[, i] = eval(parse(text = new_equation)) * dfequation$output_units_CF[i]
   }
-
-  # taxonomic distance - for now only at the genus level
-  # TODO check that all species have an associated equation
-  ## order by equation id, according to order in equation table
-  names = paste(genus, species)
-  names = gsub(" $| NA$", "", names) # remove space and NAs at the end of genus names
-  idx = sapply(names, function(n)
-    which(taxo_weight$nameC == n))
-  ## replace integer(0) by NA -> taxo_weight = 1e-6 for all equations
-  idx[sapply(idx, length) == 0] <- NA
-  idx = unlist(idx)
-  if (sum(!is.na(idx)) == 0) {
-    ## when no species are in the table: only NAs (gives problem with data.table), do it manually
-    taxo_weight_census = data.table(matrix(
-      1e-6,
-      ncol = ncol(taxo_weight) - 1,
-      nrow = length(idx)
-    ))
-    colnames(taxo_weight_census) = colnames(taxo_weight)[-1]
-  } else
-    taxo_weight_census = taxo_weight[idx,-1]
-  # replace all NAs with 1e-6 (used only of no other equation is available)
-  for (col in names(taxo_weight_census))
-    set(
-      taxo_weight_census,
-      i = which(is.na(taxo_weight_census[[col]])),
-      j = col,
-      value = 1e-6
-    )
 
   # koppen climate
   # (1) get koppen climate for all locations
   # koppen climate raster downloaded from http://koeppen-geiger.vu-wien.ac.at/present.htm on the 2/10/2020
   data("koppenRaster")
-  data("koppenMatrix")
   # if only one location, transform coords into matrix with 2 numeric columns
   if (length(unlist(coords)) == 2) {
     coordsSite = t(as.numeric(coords))
@@ -155,39 +125,22 @@ get_biomass = function(dbh,
     coordsSite = t(apply(unique(coords), 2, as.numeric))
   } else
     coordsSite = apply(unique(coords), 2, as.numeric)
-
   ## extract koppen climate of every location
   climates = koppenRaster@data@attributes[[1]][, 2]
-  koppenSites = climates[raster::extract(koppenRaster, coordsSite)]
-  ## climate similitude matrix (rows: sites, columns: equations)
-  koppen_simil = t(sapply(koppenSites, function (z1) {
-    m = subset(koppenMatrix, zone1 == z1)
-    sapply(equations$koppen, function(z2) {
-      all_z2 = gsub(" ", "", unlist(strsplit(z2, "[[:punct:]]")))
-      max(c(subset(m, zone2 %in% all_z2)$simil, 0))
-    })
-  }))
-  if (length(unlist(coords)) == 2) {
-    n = length(dbh)
-    koppen_simil = matrix(rep(koppen_simil, n), nrow = n, byrow = TRUE)
-  } else {
-    koppen_simil = t(apply(coords, 1, function(c)
-      koppen_simil[which(coordsSite[, 1] == c[1] &
-                           coordsSite[, 2] == c[2]), ]))
-  }
+  koppenObs = climates[raster::extract(koppenRaster, coords)]
 
   # weight function
   ## TODO solve NA sample size and dbh range problem
   weight = weight_allom(
-    Nobs = equations$sample_size,
     dbh = dbh,
-    dbhrange = equations[, c("dbh_min_cm", "dbh_max_cm")],
-    weight_T = taxo_weight_census,
-    weight_E = koppen_simil
+    koppen = koppenObs,
+    genus = genus,
+    species = species,
+    equation_table = dfequation
   )
   relative_weight = weight / matrix(rowSums(weight, na.rm = TRUE),
                                     nrow = length(dbh),
-                                    ncol = nrow(equations))
+                                    ncol = nrow(dfequation))
 
   agb = rowSums(agb_all * relative_weight, na.rm = TRUE)
 
@@ -197,28 +150,35 @@ get_biomass = function(dbh,
     return(cbind(agb, relative_weight))
 }
 
-weight_allom = function(Nobs,
-                        dbh,
-                        dbhrange,
-                        weight_E = 1,
-                        weight_T = 1,
+weight_allom = function(dbh,
+                        koppen = NULL,
+                        genus = NULL,
+                        species = NULL,
+                        equation_table,
                         replace_dbhrange = 0.1,
                         ## wieght value in weight_D matrix when there is no DBH range for the equation
                         a = 1,
                         b = 0.03,
                         steep = 3  ## controls the steepness of the dbh range transition, should be > 1
 ) {
-  Nobs = as.numeric(Nobs)
-  Nobs = matrix(Nobs,
-                nrow = length(dbh),
-                ncol = length(Nobs),
-                byrow = TRUE)
-  weight_N = a * (1 - exp(-b * Nobs))
+  dfweights = data.table::data.table(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
+  ## keep equation_id order by making it into a factor
+  dfweights$equation_id = factor(dfweights$equation_id)
+  ## add observations IDs
+  combinations = expand.grid(obs_id = 1:length(koppen), equation_id = equation_table$equation_id)
+  dfweights = merge(dfweights, combinations, by  = "equation_id")
+  ## add observation info
+  dfobs = data.table::data.table(obs_id = 1:length(dbh), dbh, koppenObs = koppen, genus, species)
+  dfweights = merge(dfweights, dfobs, by = "obs_id")
+
+  ## weight by sample size ##
+  dfweights$wN = a * (1 - exp(-b * as.numeric(dfweights$sample_size)))
   # a : max value that weight_N can reach (here: 1)
   # b=0.03 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.03 = 100
   # implication: new observations will not increase weight_N much when Nobs > 100
+  dfweights$wN[is.na(dfweights$wN)] = 0.1 ## for now: give 0.1 to equations with no samle size; find why they don't have a sample size
 
-  dbhrange = matrix(as.numeric(unlist(dbhrange)), ncol = 2)
+  ## weight by dbh range ##
   ## This weight function is inspired of the tricube weight function in local regressions
   ## it equals 1 inside the dbh range, quickly drops to 0 outside the dbh range.
   # steep controls how fast the weight decreases at the edges of the dbh range.
@@ -229,23 +189,51 @@ weight_allom = function(Nobs,
   # }
   # We log-transform it because dbhs are > 0
   # See: curve(f(log(x), log(5), log(20)), xlim=c(0,50)); abline(v=c(5,20))
-  Mdbh = log(matrix(dbh, nrow = length(dbh), ncol = nrow(dbhrange)))
-  Mmin = log(matrix(
-    dbhrange[, 1],
-    nrow = length(dbh),
-    ncol = nrow(dbhrange),
-    byrow = TRUE
-  ))
-  Mmax = log(matrix(
-    dbhrange[, 2],
-    nrow = length(dbh),
-    ncol = nrow(dbhrange),
-    byrow = TRUE
-  ))
-  weight_D = (1 - abs((Mdbh - (Mmin + Mmax) / 2) / (Mmax - Mmin)) ^ steep) ^ 3
-  weight_D[weight_D < 0] = 0   ## keep only positive values, transform values < 0 into 0
-  weight_D[, which(apply(weight_D, 2, anyNA))] = replace_dbhrange ## weight (independent of DBH) when equation does not have DBH range
+  dfweights$dmax = as.numeric(dfweights$dbh_max_cm)
+  dfweights$dmin = as.numeric(dfweights$dbh_min_cm)
+  dfweights$wD = (1 - abs((dfweights$dbh - (as.numeric(dfweights$dmax) + dfweights$dmin) / 2) / (dfweights$dmax - dfweights$dmin)) ^ steep) ^ 3
+  dfweights$wD[dfweights$wD < 0 & !is.na(dfweights$wD)] = 0   ## keep only positive values, transform values < 0 into 0
+  dfweights$wD[is.na(dfweights$wD)] = replace_dbhrange ## weight (independent of DBH) when equation does not have DBH range
 
+  ### koppen climate weight
+  data("koppenMatrix")
+  if (is.null(koppen)) {
+    dfweights$wE = 1
+  } else {
+    dfkoppen = dfweights[, .(koppenObs = tolower(koppenObs), koppen = tolower(unlist(strsplit(koppen, ", |; |,|;")))), .(equation_id, obs_id)]
+    koppenMatrix$zone1 = tolower(koppenMatrix$zone1); koppenMatrix$zone2 = tolower(koppenMatrix$zone2)
+    dfkoppen = merge(dfkoppen, koppenMatrix,
+                      by.x = c("koppenObs", "koppen"),
+                      by.y = c("zone1", "zone2"),
+                      all.x = TRUE)
+    dfkoppen = dfkoppen[, .(wE = max(wE)), .(equation_id, obs_id)]
+    dfweights = merge(dfweights, dfkoppen, by = c("equation_id", "obs_id"))
+  }
+
+  ### taxonomic weight
+  if (is.null(genus)) {
+    dfweights$wT = 1
+  } else {
+    dfweights$wT = 1e-6
+    # same species
+    dfweights$wT[dfweights$equation_taxa == paste(dfweights$genus, dfweights$species)] = 1
+    # same genus
+    dfweights$wT[dfweights$equation_taxa == dfweights$genus] = 0.8
+    ## TODO complete
+    # same genus, different species
+    # dfweights$wT[dfweights$equation_taxa != paste(dfweights$genus, dfweights$species)] = 0.7
+    # # same family
+    # dfweights$wT[dfweights$equation_taxa == dfweights$genus] = 0.5
+    # # same family, different genus
+    # dfweights$wT[dfweights$equation_taxa != paste(dfweights$genus, dfweights$species)] = 0.2
+  }
+
+  dfweights$w = dfweights$wN * dfweights$wD * dfweights$wE * dfweights$wT
   # multiplicative weights: if one is zero, the total weight should be zero too
-  return(weight_N * weight_D * weight_E * weight_T)
+  ## find a way to check order of equations
+  setorder(dfweights, obs_id, equation_id)
+  Mw = data.table::dcast(dfweights, obs_id ~ equation_id, value.var = "w")
+  data.table::setorder(Mw, obs_id)
+  Mw = as.matrix(Mw)[, -1]
+  return(Mw)
 }
