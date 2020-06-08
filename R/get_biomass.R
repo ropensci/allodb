@@ -84,9 +84,7 @@ get_biomass = function(dbh,
 
   equations_ids = dfequation$equation_id
   equations_ids = equations_ids[!is.na(equations_ids)]
-  equations_ids = equations_ids[equations_ids %in% colnames(taxo_weight)[-1]]
   dfequation = subset(dfequation, equation_id %in% equations_ids)
-  taxo_weight = taxo_weight[, c("nameC", dfequation$equation_id)]
 
   ## keep only useful equations
   dfequation = subset(dfequation, dependent_variable %in% var)
@@ -127,7 +125,7 @@ get_biomass = function(dbh,
     coordsSite = apply(unique(coords), 2, as.numeric)
   ## extract koppen climate of every location
   climates = koppenRaster@data@attributes[[1]][, 2]
-  koppenObs = climates[raster::extract(koppenRaster, coords)]
+  koppenObs = climates[raster::extract(koppenRaster, coordsSite)]
 
   # weight function
   ## TODO solve NA sample size and dbh range problem
@@ -165,7 +163,7 @@ weight_allom = function(dbh,
   ## keep equation_id order by making it into a factor
   dfweights$equation_id = factor(dfweights$equation_id)
   ## add observations IDs
-  combinations = expand.grid(obs_id = 1:length(koppen), equation_id = equation_table$equation_id)
+  combinations = expand.grid(obs_id = 1:length(dbh), equation_id = equation_table$equation_id)
   dfweights = merge(dfweights, combinations, by  = "equation_id")
   ## add observation info
   dfobs = data.table::data.table(obs_id = 1:length(dbh), dbh, koppenObs = koppen, genus, species)
