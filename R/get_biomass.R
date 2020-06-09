@@ -53,7 +53,6 @@ get_biomass = function(dbh,
                        var = c("Total aboveground biomass", "Whole tree (above stump)"),
                        add_weight = FALSE,
                        use_height_allom = TRUE) {
-  library(data.table)
   data("equations")
   dfequation = equations
   if (!is.null(new_equations))
@@ -63,7 +62,7 @@ get_biomass = function(dbh,
   if (use_height_allom & "jansen_1996_otvb" %in% dfequation$ref_id) {
     eq_jansen = subset(equations, ref_id=="jansen_1996_otvb")
     ## height allometries defined per genus -> get info in jansen allometries
-    eq_jansen$genus = tstrsplit(eq_jansen$equation.notes, " ")[[5]]
+    eq_jansen$genus = data.table::tstrsplit(eq_jansen$equation.notes, " ")[[5]]
     ## vreate height allometry dataframe
     hallom = subset(equations, ref_id=="bohn_2014_ocai" & dependent_variable == "Height" )
     hallom = hallom[, c("equation_taxa", "equation_allometry")]
@@ -159,7 +158,7 @@ weight_allom = function(dbh,
                         b = 0.03,
                         steep = 3  ## controls the steepness of the dbh range transition, should be > 1
 ) {
-  dfweights = data.table::data.table(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
+  dfweights = data.table::setDT(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
   ## keep equation_id order by making it into a factor
   dfweights$equation_id = factor(dfweights$equation_id)
   ## add observations IDs
@@ -201,9 +200,9 @@ weight_allom = function(dbh,
     dfkoppen = dfweights[, .(koppenObs = tolower(koppenObs), koppen = tolower(unlist(strsplit(koppen, ", |; |,|;")))), .(equation_id, obs_id)]
     koppenMatrix$zone1 = tolower(koppenMatrix$zone1); koppenMatrix$zone2 = tolower(koppenMatrix$zone2)
     dfkoppen = merge(dfkoppen, koppenMatrix,
-                      by.x = c("koppenObs", "koppen"),
-                      by.y = c("zone1", "zone2"),
-                      all.x = TRUE)
+                     by.x = c("koppenObs", "koppen"),
+                     by.y = c("zone1", "zone2"),
+                     all.x = TRUE)
     dfkoppen = dfkoppen[, .(wE = max(wE)), .(equation_id, obs_id)]
     dfweights = merge(dfweights, dfkoppen, by = c("equation_id", "obs_id"))
   }
@@ -229,7 +228,7 @@ weight_allom = function(dbh,
   dfweights$w = dfweights$wN * dfweights$wD * dfweights$wE * dfweights$wT
   # multiplicative weights: if one is zero, the total weight should be zero too
   ## find a way to check order of equations
-  setorder(dfweights, obs_id, equation_id)
+  data.table::setorder(dfweights, obs_id, equation_id)
   Mw = data.table::dcast(dfweights, obs_id ~ equation_id, value.var = "w")
   data.table::setorder(Mw, obs_id)
   Mw = as.matrix(Mw)[, -1]
