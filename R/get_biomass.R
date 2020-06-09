@@ -193,18 +193,18 @@ weight_allom = function(dbh,
   dfweights$wD[is.na(dfweights$wD)] = replace_dbhrange ## weight (independent of DBH) when equation does not have DBH range
 
   ### koppen climate weight
-  data("koppenMatrix")
   if (is.null(koppen)) {
     dfweights$wE = 1
   } else {
-    dfkoppen = dfweights[, .(koppenObs = tolower(koppenObs), koppen = tolower(unlist(strsplit(koppen, ", |; |,|;")))), .(equation_id, obs_id)]
-    koppenMatrix$zone1 = tolower(koppenMatrix$zone1); koppenMatrix$zone2 = tolower(koppenMatrix$zone2)
-    dfkoppen = merge(dfkoppen, koppenMatrix,
-                     by.x = c("koppenObs", "koppen"),
-                     by.y = c("zone1", "zone2"),
-                     all.x = TRUE)
-    dfkoppen = dfkoppen[, .(wE = max(wE)), .(equation_id, obs_id)]
-    dfweights = merge(dfweights, dfkoppen, by = c("equation_id", "obs_id"))
+    dfkoppen = unique(dfweights[, c("koppenObs", "koppen")])
+    data("koppenMatrix")
+    compare_koppen = function(Z) {
+      z1 = tolower(Z[1])
+      z2 = tolower(unlist(strsplit(Z[2], ", |; |,|;")))
+      max(koppenMatrix$wE[tolower(koppenMatrix$zone1)==z1 & tolower(koppenMatrix$zone2)%in%z2])
+    }
+    dfkoppen$wE = apply(dfkoppen, 1, compare_koppen)
+    dfweights = merge(dfweights, dfkoppen, by = c("koppenObs", "koppen"))
   }
 
   ### taxonomic weight
