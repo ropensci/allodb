@@ -48,6 +48,8 @@ get_biomass = function(dbh,
                        h = NULL,
                        genus = rep(NA, length(dbh)),
                        species = NULL,
+                       family = NULL,
+                       life_form = NULL,
                        coords,
                        new_equations = NULL,
                        var = c("Total aboveground biomass", "Whole tree (above stump)"),
@@ -125,6 +127,11 @@ get_biomass = function(dbh,
   ## extract koppen climate of every location
   climates = koppenRaster@data@attributes[[1]][, 2]
   koppenObs = climates[raster::extract(koppenRaster, coordsSite)]
+  if (length(koppenObs) > 1) {
+    coordsLev = apply(coords, 1, function(x) paste(x, collapse = "_"))
+    coordsLev = factor(coordsLev, levels = unique(coordsLev))
+    koppenObs = koppenObs[as.numeric(coordsLev)]
+  }
 
   # weight function
   ## TODO solve NA sample size and dbh range problem
@@ -211,18 +218,22 @@ weight_allom = function(dbh,
   if (is.null(genus)) {
     dfweights$wT = 1
   } else {
+    dfweights$equation_taxa
     dfweights$wT = 1e-6
     # same species
     dfweights$wT[dfweights$equation_taxa == paste(dfweights$genus, dfweights$species)] = 1
     # same genus
     dfweights$wT[dfweights$equation_taxa == dfweights$genus] = 0.8
-    ## TODO complete
     # same genus, different species
-    # dfweights$wT[dfweights$equation_taxa != paste(dfweights$genus, dfweights$species)] = 0.7
+    dfweights$eqtaxa1 = data.table::tstrsplit(dfweights$equation_taxa, " ")[[1]]
+    dfweights$eqtaxa2 = data.table::tstrsplit(dfweights$equation_taxa, " ")[[1]]
+    dfweights$wT[dfweights$eqtaxa1 == dfweights$genus &
+                   dfweights$eqtaxa2 != dfweights$species] = 0.7
     # # same family
     # dfweights$wT[dfweights$equation_taxa == dfweights$genus] = 0.5
     # # same family, different genus
     # dfweights$wT[dfweights$equation_taxa != paste(dfweights$genus, dfweights$species)] = 0.2
+    # generic equations
   }
 
   dfweights$w = dfweights$wN * dfweights$wD * dfweights$wE * dfweights$wT
