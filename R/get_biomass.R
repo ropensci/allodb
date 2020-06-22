@@ -60,6 +60,9 @@ get_biomass = function(dbh,
   if (!is.null(new_equations))
     dfequation = new_equations
 
+  ## remove bohn et al 2014 equation for now: gives Inf values (solve problem later)
+  dfequation = dfequation[! dfequation$equation_id == "e57b77",]
+
   ## replace height with height allometry from Bohn et al. 2014 in Jansen et al 1996
   if (use_height_allom & "jansen_1996_otvb" %in% dfequation$ref_id) {
     eq_jansen = subset(equations, ref_id=="jansen_1996_otvb")
@@ -167,7 +170,7 @@ weight_allom = function(dbh,
 ) {
   dfweights = data.table::setDT(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
   ## keep equation_id order by making it into a factor
-  dfweights$equation_id = factor(dfweights$equation_id)
+  dfweights$equation_id = factor(dfweights$equation_id, levels = equation_table$equation_id)
   ## add observations IDs
   combinations = expand.grid(obs_id = 1:length(dbh), equation_id = equation_table$equation_id)
   dfweights = merge(dfweights, combinations, by  = "equation_id")
@@ -195,7 +198,12 @@ weight_allom = function(dbh,
   # See: curve(f(log(x), log(5), log(20)), xlim=c(0,50)); abline(v=c(5,20))
   dfweights$dmax = as.numeric(dfweights$dbh_max_cm)
   dfweights$dmin = as.numeric(dfweights$dbh_min_cm)
-  dfweights$wD = (1 - abs((dfweights$dbh - (as.numeric(dfweights$dmax) + dfweights$dmin) / 2) / (dfweights$dmax - dfweights$dmin)) ^ steep) ^ 3
+
+  dfweights$wD = (1 - abs((log(dfweights$dbh) - (
+    log(dfweights$dmax) + log(dfweights$dmin)
+  ) / 2) / (
+    log(dfweights$dmax) - log(dfweights$dmin)
+  )) ^ steep) ^ 3
   dfweights$wD[dfweights$wD < 0 & !is.na(dfweights$wD)] = 0   ## keep only positive values, transform values < 0 into 0
   dfweights$wD[is.na(dfweights$wD)] = replace_dbhrange ## weight (independent of DBH) when equation does not have DBH range
 
@@ -226,7 +234,7 @@ weight_allom = function(dbh,
     dfweights$wT[dfweights$equation_taxa == dfweights$genus] = 0.8
     # same genus, different species
     dfweights$eqtaxa1 = data.table::tstrsplit(dfweights$equation_taxa, " ")[[1]]
-    dfweights$eqtaxa2 = data.table::tstrsplit(dfweights$equation_taxa, " ")[[1]]
+    dfweights$eqtaxa2 = data.table::tstrsplit(dfweights$equation_taxa, " ")[[2]]
     dfweights$wT[dfweights$eqtaxa1 == dfweights$genus &
                    dfweights$eqtaxa2 != dfweights$species] = 0.7
     # # same family
@@ -243,5 +251,6 @@ weight_allom = function(dbh,
   Mw = data.table::dcast(dfweights, obs_id ~ equation_id, value.var = "w")
   data.table::setorder(Mw, obs_id)
   Mw = as.matrix(Mw)[, -1]
+
   return(Mw)
 }
