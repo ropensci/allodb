@@ -1,0 +1,7 @@
+
+For validation data we are using 1693 individuals (41 species) which have DBH and AGB (Ptot).
+
+Distribution: Eurasia.
+Source: 
+Schepaschenko et al. 2017. “A Dataset of Forest Biomass Structure for Eurasia.” Scientific Data 4 (1): 170070.
+https://doi.org/10.1038/sdata.2017.70.
