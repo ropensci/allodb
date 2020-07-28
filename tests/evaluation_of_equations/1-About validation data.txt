@@ -1,5 +1,5 @@
 
-For validation data we are using 1693 individuals (41 species) which have DBH and AGB (Ptot).
+For validation data (destructive measurements) we are using 1588 trees >1 cm (38 species) which have DBH, H, and AGB (Ptot).
 
 Distribution: Eurasia.
 Source: 
