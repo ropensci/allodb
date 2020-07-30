@@ -16,7 +16,8 @@ data = merge(data, data.frame(location = c("scbi", "zaragoza", "nice", "ivas"),
 data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, coords = cbind(data$long, data$lat))/1000]
 
 #if you want to check the weight given to each equation
-Mweigth =  get_biomass(dbh=data$dbh, genus=data$genus, species = data$species,            coords = cbind(data$long, data$lat), add_weight = TRUE)/1000
+Mweigth =  get_biomass(dbh=data$dbh, genus=data$genus, species = data$species,
+                       coords = cbind(data$long, data$lat), add_weight = TRUE)/1000
 
 library(BIOMASS)
 data$wsg = getWoodDensity(genus = data$genus, species=rep("sp", nrow(data)))$meanWD
@@ -104,14 +105,19 @@ for (i in 1:length(ls_site_species)) {
                          coords = df[1, c("long", "lat")], add_weight = TRUE)[, -1]
     totalW = colSums(weight, na.rm=TRUE)
     # ## first 20 equations
-    weightMax = weight[,order(totalW, decreasing = T)[1:20]]
+    weightMax = weight[,order(totalW, decreasing = T)[1:10]]
     dt = melt(data.table(dbh = df$dbh, weightMax), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
     dt = merge(dt, equations[, c("equation_id", "equation_taxa", "dbh_min_cm", "dbh_max_cm", "koppen")],
                by.x = "equationID", by.y = "equation_id")
     dt[, `:=`(dbh_min_cm = as.numeric(dbh_min_cm), dbh_max_cm = as.numeric(dbh_max_cm))]
+    DFtaxaID = unique(dt[, c("equationID", "equation_taxa")])
+    equationTaxaID = sapply(colnames(weightMax), function(j)
+      paste(j, DFtaxaID$equation_taxa[DFtaxaID$equationID == j], sep=" - "))
+    dt$equationTaxaID = factor(paste(dt$equationID, dt$equation_taxa, sep=" - "), levels = equationTaxaID)
 
-    w = ggplot(dt, aes(x=dbh, y = paste(equationID, equation_taxa, sep=" - "), fill=weight)) +
+    w = ggplot(dt, aes(x=dbh, y = equationTaxaID, fill=weight)) +
       geom_raster() +
+      lims(x = range(dt$dbh)) +
       scale_fill_gradientn(colours = rev(terrain.colors(10))) +
       geom_point(aes(x=dbh_min_cm), col="blue") +
       geom_point(aes(x=dbh_max_cm), col="red") +
@@ -123,7 +129,10 @@ for (i in 1:length(ls_site_species)) {
   }
 }
 
-## subset data: species-site combination with non monotonous AGB allometry
+## agb < 0
+
+
+## subset data: species-site combination with non monotonic AGB allometry
 data = setorder(data, site, name, dbh)
 which_nonmon = subset(data[, .(non_mon = any(diff(agb) < 0)), .(site, name)], (non_mon))
 data_nonmon = merge(data, which_nonmon[, -"non_mon"], by = c("site", "name"))
