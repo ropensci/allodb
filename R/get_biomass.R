@@ -165,7 +165,7 @@ weight_allom = function(dbh,
                         replace_dbhrange = 0.1,
                         ## wieght value in weight_D matrix when there is no DBH range for the equation
                         a = 1,
-                        b = 0.03,
+                        b = 0.006,
                         steep = 3  ## controls the steepness of the dbh range transition, should be > 1
 ) {
   dfweights = data.table::setDT(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
@@ -242,6 +242,14 @@ weight_allom = function(dbh,
     # # same family, different genus
     # dfweights$wT[dfweights$equation_taxa != paste(dfweights$genus, dfweights$species)] = 0.2
     # generic equations
+    ## conifers?
+    data("gymno_genus")
+    dfweights$wT[dfweights$genus %in% gymno &
+                   dfweights$equation_taxa == "Conifers"] = 0.3
+    dfweights$wT[!dfweights$genus %in% gymno &
+                   dfweights$equation_taxa == "Evergreen broad-leaved species"] = 0.3
+    ## tree or shrub?
+    ## tree + angiosperm?
   }
 
   dfweights$w = dfweights$wN * dfweights$wD * dfweights$wE * dfweights$wT
