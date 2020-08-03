@@ -43,7 +43,6 @@ master_tidy() \%>\%
 \seealso{
 \code{\link[dplyr:full_join]{dplyr::full_join()}}.
 
-Other functions to interact with the database: 
-\code{\link{set_type}()}
+Other functions to interact with the database: \code{\link{set_type}}
 }
 \concept{functions to interact with the database}

@@ -7,10 +7,10 @@
 type_allodb_master()
 }
 \description{
-For details see \href{https://goo.gl/gVSMT8}{\code{fgeo.tool::type_fgeo()}}.
+For details see \href{https://goo.gl/gVSMT8}{fgeo.tool::type_fgeo()}.
 }
 \details{
-Types' reference (see \href{https://goo.gl/DtDvXq}{\code{readr::read_csv()}}.
+Types' reference (see \href{https://goo.gl/DtDvXq}{readr::read_csv()}.
 \itemize{
 \item c = character.
 \item i = integer.

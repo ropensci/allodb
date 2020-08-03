@@ -4,9 +4,7 @@
 \name{references_metadata}
 \alias{references_metadata}
 \title{Table of metadata associated to the table \code{references}.}
-\format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 7 rows and 4 columns.
-}
+\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 7 rows and 4 columns.}
 \usage{
 references_metadata
 }
@@ -14,12 +12,10 @@ references_metadata
 Table of metadata associated to the table \code{references}.
 }
 \seealso{
-Other database datasets: 
-\code{\link{equations}},
-\code{\link{missing_values_metadata}},
-\code{\link{sites_info}},
-\code{\link{sitespecies}},
-\code{\link{wsg}}
+Other database datasets: \code{\link{equations}},
+  \code{\link{missing_values_metadata}},
+  \code{\link{sites_info}}, \code{\link{sitespecies}},
+  \code{\link{wsg}}
 }
 \concept{database datasets}
 \keyword{datasets}

@@ -13,16 +13,22 @@
 #' @param species A character vector (same length as dbh), containing the
 #'   species (e.g. "rubra")  of each tree. Default is NULL, when no
 #'   identification is available.
+#' @param shrub A logical vector (same length as dbh): is the observation a shrub?
+#'   Default is `NULL` (no information), in which case allometric equations
+#'   designed for shrubs will be used only for species recorded as shrubs in
+#'   ForestGEO sites (see `data("shrub_species")`).
 #' @param coords A numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree. Default is NULL when no
 #'   information is available.
-#' @param new_equations Optional. An equation table created with the xxx function.
-#' @param var What dependent variable(s) should be provided in the output? Default
-#'   is `Total aboveground biomass` and `Whole tree (above stump)`, other possible values are:
-#'   `Bark biomass`, `Branches (dead)`, `Branches (live)`, `Branches total (live, dead)`,
-#'   `Foliage total`, `Height`, `Leaves`, `Stem (wood only)`, `Stem biomass`,
-#' `Stem biomass (with bark)`, `Stem biomass (without bark)`, `Whole tree (above and belowground)`.
+#' @param new_equations Optional. An equation table created with the xxx
+#'   function.
+#' @param var What dependent variable(s) should be provided in the output?
+#'   Default is `Total aboveground biomass` and `Whole tree (above stump)`,
+#'   other possible values are: `Bark biomass`, `Branches (dead)`, `Branches
+#'   (live)`, `Branches total (live, dead)`, `Foliage total`, `Height`,
+#'   `Leaves`, `Stem (wood only)`, `Stem biomass`, `Stem biomass (with bark)`,
+#'   `Stem biomass (without bark)`, `Whole tree (above and belowground)`.
 #'  Be aware that only a few equations exist for those other variables, so estimated values might not be
 #' very acurate.
 #' @param add_weight Should the relative weigth given to each equation in the
@@ -48,8 +54,7 @@ get_biomass = function(dbh,
                        h = NULL,
                        genus = rep(NA, length(dbh)),
                        species = NULL,
-                       family = NULL,
-                       life_form = NULL,
+                       shrub = NULL,
                        coords,
                        new_equations = NULL,
                        var = c("Total aboveground biomass", "Whole tree (above stump)"),

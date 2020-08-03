@@ -5,12 +5,89 @@
 ###### (2) all taxa in the census as rows       ##########
 ##########################################################
 
+## phylo dstance
 ## packages needed
-packages_needed = c("data.table", "taxize")
+packages_needed = c("data.table", "taxize", "adephylo", "V.PhyloMaker")
 packages_to_install = packages_needed[!(packages_needed %in% rownames(installed.packages()))]
 if (length(packages_to_install) > 0)
   install.packages(packages_to_install)
 lapply(packages_needed, require, character.only = TRUE)
+
+data("sitespecies")
+data("equations")
+### keep all genera in both census and equation tables, and all families in equation table
+genus_equations = equations$equation_taxa[equations$allometry_specificity %in% c("Genus", "Species")]
+## replace special chinese characters
+sitespecies$genus = gsub("  ", " ", gsub("<[^>]+>", " ", enc2native(sitespecies$genus)))
+genus_all = unique(tstrsplit(c(sitespecies$genus, genus_equations), " ")[[1]])
+genus_all = genus_all[-grep("evergreen|uniden|unk", tolower(genus_all))]
+genus_tree = unique(tstrsplit(GBOTB.extended$tip.label, "_")[[1]])
+genus_all[!genus_all %in% genus_tree]
+
+species_tree = GBOTB.extended$tip.label
+species_tree_incl = species_tree[tstrsplit(species_tree, "_")[[1]] %in% genus_all]
+
+#### retrieve from itis data base
+taxoInfo = c()
+lgenus = split(genus_all, ceiling(seq_along(genus_all)/20))
+for (i in 1:length(lgenus)) {
+  temp = tax_name(query = lgenus[[i]], get = "family", db = "itis", accepted = TRUE,
+                  rank_filter = "genus", division_filter = "dicot")[, -1]
+  taxoInfo = rbind(taxoInfo, temp)
+}
+colnames(taxoInfo)[1] = "genus"
+## TODO add life form info + gymnosperm or not? (add all gymnosperm genera)
+## family information for all species present in target sites was extracted from the ITIS database using the R package taxize.
+## Life forms for all species were provided by site PIs (source?).
+save(taxoInfo, file = "data/taxoInfo.rda")
+
+
+
+
+speciestable = unique(sitespecies[!is.na(sitespecies$species), c("latin_name", "family")])
+speciestable = speciestable[!grepl(" sp\\.|ukn", tolower(speciestable$latin_name)),]
+speciestable$species = do.call(paste, data.table::tstrsplit(speciestable$latin_name, " | x ")[1:2])
+speciestable$species[grep(" x ", speciestable$latin_name)] = speciestable$latin_name[grep(" x ", speciestable$latin_name)]
+speciestable = speciestable[-duplicated(speciestable$species),]
+## TODO check spelling and family (accepted)
+## TODO add a function that does it for new
+tree = phylo.maker(speciestable)$scenario.3
+distance = distTips(tree, method = "patristic")
+L = length(labels(distance))
+sp1 = rep(labels(distance), each = length(labels(distance))) ## species by column in the distance matrix
+sp2 = rep(labels(distance), length(labels(distance)))  ## species by row in the distance matrix
+rmL = unlist(sapply(1:L, function(i) (i-1)*L + 1:i))  ## species names to be removed (duplicated distance, not in the dist matrix)
+dfdist = data.frame(sp1 = sp1[-rmL], sp2 = sp2[-rmL], dist = c(distance))
+# dfdist$simil = exp(-0.01*dfdist$dist) ## adjust lambda / check values same genus, family, etc
+## add all combinations (symmetry sp1 - sp2)
+dfdistb = dfdist
+colnames(dfdistb)[1:2] = c("sp2", "sp1")
+dfdist = rbind(dfdist, dfdistb)
+
+## now genus/family level? -> node-to-tip distance? try distRoot(tree)?
+## for now (discuss with Erika and Krista): mean(paired distances of all species in same taxa)/2
+
+dfdist$ge1 = data.table::tstrsplit(dfdist$sp1, "_")[[1]]
+dfdist$ge2 = data.table::tstrsplit(dfdist$sp2, "_")[[1]]
+
+## are all genera represented?
+genusPhylo = unique(tstrsplit(labels(distance), "_")[[1]])
+genusTable = unique(tstrsplit(speciestable$species, " ")[[1]])
+genusTable[!(genusTable %in%  genusPhylo)]
+
+subset(dfdist, ge1 == ge2 & ge1=="Salix")
+
+## check that all species are in the list
+speciesAll = unique(speciestable$species)
+speciesAll[!(speciesAll %in%  gsub("_", " ", labels(distance)))]
+speciesAll = unique(speciestable$species)
+speciesAll[!(speciesAll %in%  gsub("_", " ", labels(distance)))]
+
+## in equations
+data("equations")
+equation
+
+
 
 
 
@@ -25,8 +102,8 @@ site_taxa = unique(sitespecies[, c("family", "genus")])
 
 
 equation_genus = subset(equations,
-                       !(equation_categ %in% c("fa_spec", "generic")) &
-                         allometry_specificity %in% c("Genus", "Species"))$equation_taxa
+                        !(equation_categ %in% c("fa_spec", "generic")) &
+                          allometry_specificity %in% c("Genus", "Species"))$equation_taxa
 equation_genus = unique(tstrsplit(equation_genus, " ")[[1]])
 equation_genus[!equation_genus %in% site_taxa$genus]
 
