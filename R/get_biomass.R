@@ -142,7 +142,6 @@ get_biomass = function(dbh,
   }
 
   # weight function
-  ## TODO solve NA sample size and dbh range problem
   weight = weight_allom(
     dbh = dbh,
     koppen = koppenObs,
@@ -188,7 +187,7 @@ weight_allom = function(dbh,
   # a : max value that weight_N can reach (here: 1)
   # b=0.03 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.03 = 100
   # implication: new observations will not increase weight_N much when Nobs > 100
-  dfweights$wN[is.na(dfweights$wN)] = 0.1 ## for now: give 0.1 to equations with no samle size; find why they don't have a sample size
+  dfweights$wN[is.na(dfweights$wN)] = 0.1 ## for now: give 0.1 to equations with no sample size; find why they don't have a sample size
 
   ## weight by dbh range ##
   ## This weight function is inspired of the tricube weight function in local regressions
@@ -231,30 +230,69 @@ weight_allom = function(dbh,
   if (is.null(genus)) {
     dfweights$wT = 1
   } else {
-    dfweights$equation_taxa
+    ## all character strings to lower cases to avoid inconsistencies
+    dfweights$equation_taxa = tolower(dfweights$equation_taxa)
+    dfweights$genus = tolower(dfweights$genus)
+    ## remove " sp." from genus in equation taxa
+    dfweights$equation_taxa = gsub(" sp//.", "", dfweights$equation_taxa)
+    ## split by "/" when there are several species or families
+    taxa = tstrsplit(dfweights$equation_taxa, "/| / ")
     dfweights$wT = 1e-6
     # same species
-    dfweights$wT[dfweights$equation_taxa == paste(dfweights$genus, dfweights$species)] = 1
+    dfweights$wT[taxa[[1]] == paste(dfweights$genus, dfweights$species) |
+                   (taxa[[2]] == paste(dfweights$genus, dfweights$species) &
+                      !is.na(taxa[[2]]))] = 1
     # same genus
-    dfweights$wT[dfweights$equation_taxa == dfweights$genus] = 0.8
+    dfweights$wT[taxa[[1]] == dfweights$genus] = 0.8
     # same genus, different species
-    dfweights$eqtaxa1 = data.table::tstrsplit(dfweights$equation_taxa, " ")[[1]]
-    dfweights$eqtaxa2 = data.table::tstrsplit(dfweights$equation_taxa, " ")[[2]]
-    dfweights$wT[dfweights$eqtaxa1 == dfweights$genus &
-                   dfweights$eqtaxa2 != dfweights$species] = 0.7
+    eqtaxaG = data.table::tstrsplit(taxa[[1]], " ")[[1]]
+    eqtaxaS1 = data.table::tstrsplit(taxa[[1]], " ")[[2]]
+    eqtaxaS2 = data.table::tstrsplit(taxa[[2]], " ")[[2]]
+    dfweights$wT[eqtaxaG == dfweights$genus &
+                   (eqtaxaS1 != dfweights$species & !is.na(eqtaxaS1) &
+                      eqtaxaS2 != dfweights$species & !is.na(eqtaxaS2))] = 0.7
     # # same family
-    # dfweights$wT[dfweights$equation_taxa == dfweights$genus] = 0.5
-    # # same family, different genus
-    # dfweights$wT[dfweights$equation_taxa != paste(dfweights$genus, dfweights$species)] = 0.2
+    data("genus_family")
+    genus_family$genus = tolower(genus_family$genus)
+    genus_family$family = tolower(genus_family$family)
+    dfweights = merge(dfweights, genus_family, by = "genus", all.x = TRUE)
+    dfweights$wT[taxa[[1]] == dfweights$family |
+                   (!is.na(taxa[[2]]) & taxa[[2]] == dfweights$family)|
+                   (!is.na(taxa[[3]]) & taxa[[3]] == dfweights$family)|
+                   (!is.na(taxa[[4]]) & taxa[[4]] == dfweights$family)|
+                   (!is.na(taxa[[5]]) & taxa[[5]] == dfweights$family)|
+                   (!is.na(taxa[[6]]) & taxa[[6]] == dfweights$family)] = 0.5
     # generic equations
-    ## conifers?
+    ## conifers / gymnosperms?
     data("gymno_genus")
-    dfweights$wT[dfweights$genus %in% gymno &
-                   dfweights$equation_taxa == "Conifers"] = 0.3
-    dfweights$wT[!dfweights$genus %in% gymno &
-                   dfweights$equation_taxa == "Evergreen broad-leaved species"] = 0.3
+    conifers = gymno_genus$Genus[gymno_genus$conifer]
+    # yes
+    dfweights$wT[dfweights$genus %in% conifers &
+                   dfweights$equation_taxa == "conifers"] = 0.3
+    # no
+    dfweights$wT[!(dfweights$genus %in% gymno_genus$Genus) &
+                   dfweights$equation_taxa == "broad-leaved species"] = 0.3
     ## tree or shrub?
-    ## tree + angiosperm?
+    data("shrub_species")
+    shrub_genus = gsub(" sp\\.", "", grep(" sp\\.", shrub_species, value = TRUE))
+    # shrubs (all)
+    dfweights$wT[(paste(dfweights$genus, dfweights$species) %in% shrub_species |
+                    dfweights$genus %in% shrub_genus) &
+                   dfweights$equation_taxa == "shrubs"] = 0.3
+    # shrubs (angio)
+    dfweights$wT[(paste(dfweights$genus, dfweights$species) %in% shrub_species |
+                    dfweights$genus %in% shrub_genus) &
+                   !(dfweights$genus %in% gymno_genus$Genus) &
+                   dfweights$equation_taxa == "shrubs (angiosperms)"] = 0.3
+    # trees (all)
+    dfweights$wT[!paste(dfweights$genus, dfweights$species) %in% shrub_species &
+                   !dfweights$genus %in% shrub_genus &
+                   dfweights$equation_taxa == "trees (angiosperms/gymnosperms)"] = 0.3
+    # trees (angio)
+    dfweights$wT[!paste(dfweights$genus, dfweights$species) %in% shrub_species &
+                   !dfweights$genus %in% shrub_genus &
+                   !(dfweights$genus %in% gymno_genus$Genus) &
+                   dfweights$equation_taxa == "trees (angiosperms)"] = 0.3
   }
 
   dfweights$w = dfweights$wN * dfweights$wD * dfweights$wE * dfweights$wT
