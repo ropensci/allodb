@@ -236,7 +236,7 @@ weight_allom = function(dbh,
     ## remove " sp." from genus in equation taxa
     dfweights$equation_taxa = gsub(" sp//.", "", dfweights$equation_taxa)
     ## split by "/" when there are several species or families
-    taxa = tstrsplit(dfweights$equation_taxa, "/| / ")
+    taxa = tstrsplit(dfweights$equation_taxa, "/| / | /|/ ")
     dfweights$wT = 1e-6
     # same species
     dfweights$wT[taxa[[1]] == paste(dfweights$genus, dfweights$species) |
