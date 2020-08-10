@@ -40,8 +40,6 @@ g
 # species list per site ##
 load("data/sitespecies.rda")
 sitespecies = data.table(sitespecies)
-## correct spelling in sitespecies: niobrara instead of niobara
-## sitespecies[site == "niobara", site := "niobrara"]
 
 ## keep only non tropical sites
 load("data/sites_info.rda")
