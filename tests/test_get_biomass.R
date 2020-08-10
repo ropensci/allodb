@@ -2,11 +2,10 @@
 ### Produce graphs to test get_biomass function ###
 ###################################################
 
-source("R/get_biomass.R")
-
 library(data.table)
 library(ggplot2)
 library(ggpubr)
+library(allodb)
 
 #### test 1 ####
 data = data.table(expand.grid(dbh=1:150, genus=c("Acer", "Prunus", "Fraxinus", "Quercus"), location = c("scbi", "zaragoza", "nice", "sivas")))
@@ -65,8 +64,14 @@ data = data.table(expand.grid(dbh=1:200, nb = 1:nrow(site_species)))
 data = merge(data, site_species, by = "nb")
 data$nb = NULL
 
-data[, agb := get_biomass(dbh=data$dbh, genus=data$genus, species = data$species,
-                          coords = cbind(data$long, data$lat))/1000]
+## parallelize agb calculation to avoid memory over usage
+data_site = split(data, by = "site")
+agb = lapply(data_site, function(df) get_biomass(dbh=df$dbh,
+                                                 genus=df$genus,
+                                                 species = df$species,
+                                                 coords = cbind(df$long, df$lat))/1000)
+data$agb = do.call(c, agb)
+
 data[, name := paste(genus, species)]
 data[, name := gsub(" NA", "", name)]
 
@@ -130,7 +135,7 @@ for (i in 1:length(ls_site_species)) {
 }
 
 ## agb < 0
-
+subset(data, agb < 0)
 
 ## subset data: species-site combination with non monotonic AGB allometry
 data = setorder(data, site, name, dbh)
@@ -144,6 +149,13 @@ ggplot(data_nonmon, aes(x=dbh, y=agb)) +
   theme(legend.position = "none") +
   labs(y="AGB (tons)", x = "DBH (cm)") +
   scale_x_log10() + scale_y_log10()
+ggsave("tests/graphs/non_monotonous_allometries_log.pdf", height=36, width=15)
+ggplot(data_nonmon, aes(x=dbh, y=agb)) +
+  geom_line() +
+  facet_wrap(~ site + name, ncol=5) +
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(y="AGB (tons)", x = "DBH (cm)")
 ggsave("tests/graphs/non_monotonous_allometries.pdf", height=36, width=15)
 
 
