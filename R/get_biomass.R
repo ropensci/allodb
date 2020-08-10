@@ -131,11 +131,11 @@ get_biomass = function(dbh,
   } else
     coordsSite = apply(unique(coords), 2, as.numeric)
   ## extract koppen climate of every location
-  datacoords = data.frame(#site = apply(coordsSite, 1, function(x) paste(x, collapse = "_")),
-                          rndCoord.lon = kgc::RoundCoordinates(coordsSite[,1]),
-                          rndCoord.lat = kgc::RoundCoordinates(coordsSite[,2]))
-  climatezones = kgc::climatezones
-  koppenObs = kgc::LookupCZ(datacoords)
+  # koppen climate raster downloaded from http://koeppen-geiger.vu-wien.ac.at/present.htm on the 2/10/2020
+  data("koppenRaster")
+  climates = koppenRaster@data@attributes[[1]][, 2]
+  koppenObs = climates[raster::extract(koppenRaster, coordsSite)]
+  rm(koppenRaster)
   if (length(koppenObs) > 1) {
     coordsLev = apply(coords, 1, function(x) paste(x, collapse = "_"))
     coordsLev = factor(coordsLev, levels = unique(coordsLev))
