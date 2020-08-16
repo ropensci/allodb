@@ -40,8 +40,6 @@ g
 # species list per site ##
 load("data/sitespecies.rda")
 sitespecies = data.table(sitespecies)
-## correct spelling in sitespecies: niobrara instead of niobara
-## sitespecies[site == "niobara", site := "niobrara"]
 
 ## keep only non tropical sites
 load("data/sites_info.rda")
@@ -211,21 +209,27 @@ scbi$agb_allodb = get_biomass(dbh=scbi$dbh/10, ## !! dbh in mm
                               genus=scbi$genus,
                               species = scbi$species,
                               coords = c(-78.15, 38.9))/1000
+
+# built graphs to compare with other models
+# tropical (Chave eq) vs. allodb
 gchave_allodb = ggplot(scbi, aes(x = agb, y = agb_allodb, color = paste(genus, species))) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point() +
   theme(legend.position = "none")
+
+# regional model (Chojnacky) vs. allodb
 gchojn_allodb = ggplot(scbi, aes(x = agb_choj, y = agb_allodb, color = paste(genus, species))) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point() +
   theme(legend.position = "none")
 
+# regional model (Chojnacky) vs. tropical model (Chave)
 gchojn_chave = ggplot(scbi, aes(x = agb_choj, y = agb, color = paste(genus, species))) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point() +
   theme(legend.position = "none")
 
-## which set of equations gives the most different results?
+## check which set of equations gives the most different results
 deltaCaCo = abs(scbi$agb-scbi$agb_choj)
 deltaCaA = abs(scbi$agb-scbi$agb_allodb)
 deltaACo = abs(scbi$agb_choj-scbi$agb_allodb)
@@ -237,4 +241,8 @@ library(plotly)
 ggplotly(gchave_allodb)
 ggplotly(gchojn_allodb)
 ggplotly(gchojn_chave)
+
+#sum of AGB for sbci plot/ha-1
+sum(scbi$agb_choj, na.rm = TRUE)
+7224.277/25.6
 
