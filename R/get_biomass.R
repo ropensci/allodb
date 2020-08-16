@@ -242,19 +242,17 @@ weight_allom = function(dbh,
     ## split by "/" when there are several species or families
     taxa = data.table::tstrsplit(dfweights$equation_taxa, "/| / | /|/ ")
     dfweights$wT = 1e-6
-    # same species
-    dfweights$wT[taxa[[1]] == paste(dfweights$genus, dfweights$species) |
-                   (taxa[[2]] == paste(dfweights$genus, dfweights$species) &
-                      !is.na(taxa[[2]]))] = 1
+
     # same genus
     dfweights$wT[taxa[[1]] == dfweights$genus] = 0.8
     # same genus, different species
     eqtaxaG = data.table::tstrsplit(taxa[[1]], " ")[[1]]
-    eqtaxaS1 = data.table::tstrsplit(taxa[[1]], " ")[[2]]
-    eqtaxaS2 = data.table::tstrsplit(taxa[[2]], " ")[[2]]
-    dfweights$wT[eqtaxaG == dfweights$genus &
-                   (eqtaxaS1 != dfweights$species & !is.na(eqtaxaS1) &
-                      eqtaxaS2 != dfweights$species & !is.na(eqtaxaS2))] = 0.7
+    eqtaxaS = data.table::tstrsplit(taxa[[1]], " ")[[2]]
+    dfweights$wT[eqtaxaG == dfweights$genus & !is.na(eqtaxaS)] = 0.7
+    # same species
+    dfweights$wT[taxa[[1]] == paste(dfweights$genus, dfweights$species) |
+                   (taxa[[2]] == paste(dfweights$genus, dfweights$species) &
+                      !is.na(taxa[[2]]))] = 1
     # # same family
     data("genus_family")
     genus_family$genus = tolower(genus_family$genus)
