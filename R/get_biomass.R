@@ -135,7 +135,6 @@ get_biomass = function(dbh,
   data("koppenRaster")
   climates = koppenRaster@data@attributes[[1]][, 2]
   koppenObs = climates[raster::extract(koppenRaster, coordsSite)]
-  rm(koppenRaster)
   if (length(koppenObs) > 1) {
     coordsLev = apply(coords, 1, function(x) paste(x, collapse = "_"))
     coordsLev = factor(coordsLev, levels = unique(coordsLev))
@@ -303,6 +302,7 @@ weight_allom = function(dbh,
   Mw = data.table::dcast(dfweights, obs_id ~ equation_id, value.var = "w")
   data.table::setorder(Mw, obs_id)
   Mw = as.matrix(Mw)[, -1]
+  Mw = matrix(Mw, ncol = nrow(equation_table))
 
   return(Mw)
 }
