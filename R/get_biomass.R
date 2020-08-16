@@ -241,29 +241,35 @@ weight_allom = function(dbh,
     dfweights$equation_taxa = gsub(" sp//.", "", dfweights$equation_taxa)
     ## split by "/" when there are several species or families
     taxa = data.table::tstrsplit(dfweights$equation_taxa, "/| / | /|/ ")
+    dfweights$taxa1 = taxa[[1]]
+    dfweights$taxa2 = taxa[[2]]
+    dfweights$taxa3 = taxa[[3]]
+    dfweights$taxa4 = taxa[[4]]
+    dfweights$taxa5 = taxa[[5]]
+    dfweights$taxa6 = taxa[[6]]
     dfweights$wT = 1e-6
 
     # same genus
-    dfweights$wT[taxa[[1]] == dfweights$genus] = 0.8
+    dfweights$wT[dfweights$taxa1 == dfweights$genus] = 0.8
     # same genus, different species
-    eqtaxaG = data.table::tstrsplit(taxa[[1]], " ")[[1]]
-    eqtaxaS = data.table::tstrsplit(taxa[[1]], " ")[[2]]
+    eqtaxaG = data.table::tstrsplit(dfweights$taxa1, " ")[[1]]
+    eqtaxaS = data.table::tstrsplit(dfweights$taxa1, " ")[[2]]
     dfweights$wT[eqtaxaG == dfweights$genus & !is.na(eqtaxaS)] = 0.7
     # same species
-    dfweights$wT[taxa[[1]] == paste(dfweights$genus, dfweights$species) |
-                   (taxa[[2]] == paste(dfweights$genus, dfweights$species) &
-                      !is.na(taxa[[2]]))] = 1
+    dfweights$wT[dfweights$taxa1 == paste(dfweights$genus, dfweights$species) |
+                   (dfweights$taxa2 == paste(dfweights$genus, dfweights$species) &
+                      !is.na(dfweights$taxa2))] = 1
     # # same family
     data("genus_family")
     genus_family$genus = tolower(genus_family$genus)
     genus_family$family = tolower(genus_family$family)
     dfweights = merge(dfweights, genus_family, by = "genus", all.x = TRUE)
-    dfweights$wT[taxa[[1]] == dfweights$family |
-                   (!is.na(taxa[[2]]) & taxa[[2]] == dfweights$family)|
-                   (!is.na(taxa[[3]]) & taxa[[3]] == dfweights$family)|
-                   (!is.na(taxa[[4]]) & taxa[[4]] == dfweights$family)|
-                   (!is.na(taxa[[5]]) & taxa[[5]] == dfweights$family)|
-                   (!is.na(taxa[[6]]) & taxa[[6]] == dfweights$family)] = 0.5
+    dfweights$wT[dfweights$taxa1 == dfweights$family |
+                   (!is.na(dfweights$taxa2) & dfweights$taxa2 == dfweights$family)|
+                   (!is.na(dfweights$taxa3) & dfweights$taxa3 == dfweights$family)|
+                   (!is.na(dfweights$taxa4) & dfweights$taxa4 == dfweights$family)|
+                   (!is.na(dfweights$taxa5) & dfweights$taxa5 == dfweights$family)|
+                   (!is.na(dfweights$taxa6) & dfweights$taxa6 == dfweights$family)] = 0.5
     # generic equations
     ## conifers / gymnosperms?
     data("gymno_genus")
