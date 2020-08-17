@@ -322,7 +322,7 @@ weight_allom = function(dbh,
   Mw = data.table::dcast(dfweights, obs_id ~ equation_id, value.var = "w")
   data.table::setorder(Mw, obs_id)
   Mw = as.matrix(Mw)[, -1]
-  Mw = matrix(Mw, ncol = nrow(equation_table))
-
+  Mw = matrix(Mw, ncol = nrow(equation_table),
+              dimnames = list(NULL, colnames(Mw)))
   return(Mw)
 }
