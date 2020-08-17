@@ -140,27 +140,23 @@ data = setorder(data, site, name, dbh)
 which_nonmon = subset(data[, .(non_mon = any(diff(agb) < 0)), .(site, name)], (non_mon))
 data_nonmon = merge(data, which_nonmon[, -"non_mon"], by = c("site", "name"))
 
-ggplot(data_nonmon, aes(x=dbh, y=agb)) +
-  geom_line() +
-  facet_wrap(~ site + name, ncol=5) +
-  theme_bw() +
-  theme(legend.position = "none") +
-  labs(y="AGB (tons)", x = "DBH (cm)") +
-  scale_x_log10() + scale_y_log10()
-ggsave("tests/graphs/non_monotonous_allometries_log.pdf", height=36, width=15)
-ggplot(data_nonmon, aes(x=dbh, y=agb)) +
-  geom_line() +
-  facet_wrap(~ site + name, ncol=5) +
-  theme_bw() +
-  theme(legend.position = "none") +
-  labs(y="AGB (tons)", x = "DBH (cm)")
-ggsave("tests/graphs/non_monotonous_allometries.pdf", height=36, width=15)
-
-
-## do a 'sensitivity analysis': for all taxa that have monotony problems (and don't want to go see a doctor):
-## remove one by one one the top 20 equations (based on dbh < 10 cm) and reevaluate monotony (or negative values)
-## -> if problem is solved: that equation should be checked
-# data_nonmon = data_nonmon[dbh < 10]
+if (nrow(data_nonmon) > 0) {
+  ggplot(data_nonmon, aes(x=dbh, y=agb)) +
+    geom_line() +
+    facet_wrap(~ site + name, ncol=5) +
+    theme_bw() +
+    theme(legend.position = "none") +
+    labs(y="AGB (tons)", x = "DBH (cm)") +
+    scale_x_log10() + scale_y_log10()
+  ggsave("tests/graphs/non_monotonous_allometries_log.pdf", height=36, width=15)
+  ggplot(data_nonmon, aes(x=dbh, y=agb)) +
+    geom_line() +
+    facet_wrap(~ site + name, ncol=5) +
+    theme_bw() +
+    theme(legend.position = "none") +
+    labs(y="AGB (tons)", x = "DBH (cm)")
+  ggsave("tests/graphs/non_monotonous_allometries.pdf", height=36, width=15)
+}
 
 
 
