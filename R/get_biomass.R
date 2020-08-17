@@ -1,10 +1,14 @@
-#' Function to compute aboveground biomass (or other variables ) from allometric
+#' Function to compute aboveground biomass (or other variables) from allometric
 #' equations.
 #'
 #' This function creates S3 objects of class "numeric".
 #'
+#' The function can run into some memory problems when used on large datasets
+#' (usually several hundred thousand observations). In that case, see the 2nd
+#' example below for how to apply the function to a splitted dataset.
+#'
 #' @param dbh A numerical vector containing tree diameter at breast height (dbh)
-#'   measurements, in cm
+#'   measurements, in cm.
 #' @param h A numerical vector (same length as dbh) containing tree height
 #'   measurements, in m. Default is NULL, when no measurement is available.
 #' @param genus A character vector (same length as dbh), containing the genus
@@ -13,24 +17,24 @@
 #' @param species A character vector (same length as dbh), containing the
 #'   species (e.g. "rubra")  of each tree. Default is NULL, when no
 #'   identification is available.
-#' @param shrub A logical vector (same length as dbh): is the observation a shrub?
-#'   Default is `NULL` (no information), in which case allometric equations
-#'   designed for shrubs will be used only for species recorded as shrubs in
-#'   ForestGEO sites (see `data("shrub_species")`).
+#' @param shrub A logical vector (same length as dbh): is the observation a
+#'   shrub? Default is `NULL` (no information), in which case allometric
+#'   equations designed for shrubs will be used only for species recorded as
+#'   shrubs in ForestGEO sites (see `data("shrub_species")`).
 #' @param coords A numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree. Default is NULL when no
 #'   information is available.
-#' @param new_equations Optional. An equation table created with the xxx
-#'   function.
+#' @param new_equations Optional. An equation table created with the
+#'   add_equation() function.
 #' @param var What dependent variable(s) should be provided in the output?
 #'   Default is `Total aboveground biomass` and `Whole tree (above stump)`,
 #'   other possible values are: `Bark biomass`, `Branches (dead)`, `Branches
 #'   (live)`, `Branches total (live, dead)`, `Foliage total`, `Height`,
 #'   `Leaves`, `Stem (wood only)`, `Stem biomass`, `Stem biomass (with bark)`,
-#'   `Stem biomass (without bark)`, `Whole tree (above and belowground)`.
-#'  Be aware that only a few equations exist for those other variables, so estimated values might not be
-#' very acurate.
+#'   `Stem biomass (without bark)`, `Whole tree (above and belowground)`. Be
+#'   aware that only a few equations exist for those other variables, so
+#'   estimated values might not be very acurate.
 #' @param add_weight Should the relative weigth given to each equation in the
 #'   `equations` data frame be added to the output? Default is FALSE.
 #' @param use_height_allom A logical value: should the height allometries from
@@ -50,6 +54,14 @@
 #' species = scbi_stem1$species,
 #' coords = c(-78.2, 38.9)
 #' )
+#'
+#' # split dataset to avoid memory over usage
+#' data_split = split(scbi_stem1, cut(1:nrow(scbi_stem1), breaks = 10, labels = FALSE))
+#' agb = lapply(data_split, function(df) get_biomass(dbh=df$dbh,
+#'                                                  genus=df$genus,
+#'                                                  species = df$species,
+#'                                                  coords = c(-78.2, 38.9)))
+#' scbi_stem1$agb = do.call(c, agb)
 get_biomass = function(dbh,
                        h = NULL,
                        genus = rep(NA, length(dbh)),
