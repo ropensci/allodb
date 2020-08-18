@@ -19,10 +19,10 @@ valdata <- data.frame(valdata,ClimateZ=LookupCZ(valdata))
 valdata$agb_allodb = get_biomass(dbh=valdata$DBH,
                               species = valdata$Species,
                               genus= valdata$Genus,
+                              #coords=cbind(valdata$Longitude, valdata$Latitude)/1000)
                               coords = c(31.083, 67.650))
-                              #cbind(valdata$Longitude, valdata$Latitude)/1000)
 
-#cbind not working! I get the same warning 20 times and not agb values..
+#cbind is not working! I get the same warning 20 times and agb=0 for all trees (check valdata df)....so I am using as example "coords = c(31.083, 67.650)) to get a graph
 warnings()
 
 #plot results
