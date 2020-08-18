@@ -25,7 +25,7 @@ valdata <- data.frame(valdata,ClimateZ=LookupCZ(valdata))
 valdata$agb_allodb = get_biomass(dbh=valdata$DBH,
                               species = valdata$Species,
                               genus= valdata$Genus,
-                              coords=cbind(valdata$Longitude, valdata$Latitude))/1000
+                              coords=cbind(valdata$Longitude, valdata$Latitude))
 
 # plot results
 val = ggplot(valdata, aes(x = Ptot, y = agb_allodb)) +
@@ -33,8 +33,12 @@ val = ggplot(valdata, aes(x = Ptot, y = agb_allodb)) +
   geom_point(size=1)
 
 #Change label of axis
+val = val +  xlab("True AGB (kg)") + ylab("Predicted AGB (kg)")
 val
-val +  xlab("True AGB (kg)") + ylab("Predicted AGB (kg)")
+val + geom_smooth()
+## we seem to be underestimating large stems with allodb compared to this validation dataset
+val + scale_x_log10() + scale_y_log10() + geom_smooth()
+## not too bad for small to medium stems, very small stems seem to be slightly overestimated
 
 #check values by moving mouse on graph
 ggplotly(val)
