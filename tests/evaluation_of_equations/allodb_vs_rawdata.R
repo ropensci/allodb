@@ -27,6 +27,8 @@ valdata$agb_allodb = get_biomass(dbh=valdata$DBH,
                               genus= valdata$Genus,
                               coords=cbind(valdata$Longitude, valdata$Latitude))
 
+## TODO need to solve zero value problem
+
 # plot results
 val = ggplot(valdata, aes(x = Ptot, y = agb_allodb)) +
   geom_abline(slope=1, intercept=0, lty=2) +
@@ -45,3 +47,8 @@ ggplotly(val)
 
 sum(valdata$Ptot)
 sum(valdata$agb_allodb)
+
+### RMSE
+RMSE_allodb = sqrt(sum((valdata$Ptot-valdata$agb_allodb)**2)/nrow(valdata))
+
+## TODO add for example chave equation
