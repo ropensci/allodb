@@ -15,6 +15,10 @@ valdata$Longitude[valdata$Location == "The islands of Izu"] <- 139.271
 valdata$Latitude[valdata$Location == "The islands of Izu"] <- 34.507
 ## the latitdue of Jerezi, CZE is completely off
 valdata$Latitude[valdata$Location == "Jezeri"] <- 50.55
+## the longitud of Brandon, GRB were off
+valdata$Longitude[valdata$Location == "Brandon"] <- 0.66
+valdata$Longitude[valdata$Location == "England: Brandon"] <- 0.66
+
 
 #add Koppen zones to df (just in case)
 valdata <- data.frame(valdata,
@@ -27,9 +31,6 @@ valdata$agb_allodb = get_biomass(dbh=valdata$DBH,
                               species = valdata$Species,
                               genus= valdata$Genus,
                               coords=cbind(valdata$Longitude, valdata$Latitude))
-
-## TODO need to solve zero value problem
-## I think the problem is becasue the coords lay on the water. Wating for original pub from the library to correct them.
 
 # plot results
 val = ggplot(valdata, aes(x = Ptot, y = agb_allodb)) +
