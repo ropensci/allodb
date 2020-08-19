@@ -29,6 +29,7 @@ valdata$agb_allodb = get_biomass(dbh=valdata$DBH,
                               coords=cbind(valdata$Longitude, valdata$Latitude))
 
 ## TODO need to solve zero value problem
+## I think the problem is becasue the coords lay on the water. Wating for original pub from the library to correct them.
 
 # plot results
 val = ggplot(valdata, aes(x = Ptot, y = agb_allodb)) +
