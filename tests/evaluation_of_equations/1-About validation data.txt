@@ -9,8 +9,8 @@ https://doi.org/10.1038/sdata.2017.70.
 
 
 ############################################
-In case we need more data to validate our predicted values we can use (but you will need to add all 
-dry-componets to obtain AGB based on dry-matter):
+In case we need more data to validate our predicted values we can use (but we will need to add all 
+dry-componets to obtain AGB based on dry-matter AND need to add latin names):
 
 File= 2-Validation data
 Distribution: Canada
