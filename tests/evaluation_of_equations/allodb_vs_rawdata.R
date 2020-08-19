@@ -6,6 +6,7 @@ library(allodb)
 library(ggplot2)
 library(ggpubr)
 library(plotly)
+library(data.table)
 
 valdata <-read_excel("tests/evaluation_of_equations/1-Validation data.xlsx")
 ## the coordinates of the islands of Izu fall in the sea, which is why they don't have any Koppen climate zone
@@ -50,5 +51,36 @@ sum(valdata$agb_allodb)
 
 ### RMSE
 RMSE_allodb = sqrt(sum((valdata$Ptot-valdata$agb_allodb)**2)/nrow(valdata))
+RMSE_allodb_log = sqrt(sum((log(valdata$Ptot)-log(valdata$agb_allodb))**2)/nrow(valdata))
 
 ## TODO add for example chave equation
+WD = BIOMASS::getWoodDensity(genus = valdata$Genus,
+                             species = data.table::tstrsplit(valdata$Species, " ")[[2]])
+valdata$wsg = WD$meanWD
+valdata$agb_chave = BIOMASS::computeAGB(D = valdata$DBH,
+                                        WD = valdata$wsg,
+                                        coord = cbind(valdata$Longitude, valdata$Latitude))
+ggplot(valdata, aes(x = Ptot, y = agb_chave*1000)) +
+  geom_abline(slope=1, intercept=0, lty=2) +
+  geom_point(size=1)
+## chave 2014 does not work well outside the tropics because the E parameter depends heavily on the
+## temperature seasonality, which is low in the tropics but high elsewhere
+
+## try chave 2005 for moist tropical forests
+
+## try chojnacky 2014
+## get family
+data("genus_family")
+valdata = merge(valdata, genus_family, by.x = "Genus", by.y = "genus", all.x = TRUE)
+
+source("tests/evaluation_of_equations/chojnackyParams.R")
+valdata = data.table(valdata, chojnackyParams(valdata$family, valdata$Genus, valdata$wsg))
+
+valdata[, agb_choj := exp(V1 + V2*log(DBH))]
+
+ggplot(valdata, aes(x = Ptot, y = agb_choj)) +
+  geom_abline(slope=1, intercept=0, lty=2) +
+  geom_point(size=1)
+RMSE_choj = sqrt(sum((valdata$Ptot-valdata$agb_choj)**2)/nrow(valdata))
+
+## allodb performs better than chojnacky!!
