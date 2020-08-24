@@ -40,9 +40,9 @@ val = ggplot(valdata, aes(x = Ptot, y = agb_allodb)) +
 #Change label of axis
 val = val +  xlab("True AGB (kg)") + ylab("Predicted AGB (kg)")
 val
-val + geom_smooth()
+val + geom_smooth() + theme_classic()
 ## we seem to be underestimating large stems with allodb compared to this validation dataset
-val + scale_x_log10() + scale_y_log10() + geom_smooth()
+val + scale_x_log10() + scale_y_log10() + geom_smooth() + theme_classic()
 ## not too bad for small to medium stems, very small stems seem to be slightly overestimated
 
 #check values by moving mouse on graph
@@ -65,6 +65,7 @@ valdata$agb_chave = BIOMASS::computeAGB(D = valdata$DBH,
 ggplot(valdata, aes(x = Ptot, y = agb_chave*1000)) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point(size=1)
+
 ## chave 2014 does not work well outside the tropics because the E parameter depends heavily on the
 ## temperature seasonality, which is low in the tropics but high elsewhere
 
