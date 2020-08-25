@@ -4,14 +4,24 @@
 \alias{add_equation}
 \title{Function to add new equations to the equation table (then used in the get_biomass function)}
 \usage{
-add_equation(taxa, level, allometry, coords, minDBH, maxDBH, sampleSize,
-  unitDBH = "cm", unitOutput = "kg", inputVar = "DBH",
-  outputVar = "Total aboveground biomass")
+add_equation(
+  taxa,
+  level,
+  allometry,
+  coords,
+  minDBH,
+  maxDBH,
+  sampleSize,
+  unitDBH = "cm",
+  unitOutput = "kg",
+  inputVar = "DBH",
+  outputVar = "Total aboveground biomass"
+)
 }
 \arguments{
 \item{taxa}{character string or vector specifying the taxon (or taxa) for which the allometry has been calibrated}
 
-\item{level}{character string or vector specifying at which taxonomic level the equation has been built, either \code{Species}, \code{Genus}, \code{Family}, or \code{Woody species}, \code{Mixed conifers}}
+\item{level}{character string or vector specifying at which taxonomic level the equation has been built, either \code{Species}, \code{Genus}, \code{Family}, or \verb{Woody species}, \verb{Mixed conifers}}
 
 \item{allometry}{a character string with the allometric equation}
 
@@ -27,9 +37,9 @@ add_equation(taxa, level, allometry, coords, minDBH, maxDBH, sampleSize,
 
 \item{unitOutput}{character string wiht unit of equation output (either \code{g}, \code{kg}, \code{Mg} or \code{lbs} if the output is a mass, or \code{m} if the output is a height).}
 
-\item{inputVar}{Independent variable(s) needed in the allometry. Default is \code{DBH}, other option is \code{DBH, H}.}
+\item{inputVar}{Independent variable(s) needed in the allometry. Default is \code{DBH}, other option is \verb{DBH, H}.}
 
-\item{outputVar}{dependent variable estimated by the allometry. Default is \code{Total aboveground biomass}.}
+\item{outputVar}{dependent variable estimated by the allometry. Default is \verb{Total aboveground biomass}.}
 }
 \value{
 A new equation table including all default equations and the additional equation (equation_id = \code{new})
