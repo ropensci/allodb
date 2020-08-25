@@ -40,10 +40,15 @@ val = ggplot(valdata, aes(x = Ptot, y = agb_allodb)) +
 #Change label of axis
 val = val +  xlab("True AGB (kg)") + ylab("Predicted AGB (kg)")
 val
-val + geom_smooth() + theme_classic()
+val= val + geom_smooth() + theme_classic()
 ## we seem to be underestimating large stems with allodb compared to this validation dataset
-val + scale_x_log10() + scale_y_log10() + geom_smooth() + theme_classic()
+val_log= val + scale_x_log10() + scale_y_log10() + geom_smooth() + theme_classic()
 ## not too bad for small to medium stems, very small stems seem to be slightly overestimated
+
+#combine plots in one figure
+ggarrange(val, val_log,
+          labels = c("A", "B"),
+          ncol = 1, nrow = 2)
 
 #check values by moving mouse on graph
 ggplotly(val)
