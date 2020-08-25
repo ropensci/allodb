@@ -164,6 +164,19 @@ if (nrow(data_nonmon) > 0) {
 
 scbi = data.table(read.csv("tests/scbi.stem1-agb.csv"))
 
+# split dataset (runing into memory usage)
+data_split = split(scbi, cut(1:nrow(scbi), breaks = 10, labels = FALSE))
+
+agb = lapply(data_split, function(scbi) get_biomass(dbh=scbi$dbh,
+                                                  genus=scbi$genus,
+                                                  species = scbi$species,
+                                                  coords = c(-78.2, 38.9)))
+#I get an error after ruuning the code above: nt sure waht to do
+#  Error in quantile.default(agb_all, c(0.025, 0.975)) :
+#missing values and NaN's not allowed if 'na.rm' is FALSE
+
+scbi_stem1$agb = do.call(c, agb)
+
 # get species names
 load("tests/scbi.spptable.rdata")
 scbi = merge(subset(scbi, !is.na(dbh)), scbi.spptable, by = "sp")
