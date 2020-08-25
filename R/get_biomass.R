@@ -40,6 +40,14 @@
 #' @param use_height_allom A logical value: should the height allometries from
 #'   Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
 #'   Default is TRUE.
+#' @param wna this parameter is used in the weighting function to determine the
+#'   dbh-related weight attributed to equations without a specified dbh range.
+#'   Default is 0.1
+#' @param wsteep this parameter controls the steepness of the dbh-related weight
+#'   in the weighting function. Default is 3.
+#' @param w95 this parameter is used in the weighting function to determine the
+#'   value at which the sample-size-related weight reaches 95% of its maximum
+#'   value (max=1). Default is 500.
 #'
 #' @return A vector of class "numeric" of the same length as dbh, containing AGB
 #'   value (in kg) for every stem, or the dependent variable as defined in
@@ -71,7 +79,10 @@ get_biomass = function(dbh,
                        new_equations = NULL,
                        var = c("Total aboveground biomass", "Whole tree (above stump)"),
                        add_weight = FALSE,
-                       use_height_allom = TRUE) {
+                       use_height_allom = TRUE,
+                       wna = 0.1,
+                       wsteep = 3,
+                       w95 = 500) {
   data("equations")
   dfequation = equations
   if (!is.null(new_equations))
@@ -163,7 +174,10 @@ get_biomass = function(dbh,
     koppen = koppenObs,
     genus = genus,
     species = species,
-    equation_table = dfequation
+    equation_table = dfequation,
+    replace_dbhrange = wna,
+    b = log(20)/w95,
+    steep = wsteep
   )
   relative_weight = weight / matrix(rowSums(weight, na.rm = TRUE),
                                     nrow = length(dbh),
@@ -183,8 +197,6 @@ weight_allom = function(dbh,
                         species = NULL,
                         equation_table,
                         replace_dbhrange = 0.1,
-                        ## wieght value in weight_D matrix when there is no DBH range for the equation
-                        a = 1,
                         b = 0.006,
                         steep = 3  ## controls the steepness of the dbh range transition, should be > 1
 ) {
@@ -199,10 +211,9 @@ weight_allom = function(dbh,
   dfweights = merge(dfweights, dfobs, by = "obs_id")
 
   ## weight by sample size ##
-  dfweights$wN = a * (1 - exp(-b * as.numeric(dfweights$sample_size)))
-  # a : max value that weight_N can reach (here: 1)
-  # b=0.03 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.03 = 100
-  # implication: new observations will not increase weight_N much when Nobs > 100
+  dfweights$wN = (1 - exp(-b * as.numeric(dfweights$sample_size)))
+  # b=0.006 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.006 = 500
+  # implication: new observations will not increase weight_N much when Nobs > 500
   dfweights$wN[is.na(dfweights$wN)] = 0.1 ## for now: give 0.1 to equations with no sample size; find why they don't have a sample size
 
   ## weight by dbh range ##
