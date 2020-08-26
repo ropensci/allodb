@@ -88,9 +88,6 @@ get_biomass = function(dbh,
   if (!is.null(new_equations))
     dfequation = new_equations
 
-  ## remove bohn et al 2014 equation for now: gives Inf values (solve problem later)
-  dfequation = dfequation[! dfequation$equation_id == "e57b77",]
-
   ## replace height with height allometry from Bohn et al. 2014 in Jansen et al 1996
   if (use_height_allom & "jansen_1996_otvb" %in% dfequation$ref_id) {
     eq_jansen = subset(equations, ref_id=="jansen_1996_otvb")
@@ -144,9 +141,10 @@ get_biomass = function(dbh,
     agb_all[, i] = eval(parse(text = new_equation)) * dfequation$output_units_CF[i]
   }
   ## remove some absurdly high values given by some equations when outside of their dbh range
-  rnge = diff(range(quantile(agb_all, c(0.025, 0.975)))) ## range of values within 95% interval
-  agb_all[agb_all < quantile(agb_all, 0.025) - 10*rnge |
-            agb_all > quantile(agb_all, 0.975) + 10*rnge] = NA
+  rnge = diff(range(quantile(agb_all, c(0.025, 0.975), na.rm = TRUE))) ## range of values within 95% interval
+  agb_all[!is.na(agb_all) &
+            (agb_all < quantile(agb_all, 0.025) - 10*rnge |
+               agb_all > quantile(agb_all, 0.975) + 10*rnge)] = NA
 
   # koppen climate
   # (1) get koppen climate for all locations
