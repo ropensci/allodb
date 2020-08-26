@@ -163,74 +163,45 @@ if (nrow(data_nonmon) > 0) {
 ## test 3 - agb in scbi-census-1 vs allodb equations ####
 
 scbi = data.table(read.csv("tests/scbi.stem1-agb.csv"))
+scbi = subset(scbi, !is.na(dbh))
 
 # split dataset (runing into memory usage)
 data_split = split(scbi, cut(1:nrow(scbi), breaks = 10, labels = FALSE))
 
-agb = lapply(data_split, function(scbi) get_biomass(dbh=scbi$dbh,
-                                                  genus=scbi$genus,
-                                                  species = scbi$species,
+agb = lapply(data_split, function(df) get_biomass(dbh=df$dbh/10,
+                                                  genus=df$genus,
+                                                  species = df$species,
                                                   coords = c(-78.2, 38.9)))
-#I get an error after ruuning the code above: nt sure waht to do
-#  Error in quantile.default(agb_all, c(0.025, 0.975)) :
-#missing values and NaN's not allowed if 'na.rm' is FALSE
 
-scbi_stem1$agb = do.call(c, agb)
+scbi$agb_allodb = do.call(c, agb)/1000
 
 # get species names
 load("tests/scbi.spptable.rdata")
-scbi = merge(subset(scbi, !is.na(dbh)), scbi.spptable, by = "sp")
+scbi = merge(scbi[, -grep("genus|amily|pecies", colnames(scbi)), with = FALSE], scbi.spptable, by = "sp", all.x = TRUE)
 # get wood densities
 library(BIOMASS)
 wd = getWoodDensity(genus = scbi$genus, species = scbi$species)
 scbi$wsg = wd$meanWD
 
-# ## some Chojnacky equations
-scbi[Family == "Cupressaceae" & wsg < 0.3, `:=`(a = -1.9615, b = 2.1063)]
-scbi[Family == "Cupressaceae" & wsg >= 0.3 & wsg < 0.4, `:=`(a = -2.7765, b = 2.4195)]
-scbi[Family == "Cupressaceae" & wsg >= 0.4, `:=`(a = -2.6327, b = 2.4757)]
+source("tests/evaluation_of_equations/chojnackyParams.R")
+scbi = data.table(scbi, chojnackyParams(scbi$Family, scbi$genus, scbi$wsg))
 
-scbi[Family == "Betulaceae" & wsg < 0.4, `:=`(a = -2.5932, b = 2.5349)]
-scbi[Family == "Betulaceae" & wsg >= 0.4 & wsg < 0.5, `:=`(a = -2.2271, b = 2.4513)]
-scbi[Family == "Betulaceae" & wsg >= 0.5 & wsg < 0.6, `:=`(a = -2.7765, b = 2.348)]
-scbi[Family == "Betulaceae" & wsg >= 0.6, `:=`(a = -2.2652, b = 2.5349)]
-
-scbi[Family == "Pinaceae" & wsg < 0.45, `:=`(a = -2.6177, b = 2.4638)]
-scbi[Family == "Pinaceae" & wsg >= 0.45, `:=`(a = -3.0506, b = 2.6465)]
-
-scbi[Family == "Fagaceae", `:=`(a = -2.0705, b = 2.4410)]
-scbi[Family == "Hamamelidaceae", `:=`(a = -2.6390, b = 2.5466)]
-scbi[Family == "Magnoliaceae", `:=`(a = -2.5497, b = 2.5011)]
-
-scbi[Family == "Juglandaceae" & genus != "Carya", `:=`(a = -2.5095, b = 2.5437)]
-scbi[genus == "Carya", `:=`(a = -2.5095, b = 2.6175)]
-
-scbi[Family == "Oleaceae" & wsg < 0.55, `:=`(a = -2.0314, b = 2.3524)]
-scbi[Family == "Oleaceae" & wsg >= 0.55, `:=`(a = -1.8384, b = 2.3524)]
-
-## the rest: mixed hardwood equation in Chojnacky et al 2014
-scbi[is.na(a), `:=`(a = -2.2118, b = 2.4133)]
-
-scbi[, agb_choj := exp(a + b*log(dbh/10))/1000]
-
-## use get_biomass function
-scbi$agb_allodb = get_biomass(dbh=scbi$dbh/10, ## !! dbh in mm
-                              genus=scbi$genus,
-                              species = scbi$species,
-                              coords = c(-78.15, 38.9))/1000
+scbi[, agb_choj := exp(V1 + V2*log(dbh/10))/1000]
 
 # built graphs to compare with other models
 # tropical (Chave eq) vs. allodb
 gchave_allodb = ggplot(scbi, aes(x = agb, y = agb_allodb, color = paste(genus, species))) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point() +
-  theme(legend.position = "none")
+  theme(legend.position = "none") +
+  labs(x = "Predictions from Chave et al. 2005", y = "Predictions from allodb")
 
 # regional model (Chojnacky) vs. allodb
 gchojn_allodb = ggplot(scbi, aes(x = agb_choj, y = agb_allodb, color = paste(genus, species))) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point() +
-  theme(legend.position = "none")
+  theme(legend.position = "none") +
+  labs(x = "Predictions from Chojnacky et al. 2014", y = "Predictions from allodb")
 
 # regional model (Chojnacky) vs. tropical model (Chave)
 gchojn_chave = ggplot(scbi, aes(x = agb_choj, y = agb, color = paste(genus, species))) +
