@@ -140,12 +140,8 @@ get_biomass = function(dbh,
     new_equation = gsub("dbh|DBH", new_dbh, orig_equation)
     agb_all[, i] = eval(parse(text = new_equation)) * dfequation$output_units_CF[i]
   }
-  ## remove some absurdly high values given by some equations when outside of their dbh range
-  quant_agb = quantile(agb_all, c(0.025, 0.975), na.rm = TRUE)
-  rnge = diff(range(quant_agb)) ## range of values within 95% interval
-  agb_all[!is.na(agb_all) &
-            (agb_all < quant_agb[1] - 10*rnge |
-               agb_all > quant_agb[2] + 10*rnge)] = NA
+  ## remove some absurdly low or high values given by some equations when outside of their dbh range
+  agb_all[!is.na(agb_all) & (agb_all < 0 | agb_all > 1e5)] = NA
 
   # koppen climate
   # (1) get koppen climate for all locations
