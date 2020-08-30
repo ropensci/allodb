@@ -11,7 +11,6 @@ library(data.table)
 
 valdata <-read_excel("tests/evaluation_of_equations/1-Validation data.xlsx")
 
-valdata = read_excel("tests/evaluation_of_equations/new_val.xlsx")
 ## the coordinates of the islands of Izu fall in the sea, which is why they don't have any Koppen climate zone
 ## I changed them to the coordinates of one of the Izu islands that's the closest to that point and has koppen values
 valdata$Longitude[valdata$Location == "The islands of Izu"] <- 139.271
