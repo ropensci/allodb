@@ -233,5 +233,3 @@ sum(scbi$agb_choj)/25.6 #per ha-1
 sum(scbi$agb_allodb)
 sum(scbi$agb_allodb)/25.6 #per ha-1
 
-write.csv(scbi, "scbi.csv")
-getwd()
