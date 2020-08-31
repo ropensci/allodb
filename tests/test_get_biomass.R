@@ -8,6 +8,8 @@ library(ggpubr)
 library(allodb)
 
 #### test 1 ####
+#generic test
+
 data = data.table(expand.grid(dbh=1:150, genus=c("Acer", "Prunus", "Fraxinus", "Quercus"), location = c("scbi", "zaragoza", "nice", "sivas")))
 data = merge(data, data.frame(location = c("scbi", "zaragoza", "nice", "ivas"),
                               long = c(-78.15, -0.883, 7.266, 37.012),
@@ -37,7 +39,7 @@ g
 
 #### test 2 ####
 
-# species list per site ##
+# species list in allodb / per site ##
 load("data/sitespecies.rda")
 sitespecies = data.table(sitespecies)
 
@@ -107,7 +109,7 @@ for (i in 1:length(ls_site_species)) {
     weight = get_biomass(dbh = df$dbh, genus =  df$genus, species = df$species,
                          coords = df[1, c("long", "lat")], add_weight = TRUE)[, -1]
     totalW = colSums(weight, na.rm=TRUE)
-    # ## first 20 equations
+    # ## show only top 10 equations
     weightMax = weight[,order(totalW, decreasing = TRUE)[1:10]][, 10:1]
     dt = melt(data.table(dbh = df$dbh, weightMax), id.vars = "dbh", variable.name = "equationID", value.name = "weight")
     dt = merge(dt, equations[, c("equation_id", "equation_taxa", "dbh_min_cm", "dbh_max_cm", "koppen")],
@@ -160,12 +162,12 @@ if (nrow(data_nonmon) > 0) {
 
 
 
-## test 3 - agb in scbi-census-1 vs allodb equations ####
+## test 3 - Compare allodb AGB results with widely used models (Chave and Chojnacky) -use scbi-census-1 (census 2008, 40166 stems) ####
 
 scbi = data.table(read.csv("tests/scbi.stem1-agb.csv"))
 scbi = subset(scbi, !is.na(dbh))
 
-# split dataset (runing into memory usage)
+# split dataset (to avoid running into memory issues)
 data_split = split(scbi, cut(1:nrow(scbi), breaks = 10, labels = FALSE))
 
 agb = lapply(data_split, function(df) get_biomass(dbh=df$dbh/10,
@@ -174,6 +176,9 @@ agb = lapply(data_split, function(df) get_biomass(dbh=df$dbh/10,
                                                   coords = c(-78.2, 38.9)))
 
 scbi$agb_allodb = do.call(c, agb)/1000
+
+sum(scbi$agb)
+sum(scbi$agb_allodb)
 
 # get species names
 load("tests/scbi.spptable.rdata")
@@ -222,7 +227,9 @@ ggplotly(gchave_allodb)
 ggplotly(gchojn_allodb)
 ggplotly(gchojn_chave)
 
-#sum of AGB for sbci plot/ha-1
+#sum of AGB
 sum(scbi$agb_choj, na.rm = TRUE)
-7224.277/25.6
+sum(scbi$agb_choj)/25.6 #per ha-1
+sum(scbi$agb_allodb)
+sum(scbi$agb_allodb)/25.6 #per ha-1
 

@@ -8,7 +8,9 @@ library(ggpubr)
 library(plotly)
 library(data.table)
 
+
 valdata <-read_excel("tests/evaluation_of_equations/1-Validation data.xlsx")
+
 ## the coordinates of the islands of Izu fall in the sea, which is why they don't have any Koppen climate zone
 ## I changed them to the coordinates of one of the Izu islands that's the closest to that point and has koppen values
 valdata$Longitude[valdata$Location == "The islands of Izu"] <- 139.271
@@ -33,7 +35,7 @@ valdata$agb_allodb = get_biomass(dbh=valdata$DBH,
                               coords=cbind(valdata$Longitude, valdata$Latitude))
 
 # plot results
-val = ggplot(valdata, aes(x = Ptot, y = agb_allodb)) +
+val = ggplot(valdata, aes(x = Pabo, y = agb_allodb)) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point(size=1)
 
@@ -53,12 +55,12 @@ ggarrange(val, val_log,
 #check values by moving mouse on graph
 ggplotly(val)
 
-sum(valdata$Ptot)
+sum(valdata$Pabo)
 sum(valdata$agb_allodb)
 
 ### RMSE
-RMSE_allodb = sqrt(sum((valdata$Ptot-valdata$agb_allodb)**2)/nrow(valdata))
-RMSE_allodb_log = sqrt(sum((log(valdata$Ptot)-log(valdata$agb_allodb))**2)/nrow(valdata))
+RMSE_allodb = sqrt(sum((valdata$Pabo-valdata$agb_allodb)**2)/nrow(valdata))
+RMSE_allodb_log = sqrt(sum((log(valdata$Pabo)-log(valdata$agb_allodb))**2)/nrow(valdata))
 
 ## TODO add for example chave equation
 WD = BIOMASS::getWoodDensity(genus = valdata$Genus,
@@ -67,7 +69,7 @@ valdata$wsg = WD$meanWD
 valdata$agb_chave = BIOMASS::computeAGB(D = valdata$DBH,
                                         WD = valdata$wsg,
                                         coord = cbind(valdata$Longitude, valdata$Latitude))
-ggplot(valdata, aes(x = Ptot, y = agb_chave*1000)) +
+ggplot(valdata, aes(x = Pabo, y = agb_chave*1000)) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point(size=1)
 
@@ -86,9 +88,9 @@ valdata = data.table(valdata, chojnackyParams(valdata$family, valdata$Genus, val
 
 valdata[, agb_choj := exp(V1 + V2*log(DBH))]
 
-ggplot(valdata, aes(x = Ptot, y = agb_choj)) +
+ggplot(valdata, aes(x = Pabo, y = agb_choj)) +
   geom_abline(slope=1, intercept=0, lty=2) +
   geom_point(size=1)
-RMSE_choj = sqrt(sum((valdata$Ptot-valdata$agb_choj)**2)/nrow(valdata))
+RMSE_choj = sqrt(sum((valdata$Pabo-valdata$agb_choj)**2)/nrow(valdata))
 
 ## allodb performs better than chojnacky!!
