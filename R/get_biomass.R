@@ -141,7 +141,7 @@ get_biomass = function(dbh,
     agb_all[, i] = eval(parse(text = new_equation)) * dfequation$output_units_CF[i]
   }
   ## remove some absurdly low or high values given by some equations when outside of their dbh range
-  agb_all[!is.na(agb_all) & (agb_all < 0 | agb_all > 1e5)] = NA
+  agb_all[!is.na(agb_all) & (agb_all < 0 | agb_all > 1e6)] = NA
 
   # koppen climate
   # (1) get koppen climate for all locations

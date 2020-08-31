@@ -67,7 +67,7 @@ data_site = split(data, by = "site")
 agb = lapply(data_site, function(df) get_biomass(dbh=df$dbh,
                                                  genus=df$genus,
                                                  species = df$species,
-                                                 coords = cbind(df$long, df$lat))/1000)
+                                                 coords = cbind(df$long, df$lat)))
 data$agb = do.call(c, agb)
 
 data[, name := paste(genus, species)]
@@ -101,7 +101,7 @@ for (i in 1:length(ls_site_species)) {
       facet_wrap(~ name, ncol=3) +
       theme_bw() +
       theme(legend.position = "none") +
-      labs(y="AGB (tons)", x = "DBH (cm)")
+      labs(y="AGB (kg)", x = "DBH (cm)")
 
     # # equation weight
     weight = get_biomass(dbh = df$dbh, genus =  df$genus, species = df$species,
