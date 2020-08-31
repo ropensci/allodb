@@ -34,8 +34,8 @@
 #'   `Leaves`, `Stem (wood only)`, `Stem biomass`, `Stem biomass (with bark)`,
 #'   `Stem biomass (without bark)`, `Whole tree (above and belowground)`. Be
 #'   aware that only a few equations exist for those other variables, so
-#'   estimated values might not be very acurate.
-#' @param add_weight Should the relative weigth given to each equation in the
+#'   estimated values might not be very accurate.
+#' @param add_weight Should the relative weight given to each equation in the
 #'   `equations` data frame be added to the output? Default is FALSE.
 #' @param use_height_allom A logical value: should the height allometries from
 #'   Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
@@ -91,9 +91,9 @@ get_biomass = function(dbh,
   ## replace height with height allometry from Bohn et al. 2014 in Jansen et al 1996
   if (use_height_allom & "jansen_1996_otvb" %in% dfequation$ref_id) {
     eq_jansen = subset(equations, ref_id=="jansen_1996_otvb")
-    ## height allometries defined per genus -> get info in jansen allometries
+    ## height allometries defined per genus -> get info in Jansen allometries
     eq_jansen$genus = data.table::tstrsplit(eq_jansen$equation_notes, " ")[[5]]
-    ## vreate height allometry dataframe
+    ## create height allometry dataframe
     hallom = subset(equations, ref_id=="bohn_2014_ocai" & dependent_variable == "Height" )
     hallom = hallom[, c("equation_taxa", "equation_allometry")]
     colnames(hallom) = c("genus", "hsub")
