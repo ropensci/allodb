@@ -209,7 +209,7 @@ gchojn_allodb = ggplot(scbi, aes(x = agb_choj, y = agb_allodb, color = paste(gen
   theme(legend.position = "none") +
   labs(x = "Predictions from Chojnacky et al. 2014", y = "Predictions from allodb")
 gchojn_allodb
-ggsave("tests/graphs/choj_vs_allodb.pdf", height = 4, width = 4)
+ggsave("tests/choj_vs_allodb.jpg", height = 4, width = 4)
 
 # regional model (Chojnacky) vs. tropical model (Chave)
 gchojn_chave = ggplot(scbi, aes(x = agb_choj, y = agb, color = paste(genus, species))) +
