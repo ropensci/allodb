@@ -1,22 +1,19 @@
 Package: allodb
-Title: A Database of Allometric Equations for ForestGEO
-Version: 0.0.0.9005
+Title: An R database for biomass estimation at globally distributed extratropical forest plots.
+Version: 1.0
 Authors@R: 
     c(person(given = "Erika",
              family = "Gonzalez-Akre",
              role = "aut",
              email = "GonzalezEB@si.edu",
-             comment = c(ORCID = "0000-0001-8305-6672")),
-      person(given = "Mauro",
-             family = "Lepore",
-             role = c("aut", "ctr", "cre"),
-             email = "leporem@si.edu",
-             comment = c(ORCID = "0000-0002-1986-7988")),
       person(given = "Camille",
              family = "Piponiot",
              role = "aut",
              email = "camille.piponiot@gmail.com",
-             comment = c(ORCID = "0000-0002-3473-1982")),
+      person(given = "Mauro",
+             family = "Lepore",
+             role = c("aut",),
+             email = "leporem@si.edu",
       person(given = "Kristina",
              family = "Anderson-Teixeira",
              role = "aut",
