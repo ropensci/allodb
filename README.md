@@ -40,8 +40,8 @@ Prior to calculating tree biomass using *allo-db* users need to provide
 DBH (cm); H (m; optional); parsed species Latin names, and site
 coordinates.
 
-As an example, we use data from the Smithsonian Conservation Biology
-Institute, USA (SCBI) ForestGEO dynamics plot (1st census). Data can be
+Here we use data from the Smithsonian Conservation Biology Institute,
+USA (SCBI) ForestGEO dynamics plot (1st census, 1 hectare). Data can be
 requested through the ForestGEO portal (<https://forestgeo.si.edu/>)
 
 ``` r
@@ -55,4 +55,11 @@ genus = scbi_stem1$genus,
 species = scbi_stem1$species,
 coords = c(-78.2, 38.9)
 )
+```
+
+You can also estimate biomass for a single tree, given known
+identification
+
+``` r
+get_biomass(dbh=50, genus="liriodendron", species="tulipifera", coords=c(-78.2, 38.9))
 ```
