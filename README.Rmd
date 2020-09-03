@@ -13,92 +13,50 @@ knitr::opts_chunk$set(
 )
 ```
 
-# <img src="https://i.imgur.com/39pvr4n.png" align="right" height=44 /> allodb: Database of allometric equations
+# <img src="https://i.imgur.com/39pvr4n.png" align="right" height=44 /> allodb: An R database for biomass estimation at globally distributed extratropical forest plots
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
 [![Coverage status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/r/forestgeo/allodb?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb)
 
-__allodb__ is a database of allometric equations focusing on ForestGEO sites. To manipulate these equations and calculate biomass see [fgeo.biomass](https://forestgeo.github.io/fgeo.biomass/).
 
-## Warning
-These features are not ready for research. Resulting biomass values are still incorrect. Contact gonzalezeb@si.edu or teixeirak@si.edu for updates.
+
+## Introduction
+
+_allo-db_ was conceived as a framework to standardize and simplify the biomass estimation process across globally distributed extratropical forests. We were inspired by the lack of standards tree biomass calculation resources available for temperate sites within the Forest Global Earth Observatory (ForestGEO). With _allo-db_ we aimed to: a) compile relevant published and unpublished allometries, focusing on AGB but structured to handle other variables (e.g., height and biomass components);  b) objectively select and integrate appropriate available equations across the full range  of tree sizes; and c) serve as a platform for future updates and expansion to other research sites globally.
+
+
 
 ## Installation
+
+Install the development version of _allo-db_ from GitHub:
 
 ```R
 # install.packages("remotes")
 remotes::install_github("forestgeo/allodb")
 ```
 
-For details in how to install packages from GitHub see [this article](https://fgeo.netlify.com/2018/02/05/2018-02-05-installing-pkgs-from-github/).
 
 ## Example
 
-```{r}
+Prior to calculating tree biomass using _allo-db_ users need to provide DBH (cm); H (m; optional); parsed species Latin names, and site coordinates.
+
+As an example, we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st census). Data can be requested through the ForestGEO portal (https://forestgeo.si.edu/)
+
+```R
 library(allodb)
 
-# Just for these examples
-library(tibble)
-library(purrr)
-library(glue)
+data(scbi_stem1)
+scbi_stem1$agb =
+get_biomass(
+dbh = scbi_stem1$dbh,
+genus = scbi_stem1$genus,
+species = scbi_stem1$species,
+coords = c(-78.2, 38.9)
+)
+
 ```
 
-Combined data-base tables.
 
-```{r}
-master()
-```
-
-Conservatively, all columns of `master()` are character vectors.
-
-```{r}
-all(map_lgl(master(), is.character))
-```
-
-This is to preserve different representations of missing values.
-
-```{r}
-na_type <- glue("^{missing_values_metadata$Code}$") %>% glue_collapse("|")
-na_type
-
-found <- map(master(), ~unique(grep(na_type, .x, value = TRUE)))
-keep(found, ~length(.x) > 0)
-```
-
-For analysis, set the correct type of each column with `set_type()`. Then not all columns will be character vectors.
-
-```{r}
-converted <- set_type(master())
-all(map_lgl(converted, is.character))
-```
-
-Notice that all types to missing values will be coerced to `NA`.
-
-```{r}
-found <- map(converted, ~unique(grep(na_type, .x, value = TRUE)))
-result <- keep(found, ~length(.x) > 0)
-
-if (length(result) == 0)
-  message(glue("No values match {na_type}"))
-```
-
-All datasets.
-
-```{r}
-# Helper
-datasets <- function(pkg) {
-  dts <- sort(utils::data(package = pkg)$results[ , "Item"])
-  set_names(map(dts, get), dts)
-}
-
-datasets("allodb")
-```
-
-## Information
-
-* [Getting help](SUPPORT.md).
-* [Contributing](CONTRIBUTING.md).
-* [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 
