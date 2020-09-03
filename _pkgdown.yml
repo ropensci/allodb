@@ -2,18 +2,20 @@ url: https://forestgeo.github.io/allodb/
 
 template:
   params:
-    bootswatch: united
+    #bootswatch: united
 
 home:
   links:
+  - text: Browse source code
+    href: https://github.com/forestgeo/allodb
+  - text: Report a bug at
+    href: https://github.com/forestgeo/allodb/issues
   - text: Learn more
     href: http://www.forestgeo.si.edu/
 
-
-
 navbar:
 
-type: default
+type: inverse
 structure:
     left:  [home, Get Started, Functions, Example]
 
