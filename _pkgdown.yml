@@ -13,18 +13,13 @@ home:
 
 navbar:
 
-  type: default
+type: default
+structure:
+    left:  [home, Get Started, Functions, Example]
 
-  right:
-
-    - icon: fa-gavel
-      href: https://github.com/maurolepore
-
+right:
     - icon: fa-github
       href: https://github.com/forestgeo/allodb
-
-    - text: fgeo
-      href: https://forestgeo.github.io/fgeo/
 
 
 
