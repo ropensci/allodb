@@ -57,9 +57,14 @@ coords = c(-78.2, 38.9)
 )
 ```
 
-You can also estimate biomass for a single tree, given known
-identification
+You can also estimate biomass for a single tree given dbh and species
+Id.
 
 ``` r
-get_biomass(dbh=50, genus="liriodendron", species="tulipifera", coords=c(-78.2, 38.9))
+get_biomass(
+dbh=50, 
+genus="liriodendron", 
+species="tulipifera", 
+coords=c(-78.2, 38.9)
+)
 ```
