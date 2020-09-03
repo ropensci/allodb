@@ -4,7 +4,7 @@ Version: 1.0
 Authors@R: 
     c(person(given = "Erika",
              family = "Gonzalez-Akre",
-             role = "aut",
+             role = c("aut", "cre"),
              email = "GonzalezEB@si.edu",
       person(given = "Camille",
              family = "Piponiot",
@@ -12,13 +12,13 @@ Authors@R:
              email = "camille.piponiot@gmail.com",
       person(given = "Mauro",
              family = "Lepore",
-             role = c("aut",),
+             role = "aut",),
              email = "leporem@si.edu",
       person(given = "Kristina",
              family = "Anderson-Teixeira",
              role = "aut",
              email = "TeixeiraK@si.edu"))
-Description: An R database for biomass estimation at globally distributed extratropical forest plots.
+Description: Tool to standardize and simplify the biomass estimation process across globally distributed extratropical forests.
 License: GPL-3
 URL: https://github.com/forestgeo/allodb
 BugReports: https://github.com/forestgeo/allodb/issues
