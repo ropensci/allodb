@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# <img src="https://i.imgur.com/39pvr4n.png" align="right" height=44 /> allodb: An R database for biomass estimation at globally distributed extratropical forest plots
+# <img src="https://i.imgur.com/39pvr4n.png" align="left" height=44 /> allodb: An R database for biomass estimation at globally distributed extratropical forest plots
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build
