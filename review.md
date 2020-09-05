@@ -1,4 +1,6 @@
-The package fails to load. The problem seems to be in line 17 of DESCRIPTION.
+### Load in development mode
+
+The package failed to load. The `persons()` had syntax errors. I fixed it.
 
 ``` r
 devtools::load_all()
@@ -9,10 +11,29 @@ devtools::load_all()
 #> 16:              role = "aut",
 #> 17:              email = "TeixeiraK@si.edu"))
 #>    ^
+```
+
+
+
+# Install from GitHub
+
+The package installs but throws a WARNING. Maybe google the warning to see what it means and how to adress its ultimate cause. For now I just do what the warning says, i.e. add R (>= 3.5.0) under the field `Depends:` of DESCRIPTION. 
+
+```r
+remotes::install_github("maurolepore/allodb@review")
+#> Using github PAT from envvar GITHUB_PAT
+#> Downloading GitHub repo maurolepore/allodb@review
 #> 
-#> See section 'The DESCRIPTION file' in the 'Writing R Extensions'
-#> manual.
-#> Warning in (function (dep_name, dep_ver = "*") : Dependency package 'kgc' not
-#> available.
-#> Error: Dependency package(s) 'kgc' not available.
+
+...
+
+#>   ─  checking for empty or unneeded directories
+#>        NB: this package now depends on R (>= 3.5.0)
+#>        WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: ‘allodb/data/genus_family.rda’  ‘allodb/data/gymno_genus.rda’
+
+...  
+
+#> Installing package into '/home/mauro/R/x86_64-pc-linux-gnu-library/4.0'
+#> (as 'lib' is unspecified)
+#> Adding 'allodb_1.0_R_x86_64-pc-linux-gnu.tar.gz' to the cache
 ```
