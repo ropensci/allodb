@@ -12,3 +12,6 @@
 ^\.github$
 
 ^review\.md$
+^_config\.yml$
+^koppen climates$
+^phyloDist$
