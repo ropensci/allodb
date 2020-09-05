@@ -19,6 +19,7 @@ Example of alternative format for meta-data documentation:
 \seealso{
 Other database datasets: 
 \code{\link{equations}},
+\code{\link{genus_family}},
 \code{\link{references_metadata}},
 \code{\link{sites_info}},
 \code{\link{sitespecies}},

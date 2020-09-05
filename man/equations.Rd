@@ -58,6 +58,7 @@ above-ground biomass (AGB) per species at ForestGEO sites:
 }
 \seealso{
 Other database datasets: 
+\code{\link{genus_family}},
 \code{\link{missing_values_metadata}},
 \code{\link{references_metadata}},
 \code{\link{sites_info}},

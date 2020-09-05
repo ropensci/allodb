@@ -201,3 +201,215 @@ Error: (code run outside of `test_that()`) (test-type_allodb_master.R:3:1)
 [ PASS x2 FAIL x15 WARN x3 SKIP x0 ]
 ```
 
+### README
+
+* The code is commented out. It'll be hard to see when some change breaks the examples shown here.
+
+````
+# README.Rmd
+```R
+library(allodb)
+
+data(scbi_stem1)
+scbi_stem1$agb =
+get_biomass(
+dbh = scbi_stem1$dbh,
+genus = scbi_stem1$genus,
+species = scbi_stem1$species,
+coords = c(-78.2, 38.9)
+)
+```
+````
+
+### Style
+
+* The most popular style gude is <https://style.tidyverse.org/>. You can implement it with `usethis::use_tidy_style()`. I leave this to you.
+
+```r
+# Before (README.Rmd)
+
+scbi_stem1$agb =
+get_biomass(
+dbh = scbi_stem1$dbh,
+genus = scbi_stem1$genus,
+species = scbi_stem1$species,
+coords = c(-78.2, 38.9)
+)
+
+
+
+# After (README.Rmd)
+
+scbi_stem1$agb <-
+  get_biomass(
+    dbh = scbi_stem1$dbh,
+    genus = scbi_stem1$genus,
+    species = scbi_stem1$species,
+    coords = c(-78.2, 38.9)
+  )
+```
+
+### `goodpractice::goodpractice()`
+
+* To follow up this review, you may run `goodpractice::goodpractice()`, and continue working and running `goodpractice::goodpractice()` until you are left with no more suggestions for improvement.
+
+```
+goodpractice::goodpractice()
+Preparing: cyclocomp
+✓  checking for file ‘/tmp/RtmpAkfScI/remotes4a72e642d10/allodb/DESCRIPTION’ ...
+─  preparing ‘allodb’:
+✓  checking DESCRIPTION meta-information ...
+─  checking for LF line-endings in source and make files and shell scripts
+─  checking for empty or unneeded directories
+─  building ‘allodb_1.0.0.9000.tar.gz’
+   
+* installing *source* package ‘allodb’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (allodb)
+Adding ‘raster_3.3-13.tar.gz’ to the cache
+Adding ‘allodb_1.0.0.9000_R_x86_64-pc-linux-gnu.tar.gz’ to the cache
+Preparing: description
+Preparing: lintr
+Preparing: namespace
+Preparing: rcmdcheck
+── GP allodb ─────────────────────────────────────────────────────────────────
+
+It is good practice to
+
+  ✖ use '<-' for assignment instead of '='. '<-' is the
+    standard, and R users and developers are used it and it is easier
+    to read your code for them if you use '<-'.
+
+    R/add_equations.R:26:14
+    R/add_equations.R:64:12
+    R/add_equations.R:77:13
+    R/add_equations.R:85:14
+    R/add_equations.R:86:15
+    ... and 250 more lines
+
+  ✖ avoid long code lines, it is bad for readability. Also,
+    many people prefer editor windows that are about 80 characters
+    wide. Try make your lines shorter than 80 characters
+
+    R/add_equations.R:1:1
+    R/add_equations.R:5:1
+    R/add_equations.R:6:1
+    R/add_equations.R:8:1
+    R/add_equations.R:9:1
+    ... and 92 more lines
+
+  ✖ avoid sapply(), it is not type safe. It might return a
+    vector, or a list, depending on the input data. Consider using
+    vapply() instead.
+
+    R/choose_equations.R:34:12
+    R/choose_equations.R:35:11
+    R/choose_equations.R:41:12
+    R/choose_equations.R:42:11
+    R/choose_equations.R:48:12
+    ... and 2 more lines
+
+  ✖ avoid 1:length(...), 1:nrow(...), 1:ncol(...),
+    1:NROW(...) and 1:NCOL(...) expressions. They are error prone and
+    result 1:0 if the expression on the right hand side is zero. Use
+    seq_len() or seq_along() instead.
+
+    R/add_equations.R:85:30
+    R/get_biomass.R:137:13
+    R/get_biomass.R:203:39
+    R/get_biomass.R:206:43
+    tests/evaluation_of_equations/check_equations.R:33:11
+    ... and 6 more lines
+
+  ✖ fix this R CMD check WARNING: Found the following files
+    with non-portable file names:
+    tests/evaluation_of_equations/1-About validation data.txt
+    tests/evaluation_of_equations/1-Validation data.xlsx
+    tests/evaluation_of_equations/2-Validation data.csv
+    tests/evaluation_of_equations/Quercus rubra.png
+    tests/evaluation_of_equations/Quercus velutina.png
+    tests/evaluation_of_equations/Tilia americana.png
+    tests/graphs/harvard forest tests/graphs/indian cave
+    tests/graphs/lilly dickey tests/graphs/michigan big woods
+    tests/graphs/scotty creek tests/graphs/wind river
+    tests/graphs/wytham woods These are not fully portable file
+    names. See section ‘Package structure’ in the ‘Writing R
+    Extensions’ manual.
+  ✖ fix this R CMD check WARNING: 'library' or 'require'
+    calls not declared from: ‘BIOMASS’ ‘ggplot2’ ‘ggpubr’ ‘plotly’
+  ✖ fix this R CMD check NOTE: add_equation: no visible
+    global function definition for ‘RoundCoordinates’ add_equation:
+    no visible binding for global variable ‘equations’
+    choose_equations: no visible binding for global variable
+    ‘equations’ get_biomass: no visible binding for global variable
+    ‘equations’ get_biomass: no visible binding for global variable
+    ‘ref_id’ get_biomass: no visible binding for global variable
+    ‘dependent_variable’ get_biomass: no visible binding for global
+    variable ‘equation_id’ get_biomass: no visible binding for global
+    variable ‘independent_variable’ get_biomass: no visible binding
+    for global variable ‘koppenRaster’ weight_allom : compare_koppen:
+    no visible binding for global variable ‘koppenMatrix’
+    weight_allom: no visible binding for global variable
+    ‘gymno_genus’ weight_allom: no visible binding for global
+    variable ‘shrub_species’ weight_allom: no visible binding for
+    global variable ‘obs_id’ weight_allom: no visible binding for
+    global variable ‘equation_id’ Undefined global functions or
+    variables: RoundCoordinates dependent_variable equation_id
+    equations gymno_genus independent_variable koppenMatrix
+    koppenRaster obs_id ref_id shrub_species
+  ✖ fix this R CMD check NOTE: prepare_Rd:
+    choose_equations.Rd:37-39: Dropping empty section \examples
+    prepare_Rd: equations.Rd:56-58: Dropping empty section \details
+  ✖ fix this R CMD check WARNING: Undocumented code
+    objects: ‘gymno_genus’ ‘koppenMatrix’ ‘koppenRaster’ ‘references’
+    ‘scbi_stem1’ ‘shrub_species’ Undocumented data sets:
+    ‘gymno_genus’ ‘koppenMatrix’ ‘koppenRaster’ ‘references’
+    ‘scbi_stem1’ ‘shrub_species’ All user-level objects in a package
+    should have documentation entries. See chapter ‘Writing R
+    documentation files’ in the ‘Writing R Extensions’ manual.
+  ✖ fix this R CMD check NOTE: Note: found 155 marked UTF-8
+    strings
+  ✖ fix this R CMD check ERROR: Running examples in
+    ‘allodb-Ex.R’ failed The error most likely occurred in: > ###
+    Name: add_equation > ### Title: Function to add new equations to
+    the equation table (then used > ### in the get_biomass function)
+    > ### Aliases: add_equation > > ### ** Examples > > new_equations
+    = add_equation(taxa = "Faga", level = "genus", + allometry =
+    "exp(-2+log(dbh)*2.5)", coords = c(-0.07, 46.11), + minDBH = 5,
+    maxDBH = 50, sampleSize = 50) Error in add_equation(taxa =
+    "Faga", level = "genus", allometry = "exp(-2+log(dbh)*2.5)", :
+    unitDBH must be either `Species`, `Genus`, `Family`, or `Woody
+    species`, `Mixed conifers`. Execution halted
+  ✖ fix this R CMD check WARNING: 'library' or 'require'
+    calls not declared from: ‘BIOMASS’ ‘ggplot2’ ‘ggpubr’ ‘plotly’
+  ✖ checking tests ... Running ‘spelling.R’ Running
+    ‘test_get_biomass.R’ ERROR Running the tests in
+    ‘tests/test_get_biomass.R’ failed. Last 13 lines of output: >
+    #generic test > > data = data.table(expand.grid(dbh=1:150,
+    genus=c("Acer", "Prunus", "Fraxinus", "Quercus"), location =
+    c("scbi", "zaragoza", "nice", "sivas"))) > data = merge(data,
+    data.frame(location = c("scbi", "zaragoza", "nice", "ivas"), +
+    long = c(-78.15, -0.883, 7.266, 37.012), + lat = c(38.9, 41.65,
+    43.70, 39.75))) > data[, agb := get_biomass(dbh=data$dbh,
+    genus=data$genus, coords = cbind(data$long, data$lat))/1000] > >
+    #if you want to check the weight given to each equation > Mweigth
+    = get_biomass(dbh=data$dbh, genus=data$genus, species =
+    data$species, + coords = cbind(data$long, data$lat), add_weight =
+    TRUE)/1000 > > library(BIOMASS) Error in library(BIOMASS) : there
+    is no package called 'BIOMASS' Execution halted
+────────────────────────────────────────────────────────────────────────────── 
+Warning message:
+In MYPREPS[[prep]](state, quiet = quiet) :
+  Prep step for test coverage failed.
+```

@@ -4,8 +4,7 @@
 \name{allodb-package}
 \alias{allodb}
 \alias{allodb-package}
-\title{allodb: An R database for biomass estimation at globally
-    distributed extratropical forest plots.}
+\title{allodb: An R Database For Biomass Estimation At Globally Distributed Extratropical Forest Plots}
 \description{
 Tool to standardize and simplify the biomass
     estimation process across globally distributed extratropical forests.
