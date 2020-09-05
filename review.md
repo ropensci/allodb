@@ -1,3 +1,5 @@
+I believe you would like ideas about how to optimize some functions. Please let me konw which functions you mean and share with me a reproducible example (with the package <https://reprex.tidyverse.org/>) showing me how to use the function I need to inspect. Here I write what I see as I review the structure of the package. For a more complete set of recomendations see <https://devguide.ropensci.org/guide-for-authors.html> and <http://r-pkgs.had.co.nz/>.
+
 ### Load in development mode
 
 The package failed to load. The `persons()` had syntax errors. I fixed it.
@@ -12,9 +14,6 @@ devtools::load_all()
 #> 17:              email = "TeixeiraK@si.edu"))
 #>    ^
 ```
-
-
-
 ### Install from GitHub
 
 The package installs but throws a WARNING. Maybe google the warning to see what it means and how to adress its ultimate cause. For now I just do what the warning says, i.e. add R (>= 3.5.0) under the field `Depends:` of DESCRIPTION. 
@@ -44,10 +43,9 @@ remotes::install_github("maurolepore/allodb@review")
 
 * Tidy DESCRIPTION. (see `?usethis::use_tidy_description()`).
 
-
 ### Update documentation (`devtools::document()`)
 
-* `devtools::document()`.
+* I updated the documentation with `devtools::document()`.
 
 ### R CMD check (`devtools::check()`)
 
@@ -93,7 +91,6 @@ N  checking top-level files ...
    Non-standard files/directories found at top level:
      ‘_config.yml’ ‘koppen climates’ ‘phyloDist’
 ```
-
 
 * It seems that the package 'raster' is used in `koppenObs = climates[raster::extract(koppenRaster, coordsSite)]` but it wasn't listed under the field `Imorts:` of the file DESCRIPTION. Add it with `usethis::use_package("raster")`. I fixed it.
 
@@ -248,6 +245,16 @@ scbi_stem1$agb <-
     coords = c(-78.2, 38.9)
   )
 ```
+
+### Website
+
+* `pkgdown::build_site()` didn't work because the file \_pkgdown.yaml was corrupt. I removed all content from \_pkgdown.yaml and produced the default site. You can see it by opening docs/index.html on your web browser. To set it up you'll need to change the settings on GitHub > Settings > GitHub pages.
+
+## Continuous integration
+
+This package is configured to use the continuous integration service Travis CI (see <https://travis-ci.org/github/forestgeo/allodb>). I updated the configuration file .travis.yml to reflect we not depend on R >= 3.5.0 -- testing earlier versions is unecessary. But if we go back to supporting earlier versions of R, then add them in .travis.yml.
+
+The R community is moving to a different continuous-integration service: GitHub Actions. See `?usethis::use_github_action_check_full()`.
 
 ### `goodpractice::goodpractice()`
 
@@ -413,9 +420,3 @@ Warning message:
 In MYPREPS[[prep]](state, quiet = quiet) :
   Prep step for test coverage failed.
 ```
-
-### Website
-
-* `pkgdown::build_site()` didn't work because the file \_pkgdown.yaml was corrupt. I removed all content from \_pkgdown.yaml to produce the default site. You can see it by opening docs/index.html on your web browser. To set it up you'll need to change the settings on GitHub > Settings > GitHub pages.
-
-
