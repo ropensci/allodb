@@ -45,4 +45,7 @@ remotes::install_github("maurolepore/allodb@review")
 * Tidy DESCRIPTION. (see `?usethis::use_tidy_description()`).
 
 
+### Update documentation
 
+
+* `devtools::document()`.

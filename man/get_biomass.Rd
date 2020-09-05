@@ -55,9 +55,9 @@ other possible values are: \verb{Bark biomass}, \code{Branches (dead)}, \code{Br
 \code{Leaves}, \verb{Stem (wood only)}, \verb{Stem biomass}, \verb{Stem biomass (with bark)},
 \verb{Stem biomass (without bark)}, \verb{Whole tree (above and belowground)}. Be
 aware that only a few equations exist for those other variables, so
-estimated values might not be very acurate.}
+estimated values might not be very accurate.}
 
-\item{add_weight}{Should the relative weigth given to each equation in the
+\item{add_weight}{Should the relative weight given to each equation in the
 \code{equations} data frame be added to the output? Default is FALSE.}
 
 \item{use_height_allom}{A logical value: should the height allometries from
