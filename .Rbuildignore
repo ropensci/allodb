@@ -11,4 +11,4 @@
 ^README\.Rmd$
 ^\.github$
 
-^review\.Rmd$
+^review\.md$
