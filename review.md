@@ -40,6 +40,9 @@ remotes::install_github("maurolepore/allodb@review")
 
 ### Tidy DESCRIPTION
 
-The version number 1.0 suggests the package is released. To more clearly reflect it's in development (at least not released on CRAN), I incremented the version to 1.0.0.9000, as the the suffix .9*** by convension indicatse "in development" (see <https://usethis.r-lib.org/reference/use_version.html>).
+* Use developmen version. The version number 1.0 suggests the package is released. To more clearly reflect it's in development (at least not released on CRAN), I incremented the version to 1.0.0.9000, as the the suffix .9*** by convension indicatse "in development" (`usethis::use_dev_version()`).
+
+* Tidy DESCRIPTION. (see `?usethis::use_tidy_description()`).
+
 
 
