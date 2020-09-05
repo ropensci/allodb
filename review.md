@@ -15,7 +15,7 @@ devtools::load_all()
 
 
 
-# Install from GitHub
+### Install from GitHub
 
 The package installs but throws a WARNING. Maybe google the warning to see what it means and how to adress its ultimate cause. For now I just do what the warning says, i.e. add R (>= 3.5.0) under the field `Depends:` of DESCRIPTION. 
 
@@ -37,3 +37,9 @@ remotes::install_github("maurolepore/allodb@review")
 #> (as 'lib' is unspecified)
 #> Adding 'allodb_1.0_R_x86_64-pc-linux-gnu.tar.gz' to the cache
 ```
+
+### Tidy DESCRIPTION
+
+The version number 1.0 suggests the package is released. To more clearly reflect it's in development (at least not released on CRAN), I incremented the version to 1.0.0.9000, as the the suffix .9*** by convension indicatse "in development" (see <https://usethis.r-lib.org/reference/use_version.html>).
+
+
