@@ -413,3 +413,9 @@ Warning message:
 In MYPREPS[[prep]](state, quiet = quiet) :
   Prep step for test coverage failed.
 ```
+
+### Website
+
+* `pkgdown::build_site()` didn't work because the file \_pkgdown.yaml was corrupt. I removed all content from \_pkgdown.yaml to produce the default site. You can see it by opening docs/index.html on your web browser. To set it up you'll need to change the settings on GitHub > Settings > GitHub pages.
+
+
