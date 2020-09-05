@@ -1,6 +1,6 @@
 Package: allodb
 Title: An R database for biomass estimation at globally distributed extratropical forest plots.
-Version: 1.0
+Version: 1.0.0.9000
 Authors@R: 
     c(person(given = "Erika",
              family = "Gonzalez-Akre",
