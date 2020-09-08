@@ -87,7 +87,7 @@ ls_site_species = split(data, by = "site")
 # save graphs in this new directory
 for (i in 1:length(ls_site_species)) {
   ## create folder for the site's graphs
-  dir_site = paste0("tests/graphs/",names(ls_site_species)[i])
+  dir_site = paste0("tests/graphs/", names(ls_site_species)[i])
   if (!file.exists(dir_site))
     dir.create(dir_site)
 
