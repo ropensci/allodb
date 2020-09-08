@@ -57,10 +57,10 @@
 #' @examples
 #' data(scbi_stem1)
 #' get_biomass(
-#' dbh = scbi_stem1$dbh,
-#' genus = scbi_stem1$genus,
-#' species = scbi_stem1$species,
-#' coords = c(-78.2, 38.9)
+#'   dbh = scbi_stem1$dbh,
+#'   genus = scbi_stem1$genus,
+#'   species = scbi_stem1$species,
+#'   coords = c(-78.2, 38.9)
 #' )
 #'
 #' # split dataset to avoid memory over usage
@@ -196,21 +196,48 @@ weight_allom = function(dbh,
                         b = 0.006,
                         steep = 3  ## controls the steepness of the dbh range transition, should be > 1
 ) {
-  dfweights = data.table::setDT(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
-  ## keep equation_id order by making it into a factor
-  dfweights$equation_id = factor(dfweights$equation_id, levels = equation_table$equation_id)
-  ## add observations IDs
-  combinations = expand.grid(obs_id = 1:length(dbh), equation_id = equation_table$equation_id)
-  dfweights = merge(dfweights, combinations, by  = "equation_id")
-  ## add observation info
-  dfobs = data.table::data.table(obs_id = 1:length(dbh), dbh, koppenObs = koppen, genus, species)
-  dfweights = merge(dfweights, dfobs, by = "obs_id")
 
+  ## prepare equation datatable
+  dfeq = data.table::setDT(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
+  ## keep equation_id order by making it into a factor
+  dfeq$equation_id = factor(dfeq$equation_id, levels = equation_table$equation_id)
+  dfeq$dbh_max_cm = as.numeric(dfeq$dbh_max_cm)
+  dfeq$dbh_min_cm = as.numeric(dfeq$dbh_min_cm)
+
+  ## 'clean' equation taxa column and separate several taxa
+  ## all character strings to lower cases to avoid inconsistencies
+  dfeq$equation_taxa = tolower(dfeq$equation_taxa)
+  ## remove " sp." from genus in equation taxa
+  dfeq$equation_taxa = gsub(" sp//.", "", dfeq$equation_taxa)
+  ## split by "/" when there are several species or families
+  taxa = data.table::tstrsplit(dfeq$equation_taxa, "/| / | /|/ ")
+  dfeq$taxa1 = taxa[[1]]
+  dfeq$taxa2 = taxa[[2]]
+  dfeq$taxa3 = taxa[[3]]
+  dfeq$taxa4 = taxa[[4]]
+  dfeq$taxa5 = taxa[[5]]
+  dfeq$taxa6 = taxa[[6]]
   ## weight by sample size ##
-  dfweights$wN = (1 - exp(-b * as.numeric(dfweights$sample_size)))
+  dfeq$wN = (1 - exp(-b * as.numeric(dfeq$sample_size)))
   # b=0.006 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.006 = 500
   # implication: new observations will not increase weight_N much when Nobs > 500
-  dfweights$wN[is.na(dfweights$wN)] = 0.1 ## for now: give 0.1 to equations with no sample size; find why they don't have a sample size
+  dfeq$wN[is.na(dfeq$wN)] = 0.1 ## for now: give 0.1 to equations with no sample size; find why they don't have a sample size
+
+  ## prepare observation datatable
+  dfobs = data.table::data.table(obs_id = 1:length(dbh), dbh, koppenObs = koppen, genus, species)
+  ## add family
+  data("genus_family")
+  ## all character strings to lower cases to avoid inconsistencies
+  dfobs$genus = tolower(dfobs$genus)
+  genus_family$genus = tolower(genus_family$genus)
+  genus_family$family = tolower(genus_family$family)
+  dfobs = merge(dfobs, genus_family, by = "genus", all.x = TRUE)
+
+  ## combine observations and equations
+  combinations = expand.grid(obs_id = 1:length(dbh), equation_id = equation_table$equation_id)
+  dfweights = merge(dfeq, combinations, by  = "equation_id")
+  dfweights = merge(dfweights, dfobs, by = "obs_id")
+  rm(combinations, dfobs, dfeq)
 
   ## weight by dbh range ##
   ## This weight function is inspired of the tricube weight function in local regressions
@@ -223,13 +250,11 @@ weight_allom = function(dbh,
   # }
   # We log-transform it because dbhs are > 0
   # See: curve(f(log(x), log(5), log(20)), xlim=c(0,50)); abline(v=c(5,20))
-  dfweights$dmax = as.numeric(dfweights$dbh_max_cm)
-  dfweights$dmin = as.numeric(dfweights$dbh_min_cm)
 
   dfweights$wD = (1 - abs((log(dfweights$dbh) - (
-    log(dfweights$dmax) + log(dfweights$dmin)
+    log(dfweights$dbh_max_cm) + log(dfweights$dbh_min_cm)
   ) / 2) / (
-    log(dfweights$dmax) - log(dfweights$dmin)
+    log(dfweights$dbh_max_cm) - log(dfweights$dbh_min_cm)
   )) ^ steep) ^ 3
   dfweights$wD[dfweights$wD < 0 & !is.na(dfweights$wD)] = 0   ## keep only positive values, transform values < 0 into 0
   dfweights$wD[is.na(dfweights$wD)] = replace_dbhrange ## weight (independent of DBH) when equation does not have DBH range
@@ -253,19 +278,8 @@ weight_allom = function(dbh,
   if (is.null(genus)) {
     dfweights$wT = 1
   } else {
-    ## all character strings to lower cases to avoid inconsistencies
-    dfweights$equation_taxa = tolower(dfweights$equation_taxa)
-    dfweights$genus = tolower(dfweights$genus)
-    ## remove " sp." from genus in equation taxa
-    dfweights$equation_taxa = gsub(" sp//.", "", dfweights$equation_taxa)
-    ## split by "/" when there are several species or families
-    taxa = data.table::tstrsplit(dfweights$equation_taxa, "/| / | /|/ ")
-    dfweights$taxa1 = taxa[[1]]
-    dfweights$taxa2 = taxa[[2]]
-    dfweights$taxa3 = taxa[[3]]
-    dfweights$taxa4 = taxa[[4]]
-    dfweights$taxa5 = taxa[[5]]
-    dfweights$taxa6 = taxa[[6]]
+
+    ## basic weight = 1e-6 (equations used only if no other is available)
     dfweights$wT = 1e-6
 
     # same genus
@@ -279,10 +293,6 @@ weight_allom = function(dbh,
                    (dfweights$taxa2 == paste(dfweights$genus, dfweights$species) &
                       !is.na(dfweights$taxa2))] = 1
     # # same family
-    data("genus_family")
-    genus_family$genus = tolower(genus_family$genus)
-    genus_family$family = tolower(genus_family$family)
-    dfweights = merge(dfweights, genus_family, by = "genus", all.x = TRUE)
     dfweights$wT[dfweights$taxa1 == dfweights$family |
                    (!is.na(dfweights$taxa2) & dfweights$taxa2 == dfweights$family)|
                    (!is.na(dfweights$taxa3) & dfweights$taxa3 == dfweights$family)|
@@ -324,7 +334,6 @@ weight_allom = function(dbh,
 
   dfweights$w = dfweights$wN * dfweights$wD * dfweights$wE * dfweights$wT
   # multiplicative weights: if one is zero, the total weight should be zero too
-  ## find a way to check order of equations
   data.table::setorder(dfweights, obs_id, equation_id)
   Mw = data.table::dcast(dfweights, obs_id ~ equation_id, value.var = "w")
   data.table::setorder(Mw, obs_id)
