@@ -42,6 +42,7 @@ g
 # species list in allodb / per site ##
 load("data/sitespecies.rda")
 sitespecies = data.table(sitespecies)
+sitespecies$site <- gsub(" ", "-", sitespecies$site)
 
 ## keep only non tropical sites
 load("data/sites_info.rda")
