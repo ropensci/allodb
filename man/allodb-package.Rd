@@ -4,9 +4,10 @@
 \name{allodb-package}
 \alias{allodb}
 \alias{allodb-package}
-\title{allodb: A Database of Allometric Equations for ForestGEO}
+\title{allodb: An R Database For Biomass Estimation At Globally Distributed Extratropical Forest Plots}
 \description{
-An R database for biomass estimation at globally distributed extratropical forest plots.
+Tool to standardize and simplify the biomass
+    estimation process across globally distributed extratropical forests.
 }
 \seealso{
 Useful links:
@@ -17,12 +18,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Mauro Lepore \email{leporem@si.edu} (\href{https://orcid.org/0000-0002-1986-7988}{ORCID}) [contractor]
+\strong{Maintainer}: Erika Gonzalez-Akre \email{GonzalezEB@si.edu}
 
 Authors:
 \itemize{
-  \item Erika Gonzalez-Akre \email{GonzalezEB@si.edu} (\href{https://orcid.org/0000-0001-8305-6672}{ORCID})
-  \item Camille Piponiot \email{camille.piponiot@gmail.com} (\href{https://orcid.org/0000-0002-3473-1982}{ORCID})
+  \item Camille Piponiot \email{camille.piponiot@gmail.com}
+  \item Mauro Lepore \email{leporem@si.edu}
   \item Kristina Anderson-Teixeira \email{TeixeiraK@si.edu}
 }
 

@@ -41,7 +41,7 @@ master_tidy() \%>\%
   unique()
 }
 \seealso{
-\code{\link[dplyr:full_join]{dplyr::full_join()}}.
+\code{\link[dplyr:mutate-joins]{dplyr::full_join()}}.
 
 Other functions to interact with the database: 
 \code{\link{set_type}()}
