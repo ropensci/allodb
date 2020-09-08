@@ -4,9 +4,7 @@
 \name{missing_values_metadata}
 \alias{missing_values_metadata}
 \title{Table of metadata associated to the table \code{missing_values}.}
-\format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4 rows and 3 columns.
-}
+\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4 rows and 3 columns.}
 \usage{
 missing_values_metadata
 }
@@ -17,13 +15,11 @@ Example of alternative format for meta-data documentation:
 }
 }
 \seealso{
-Other database datasets: 
-\code{\link{equations}},
-\code{\link{genus_family}},
-\code{\link{references_metadata}},
-\code{\link{sites_info}},
-\code{\link{sitespecies}},
-\code{\link{wsg}}
+Other database datasets: \code{\link{equations}},
+  \code{\link{genus_family}},
+  \code{\link{references_metadata}},
+  \code{\link{sites_info}}, \code{\link{sitespecies}},
+  \code{\link{wsg}}
 }
 \concept{database datasets}
 \keyword{datasets}

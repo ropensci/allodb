@@ -4,24 +4,12 @@
 \alias{add_equation}
 \title{Function to add new equations to the equation table (then used in the get_biomass function)}
 \usage{
-add_equation(
-  taxa,
-  level,
-  allometry,
-  coords,
-  minDBH,
-  maxDBH,
-  sampleSize,
-  unitDBH = "cm",
-  unitOutput = "kg",
-  inputVar = "DBH",
-  outputVar = "Total aboveground biomass"
-)
+add_equation(taxa, allometry, coords, minDBH, maxDBH, sampleSize,
+  unitDBH = "cm", unitOutput = "kg", inputVar = "DBH",
+  outputVar = "Total aboveground biomass")
 }
 \arguments{
 \item{taxa}{character string or vector specifying the taxon (or taxa) for which the allometry has been calibrated}
-
-\item{level}{character string or vector specifying at which taxonomic level the equation has been built, either \code{Species}, \code{Genus}, \code{Family}, or \verb{Woody species}, \verb{Mixed conifers}}
 
 \item{allometry}{a character string with the allometric equation}
 
@@ -33,13 +21,13 @@ add_equation(
 
 \item{sampleSize}{number of measurements with which the allometry was calibrated}
 
-\item{unitDBH}{character string wiht unit of DBH in the equation (either \code{cm}, \code{mm} or \code{inch}). Default is \code{cm}.}
+\item{unitDBH}{character string with unit of DBH in the equation (either \code{cm}, \code{mm} or \code{inch}). Default is \code{cm}.}
 
-\item{unitOutput}{character string wiht unit of equation output (either \code{g}, \code{kg}, \code{Mg} or \code{lbs} if the output is a mass, or \code{m} if the output is a height).}
+\item{unitOutput}{character string with unit of equation output (either \code{g}, \code{kg}, \code{Mg} or \code{lbs} if the output is a mass, or \code{m} if the output is a height).}
 
-\item{inputVar}{Independent variable(s) needed in the allometry. Default is \code{DBH}, other option is \verb{DBH, H}.}
+\item{inputVar}{independent variable(s) needed in the allometry. Default is \code{DBH}, other option is \code{DBH, H}.}
 
-\item{outputVar}{dependent variable estimated by the allometry. Default is \verb{Total aboveground biomass}.}
+\item{outputVar}{dependent variable estimated by the allometry. Default is \code{Total aboveground biomass}.}
 }
 \value{
 A new equation table including all default equations and the additional equation (equation_id = \code{new})
@@ -48,8 +36,13 @@ A new equation table including all default equations and the additional equation
 This function creates S3 objects of class "numeric".
 }
 \examples{
-new_equations = add_equation(taxa = "Faga", level = "genus",
-allometry = "exp(-2+log(dbh)*2.5)", coords = c(-0.07, 46.11),
-minDBH = 5, maxDBH = 50, sampleSize = 50)
+new_equations = add_equation(
+  taxa = "Faga",
+  allometry = "exp(-2+log(dbh)*2.5)",
+  coords = c(-0.07, 46.11),
+  minDBH = 5,
+  maxDBH = 50,
+  sampleSize = 50
+)
 
 }

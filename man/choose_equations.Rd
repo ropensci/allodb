@@ -5,12 +5,8 @@
 \title{Function to subset the default equation table, based on taxa, koppen climate zone or region.
 This subsetted equation table can then be used in the \code{get_biomass} function.}
 \usage{
-choose_equations(
-  taxa = "all",
-  climate = "all",
-  region = "all",
-  new_equations = NULL
-)
+choose_equations(taxa = "all", climate = "all", region = "all",
+  new_equations = NULL)
 }
 \arguments{
 \item{taxa}{character vector with taxa to be kept. Default is \code{all}, in which
@@ -20,7 +16,7 @@ case all taxa are kept.}
 Default is \code{all}, in which case all climates are kept.}
 
 \item{region}{character vector with name of location(s) or country(ies) or broad region(s)
-(\code{Europe}, \verb{North America}, etc -> add complete list) to be kept.
+(\code{Europe}, \code{North America}, etc -> add complete list) to be kept.
 Default is \code{all}, in which case all regions are kept.}
 
 \item{new_equations}{optional equation table, as created by the

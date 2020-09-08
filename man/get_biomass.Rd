@@ -5,21 +5,11 @@
 \title{Function to compute aboveground biomass (or other variables) from allometric
 equations.}
 \usage{
-get_biomass(
-  dbh,
-  h = NULL,
-  genus = rep(NA, length(dbh)),
-  species = NULL,
-  shrub = NULL,
-  coords,
-  new_equations = NULL,
+get_biomass(dbh, h = NULL, genus = rep(NA, length(dbh)),
+  species = NULL, shrub = NULL, coords, new_equations = NULL,
   var = c("Total aboveground biomass", "Whole tree (above stump)"),
-  add_weight = FALSE,
-  use_height_allom = TRUE,
-  wna = 0.1,
-  wsteep = 3,
-  w95 = 500
-)
+  add_weight = FALSE, use_height_allom = TRUE, wna = 0.1,
+  wsteep = 3, w95 = 500)
 }
 \arguments{
 \item{dbh}{A numerical vector containing tree diameter at breast height (dbh)
@@ -39,7 +29,7 @@ identification is available.}
 \item{shrub}{A logical vector (same length as dbh): is the observation a
 shrub? Default is \code{NULL} (no information), in which case allometric
 equations designed for shrubs will be used only for species recorded as
-shrubs in ForestGEO sites (see \code{data("shrub_species")}).}
+shrubs in ForestGEO sites.}
 
 \item{coords}{A numerical vector of length 2 with longitude and latitude (if
 all trees were measured in the same location) or a matrix with 2 numerical
@@ -50,10 +40,10 @@ information is available.}
 add_equation() function.}
 
 \item{var}{What dependent variable(s) should be provided in the output?
-Default is \verb{Total aboveground biomass} and \verb{Whole tree (above stump)},
-other possible values are: \verb{Bark biomass}, \code{Branches (dead)}, \code{Branches (live)}, \verb{Branches total (live, dead)}, \verb{Foliage total}, \code{Height},
-\code{Leaves}, \verb{Stem (wood only)}, \verb{Stem biomass}, \verb{Stem biomass (with bark)},
-\verb{Stem biomass (without bark)}, \verb{Whole tree (above and belowground)}. Be
+Default is \code{Total aboveground biomass} and \code{Whole tree (above stump)},
+other possible values are: \code{Bark biomass}, \code{Branches (dead)}, \code{Branches (live)}, \code{Branches total (live, dead)}, \code{Foliage total}, \code{Height},
+\code{Leaves}, \code{Stem (wood only)}, \code{Stem biomass}, \code{Stem biomass (with bark)},
+\code{Stem biomass (without bark)}, \code{Whole tree (above and belowground)}. Be
 aware that only a few equations exist for those other variables, so
 estimated values might not be very accurate.}
 
@@ -72,7 +62,7 @@ Default is 0.1}
 in the weighting function. Default is 3.}
 
 \item{w95}{this parameter is used in the weighting function to determine the
-value at which the sample-size-related weight reaches 95\% of its maximum
+value at which the sample-size-related weight reaches 95% of its maximum
 value (max=1). Default is 500.}
 }
 \value{
@@ -91,10 +81,10 @@ example below for how to apply the function to a splitted dataset.
 \examples{
 data(scbi_stem1)
 get_biomass(
-dbh = scbi_stem1$dbh,
-genus = scbi_stem1$genus,
-species = scbi_stem1$species,
-coords = c(-78.2, 38.9)
+  dbh = scbi_stem1$dbh,
+  genus = scbi_stem1$genus,
+  species = scbi_stem1$species,
+  coords = c(-78.2, 38.9)
 )
 
 # split dataset to avoid memory over usage

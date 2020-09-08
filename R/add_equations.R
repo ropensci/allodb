@@ -3,15 +3,14 @@
 #' This function creates S3 objects of class "numeric".
 #'
 #' @param taxa character string or vector specifying the taxon (or taxa) for which the allometry has been calibrated
-#' @param level character string or vector specifying at which taxonomic level the equation has been built, either `Species`, `Genus`, `Family`, or `Woody species`, `Mixed conifers`
 #' @param allometry a character string with the allometric equation
 #' @param coords a vector or matrix of coordinates (longitude, latitude) of the calibration data
 #' @param minDBH numerical value, minimum DBH for which the equation is valid (in cm)
 #' @param maxDBH numerical value, maximum DBH for which the equation is valid (in cm)
 #' @param sampleSize number of measurements with which the allometry was calibrated
-#' @param unitDBH character string wiht unit of DBH in the equation (either `cm`, `mm` or `inch`). Default is `cm`.
-#' @param unitOutput character string wiht unit of equation output (either `g`, `kg`, `Mg` or `lbs` if the output is a mass, or `m` if the output is a height).
-#' @param inputVar Independent variable(s) needed in the allometry. Default is `DBH`, other option is `DBH, H`.
+#' @param unitDBH character string with unit of DBH in the equation (either `cm`, `mm` or `inch`). Default is `cm`.
+#' @param unitOutput character string with unit of equation output (either `g`, `kg`, `Mg` or `lbs` if the output is a mass, or `m` if the output is a height).
+#' @param inputVar independent variable(s) needed in the allometry. Default is `DBH`, other option is `DBH, H`.
 #' @param outputVar dependent variable estimated by the allometry. Default is `Total aboveground biomass`.
 #'
 #' @return A new equation table including all default equations and the additional equation (equation_id = `new`)
@@ -19,12 +18,16 @@
 #' @export
 #'
 #' @examples
-#' new_equations = add_equation(taxa = "Faga", level = "genus",
-#' allometry = "exp(-2+log(dbh)*2.5)", coords = c(-0.07, 46.11),
-#' minDBH = 5, maxDBH = 50, sampleSize = 50)
+#' new_equations = add_equation(
+#'   taxa = "Faga",
+#'   allometry = "exp(-2+log(dbh)*2.5)",
+#'   coords = c(-0.07, 46.11),
+#'   minDBH = 5,
+#'   maxDBH = 50,
+#'   sampleSize = 50
+#')
 #'
 add_equation = function(taxa,
-                        level,
                         allometry,
                         coords,
                         minDBH,
@@ -34,7 +37,8 @@ add_equation = function(taxa,
                         unitOutput = "kg",
                         inputVar = "DBH",
                         outputVar = "Total aboveground biomass") {
-  data("equations")
+
+  data("equations", envir = environment())
 
   ## check consistency of inputs
   if (!unitDBH %in% c("cm", "mm", "inch"))
@@ -46,19 +50,15 @@ add_equation = function(taxa,
   if (outputVar == "Height" & unitOutput != "m")
     stop("Height allometries outputs must be in m.")
 
-  if (!level %in% c("Species", "Genus", "Family", "Woody species", "Mixed conifers"))
-    stop("unitDBH must be either `Species`, `Genus`, `Family`, or `Woody species`, `Mixed conifers`.")
-
   if (maxDBH <= minDBH |
       minDBH < 0 | !is.numeric(minDBH) | !is.numeric(maxDBH))
     stop("minDBH and maxDBH must be positive real numbers, with maxDBH > minDBH.")
 
-  if (length(taxa) != length(level) |
-      length(level) != length(allometry) |
+  if (length(taxa) != length(allometry) |
       length(allometry) != length(minDBH) |
       length(minDBH) != length(maxDBH) |
       length(maxDBH) != length(sampleSize))
-    stop("taxa, level, allometry, minDBH, maxDBH and sampleSize must all be the same length.")
+    stop("taxa, allometry, minDBH, maxDBH and sampleSize must all be the same length.")
 
   if (!is.matrix(coords)) {
     coords = matrix(rep(coords, length(taxa)), ncol = 2, byrow = TRUE)
@@ -78,19 +78,14 @@ add_equation = function(taxa,
 
   if (any(!grepl("dbh", allometry)))
     stop("Allometry does not contain DBH as a dependent variable.")
-  ## TODO add basal diameter?
-
-  ## TODO check/correct taxa
 
   equationID = paste0("new", 1:length(taxa))
-  climateData = data.frame(
-    ID = equationID,
+  coordsEq = cbind(
     long = coords[, 1],
-    lat = coords[, 2],
-    rndCoord.lon = RoundCoordinates(coords[, 1]),
-    rndCoord.lat = RoundCoordinates(coords[, 2])
+    lat = coords[, 2]
   )
-  koppenZones = kgc::LookupCZ(climateData)
+  climates = allodb::koppenRaster@data@attributes[[1]][, 2]
+  koppenZones = climates[raster::extract(allodb::koppenRaster, coordsEq)]
   if (any(grepl("missing", koppenZones)))
     stop(
       "Impossible to find all koppen climate zones based on coordinates. Check that they are Long, Lat."
@@ -99,7 +94,6 @@ add_equation = function(taxa,
   new_equations = data.frame(
     equation_id = equationID,
     equation_taxa = taxa,
-    allometry_specificity = level,
     equation_allometry = allometry,
     independent_variable = inputVar,
     dependent_variable = outputVar,
@@ -123,7 +117,6 @@ add_equation = function(taxa,
   new_equations = new_equations[, c(
     "equation_id" ,
     "equation_taxa",
-    "allometry_specificity",
     "equation_allometry",
     "independent_variable",
     "dependent_variable",

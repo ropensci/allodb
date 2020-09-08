@@ -5,8 +5,7 @@
 \alias{equations}
 \alias{equations_metadata}
 \title{Tables of allometric equations and associated metadata for ForestGEO sites.}
-\format{
-A data frame with 225 rows and 24 variables:\preformatted{[,1]	ref_id	character
+\format{A data frame with 225 rows and 24 variables:\preformatted{[,1]	ref_id	character
 [,2]	equation_id	character
 [,3]	equation_allometry	character
 [,4]	equation_form	character
@@ -31,10 +30,7 @@ A data frame with 225 rows and 24 variables:\preformatted{[,1]	ref_id	character
 [,23]	original_data_availability	character
 [,24]	notes	character
 
-}
-
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 47 rows and 8 columns.
-}
+}}
 \source{
 \itemize{
 \item Go to \code{references} table for equations original sources.
@@ -53,17 +49,12 @@ above-ground biomass (AGB) per species at ForestGEO sites:
 \item \code{equations_metadata}: Metadata for \code{equations} table.
 }
 }
-\details{
-
-}
 \seealso{
-Other database datasets: 
-\code{\link{genus_family}},
-\code{\link{missing_values_metadata}},
-\code{\link{references_metadata}},
-\code{\link{sites_info}},
-\code{\link{sitespecies}},
-\code{\link{wsg}}
+Other database datasets: \code{\link{genus_family}},
+  \code{\link{missing_values_metadata}},
+  \code{\link{references_metadata}},
+  \code{\link{sites_info}}, \code{\link{sitespecies}},
+  \code{\link{wsg}}
 }
 \concept{database datasets}
 \keyword{datasets}

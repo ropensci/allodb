@@ -5,11 +5,7 @@
 \alias{sitespecies}
 \alias{sitespecies_metadata}
 \title{Tables of ForestGEO sites and tree species and associated metadata.}
-\format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1113 rows and 10 columns.
-
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 10 rows and 4 columns.
-}
+\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1113 rows and 10 columns.}
 \usage{
 sitespecies
 
@@ -22,13 +18,11 @@ sitespecies_metadata
 }
 }
 \seealso{
-Other database datasets: 
-\code{\link{equations}},
-\code{\link{genus_family}},
-\code{\link{missing_values_metadata}},
-\code{\link{references_metadata}},
-\code{\link{sites_info}},
-\code{\link{wsg}}
+Other database datasets: \code{\link{equations}},
+  \code{\link{genus_family}},
+  \code{\link{missing_values_metadata}},
+  \code{\link{references_metadata}},
+  \code{\link{sites_info}}, \code{\link{wsg}}
 }
 \concept{database datasets}
 \keyword{datasets}
