@@ -20,7 +20,7 @@
 #' @param shrub A logical vector (same length as dbh): is the observation a
 #'   shrub? Default is `NULL` (no information), in which case allometric
 #'   equations designed for shrubs will be used only for species recorded as
-#'   shrubs in ForestGEO sites (see `data("shrub_species")`).
+#'   shrubs in ForestGEO sites.
 #' @param coords A numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree. Default is NULL when no
@@ -83,7 +83,7 @@ get_biomass = function(dbh,
                        wna = 0.1,
                        wsteep = 3,
                        w95 = 500) {
-  data("equations")
+  data("equations", envir = environment())
   dfequation = equations
   if (!is.null(new_equations))
     dfequation = new_equations
@@ -154,9 +154,8 @@ get_biomass = function(dbh,
     coordsSite = apply(unique(coords), 2, as.numeric)
   ## extract koppen climate of every location
   # koppen climate raster downloaded from http://koeppen-geiger.vu-wien.ac.at/present.htm on the 2/10/2020
-  data("koppenRaster")
-  climates = koppenRaster@data@attributes[[1]][, 2]
-  koppenObs = climates[raster::extract(koppenRaster, coordsSite)]
+  climates = allodb::koppenRaster@data@attributes[[1]][, 2]
+  koppenObs = climates[raster::extract(allodb::koppenRaster, coordsSite)]
   if (length(koppenObs) > 1) {
     coordsLev = apply(coords, 1, function(x) paste(x, collapse = "_"))
     coordsLev = factor(coordsLev, levels = unique(coordsLev))
@@ -226,12 +225,9 @@ weight_allom = function(dbh,
   ## prepare observation datatable
   dfobs = data.table::data.table(obs_id = 1:length(dbh), dbh, koppenObs = koppen, genus, species)
   ## add family
-  data("genus_family")
   ## all character strings to lower cases to avoid inconsistencies
   dfobs$genus = tolower(dfobs$genus)
-  genus_family$genus = tolower(genus_family$genus)
-  genus_family$family = tolower(genus_family$family)
-  dfobs = merge(dfobs, genus_family, by = "genus", all.x = TRUE)
+  dfobs = merge(dfobs, allodb::genus_family, by = "genus", all.x = TRUE)
 
   ## combine observations and equations
   combinations = expand.grid(obs_id = 1:length(dbh), equation_id = equation_table$equation_id)
@@ -264,11 +260,11 @@ weight_allom = function(dbh,
     dfweights$wE = 1
   } else {
     dfkoppen = unique(dfweights[, c("koppenObs", "koppen")])
-    data("koppenMatrix")
     compare_koppen = function(Z) {
       z1 = tolower(Z[1])
       z2 = tolower(unlist(strsplit(Z[2], ", |; |,|;")))
-      max(koppenMatrix$wE[tolower(koppenMatrix$zone1)==z1 & tolower(koppenMatrix$zone2)%in%z2])
+      max(allodb::koppenMatrix$wE[tolower(allodb::koppenMatrix$zone1)==z1 &
+                                    tolower(allodb::koppenMatrix$zone2)%in%z2])
     }
     dfkoppen$wE = apply(dfkoppen, 1, compare_koppen)
     dfweights = merge(dfweights, dfkoppen, by = c("koppenObs", "koppen"))
@@ -301,34 +297,32 @@ weight_allom = function(dbh,
                    (!is.na(dfweights$taxa6) & dfweights$taxa6 == dfweights$family)] = 0.5
     # generic equations
     ## conifers / gymnosperms?
-    data("gymno_genus")
-    conifers = gymno_genus$Genus[gymno_genus$conifer]
+    conifers = allodb::gymno_genus$Genus[allodb::gymno_genus$conifer]
     # yes
     dfweights$wT[dfweights$genus %in% conifers &
                    dfweights$equation_taxa == "conifers"] = 0.3
     # no
-    dfweights$wT[!(dfweights$genus %in% gymno_genus$Genus) &
+    dfweights$wT[!(dfweights$genus %in% allodb::gymno_genus$Genus) &
                    dfweights$equation_taxa == "broad-leaved species"] = 0.3
     ## tree or shrub?
-    data("shrub_species")
-    shrub_genus = gsub(" sp\\.", "", grep(" sp\\.", shrub_species, value = TRUE))
+    shrub_genus = gsub(" sp\\.", "", grep(" sp\\.", allodb::shrub_species, value = TRUE))
     # shrubs (all)
-    dfweights$wT[(paste(dfweights$genus, dfweights$species) %in% shrub_species |
+    dfweights$wT[(paste(dfweights$genus, dfweights$species) %in% allodb::shrub_species |
                     dfweights$genus %in% shrub_genus) &
                    dfweights$equation_taxa == "shrubs"] = 0.3
     # shrubs (angio)
-    dfweights$wT[(paste(dfweights$genus, dfweights$species) %in% shrub_species |
+    dfweights$wT[(paste(dfweights$genus, dfweights$species) %in% allodb::shrub_species |
                     dfweights$genus %in% shrub_genus) &
-                   !(dfweights$genus %in% gymno_genus$Genus) &
+                   !(dfweights$genus %in% allodb::gymno_genus$Genus) &
                    dfweights$equation_taxa == "shrubs (angiosperms)"] = 0.3
     # trees (all)
-    dfweights$wT[!paste(dfweights$genus, dfweights$species) %in% shrub_species &
+    dfweights$wT[!paste(dfweights$genus, dfweights$species) %in% allodb::shrub_species &
                    !dfweights$genus %in% shrub_genus &
                    dfweights$equation_taxa == "trees (angiosperms/gymnosperms)"] = 0.3
     # trees (angio)
-    dfweights$wT[!paste(dfweights$genus, dfweights$species) %in% shrub_species &
+    dfweights$wT[!paste(dfweights$genus, dfweights$species) %in% allodb::shrub_species &
                    !dfweights$genus %in% shrub_genus &
-                   !(dfweights$genus %in% gymno_genus$Genus) &
+                   !(dfweights$genus %in% allodb::gymno_genus$Genus) &
                    dfweights$equation_taxa == "trees (angiosperms)"] = 0.3
   }
 
