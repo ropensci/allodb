@@ -48,12 +48,12 @@ Here we use data from the Smithsonian Conservation Biology Institute, USA (SCBI)
 library(allodb)
 
 data(scbi_stem1)
-scbi_stem1$agb =
-get_biomass(
-dbh = scbi_stem1$dbh,
-genus = scbi_stem1$genus,
-species = scbi_stem1$species,
-coords = c(-78.2, 38.9)
+scbi_stem1$agb <-
+  get_biomass(
+    dbh = scbi_stem1$dbh,
+    genus = scbi_stem1$genus,
+    species = scbi_stem1$species,
+    coords = c(-78.2, 38.9)
 )
 
 ```
@@ -62,9 +62,9 @@ You can also estimate biomass for a single tree given dbh and species Id.
 
 ```R
 get_biomass(
-dbh=50, 
-genus="liriodendron", 
-species="tulipifera", 
-coords=c(-78.2, 38.9)
+  dbh=50, 
+  genus="liriodendron", 
+  species="tulipifera", 
+  coords=c(-78.2, 38.9)
 )
 ```
