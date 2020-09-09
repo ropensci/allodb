@@ -12,7 +12,7 @@ four <- function(x) {
   out
 }
 
-glue4initials <- function(x){
+glue4initials <- function(x) {
   strsplit(x, " ")[[1]] %>%
     purrr::map(strsplit, "") %>%
     purrr::modify_depth(2, dplyr::first) %>%
@@ -47,12 +47,13 @@ ref <- readr::read_csv("data-raw/data_references.csv")
 references_table <- ref %>%
   mutate(
     ref_author = strip_odd_chars(tolower(ref_author)),
-    ) %>%
+  ) %>%
   purrr::modify(as.character)
 
 combo <- right_join(
-  references_table, author_year, by = c("ref_author", "ref_year")
-  ) %>%
+  references_table, author_year,
+  by = c("ref_author", "ref_year")
+) %>%
   unique()
 
 refid <- combo %>%

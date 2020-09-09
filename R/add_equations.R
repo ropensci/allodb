@@ -18,80 +18,87 @@
 #' @export
 #'
 #' @examples
-#' new_equations = add_equation(
+#' new_equations <- add_equation(
 #'   taxa = "Faga",
 #'   allometry = "exp(-2+log(dbh)*2.5)",
 #'   coords = c(-0.07, 46.11),
 #'   minDBH = 5,
 #'   maxDBH = 50,
 #'   sampleSize = 50
-#')
-#'
-add_equation = function(taxa,
-                        allometry,
-                        coords,
-                        minDBH,
-                        maxDBH,
-                        sampleSize,
-                        unitDBH = "cm",
-                        unitOutput = "kg",
-                        inputVar = "DBH",
-                        outputVar = "Total aboveground biomass") {
-
+#' )
+add_equation <- function(taxa,
+                         allometry,
+                         coords,
+                         minDBH,
+                         maxDBH,
+                         sampleSize,
+                         unitDBH = "cm",
+                         unitOutput = "kg",
+                         inputVar = "DBH",
+                         outputVar = "Total aboveground biomass") {
   data("equations", envir = environment())
 
   ## check consistency of inputs
-  if (!unitDBH %in% c("cm", "mm", "inch"))
+  if (!unitDBH %in% c("cm", "mm", "inch")) {
     stop("unitDBH must be either cm, mm or inch.")
+  }
 
-  if (!unitOutput %in% c("g", "kg", "Mg", "lbs", "m"))
+  if (!unitOutput %in% c("g", "kg", "Mg", "lbs", "m")) {
     stop("unitOutput must be either `g`, `kg`, `Mg` or `lbs`, or `m`.")
+  }
 
-  if (outputVar == "Height" & unitOutput != "m")
+  if (outputVar == "Height" & unitOutput != "m") {
     stop("Height allometries outputs must be in m.")
+  }
 
   if (maxDBH <= minDBH |
-      minDBH < 0 | !is.numeric(minDBH) | !is.numeric(maxDBH))
+    minDBH < 0 | !is.numeric(minDBH) | !is.numeric(maxDBH)) {
     stop("minDBH and maxDBH must be positive real numbers, with maxDBH > minDBH.")
+  }
 
   if (length(taxa) != length(allometry) |
-      length(allometry) != length(minDBH) |
-      length(minDBH) != length(maxDBH) |
-      length(maxDBH) != length(sampleSize))
+    length(allometry) != length(minDBH) |
+    length(minDBH) != length(maxDBH) |
+    length(maxDBH) != length(sampleSize)) {
     stop("taxa, allometry, minDBH, maxDBH and sampleSize must all be the same length.")
+  }
 
   if (!is.matrix(coords)) {
-    coords = matrix(rep(coords, length(taxa)), ncol = 2, byrow = TRUE)
+    coords <- matrix(rep(coords, length(taxa)), ncol = 2, byrow = TRUE)
   }
 
   if (!is.numeric(coords) |
-      !(ncol(coords) == 2 & nrow(coords) == length(taxa)))
+    !(ncol(coords) == 2 & nrow(coords) == length(taxa))) {
     stop(
       "coords must be a numeric vector of length 2 or a matrix with 2 columns (long, lat) and as many rows as the number of equations."
     )
+  }
 
   if (any(coords[, 1] < -180 |
-          coords[, 1] > 180 | coords[, 2] < -90 | coords[, 2] > 90))
+    coords[, 1] > 180 | coords[, 2] < -90 | coords[, 2] > 90)) {
     stop("Longitude must be between -180 and 180, and latitude between 90 and 90.")
+  }
 
-  allometry = tolower(allometry)
+  allometry <- tolower(allometry)
 
-  if (any(!grepl("dbh", allometry)))
+  if (any(!grepl("dbh", allometry))) {
     stop("Allometry does not contain DBH as a dependent variable.")
+  }
 
-  equationID = paste0("new", 1:length(taxa))
-  coordsEq = cbind(
+  equationID <- paste0("new", 1:length(taxa))
+  coordsEq <- cbind(
     long = coords[, 1],
     lat = coords[, 2]
   )
-  climates = allodb::koppenRaster@data@attributes[[1]][, 2]
-  koppenZones = climates[raster::extract(allodb::koppenRaster, coordsEq)]
-  if (any(grepl("missing", koppenZones)))
+  climates <- allodb::koppenRaster@data@attributes[[1]][, 2]
+  koppenZones <- climates[raster::extract(allodb::koppenRaster, coordsEq)]
+  if (any(grepl("missing", koppenZones))) {
     stop(
       "Impossible to find all koppen climate zones based on coordinates. Check that they are Long, Lat."
     )
+  }
 
-  new_equations = data.frame(
+  new_equations <- data.frame(
     equation_id = equationID,
     equation_taxa = taxa,
     equation_allometry = allometry,
@@ -107,15 +114,17 @@ add_equation = function(taxa,
     output_units_original = unitOutput
   )
 
-  new_equations = rbind(new_equations,
-                        equations[, colnames(new_equations)])
+  new_equations <- rbind(
+    new_equations,
+    equations[, colnames(new_equations)]
+  )
 
   ## conversion factor for input
-  new_equations = merge(new_equations, unique(equations[, c("output_units_original", 'output_units_CF')]))
-  new_equations = merge(new_equations, unique(equations[, c("dbh_units_original", 'dbh_unit_CF')]))
+  new_equations <- merge(new_equations, unique(equations[, c("output_units_original", "output_units_CF")]))
+  new_equations <- merge(new_equations, unique(equations[, c("dbh_units_original", "dbh_unit_CF")]))
 
-  new_equations = new_equations[, c(
-    "equation_id" ,
+  new_equations <- new_equations[, c(
+    "equation_id",
     "equation_taxa",
     "equation_allometry",
     "independent_variable",

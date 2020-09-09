@@ -17,38 +17,39 @@
 #'
 #' @examples
 #'
-choose_equations = function(taxa = "all",
-                           climate = "all",
-                           region = "all",
-                           new_equations = NULL) {
+choose_equations <- function(taxa = "all",
+                             climate = "all",
+                             region = "all",
+                             new_equations = NULL) {
   if (is.null(new_equations)) {
     data("equations")
-    new_equations = equations
+    new_equations <- equations
   }
 
   # check input consistency
-  if (!is.character(taxa) | !is.character(climate))
+  if (!is.character(taxa) | !is.character(climate)) {
     stop("taxa and climate arguments must be character vectors.")
+  }
 
   if (taxa != "all") {
-    keep = sapply(new_equations$equation_taxa, function(tax0) {
+    keep <- sapply(new_equations$equation_taxa, function(tax0) {
       any(sapply(taxa, function(i) grepl(i, tax0)))
     })
-    new_equations = new_equations[keep,]
+    new_equations <- new_equations[keep, ]
   }
 
   if (climate != "all") {
-    keep = sapply(new_equations$koppen, function(clim0) {
+    keep <- sapply(new_equations$koppen, function(clim0) {
       any(sapply(climate, function(i) grepl(i, clim0)))
     })
-    new_equations = new_equations[keep,]
+    new_equations <- new_equations[keep, ]
   }
 
   if (region != "all") {
-    keep = sapply(new_equations$geographic_area, function(reg0) {
+    keep <- sapply(new_equations$geographic_area, function(reg0) {
       any(sapply(region, function(i) grepl(i, reg0)))
     })
-    new_equations = new_equations[keep,]
+    new_equations <- new_equations[keep, ]
   }
 
   return(new_equations)

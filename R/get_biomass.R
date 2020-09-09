@@ -64,175 +64,186 @@
 #' )
 #'
 #' # split dataset to avoid memory over usage
-#' data_split = split(scbi_stem1, cut(1:nrow(scbi_stem1), breaks = 10, labels = FALSE))
-#' agb = lapply(data_split, function(df) get_biomass(dbh=df$dbh,
-#'                                                  genus=df$genus,
-#'                                                  species = df$species,
-#'                                                  coords = c(-78.2, 38.9)))
-#' scbi_stem1$agb = do.call(c, agb)
-get_biomass = function(dbh,
-                       h = NULL,
-                       genus = rep(NA, length(dbh)),
-                       species = NULL,
-                       shrub = NULL,
-                       coords,
-                       new_equations = NULL,
-                       var = c("Total aboveground biomass", "Whole tree (above stump)"),
-                       add_weight = FALSE,
-                       use_height_allom = TRUE,
-                       wna = 0.1,
-                       wsteep = 3,
-                       w95 = 500) {
+#' data_split <- split(scbi_stem1, cut(1:nrow(scbi_stem1), breaks = 10, labels = FALSE))
+#' agb <- lapply(data_split, function(df) {
+#'   get_biomass(
+#'     dbh = df$dbh,
+#'     genus = df$genus,
+#'     species = df$species,
+#'     coords = c(-78.2, 38.9)
+#'   )
+#' })
+#' scbi_stem1$agb <- do.call(c, agb)
+get_biomass <- function(dbh,
+                        h = NULL,
+                        genus = rep(NA, length(dbh)),
+                        species = NULL,
+                        shrub = NULL,
+                        coords,
+                        new_equations = NULL,
+                        var = c("Total aboveground biomass", "Whole tree (above stump)"),
+                        add_weight = FALSE,
+                        use_height_allom = TRUE,
+                        wna = 0.1,
+                        wsteep = 3,
+                        w95 = 500) {
   data("equations", envir = environment())
-  dfequation = equations
-  if (!is.null(new_equations))
-    dfequation = new_equations
+  dfequation <- equations
+  if (!is.null(new_equations)) {
+    dfequation <- new_equations
+  }
 
   ## replace height with height allometry from Bohn et al. 2014 in Jansen et al 1996
   if (use_height_allom & "jansen_1996_otvb" %in% dfequation$ref_id) {
-    eq_jansen = subset(equations, ref_id=="jansen_1996_otvb")
+    eq_jansen <- subset(equations, ref_id == "jansen_1996_otvb")
     ## height allometries defined per genus -> get info in Jansen allometries
-    eq_jansen$genus = data.table::tstrsplit(eq_jansen$equation_notes, " ")[[5]]
+    eq_jansen$genus <- data.table::tstrsplit(eq_jansen$equation_notes, " ")[[5]]
     ## create height allometry dataframe
-    hallom = subset(equations, ref_id=="bohn_2014_ocai" & dependent_variable == "Height" )
-    hallom = hallom[, c("equation_taxa", "equation_allometry")]
-    colnames(hallom) = c("genus", "hsub")
+    hallom <- subset(equations, ref_id == "bohn_2014_ocai" & dependent_variable == "Height")
+    hallom <- hallom[, c("equation_taxa", "equation_allometry")]
+    colnames(hallom) <- c("genus", "hsub")
     ## merge with jansen allometries (equations that do not have a corresponding height allometry will not be substituted)
-    eq_jansen = merge(eq_jansen, hallom, by = "genus")
+    eq_jansen <- merge(eq_jansen, hallom, by = "genus")
     # substitute H by its DBH-based estimation
-    toMerge = eq_jansen[, c("hsub", "equation_allometry")]
-    eq_jansen$equation_allometry = apply(toMerge, 1, function(X) {
+    toMerge <- eq_jansen[, c("hsub", "equation_allometry")]
+    eq_jansen$equation_allometry <- apply(toMerge, 1, function(X) {
       gsub("\\(h", paste0("((", X[1], ")"), X[2])
     })
     # replace independent_variable column
-    eq_jansen$independent_variable = "DBH"
+    eq_jansen$independent_variable <- "DBH"
     # replace in equation table
-    dfequation = rbind(subset(dfequation, !equation_id %in% eq_jansen$equation_id),
-                       eq_jansen[, colnames(dfequation)])
+    dfequation <- rbind(
+      subset(dfequation, !equation_id %in% eq_jansen$equation_id),
+      eq_jansen[, colnames(dfequation)]
+    )
   }
 
-  equations_ids = dfequation$equation_id
-  equations_ids = equations_ids[!is.na(equations_ids)]
-  dfequation = subset(dfequation, equation_id %in% equations_ids)
+  equations_ids <- dfequation$equation_id
+  equations_ids <- equations_ids[!is.na(equations_ids)]
+  dfequation <- subset(dfequation, equation_id %in% equations_ids)
 
   ## keep only useful equations
-  dfequation = subset(dfequation, dependent_variable %in% var)
-  if (is.null(h))
-    dfequation = subset(dfequation,!independent_variable == "DBH, H")
+  dfequation <- subset(dfequation, dependent_variable %in% var)
+  if (is.null(h)) {
+    dfequation <- subset(dfequation, !independent_variable == "DBH, H")
+  }
 
   # transform columns to numeric
   suppressWarnings(dfequation$dbh_min_cm <-
-                     as.numeric(dfequation$dbh_min_cm))
+    as.numeric(dfequation$dbh_min_cm))
   suppressWarnings(dfequation$dbh_max_cm <-
-                     as.numeric(dfequation$dbh_max_cm))
+    as.numeric(dfequation$dbh_max_cm))
   suppressWarnings(dfequation$sample_size <-
-                     as.numeric(dfequation$sample_size))
+    as.numeric(dfequation$sample_size))
   suppressWarnings(dfequation$dbh_unit_CF <-
-                     as.numeric(dfequation$dbh_unit_CF))
+    as.numeric(dfequation$dbh_unit_CF))
   suppressWarnings(dfequation$output_units_CF <-
-                     as.numeric(dfequation$output_units_CF))
+    as.numeric(dfequation$output_units_CF))
 
-  agb_all = matrix(0, nrow = length(dbh), ncol = nrow(dfequation))
+  agb_all <- matrix(0, nrow = length(dbh), ncol = nrow(dfequation))
   # modifiy allometry to insert unit conversion
   for (i in 1:nrow(dfequation)) {
-    orig_equation = dfequation$equation_allometry[i]
-    new_dbh = paste0("(dbh*", dfequation$dbh_unit_CF[i], ")")
-    new_equation = gsub("dbh|DBH", new_dbh, orig_equation)
-    agb_all[, i] = eval(parse(text = new_equation)) * dfequation$output_units_CF[i]
+    orig_equation <- dfequation$equation_allometry[i]
+    new_dbh <- paste0("(dbh*", dfequation$dbh_unit_CF[i], ")")
+    new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
+    agb_all[, i] <- eval(parse(text = new_equation)) * dfequation$output_units_CF[i]
   }
   ## remove some absurdly low or high values given by some equations when outside of their dbh range
-  agb_all[!is.na(agb_all) & (agb_all < 0 | agb_all > 1e6)] = NA
+  agb_all[!is.na(agb_all) & (agb_all < 0 | agb_all > 1e6)] <- NA
 
   # koppen climate
   # (1) get koppen climate for all locations
   # if only one location, transform coords into matrix with 2 numeric columns
   if (length(unlist(coords)) == 2) {
-    coordsSite = t(as.numeric(coords))
+    coordsSite <- t(as.numeric(coords))
   } else if (length(unlist(unique(coords))) == 2) {
-    coordsSite = t(apply(unique(coords), 2, as.numeric))
-  } else
-    coordsSite = apply(unique(coords), 2, as.numeric)
+    coordsSite <- t(apply(unique(coords), 2, as.numeric))
+  } else {
+    coordsSite <- apply(unique(coords), 2, as.numeric)
+  }
   ## extract koppen climate of every location
   # koppen climate raster downloaded from http://koeppen-geiger.vu-wien.ac.at/present.htm on the 2/10/2020
-  climates = allodb::koppenRaster@data@attributes[[1]][, 2]
-  koppenObs = climates[raster::extract(allodb::koppenRaster, coordsSite)]
+  climates <- allodb::koppenRaster@data@attributes[[1]][, 2]
+  koppenObs <- climates[raster::extract(allodb::koppenRaster, coordsSite)]
   if (length(koppenObs) > 1) {
-    coordsLev = apply(coords, 1, function(x) paste(x, collapse = "_"))
-    coordsLev = factor(coordsLev, levels = unique(coordsLev))
-    koppenObs = koppenObs[as.numeric(coordsLev)]
+    coordsLev <- apply(coords, 1, function(x) paste(x, collapse = "_"))
+    coordsLev <- factor(coordsLev, levels = unique(coordsLev))
+    koppenObs <- koppenObs[as.numeric(coordsLev)]
   }
 
   # weight function
-  weight = weight_allom(
+  weight <- weight_allom(
     dbh = dbh,
     koppen = koppenObs,
     genus = genus,
     species = species,
     equation_table = dfequation,
     replace_dbhrange = wna,
-    b = log(20)/w95,
+    b = log(20) / w95,
     steep = wsteep
   )
-  relative_weight = weight / matrix(rowSums(weight, na.rm = TRUE),
-                                    nrow = length(dbh),
-                                    ncol = nrow(dfequation))
+  relative_weight <- weight / matrix(rowSums(weight, na.rm = TRUE),
+    nrow = length(dbh),
+    ncol = nrow(dfequation)
+  )
 
-  agb = rowSums(agb_all * relative_weight, na.rm = TRUE)
-  agb[is.na(dbh)] = NA
+  agb <- rowSums(agb_all * relative_weight, na.rm = TRUE)
+  agb[is.na(dbh)] <- NA
 
   if (!add_weight) {
     return(agb)
-  } else
+  } else {
     return(cbind(agb, relative_weight))
+  }
 }
 
-weight_allom = function(dbh,
-                        koppen = NULL,
-                        genus = NULL,
-                        species = NULL,
-                        equation_table,
-                        replace_dbhrange = 0.1,
-                        b = 0.006,
-                        steep = 3  ## controls the steepness of the dbh range transition, should be > 1
+weight_allom <- function(dbh,
+                         koppen = NULL,
+                         genus = NULL,
+                         species = NULL,
+                         equation_table,
+                         replace_dbhrange = 0.1,
+                         b = 0.006,
+                         steep = 3 ## controls the steepness of the dbh range transition, should be > 1
 ) {
 
   ## prepare equation datatable
-  dfeq = data.table::setDT(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
+  dfeq <- data.table::setDT(equation_table[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
   ## keep equation_id order by making it into a factor
-  dfeq$equation_id = factor(dfeq$equation_id, levels = equation_table$equation_id)
-  dfeq$dbh_max_cm = as.numeric(dfeq$dbh_max_cm)
-  dfeq$dbh_min_cm = as.numeric(dfeq$dbh_min_cm)
+  dfeq$equation_id <- factor(dfeq$equation_id, levels = equation_table$equation_id)
+  dfeq$dbh_max_cm <- as.numeric(dfeq$dbh_max_cm)
+  dfeq$dbh_min_cm <- as.numeric(dfeq$dbh_min_cm)
 
   ## 'clean' equation taxa column and separate several taxa
   ## all character strings to lower cases to avoid inconsistencies
-  dfeq$equation_taxa = tolower(dfeq$equation_taxa)
+  dfeq$equation_taxa <- tolower(dfeq$equation_taxa)
   ## remove " sp." from genus in equation taxa
-  dfeq$equation_taxa = gsub(" sp//.", "", dfeq$equation_taxa)
+  dfeq$equation_taxa <- gsub(" sp//.", "", dfeq$equation_taxa)
   ## split by "/" when there are several species or families
-  taxa = data.table::tstrsplit(dfeq$equation_taxa, "/| / | /|/ ")
-  dfeq$taxa1 = taxa[[1]]
-  dfeq$taxa2 = taxa[[2]]
-  dfeq$taxa3 = taxa[[3]]
-  dfeq$taxa4 = taxa[[4]]
-  dfeq$taxa5 = taxa[[5]]
-  dfeq$taxa6 = taxa[[6]]
+  taxa <- data.table::tstrsplit(dfeq$equation_taxa, "/| / | /|/ ")
+  dfeq$taxa1 <- taxa[[1]]
+  dfeq$taxa2 <- taxa[[2]]
+  dfeq$taxa3 <- taxa[[3]]
+  dfeq$taxa4 <- taxa[[4]]
+  dfeq$taxa5 <- taxa[[5]]
+  dfeq$taxa6 <- taxa[[6]]
   ## weight by sample size ##
-  dfeq$wN = (1 - exp(-b * as.numeric(dfeq$sample_size)))
+  dfeq$wN <- (1 - exp(-b * as.numeric(dfeq$sample_size)))
   # b=0.006 -> we reach 95% of the max value of weight_N when Nobs = log(20)/0.006 = 500
   # implication: new observations will not increase weight_N much when Nobs > 500
-  dfeq$wN[is.na(dfeq$wN)] = 0.1 ## for now: give 0.1 to equations with no sample size; find why they don't have a sample size
+  dfeq$wN[is.na(dfeq$wN)] <- 0.1 ## for now: give 0.1 to equations with no sample size; find why they don't have a sample size
 
   ## prepare observation datatable
-  dfobs = data.table::data.table(obs_id = 1:length(dbh), dbh, koppenObs = koppen, genus, species)
+  dfobs <- data.table::data.table(obs_id = 1:length(dbh), dbh, koppenObs = koppen, genus, species)
   ## add family
   ## all character strings to lower cases to avoid inconsistencies
-  dfobs$genus = tolower(dfobs$genus)
-  dfobs = merge(dfobs, allodb::genus_family, by = "genus", all.x = TRUE)
+  dfobs$genus <- tolower(dfobs$genus)
+  dfobs <- merge(dfobs, allodb::genus_family, by = "genus", all.x = TRUE)
 
   ## combine observations and equations
-  combinations = expand.grid(obs_id = 1:length(dbh), equation_id = equation_table$equation_id)
-  dfweights = merge(dfeq, combinations, by  = "equation_id")
-  dfweights = merge(dfweights, dfobs, by = "obs_id")
+  combinations <- expand.grid(obs_id = 1:length(dbh), equation_id = equation_table$equation_id)
+  dfweights <- merge(dfeq, combinations, by = "equation_id")
+  dfweights <- merge(dfweights, dfobs, by = "obs_id")
   rm(combinations, dfobs, dfeq)
 
   ## weight by dbh range ##
@@ -247,92 +258,94 @@ weight_allom = function(dbh,
   # We log-transform it because dbhs are > 0
   # See: curve(f(log(x), log(5), log(20)), xlim=c(0,50)); abline(v=c(5,20))
 
-  dfweights$wD = (1 - abs((log(dfweights$dbh) - (
+  dfweights$wD <- (1 - abs((log(dfweights$dbh) - (
     log(dfweights$dbh_max_cm) + log(dfweights$dbh_min_cm)
   ) / 2) / (
     log(dfweights$dbh_max_cm) - log(dfweights$dbh_min_cm)
-  )) ^ steep) ^ 3
-  dfweights$wD[dfweights$wD < 0 & !is.na(dfweights$wD)] = 0   ## keep only positive values, transform values < 0 into 0
-  dfweights$wD[is.na(dfweights$wD)] = replace_dbhrange ## weight (independent of DBH) when equation does not have DBH range
+  ))^steep)^3
+  dfweights$wD[dfweights$wD < 0 & !is.na(dfweights$wD)] <- 0 ## keep only positive values, transform values < 0 into 0
+  dfweights$wD[is.na(dfweights$wD)] <- replace_dbhrange ## weight (independent of DBH) when equation does not have DBH range
 
   ### koppen climate weight
   if (is.null(koppen)) {
-    dfweights$wE = 1
+    dfweights$wE <- 1
   } else {
-    dfkoppen = unique(dfweights[, c("koppenObs", "koppen")])
-    compare_koppen = function(Z) {
-      z1 = tolower(Z[1])
-      z2 = tolower(unlist(strsplit(Z[2], ", |; |,|;")))
-      max(allodb::koppenMatrix$wE[tolower(allodb::koppenMatrix$zone1)==z1 &
-                                    tolower(allodb::koppenMatrix$zone2)%in%z2])
+    dfkoppen <- unique(dfweights[, c("koppenObs", "koppen")])
+    compare_koppen <- function(Z) {
+      z1 <- tolower(Z[1])
+      z2 <- tolower(unlist(strsplit(Z[2], ", |; |,|;")))
+      max(allodb::koppenMatrix$wE[tolower(allodb::koppenMatrix$zone1) == z1 &
+        tolower(allodb::koppenMatrix$zone2) %in% z2])
     }
-    dfkoppen$wE = apply(dfkoppen, 1, compare_koppen)
-    dfweights = merge(dfweights, dfkoppen, by = c("koppenObs", "koppen"))
+    dfkoppen$wE <- apply(dfkoppen, 1, compare_koppen)
+    dfweights <- merge(dfweights, dfkoppen, by = c("koppenObs", "koppen"))
   }
 
   ### taxonomic weight
   if (is.null(genus)) {
-    dfweights$wT = 1
+    dfweights$wT <- 1
   } else {
 
     ## basic weight = 1e-6 (equations used only if no other is available)
-    dfweights$wT = 1e-6
+    dfweights$wT <- 1e-6
 
     # same genus
-    dfweights$wT[dfweights$taxa1 == dfweights$genus] = 0.8
+    dfweights$wT[dfweights$taxa1 == dfweights$genus] <- 0.8
     # same genus, different species
-    eqtaxaG = data.table::tstrsplit(dfweights$taxa1, " ")[[1]]
-    eqtaxaS = data.table::tstrsplit(dfweights$taxa1, " ")[[2]]
-    dfweights$wT[eqtaxaG == dfweights$genus & !is.na(eqtaxaS)] = 0.7
+    eqtaxaG <- data.table::tstrsplit(dfweights$taxa1, " ")[[1]]
+    eqtaxaS <- data.table::tstrsplit(dfweights$taxa1, " ")[[2]]
+    dfweights$wT[eqtaxaG == dfweights$genus & !is.na(eqtaxaS)] <- 0.7
     # same species
     dfweights$wT[dfweights$taxa1 == paste(dfweights$genus, dfweights$species) |
-                   (dfweights$taxa2 == paste(dfweights$genus, dfweights$species) &
-                      !is.na(dfweights$taxa2))] = 1
+      (dfweights$taxa2 == paste(dfweights$genus, dfweights$species) &
+        !is.na(dfweights$taxa2))] <- 1
     # # same family
     dfweights$wT[dfweights$taxa1 == dfweights$family |
-                   (!is.na(dfweights$taxa2) & dfweights$taxa2 == dfweights$family)|
-                   (!is.na(dfweights$taxa3) & dfweights$taxa3 == dfweights$family)|
-                   (!is.na(dfweights$taxa4) & dfweights$taxa4 == dfweights$family)|
-                   (!is.na(dfweights$taxa5) & dfweights$taxa5 == dfweights$family)|
-                   (!is.na(dfweights$taxa6) & dfweights$taxa6 == dfweights$family)] = 0.5
+      (!is.na(dfweights$taxa2) & dfweights$taxa2 == dfweights$family) |
+      (!is.na(dfweights$taxa3) & dfweights$taxa3 == dfweights$family) |
+      (!is.na(dfweights$taxa4) & dfweights$taxa4 == dfweights$family) |
+      (!is.na(dfweights$taxa5) & dfweights$taxa5 == dfweights$family) |
+      (!is.na(dfweights$taxa6) & dfweights$taxa6 == dfweights$family)] <- 0.5
     # generic equations
     ## conifers / gymnosperms?
-    conifers = allodb::gymno_genus$Genus[allodb::gymno_genus$conifer]
+    conifers <- allodb::gymno_genus$Genus[allodb::gymno_genus$conifer]
     # yes
     dfweights$wT[dfweights$genus %in% conifers &
-                   dfweights$equation_taxa == "conifers"] = 0.3
+      dfweights$equation_taxa == "conifers"] <- 0.3
     # no
     dfweights$wT[!(dfweights$genus %in% allodb::gymno_genus$Genus) &
-                   dfweights$equation_taxa == "broad-leaved species"] = 0.3
+      dfweights$equation_taxa == "broad-leaved species"] <- 0.3
     ## tree or shrub?
-    shrub_genus = gsub(" sp\\.", "", grep(" sp\\.", allodb::shrub_species, value = TRUE))
+    shrub_genus <- gsub(" sp\\.", "", grep(" sp\\.", allodb::shrub_species, value = TRUE))
     # shrubs (all)
     dfweights$wT[(paste(dfweights$genus, dfweights$species) %in% allodb::shrub_species |
-                    dfweights$genus %in% shrub_genus) &
-                   dfweights$equation_taxa == "shrubs"] = 0.3
+      dfweights$genus %in% shrub_genus) &
+      dfweights$equation_taxa == "shrubs"] <- 0.3
     # shrubs (angio)
     dfweights$wT[(paste(dfweights$genus, dfweights$species) %in% allodb::shrub_species |
-                    dfweights$genus %in% shrub_genus) &
-                   !(dfweights$genus %in% allodb::gymno_genus$Genus) &
-                   dfweights$equation_taxa == "shrubs (angiosperms)"] = 0.3
+      dfweights$genus %in% shrub_genus) &
+      !(dfweights$genus %in% allodb::gymno_genus$Genus) &
+      dfweights$equation_taxa == "shrubs (angiosperms)"] <- 0.3
     # trees (all)
     dfweights$wT[!paste(dfweights$genus, dfweights$species) %in% allodb::shrub_species &
-                   !dfweights$genus %in% shrub_genus &
-                   dfweights$equation_taxa == "trees (angiosperms/gymnosperms)"] = 0.3
+      !dfweights$genus %in% shrub_genus &
+      dfweights$equation_taxa == "trees (angiosperms/gymnosperms)"] <- 0.3
     # trees (angio)
     dfweights$wT[!paste(dfweights$genus, dfweights$species) %in% allodb::shrub_species &
-                   !dfweights$genus %in% shrub_genus &
-                   !(dfweights$genus %in% allodb::gymno_genus$Genus) &
-                   dfweights$equation_taxa == "trees (angiosperms)"] = 0.3
+      !dfweights$genus %in% shrub_genus &
+      !(dfweights$genus %in% allodb::gymno_genus$Genus) &
+      dfweights$equation_taxa == "trees (angiosperms)"] <- 0.3
   }
 
-  dfweights$w = dfweights$wN * dfweights$wD * dfweights$wE * dfweights$wT
+  dfweights$w <- dfweights$wN * dfweights$wD * dfweights$wE * dfweights$wT
   # multiplicative weights: if one is zero, the total weight should be zero too
   data.table::setorder(dfweights, obs_id, equation_id)
-  Mw = data.table::dcast(dfweights, obs_id ~ equation_id, value.var = "w")
+  Mw <- data.table::dcast(dfweights, obs_id ~ equation_id, value.var = "w")
   data.table::setorder(Mw, obs_id)
-  Mw = as.matrix(Mw)[, -1]
-  Mw = matrix(Mw, ncol = nrow(equation_table),
-              dimnames = list(NULL, colnames(Mw)))
+  Mw <- as.matrix(Mw)[, -1]
+  Mw <- matrix(Mw,
+    ncol = nrow(equation_table),
+    dimnames = list(NULL, colnames(Mw))
+  )
   return(Mw)
 }
