@@ -48,12 +48,12 @@ requested through the ForestGEO portal (<https://forestgeo.si.edu/>)
 library(allodb)
 
 data(scbi_stem1)
-scbi_stem1$agb =
-get_biomass(
-dbh = scbi_stem1$dbh,
-genus = scbi_stem1$genus,
-species = scbi_stem1$species,
-coords = c(-78.2, 38.9)
+scbi_stem1$agb <-
+  get_biomass(
+    dbh = scbi_stem1$dbh,
+    genus = scbi_stem1$genus,
+    species = scbi_stem1$species,
+    coords = c(-78.2, 38.9)
 )
 ```
 
@@ -62,9 +62,9 @@ Id.
 
 ``` r
 get_biomass(
-dbh=50, 
-genus="liriodendron", 
-species="tulipifera", 
-coords=c(-78.2, 38.9)
+  dbh=50, 
+  genus="liriodendron", 
+  species="tulipifera", 
+  coords=c(-78.2, 38.9)
 )
 ```
