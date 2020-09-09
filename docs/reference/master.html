@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Join allodb tables: <code>equations</code>, <code>sitespecies</code>, and <code>sites_info</code>. — master • allodb</title>
+<title>Join allodb tables: equations, sitespecies, and sites_info. — master • allodb</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,7 @@
 
 
 
-<meta property="og:title" content="Join allodb tables: <code>equations</code>, <code>sitespecies</code>, and <code>sites_info</code>. — master" />
+<meta property="og:title" content="Join allodb tables: equations, sitespecies, and sites_info. — master" />
 <meta property="og:description" content="
 
 master() has all column types set as characters to preserve different
@@ -140,38 +140,43 @@ kinds of missing values.</p></li>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>dplyr::full_join()</a></code>.</p>
-<p>Other functions to interact with the database: 
-<code><a href='set_type.html'>set_type</a>()</code></p></div>
+<p>Other functions to interact with the database: <code><a href='set_type.html'>set_type</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>dplyr</span>)</div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: ‘dplyr’</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:stats’:</span>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://dplyr.tidyverse.org'>dplyr</a></span>)
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'dplyr'</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:stats':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    filter, lag</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from ‘package:base’:</span>
+#&gt; <span class='message'>    filter, lag</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:base':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>purrr</span>)
+#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://purrr.tidyverse.org'>purrr</a></span>)
 
-<span class='fu'>master</span>()</div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
+<span class='fu'>master</span>()
+</div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
 #&gt; <span class='error'><span style='color: #BB0000;'>x</span><span> Problem with `equation_id`.</span></div><div class='input'>
 <span class='co'># Columns are of type "character"</span>
-<span class='fu'>master</span>() <span class='kw'>%&gt;%</span>
-  <span class='kw pkg'>purrr</span><span class='kw ns'>::</span><span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map_chr</a></span>(<span class='no'>typeof</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>()</div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
+<span class='fu'>master</span>() <span class='op'>%&gt;%</span>
+  <span class='kw'>purrr</span>::<span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map_chr</a></span>(<span class='kw'>typeof</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>()
+</div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
 #&gt; <span class='error'></span><span style='color: #BB0000;'>x</span><span> Problem with `equation_id`.</span></div><div class='input'>
 <span class='co'># This preserves preserve different kinds of NAs</span>
-<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(<span class='st'>"N"</span>, <span class='fu'>master</span>()$<span class='no'>dbh_min_cm</span>, <span class='kw'>value</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))</div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
-#&gt; <span class='error'></span><span style='color: #BB0000;'>x</span><span> Problem with `equation_id`.</span></div><div class='input'><span class='kw pkg'>allodb</span><span class='kw ns'>::</span><span class='no'><a href='missing_values_metadata.html'>missing_values_metadata</a></span></div><div class='output co'>#&gt; </span><span style='color: #949494;'># A tibble: 4 x 3</span><span>
+<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(<span class='st'>"N"</span>, <span class='fu'>master</span>()<span class='op'>$</span><span class='kw'>dbh_min_cm</span>, value = <span class='fl'>TRUE</span>))
+</div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
+#&gt; <span class='error'></span><span style='color: #BB0000;'>x</span><span> Problem with `equation_id`.</span></div><div class='input'><span class='kw'>allodb</span>::<span class='kw'><a href='missing_values_metadata.html'>missing_values_metadata</a></span>
+</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 4 x 3</span><span>
 #&gt;   Code  Definition         Description                                          
-#&gt;   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>                                                
-#&gt; </span><span style='color: #BCBCBC;'>1</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Not Applicable     Data does not apply to that particular case          
-#&gt; </span><span style='color: #BCBCBC;'>2</span><span> NAC   Not Acquired       Information may be available but has not been acquir…
-#&gt; </span><span style='color: #BCBCBC;'>3</span><span> NRA   Not Readily Avail… Information was not readily available to the authors…
-#&gt; </span><span style='color: #BCBCBC;'>4</span><span> NI    No Information     No information available in original publication     </div><div class='input'>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                                
+#&gt; </span><span style='color: #555555;'>1</span><span> </span><span style='color: #BB0000;'>NA</span><span>    Not Applicable     Data does not apply to that particular case          
+#&gt; </span><span style='color: #555555;'>2</span><span> NAC   Not Acquired       Information may be available but has not been acquir~
+#&gt; </span><span style='color: #555555;'>3</span><span> NRA   Not Readily Avail~ Information was not readily available to the authors~
+#&gt; </span><span style='color: #555555;'>4</span><span> NI    No Information     No information available in original publication     </div><div class='input'>
 <span class='co'># For computation, use `master_tidy()`, which has column types and missing</span>
 <span class='co'># values already optimized for computation on the data</span>
-<span class='fu'>master_tidy</span>() <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map_chr</a></span>(<span class='no'>typeof</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>()</div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
+<span class='fu'>master_tidy</span>() <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map_chr</a></span>(<span class='kw'>typeof</span>) <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>()
+</div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
 #&gt; <span class='error'></span><span style='color: #BB0000;'>x</span><span> Problem with `equation_id`.</span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -188,7 +193,7 @@ kinds of missing values.</p></li>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
 </div>
 
       </footer>
