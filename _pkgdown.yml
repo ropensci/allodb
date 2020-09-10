@@ -14,6 +14,7 @@ reference:
   contents:
   - equations
   - sitespecies
+  - references
 - title: Funtions to compute AGB
   desc:  These two fuctions help to define best equations at a site and compute AGB
   contents:
