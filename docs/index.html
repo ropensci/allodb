@@ -92,7 +92,15 @@
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>Prior to calculating tree biomass using <em>allo-db</em> users need to provide a table (i.e. dataframe) with DBH (cm), H (m; optional), parsed species Latin names, and site coordinates. A graph can be built per species/per site to visualize the function across an hypothetical DBH range.</p>
-<p><img src="tests/Fig1workflow.png"></p>
+<p><br></p>
+<p align="center">
+</p>
+<p><img width="100%" src="https://github.com/forestgeo/allodb/blob/master/tests/Fig1workflow.png"></p>
+
+<p align="center">
+</p>
+<p><sub>Figure 1. Diagram of allo-db workflow, including user input data and an example of weighting of available equations across the DBH size spectrum to produce a single, continuous function of AGB in relation to DBH. The top ten allometries (indicating equation ID and taxa/taxonomic group), after applying the weighting process, can be seen as a side panel</sub></p>
+
 <p>In this example we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees from 1 hectare). Data can be requested through the ForestGEO portal (<a href="https://forestgeo.si.edu/" class="uri">https://forestgeo.si.edu/</a>)</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/forestgeo/allodb">allodb</a></span>)
