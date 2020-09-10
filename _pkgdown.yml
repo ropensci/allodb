@@ -1,0 +1,11 @@
+navbar:
+  type: default
+  left:
+  - icon: fa-home fa-lg
+    href: index.html
+  - text: "Functions"
+    href: reference/index.html
+  - text: "Datasets"
+    href: reference/index.html
+  - text: "Examples"
+    href: index.html#example
