@@ -41,7 +41,24 @@ a table (i.e. dataframe) with DBH (cm), H (m; optional), parsed species
 Latin names, and site coordinates. A graph can be built per species/per
 site to visualize the function across an hypothetical DBH range.
 
-![](tests/Fig1workflow.png)
+<br>
+
+<p align="center">
+
+<img width="100%" src="https://github.com/forestgeo/allodb/blob/master/tests/Fig1workflow.png">
+
+</p>
+
+<p align="center">
+
+<sub>Figure 1. Diagram of allo-db workflow, including user input data
+and an example of weighting of available equations across the DBH size
+spectrum to produce a single, continuous function of AGB in relation to
+DBH. The top ten allometries (indicating equation ID and taxa/taxonomic
+group), after applying the weighting process, can be seen as a side
+panel</sub>
+
+</p>
 
 In this example we use data from the Smithsonian Conservation Biology
 Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees
