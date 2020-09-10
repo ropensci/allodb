@@ -6,7 +6,7 @@ navbar:
   - text: "Functions and Datasets"
     href: reference/index.html
   - text: "Examples"
-    href: index.html#example
+    href: index.html#Examples
 
 reference:
 - title: Datasets
