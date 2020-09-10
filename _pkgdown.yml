@@ -3,9 +3,23 @@ navbar:
   left:
   - icon: fa-home fa-lg
     href: index.html
-  - text: "Functions"
-    href: reference/index.html
-  - text: "Datasets"
+  - text: "Functions and Datasets"
     href: reference/index.html
   - text: "Examples"
     href: index.html#example
+
+reference:
+- title: Datasets
+  desc:  Supporting data for allodb
+  contents:
+  - equations
+  - sitespecies
+- title: Funtions to compute AGB
+  desc:  These two fuctions help to define best equations at a site and compute AGB
+  contents:
+  - choose_equations
+  - get_biomass
+- title: Function to add new equations
+  desc:  This fuction add new equations to update the existing equations table
+  contents:
+  - add_equation

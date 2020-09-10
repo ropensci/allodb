@@ -84,10 +84,7 @@
   </a>
 </li>
 <li>
-  <a href="../reference/index.html">Functions</a>
-</li>
-<li>
-  <a href="../reference/index.html">Datasets</a>
+  <a href="../reference/index.html">Functions and Datasets</a>
 </li>
 <li>
   <a href="../index.html#example">Examples</a>
@@ -127,8 +124,60 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
+          <h2 id="section-datasets" class="hasAnchor"><a href="#section-datasets" class="anchor"></a>Datasets</h2>
+          <p class="section-desc"><p>Supporting data for allodb</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="equations.html">equations</a></code> <code><a href="equations.html">equations_metadata</a></code> </p>
+        </td>
+        <td><p>Tables of allometric equations and associated metadata for ForestGEO sites.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="sitespecies.html">sitespecies</a></code> <code><a href="sitespecies.html">sitespecies_metadata</a></code> </p>
+        </td>
+        <td><p>Tables of ForestGEO sites and tree species and associated metadata.</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-funtions-to-compute-agb" class="hasAnchor"><a href="#section-funtions-to-compute-agb" class="anchor"></a>Funtions to compute AGB</h2>
+          <p class="section-desc"><p>These two fuctions help to define best equations at a site and compute AGB</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="choose_equations.html">choose_equations()</a></code> </p>
+        </td>
+        <td><p>Function to subset the default equation table, based on taxa, koppen climate zone or region.
+This subsetted equation table can then be used in the <code>get_biomass</code> function.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_biomass.html">get_biomass()</a></code> </p>
+        </td>
+        <td><p>Function to compute aboveground biomass (or other variables) from allometric
+equations.</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-function-to-add-new-equations" class="hasAnchor"><a href="#section-function-to-add-new-equations" class="anchor"></a>Function to add new equations</h2>
+          <p class="section-desc"><p>This fuction add new equations to update the existing equations table</p></p>
         </th>
       </tr>
       
@@ -142,74 +191,6 @@
           <p><code><a href="add_equation.html">add_equation()</a></code> </p>
         </td>
         <td><p>Function to add new equations to the equation table (then used in the get_biomass function)</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="choose_equations.html">choose_equations()</a></code> </p>
-        </td>
-        <td><p>Function to subset the default equation table, based on taxa, koppen climate zone or region.
-This subsetted equation table can then be used in the <code>get_biomass</code> function.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="equations.html">equations</a></code> <code><a href="equations.html">equations_metadata</a></code> </p>
-        </td>
-        <td><p>Tables of allometric equations and associated metadata for ForestGEO sites.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="genus_family.html">genus_family</a></code> </p>
-        </td>
-        <td><p>Title</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="get_biomass.html">get_biomass()</a></code> </p>
-        </td>
-        <td><p>Function to compute aboveground biomass (or other variables) from allometric
-equations.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="master.html">master()</a></code> <code><a href="master.html">master_tidy()</a></code> </p>
-        </td>
-        <td><p>Join allodb tables: <code>equations</code>, <code>sitespecies</code>, and <code>sites_info</code>.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="missing_values_metadata.html">missing_values_metadata</a></code> </p>
-        </td>
-        <td><p>Table of metadata associated to the table <code>missing_values</code>.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="references_metadata.html">references_metadata</a></code> </p>
-        </td>
-        <td><p>Table of metadata associated to the table <code>references</code>.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="set_type.html">set_type()</a></code> </p>
-        </td>
-        <td><p>Create objects of class allodb.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="sitespecies.html">sitespecies</a></code> <code><a href="sitespecies.html">sitespecies_metadata</a></code> </p>
-        </td>
-        <td><p>Tables of ForestGEO sites and tree species and associated metadata.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="sites_info.html">sites_info</a></code> </p>
-        </td>
-        <td><p>Table of information on sites from tropical forests.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="wsg.html">wsg</a></code> <code><a href="wsg.html">wsg_metadata</a></code> </p>
-        </td>
-        <td><p>Tables of wood density and associated metadata.</p></td>
       </tr>
     </tbody>
     </table>
