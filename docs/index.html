@@ -88,11 +88,12 @@
 <span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"forestgeo/allodb"</span>)
 </pre></div>
 </div>
-<div id="example" class="section level2">
+<div id="examples" class="section level2">
 <h2 class="hasAnchor">
-<a href="#example" class="anchor"></a>Example</h2>
-<p>Prior to calculating tree biomass using <em>allo-db</em> users need to provide DBH (cm); H (m; optional); parsed species Latin names, and site coordinates.</p>
-<p>Here we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st census, 1 hectare). Data can be requested through the ForestGEO portal (<a href="https://forestgeo.si.edu/" class="uri">https://forestgeo.si.edu/</a>)</p>
+<a href="#examples" class="anchor"></a>Examples</h2>
+<p>Prior to calculating tree biomass using <em>allo-db</em> users need to provide a table (i.e. dataframe) with DBH (cm), H (m; optional), parsed species Latin names, and site coordinates. A graph can be built per species/per site to visualize the function across an hypothetical DBH range.</p>
+<p><img src="tests/Fig1workflow.png"></p>
+<p>In this example we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees from 1 hectare). Data can be requested through the ForestGEO portal (<a href="https://forestgeo.si.edu/" class="uri">https://forestgeo.si.edu/</a>)</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/forestgeo/allodb">allodb</a></span>)
 
