@@ -45,7 +45,7 @@ site to visualize the function across an hypothetical DBH range.
 
 <p align="center">
 
-<img width="100%" src="https://github.com/forestgeo/allodb/blob/master/tests/Fig1workflow.png">
+<img width="100%" src="tests/Fig1workflow.png">
 
 </p>
 
@@ -59,6 +59,8 @@ group), after applying the weighting process, can be seen as a side
 panel</sub>
 
 </p>
+
+<br>
 
 In this example we use data from the Smithsonian Conservation Biology
 Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees
