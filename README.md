@@ -34,15 +34,19 @@ Install the development version of *allo-db* from GitHub:
 remotes::install_github("forestgeo/allodb")
 ```
 
-## Example
+## Examples
 
 Prior to calculating tree biomass using *allo-db* users need to provide
-DBH (cm); H (m; optional); parsed species Latin names, and site
-coordinates.
+a table (i.e. dataframe) with DBH (cm), H (m; optional), parsed species
+Latin names, and site coordinates. A graph can be built per species/per
+site to visualize the function across an hypothetical DBH range.
 
-Here we use data from the Smithsonian Conservation Biology Institute,
-USA (SCBI) ForestGEO dynamics plot (1st census, 1 hectare). Data can be
-requested through the ForestGEO portal (<https://forestgeo.si.edu/>)
+![](tests/Fig1workflow.png)
+
+In this example we use data from the Smithsonian Conservation Biology
+Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees
+from 1 hectare). Data can be requested through the ForestGEO portal
+(<https://forestgeo.si.edu/>)
 
 ``` r
 library(allodb)
