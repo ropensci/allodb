@@ -1,5 +1,6 @@
-#' Function to subset the default equation table, based on taxa, koppen climate zone or region.
-#' This subsetted equation table can then be used in the `get_biomass` function.
+#' Subset the default equation table, based on taxa, koppen climate zone or region.
+#'
+#' The subsetted equation table can then be used in the `get_biomass` function.
 #'
 #' @param taxa character vector with taxa to be kept. Default is `all`, in which
 #'   case all taxa are kept.
