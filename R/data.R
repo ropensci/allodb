@@ -3,7 +3,8 @@
 #' Tables of allometric equations and associated metadata.
 #'
 #' A compilation of best available allometry equations to calculate tree
-#' above-ground biomass (AGB) per species based on extratropical ForestGEO sites:
+#' above-ground biomass (AGB) per species based on
+#' extratropical ForestGEO sites:
 #' * `equations`: Table of allometric equations.
 #' * `equations_metadata`: Metadata for `equations` table.
 #'
@@ -12,7 +13,7 @@
 #'
 #'
 #' @format
-#' A data frame with 568 rows and 47 variables:
+#' `equations`: A data frame with 568 rows and 47 variables:
 #' ```
 #' 	[,1]	ref_id	character
 #' 	[,2]	equation_id	character
@@ -70,7 +71,7 @@
 #' @rdname equations
 "equations_metadata"
 
-#' Table with explanations of missing values codes
+#' A table with explanations of missing values codes
 #'
 #'  A list of codes used to indicate missing information in equation table:
 #'* `missing_values`: Table with explanations of missing values codes.
@@ -79,16 +80,15 @@
 #' A small data frame with 4 rows and 3 variables:
 #' ```
 #' 	[,1]	Code	character
-#' 	[,2]	DEfinition	character
-#' 	[,3]	DEscription	character
+#' 	[,2]	Definition	character
+#' 	[,3]	Description	character
 #' 	````
 #' @family database datasets
 "missing_values"
 
-
-#' Tables of ForestGEO sites and tree species used in allo-db and associated metadata.
+#' Tables of sites and tree species used in allo-db and associated metadata.
 #'
-#' * `sitespecies`: Table of extratropical ForestGEO sites (n=24) and tree species.
+#' * `sitespecies`: Table of extratropical ForestGEO sites (n=24) and their tree species.
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
 #'#' @format
@@ -114,7 +114,9 @@
 
 
 #' Tables of equation references and associated metadata
-#' Bibliography data from where equations where sourced. Connect to euqations table by ref_id.
+#'
+#' Bibliography from where equations where sourced. Links to equations table by ref_id.
+#'
 #' * `references`: A dataframe listing all references used in equation table.
 #' * `references_metadata`: Table of metadata of `reference`.
 #'
