@@ -61,37 +61,39 @@
 #' 	[,45]	original_equation_id	character
 #' 	[,46]	original_data_availability	character
 #' 	[,47]	equation_notes	character
-
 #'
 #' ```
 #' @source * Go to `references` table for equations original sources.
 #'
 #' @family database datasets
 "equations"
-
 #' @rdname equations
 "equations_metadata"
 
-
-
-#' Table of metadata associated to the table `missing_values`.
+#' Table with explanations of missing values codes
 #'
-#'  Example of alternative format for meta-data documentation:
-#' * NA: Not Applicable; Data does not apply to that particular case
+#'  A list of codes used to indicate missing information in equation table:
+#'* `missing_values`: Table with explanations of missing values codes.
 #'
+#'#' @format
+#' A small data frame with 4 rows and 3 variables:
+#' ```
+#' 	[,1]	Code	character
+#' 	[,2]	DEfinition	character
+#' 	[,3]	DEscription	character
+#' 	````
 #' @family database datasets
-"missing_values_metadata"
+"missing_values"
 
 
-
-#' Tables of ForestGEO sites and tree species used in allodb and associated metadata.
+#' Tables of ForestGEO sites and tree species used in allo-db and associated metadata.
 #'
 #' * `sitespecies`: Table of extratropical ForestGEO sites (n=24) and tree species.
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
 #'#' @format
 #' A data frame with 1114 rows and 10 variables:
-#' ````
+#' ```
 #' [,1]	site	character
 #' [,2]	family	character
 #' [,3]	genus	character
@@ -102,11 +104,11 @@
 #' [,8]	species_code	character
 #' [,9]	life_form	character
 #' [,10]	warning	character
-
 #'
+#'```
 #' @family database datasets
 "sitespecies"
-
+#'
 #' @name sitespecies
 "sitespecies_metadata"
 
@@ -118,16 +120,15 @@
 #'
 #'#'#' @format
 #' A data frame with 57 rows and 6 variables:
-#' ````
+#' ```
 #' [,1]	ref_id	character
 #' [,2]	ref_doi	character
 #' [,3]	ref_author	character
 #' [,4]	ref_year	integer
 #' [,5]	ref_title	character
 #' [,6]	References full citation	character
-
 #'
-#'
+#'```
 #' @family database datasets
 "references"
 
