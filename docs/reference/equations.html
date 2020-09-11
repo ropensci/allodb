@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tables of allometric equations and associated metadata for ForestGEO sites. — equations • allodb</title>
+<title>Tables of allometric equations and associated metadata. — equations • allodb</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,10 @@
 
 
 
-<meta property="og:title" content="Tables of allometric equations and associated metadata for ForestGEO sites. — equations" />
+<meta property="og:title" content="Tables of allometric equations and associated metadata. — equations" />
 <meta property="og:description" content="A compilation of best available allometry equations to calculate tree
-above-ground biomass (AGB) per species at ForestGEO sites:
+above-ground biomass (AGB) per species based on
+extratropical ForestGEO sites:
 equations: Table of allometric equations.
 equations_metadata: Metadata for equations table.
 
@@ -113,14 +114,15 @@ equations_metadata: Metadata for equations table.
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Tables of allometric equations and associated metadata for ForestGEO sites.</h1>
+    <h1>Tables of allometric equations and associated metadata.</h1>
     <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/data.R'><code>R/data.R</code></a></small>
     <div class="hidden name"><code>equations.Rd</code></div>
     </div>
 
     <div class="ref-description">
     <p>A compilation of best available allometry equations to calculate tree
-above-ground biomass (AGB) per species at ForestGEO sites:</p><ul>
+above-ground biomass (AGB) per species based on
+extratropical ForestGEO sites:</p><ul>
 <li><p><code>equations</code>: Table of allometric equations.</p></li>
 <li><p><code>equations_metadata</code>: Metadata for <code>equations</code> table.</p></li>
 </ul>
@@ -134,32 +136,57 @@ above-ground biomass (AGB) per species at ForestGEO sites:</p><ul>
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 225 rows and 24 variables:</p><pre>[,1]	ref_id	character
-[,2]	equation_id	character
-[,3]	equation_allometry	character
-[,4]	equation_form	character
-[,5]	dependent_variable	character
-[,6]	independent_variable	character
-[,7]	equation_taxa	character (string)
-[,8]	allometry_specificity	character
-[,9]	geographic_area	character
-[,10]	dbh_min_cm	numeric
-[,11]	dbh_max_cm	numeric
-[,12]	sample_size	integer
-[,13]	dbh_units_original	character
-[,14]	units_original	character
-[,15]	allometry_development_method	character
-[,16]	regression_model	character
-[,17]	other_equations_tested	character
-[,18]	log_biomass	numeric
-[,19]	bias_corrected	numeric
-[,20]	bias_correction_factor	numeric
-[,21]	notes_fitting_model	character
-[,22]	original_equation_id	character
-[,23]	original_data_availability	character
-[,24]	notes	character
+    <p><code>equations</code>: A data frame with 568 rows and 47 variables:</p><pre>	[,1]	ref_id	character
+	[,2]	equation_id	character
+	[,3]	equation_allometry	character
+	[,4]	equation_form	character
+	[,5]	dependent_variable	character
+	[,6]	independent_variable	character
+	[,7]	equation_taxa	character
+	[,8]	allometry_specificity	character
+	[,9]	equation_categ	character
+	[,10]	geographic_area	character
+	[,11]	original_coord	character
+	[,12]	lat	numeric
+	[,13]	long	numeric
+	[,14]	elev_m	numeric
+	[,15]	geography. Notes	character
+	[,16]	mat_C	numeric
+	[,17]	min.temp_C	numeric
+	[,18]	max.temp_C	numeric
+	[,19]	map_mm	numeric
+	[,20]	frost_free_period_days	numeric
+	[,21]	climate. Notes	character
+	[,22]	stand_age_range_yr	character
+	[,23]	stand_age_history	character
+	[,24]	stand_basal_area_m2_ha	numeric
+	[,25]	stand_trees_ha	numeric
+	[,26]	forest_description	character
+	[,27]	ecosystem_type	character
+	[,28]	koppen	character
+	[,29]	dbh_min_cm	numeric
+	[,30]	dbh_max_cm	numeric
+	[,31]	sample_size	integer
+	[,32]	collection_year	integer
+	[,33]	dbh_units_original	numeric
+	[,34]	dbh_unit_CF	numeric
+	[,35]	output_units_original	character
+	[,36]	output_units_CF	numeric
+	[,37]	allometry_development_method	character
+	[,38]	regression_model	character
+	[,39]	r_squared	numeric
+	[,40]	other_equations_tested	character
+	[,41]	log_biomass	numeric
+	[,42]	bias_corrected	character
+	[,43]	bias_correction_factor	numeric
+	[,44]	notes_fitting_model	character
+	[,45]	original_equation_id	character
+	[,46]	original_data_availability	character
+	[,47]	equation_notes	character
 
 </pre>
+
+<p>An object of class <code>spec_tbl_df</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 47 rows and 8 columns.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     
@@ -167,13 +194,17 @@ above-ground biomass (AGB) per species at ForestGEO sites:</p><ul>
 <li><p>Go to <code>references</code> table for equations original sources.</p></li>
 </ul>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    
+
+
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other database datasets: <code><a href='genus_family.html'>genus_family</a></code>,
-  <code><a href='missing_values_metadata.html'>missing_values_metadata</a></code>,
-  <code><a href='references_metadata.html'>references_metadata</a></code>,
-  <code><a href='sites_info.html'>sites_info</a></code>, <code><a href='sitespecies.html'>sitespecies</a></code>,
-  <code><a href='wsg.html'>wsg</a></code></p></div>
+    <div class='dont-index'><p>Other database datasets: 
+<code><a href='missing_values.html'>missing_values</a></code>,
+<code><a href='references.html'>references</a></code>,
+<code><a href='sitespecies.html'>sitespecies</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

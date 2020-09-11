@@ -120,11 +120,21 @@ equations.</h1>
     <p>This function creates S3 objects of class "numeric".</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_biomass</span>(<span class='kw'>dbh</span>, h = <span class='kw'>NULL</span>, genus = <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>NA</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='kw'>dbh</span>)),
-  species = <span class='kw'>NULL</span>, shrub = <span class='kw'>NULL</span>, <span class='kw'>coords</span>, new_equations = <span class='kw'>NULL</span>,
+    <pre class="usage"><span class='fu'>get_biomass</span>(
+  <span class='kw'>dbh</span>,
+  h = <span class='kw'>NULL</span>,
+  genus = <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>NA</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='kw'>dbh</span>)),
+  species = <span class='kw'>NULL</span>,
+  shrub = <span class='kw'>NULL</span>,
+  <span class='kw'>coords</span>,
+  new_equations = <span class='kw'>NULL</span>,
   var = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Total aboveground biomass"</span>, <span class='st'>"Whole tree (above stump)"</span>),
-  add_weight = <span class='fl'>FALSE</span>, use_height_allom = <span class='fl'>TRUE</span>, wna = <span class='fl'>0.1</span>,
-  wsteep = <span class='fl'>3</span>, w95 = <span class='fl'>500</span>)</pre>
+  add_weight = <span class='fl'>FALSE</span>,
+  use_height_allom = <span class='fl'>TRUE</span>,
+  wna = <span class='fl'>0.1</span>,
+  wsteep = <span class='fl'>3</span>,
+  w95 = <span class='fl'>500</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -205,7 +215,7 @@ in the weighting function. Default is 3.</p></td>
     <tr>
       <th>w95</th>
       <td><p>this parameter is used in the weighting function to determine the
-value at which the sample-size-related weight reaches 95<!-- % of its maximum -->
+value at which the sample-size-related weight reaches 95% of its maximum
 value (max=1). Default is 500.</p></td>
     </tr>
     </table>
@@ -688,12 +698,16 @@ example below for how to apply the function to a splitted dataset.</p>
 #&gt; [2281] 5.849885e-01 1.149271e+01 1.499860e+00 1.410746e+01 4.085149e-01
 #&gt; [2286] 5.164652e-01 2.884804e-01</div><div class='input'>
 <span class='co'># split dataset to avoid memory over usage</span>
-<span class='kw'>data_split</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/split.html'>split</a></span>(<span class='kw'>scbi_stem1</span>, <span class='fu'><a href='https://rdrr.io/r/base/cut.html'>cut</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='kw'>scbi_stem1</span>), breaks = <span class='fl'>10</span>, labels = <span class='fl'>FALSE</span>))
-<span class='kw'>agb</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='kw'>data_split</span>, <span class='fu'>function</span>(<span class='kw'>df</span>) <span class='fu'>get_biomass</span>(dbh=<span class='kw'>df</span><span class='op'>$</span><span class='kw'>dbh</span>,
-                                                 genus=<span class='kw'>df</span><span class='op'>$</span><span class='kw'>genus</span>,
-                                                 species = <span class='kw'>df</span><span class='op'>$</span><span class='kw'>species</span>,
-                                                 coords = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='op'>-</span><span class='fl'>78.2</span>, <span class='fl'>38.9</span>)))
-<span class='kw'>scbi_stem1</span><span class='op'>$</span><span class='kw'>agb</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/do.call.html'>do.call</a></span>(<span class='kw'>c</span>, <span class='kw'>agb</span>)
+<span class='kw'>data_split</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/split.html'>split</a></span>(<span class='kw'>scbi_stem1</span>, <span class='fu'><a href='https://rdrr.io/r/base/cut.html'>cut</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='kw'>scbi_stem1</span>), breaks = <span class='fl'>10</span>, labels = <span class='fl'>FALSE</span>))
+<span class='kw'>agb</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='kw'>data_split</span>, <span class='fu'>function</span>(<span class='kw'>df</span>) {
+  <span class='fu'>get_biomass</span>(
+    dbh = <span class='kw'>df</span><span class='op'>$</span><span class='kw'>dbh</span>,
+    genus = <span class='kw'>df</span><span class='op'>$</span><span class='kw'>genus</span>,
+    species = <span class='kw'>df</span><span class='op'>$</span><span class='kw'>species</span>,
+    coords = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='op'>-</span><span class='fl'>78.2</span>, <span class='fl'>38.9</span>)
+  )
+})
+<span class='kw'>scbi_stem1</span><span class='op'>$</span><span class='kw'>agb</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/do.call.html'>do.call</a></span>(<span class='kw'>c</span>, <span class='kw'>agb</span>)
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

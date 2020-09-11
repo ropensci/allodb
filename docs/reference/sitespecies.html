@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tables of ForestGEO sites and tree species and associated metadata. — sitespecies • allodb</title>
+<title>Tables of sites and tree species used in allo-db and associated metadata. — sitespecies • allodb</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,10 @@
 
 
 
-<meta property="og:title" content="Tables of ForestGEO sites and tree species and associated metadata. — sitespecies" />
+<meta property="og:title" content="Tables of sites and tree species used in allo-db and associated metadata. — sitespecies" />
 <meta property="og:description" content="
 
-sitespecies: Table of ForestGEO sites and tree species.
+sitespecies: Table of extratropical ForestGEO sites (n=24) and their tree species.
 sitespecies_metadata: Metadata for sitespecies table.
 
 " />
@@ -113,7 +113,7 @@ sitespecies_metadata: Metadata for sitespecies table.
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Tables of ForestGEO sites and tree species and associated metadata.</h1>
+    <h1>Tables of sites and tree species used in allo-db and associated metadata.</h1>
     <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/data.R'><code>R/data.R</code></a></small>
     <div class="hidden name"><code>sitespecies.Rd</code></div>
     </div>
@@ -121,7 +121,7 @@ sitespecies_metadata: Metadata for sitespecies table.
     <div class="ref-description">
     
 <ul>
-<li><p><code>sitespecies</code>: Table of ForestGEO sites and tree species.</p></li>
+<li><p><code>sitespecies</code>: Table of extratropical ForestGEO sites (n=24) and their tree species.</p></li>
 <li><p><code>sitespecies_metadata</code>: Metadata for <code>sitespecies</code> table.</p></li>
 </ul>
 
@@ -135,13 +135,29 @@ sitespecies_metadata: Metadata for sitespecies table.
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>An object of class <code>spec_tbl_df</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 1113 rows and 10 columns.</p>
+<p>An object of class <code>spec_tbl_df</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 10 rows and 4 columns.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>#' @format
+A data frame with 1114 rows and 10 variables:</p><pre>[,1]	site	character
+[,2]	family	character
+[,3]	genus	character
+[,4]	species	character
+[,5]	variety	character
+[,6]	subspecies	character
+[,7]	latin_name	character
+[,8]	species_code	character
+[,9]	life_form	character
+[,10]	warning	character
+
+</pre>
+
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other database datasets: <code><a href='equations.html'>equations</a></code>,
-  <code><a href='genus_family.html'>genus_family</a></code>,
-  <code><a href='missing_values_metadata.html'>missing_values_metadata</a></code>,
-  <code><a href='references_metadata.html'>references_metadata</a></code>,
-  <code><a href='sites_info.html'>sites_info</a></code>, <code><a href='wsg.html'>wsg</a></code></p></div>
+    <div class='dont-index'><p>Other database datasets: 
+<code><a href='equations.html'>equations</a></code>,
+<code><a href='missing_values.html'>missing_values</a></code>,
+<code><a href='references.html'>references</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

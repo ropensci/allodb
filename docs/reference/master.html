@@ -140,7 +140,8 @@ kinds of missing values.</p></li>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>dplyr::full_join()</a></code>.</p>
-<p>Other functions to interact with the database: <code><a href='set_type.html'>set_type</a></code></p></div>
+<p>Other functions to interact with the database: 
+<code><a href='set_type.html'>set_type</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://dplyr.tidyverse.org'>dplyr</a></span>)
@@ -163,7 +164,7 @@ kinds of missing values.</p></li>
 <span class='co'># This preserves preserve different kinds of NAs</span>
 <span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grep</a></span>(<span class='st'>"N"</span>, <span class='fu'>master</span>()<span class='op'>$</span><span class='kw'>dbh_min_cm</span>, value = <span class='fl'>TRUE</span>))
 </div><div class='output co'>#&gt; <span class='message'>Joining `equations` and `sitespecies` by 'equation_id'; then `sites_info` by 'site'.</span></div><div class='output co'>#&gt; <span class='error'>Error: Join columns must be present in data.</span>
-#&gt; <span class='error'></span><span style='color: #BB0000;'>x</span><span> Problem with `equation_id`.</span></div><div class='input'><span class='kw'>allodb</span>::<span class='kw'><a href='missing_values_metadata.html'>missing_values_metadata</a></span>
+#&gt; <span class='error'></span><span style='color: #BB0000;'>x</span><span> Problem with `equation_id`.</span></div><div class='input'><span class='kw'>allodb</span>::<span class='kw'>missing_values_metadata</span>
 </div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 4 x 3</span><span>
 #&gt;   Code  Definition         Description                                          
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                                

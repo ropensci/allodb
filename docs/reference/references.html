@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Subset the default equation table, based on taxa, koppen climate zone or region. — choose_equations • allodb</title>
+<title>Tables of equation references and associated metadata — references • allodb</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Subset the default equation table, based on taxa, koppen climate zone or region. — choose_equations" />
-<meta property="og:description" content="The subsetted equation table can then be used in the get_biomass function." />
+<meta property="og:title" content="Tables of equation references and associated metadata — references" />
+<meta property="og:description" content="Bibliography from where equations where sourced. Links to equations table by ref_id." />
 
 
 
@@ -108,56 +108,49 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Subset the default equation table, based on taxa, koppen climate zone or region.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/choose_equations.R'><code>R/choose_equations.R</code></a></small>
-    <div class="hidden name"><code>choose_equations.Rd</code></div>
+    <h1>Tables of equation references and associated metadata</h1>
+    <small class="dont-index">Source: <a href='https://github.com/forestgeo/allodb/blob/master/R/data.R'><code>R/data.R</code></a></small>
+    <div class="hidden name"><code>references.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The subsetted equation table can then be used in the <code>get_biomass</code> function.</p>
+    <p>Bibliography from where equations where sourced. Links to equations table by ref_id.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>choose_equations</span>(
-  taxa = <span class='st'>"all"</span>,
-  climate = <span class='st'>"all"</span>,
-  region = <span class='st'>"all"</span>,
-  new_equations = <span class='kw'>NULL</span>
-)</pre>
+    <pre class="usage"><span class='kw'>references</span>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>taxa</th>
-      <td><p>character vector with taxa to be kept. Default is <code>all</code>, in which
-case all taxa are kept.</p></td>
-    </tr>
-    <tr>
-      <th>climate</th>
-      <td><p>character vector with name of Koppen climate to be kept.
-Default is <code>all</code>, in which case all climates are kept.</p></td>
-    </tr>
-    <tr>
-      <th>region</th>
-      <td><p>character vector with name of location(s) or country(ies) or broad region(s)
-(<code>Europe</code>, <code>North America</code>, etc -&gt; add complete list) to be kept.
-Default is <code>all</code>, in which case all regions are kept.</p></td>
-    </tr>
-    <tr>
-      <th>new_equations</th>
-      <td><p>optional equation table, as created by the
-<code>add_equations</code> function. Default is <code>NULL</code>, in which case the default
-equation table is used.</p></td>
-    </tr>
-    </table>
+<span class='kw'>references_metadata</span></pre>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A subsetted equation table.</p>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-</div></pre>
+    <p>An object of class <code>spec_tbl_df</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 56 rows and 6 columns.</p>
+<p>An object of class <code>spec_tbl_df</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 7 rows and 4 columns.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    
+<ul>
+<li><p><code>references</code>: A dataframe listing all references used in equation table.</p></li>
+<li><p><code>references_metadata</code>: Table of metadata of <code>reference</code>.</p></li>
+</ul>
+
+<p>#'#' @format
+A data frame with 57 rows and 6 variables:</p><pre>[,1]	ref_id	character
+[,2]	ref_doi	character
+[,3]	ref_author	character
+[,4]	ref_year	integer
+[,5]	ref_title	character
+[,6]	References full citation	character
+
+</pre>
+
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other database datasets: 
+<code><a href='equations.html'>equations</a></code>,
+<code><a href='missing_values.html'>missing_values</a></code>,
+<code><a href='sitespecies.html'>sitespecies</a></code></p></div>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
