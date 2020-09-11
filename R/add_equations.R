@@ -1,6 +1,6 @@
-#' Function to add new equations to the equation table (then used in the get_biomass function)
+#' Add new equations to the equation table (to then use in get_biomass function)
 #'
-#' This function creates S3 objects of class "numeric".
+#' This function creates S3 objects of class "numeric". Users can add multiple equations.
 #'
 #' @param taxa character string or vector specifying the taxon (or taxa) for which the allometry has been calibrated
 #' @param allometry a character string with the allometric equation
@@ -76,7 +76,7 @@ add_equation <- function(taxa,
 
   if (any(coords[, 1] < -180 |
     coords[, 1] > 180 | coords[, 2] < -90 | coords[, 2] > 90)) {
-    stop("Longitude must be between -180 and 180, and latitude between 90 and 90.")
+    stop("Longitude must be between -180 and 180, and latitude between 90 and 0.")
   }
 
   allometry <- tolower(allometry)
