@@ -2,11 +2,20 @@
 % Please edit documentation in R/add_equations.R
 \name{add_equation}
 \alias{add_equation}
-\title{Function to add new equations to the equation table (then used in the get_biomass function)}
+\title{Add new equations to the equation table (to then use in get_biomass function)}
 \usage{
-add_equation(taxa, allometry, coords, minDBH, maxDBH, sampleSize,
-  unitDBH = "cm", unitOutput = "kg", inputVar = "DBH",
-  outputVar = "Total aboveground biomass")
+add_equation(
+  taxa,
+  allometry,
+  coords,
+  minDBH,
+  maxDBH,
+  sampleSize,
+  unitDBH = "cm",
+  unitOutput = "kg",
+  inputVar = "DBH",
+  outputVar = "Total aboveground biomass"
+)
 }
 \arguments{
 \item{taxa}{character string or vector specifying the taxon (or taxa) for which the allometry has been calibrated}
@@ -25,18 +34,18 @@ add_equation(taxa, allometry, coords, minDBH, maxDBH, sampleSize,
 
 \item{unitOutput}{character string with unit of equation output (either \code{g}, \code{kg}, \code{Mg} or \code{lbs} if the output is a mass, or \code{m} if the output is a height).}
 
-\item{inputVar}{independent variable(s) needed in the allometry. Default is \code{DBH}, other option is \code{DBH, H}.}
+\item{inputVar}{independent variable(s) needed in the allometry. Default is \code{DBH}, other option is \verb{DBH, H}.}
 
-\item{outputVar}{dependent variable estimated by the allometry. Default is \code{Total aboveground biomass}.}
+\item{outputVar}{dependent variable estimated by the allometry. Default is \verb{Total aboveground biomass}.}
 }
 \value{
 A new equation table including all default equations and the additional equation (equation_id = \code{new})
 }
 \description{
-This function creates S3 objects of class "numeric".
+This function creates S3 objects of class "numeric". Users can add multiple equations.
 }
 \examples{
-new_equations = add_equation(
+new_equations <- add_equation(
   taxa = "Faga",
   allometry = "exp(-2+log(dbh)*2.5)",
   coords = c(-0.07, 46.11),
@@ -44,5 +53,4 @@ new_equations = add_equation(
   maxDBH = 50,
   sampleSize = 50
 )
-
 }

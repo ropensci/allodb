@@ -4,8 +4,12 @@
 \name{sitespecies}
 \alias{sitespecies}
 \alias{sitespecies_metadata}
-\title{Tables of ForestGEO sites and tree species and associated metadata.}
-\format{An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1113 rows and 10 columns.}
+\title{Tables of sites and tree species used in allo-db and associated metadata.}
+\format{
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 1113 rows and 10 columns.
+
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 10 rows and 4 columns.
+}
 \usage{
 sitespecies
 
@@ -13,16 +17,30 @@ sitespecies_metadata
 }
 \description{
 \itemize{
-\item \code{sitespecies}: Table of ForestGEO sites and tree species.
+\item \code{sitespecies}: Table of extratropical ForestGEO sites (n=24) and their tree species.
 \item \code{sitespecies_metadata}: Metadata for \code{sitespecies} table.
 }
 }
+\details{
+#' @format
+A data frame with 1114 rows and 10 variables:\preformatted{[,1]	site	character
+[,2]	family	character
+[,3]	genus	character
+[,4]	species	character
+[,5]	variety	character
+[,6]	subspecies	character
+[,7]	latin_name	character
+[,8]	species_code	character
+[,9]	life_form	character
+[,10]	warning	character
+
+}
+}
 \seealso{
-Other database datasets: \code{\link{equations}},
-  \code{\link{genus_family}},
-  \code{\link{missing_values_metadata}},
-  \code{\link{references_metadata}},
-  \code{\link{sites_info}}, \code{\link{wsg}}
+Other database datasets: 
+\code{\link{equations}},
+\code{\link{missing_values}},
+\code{\link{references}}
 }
 \concept{database datasets}
 \keyword{datasets}

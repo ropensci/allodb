@@ -5,11 +5,21 @@
 \title{Function to compute aboveground biomass (or other variables) from allometric
 equations.}
 \usage{
-get_biomass(dbh, h = NULL, genus = rep(NA, length(dbh)),
-  species = NULL, shrub = NULL, coords, new_equations = NULL,
+get_biomass(
+  dbh,
+  h = NULL,
+  genus = rep(NA, length(dbh)),
+  species = NULL,
+  shrub = NULL,
+  coords,
+  new_equations = NULL,
   var = c("Total aboveground biomass", "Whole tree (above stump)"),
-  add_weight = FALSE, use_height_allom = TRUE, wna = 0.1,
-  wsteep = 3, w95 = 500)
+  add_weight = FALSE,
+  use_height_allom = TRUE,
+  wna = 0.1,
+  wsteep = 3,
+  w95 = 500
+)
 }
 \arguments{
 \item{dbh}{A numerical vector containing tree diameter at breast height (dbh)
@@ -40,10 +50,10 @@ information is available.}
 add_equation() function.}
 
 \item{var}{What dependent variable(s) should be provided in the output?
-Default is \code{Total aboveground biomass} and \code{Whole tree (above stump)},
-other possible values are: \code{Bark biomass}, \code{Branches (dead)}, \code{Branches (live)}, \code{Branches total (live, dead)}, \code{Foliage total}, \code{Height},
-\code{Leaves}, \code{Stem (wood only)}, \code{Stem biomass}, \code{Stem biomass (with bark)},
-\code{Stem biomass (without bark)}, \code{Whole tree (above and belowground)}. Be
+Default is \verb{Total aboveground biomass} and \verb{Whole tree (above stump)},
+other possible values are: \verb{Bark biomass}, \code{Branches (dead)}, \code{Branches (live)}, \verb{Branches total (live, dead)}, \verb{Foliage total}, \code{Height},
+\code{Leaves}, \verb{Stem (wood only)}, \verb{Stem biomass}, \verb{Stem biomass (with bark)},
+\verb{Stem biomass (without bark)}, \verb{Whole tree (above and belowground)}. Be
 aware that only a few equations exist for those other variables, so
 estimated values might not be very accurate.}
 
@@ -62,7 +72,7 @@ Default is 0.1}
 in the weighting function. Default is 3.}
 
 \item{w95}{this parameter is used in the weighting function to determine the
-value at which the sample-size-related weight reaches 95% of its maximum
+value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is 500.}
 }
 \value{
@@ -88,10 +98,14 @@ get_biomass(
 )
 
 # split dataset to avoid memory over usage
-data_split = split(scbi_stem1, cut(1:nrow(scbi_stem1), breaks = 10, labels = FALSE))
-agb = lapply(data_split, function(df) get_biomass(dbh=df$dbh,
-                                                 genus=df$genus,
-                                                 species = df$species,
-                                                 coords = c(-78.2, 38.9)))
-scbi_stem1$agb = do.call(c, agb)
+data_split <- split(scbi_stem1, cut(1:nrow(scbi_stem1), breaks = 10, labels = FALSE))
+agb <- lapply(data_split, function(df) {
+  get_biomass(
+    dbh = df$dbh,
+    genus = df$genus,
+    species = df$species,
+    coords = c(-78.2, 38.9)
+  )
+})
+scbi_stem1$agb <- do.call(c, agb)
 }
