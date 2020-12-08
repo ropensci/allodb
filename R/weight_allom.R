@@ -41,18 +41,13 @@ weight_allom <- function(genus,
                          w95 = 500
 ) {
 
-  ### prepare equation data table ####
-  data("equations", envir = environment())
-  dfequation <- equations
   if (!is.null(new_equations)) {
     dfequation <- new_equations
-  }
+  } else dfequation <- new_equations()
 
   dfeq <- data.table::setDT(dfequation[, c("equation_id", "sample_size", "dbh_min_cm", "dbh_max_cm", "koppen", "equation_taxa")])
   ## keep equation_id order by turning it into a factor
   dfeq$equation_id <- factor(dfeq$equation_id, levels = dfequation$equation_id)
-  suppressWarnings(dfeq$dbh_max_cm <- as.numeric(dfeq$dbh_max_cm))
-  suppressWarnings(dfeq$dbh_min_cm <- as.numeric(dfeq$dbh_min_cm))
 
   ## 'clean' equation taxa column and separate several taxa
   ## all character strings to lower cases to avoid inconsistencies
