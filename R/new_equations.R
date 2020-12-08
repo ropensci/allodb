@@ -50,7 +50,14 @@
 #' @export
 #'
 #' @examples
-#'
+#' dfequation <- new_equations(
+#'   new_taxa = "Faga",
+#'   new_allometry = "exp(-2+log(dbh)*2.5)",
+#'   new_coords = c(-0.07, 46.11),
+#'   new_minDBH = 5,
+#'   new_maxDBH = 50,
+#'   new_sampleSize = 50
+#' )
 new_equations <- function(subset_taxa = "all",
                           subset_climate = "all",
                           subset_region = "all",
@@ -144,9 +151,9 @@ new_equations <- function(subset_taxa = "all",
     ## check consistency of inputs
     if (is.null(new_taxa) |
         is.null(new_coords) |
-        is.null(new_minDBH = NULL) |
-        is.null(new_maxDBH = NULL) |
-        is.null(new_sampleSize = NULL)
+        is.null(new_minDBH) |
+        is.null(new_maxDBH) |
+        is.null(new_sampleSize)
     ) stop("You must provide the taxa, coordinates, DBH range and sample size of you new allometries.")
 
     if (length(new_taxa) != length(new_allometry) |
@@ -195,7 +202,7 @@ new_equations <- function(subset_taxa = "all",
       stop("At least one of the new allometries does not contain DBH as a dependent variable.")
     }
 
-    equationID <- paste0("new", 1:length(taxa))
+    equationID <- paste0("new", 1:length(new_taxa))
     coordsEq <- cbind(
       long = new_coords[, 1],
       lat = new_coords[, 2]
@@ -208,7 +215,7 @@ new_equations <- function(subset_taxa = "all",
       )
     }
 
-    new_equations <- data.frame(
+    added_equations <- data.frame(
       equation_id = equationID,
       equation_taxa = new_taxa,
       equation_allometry = new_allometry,
@@ -216,7 +223,7 @@ new_equations <- function(subset_taxa = "all",
       dependent_variable = new_outputVar,
       long = new_coords[, 1],
       lat = new_coords[, 2],
-      koppen = new_koppenZones,
+      koppen = koppenZones,
       dbh_min_cm = new_minDBH,
       dbh_max_cm = new_maxDBH,
       sample_size = new_sampleSize,
@@ -225,8 +232,8 @@ new_equations <- function(subset_taxa = "all",
     )
 
     new_equations <- rbind(
-      new_equations,
-      equations[, colnames(new_equations)]
+      added_equations,
+      new_equations[, colnames(added_equations)]
     )
 
     ## conversion factor for input
