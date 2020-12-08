@@ -12,8 +12,7 @@
 #' @param h A numerical vector (same length as dbh) containing tree height
 #'   measurements, in m. Default is NULL, when no measurement is available.
 #' @param genus A character vector (same length as dbh), containing the genus
-#'   (e.g. "Quercus") of each tree. Default is NULL, when no identification is
-#'   available.
+#'   (e.g. "Quercus") of each tree.
 #' @param species A character vector (same length as dbh), containing the
 #'   species (e.g. "rubra")  of each tree. Default is NULL, when no
 #'   identification is available.
@@ -26,8 +25,6 @@
 #'   columns giving the coordinates of each tree.
 #' @param new_eqtable Optional. An equation table created with the
 #'   new_equations() function.
-#' @param add_weight Should the relative weight given to each equation in the
-#'   `equations` data frame be added to the output? Default is FALSE.
 #' @param wna this parameter is used in the weighting function to determine the
 #'   dbh-related weight attributed to equations without a specified dbh range.
 #'   Default is 0.1
@@ -63,78 +60,36 @@
 #' })
 #' scbi_stem1$agb <- do.call(c, agb)
 get_biomass <- function(dbh,
-                        h = NULL,
-                        genus = rep(NA, length(dbh)),
+                        # h = NULL,
+                        genus,
                         species = NULL,
-                        shrub = NULL,
+                        # shrub = NULL,
                         coords,
                         new_eqtable = NULL,
-                        add_weight = FALSE,
                         wna = 0.1,
-                        wsteep = 3,
                         w95 = 500) {
 
   if (!is.null(new_eqtable)) {
     dfequation <- new_eqtable
   } else dfequation <- new_equations()
 
-  equations_ids <- dfequation$equation_id
-  equations_ids <- equations_ids[!is.na(equations_ids)]
-  dfequation <- subset(dfequation, equation_id %in% equations_ids)
+  params <- est_params(genus, species, coords, dfequation, wna, w95)
 
-  ## keep only useful equations
-  dfequation <- subset(dfequation, dependent_variable %in% var)
-  if (is.null(h)) {
-    dfequation <- subset(dfequation, !independent_variable == "DBH, H")
+  if (length(unlist(coords)) == 2) {
+    coords <- matrix(coords, ncol = 2)
   }
+  colnames(coords) <- c("long", "lat")
 
-  # transform columns to numeric
-  suppressWarnings(dfequation$dbh_min_cm <-
-    as.numeric(dfequation$dbh_min_cm))
-  suppressWarnings(dfequation$dbh_max_cm <-
-    as.numeric(dfequation$dbh_max_cm))
-  suppressWarnings(dfequation$sample_size <-
-    as.numeric(dfequation$sample_size))
-  suppressWarnings(dfequation$dbh_unit_CF <-
-    as.numeric(dfequation$dbh_unit_CF))
-  suppressWarnings(dfequation$output_units_CF <-
-    as.numeric(dfequation$output_units_CF))
+  if (!is.null(species)) {
+    df <- merge(data.frame(id = 1:length(dbh), dbh, genus, species, coords),
+                params, by = c("genus", "species", "long", "lat"))
+  } else  df <- merge(data.frame(id = 1:length(dbh), dbh, genus, coords),
+                      params, by = c("genus", "long", "lat"))
 
-  agb_all <- matrix(0, nrow = length(dbh), ncol = nrow(dfequation))
-  # modifiy allometry to insert unit conversion
-  for (i in 1:nrow(dfequation)) {
-    orig_equation <- dfequation$equation_allometry[i]
-    new_dbh <- paste0("(dbh*", dfequation$dbh_unit_CF[i], ")")
-    new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
-    agb_all[, i] <- eval(parse(text = new_equation)) * dfequation$output_units_CF[i]
-  }
-  ## remove some absurdly low or high values given by some equations when outside of their dbh range
-  agb_all[!is.na(agb_all) & (agb_all < 0 | agb_all > 1e6)] <- NA
+  df <- df[order(df$id),]
+  agb <- exp(df$a) * df$dbh^df$b * + exp(0.5 * df$sigma^2)
 
-  # weight function
-  weight <- weight_allom(
-    dbh = dbh,
-    coords = coords,
-    genus = genus,
-    species = species,
-    new_eqtable = dfequation,
-    wna = wna,
-    w95 = w95,
-    wsteep = wsteep
-  )
-  relative_weight <- weight / matrix(rowSums(weight, na.rm = TRUE),
-    nrow = length(dbh),
-    ncol = nrow(dfequation)
-  )
-
-  agb <- rowSums(agb_all * relative_weight, na.rm = TRUE)
-  agb[is.na(dbh)] <- NA
-
-  if (!add_weight) {
-    return(agb)
-  } else {
-    return(cbind(agb, relative_weight))
-  }
+  return(agb)
 }
 
 

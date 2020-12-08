@@ -15,8 +15,6 @@
 #' @param wna this parameter is used in the weighting function to determine the
 #'   dbh-related and sample-size related weights attributed to equations without
 #'   a specified dbh range or sample size, respectively. Default is 0.1
-#' @param wsteep this parameter controls the steepness of the dbh-related weight
-#'   in the weighting function. Default is 3.
 #' @param w95 this parameter is used in the weighting function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
 #' value (max=1). Default is 500.
@@ -40,7 +38,6 @@ est_params <- function(genus,
                        coords,
                        new_eqtable = NULL,
                        wna = 0.1,
-                       wsteep = 3,
                        w95 = 500
 ) {
 
@@ -50,14 +47,10 @@ est_params <- function(genus,
 
   ## get all combinations of species x site
   if (length(unlist(coords)) == 2) {
-    coordsSite <- t(as.numeric(coords))
-  } else if (length(unlist(unique(coords))) == 2) {
-    coordsSite <- t(apply(unique(coords), 2, as.numeric))
-  } else {
-    coordsSite <- apply(unique(coords), 2, as.numeric)
+    coords <- t(as.numeric(coords))
   }
-  colnames(coordsSite) = c("long", "lat")
-  dfobs = unique(data.table::data.table(genus, species, coordsSite))
+  colnames(coords) = c("long", "lat")
+  dfobs = unique(data.table::data.table(genus, species, coords))
 
   coefs = c()
   for (i in 1:nrow(dfobs)) {
@@ -66,7 +59,6 @@ est_params <- function(genus,
                             coords = dfobs[i, c("long", "lat")],
                             new_eqtable = dfequation,
                             wna = wna,
-                            wsteep = wsteep,
                             w95 = w95)
     dfequation$resample = floor(c(weights)*1e4)
     dfsub = subset(dfequation, resample > 0)[, c(

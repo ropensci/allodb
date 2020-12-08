@@ -32,7 +32,6 @@ weight_allom <- function(genus,
                          coords,
                          new_eqtable = NULL,
                          wna = 0.1,
-                         wsteep = 3,
                          w95 = 500
 ) {
 
@@ -50,7 +49,7 @@ weight_allom <- function(genus,
   coordsSite <- t(as.numeric(coords))
   ## extract koppen climate of every location
   # koppen climate raster downloaded from http://koeppen-geiger.vu-wien.ac.at/present.htm on the 2/10/2020
-  climate <- allodb::koppenRaster@data@attributes[[1]][, 2]
+  climates <- allodb::koppenRaster@data@attributes[[1]][, 2]
   koppenObs <- climates[raster::extract(allodb::koppenRaster, coordsSite)]
   kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppenObs)
   compare_koppen <- function(kopp) {

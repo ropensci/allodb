@@ -114,7 +114,7 @@ new_equations <- function(subset_taxa = "all",
       subset(new_equations, !equation_id %in% eq_jansen$equation_id),
       eq_jansen[, colnames(new_equations)]
     )
-  }
+  } else new_equations <- subset(new_equations, independent_variable == "DBH")
 
   ## subset equation table ####
   if (any(subset_taxa != "all")) {
@@ -175,8 +175,10 @@ new_equations <- function(subset_taxa = "all",
       stop("Height allometries outputs must be in m.")
     }
 
-    if (new_maxDBH <= new_minDBH |
-        new_minDBH < 0 | !is.numeric(new_minDBH) | !is.numeric(new_maxDBH)) {
+    if (any(new_maxDBH <= new_minDBH) |
+        any(new_minDBH < 0) |
+        any(!is.numeric(new_minDBH)) |
+        any(!is.numeric(new_maxDBH))) {
       stop("new_minDBH and new_maxDBH must be positive real numbers, with new_maxDBH > new_minDBH.")
     }
 
@@ -211,7 +213,7 @@ new_equations <- function(subset_taxa = "all",
     koppenZones <- climates[raster::extract(allodb::koppenRaster, coordsEq)]
     if (any(grepl("missing", koppenZones))) {
       stop(
-        "Impossible to find all koppen climate zones based on coordinates. Check that they are Long, Lat."
+        "Impossible to find all koppen climate zones based on coordinates. Please check that they are Long, Lat."
       )
     }
 
