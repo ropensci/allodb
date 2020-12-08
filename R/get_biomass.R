@@ -24,7 +24,7 @@
 #' @param coords A numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
-#' @param new_equations Optional. An equation table created with the
+#' @param new_eqtable Optional. An equation table created with the
 #'   new_equations() function.
 #' @param add_weight Should the relative weight given to each equation in the
 #'   `equations` data frame be added to the output? Default is FALSE.
@@ -68,15 +68,14 @@ get_biomass <- function(dbh,
                         species = NULL,
                         shrub = NULL,
                         coords,
-                        new_equations = NULL,
-                        var = c("Total aboveground biomass", "Whole tree (above stump)"),
+                        new_eqtable = NULL,
                         add_weight = FALSE,
                         wna = 0.1,
                         wsteep = 3,
                         w95 = 500) {
 
-  if (!is.null(new_equations)) {
-    dfequation <- new_equations
+  if (!is.null(new_eqtable)) {
+    dfequation <- new_eqtable
   } else dfequation <- new_equations()
 
   equations_ids <- dfequation$equation_id
@@ -118,7 +117,7 @@ get_biomass <- function(dbh,
     coords = coords,
     genus = genus,
     species = species,
-    new_equations = dfequation,
+    new_eqtable = dfequation,
     wna = wna,
     w95 = w95,
     wsteep = wsteep

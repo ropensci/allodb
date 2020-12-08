@@ -10,7 +10,7 @@
 #' @param coords A numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
-#' @param new_equations Optional. An equation table created with the
+#' @param new_eqtable Optional. An equation table created with the
 #'   add_equation() function. Default is the base allodb equation table.
 #' @param wna this parameter is used in the weighting function to determine the
 #'   dbh-related and sample-size related weights attributed to equations without
@@ -38,14 +38,14 @@
 est_params <- function(genus,
                        species = NULL,
                        coords,
-                       new_equations = NULL,
+                       new_eqtable = NULL,
                        wna = 0.1,
                        wsteep = 3,
                        w95 = 500
 ) {
 
-  if (!is.null(new_equations)) {
-    dfequation <- new_equations
+  if (!is.null(new_eqtable)) {
+    dfequation <- new_eqtable
   } else dfequation <- new_equations()
 
   ## get all combinations of species x site
@@ -64,11 +64,11 @@ est_params <- function(genus,
     weights <- weight_allom(genus = dfobs$genus[i],
                             species = dfobs$species[i],
                             coords = dfobs[i, c("long", "lat")],
-                            new_equations = dfequation,
+                            new_eqtable = dfequation,
                             wna = wna,
                             wsteep = wsteep,
                             w95 = w95)
-    dfequation$resample = floor(c(weights)*1e4)  ## check order or change weight_allom function to have names in output
+    dfequation$resample = floor(c(weights)*1e4)
     dfsub = subset(dfequation, resample > 0)[, c(
       "dbh_min_cm",
       "dbh_max_cm",
