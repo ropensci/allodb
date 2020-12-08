@@ -19,14 +19,17 @@
 #'   in the weighting function. Default is 3.
 #' @param w95 this parameter is used in the weighting function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
-#'   value (max=1). Default is 500.
+#' value (max=1). Default is 500.
 #'
-#' @return A data frame xxx
+#' @return A data frame of fitted coefficients (columns) of the log-log
+#'   regression: a (intercept), b (slope) and sigma (standard deviation). Each
+#'   row corresponds to a species x site combination. The back-transformed
+#'   equation is then AGB = exp(a) x DBH^b x + exp(0.5 x sigma^2).
 #' @export
 #'
 #' @examples
 #' data(scbi_stem1)
-#' weight_allom(
+#' est_params(
 #'   genus = scbi_stem1$genus,
 #'   species = scbi_stem1$species,
 #'   coords = c(-78.2, 38.9)
@@ -41,32 +44,9 @@ est_params <- function(genus,
                        w95 = 500
 ) {
 
-  ## get equations
-  data("equations", envir = environment())
-  dfequation <- equations
   if (!is.null(new_equations)) {
     dfequation <- new_equations
-  }
-
-  dfequation <-
-    subset(
-      dfequation,
-      dependent_variable %in% c(
-        "Total aboveground biomass",
-        "Whole tree (above stump)" & independent_variable == "DBH"
-      )
-    )
-  # transform columns to numeric
-  suppressWarnings(dfequation$dbh_min_cm <-
-                     as.numeric(dfequation$dbh_min_cm))
-  suppressWarnings(dfequation$dbh_max_cm <-
-                     as.numeric(dfequation$dbh_max_cm))
-  suppressWarnings(dfequation$sample_size <-
-                     as.numeric(dfequation$sample_size))
-  suppressWarnings(dfequation$dbh_unit_CF <-
-                     as.numeric(dfequation$dbh_unit_CF))
-  suppressWarnings(dfequation$output_units_CF <-
-                     as.numeric(dfequation$output_units_CF))
+  } else dfequation <- new_equations()
 
   ## get all combinations of species x site
   if (length(unlist(coords)) == 2) {
@@ -76,13 +56,15 @@ est_params <- function(genus,
   } else {
     coordsSite <- apply(unique(coords), 2, as.numeric)
   }
+  colnames(coordsSite) = c("long", "lat")
   dfobs = unique(data.table::data.table(genus, species, coordsSite))
 
+  coefs = c()
   for (i in 1:nrow(dfobs)) {
     weights <- weight_allom(genus = dfobs$genus[i],
                             species = dfobs$species[i],
-                            coords = dfobs[i, c("V1", "V2")],
-                            new_equations = new_equations,
+                            coords = dfobs[i, c("long", "lat")],
+                            new_equations = dfequation,
                             wna = wna,
                             wsteep = wsteep,
                             w95 = w95)
@@ -93,14 +75,16 @@ est_params <- function(genus,
       "resample",
       "equation_allometry",
       "dbh_unit_CF",
-      "output_units_CF"
+      "output_units_CF",
+      "equation_taxa"
     )]
     dfsub$dbh_min_cm[is.na(dfsub$dbh_min_cm)] <- 1
     dfsub$dbh_max_cm[is.na(dfsub$dbh_max_cm)] <- 200
     list_dbh = apply(dfsub[, 1:3], 1, function(X) runif(X[3], X[1], X[2]))
 
-    ### adapt code below to get biomass
-
+    ## if possible, introduce some randomness
+    ## when we have some information from the allometry: use it,
+    ## otherwise use a conservative sigma
     list_agb <- lapply(1:length(list_dbh), function(j) {
       sampled_dbh = list_dbh[[j]]
       orig_equation <- dfsub$equation_allometry[j]
@@ -109,8 +93,10 @@ est_params <- function(genus,
       agb <- eval(parse(text = new_equation)) * dfsub$output_units_CF[j]
     })
 
+    reg <- summary(lm(log(unlist(list_agb)) ~ log(unlist(list_dbh))))
+    coefs <- rbind(coefs, c(reg$coefficients[, "Estimate"], reg$sigma))
   }
+  colnames(coefs) <- c("a", "b", "sigma")
 
-
-
+  return(cbind(dfobs, coefs))
 }
