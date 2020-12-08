@@ -25,20 +25,9 @@
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
 #' @param new_equations Optional. An equation table created with the
-#'   add_equation() function.
-#' @param var What dependent variable(s) should be provided in the output?
-#'   Default is `Total aboveground biomass` and `Whole tree (above stump)`,
-#'   other possible values are: `Bark biomass`, `Branches (dead)`, `Branches
-#'   (live)`, `Branches total (live, dead)`, `Foliage total`, `Height`,
-#'   `Leaves`, `Stem (wood only)`, `Stem biomass`, `Stem biomass (with bark)`,
-#'   `Stem biomass (without bark)`, `Whole tree (above and belowground)`. Be
-#'   aware that only a few equations exist for those other variables, so
-#'   estimated values might not be very accurate.
+#'   new_equations() function.
 #' @param add_weight Should the relative weight given to each equation in the
 #'   `equations` data frame be added to the output? Default is FALSE.
-#' @param use_height_allom A logical value: should the height allometries from
-#'   Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
-#'   Default is TRUE.
 #' @param wna this parameter is used in the weighting function to determine the
 #'   dbh-related weight attributed to equations without a specified dbh range.
 #'   Default is 0.1
@@ -82,40 +71,13 @@ get_biomass <- function(dbh,
                         new_equations = NULL,
                         var = c("Total aboveground biomass", "Whole tree (above stump)"),
                         add_weight = FALSE,
-                        use_height_allom = TRUE,
                         wna = 0.1,
                         wsteep = 3,
                         w95 = 500) {
-  data("equations", envir = environment())
-  dfequation <- equations
+
   if (!is.null(new_equations)) {
     dfequation <- new_equations
-  }
-
-  ## replace height with height allometry from Bohn et al. 2014 in Jansen et al 1996
-  if (use_height_allom & "jansen_1996_otvb" %in% dfequation$ref_id) {
-    eq_jansen <- subset(equations, ref_id == "jansen_1996_otvb")
-    ## height allometries defined per genus -> get info in Jansen allometries
-    eq_jansen$genus <- data.table::tstrsplit(eq_jansen$equation_notes, " ")[[5]]
-    ## create height allometry dataframe
-    hallom <- subset(equations, ref_id == "bohn_2014_ocai" & dependent_variable == "Height")
-    hallom <- hallom[, c("equation_taxa", "equation_allometry")]
-    colnames(hallom) <- c("genus", "hsub")
-    ## merge with jansen allometries (equations that do not have a corresponding height allometry will not be substituted)
-    eq_jansen <- merge(eq_jansen, hallom, by = "genus")
-    # substitute H by its DBH-based estimation
-    toMerge <- eq_jansen[, c("hsub", "equation_allometry")]
-    eq_jansen$equation_allometry <- apply(toMerge, 1, function(X) {
-      gsub("\\(h", paste0("((", X[1], ")"), X[2])
-    })
-    # replace independent_variable column
-    eq_jansen$independent_variable <- "DBH"
-    # replace in equation table
-    dfequation <- rbind(
-      subset(dfequation, !equation_id %in% eq_jansen$equation_id),
-      eq_jansen[, colnames(dfequation)]
-    )
-  }
+  } else dfequation <- new_equations()
 
   equations_ids <- dfequation$equation_id
   equations_ids <- equations_ids[!is.na(equations_ids)]
