@@ -7,17 +7,11 @@ equations.}
 \usage{
 get_biomass(
   dbh,
-  h = NULL,
-  genus = rep(NA, length(dbh)),
+  genus,
   species = NULL,
-  shrub = NULL,
   coords,
-  new_equations = NULL,
-  var = c("Total aboveground biomass", "Whole tree (above stump)"),
-  add_weight = FALSE,
-  use_height_allom = TRUE,
+  new_eqtable = NULL,
   wna = 0.1,
-  wsteep = 3,
   w95 = 500
 )
 }
@@ -25,55 +19,30 @@ get_biomass(
 \item{dbh}{A numerical vector containing tree diameter at breast height (dbh)
 measurements, in cm.}
 
-\item{h}{A numerical vector (same length as dbh) containing tree height
-measurements, in m. Default is NULL, when no measurement is available.}
-
 \item{genus}{A character vector (same length as dbh), containing the genus
-(e.g. "Quercus") of each tree. Default is NULL, when no identification is
-available.}
+(e.g. "Quercus") of each tree.}
 
 \item{species}{A character vector (same length as dbh), containing the
 species (e.g. "rubra")  of each tree. Default is NULL, when no
 identification is available.}
 
-\item{shrub}{A logical vector (same length as dbh): is the observation a
-shrub? Default is \code{NULL} (no information), in which case allometric
-equations designed for shrubs will be used only for species recorded as
-shrubs in ForestGEO sites.}
-
 \item{coords}{A numerical vector of length 2 with longitude and latitude (if
 all trees were measured in the same location) or a matrix with 2 numerical
-columns giving the coordinates of each tree. Default is NULL when no
-information is available.}
+columns giving the coordinates of each tree.}
 
-\item{new_equations}{Optional. An equation table created with the
-add_equation() function.}
-
-\item{var}{What dependent variable(s) should be provided in the output?
-Default is \verb{Total aboveground biomass} and \verb{Whole tree (above stump)},
-other possible values are: \verb{Bark biomass}, \code{Branches (dead)}, \code{Branches (live)}, \verb{Branches total (live, dead)}, \verb{Foliage total}, \code{Height},
-\code{Leaves}, \verb{Stem (wood only)}, \verb{Stem biomass}, \verb{Stem biomass (with bark)},
-\verb{Stem biomass (without bark)}, \verb{Whole tree (above and belowground)}. Be
-aware that only a few equations exist for those other variables, so
-estimated values might not be very accurate.}
-
-\item{add_weight}{Should the relative weight given to each equation in the
-\code{equations} data frame be added to the output? Default is FALSE.}
-
-\item{use_height_allom}{A logical value: should the height allometries from
-Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
-Default is TRUE.}
+\item{new_eqtable}{Optional. An equation table created with the
+new_equations() function.}
 
 \item{wna}{this parameter is used in the weighting function to determine the
 dbh-related weight attributed to equations without a specified dbh range.
 Default is 0.1}
 
-\item{wsteep}{this parameter controls the steepness of the dbh-related weight
-in the weighting function. Default is 3.}
-
 \item{w95}{this parameter is used in the weighting function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is 500.}
+
+\item{wsteep}{this parameter controls the steepness of the dbh-related weight
+in the weighting function. Default is 3.}
 }
 \value{
 A vector of class "numeric" of the same length as dbh, containing AGB
