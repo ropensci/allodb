@@ -9,17 +9,11 @@
 #'
 #' @param dbh A numerical vector containing tree diameter at breast height (dbh)
 #'   measurements, in cm.
-#' @param h A numerical vector (same length as dbh) containing tree height
-#'   measurements, in m. Default is NULL, when no measurement is available.
 #' @param genus A character vector (same length as dbh), containing the genus
 #'   (e.g. "Quercus") of each tree.
 #' @param species A character vector (same length as dbh), containing the
 #'   species (e.g. "rubra")  of each tree. Default is NULL, when no
 #'   identification is available.
-#' @param shrub A logical vector (same length as dbh): is the observation a
-#'   shrub? Default is `NULL` (no information), in which case allometric
-#'   equations designed for shrubs will be used only for species recorded as
-#'   shrubs in ForestGEO sites.
 #' @param coords A numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
@@ -60,10 +54,8 @@
 #' })
 #' scbi_stem1$agb <- do.call(c, agb)
 get_biomass <- function(dbh,
-                        # h = NULL,
                         genus,
                         species = NULL,
-                        # shrub = NULL,
                         coords,
                         new_eqtable = NULL,
                         wna = 0.1,
