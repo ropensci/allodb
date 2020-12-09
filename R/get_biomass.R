@@ -79,7 +79,7 @@ get_biomass <- function(dbh,
                       params, by = c("genus", "long", "lat"))
 
   df <- df[order(df$id),]
-  agb <- exp(df$a) * df$dbh^df$b * + exp(0.5 * df$sigma^2)
+  agb <- exp(df$a) * df$dbh^df$b * exp(0.5 * df$sigma^2)
 
   return(agb)
 }
