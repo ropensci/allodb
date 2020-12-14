@@ -60,11 +60,13 @@ est_params <- function(genus,
                             new_eqtable = dfequation,
                             wna = wna,
                             w95 = w95)
-    weights <- data.table(weights, equation_id = names(weights))
-    dfequation <- merge(dfequation,  weights, by = "equation_id")
+    weights <- data.table::data.table(weight = weights,
+                                      equation_id = names(weights))
+    dfequation <- dfequation[, !grepl("weight", colnames(dfequation))]
+    dfequation <- merge(dfequation, weights, by = "equation_id")
     dfequation$weight <- dfequation$weight/sum(dfequation$weight)
-    dfequation$resample = floor(dfequation$weight*1e3)
-    dfsub = subset(dfequation, resample > 0)[, c(
+    dfequation$resample <- floor(dfequation$weight*1e3)
+    dfsub <- subset(dfequation, resample > 0)[, c(
       "dbh_min_cm",
       "dbh_max_cm",
       "resample",
