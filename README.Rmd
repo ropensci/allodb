@@ -40,38 +40,28 @@ remotes::install_github("forestgeo/allodb")
 
 ## Examples
 
-Prior to calculating tree biomass using _allo-db_ users need to provide a table (i.e. dataframe) with DBH (cm), H (m; optional), parsed species Latin names, and site coordinates. A graph can be built per species/per site to visualize the function across an hypothetical DBH range. 
+Prior to calculating tree biomass using _allo-db_, users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. In the following examples we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees from 1 hectare). Data can be requested through the ForestGEO portal (https://forestgeo.si.edu/)
 
-<br>
-<p align="center"><img width="100%" src="tests/Fig1workflow.png"></p>
-<p align="center"><sub>Figure 1. Diagram of allo-db workflow, including user input data and an example of weighting of available equations across the DBH size spectrum to produce a single, continuous function of AGB in relation to DBH. The top ten allometries (indicating equation ID and taxa/taxonomic group), after applying the weighting process, can be seen as a side panel</sub></p>
-<br>
-
-
-In this example we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees from 1 hectare). Data can be requested through the ForestGEO portal (https://forestgeo.si.edu/)
-
-```R
+```{r open-data}
 library(allodb)
-
 data(scbi_stem1)
+``` 
+
+The biomass of all trees in one (or several) censuses can be estimated using the `get_biomass` function. 
+
+```{r calc-agb-all}
 scbi_stem1$agb <-
   get_biomass(
     dbh = scbi_stem1$dbh,
     genus = scbi_stem1$genus,
     species = scbi_stem1$species,
     coords = c(-78.2, 38.9)
-)
-
+  )
 ```
-
-
-
-
-
 
 You can also estimate biomass for a single tree given dbh and species Id.
 
-```R
+```{r calc-agb-poplar}
 get_biomass(
   dbh=50, 
   genus="liriodendron", 
@@ -79,3 +69,90 @@ get_biomass(
   coords=c(-78.2, 38.9)
 )
 ```
+
+Users can modify the set of equations that will be used to estimate the biomass using the `new_equations` function. The default option is the entire _allodb_ equation table. Users can also work on a subset of those equations, or add new equations to the table (see `?allodb::new_equations`). This new equation table should be provided as an argument in the `get_biomass` function.  
+
+```{r }
+show_cols <- c("equation_id", "equation_taxa", "equation_allometry")
+eq_tab_acer <- new_equations(subset_taxa = "Acer")
+head(eq_tab_acer[, show_cols])
+```
+
+Within the `get_biomass` function, this equation table is then used to calibrate a new allometric equation for all species/site combinations in the user-provided dataframe. This is done by attributing a weight to each equation based on its sampling size, and taxonomic and climatic similarity with the species/site combination considered. 
+
+```{r weights}
+allom_weights <-
+  weight_allom(genus = "Acer",
+               species = "rubrum",
+               coords = c(-78, 38))
+
+## visualize weights
+equ_tab_acer <- new_equations()
+equ_tab_acer$weights <- allom_weights
+keep_cols <-
+  c("equation_id",
+    "equation_taxa",
+    "sample_size",
+    "weights")
+order_weights <- order(equ_tab_acer$weights, decreasing = TRUE)
+equ_tab_acer <- equ_tab_acer[order_weights, keep_cols]
+head(equ_tab_acer)
+```
+
+Equations are then resampled within their original DBH range: the number of resampled values for each equation is proportional to its weight (as attributed by the `weight_allom` function). 
+
+```{r resample-acer}
+df_resample <-
+  resample_agb(genus = "Acer",
+               species = "rubrum",
+               coords = c(-78, 38)
+  )
+
+plot(
+  df_resample$dbh,
+  df_resample$agb,
+  log = "xy",
+  xlab = "DBH (cm)",
+  ylab = "Resampled AGB values (kg)"
+)
+```
+
+The resampled values are then used to fit the following linear model: log(AGB) ~ log(DBH). The parameters (_a_ intercept, _b_ slope, and _sigma_ standard deviation of residuals) are returned by the `est_params` function. 
+
+```{r est-params-acer}
+pars_acer <- est_params(
+  genus = "Acer",
+  species = "rubrum",
+  coords = c(-78, 38)
+)
+plot(
+  df_resample$dbh,
+  df_resample$agb,
+  log = "xy",
+  xlab = "DBH (cm)",
+  ylab = "Resampled AGB values (kg)"
+)
+curve(exp(pars_acer$a) * x ^ pars_acer$b * exp(0.5 * pars_acer$sigma^2),
+      add = TRUE, col = 2, lwd = 2)
+```
+
+The `est_params` function can be used for all species/site combinations in the dataset at once. 
+
+```{r est-params-all}
+params <- est_params(
+  genus = scbi_stem1$genus,
+  species = scbi_stem1$species,
+  coords = c(-78.2, 38.9)
+)
+head(params)
+```
+
+AGB is then recalculated as `agb = exp(a) * dbh^b * exp(0.5 * sigma^2)` within the `get_biomass` function. 
+
+
+The general workflow of the package is summarized in the following figure. (xx change this figure to match new _allodb_ version)
+
+<br>
+<p align="center"><img width="100%" src="not-package-stuff/graphs/Fig1workflow.png"></p>
+<p align="center"><sub>Figure 1. Diagram of allo-db workflow, including user input data and an example of weighting of available equations across the DBH size spectrum to produce a single, continuous function of AGB in relation to DBH. The top ten allometries (indicating equation ID and taxa/taxonomic group), after applying the weighting process, can be seen as a side panel</sub></p>
+<br>
