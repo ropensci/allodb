@@ -13,17 +13,62 @@ status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org
 
 ## Introduction
 
+Allometric equations for calculation of tree aboveground biomass (AGB)
+form the basis for estimates of forest carbon storage and exchange with
+the atmosphere. While standard models exist to calculate forest biomass
+across the tropics, we lack a standardized tool for computing AGB across
+the global extratropics.
+
 *allo-db* was conceived as a framework to standardize and simplify the
 biomass estimation process across globally distributed extratropical
-forests. We were inspired by the lack of standards tree biomass
-calculation resources available for temperate sites within the Forest
-Global Earth Observatory (ForestGEO). With *allo-db* we aimed to: a)
-compile relevant published and unpublished allometries, focusing on AGB
-but structured to handle other variables (e.g., height and biomass
-components); b) objectively select and integrate appropriate available
-equations across the full range of tree sizes; and c) serve as a
-platform for future updates and expansion to other research sites
-globally.
+forests. With *allo-db* we aimed to: a) compile relevant published and
+unpublished allometries, focusing on AGB but structured to handle other
+variables (e.g., height and biomass components); b) objectively select
+and integrate appropriate available equations across the full range of
+tree sizes; and c) serve as a platform for future updates and expansion
+to other research sites globally.
+
+The *allodb* package contains a database of systematically selected
+published allometric equations. The data component of the package is
+based on 701 woody species identified at 24 large ForestGEO forest
+dynamic plots representing all major extratropical forest types. A total
+of 549 parsed allometric equations to estimate individual tree biomass
+were retrieved, checked, and combined using a weighting function
+designed to ensure optimal equation selection over the full tree size
+range with smooth transitions across equations. The equation dataset
+used can be customized with built-in functions that subset the original
+dataset and add new equations.
+
+The package also provides functions to estimate biomass based on
+user-provided census data (tree DBHs, taxonomic identification, and plot
+coordinates). New allometric equations are calibrated for each species
+and location by resampling the original equations; equations with a
+larger sample size and/or higher taxonomic and climatic similarity with
+the species and location are given a higher weight in this process.
+
+The general workflow of the package is summarized in the following
+figure. (xx change this figure to match new *allodb* version)
+
+<br>
+
+<p align="center">
+
+<img width="100%" src="not-package-stuff/graphs/Fig1workflow.png">
+
+</p>
+
+<p align="center">
+
+<sub>Figure 1. Diagram of allo-db workflow, including user input data
+and an example of weighting of available equations across the DBH size
+spectrum to produce a single, continuous function of AGB in relation to
+DBH. The top ten allometries (indicating equation ID and taxa/taxonomic
+group), after applying the weighting process, can be seen as a side
+panel</sub>
+
+</p>
+
+<br>
 
 ## Installation
 
@@ -193,27 +238,3 @@ head(params)
 
 AGB is then recalculated as `agb = exp(a) * dbh^b * exp(0.5 * sigma^2)`
 within the `get_biomass` function.
-
-The general workflow of the package is summarized in the following
-figure. (xx change this figure to match new *allodb* version)
-
-<br>
-
-<p align="center">
-
-<img width="100%" src="not-package-stuff/graphs/Fig1workflow.png">
-
-</p>
-
-<p align="center">
-
-<sub>Figure 1. Diagram of allo-db workflow, including user input data
-and an example of weighting of available equations across the DBH size
-spectrum to produce a single, continuous function of AGB in relation to
-DBH. The top ten allometries (indicating equation ID and taxa/taxonomic
-group), after applying the weighting process, can be seen as a side
-panel</sub>
-
-</p>
-
-<br>
