@@ -15,7 +15,7 @@ est_params(
 }
 \arguments{
 \item{genus}{A character vector, containing the genus (e.g. "Quercus") of
-each tree. Default is NULL, when no identification is available.}
+each tree.}
 
 \item{species}{A character vector (same length as genus), containing the
 species (e.g. "rubra")  of each tree. Default is NULL, when no
