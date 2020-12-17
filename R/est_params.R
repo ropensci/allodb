@@ -3,7 +3,7 @@
 #' This function creates S3 objects of class "numeric".
 #'
 #' @param genus A character vector, containing the genus (e.g. "Quercus") of
-#'   each tree. Default is NULL, when no identification is available.
+#'   each tree.
 #' @param species A character vector (same length as genus), containing the
 #'   species (e.g. "rubra")  of each tree. Default is NULL, when no
 #'   identification is available.
@@ -54,43 +54,14 @@ est_params <- function(genus,
 
   coefs = c()
   for (i in 1:nrow(dfobs)) {
-    weights <- weight_allom(genus = dfobs$genus[i],
-                            species = dfobs$species[i],
-                            coords = dfobs[i, c("long", "lat")],
-                            new_eqtable = dfequation,
-                            wna = wna,
-                            w95 = w95)
-    weights <- data.table::data.table(weight = weights,
-                                      equation_id = names(weights))
-    dfequation <- dfequation[, !grepl("weight", colnames(dfequation))]
-    dfequation <- merge(dfequation, weights, by = "equation_id")
-    dfequation$weight <- dfequation$weight/sum(dfequation$weight)
-    dfequation$resample <- floor(dfequation$weight*1e3)
-    dfsub <- subset(dfequation, resample > 0)[, c(
-      "dbh_min_cm",
-      "dbh_max_cm",
-      "resample",
-      "equation_allometry",
-      "dbh_unit_CF",
-      "output_units_CF",
-      "equation_taxa"
-    )]
-    dfsub$dbh_min_cm[is.na(dfsub$dbh_min_cm)] <- 1
-    dfsub$dbh_max_cm[is.na(dfsub$dbh_max_cm)] <- 200
-    list_dbh = apply(dfsub[, 1:3], 1, function(X) runif(X[3], X[1], X[2]))
+    df <- resample_agb(genus = dfobs$genus[i],
+                       species = dfobs$species[i],
+                       coords = dfobs[i, c("long","lat")],
+                       new_eqtable = dfequation,
+                       wna = wna,
+                       w95 = w95)
 
-    ## if possible, introduce some randomness
-    ## when we have some information from the allometry: use it,
-    ## otherwise use a conservative sigma
-    list_agb <- lapply(1:length(list_dbh), function(j) {
-      sampled_dbh = list_dbh[[j]]
-      orig_equation <- dfsub$equation_allometry[j]
-      new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_CF[j], ")")
-      new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
-      agb <- eval(parse(text = new_equation)) * dfsub$output_units_CF[j]
-    })
-
-    reg <- summary(lm(log(unlist(list_agb)) ~ log(unlist(list_dbh))))
+    reg <- summary(lm(log(agb) ~ log(dbh), data = df))
     coefs <- rbind(coefs, c(reg$coefficients[, "Estimate"], reg$sigma))
   }
   colnames(coefs) <- c("a", "b", "sigma")
