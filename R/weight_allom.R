@@ -66,12 +66,9 @@ weight_allom <- function(genus,
   dfequation$equation_taxa <- gsub(" sp//.", "", dfequation$equation_taxa)
   ## split by "/" when there are several species or families
   taxa <- data.table::tstrsplit(dfequation$equation_taxa, "/| / | /|/ ")
-  dfequation$taxa1 <- taxa[[1]]
-  dfequation$taxa2 <- taxa[[2]]
-  dfequation$taxa3 <- taxa[[3]]
-  dfequation$taxa4 <- taxa[[4]]
-  dfequation$taxa5 <- taxa[[5]]
-  dfequation$taxa6 <- taxa[[6]]
+  taxa <- do.call(cbind, taxa)
+  colnames(taxa) <- paste0("taxa", 1:ncol(taxa))
+  dfequation <- cbind(dfequation, taxa)
   ## get family of input genus
   genus_obs <- tolower(genus)
   genus_family <- subset(allodb::genus_family, tolower(genus) == genus_obs)
