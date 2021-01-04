@@ -15,6 +15,7 @@
 #' @param w95 this parameter is used in the weighting function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
 #'   value (max=1). Default is 500.
+#' @param Nres number of resampled values. Default is 1e6.
 #'
 #' @return A data frame of resampled DBHs and associated AGB from the equation
 #'   table; the number of  resampled DBHs is proportional to the weight provided
@@ -33,7 +34,8 @@ resample_agb <- function(genus,
                          coords,
                          new_eqtable = NULL,
                          wna = 0.1,
-                         w95 = 500
+                         w95 = 500,
+                         Nres = 1e6
 ) {
 
   if (!is.null(new_eqtable)) {
@@ -52,7 +54,7 @@ resample_agb <- function(genus,
     dfequation$weight = NULL
   dfequation <- merge(dfequation, weights, by = "equation_id")
   dfequation$weight <- dfequation$weight/sum(dfequation$weight)
-  dfequation$resample <- floor(dfequation$weight*1e3)
+  dfequation$resample <- floor(dfequation$weight*Nres)
   dfsub <- subset(dfequation, resample > 0)[, c(
     "dbh_min_cm",
     "dbh_max_cm",

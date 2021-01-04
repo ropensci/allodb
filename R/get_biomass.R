@@ -22,8 +22,6 @@
 #' @param wna this parameter is used in the weighting function to determine the
 #'   dbh-related weight attributed to equations without a specified dbh range.
 #'   Default is 0.1
-#' @param wsteep this parameter controls the steepness of the dbh-related weight
-#'   in the weighting function. Default is 3.
 #' @param w95 this parameter is used in the weighting function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
 #'   value (max=1). Default is 500.

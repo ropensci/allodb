@@ -10,7 +10,8 @@ resample_agb(
   coords,
   new_eqtable = NULL,
   wna = 0.1,
-  w95 = 500
+  w95 = 500,
+  Nres = 1e+06
 )
 }
 \arguments{
@@ -32,6 +33,8 @@ a specified dbh range or sample size, respectively. Default is 0.1}
 \item{w95}{this parameter is used in the weighting function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is 500.}
+
+\item{Nres}{number of resampled values. Default is 1e6.}
 }
 \value{
 A data frame of resampled DBHs and associated AGB from the equation

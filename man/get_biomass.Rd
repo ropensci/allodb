@@ -40,9 +40,6 @@ Default is 0.1}
 \item{w95}{this parameter is used in the weighting function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is 500.}
-
-\item{wsteep}{this parameter controls the steepness of the dbh-related weight
-in the weighting function. Default is 3.}
 }
 \value{
 A vector of class "numeric" of the same length as dbh, containing AGB

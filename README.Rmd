@@ -117,7 +117,8 @@ Equations are then resampled within their original DBH range: the number of resa
 df_resample <-
   resample_agb(genus = "Acer",
                species = "rubrum",
-               coords = c(-78, 38)
+               coords = c(-78, 38), 
+               Nres = 1e4
   )
 
 plot(
