@@ -1,4 +1,4 @@
-context("Test all functionalities of the get_biomass function that estimates aboveground biomass")
+context("Test all functionalities of the get_biomass function")
 library(allodb)
 
 test_that("get_biomass works with genus and species information and provides reasonable outputs", {
