@@ -2,8 +2,6 @@
 
 export(est_params)
 export(get_biomass)
-export(master)
-export(master_tidy)
 export(new_equations)
 export(resample_agb)
 export(set_type)

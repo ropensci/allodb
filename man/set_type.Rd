@@ -34,8 +34,4 @@ types of data, such as integers.
 set_type(allodb::equations)
 class(set_type(allodb::equations))
 }
-\seealso{
-Other functions to interact with the database: 
-\code{\link{master}()}
-}
 \concept{functions to interact with the database}
