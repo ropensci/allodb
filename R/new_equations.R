@@ -144,7 +144,6 @@ new_equations <- function(subset_taxa = "all",
 
   new_equations <- subset(new_equations, dependent_variable %in% subset_output)
 
-
   ## add new equations ####
 
   if (!is.null(new_allometry)) {
@@ -156,12 +155,32 @@ new_equations <- function(subset_taxa = "all",
         is.null(new_sampleSize)
     ) stop("You must provide the taxa, coordinates, DBH range and sample size of you new allometries.")
 
+    if (!is.numeric(new_minDBH) | !is.numeric(new_maxDBH) | !is.numeric(new_sampleSize))  {
+      stop("new_minDBH, new_maxDBH, new_sampleSize should be numeric values.")
+    }
+
+    if (is.matrix(new_coords))
+      ncoords <- ncol(new_coords) else
+        ncoords <- length(new_coords)
+    if (!is.numeric(new_coords) | ncoords != 2)  {
+      stop("coords should be a numeric vector or matrix, with 2 values or 2 columns.")
+    }
+
     if (length(new_taxa) != length(new_allometry) |
         length(new_allometry) != length(new_minDBH) |
         length(new_minDBH) != length(new_maxDBH) |
         length(new_maxDBH) != length(new_sampleSize)) {
       stop("new_taxa, new_allometry, new_minDBH, new_maxDBH and new_sampleSize must all be the same length.")
     }
+
+    if (!is.character(new_allometry))  {
+      stop("The equation allometry should be a character vector.")
+    }
+    if (any(grepl("=|<-", new_allometry)) )  {
+      stop("new_allometry should should be written as a function of DBH  (e.g. '0.5 * dbh ^ 2').")
+    }
+    dbh <- 10
+    eval(parse(text = tolower(new_allometry)))
 
     if (!new_unitDBH %in% c("cm", "mm", "inch")) {
       stop("new_unitDBH must be either cm, mm or inch.")
