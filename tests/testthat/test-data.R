@@ -31,9 +31,8 @@ test_that("Exported datasets match known output", {
     "ref-references_metadata"
   )
 
-  sitespecies_in_use <- unique(allodb::sitespecies$equation_id)
   expect_output(
-    as.data.frame(sitespecies_in_use, stringsAsFactors = FALSE),
+    as.data.frame(allodb::sitespecies, stringsAsFactors = FALSE),
     "ref-sitespecies"
   )
   expect_output(

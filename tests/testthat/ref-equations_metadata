@@ -1,115 +1,240 @@
-   Column                                Field
-1   1 / A                               ref_id
-2   2 / B                          equation_id
-3   3 / C                   equation_allometry
-4   4 / D                        equation_form
-5   5 / E dependent_variable_biomass_component
-6   6 / F                 independent_variable
-7   7 / G                allometry_specificity
-8   8 / H                      geographic_area
-9   9 / I                           dbh_min_cm
-10 10 / J                           dbh_max_cm
-11 11 / K                          sample_size
-12 12 / L                   dbh_units_original
-13 13 / M               biomass_units_original
-14 14 / N         allometry_development_method
-15 15 / O                     regression_model
-16 16 / P               other_equations_tested
-17 17 / Q                          log_biomass
-18 18 / R                       bias_corrected
-19 19 / S               bias_correction_factor
-20 20 / T                  notes_fitting_model
-21 21 / U           original_data_availability
-22 22 / V                              warning
-                                                                                                                                                                                                                                 Description
-1                                                                                                                                              Unique reference identification number for biomass equation source. Links to Reference table.
-2                                                                                                                                                      Unique equation identification number given arbitrarely. Links to Site_Species table.
-3                                                                                                                                                         Equation to calculate biomass (includes coeficients given in original publication)
-4                                                                                                                                                              Algebraic form of the biomass equation (as function of DBH, HT, WD or others)
-5                                                                                                                                                                                               Tree component characterized by the equation
-6                                                                                                    Parameters included in biomass model (HT: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density)
-7                                                                                                                              Specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)
-8                                                                                                                                                         Geographic location from which trees were sampled to develop the original equation
-9                                                                                                                                                                                           Minimun DBH (cm) sampled to develop the equation
-10                                                                                                                                                                                          Maximun DBH (cm) sampled to develop the equation
-11                                                                                                                                                                                           Number of trees sampled to develop the equation
-12                                                                                                                                                                                                     DBH unit used in original publication
-13                                                                                                                                                                                                    Mass unit used in original publication
-14 Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing ("harvest").  However, we anticipate that many future allometries will be developed using ground-based LiDAR ("lidar").
-15                                                                                                                                                                                             Regression model used in original publication
-16                                                                                                                                                                        Comparable models if reported in publication (given equation form)
-17                                                                                                                                       Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10)
-18                                                                                                                                            Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model
-19                                                                                                                                                Correction factor for the specific equation, pulled from original publication, if included
-20                                                                                                                                                                                                      Other details on statistical methods
-21                                                                                                                                                                            Indicates whether or not the original source data is available
-22                                                                                                                             Warning or error message to indicate any pitfall that could spoil the AGB estimate based on equation selected
-   Column_type
-1    character
-2         <NA>
-3    character
-4    character
-5    character
-6    character
-7    character
-8    character
-9      numeric
-10     numeric
-11     integer
-12   character
-13   character
-14   character
-15   character
-16   character
-17     numeric
-18     numeric
-19     numeric
-20   character
-21   character
-22   character
-                                                                  Field_codes
-1                                                                        <NA>
-2                                                                        <NA>
-3                                                                        <NA>
-4                                                                        <NA>
-5                                                                        <NA>
-6                                                                        <NA>
-7                                                                        <NA>
-8                                                                        <NA>
-9                                                                        <NA>
-10                                                                       <NA>
-11                                                                       <NA>
-12                              cm: centimeters; inch: inches; mm: milimeters
-13 g: grams; kg:kilograms; lbs: pounds; metric_ton: metric ton; Mg: megagrams
-14                                                             harvest; lidar
-15                                                                       <NA>
-16                                                NRA - Not Readily Available
-17                                                        0 - false; 1 - true
-18                                                        0 - false; 1 - true
-19                                                                       <NA>
-20                                                                       <NA>
-21                                                        0 - false; 1 - true
-22                                                                       <NA>
-   Units                   Range
-1   <NA>                    <NA>
-2   <NA>                    <NA>
-3   <NA>                    <NA>
-4   <NA>                    <NA>
-5   <NA>                    <NA>
-6   <NA>                    <NA>
-7   <NA>                    <NA>
-8   <NA>                    <NA>
-9   <NA> Give before publication
-10  <NA> Give before publication
-11  <NA>                    <NA>
-12  <NA>                    <NA>
-13  <NA>                    <NA>
-14  <NA>                    <NA>
-15  <NA>                    <NA>
-16  <NA>                    <NA>
-17  <NA>                    <NA>
-18  <NA>                    <NA>
-19  <NA>                    <NA>
-20  <NA>                    <NA>
-21  <NA>                    <NA>
-22  <NA>                    <NA>
+    Column                        Field
+1    1 / A                       ref_id
+2    2 / B                  equation_id
+3    3 / C           equation_allometry
+4    4 / D                equation_form
+5    5 / E           dependent_variable
+6    6 / F         independent_variable
+7    7 / G                equation_taxa
+8    8 / H        allometry_specificity
+9    9 / I               equation_categ
+10  10 / J              geographic_area
+11  11 / K               original_coord
+12  12 / L                          lat
+13  13 / M                         long
+14  14 / N                       elev_m
+15  15 / O              geography.notes
+16  16 / P                        mat_C
+17  17 / Q                   min.temp_C
+18  18 / R                   max.temp_C
+19  19 / S                       map_mm
+20  20 / T       frost_free_period_days
+21  21 / U                climate.notes
+22  22 / V           stand_age_range_yr
+23  23 / W            stand_age_history
+24  24 / X       stand_basal_area_m2_ha
+25  25 / Y               stand_trees_ha
+26  26 / Z           forest_description
+27 27 / AA               ecosystem_type
+28 28 / AB                       koppen
+29 29 / AC                   dbh_min_cm
+30 30 / AD                   dbh_max_cm
+31 31 / AE                  sample_size
+32 32 / AF              collection_year
+33 33 / AG           dbh_units_original
+34 34 / AH                  dbh_unit_cf
+35 35 / AI        output_units_original
+36  36 /AJ              output_units_cf
+37 37 / AK allometry_development_method
+38 38 / AL             regression_model
+39 39 / AM                    r_squared
+40 40 / AN       other_equations_tested
+41 41 / AO                  log_biomass
+42 42 / AP               bias_corrected
+43 43 / AQ       bias_correction_factor
+44 44 / AR          notes_fitting_model
+45 45 / AS         original_equation_id
+46 46 / AT   original_data_availability
+47 47 / AU               equation.notes
+                                                                                                                                                                                                                                                                                                                  Description
+1                                                                                                                                                                                                                               Unique reference identification number for biomass equation source. Links to Reference table.
+2                                                                                                                                                                                                                                       Unique equation identification number given arbitrarely. Links to Site_Species table.
+3                                                                                                                                                                                                                                          Equation to calculate biomass (includes coeficients given in original publication)
+4                                                                                                                                                                                                                                               Algebraic form of the biomass equation (as function of DBH, HT, WD or others)
+5                                                                                                                                                                                                                                                                                Tree component characterized by the equation
+6                                                                                                                                                                                     Parameters included in biomass model (HT: tree height (m); DBH: diameter breast heigh (1.3 m); DBA: diameter at base; WD: wood density)
+7                                                                                                                                           Species, genus, family, or plant group for which the allometry was developed (sometimes used as proxy species to calculate AGB when a specific-species equation is not available)
+8                                                                                                                                                                                                               Specific taxonomic level for which the biomass equation was developed (species, genus, family or plant group)
+9  Allometric equation category base on extend of original prediction model: "fa_spec" family specific model; "genus_spe" genus specific; "site_spec" and "sp_site_spec"equations built on ForestGEO sites; "sp_spec" predition models focus on a specific species; "generic" equation applicable to a broader regional scale
+10                                                                                                                                                                                                                                   Broad geographic location from which trees were sampled to develop the original equation
+11                                                                                                                                                                                                                                                                    Latitude and longitude as given in original publication
+12                                                                                                                                  Latitude expressed in decimal degrees. Positive latitudes are north of the equator, negative latitudes are south of the equator. Used NOAA for conversion: https://www.ngs.noaa.gov/NCAT/
+13                                                                                                                       Longitude expressed in decimal degrees. Positive longitudes are east of Prime Meridian, negative longitudes are west of the Prime Meridian. Used NOAA for conversion: https://www.ngs.noaa.gov/NCAT/
+14                                                                                                             Elevation in meters above sea level (sometimes a range is given). Data from original publication or estimated by using an online tool to get elevation from coordinates (https://www.maps.ie/coordinates.html)
+15                                                                                                                                                                                                                                                                     Notes pertaining to lat, long, location, or topography
+16                                                                                                                                                                                Mean annual temperature in Celsius degrees as original publication or predicted using the latitude and longitude in the WorldClim database.
+17                                                                                                                                                                                                                                                                                      Mean temperature of the coldest month
+18                                                                                                                                                                                                                                                                                      Mean temperature of the warmest month
+19                                                                                                                                                             Mean annual precipitation in milimeters (multiply by 25.4 to convert from inch to mm) or predicted using the latitude and longitude in the WorldClim database.
+20                                                                                                                                                                                                                                                 Frost free period (days) as reported or inferred from original publicacion
+21                                                                                                                                                                                                                                                                             Climate details not included in equation table
+22                                                                                                                                                                                                                                                     Stand age (or range) as reported or inferred from original publication
+23                                                                                                                                                                                                                                Qualitative description of the stand history reported or inferred from original publication
+24                                                                                                                                                                                                                                                                  Stand basal as reported in original publication (m2 x ha)
+25                                                                                                                                                                                                                                      Number of trees per hectare (average or absolute) as reported in original publication
+26                                                                                                                                                                                                                           Brief drescription of stand, summarized from original publication, including species composition
+27                                                                                                                                                                                     General clasification on terrestrial ecosystem (tropical forest, temeparate forest, boreal forest, mountain forest, desert, grassland)
+28                                                                                                                                                      Koppen climate classification, estimated using the package 'kgc" (based on lat/long) or by visual estimates from a Koppen zones map, specially for generic equations.
+29                                                                                                                                                                                                                                                                           Minimun DBH (cm) sampled to develop the equation
+30                                                                                                                                                                                                                                                                           Maximun DBH (cm) sampled to develop the equation
+31                                                                                                                                                                                                                                                                            Number of trees sampled to develop the equation
+32                                                                                                                                                                                                                                                                                  Year(s) of measurement if  in publication
+33                                                                                                                                                                                                                                                                                      DBH unit used in original publication
+34                                                                                                                                                                          Conversion factor applied to convert DBH unit used in original publication into an equivalent expressed in cm. Multiply by number given in table.
+35                                                                                                                                                                                                                                                                           Mass or length unit used in original publication
+36                                                                                                                                                        Conversion factor applied to convert unit used in original publication (mass or length) into an equivalent expressed in kg or m. Multiply by number given in table.
+37                                                                                  Method used to develop the allometry. Traditionally, this is done by harvesting whole trees, drying, and weighing ("harvest").  However, we anticipate that many future allometries will be developed using ground-based LiDAR ("lidar").
+38                                                                                                                                                                                                                                                                              Regression model used in original publication
+39                                                                                                                                                                                                                                                        Original R-squared value given in publication for fitted regression
+40                                                                                                                                                                                                                                                         Comparable models if reported in publication (given equation form)
+41                                                                                                                                                                                                                        Whether the regression fit is done with biomass as the response variable (i.e log(biomass) base 10)
+42                                                                                                                                                                                                                             Indicates if a correction factor (CF) or a relative standard error (RSE) was included in model
+43                                                                                                                       Correction factor for a bias introduced by logarithmic transformation of the data; pulled from original publication. NA indicates that bias correction is icluded in model (and no CF was provided).
+44                                                                                                                                                                                                                                                                                       Other details on statistical methods
+45                                                                                                                                                                                                                                                             Unique identification  or clues given in original publications
+46                                                                                                                                                                                                                                                             Indicates whether or not the original source data is available
+47                                                                                                                                                                                                                         Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation
+          Column_type
+1           character
+2           character
+3           character
+4           character
+5           character
+6           character
+7  character (string)
+8           character
+9           character
+10          character
+11          character
+12            numeric
+13            numeric
+14            numeric
+15          character
+16            numeric
+17            numeric
+18            numeric
+19            numeric
+20            numeric
+21          character
+22            numeric
+23          character
+24               <NA>
+25               <NA>
+26          character
+27          character
+28          character
+29            numeric
+30            numeric
+31            integer
+32            integer
+33          character
+34            numeric
+35          character
+36            numeric
+37          character
+38          character
+39            numeric
+40          character
+41            numeric
+42            numeric
+43            numeric
+44          character
+45          character
+46          character
+47          character
+                                                                              Field_codes
+1                                                                                    <NA>
+2                                                                                    <NA>
+3                                                                                    <NA>
+4                                                                                    <NA>
+5                                                                                    <NA>
+6                                                                                    <NA>
+7                                                                                    <NA>
+8                                                                                    <NA>
+9                           fa_spec; generic; genus_spec; site_spec; sp_site_spe; sp_spec
+10                                                                                   <NA>
+11                                                                                   <NA>
+12                                                                                   <NA>
+13                                                                                   <NA>
+14                                                                                   <NA>
+15                                                                                   <NA>
+16                                                                                   <NA>
+17                                                                                   <NA>
+18                                                                                   <NA>
+19                                                                                   <NA>
+20                                                                                   <NA>
+21                                                                                   <NA>
+22                                                                                   <NA>
+23                                                                                   <NA>
+24                                                                                   <NA>
+25                                                                                   <NA>
+26                                                                                   <NA>
+27                                                                                   <NA>
+28                                                                               CFA= etc
+29                                                                                   <NA>
+30                                                                                   <NA>
+31                                                                                   <NA>
+32                                                                                   <NA>
+33                                          cm: centimeters; inch: inches; mm: milimeters
+34                                                                                   <NA>
+35 g= grams; kg= kilograms; lbs= pounds; metric_ton= metric ton; Mg= megagrams; m= meters
+36                                                                                   <NA>
+37                                                                         harvest; lidar
+38                                                                                   <NA>
+39                                                                                   <NA>
+40                                                            NRA - Not Readily Available
+41                                                                    0 - false; 1 - true
+42                                                                    0 - false; 1 - true
+43                                                                                   <NA>
+44                                                                                   <NA>
+45                                                                                   <NA>
+46                                        NRA - Not Readily Available, Yes=data accesible
+47                                                                                   <NA>
+             Units     Range                                X8
+1             <NA>      <NA>                              <NA>
+2             <NA>      <NA>                              <NA>
+3             <NA>      <NA>                              <NA>
+4             <NA>      <NA>                              <NA>
+5             <NA>      <NA>                              <NA>
+6     mm, cm, inch      <NA>                              <NA>
+7             <NA>      <NA>                              <NA>
+8             <NA>      <NA>                              <NA>
+9             <NA>      <NA>                              <NA>
+10            <NA>      <NA>                              <NA>
+11            <NA>      <NA>                              <NA>
+12            <NA>     XX-XX         Change before publication
+13            <NA>     XX-XX         Change before publication
+14          meters     XX-XX         Change before publication
+15            <NA>      <NA>                              <NA>
+16 celsius degrees     XX-XX         Change before publication
+17 celsius degrees     XX-XX         Change before publication
+18 celsius degrees     XX-XX         Change before publication
+19              mm     XX-XX         Change before publication
+20            <NA>      <NA>                              <NA>
+21            <NA>      <NA>                              <NA>
+22            <NA>      <NA>                              <NA>
+23            <NA>      <NA>                              <NA>
+24            <NA>      <NA>                   tentative field
+25            <NA>      <NA>                   tentative field
+26            <NA>      <NA>                              <NA>
+27            <NA>      <NA>                              <NA>
+28            <NA>      <NA> COMPLETE CODES BEFORE PUBLICATION
+29              cm      0-31         Change before publication
+30              cm     0-614         Change before publication
+31            <NA> 4 to 2635         Change before publication
+32            <NA>      <NA>                              <NA>
+33    cm, inch, mm      <NA>                              <NA>
+34            <NA>      <NA>                              <NA>
+35    g, kg, Mg, m      <NA>                              <NA>
+36            <NA>      <NA>                              <NA>
+37            <NA>      <NA>                              <NA>
+38            <NA>      <NA>                              <NA>
+39            <NA>      <NA>                              <NA>
+40            <NA>      <NA>                              <NA>
+41            <NA>      <NA>                              <NA>
+42            <NA>      <NA>                              <NA>
+43            <NA>      <NA>                              <NA>
+44            <NA>      <NA>                              <NA>
+45            <NA>      <NA>                              <NA>
+46            <NA>      <NA>                              <NA>
+47            <NA>      <NA>                              <NA>
