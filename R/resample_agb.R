@@ -15,7 +15,7 @@
 #' @param w95 this parameter is used in the weighting function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
 #'   value (max=1). Default is 500.
-#' @param Nres number of resampled values. Default is 1e6.
+#' @param Nres number of resampled values. Default is 1e4.
 #'
 #' @return A data frame of resampled DBHs and associated AGB from the equation
 #'   table; the number of  resampled DBHs is proportional to the weight provided
@@ -35,7 +35,7 @@ resample_agb <- function(genus,
                          new_eqtable = NULL,
                          wna = 0.1,
                          w95 = 500,
-                         Nres = 1e6
+                         Nres = 1e4
 ) {
 
   if (length(genus) > 1 | length(unlist(coords)) != 2)
@@ -70,7 +70,10 @@ resample_agb <- function(genus,
   )]
   dfsub$dbh_min_cm[is.na(dfsub$dbh_min_cm)] <- 1
   dfsub$dbh_max_cm[is.na(dfsub$dbh_max_cm)] <- 200
-  list_dbh = apply(dfsub[, 1:3], 1, function(X) runif(X[3], X[1], X[2]))
+  list_dbh = apply(dfsub[, 1:3], 1, function(X) {
+    set.seed(40)
+    runif(X[3], X[1], X[2])
+  })
 
   ## if possible, introduce some randomness
   ## when we have some information from the allometry: use it,
