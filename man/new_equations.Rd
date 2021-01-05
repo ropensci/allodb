@@ -82,7 +82,7 @@ Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
 Default is TRUE.}
 }
 \value{
-xxx.
+A new equation dataframe.
 }
 \description{
 Modify the equation table to be used in other functions of the package.

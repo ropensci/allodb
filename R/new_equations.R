@@ -45,7 +45,7 @@
 #'   Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
 #'   Default is TRUE.
 #'
-#' @return xxx.
+#' @return A new equation dataframe.
 #'
 #' @export
 #'
@@ -238,9 +238,13 @@ new_equations <- function(subset_taxa = "all",
       new_equations[, colnames(added_equations)]
     )
 
-    ## conversion factor for input
-    new_equations <- merge(new_equations, unique(equations[, c("output_units_original", "output_units_CF")]))
-    new_equations <- merge(new_equations, unique(equations[, c("dbh_units_original", "dbh_unit_CF")]))
+    ## add conversion factors
+    dbhCF <- unique(equations[, c("dbh_units_original", "dbh_unit_CF")])
+    outputCF <- unique(equations[, c("output_units_original", "output_units_CF")])
+    suppressWarnings(dbhCF$dbh_unit_CF <- as.numeric(dbhCF$dbh_unit_CF))
+    suppressWarnings(outputCF$output_units_CF <- as.numeric(outputCF$output_units_CF))
+    new_equations <- merge(new_equations, dbhCF)
+    new_equations <- merge(new_equations, outputCF)
 
     new_equations <- new_equations[, c(
       "equation_id",

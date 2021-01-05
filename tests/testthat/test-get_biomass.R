@@ -40,13 +40,13 @@ test_that("get_biomass can be used for several individuals and sites", {
 test_that("get_biomass gives stable results when run several times with the same inputs", {
   run_1 <- get_biomass(dbh = 20, genus = "Quercus", coords = c(-78, 40))
   run_2 <- get_biomass(dbh = 20, genus = "Quercus", coords = c(-78, 40))
-  expect_equal(run_1, run_2, tolerance = 1)
+  expect_equal(run_1, run_2)
 })
 
 test_that("biomass estimates for one individual do not depend on other measurements", {
   agb_alone <- get_biomass(dbh = 20, genus = "Quercus", coords = c(-78, 40))
   agb_withfagus <- get_biomass(dbh = c(20, 10), genus = c("Quercus", "Fagus"), coords = c(-78, 40))[1]
-  expect_equal(agb_alone, agb_withfagus, tolerance = 1)
+  expect_equal(agb_alone, agb_withfagus)
 })
 
 test_that("get_biomass gives error message when inputs are not the same length", {

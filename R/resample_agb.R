@@ -54,7 +54,7 @@ resample_agb <- function(genus,
   weights <- data.table::data.table(weight = weights,
                                     equation_id = names(weights))
   if ("weight" %in% colnames(dfequation))
-    dfequation$weight = NULL
+    dfequation$weight <- NULL
   dfequation <- merge(dfequation, weights, by = "equation_id")
   dfequation$weight <- dfequation$weight/sum(dfequation$weight)
   dfequation$resample <- floor(dfequation$weight*Nres)
@@ -70,7 +70,7 @@ resample_agb <- function(genus,
   )]
   dfsub$dbh_min_cm[is.na(dfsub$dbh_min_cm)] <- 1
   dfsub$dbh_max_cm[is.na(dfsub$dbh_max_cm)] <- 200
-  list_dbh = apply(dfsub[, 1:3], 1, function(X) {
+  list_dbh <- apply(dfsub[, 1:3], 1, function(X) {
     set.seed(40)
     runif(X[3], X[1], X[2])
   })
@@ -78,13 +78,22 @@ resample_agb <- function(genus,
   ## if possible, introduce some randomness
   ## when we have some information from the allometry: use it,
   ## otherwise use a conservative sigma
-  list_agb <- lapply(1:length(list_dbh), function(j) {
-    sampled_dbh = list_dbh[[j]]
-    orig_equation <- dfsub$equation_allometry[j]
-    new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_CF[j], ")")
+  if (nrow(dfsub) == 1) {  ## only 1 equation selected
+    list_dbh <- c(list_dbh)
+    sampled_dbh <- list_dbh
+    orig_equation <- dfsub$equation_allometry
+    new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_CF, ")")
     new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
-    agb <- eval(parse(text = new_equation)) * dfsub$output_units_CF[j]
-  })
+    list_agb <- eval(parse(text = new_equation)) * dfsub$output_units_CF
+  } else {
+    list_agb <- lapply(1:length(list_dbh), function(j) {
+      sampled_dbh <- list_dbh[[j]]
+      orig_equation <- dfsub$equation_allometry[j]
+      new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_CF[j], ")")
+      new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
+      agb <- eval(parse(text = new_equation)) * dfsub$output_units_CF[j]
+    })
+  }
 
   equation_id <-
     unlist(sapply(1:nrow(dfsub), function(i)
