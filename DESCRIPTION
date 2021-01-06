@@ -37,7 +37,8 @@ Suggests:
     knitr (>= 1.21),
     purrr,
     spelling,
-    testthat (>= 2.0.1)
+    testthat (>= 2.0.1),
+    rmarkdown
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
