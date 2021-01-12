@@ -18,6 +18,7 @@
 #' @param w95 this parameter is used in the weighting function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
 #' value (max=1). Default is 500.
+#' @param Nres number of resampled values. Default is 1e4.
 #'
 #' @return A data frame of fitted coefficients (columns) of the log-log
 #'   regression: a (intercept), b (slope) and sigma (standard deviation). Each
@@ -38,7 +39,8 @@ est_params <- function(genus,
                        coords,
                        new_eqtable = NULL,
                        wna = 0.1,
-                       w95 = 500
+                       w95 = 500,
+                       Nres = 1e4
 ) {
 
   if (!is.null(new_eqtable)) {
@@ -59,7 +61,8 @@ est_params <- function(genus,
                        coords = dfobs[i, c("long","lat")],
                        new_eqtable = dfequation,
                        wna = wna,
-                       w95 = w95)
+                       w95 = w95,
+                       Nres = Nres)
 
     reg <- summary(lm(log(agb) ~ log(dbh), data = df))
     coefs <- rbind(coefs, c(reg$coefficients[, "Estimate"], reg$sigma))
