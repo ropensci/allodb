@@ -20,7 +20,7 @@ echo = TRUE
 
 Install the development version of _allodb_ from GitHub:
 
-```{r install, eval=F}
+```{r install, eval=FALSE}
 # install.packages("remotes")
 remotes::install_github("forestgeo/allodb")
 ```
@@ -188,3 +188,25 @@ head(params)
 ```
 
 AGB is then recalculated as `agb = exp(a) * dbh^b * exp(0.5 * sigma^2)` within the `get_biomass()` function. 
+
+## Visualize the recalibration of equations
+
+The recalibrated equation for one taxon/location combination can be easily visualized with the `illustrate_allodb()` function, which returns a ggplot (see package `ggplot2`) with all resampled values, and the top equations used in the legend. The user can control the number of equations and equation information displayed in the legend. The red dotted line is the recalibrated equation used in the `get_biomass()` function. 
+
+```{r illustrate-allodb, fig.height = 4, fig.width=8}
+illustrate_allodb(
+  genus = "Acer",
+  species = "rubrum",
+  coords = c(-78, 38)
+)
+```
+
+```{r illustrate-allodb2, fig.height = 5, fig.width=10}
+illustrate_allodb(
+  genus = "Acer",
+  species = "rubrum",
+  coords = c(-78, 38), 
+  neq = 15, 
+  eqinfo = c("equation_taxa", "geographic_area")
+)
+```
