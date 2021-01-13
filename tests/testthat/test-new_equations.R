@@ -99,6 +99,11 @@ test_that("equations cannot be added when the input format is not correct", {
                 new_maxDBH = 35,
                 new_sampleSize = 143))
   expect_error(new_equations(new_taxa = "Quercus ilex",
+                             new_coords = c(4, 44),
+                             new_minDBH = 5,
+                             new_maxDBH = 35,
+                             new_sampleSize = 143))
+  expect_error(new_equations(new_taxa = "Quercus ilex",
                              new_allometry = "agb = 0.12 * dbh ^ 2.5",
                              new_coords = c(4, 44),
                              new_minDBH = 5,

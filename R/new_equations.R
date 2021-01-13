@@ -145,6 +145,9 @@ new_equations <- function(subset_taxa = "all",
   new_equations <- subset(new_equations, dependent_variable %in% subset_output)
 
   ## add new equations ####
+  # check that new allometry was added
+  if (is.null(new_allometry) & (!is.null(new_taxa) | !is.null(new_coords)))
+    stop("You might have forgotten to add the new allometry.")
 
   if (!is.null(new_allometry)) {
     ## check consistency of inputs
