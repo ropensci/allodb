@@ -27,7 +27,5 @@ use_data(
   sitespecies,
   sitespecies_metadata,
   sites_info,
-  wsg,
-  wsg_metadata,
   overwrite = TRUE
 )
