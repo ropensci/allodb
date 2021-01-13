@@ -116,7 +116,7 @@ get_biomass(
   species="tulipifera", 
   coords=c(-78.2, 38.9)
 )
-#> [1] 2829.44
+#> [1] 2841.488
 ```
 
 Users can modify the set of equations that will be used to estimate the
@@ -228,12 +228,12 @@ params <- est_params(
 )
 head(params)
 #>          genus     species  long  lat         a        b     sigma
-#> 1:        Acer     negundo -78.2 38.9 -2.852838 2.623543 0.9963243
-#> 2:        Acer      rubrum -78.2 38.9 -2.894545 2.635795 0.9795674
-#> 3:   Ailanthus   altissima -78.2 38.9 -2.527428 2.496863 1.2979538
-#> 4: Amelanchier     arborea -78.2 38.9 -2.558368 2.501976 1.1633499
-#> 5:     Asimina     triloba -78.2 38.9 -2.704000 2.552392 1.2966349
-#> 6:    Carpinus caroliniana -78.2 38.9 -2.248437 2.428657 1.0973741
+#> 1:        Acer     negundo -78.2 38.9 -2.825065 2.614069 1.0087115
+#> 2:        Acer      rubrum -78.2 38.9 -2.906226 2.639375 0.9787364
+#> 3:   Ailanthus   altissima -78.2 38.9 -2.539061 2.499994 1.3038173
+#> 4: Amelanchier     arborea -78.2 38.9 -2.464260 2.470997 1.1751264
+#> 5:     Asimina     triloba -78.2 38.9 -2.539061 2.499994 1.3038173
+#> 6:    Carpinus caroliniana -78.2 38.9 -2.439023 2.487171 1.1029199
 ```
 
 AGB is then recalculated as `agb = exp(a) * dbh^b * exp(0.5 * sigma^2)`
