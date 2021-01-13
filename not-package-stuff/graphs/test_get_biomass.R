@@ -9,38 +9,39 @@ library(allodb)
 
 #### test 1 ####
 # generic test
+# do we still use this?
 
-data <- data.table(expand.grid(dbh = 1:150, genus = c("Acer", "Prunus", "Fraxinus", "Quercus"), location = c("scbi", "zaragoza", "nice", "sivas")))
-data <- merge(data, data.frame(
-  location = c("scbi", "zaragoza", "nice", "ivas"),
-  long = c(-78.15, -0.883, 7.266, 37.012),
-  lat = c(38.9, 41.65, 43.70, 39.75)
-))
-data[, agb := get_biomass(dbh = data$dbh, genus = data$genus, coords = cbind(data$long, data$lat)) / 1000]
-
-# if you want to check the weight given to each equation
-Mweigth <- get_biomass(
-  dbh = data$dbh, genus = data$genus, species = data$species,
-  coords = cbind(data$long, data$lat), add_weight = TRUE
-) / 1000
-
-library(BIOMASS)
-data$wsg <- getWoodDensity(genus = data$genus, species = rep("sp", nrow(data)))$meanWD
-data[, agb_chave := exp(-2.023977 - 0.89563505 * 0.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2)) / 1000]
-
-logscale <- FALSE
-g <- ggplot(data, aes(x = dbh, y = agb, color = genus)) +
-  geom_line() +
-  geom_line(aes(y = agb_chave), lty = 2) +
-  labs(y = "AGB (tons)") +
-  facet_wrap(~location) # +
-# annotate(geom = "text", x=80, y=40, label="Dotted lines: Chave equation with E = 0.5")
-if (logscale) {
-  g <- g + scale_x_log10() + scale_y_log10()
-}
-g
+# data <- data.table(expand.grid(dbh = 1:150, genus = c("Acer", "Prunus", "Fraxinus", "Quercus"), location = c("scbi", "zaragoza", "nice", "sivas")))
+# data <- merge(data, data.frame(
+#   location = c("scbi", "zaragoza", "nice", "ivas"),
+#   long = c(-78.15, -0.883, 7.266, 37.012),
+#   lat = c(38.9, 41.65, 43.70, 39.75)
+# ))
+# data[, agb := get_biomass(dbh = data$dbh, genus = data$genus, coords = cbind(data$long, data$lat)) / 1000]
+#
+# # compare to chave et al. 2014
+# library(BIOMASS)
+# data$wsg <- getWoodDensity(genus = data$genus, species = rep("sp", nrow(data)))$meanWD
+# data[, agb_chave := exp(-2.023977 - 0.89563505 * 0.5 + 0.92023559 * log(wsg) + 2.79495823 * log(dbh) - 0.04606298 * (log(dbh)^2)) / 1000]
+#
+# logscale <- FALSE
+# g <- ggplot(data, aes(x = dbh, y = agb, color = genus)) +
+#   geom_line() +
+#   geom_line(aes(y = agb_chave), lty = 2) +
+#   labs(y = "AGB (tons)") +
+#   facet_wrap(~location) # +
+# # annotate(geom = "text", x=80, y=40, label="Dotted lines: Chave equation with E = 0.5")
+# if (logscale) {
+#   g <- g + scale_x_log10() + scale_y_log10()
+# }
+# g
 # ggsave("get_biomass_plot.pdf", height=8, width=10)
 
+## illustration
+illustrate_allodb("Liriodendron", "tulipifera", c(-78, 40),
+                  neq = 12, eqinfo = c("equation_taxa", "geographic_area")) +
+  labs(title = "Example: Liriodendron tulipifera at SCBI")
+ggsave("not-package-stuff/graphs/Liriodendron-tulipifera_SCBI.png", height = 3.5, width = 12)
 
 #### test 2 ####
 
