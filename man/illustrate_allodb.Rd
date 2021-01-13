@@ -22,31 +22,31 @@ illustrate_allodb(
 tree.}
 
 \item{species}{A character value, containing the species (e.g. "rubra") of
-the tree. Default is NULL, when no identification is available.}
+the tree. Default is \code{NULL}, when no identification is available.}
 
 \item{coords}{A numerical vector of length 2 with longitude and latitude.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-add_equation() function. Default is the base allodb equation table.}
+\code{add_equation()} function. Default is the base allodb equation table.}
 
 \item{logxy}{Logical: should values be plotted on a log scale? Default is
-TRUE.}
+\code{TRUE.}}
 
 \item{neq}{Number of top equations in the legend. Default is 10, meaning that
 the 10 equations with the highest weights are shown in the legend.}
 
 \item{eqinfo}{Which column(s) of the equation table should be used in the
-legend? Default is "equation_taxa."}
+legend? Default is \code{"equation_taxa"}.}
 
 \item{wna}{this parameter is used in the weighting function to determine the
 dbh-related and sample-size related weights attributed to equations without
-a specified dbh range or sample size, respectively. Default is 0.1}
+a specified dbh range or sample size, respectively. Default is \code{0.1}.}
 
 \item{w95}{this parameter is used in the weighting function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
-value (max=1). Default is 500.}
+value (max=1). Default is \code{500}.}
 
-\item{Nres}{number of resampled values. Default is 1e4.}
+\item{Nres}{number of resampled values. Default is \code{1e4}.}
 }
 \value{
 A ggplot showing all resampled dbh-agb values. The top equations used
