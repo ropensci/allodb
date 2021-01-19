@@ -1,15 +1,14 @@
-#' Modify the equation table to be used in other functions of the package.
-#' Additional options are: subset the original equation table, add new
-#' equations, choose whether to include equations with a height allometry or
-#' not.
+#' Modify the equation table
+#'
+#' This function modifies the equation table to be used in other functions of the package including: subset the original equation table, add new
+#' equations, and choose whether to include equations with a height allometry.
 #'
 #' @param subset_taxa character vector with taxa to be kept. Default is `all`,
 #'   in which case all taxa are kept.
 #' @param subset_climate character vector with name of Koppen climate to be
 #'   kept. Default is `all`, in which case all climates are kept.
 #' @param subset_region character vector with name of location(s) or
-#'   country(ies) or broad region(s) (`Europe`, `North America`, etc -> add
-#'   complete list) to be kept. Default is `all`, in which case all regions are
+#'   country(ies) or broader region(s) (eg. `Europe`, `North America`) to be kept. Default is `all`, in which case all regionsz/countries are
 #'   kept.
 #' @param subset_ids character vector with equation IDs to be kept. Default is
 #'   `all`, in which case all equations are kept.
@@ -41,7 +40,7 @@
 #'   `DBH`, other option is `DBH, H`.
 #' @param new_outputVar dependent variable estimated by the allometry. Default is
 #'   `Total aboveground biomass`.
-#' @param use_height_allom A logical value: should the height allometries from
+#' @param use_height_allom a logical value: should the height allometries from
 #'   Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
 #'   Default is TRUE.
 #'
