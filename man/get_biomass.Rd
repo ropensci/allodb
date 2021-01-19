@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_biomass.R
 \name{get_biomass}
 \alias{get_biomass}
-\title{Function to compute aboveground biomass (or other variables) from allometric
+\title{Compute tree aboveground biomass (AGB) base on allometric
 equations.}
 \usage{
 get_biomass(
@@ -17,28 +17,28 @@ get_biomass(
 )
 }
 \arguments{
-\item{dbh}{A numerical vector containing tree diameter at breast height (dbh)
+\item{dbh}{a numerical vector containing tree diameter at breast height (dbh)
 measurements, in cm.}
 
-\item{genus}{A character vector (same length as dbh), containing the genus
+\item{genus}{a character vector (same length as dbh), containing the genus
 (e.g. "Quercus") of each tree.}
 
-\item{species}{A character vector (same length as dbh), containing the
+\item{species}{a character vector (same length as dbh), containing the
 species (e.g. "rubra")  of each tree. Default is NULL, when no
-identification is available.}
+species identification is available.}
 
-\item{coords}{A numerical vector of length 2 with longitude and latitude (if
+\item{coords}{a numerical vector of length 2 with longitude and latitude (if
 all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree.}
 
 \item{new_eqtable}{Optional. An equation table created with the
 new_equations() function.}
 
-\item{wna}{this parameter is used in the weighting function to determine the
+\item{wna}{this parameter is used in the weight_allom function to determine the
 dbh-related weight attributed to equations without a specified dbh range.
 Default is 0.1}
 
-\item{w95}{this parameter is used in the weighting function to determine the
+\item{w95}{this parameter is used in the weight_allom function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is 500.}
 
@@ -50,11 +50,11 @@ value (in kg) for every stem, or the dependent variable as defined in
 \code{var}.
 }
 \description{
-This function creates S3 objects of class "numeric".
+This function calculates the above ground biomass of a given tree (or other tree components) based on published allometric equations.
 }
 \details{
 The function can run into some memory problems when used on large datasets
-(usually several hundred thousand observations). In that case, see the 2nd
+(usually several hundred thousand observations). In that case, see the second
 example below for how to apply the function to a splitted dataset.
 }
 \examples{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/est_params.R
 \name{est_params}
 \alias{est_params}
-\title{Function to calibrate new allometric equations from sampling previous ones}
+\title{Calibrate new allometric equations}
 \usage{
 est_params(
   genus,
@@ -15,25 +15,25 @@ est_params(
 )
 }
 \arguments{
-\item{genus}{A character vector, containing the genus (e.g. "Quercus") of
+\item{genus}{a character vector, containing the genus (e.g. "Quercus") of
 each tree.}
 
-\item{species}{A character vector (same length as genus), containing the
-species (e.g. "rubra")  of each tree. Default is NULL, when no
+\item{species}{a character vector (same length as genus), containing the
+species (e.g. "rubra")  of each tree. Default is NULL, when no species
 identification is available.}
 
-\item{coords}{A numerical vector of length 2 with longitude and latitude (if
+\item{coords}{a numerical vector of length 2 with longitude and latitude (if
 all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-add_equation() function. Default is the base allodb equation table.}
+add_equation() function. Default is the compiled allo-db equation table.}
 
-\item{wna}{this parameter is used in the weighting function to determine the
+\item{wna}{this parameter is used in the weight_allom() function to determine the
 dbh-related and sample-size related weights attributed to equations without
 a specified dbh range or sample size, respectively. Default is 0.1}
 
-\item{w95}{this parameter is used in the weighting function to determine the
+\item{w95}{this parameter is used in the weight_allom() function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is 500.}
 
@@ -46,7 +46,7 @@ row corresponds to a species x site combination. The back-transformed
 equation is then AGB = exp(a) x DBH^b x + exp(0.5 x sigma^2).
 }
 \description{
-This function creates S3 objects of class "numeric".
+This function calibrates new allometric equations from sampling previous ones. New allometric equations are calibrated for each species and location by resampling the original compiled equations; equations with a larger sample size, and/or higher taxonomic rank, and climatic similarity with the species and location in question are given a higher weight in this process.
 }
 \examples{
 data(scbi_stem1)

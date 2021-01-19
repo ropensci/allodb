@@ -4,9 +4,9 @@
 \name{allodb-package}
 \alias{allodb}
 \alias{allodb-package}
-\title{allodb: An R Database For Biomass Estimation At Extratropical Forest Plots}
+\title{allodb: An R Database For Tree Biomass Estimation At Extratropical Forest Plots}
 \description{
-Tool to standardize and simplify the biomass
+Tool to standardize and simplify the tree biomass
     estimation process across globally distributed extratropical forests.
 }
 \seealso{
@@ -23,7 +23,7 @@ Useful links:
 Authors:
 \itemize{
   \item Camille Piponiot \email{camille.piponiot@gmail.com}
-  \item Mauro Lepore \email{leporem@si.edu}
+  \item Mauro Lepore \email{maurolepore@gmail.com}
   \item Kristina Anderson-Teixeira \email{TeixeiraK@si.edu}
 }
 
