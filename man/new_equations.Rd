@@ -2,10 +2,7 @@
 % Please edit documentation in R/new_equations.R
 \name{new_equations}
 \alias{new_equations}
-\title{Modify the equation table to be used in other functions of the package.
-Additional options are: subset the original equation table, add new
-equations, choose whether to include equations with a height allometry or
-not.}
+\title{Modify the equation table}
 \usage{
 new_equations(
   subset_taxa = "all",
@@ -34,8 +31,7 @@ in which case all taxa are kept.}
 kept. Default is \code{all}, in which case all climates are kept.}
 
 \item{subset_region}{character vector with name of location(s) or
-country(ies) or broad region(s) (\code{Europe}, \verb{North America}, etc -> add
-complete list) to be kept. Default is \code{all}, in which case all regions are
+country(ies) or broader region(s) (eg. \code{Europe}, \verb{North America}) to be kept. Default is \code{all}, in which case all regionsz/countries are
 kept.}
 
 \item{subset_ids}{character vector with equation IDs to be kept. Default is
@@ -77,7 +73,7 @@ height).}
 \item{new_outputVar}{dependent variable estimated by the allometry. Default is
 \verb{Total aboveground biomass}.}
 
-\item{use_height_allom}{A logical value: should the height allometries from
+\item{use_height_allom}{a logical value: should the height allometries from
 Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
 Default is TRUE.}
 }
@@ -85,10 +81,8 @@ Default is TRUE.}
 A new equation dataframe.
 }
 \description{
-Modify the equation table to be used in other functions of the package.
-Additional options are: subset the original equation table, add new
-equations, choose whether to include equations with a height allometry or
-not.
+This function modifies the equation table to be used in other functions of the package including: subset the original equation table, add new
+equations, and choose whether to include equations with a height allometry.
 }
 \examples{
 dfequation <- new_equations(
