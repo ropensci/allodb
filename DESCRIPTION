@@ -1,5 +1,5 @@
 Package: allodb
-Title: An R Database For Biomass Estimation At Extratropical Forest Plots
+Title: An R Database For Tree Biomass Estimation At Extratropical Forest Plots
 Version: 1.0.0.9000
 Authors@R: 
     c(person(given = "Erika",
@@ -18,7 +18,7 @@ Authors@R:
              family = "Anderson-Teixeira",
              role = "aut",
              email = "TeixeiraK@si.edu"))
-Description: Tool to standardize and simplify the biomass
+Description: Tool to standardize and simplify the tree biomass
     estimation process across globally distributed extratropical forests.
 License: GPL-3
 URL: https://github.com/forestgeo/allodb
