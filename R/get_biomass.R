@@ -1,28 +1,28 @@
-#' Function to compute aboveground biomass (or other variables) from allometric
+#' Compute tree aboveground biomass (AGB) base on allometric
 #' equations.
 #'
-#' This function creates S3 objects of class "numeric".
+#' This function calculates the above ground biomass of a given tree (or other tree components) based on published allometric equations.
 #'
 #' The function can run into some memory problems when used on large datasets
-#' (usually several hundred thousand observations). In that case, see the 2nd
+#' (usually several hundred thousand observations). In that case, see the second
 #' example below for how to apply the function to a splitted dataset.
 #'
-#' @param dbh A numerical vector containing tree diameter at breast height (dbh)
+#' @param dbh a numerical vector containing tree diameter at breast height (dbh)
 #'   measurements, in cm.
-#' @param genus A character vector (same length as dbh), containing the genus
+#' @param genus a character vector (same length as dbh), containing the genus
 #'   (e.g. "Quercus") of each tree.
-#' @param species A character vector (same length as dbh), containing the
+#' @param species a character vector (same length as dbh), containing the
 #'   species (e.g. "rubra")  of each tree. Default is NULL, when no
-#'   identification is available.
-#' @param coords A numerical vector of length 2 with longitude and latitude (if
+#'   species identification is available.
+#' @param coords a numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
 #' @param new_eqtable Optional. An equation table created with the
 #'   new_equations() function.
-#' @param wna this parameter is used in the weighting function to determine the
+#' @param wna this parameter is used in the weight_allom function to determine the
 #'   dbh-related weight attributed to equations without a specified dbh range.
 #'   Default is 0.1
-#' @param w95 this parameter is used in the weighting function to determine the
+#' @param w95 this parameter is used in the weight_allom function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
 #'   value (max=1). Default is 500.
 #' @param Nres number of resampled values. Default is 1e4.
