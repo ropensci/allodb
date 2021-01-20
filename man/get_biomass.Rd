@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_biomass.R
 \name{get_biomass}
 \alias{get_biomass}
-\title{Compute tree aboveground biomass (AGB) base on allometric
+\title{Compute tree aboveground biomass (AGB) based on allometric
 equations.}
 \usage{
 get_biomass(
@@ -50,7 +50,7 @@ value (in kg) for every stem, or the dependent variable as defined in
 \code{var}.
 }
 \description{
-This function calculates the above ground biomass of a given tree (or other tree components) based on published allometric equations.
+This function calculates the aboveground biomass (or other tree components) of a given tree based on published allometric equations. Users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. The biomass of all trees in one (or several) censuses can be estimated using this function.
 }
 \details{
 The function can run into some memory problems when used on large datasets

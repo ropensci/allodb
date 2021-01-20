@@ -2,7 +2,7 @@
 % Please edit documentation in R/weight_allom.R
 \name{weight_allom}
 \alias{weight_allom}
-\title{Function to attribute weights for one species in one site.}
+\title{Attribute weights to equations}
 \usage{
 weight_allom(
   genus,
@@ -14,19 +14,19 @@ weight_allom(
 )
 }
 \arguments{
-\item{genus}{A character value, containing the genus (e.g. "Quercus") of the
+\item{genus}{a character value, containing the genus (e.g. "Quercus") of the
 tree.}
 
-\item{species}{A character vector (same length as genus), containing the
-species (e.g. "rubra") of the tree. Default is NULL, when no identification
+\item{species}{a character vector (same length as genus), containing the
+species (e.g. "rubra") of the tree. Default is NULL, when no species identification
 is available.}
 
-\item{coords}{A numerical vector of length 2 with longitude and latitude.}
+\item{coords}{a numerical vector of length 2 with longitude and latitude.}
 
 \item{new_eqtable}{Optional. An equation table created with the
 new_equations() function.}
 
-\item{wna}{this parameter is used in the weighting function to determine the
+\item{wna}{this parameter is used in the weight_allom function to determine the
 sample-size related weights attributed to equations without a specified
 sample size. Default is 0.1.}
 
@@ -38,7 +38,7 @@ Default is 500.}
 A vector with one weight for each equation.
 }
 \description{
-This function creates S3 objects of class "numeric".
+This function attributes a weight to each equation based on its sampling size, and taxonomic and climatic similarity with the species/site combination considered. It creates S3 objects of class "numeric".
 }
 \examples{
 weight_allom(

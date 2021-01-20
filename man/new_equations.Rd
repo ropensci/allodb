@@ -27,11 +27,11 @@ new_equations(
 \item{subset_taxa}{character vector with taxa to be kept. Default is \code{all},
 in which case all taxa are kept.}
 
-\item{subset_climate}{character vector with name of Koppen climate to be
+\item{subset_climate}{character vector with Koppen climate classification to be
 kept. Default is \code{all}, in which case all climates are kept.}
 
 \item{subset_region}{character vector with name of location(s) or
-country(ies) or broader region(s) (eg. \code{Europe}, \verb{North America}) to be kept. Default is \code{all}, in which case all regionsz/countries are
+country(ies) or broader region(s) (eg. \code{Europe}, \verb{North America}) to be kept. Default is \code{all}, in which case all regions/countries are
 kept.}
 
 \item{subset_ids}{character vector with equation IDs to be kept. Default is
@@ -81,7 +81,7 @@ Default is TRUE.}
 A new equation dataframe.
 }
 \description{
-This function modifies the equation table to be used in other functions of the package including: subset the original equation table, add new
+This function modifies the original equation table to be used in other functions of the package including: subset the original equation table, add new
 equations, and choose whether to include equations with a height allometry.
 }
 \examples{

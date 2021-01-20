@@ -5,7 +5,15 @@
 \alias{missing_values}
 \title{A table with explanations of missing values codes}
 \format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4 rows and 3 columns.
+A small data frame with 4 rows and 3 variables:\preformatted{	[,1]	Code	character
+	[,2]	Definition	character
+	[,3]	Description	character
+	```
+
+[,1]: R:,1
+[,2]: R:,2
+[,3]: R:,3
+}
 }
 \usage{
 missing_values
@@ -14,18 +22,6 @@ missing_values
 A list of codes used to indicate missing information in equation table:
 \itemize{
 \item \code{missing_values}: Table with explanations of missing values codes.
-}
-}
-\details{
-#' @format
-A small data frame with 4 rows and 3 variables:\preformatted{	[,1]	Code	character
-	[,2]	Definition	character
-	[,3]	Description	character
-	````
-
-[,1]: R:,1
-[,2]: R:,2
-[,3]: R:,3
 }
 }
 \seealso{

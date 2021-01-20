@@ -2,7 +2,7 @@
 % Please edit documentation in R/resample_agb.R
 \name{resample_agb}
 \alias{resample_agb}
-\title{Function to resample allodb equations to calibrate new allometries.}
+\title{Resample allo-db equations to calibrate new allometries.}
 \usage{
 resample_agb(
   genus,
@@ -15,22 +15,22 @@ resample_agb(
 )
 }
 \arguments{
-\item{genus}{A character value, containing the genus (e.g. "Quercus") of the
+\item{genus}{a character value, containing the genus (e.g. "Quercus") of the
 tree.}
 
-\item{species}{A character value, containing the species (e.g. "rubra") of
-the tree. Default is NULL, when no identification is available.}
+\item{species}{a character value, containing the species (e.g. "rubra") of
+the tree. Default is NULL, when no species identification is available.}
 
-\item{coords}{A numerical vector of length 2 with longitude and latitude.}
+\item{coords}{a numerical vector of length 2 with longitude and latitude.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-add_equation() function. Default is the base allodb equation table.}
+add_equation() function. Default is the original allodb equation table.}
 
-\item{wna}{this parameter is used in the weighting function to determine the
+\item{wna}{this parameter is used in the weight_allom function to determine the
 dbh-related and sample-size related weights attributed to equations without
 a specified dbh range or sample size, respectively. Default is 0.1}
 
-\item{w95}{this parameter is used in the weighting function to determine the
+\item{w95}{this parameter is used in the weight_allom function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is 500.}
 
@@ -42,7 +42,7 @@ table; the number of  resampled DBHs is proportional to the weight provided
 by the \code{weight_allom} function.
 }
 \description{
-This function creates S3 objects of class "numeric".
+After attributing a weight to each equation in allo-db using the weight_allom function, equations are then resampled within their original DBH range using \code{resample_agb}: the number of resampled values for each equation is proportional to its weight .It creates S3 objects of class "numeric".
 }
 \examples{
 resample_agb(
