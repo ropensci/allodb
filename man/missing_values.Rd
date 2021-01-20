@@ -9,11 +9,6 @@ A small data frame with 4 rows and 3 variables:\preformatted{	[,1]	Code	characte
 	[,2]	Definition	character
 	[,3]	Description	character
 
-	```
-
-[,1]: R:,1
-[,2]: R:,2
-[,3]: R:,3
 }
 }
 \usage{
