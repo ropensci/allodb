@@ -76,19 +76,19 @@
 #'  A list of codes used to indicate missing information in equation table:
 #'* `missing_values`: Table with explanations of missing values codes.
 #'
-#'#' @format
+#' @format
 #' A small data frame with 4 rows and 3 variables:
 #' ```
 #' 	[,1]	Code	character
 #' 	[,2]	Definition	character
 #' 	[,3]	Description	character
-#' 	````
+#' 	```
 #' @family database datasets
 "missing_values"
 
 #' Tables of sites and tree species used in allo-db and associated metadata.
 #'
-#' * `sitespecies`: Table of extratropical ForestGEO sites (n=24) and their tree species.
+#' * `sitespecies`: Table of extratropical ForestGEO sites used in allo-db (n=24) and their tree species.
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
 #'#' @format
