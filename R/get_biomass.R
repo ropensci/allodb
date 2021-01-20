@@ -1,7 +1,7 @@
-#' Compute tree aboveground biomass (AGB) base on allometric
+#' Compute tree aboveground biomass (AGB) based on allometric
 #' equations.
 #'
-#' This function calculates the above ground biomass of a given tree (or other tree components) based on published allometric equations.
+#' This function calculates the aboveground biomass (or other tree components) of a given tree based on published allometric equations. Users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. The biomass of all trees in one (or several) censuses can be estimated using this function.
 #'
 #' The function can run into some memory problems when used on large datasets
 #' (usually several hundred thousand observations). In that case, see the second
