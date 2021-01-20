@@ -40,7 +40,7 @@ weight_allom <- function(genus,
   } else dfequation <- new_equations()
 
   ### sample size weight ####
-  b = log(20) / w95
+  b <- log(20) / w95
   suppressWarnings(dfequation$wN <- (1 - exp(-b * as.numeric(dfequation$sample_size))))
   dfequation$wN[is.na(dfequation$wN)] <- wna
 
