@@ -189,6 +189,8 @@ head(params)
 
 AGB is then recalculated as `agb = exp(a) * dbh^b * exp(0.5 * sigma^2)` within the `get_biomass()` function. 
 
+The term `exp(0.5 * sigma^2)` is used to correct the bias in the back-transformed mean prediction, as preconized in Baskerville  (1972). 
+
 ## Visualize the recalibration of equations
 
 The recalibrated equation for one taxon/location combination can be easily visualized with the `illustrate_allodb()` function, which returns a ggplot (see package `ggplot2`) with all resampled values, and the top equations used in the legend. The user can control the number of equations and equation information displayed in the legend. The red dotted line is the recalibrated equation used in the `get_biomass()` function. 
