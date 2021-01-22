@@ -28,8 +28,8 @@
 #' @param Nres number of resampled values. Default is 1e4.
 #'
 #' @return A vector of class "numeric" of the same length as dbh, containing AGB
-#'   value (in kg) for every stem, or the dependent variable as defined in
-#'   `var`.
+#'   value (in kg) for every stem
+#'
 #' @export
 #'
 #' @examples
