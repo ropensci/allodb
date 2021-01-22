@@ -1,4 +1,4 @@
-#' Modify the equation table
+#' Modify the original equation table
 #'
 #' This function modifies the original equation table to be used in other functions of the package including: subset the original equation table, add new
 #' equations, and choose whether to include equations with a height allometry.
@@ -18,7 +18,7 @@
 #'   `Branches (live)`, `Branches total (live, dead)`, `Foliage total`,
 #'   `Height`, `Leaves`, `Stem (wood only)`, `Stem biomass`, `Stem biomass (with
 #'   bark)`, `Stem biomass (without bark)`, `Whole tree (above and
-#'   belowground)`. Be aware that only a few equations exist for those other
+#'   belowground)`. Be aware that currently only a few equations represent those other
 #'   variables, so estimated values might not be very accurate.
 #' @param new_taxa character string or vector specifying the taxon (or taxa) for
 #'   which the allometry has been calibrated
@@ -40,8 +40,7 @@
 #'   `DBH`, other option is `DBH, H`.
 #' @param new_outputVar dependent variable estimated by the allometry. Default is
 #'   `Total aboveground biomass`.
-#' @param use_height_allom a logical value: should the height allometries from
-#'   Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
+#' @param use_height_allom a logical value. In allodb we use Bohn et al (2014) for European sites.User need to provide height allometry when nneded to calculate AGB.
 #'   Default is TRUE.
 #'
 #' @return A new equation dataframe.
