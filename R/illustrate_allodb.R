@@ -1,11 +1,11 @@
-#' Function to illustate the resampling of AGB values used in allodb.
+#' Illustrate the resampling of AGB values used in allodb.
 #'
-#' This function creates objects of class "ggplot".
+#' This function illustrates the resampling of AGB values used in allodb. It creates objects of class "ggplot".
 #'
 #' @param genus A character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
 #' @param species A character value, containing the species (e.g. "rubra") of
-#'   the tree. Default is `NULL`, when no identification is available.
+#'   the tree. Default is `NULL`, when no species identification is available.
 #' @param coords A numerical vector of length 2 with longitude and latitude.
 #' @param new_eqtable Optional. An equation table created with the
 #'   `add_equation()` function. Default is the base allodb equation table.
