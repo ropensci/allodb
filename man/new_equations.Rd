@@ -2,7 +2,7 @@
 % Please edit documentation in R/new_equations.R
 \name{new_equations}
 \alias{new_equations}
-\title{Modify the equation table}
+\title{Modify the original equation table}
 \usage{
 new_equations(
   subset_taxa = "all",
@@ -40,7 +40,7 @@ kept.}
 \item{subset_output}{What dependent variable(s) should be provided in the
 output? Default is \verb{Total aboveground biomass} and \verb{Whole tree (above stump)}, other possible values are: \verb{Bark biomass}, \code{Branches (dead)},
 \code{Branches (live)}, \verb{Branches total (live, dead)}, \verb{Foliage total},
-\code{Height}, \code{Leaves}, \verb{Stem (wood only)}, \verb{Stem biomass}, \verb{Stem biomass (with bark)}, \verb{Stem biomass (without bark)}, \verb{Whole tree (above and belowground)}. Be aware that only a few equations exist for those other
+\code{Height}, \code{Leaves}, \verb{Stem (wood only)}, \verb{Stem biomass}, \verb{Stem biomass (with bark)}, \verb{Stem biomass (without bark)}, \verb{Whole tree (above and belowground)}. Be aware that currently only a few equations represent those other
 variables, so estimated values might not be very accurate.}
 
 \item{new_taxa}{character string or vector specifying the taxon (or taxa) for
@@ -73,8 +73,7 @@ height).}
 \item{new_outputVar}{dependent variable estimated by the allometry. Default is
 \verb{Total aboveground biomass}.}
 
-\item{use_height_allom}{a logical value: should the height allometries from
-Bohn et al (2014) be used in the AGB allometries from Jansen et al (1996)?
+\item{use_height_allom}{a logical value. In allodb we use Bohn et al (2014) for European sites.User need to provide height allometry when nneded to calculate AGB.
 Default is TRUE.}
 }
 \value{

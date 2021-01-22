@@ -6,7 +6,7 @@
 \alias{references_metadata}
 \title{Tables of equation references and associated metadata}
 \format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 56 rows and 6 columns.
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 57 rows and 6 columns.
 
 An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 7 rows and 4 columns.
 }
@@ -16,7 +16,7 @@ references
 references_metadata
 }
 \description{
-Bibliography from where equations where sourced. Links to equations table by ref_id.
+Bibliography where equations where sourced. Links to equations table by ref_id.
 }
 \details{
 \itemize{

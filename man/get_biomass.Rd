@@ -46,8 +46,7 @@ value (max=1). Default is 500.}
 }
 \value{
 A vector of class "numeric" of the same length as dbh, containing AGB
-value (in kg) for every stem, or the dependent variable as defined in
-\code{var}.
+value (in kg) for every stem
 }
 \description{
 This function calculates the aboveground biomass (or other tree components) of a given tree based on published allometric equations. Users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. The biomass of all trees in one (or several) censuses can be estimated using this function.

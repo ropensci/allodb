@@ -2,7 +2,7 @@
 % Please edit documentation in R/illustrate_allodb.R
 \name{illustrate_allodb}
 \alias{illustrate_allodb}
-\title{Function to illustate the resampling of AGB values used in allodb.}
+\title{Illustrate the resampling of AGB values used in allodb.}
 \usage{
 illustrate_allodb(
   genus,
@@ -22,7 +22,7 @@ illustrate_allodb(
 tree.}
 
 \item{species}{A character value, containing the species (e.g. "rubra") of
-the tree. Default is \code{NULL}, when no identification is available.}
+the tree. Default is \code{NULL}, when no species identification is available.}
 
 \item{coords}{A numerical vector of length 2 with longitude and latitude.}
 
@@ -54,7 +54,7 @@ are shown in the legend. The red curve on the graph represents the final
 fitted equation.
 }
 \description{
-This function creates objects of class "ggplot".
+This function illustrates the resampling of AGB values used in allodb. It creates objects of class "ggplot".
 }
 \examples{
 illustrate_allodb(
