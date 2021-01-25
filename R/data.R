@@ -90,9 +90,10 @@
 #' Tables of sites and tree species used in allo-db and associated metadata.
 #'
 #' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and their tree species.
+#'
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
-#'#' @format
+#' @format
 #' A data frame with 1114 rows and 10 variables:
 #' ```
 #' [,1]	site	character
@@ -104,7 +105,7 @@
 #' [,7]	latin_name	character
 #' [,8]	species_code	character
 #' [,9]	life_form	character
-#' [,10]	warning	character
+#' [,10]	notes	character
 #'
 #'```
 #' @family database datasets
@@ -121,7 +122,7 @@
 #' * `references`: A dataframe listing all references used in equation table.
 #' * `references_metadata`: Table of metadata of `reference`.
 #'
-#'#'#' @format
+#' @format
 #' A data frame with 57 rows and 6 variables:
 #' ```
 #' [,1]	ref_id	character
