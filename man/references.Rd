@@ -6,7 +6,14 @@
 \alias{references_metadata}
 \title{Tables of equation references and associated metadata}
 \format{
-An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 57 rows and 6 columns.
+A data frame with 57 rows and 6 variables:\preformatted{[,1]	ref_id	character
+[,2]	ref_doi	character
+[,3]	ref_author	character
+[,4]	ref_year	integer
+[,5]	ref_title	character
+[,6]	References full citation	character
+
+}
 
 An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 7 rows and 4 columns.
 }
@@ -16,22 +23,12 @@ references
 references_metadata
 }
 \description{
-Bibliography where equations where sourced. Links to equations table by ref_id.
+Bibliographical info for sourced equations. Links to equations table by ref_id.
 }
 \details{
 \itemize{
 \item \code{references}: A dataframe listing all references used in equation table.
 \item \code{references_metadata}: Table of metadata of \code{reference}.
-}
-
-#'#' @format
-A data frame with 57 rows and 6 variables:\preformatted{[,1]	ref_id	character
-[,2]	ref_doi	character
-[,3]	ref_author	character
-[,4]	ref_year	integer
-[,5]	ref_title	character
-[,6]	References full citation	character
-
 }
 }
 \seealso{
