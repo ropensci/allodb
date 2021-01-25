@@ -117,7 +117,7 @@
 
 #' Tables of equation references and associated metadata
 #'
-#' Bibliography info where equations were sourced. Links to equations table by ref_id.
+#' Bibliographical info for sourced equations. Links to equations table by ref_id.
 #'
 #' * `references`: A dataframe listing all references used in equation table.
 #' * `references_metadata`: Table of metadata of `reference`.
