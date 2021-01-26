@@ -2,7 +2,10 @@ context("Test the resample_agb() function")
 library(allodb)
 
 test_that("resample_agb returns a dataframe of size 1e6 x 3", {
-  res_test <- resample_agb(genus = "Quercus", species = "alba", coords = c(-78, 40))
+  res_test <-
+    resample_agb(genus = "Quercus",
+                 species = "alba",
+                 coords = c(-78, 40))
   expect_is(res_test, "data.frame")
   expect_equal(nrow(res_test), 1e6, tolerance = 1e2)
   expect_equal(ncol(res_test), 3)
@@ -11,10 +14,16 @@ test_that("resample_agb returns a dataframe of size 1e6 x 3", {
   expect_is(res_test$agb, "numeric")
 })
 
-test_that("resample_agb returns an error message when more than one taxon/location are used at once", {
-  expect_error(resample_agb(genus = c("Fagus", "Quercus"), coords = c(-78, 40)))
-  expect_error(resample_agb(genus = c("Fagus"), coords = rbind(c(-78, 40), c(-85, 45))))
-})
+test_that(
+  "resample_agb returns an error message when more than one taxon/location are used at once",
+  {
+    expect_error(resample_agb(
+      genus = c("Fagus", "Quercus"),
+      coords = c(-78, 40)
+    ))
+    expect_error(resample_agb(genus = c("Fagus"), coords = rbind(c(-78, 40), c(-85, 45))))
+  }
+)
 
 test_that("resample_agb can be used with a new equation table", {
   expect_is(

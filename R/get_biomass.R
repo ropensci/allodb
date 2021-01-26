@@ -1,7 +1,10 @@
-#' Compute tree aboveground biomass (AGB) based on allometric
-#' equations.
+#' Compute tree aboveground biomass (AGB) based on allometric equations.
 #'
-#' This function calculates the aboveground biomass (or other tree components) of a given tree based on published allometric equations. Users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. The biomass of all trees in one (or several) censuses can be estimated using this function.
+#' This function calculates the aboveground biomass (or other tree components)
+#' of a given tree based on published allometric equations. Users need to
+#' provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names,
+#' and site(s) coordinates. The biomass of all trees in one (or several)
+#' censuses can be estimated using this function.
 #'
 #' The function can run into some memory problems when used on large datasets
 #' (usually several hundred thousand observations). In that case, see the second
@@ -12,19 +15,19 @@
 #' @param genus a character vector (same length as dbh), containing the genus
 #'   (e.g. "Quercus") of each tree.
 #' @param species a character vector (same length as dbh), containing the
-#'   species (e.g. "rubra")  of each tree. Default is NULL, when no
-#'   species identification is available.
+#'   species (e.g. "rubra")  of each tree. Default is NULL, when no species
+#'   identification is available.
 #' @param coords a numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
 #' @param new_eqtable Optional. An equation table created with the
 #'   new_equations() function.
-#' @param wna this parameter is used in the weight_allom function to determine the
-#'   dbh-related weight attributed to equations without a specified dbh range.
-#'   Default is 0.1
-#' @param w95 this parameter is used in the weight_allom function to determine the
-#'   value at which the sample-size-related weight reaches 95% of its maximum
-#'   value (max=1). Default is 500.
+#' @param wna this parameter is used in the weight_allom function to determine
+#'   the dbh-related weight attributed to equations without a specified dbh
+#'   range. Default is 0.1
+#' @param w95 this parameter is used in the weight_allom function to determine
+#'   the value at which the sample-size-related weight reaches 95% of its
+#'   maximum value (max=1). Default is 500.
 #' @param Nres number of resampled values. Default is 1e4.
 #'
 #' @return A vector of class "numeric" of the same length as dbh, containing AGB
@@ -42,7 +45,9 @@
 #' )
 #'
 #' # split dataset to avoid memory over usage
-#' data_split <- split(scbi_stem1, cut(1:nrow(scbi_stem1), breaks = 10, labels = FALSE))
+# data_split <- split(scbi_stem1, cut(1:nrow(scbi_stem1),
+#                                     breaks = 10,
+#                                     labels = FALSE))
 #' agb <- lapply(data_split, function(df) {
 #'   get_biomass(
 #'     dbh = df$dbh,
@@ -60,12 +65,13 @@ get_biomass <- function(dbh,
                         wna = 0.1,
                         w95 = 500,
                         Nres = 1e4) {
-
   if (!is.null(new_eqtable)) {
     dfequation <- new_eqtable
-  } else dfequation <- new_equations()
+  } else
+    dfequation <- new_equations()
 
-  params <- est_params(genus, species, coords, dfequation, wna, w95, Nres)
+  params <-
+    est_params(genus, species, coords, dfequation, wna, w95, Nres)
 
   if (length(unlist(coords)) == 2) {
     coords <- matrix(coords, ncol = 2)
@@ -73,15 +79,19 @@ get_biomass <- function(dbh,
   colnames(coords) <- c("long", "lat")
 
   if (!is.null(species)) {
-    df <- merge(data.frame(id = 1:length(dbh), dbh, genus, species, coords),
-                params, by = c("genus", "species", "long", "lat"))
-  } else  df <- merge(data.frame(id = 1:length(dbh), dbh, genus, coords),
-                      params, by = c("genus", "long", "lat"))
+    df <-
+      merge(
+        data.frame(id = 1:length(dbh), dbh, genus, species, coords),
+        params,
+        by = c("genus", "species", "long", "lat")
+      )
+  } else
+    df <- merge(data.frame(id = 1:length(dbh), dbh, genus, coords),
+                params,
+                by = c("genus", "long", "lat"))
 
-  df <- df[order(df$id),]
-  agb <- exp(df$a) * df$dbh^df$b * exp(0.5 * df$sigma^2)
+  df <- df[order(df$id), ]
+  agb <- exp(df$a) * df$dbh ^ df$b * exp(0.5 * df$sigma ^ 2)
 
   return(agb)
 }
-
-

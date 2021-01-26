@@ -3,10 +3,9 @@
 #' Tables of allometric equations and associated metadata.
 #'
 #' A compilation of best available allometry equations to calculate tree
-#' above-ground biomass (AGB) per species based on
-#' extratropical ForestGEO sites:
-#' * `equations`: Table of allometric equations.
-#' * `equations_metadata`: Metadata for `equations` table.
+#' above-ground biomass (AGB) per species based on extratropical ForestGEO
+#' sites: * `equations`: Table of allometric equations. * `equations_metadata`:
+#' Metadata for `equations` table.
 #'
 #' @details
 #'
@@ -89,7 +88,8 @@
 
 #' Tables of sites and tree species used in allo-db and associated metadata.
 #'
-#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and their tree species.
+#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and
+#' their tree species.
 #'
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
@@ -117,10 +117,11 @@
 
 #' Tables of equation references and associated metadata
 #'
-#' Bibliographical info for sourced equations. Links to equations table by ref_id.
+#' Bibliographical info for sourced equations. Links to equations table by
+#' ref_id.
 #'
-#' * `references`: A dataframe listing all references used in equation table.
-#' * `references_metadata`: Table of metadata of `reference`.
+#' * `references`: A dataframe listing all references used in equation table. *
+#' `references_metadata`: Table of metadata of `reference`.
 #'
 #' @format
 #' A data frame with 57 rows and 6 variables:

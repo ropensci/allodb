@@ -1,6 +1,7 @@
 #' Illustrate the resampling of AGB values used in allodb.
 #'
-#' This function illustrates the resampling of AGB values used in allodb. It creates objects of class "ggplot".
+#' This function illustrates the resampling of AGB values used in allodb. It
+#' creates objects of class "ggplot".
 #'
 #' @param genus A character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
@@ -44,35 +45,45 @@ illustrate_allodb <- function(genus,
                               eqinfo = "equation_taxa",
                               wna = 0.1,
                               w95 = 500,
-                              Nres = 1e4
-) {
+                              Nres = 1e4) {
+  dfagb <-
+    resample_agb(genus, species, coords, new_eqtable, wna, w95, Nres)
+  params <-
+    est_params(genus, species, coords, new_eqtable, wna, w95)
+  pred <-
+    function(x)
+      exp(params$a + 0.5 * params$sigma ** 2) * x ** params$b
 
-  dfagb <- resample_agb(genus, species, coords, new_eqtable, wna, w95, Nres)
-  params <- est_params(genus, species, coords, new_eqtable, wna, w95)
-  pred <- function(x) exp(params$a + 0.5*params$sigma**2) * x ** params$b
-
-  if (is.null(new_eqtable)){
+  if (is.null(new_eqtable)) {
     equations <- new_equations()
-  } else equations <- new_eqtable
+  } else
+    equations <- new_eqtable
 
   ## get equation info
   eq_info <- apply(equations[, c("equation_id", eqinfo)], 1,
-                   function(x) paste(x, collapse = " - "))
+                   function(x)
+                     paste(x, collapse = " - "))
   eq_info <- data.frame(equation_id = equations$equation_id,
                         equation = eq_info)
   dfcounts <- data.frame(table(equation_id = dfagb$equation_id))
   eq_info <- merge(eq_info, dfcounts, by = "equation_id")
-  eq_info <- eq_info[order(eq_info$Freq, decreasing = TRUE),]
-  eq_info[(neq+1):nrow(eq_info), "equation"] <- "other"
-  eq_info$equation <- factor(eq_info$equation, levels = unique(eq_info$equation))
+  eq_info <- eq_info[order(eq_info$Freq, decreasing = TRUE), ]
+  eq_info[(neq + 1):nrow(eq_info), "equation"] <- "other"
+  eq_info$equation <-
+    factor(eq_info$equation, levels = unique(eq_info$equation))
   dfagb <- merge(dfagb, eq_info, by = "equation_id")
 
   g <- ggplot2::ggplot(dfagb, ggplot2::aes(x = dbh, y = agb)) +
-    ggplot2::geom_point(data = subset(dfagb, equation=="other"),
+    ggplot2::geom_point(data = subset(dfagb, equation == "other"),
                         alpha = 0.2) +
-    ggplot2::geom_point(data = subset(dfagb, equation!="other"),
+    ggplot2::geom_point(data = subset(dfagb, equation != "other"),
                         ggplot2::aes(col = equation)) +
-    ggplot2::stat_function(fun = pred, lwd = 2, col = 2, lty = 2) +
+    ggplot2::stat_function(
+      fun = pred,
+      lwd = 2,
+      col = 2,
+      lty = 2
+    ) +
     ggplot2::theme_classic() +
     ggplot2::labs(x = "DBH (cm)",
                   y = "AGB (kg)",

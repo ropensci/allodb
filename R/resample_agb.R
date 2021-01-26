@@ -1,6 +1,9 @@
 #' Resample allo-db equations to calibrate new allometries.
 #'
-#' After attributing a weight to each equation in allo-db using the weight_allom function, equations are then resampled within their original DBH range using `resample_agb`: the number of resampled values for each equation is proportional to its weight .It creates S3 objects of class "numeric".
+#' After attributing a weight to each equation in allo-db using the weight_allom
+#' function, equations are then resampled within their original DBH range using
+#' `resample_agb`: the number of resampled values for each equation is
+#' proportional to its weight .It creates S3 objects of class "numeric".
 #'
 #' @param genus a character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
@@ -9,12 +12,12 @@
 #' @param coords a numerical vector of length 2 with longitude and latitude.
 #' @param new_eqtable Optional. An equation table created with the
 #'   add_equation() function. Default is the original allodb equation table.
-#' @param wna this parameter is used in the weight_allom function to determine the
-#'   dbh-related and sample-size related weights attributed to equations without
-#'   a specified dbh range or sample size, respectively. Default is 0.1
-#' @param w95 this parameter is used in the weight_allom function to determine the
-#'   value at which the sample-size-related weight reaches 95% of its maximum
-#'   value (max=1). Default is 500.
+#' @param wna this parameter is used in the weight_allom function to determine
+#'   the dbh-related and sample-size related weights attributed to equations
+#'   without a specified dbh range or sample size, respectively. Default is 0.1
+#' @param w95 this parameter is used in the weight_allom function to determine
+#'   the value at which the sample-size-related weight reaches 95% of its
+#'   maximum value (max=1). Default is 500.
 #' @param Nres number of resampled values. Default is 1e4.
 #'
 #' @return A data frame of resampled DBHs and associated AGB from the equation
@@ -35,29 +38,30 @@ resample_agb <- function(genus,
                          new_eqtable = NULL,
                          wna = 0.1,
                          w95 = 500,
-                         Nres = 1e4
-) {
-
+                         Nres = 1e4) {
   if (length(genus) > 1 | length(unlist(coords)) != 2)
     stop("This function should not be used for several taxa and/or locations at once.")
 
   if (!is.null(new_eqtable)) {
     dfequation <- new_eqtable
-  } else dfequation <- new_equations()
+  } else
+    dfequation <- new_equations()
 
-  weights <- weight_allom(genus = genus,
-                          species = species,
-                          coords = coords,
-                          new_eqtable = dfequation,
-                          wna = wna,
-                          w95 = w95)
+  weights <- weight_allom(
+    genus = genus,
+    species = species,
+    coords = coords,
+    new_eqtable = dfequation,
+    wna = wna,
+    w95 = w95
+  )
   weights <- data.table::data.table(weight = weights,
                                     equation_id = names(weights))
   if ("weight" %in% colnames(dfequation))
     dfequation$weight <- NULL
   dfequation <- merge(dfequation, weights, by = "equation_id")
-  dfequation$weight <- dfequation$weight/sum(dfequation$weight)
-  dfequation$resample <- floor(dfequation$weight*Nres)
+  dfequation$weight <- dfequation$weight / sum(dfequation$weight)
+  dfequation$resample <- floor(dfequation$weight * Nres)
   dfsub <- subset(dfequation, resample > 0)[, c(
     "dbh_min_cm",
     "dbh_max_cm",
@@ -78,20 +82,23 @@ resample_agb <- function(genus,
   ## if possible, introduce some randomness
   ## when we have some information from the allometry: use it,
   ## otherwise use a conservative sigma
-  if (nrow(dfsub) == 1) {  ## only 1 equation selected
+  if (nrow(dfsub) == 1) {
+    ## only 1 equation selected
     list_dbh <- c(list_dbh)
     sampled_dbh <- list_dbh
     orig_equation <- dfsub$equation_allometry
     new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_CF, ")")
     new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
-    list_agb <- eval(parse(text = new_equation)) * dfsub$output_units_CF
+    list_agb <-
+      eval(parse(text = new_equation)) * dfsub$output_units_CF
   } else {
     list_agb <- lapply(1:length(list_dbh), function(j) {
       sampled_dbh <- list_dbh[[j]]
       orig_equation <- dfsub$equation_allometry[j]
       new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_CF[j], ")")
       new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
-      agb <- eval(parse(text = new_equation)) * dfsub$output_units_CF[j]
+      agb <-
+        eval(parse(text = new_equation)) * dfsub$output_units_CF[j]
     })
   }
 
