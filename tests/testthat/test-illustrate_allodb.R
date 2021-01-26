@@ -61,8 +61,8 @@ test_that("The top neq equations are displayed", {
   tab <- tab[order(tab$Freq, decreasing = TRUE), ]
   topfreq <- tab$equation_id[1:15]
   legeq <-
-    sapply(strsplit(levels(g$data$equation), " - "), function(x)
-      x[1])
+    vapply(strsplit(levels(g$data$equation), " - "), function(x)
+      x[1], FUN.VALUE = "x")
 
   expect_is(g, "ggplot")
   expect_true(all(topfreq %in% legeq))

@@ -58,7 +58,7 @@ est_params <- function(genus,
   dfobs <- unique(data.table::data.table(genus, species, coords))
 
   coefs <- c()
-  for (i in 1:nrow(dfobs)) {
+  for (i in seq_len(nrow(dfobs))) {
     df <- resample_agb(genus = dfobs$genus[i],
                        species = dfobs$species[i],
                        coords = dfobs[i, c("long","lat")],

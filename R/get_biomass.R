@@ -81,12 +81,12 @@ get_biomass <- function(dbh,
   if (!is.null(species)) {
     df <-
       merge(
-        data.frame(id = 1:length(dbh), dbh, genus, species, coords),
+        data.frame(id = seq_len(length(dbh)), dbh, genus, species, coords),
         params,
         by = c("genus", "species", "long", "lat")
       )
   } else
-    df <- merge(data.frame(id = 1:length(dbh), dbh, genus, coords),
+    df <- merge(data.frame(id = seq_len(length(dbh)), dbh, genus, coords),
                 params,
                 by = c("genus", "long", "lat"))
 

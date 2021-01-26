@@ -52,12 +52,12 @@
 #'
 #' @examples
 #' dfequation <- new_equations(
-#'   new_taxa = "Faga",
-#'   new_allometry = "exp(-2+log(dbh)*2.5)",
-#'   new_coords = c(-0.07, 46.11),
-#'   new_minDBH = 5,
-#'   new_maxDBH = 50,
-#'   new_sampleSize = 50
+  # new_taxa = "Faga",
+  # new_allometry = "exp(-2+log(dbh)*2.5)",
+  # new_coords = c(-0.07, 46.11),
+  # new_minDBH = 5,
+  # new_maxDBH = 50,
+  # new_sampleSize = 50
 #' )
 new_equations <- function(subset_taxa = "all",
                           subset_climate = "all",
@@ -126,26 +126,26 @@ new_equations <- function(subset_taxa = "all",
 
   ## subset equation table ####
   if (any(subset_taxa != "all")) {
-    keep <- sapply(new_equations$equation_taxa, function(tax0) {
-      any(sapply(subset_taxa, function(i)
-        grepl(i, tax0)))
-    })
+    keep <- vapply(new_equations$equation_taxa, function(tax0) {
+      any(vapply(subset_taxa, function(i)
+        grepl(i, tax0), FUN.VALUE = TRUE))
+    }, FUN.VALUE = TRUE)
     new_equations <- new_equations[keep, ]
   }
 
   if (any(subset_climate != "all")) {
-    keep <- sapply(new_equations$koppen, function(clim0) {
-      any(sapply(subset_climate, function(i)
-        grepl(i, clim0)))
-    })
+    keep <- vapply(new_equations$koppen, function(clim0) {
+      any(vapply(subset_climate, function(i)
+        grepl(i, clim0), FUN.VALUE = TRUE))
+    }, FUN.VALUE = TRUE)
     new_equations <- new_equations[keep, ]
   }
 
   if (any(subset_region != "all")) {
-    keep <- sapply(new_equations$geographic_area, function(reg0) {
-      any(sapply(subset_region, function(i)
-        grepl(i, reg0)))
-    })
+    keep <- vapply(new_equations$geographic_area, function(reg0) {
+      any(vapply(subset_region, function(i)
+        grepl(i, reg0), FUN.VALUE = TRUE))
+    }, FUN.VALUE = TRUE)
     new_equations <- new_equations[keep, ]
   }
 
@@ -252,7 +252,7 @@ new_equations <- function(subset_taxa = "all",
       stop("At least one of the new allometries does not contain DBH as a dependent variable.")
     }
 
-    equationID <- paste0("new", 1:length(new_taxa))
+    equationID <- paste0("new", seq_len(length(new_taxa)))
     coordsEq <- cbind(long = new_coords[, 1],
                       lat = new_coords[, 2])
     climates <- allodb::koppenRaster@data@attributes[[1]][, 2]

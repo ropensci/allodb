@@ -61,7 +61,7 @@ weight_allom <- function(genus,
     kopp <- tolower(unlist(strsplit(kopp, ", |; |,|;")))
     max(subset(kopmatrix, tolower(zone2) %in% kopp)$wE)
   }
-  dfequation$wE <- sapply(dfequation$koppen, compare_koppen)
+  dfequation$wE <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
 
   ### taxo weight ####
   ## 'clean' equation taxa column and separate several taxa
@@ -74,7 +74,7 @@ weight_allom <- function(genus,
   taxa <-
     data.table::tstrsplit(dfequation$equation_taxa, "/| / | /|/ ")
   taxa <- do.call(cbind, taxa)
-  colnames(taxa) <- paste0("taxa", 1:ncol(taxa))
+  colnames(taxa) <- paste0("taxa", seq_len(ncol(taxa)))
   dfequation <- cbind(dfequation, taxa)
   ## get family of input genus
   genus_obs <- tolower(genus)
