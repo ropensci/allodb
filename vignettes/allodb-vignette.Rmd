@@ -68,9 +68,8 @@ eq_tab_add <- new_equations(new_taxa = c("Quercus ilex", "Castanea sativa"),
                             new_minDBH = c(5, 10),
                             new_maxDBH = c(35, 68),
                             new_sampleSize = c(143, 62))
-## show added equations first
-eq_tab_add <- eq_tab_add[order(eq_tab_add$equation_id, decreasing = TRUE),]
-head(eq_tab_add[, show_cols])
+## show added equations - they contain "new" in their equation_id
+head(eq_tab_add[grepl("new", eq_tab_add$equation_id), ])
 ```
 
 
