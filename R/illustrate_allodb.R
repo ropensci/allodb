@@ -50,9 +50,7 @@ illustrate_allodb <- function(genus,
     resample_agb(genus, species, coords, new_eqtable, wna, w95, Nres)
   params <-
     est_params(genus, species, coords, new_eqtable, wna, w95)
-  pred <-
-    function(x)
-      exp(params$a + 0.5 * params$sigma ** 2) * x ** params$b
+  pred <- function(x) params$a * x ** params$b
 
   if (is.null(new_eqtable)) {
     equations <- new_equations()

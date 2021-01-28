@@ -23,10 +23,8 @@
 #'   maximum value (max=1). Default is 500.
 #' @param Nres number of resampled values. Default is 1e4.
 #'
-#' @return A data frame of fitted coefficients (columns) of the log-log
-#'   regression: a (intercept), b (slope) and sigma (standard deviation). Each
-#'   row corresponds to a species x site combination. The back-transformed
-#'   equation is then AGB = exp(a) x DBH^b x + exp(0.5 x sigma^2).
+#' @return A data frame of fitted coefficients (columns) of the non-linear
+#'   least-square regression AGB = a * dbh ^ b + e,  with e ~ N(0, sigma^2)
 #' @export
 #'
 #' @examples
@@ -66,8 +64,11 @@ est_params <- function(genus,
                        wna = wna,
                        w95 = w95,
                        Nres = Nres)
-
-    reg <- summary(lm(log(agb) ~ log(dbh), data = df))
+    ## special case: only one equation is resampled and it's of the form a*x^b
+    ## nls will throw an error: add some 'grain' by adding 1 slightly different
+    ## data point (it won't change the final results)
+    if (length(unique(df$equation_id)) == 1) df[1, 3] <- df[1, 3]*1.01
+    reg <- summary(nls(agb ~ a * dbh ** b, start = c(a = 0.5, b = 2), data = df))
     coefs <- rbind(coefs, c(reg$coefficients[, "Estimate"], reg$sigma))
   }
   colnames(coefs) <- c("a", "b", "sigma")
