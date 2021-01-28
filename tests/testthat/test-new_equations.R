@@ -123,7 +123,7 @@ test_that("new_equations() can be subsetted by type of output", {
 })
 
 test_that(
-  "equations can be added to the equation dataframe adn then used in the get_biomass function",
+  "equations can be added to the equation dataframe and then used in the get_biomass function",
   {
     all_eqtab <-
       new_equations(
