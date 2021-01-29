@@ -18,16 +18,16 @@ weight_allom(
 tree.}
 
 \item{species}{a character vector (same length as genus), containing the
-species (e.g. "rubra") of the tree. Default is NULL, when no species identification
-is available.}
+species (e.g. "rubra") of the tree. Default is NULL, when no species
+identification is available.}
 
 \item{coords}{a numerical vector of length 2 with longitude and latitude.}
 
 \item{new_eqtable}{Optional. An equation table created with the
 new_equations() function.}
 
-\item{wna}{this parameter is used in the weight_allom function to determine the
-sample-size related weights attributed to equations without a specified
+\item{wna}{this parameter is used in the weight_allom function to determine
+the sample-size related weights attributed to equations without a specified
 sample size. Default is 0.1.}
 
 \item{w95}{this parameter is used to determine the value at which the
@@ -38,7 +38,9 @@ Default is 500.}
 A vector with one weight for each equation.
 }
 \description{
-This function attributes a weight to each equation based on its sampling size, and taxonomic and climatic similarity with the species/site combination considered. It creates S3 objects of class "numeric".
+This function attributes a weight to each equation based on its sampling
+size, and taxonomic and climatic similarity with the species/site combination
+considered. It creates S3 objects of class "numeric".
 }
 \examples{
 weight_allom(

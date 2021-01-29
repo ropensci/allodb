@@ -26,13 +26,13 @@ the tree. Default is NULL, when no species identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 add_equation() function. Default is the original allodb equation table.}
 
-\item{wna}{this parameter is used in the weight_allom function to determine the
-dbh-related and sample-size related weights attributed to equations without
-a specified dbh range or sample size, respectively. Default is 0.1}
+\item{wna}{this parameter is used in the weight_allom function to determine
+the dbh-related and sample-size related weights attributed to equations
+without a specified dbh range or sample size, respectively. Default is 0.1}
 
-\item{w95}{this parameter is used in the weight_allom function to determine the
-value at which the sample-size-related weight reaches 95\% of its maximum
-value (max=1). Default is 500.}
+\item{w95}{this parameter is used in the weight_allom function to determine
+the value at which the sample-size-related weight reaches 95\% of its
+maximum value (max=1). Default is 500.}
 
 \item{Nres}{number of resampled values. Default is 1e4.}
 }
@@ -42,7 +42,10 @@ table; the number of  resampled DBHs is proportional to the weight provided
 by the \code{weight_allom} function.
 }
 \description{
-After attributing a weight to each equation in allo-db using the weight_allom function, equations are then resampled within their original DBH range using \code{resample_agb}: the number of resampled values for each equation is proportional to its weight .It creates S3 objects of class "numeric".
+After attributing a weight to each equation in allo-db using the weight_allom
+function, equations are then resampled within their original DBH range using
+\code{resample_agb}: the number of resampled values for each equation is
+proportional to its weight .It creates S3 objects of class "numeric".
 }
 \examples{
 resample_agb(

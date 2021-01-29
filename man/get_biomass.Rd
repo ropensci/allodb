@@ -2,8 +2,7 @@
 % Please edit documentation in R/get_biomass.R
 \name{get_biomass}
 \alias{get_biomass}
-\title{Compute tree aboveground biomass (AGB) based on allometric
-equations.}
+\title{Compute tree aboveground biomass (AGB) based on allometric equations.}
 \usage{
 get_biomass(
   dbh,
@@ -24,8 +23,8 @@ measurements, in cm.}
 (e.g. "Quercus") of each tree.}
 
 \item{species}{a character vector (same length as dbh), containing the
-species (e.g. "rubra")  of each tree. Default is NULL, when no
-species identification is available.}
+species (e.g. "rubra")  of each tree. Default is NULL, when no species
+identification is available.}
 
 \item{coords}{a numerical vector of length 2 with longitude and latitude (if
 all trees were measured in the same location) or a matrix with 2 numerical
@@ -34,13 +33,13 @@ columns giving the coordinates of each tree.}
 \item{new_eqtable}{Optional. An equation table created with the
 new_equations() function.}
 
-\item{wna}{this parameter is used in the weight_allom function to determine the
-dbh-related weight attributed to equations without a specified dbh range.
-Default is 0.1}
+\item{wna}{this parameter is used in the weight_allom function to determine
+the dbh-related weight attributed to equations without a specified dbh
+range. Default is 0.1}
 
-\item{w95}{this parameter is used in the weight_allom function to determine the
-value at which the sample-size-related weight reaches 95\% of its maximum
-value (max=1). Default is 500.}
+\item{w95}{this parameter is used in the weight_allom function to determine
+the value at which the sample-size-related weight reaches 95\% of its
+maximum value (max=1). Default is 500.}
 
 \item{Nres}{number of resampled values. Default is 1e4.}
 }
@@ -49,7 +48,11 @@ A vector of class "numeric" of the same length as dbh, containing AGB
 value (in kg) for every stem
 }
 \description{
-This function calculates the aboveground biomass (or other tree components) of a given tree based on published allometric equations. Users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. The biomass of all trees in one (or several) censuses can be estimated using this function.
+This function calculates the aboveground biomass (or other tree components)
+of a given tree based on published allometric equations. Users need to
+provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names,
+and site(s) coordinates. The biomass of all trees in one (or several)
+censuses can be estimated using this function.
 }
 \details{
 The function can run into some memory problems when used on large datasets
@@ -66,7 +69,6 @@ get_biomass(
 )
 
 # split dataset to avoid memory over usage
-data_split <- split(scbi_stem1, cut(1:nrow(scbi_stem1), breaks = 10, labels = FALSE))
 agb <- lapply(data_split, function(df) {
   get_biomass(
     dbh = df$dbh,

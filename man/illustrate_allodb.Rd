@@ -54,7 +54,8 @@ are shown in the legend. The red curve on the graph represents the final
 fitted equation.
 }
 \description{
-This function illustrates the resampling of AGB values used in allodb. It creates objects of class "ggplot".
+This function illustrates the resampling of AGB values used in allodb. It
+creates objects of class "ggplot".
 }
 \examples{
 illustrate_allodb(
