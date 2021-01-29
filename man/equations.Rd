@@ -70,12 +70,9 @@ equations_metadata
 }
 \description{
 A compilation of best available allometry equations to calculate tree
-above-ground biomass (AGB) per species based on
-extratropical ForestGEO sites:
-\itemize{
-\item \code{equations}: Table of allometric equations.
-\item \code{equations_metadata}: Metadata for \code{equations} table.
-}
+above-ground biomass (AGB) per species based on extratropical ForestGEO
+sites: * \code{equations}: Table of allometric equations. * \code{equations_metadata}:
+Metadata for \code{equations} table.
 }
 \details{
 

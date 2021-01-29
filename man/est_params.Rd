@@ -29,24 +29,26 @@ columns giving the coordinates of each tree.}
 \item{new_eqtable}{Optional. An equation table created with the
 add_equation() function. Default is the compiled allo-db equation table.}
 
-\item{wna}{this parameter is used in the weight_allom() function to determine the
-dbh-related and sample-size related weights attributed to equations without
-a specified dbh range or sample size, respectively. Default is 0.1}
+\item{wna}{this parameter is used in the weight_allom() function to determine
+the dbh-related and sample-size related weights attributed to equations
+without a specified dbh range or sample size, respectively. Default is 0.1}
 
-\item{w95}{this parameter is used in the weight_allom() function to determine the
-value at which the sample-size-related weight reaches 95\% of its maximum
-value (max=1). Default is 500.}
+\item{w95}{this parameter is used in the weight_allom() function to determine
+the value at which the sample-size-related weight reaches 95\% of its
+maximum value (max=1). Default is 500.}
 
 \item{Nres}{number of resampled values. Default is 1e4.}
 }
 \value{
-A data frame of fitted coefficients (columns) of the log-log
-regression: a (intercept), b (slope) and sigma (standard deviation). Each
-row corresponds to a species x site combination. The back-transformed
-equation is then AGB = exp(a) x DBH^b x + exp(0.5 x sigma^2).
+A data frame of fitted coefficients (columns) of the non-linear
+least-square regression AGB = a * dbh ^ b + e,  with e ~ N(0, sigma^2)
 }
 \description{
-This function calibrates new allometric equations from sampling previous ones. New allometric equations are calibrated for each species and location by resampling the original compiled equations; equations with a larger sample size, and/or higher taxonomic rank, and climatic similarity with the species and location in question are given a higher weight in this process.
+This function calibrates new allometric equations from sampling previous
+ones. New allometric equations are calibrated for each species and location
+by resampling the original compiled equations; equations with a larger sample
+size, and/or higher taxonomic rank, and climatic similarity with the species
+and location in question are given a higher weight in this process.
 }
 \examples{
 data(scbi_stem1)

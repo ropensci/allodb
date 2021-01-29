@@ -28,7 +28,8 @@ sitespecies_metadata
 }
 \description{
 \itemize{
-\item \code{sitespecies}: Table of extratropical ForestGEO sites in allodb (n=24) and their tree species.
+\item \code{sitespecies}: Table of extratropical ForestGEO sites in allodb (n=24) and
+their tree species.
 }
 }
 \details{
