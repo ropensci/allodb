@@ -51,24 +51,6 @@ larger sample size and/or higher taxonomic and climatic similarity with
 the species and location in question are given a higher weight in this
 process.
 
-The general workflow of the package is summarized in the following
-figure. (xx change this figure to match new *allodb* version)
-
-<br>
-<p align="center">
-<img width="100%" src="not-package-stuff/graphs/Fig1workflow.png">
-</p>
-<p align="center">
-<sub>Figure 1. Diagram of allo-db workflow, including user input data
-and an example of weighting of available equations across the DBH size
-spectrum to produce a single, continuous function of AGB in relation to
-DBH. The top ten allometries (indicating equation ID and taxa/taxonomic
-group), after applying the weighting process, can be seen as a side
-panel</sub>
-</p>
-
-<br>
-
 ## Installation
 
 Install the development version of *allo-db* from GitHub:
@@ -116,7 +98,7 @@ get_biomass(
   species="tulipifera", 
   coords=c(-78.2, 38.9)
 )
-#> [1] 2841.488
+#> [1] 1648.712
 ```
 
 Users can modify the set of equations that will be used to estimate the
@@ -192,7 +174,6 @@ df_resample <-
 plot(
   df_resample$dbh,
   df_resample$agb,
-  log = "xy",
   xlab = "DBH (cm)",
   ylab = "Resampled AGB values (kg)"
 )
@@ -214,12 +195,10 @@ pars_acer <- est_params(
 plot(
   df_resample$dbh,
   df_resample$agb,
-  log = "xy",
   xlab = "DBH (cm)",
   ylab = "Resampled AGB values (kg)"
 )
-curve(exp(pars_acer$a) * x ^ pars_acer$b * exp(0.5 * pars_acer$sigma^2),
-      add = TRUE, col = 2, lwd = 2)
+curve(pars_acer$a * x ^ pars_acer$b, add = TRUE, col = 2, lwd = 2)
 ```
 
 ![](README_files/figure-gfm/est-params-acer-1.png)<!-- -->
@@ -234,14 +213,14 @@ params <- est_params(
   coords = c(-78.2, 38.9)
 )
 head(params)
-#>          genus     species  long  lat         a        b     sigma
-#> 1:        Acer     negundo -78.2 38.9 -2.825065 2.614069 1.0087115
-#> 2:        Acer      rubrum -78.2 38.9 -2.906226 2.639375 0.9787364
-#> 3:   Ailanthus   altissima -78.2 38.9 -2.539061 2.499994 1.3038173
-#> 4: Amelanchier     arborea -78.2 38.9 -2.464260 2.470997 1.1751264
-#> 5:     Asimina     triloba -78.2 38.9 -2.539061 2.499994 1.3038173
-#> 6:    Carpinus caroliniana -78.2 38.9 -2.439023 2.487171 1.1029199
+#>          genus     species  long  lat          a        b    sigma
+#> 1:        Acer     negundo -78.2 38.9 0.09642540 2.507352 415.7038
+#> 2:        Acer      rubrum -78.2 38.9 0.09667325 2.506573 399.8393
+#> 3:   Ailanthus   altissima -78.2 38.9 0.15385947 2.389879 376.4935
+#> 4: Amelanchier     arborea -78.2 38.9 0.09643425 2.490833 374.4586
+#> 5:     Asimina     triloba -78.2 38.9 0.15385947 2.389879 376.4935
+#> 6:    Carpinus caroliniana -78.2 38.9 0.12670717 2.432006 324.7536
 ```
 
-AGB is then recalculated as `agb = exp(a) * dbh^b * exp(0.5 * sigma^2)`
-within the `get_biomass` function.
+AGB is then recalculated as `agb = a * dbh^b` within the `get_biomass`
+function.

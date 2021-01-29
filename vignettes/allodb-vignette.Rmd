@@ -37,7 +37,7 @@ str(scbi_stem1)
 
 ## Load and modify the equation table 
 
-`allodb` provides a dataframe containing 567 parsed allometric equations. 
+`allodb` provides a dataframe containing `r nrow(allodb::equations)` parsed allometric equations. 
 
 ```{r load-equations}
 data(equations)

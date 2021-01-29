@@ -34,14 +34,6 @@ The _allodb_ package contains a database of systematically selected published al
 
 The package also provides functions to estimate biomass based on user-provided census data (tree DBHs, taxonomic identification, and plot coordinates). New allometric equations are calibrated for each species and location by resampling the original equations; equations with a larger sample size and/or higher taxonomic and climatic similarity with the species and location in question are given a higher weight in this process. 
 
-The general workflow of the package is summarized in the following figure. (xx change this figure to match new _allodb_ version)
-
-<br>
-<p align="center"><img width="100%" src="not-package-stuff/graphs/Fig1workflow.png"></p>
-<p align="center"><sub>Figure 1. Diagram of allo-db workflow, including user input data and an example of weighting of available equations across the DBH size spectrum to produce a single, continuous function of AGB in relation to DBH. The top ten allometries (indicating equation ID and taxa/taxonomic group), after applying the weighting process, can be seen as a side panel</sub></p>
-<br>
-
-
 ## Installation
 
 Install the development version of _allo-db_ from GitHub:
@@ -124,7 +116,6 @@ df_resample <-
 plot(
   df_resample$dbh,
   df_resample$agb,
-  log = "xy",
   xlab = "DBH (cm)",
   ylab = "Resampled AGB values (kg)"
 )
@@ -141,12 +132,10 @@ pars_acer <- est_params(
 plot(
   df_resample$dbh,
   df_resample$agb,
-  log = "xy",
   xlab = "DBH (cm)",
   ylab = "Resampled AGB values (kg)"
 )
-curve(exp(pars_acer$a) * x ^ pars_acer$b * exp(0.5 * pars_acer$sigma^2),
-      add = TRUE, col = 2, lwd = 2)
+curve(pars_acer$a * x ^ pars_acer$b, add = TRUE, col = 2, lwd = 2)
 ```
 
 The `est_params` function can be used for all species/site combinations in the dataset at once. 
@@ -160,6 +149,7 @@ params <- est_params(
 head(params)
 ```
 
-AGB is then recalculated as `agb = exp(a) * dbh^b * exp(0.5 * sigma^2)` within the `get_biomass` function. 
+AGB is then recalculated as `agb = a * dbh^b` within the `get_biomass` function. 
+
 
 
