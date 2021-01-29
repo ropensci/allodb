@@ -52,12 +52,12 @@
 #'
 #' @examples
 #' dfequation <- new_equations(
-  # new_taxa = "Faga",
-  # new_allometry = "exp(-2+log(dbh)*2.5)",
-  # new_coords = c(-0.07, 46.11),
-  # new_minDBH = 5,
-  # new_maxDBH = 50,
-  # new_sampleSize = 50
+#'   new_taxa = "Faga",
+#'   new_allometry = "exp(-2+log(dbh)*2.5)",
+#'   new_coords = c(-0.07, 46.11),
+#'   new_minDBH = 5,
+#'   new_maxDBH = 50,
+#'   new_sampleSize = 50
 #' )
 new_equations <- function(subset_taxa = "all",
                           subset_climate = "all",
@@ -77,8 +77,7 @@ new_equations <- function(subset_taxa = "all",
                           new_outputVar = "Total aboveground biomass",
                           use_height_allom = TRUE) {
   ## open the equation table and get it in the right format ####
-  data("equations")
-  new_equations <- equations
+  new_equations <- allodb::equations
 
   suppressWarnings(new_equations$dbh_min_cm <-
                      as.numeric(new_equations$dbh_min_cm))
@@ -178,10 +177,11 @@ new_equations <- function(subset_taxa = "all",
       stop("new_minDBH, new_maxDBH, new_sampleSize should be numeric values.")
     }
 
-    if (is.matrix(new_coords))
+    if (is.matrix(new_coords)){
       ncoords <- ncol(new_coords)
-    else
+    } else {
       ncoords <- length(new_coords)
+    }
     if (!is.numeric(new_coords) | ncoords != 2)  {
       stop("coords should be a numeric vector or matrix, with 2 values or 2 columns.")
     }
@@ -255,10 +255,12 @@ new_equations <- function(subset_taxa = "all",
     equationID <- paste0("new", seq_len(length(new_taxa)))
     coordsEq <- cbind(long = new_coords[, 1],
                       lat = new_coords[, 2])
-    climates <- allodb::koppenRaster@data@attributes[[1]][, 2]
-    koppenZones <-
-      climates[raster::extract(allodb::koppenRaster, coordsEq)]
-    if (any(grepl("missing", koppenZones))) {
+    rcoordsEq <- round(coordsEq * 2 - 0.5) / 2 + 0.25
+    ## extract koppen climate of every location
+    koppenZones <- apply(rcoordsEq, 1, function(X) {
+      subset(kgc::climatezones, Lon == X[1] &  Lat == X[2])$Cls
+    })
+    if (length(unlist(koppenZones)) != nrow(rcoordsEq)) {
       stop(
         "Impossible to find all koppen climate zones based on coordinates. Please check that they are Long, Lat."
       )
