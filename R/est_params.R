@@ -68,7 +68,7 @@ est_params <- function(genus,
     ## nls will throw an error: add some 'grain' by adding 1 slightly different
     ## data point (it won't change the final results)
     if (length(unique(df$equation_id)) == 1) df[1, 3] <- df[1, 3]*1.01
-    reg <- summary(nls(agb ~ a * dbh ** b, start = c(a = 0.5, b = 2), data = df))
+    reg <- summary(stats::nls(agb ~ a * dbh ** b, start = c(a = 0.5, b = 2), data = df))
     coefs <- rbind(coefs, c(reg$coefficients[, "Estimate"], reg$sigma))
   }
   colnames(coefs) <- c("a", "b", "sigma")
