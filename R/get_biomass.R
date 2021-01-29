@@ -37,7 +37,7 @@
 #'
 #' @examples
 #' data(scbi_stem1)
-#' get_biomass(
+#' agb <- get_biomass(
 #'   dbh = scbi_stem1$dbh,
 #'   genus = scbi_stem1$genus,
 #'   species = scbi_stem1$species,
@@ -45,9 +45,9 @@
 #' )
 #'
 #' # split dataset to avoid memory over usage
-# data_split <- split(scbi_stem1, cut(1:nrow(scbi_stem1),
-#                                     breaks = 10,
-#                                     labels = FALSE))
+#' data_split <- split(scbi_stem1, cut(1:nrow(scbi_stem1),
+#'                                     breaks = 10,
+#'                                     labels = FALSE))
 #' agb <- lapply(data_split, function(df) {
 #'   get_biomass(
 #'     dbh = df$dbh,
@@ -57,6 +57,7 @@
 #'   )
 #' })
 #' scbi_stem1$agb <- do.call(c, agb)
+#'
 get_biomass <- function(dbh,
                         genus,
                         species = NULL,
