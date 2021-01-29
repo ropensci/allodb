@@ -260,7 +260,8 @@ new_equations <- function(subset_taxa = "all",
     koppenZones <- apply(rcoordsEq, 1, function(X) {
       subset(kgc::climatezones, Lon == X[1] &  Lat == X[2])$Cls
     })
-    if (length(unlist(koppenZones)) != nrow(rcoordsEq)) {
+    koppenZones <- as.character(unlist(koppenZones))
+    if (length(koppenZones) != nrow(rcoordsEq)) {
       stop(
         "Impossible to find all koppen climate zones based on coordinates. Please check that they are Long, Lat."
       )
