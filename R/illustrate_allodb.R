@@ -11,7 +11,7 @@
 #' @param new_eqtable Optional. An equation table created with the
 #'   `add_equation()` function. Default is the base allodb equation table.
 #' @param logxy Logical: should values be plotted on a log scale? Default is
-#'   `TRUE.`
+#'   `FALSE`.
 #' @param neq Number of top equations in the legend. Default is 10, meaning that
 #'   the 10 equations with the highest weights are shown in the legend.
 #' @param eqinfo Which column(s) of the equation table should be used in the

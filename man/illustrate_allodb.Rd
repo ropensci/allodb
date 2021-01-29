@@ -9,7 +9,7 @@ illustrate_allodb(
   species = NULL,
   coords,
   new_eqtable = NULL,
-  logxy = TRUE,
+  logxy = FALSE,
   neq = 10,
   eqinfo = "equation_taxa",
   wna = 0.1,
@@ -30,7 +30,7 @@ the tree. Default is \code{NULL}, when no species identification is available.}
 \code{add_equation()} function. Default is the base allodb equation table.}
 
 \item{logxy}{Logical: should values be plotted on a log scale? Default is
-\code{TRUE.}}
+\code{FALSE}.}
 
 \item{neq}{Number of top equations in the legend. Default is 10, meaning that
 the 10 equations with the highest weights are shown in the legend.}

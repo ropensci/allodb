@@ -88,5 +88,11 @@ allometry.
 }
 \examples{
 dfequation <- new_equations(
+  new_taxa = "Faga",
+  new_allometry = "exp(-2+log(dbh)*2.5)",
+  new_coords = c(-0.07, 46.11),
+  new_minDBH = 5,
+  new_maxDBH = 50,
+  new_sampleSize = 50
 )
 }
