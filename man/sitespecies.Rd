@@ -35,6 +35,7 @@ their tree species.
 \details{
 \itemize{
 \item \code{sitespecies_metadata}: Metadata for \code{sitespecies} table.
+\item \code{sites_info}: Geographical information for ForestGEO sites used in allodb, more details can be found in accompanying manuscript.
 }
 }
 \seealso{

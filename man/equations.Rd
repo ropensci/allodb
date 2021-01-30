@@ -6,7 +6,7 @@
 \alias{equations_metadata}
 \title{Tables of allometric equations and associated metadata.}
 \format{
-\code{equations}: A data frame with 568 rows and 47 variables:\preformatted{	[,1]	ref_id	character
+\code{equations}: A data frame with 571 rows and 47 variables:\preformatted{	[,1]	ref_id	character
 	[,2]	equation_id	character
 	[,3]	equation_allometry	character
 	[,4]	equation_form	character
@@ -78,7 +78,7 @@ Metadata for \code{equations} table.
 
 }
 \seealso{
-Other database datasets:
+Other database datasets: 
 \code{\link{missing_values}},
 \code{\link{references}},
 \code{\link{sitespecies}}
