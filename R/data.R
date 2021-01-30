@@ -91,6 +91,8 @@
 #'
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
+#'* `sites_info`: Geographical information for ForestGEO sites used in allodb, more details can be found in accompanying manuscript.
+#'
 #' @format
 #' A data frame with 1114 rows and 10 variables:
 #' ```
