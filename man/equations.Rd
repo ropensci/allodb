@@ -78,7 +78,7 @@ Metadata for \code{equations} table.
 
 }
 \seealso{
-Other database datasets: 
+Other database datasets:
 \code{\link{missing_values}},
 \code{\link{references}},
 \code{\link{sitespecies}}
