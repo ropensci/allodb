@@ -9,10 +9,8 @@
 #'
 #' @details
 #'
-#'
-#'
 #' @format
-#' `equations`: A data frame with 568 rows and 47 variables:
+#' `equations`: A data frame with 571 rows and 47 variables:
 #' ```
 #' 	[,1]	ref_id	character
 #' 	[,2]	equation_id	character
