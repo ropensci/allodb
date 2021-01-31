@@ -183,3 +183,18 @@
 "site_info"
 #'
 #' @name site_info
+
+#' Genus and family table for selected ForestGEO sites
+#'
+#' Table with genus and their associated family identified in the ForestGEO sites used in allodb. This dataframe is an input in the weight_allom() function.
+#'
+#' * `genus_family`: A dataframe with genus and families identified in the extratropical ForestGEO sites used in allodb.
+#'
+#' @format
+#' A data frame with 248 observations and 2 variables:
+#' ```
+#' [,1]	genus	character
+#' [,2]	family	character
+#'
+#'```
+#' @name genus_family
