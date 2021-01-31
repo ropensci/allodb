@@ -91,7 +91,7 @@
 #'
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
-#'* `sites_info`: Geographical information for ForestGEO sites used in allodb, more details can be found in accompanying manuscript.
+#' * `sites_info`: Table with geographical information for ForestGEO sites used in allodb. More details can be found in accompanying manuscript.
 #'
 #' @format
 #' A data frame with 1114 rows and 10 variables:
@@ -139,3 +139,28 @@
 
 #' @name references
 "references_metadata"
+
+#' Tree census data from SCBI ForestGEO plot
+#'
+#' A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st tree census in 2008, 1 hectare).
+#'
+#' * `scbi_stem1`: A dataframe with tree data from the SCBI forest dynamic plot (1ha).*
+#'
+#' @format
+#' A data frame with 2287 observations and 6 variables:
+#' ```
+#' [,1]	treeID	numeric
+#' [,2]	stemID	numeric
+#' [,3]	dbh	numeric
+#' [,4]	genus	character
+#' [,5]	species	character
+#' [,6]	Family	character
+#'
+#'```
+#' @source * Full data sets for tree census data at SCBI can be requested through the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO Data (https://github.com/SCBI-ForestGEO).
+#'
+#' @family database datasets
+"scbi_stem1"
+#'
+#' @name scbi_stem1
+
