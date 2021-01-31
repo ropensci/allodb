@@ -91,8 +91,6 @@
 #'
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
-#' * `sites_info`: Table with geographical information for ForestGEO sites used in allodb. More details can be found in accompanying manuscript.
-#'
 #' @format
 #' A data frame with 1114 rows and 10 variables:
 #' ```
@@ -164,3 +162,24 @@
 #'
 #' @name scbi_stem1
 
+#' ForestGEO sites used in allodb
+#'
+#' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in accompanying manuscript.
+#'
+#' * `site_info`: A dataframe with geographical data for 24 extratropical ForestGEO sites used in allodb.
+#'
+#' @format
+#' A data frame with 24 observations and 6 variables:
+#' ```
+#' [,1]	Site	character
+#' [,2]	site	character
+#' [,3]	lat	decimal
+#' [,4]	long	decimal
+#' [,5]	elevation.m	numeric
+#' [,6]	koppen	character
+#'
+#'```
+#' @family database datasets
+"site_info"
+#'
+#' @name site_info
