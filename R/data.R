@@ -198,3 +198,19 @@
 #'
 #'```
 #' @name genus_family
+
+#' Family and genus for Gymnosperms identified in selected ForestGEO sites
+#'
+#' Table with genus and their associated family for Gymnosperms identified in the ForestGEO sites used in allodb. This dataframe is particularly important to differentiate conifers as input in the weight_allom() function.
+#'
+#' * `gymno_genus`: A dataframe with genus and families for Gymnosperms identified in the extratropical ForestGEO sites used in allodb.
+#'
+#' @format
+#' A data frame with 95 observations and 3 variables:
+#' ```
+#' [,1]	Family	character
+#' [,2]	Genus	character
+#' [,3] conifer logical
+#'
+#'```
+#' @name gymno_genus
