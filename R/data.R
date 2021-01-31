@@ -144,7 +144,7 @@
 #'
 #' A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st tree census in 2008, 1 hectare).
 #'
-#' * `scbi_stem1`: A dataframe with tree data from the SCBI forest dynamic plot (1ha).*
+#' * `scbi_stem1`: A dataframe with tree data from the SCBI forest dynamic plot (1ha).
 #'
 #' @format
 #' A data frame with 2287 observations and 6 variables:

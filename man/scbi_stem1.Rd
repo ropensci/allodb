@@ -27,7 +27,7 @@ A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI
 }
 \details{
 \itemize{
-\item \code{scbi_stem1}: A dataframe with tree data from the SCBI forest dynamic plot (1ha).*
+\item \code{scbi_stem1}: A dataframe with tree data from the SCBI forest dynamic plot (1ha).
 }
 }
 \seealso{
