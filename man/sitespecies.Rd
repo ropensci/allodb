@@ -35,14 +35,15 @@ their tree species.
 \details{
 \itemize{
 \item \code{sitespecies_metadata}: Metadata for \code{sitespecies} table.
-\item \code{sites_info}: Geographical information for ForestGEO sites used in allodb, more details can be found in accompanying manuscript.
+\item \code{sites_info}: Table with geographical information for ForestGEO sites used in allodb. More details can be found in accompanying manuscript.
 }
 }
 \seealso{
 Other database datasets: 
 \code{\link{equations}},
 \code{\link{missing_values}},
-\code{\link{references}}
+\code{\link{references}},
+\code{\link{scbi_stem1}}
 }
 \concept{database datasets}
 \keyword{datasets}

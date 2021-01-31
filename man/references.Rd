@@ -36,6 +36,7 @@ ref_id.
 Other database datasets: 
 \code{\link{equations}},
 \code{\link{missing_values}},
+\code{\link{scbi_stem1}},
 \code{\link{sitespecies}}
 }
 \concept{database datasets}

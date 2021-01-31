@@ -81,6 +81,7 @@ Metadata for \code{equations} table.
 Other database datasets: 
 \code{\link{missing_values}},
 \code{\link{references}},
+\code{\link{scbi_stem1}},
 \code{\link{sitespecies}}
 }
 \concept{database datasets}
