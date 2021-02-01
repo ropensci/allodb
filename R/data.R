@@ -182,6 +182,7 @@
 "sites_info"
 #'
 #' @name sites_info
+"sites_info"
 
 #' Genus and family table for selected ForestGEO sites
 #'
