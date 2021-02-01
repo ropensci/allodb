@@ -214,3 +214,14 @@
 #'
 #'```
 #' @name gymno_genus
+
+#' List of shrub genus/species identified in selected ForestGEO sites
+#'
+#' A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list is an input in the weight_allom() function.
+#'
+#' * `shrub_species`: A list with genus and species of shrubby plants identified in the extratropical ForestGEO sites used in allodb.
+#'
+#' @format
+#' A list with 179 elements
+#'
+#' @name shrub_species
