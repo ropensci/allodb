@@ -4,8 +4,9 @@
 #'
 #' A compilation of best available allometry equations to calculate tree
 #' above-ground biomass (AGB) per species based on extratropical ForestGEO
-#' sites: * `equations`: Table of allometric equations. * `equations_metadata`:
-#' Metadata for `equations` table.
+#' sites:
+#'* `equations`: Table of allometric equations.
+#'* `equations_metadata`:Metadata for `equations` table.
 #'
 #' @details
 #'
@@ -118,7 +119,7 @@
 #' Bibliographical info for sourced equations. Links to equations table by
 #' ref_id.
 #'
-#' * `references`: A dataframe listing all references used in equation table. *
+#' * `references`: A dataframe listing all references used in equation table.
 #' `references_metadata`: Table of metadata of `reference`.
 #'
 #' @format
@@ -158,8 +159,8 @@
 #' @source * Full data sets for tree census data at SCBI can be requested through the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO Data (https://github.com/SCBI-ForestGEO).
 #'
 #' @name scbi_stem1
-#'
-#'
+"scbi_stem1"
+
 #' ForestGEO sites used in allodb
 #'
 #' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in the accompanying manuscript.
@@ -220,7 +221,7 @@
 #' * `shrub_species`: A list with genus and species of shrubby plants identified in the extratropical ForestGEO sites used in allodb.
 #'
 #' @format
-#' A list with 179 elements
+#' A vector containing 179 observations
 #'
 #' @name shrub_species
 
