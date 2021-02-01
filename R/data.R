@@ -166,7 +166,7 @@
 #'
 #' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in the accompanying manuscript.
 #'
-#' * `site_info`: A dataframe with geographical data for 24 extratropical ForestGEO sites used in allodb.
+#' * `sites_info`: A dataframe with geographical data for 24 extratropical ForestGEO sites used in allodb.
 #'
 #' @format
 #' A data frame with 24 observations and 6 variables:
@@ -180,9 +180,9 @@
 #'
 #'```
 #' @family database datasets
-"site_info"
+"sites_info"
 #'
-#' @name site_info
+#' @name sites_info
 
 #' Genus and family table for selected ForestGEO sites
 #'
