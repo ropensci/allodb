@@ -224,6 +224,7 @@
 #' A vector containing 179 observations
 #'
 #' @name shrub_species
+"shrub_species"
 
 #' Koppen climate classification matrix
 #'
