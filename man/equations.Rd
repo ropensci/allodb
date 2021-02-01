@@ -77,9 +77,6 @@ sites:
 \item \code{equations_metadata}: Explanation of columns for \code{equations} table.
 }
 }
-\details{
-
-}
 \seealso{
 Other database datasets: 
 \code{\link{missing_values}},

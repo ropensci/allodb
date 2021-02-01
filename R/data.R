@@ -8,8 +8,6 @@
 #'* `equations`: Table of allometric equations.
 #'* `equations_metadata`: Explanation of columns for `equations` table.
 #'
-#' @details
-#'
 #' @format
 #' `equations`: A data frame with 571 rows and 47 variables:
 #' ```
