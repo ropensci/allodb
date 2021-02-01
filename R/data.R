@@ -142,7 +142,7 @@
 
 #' ForestGEO sites used in allodb
 #'
-#' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in the accompanying manuscript.
+#' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in the #'accompanying manuscript.
 #'
 #' * `sites_info`: A dataframe with geographical data for 24 extratropical ForestGEO sites used in allodb.
 #'
@@ -165,7 +165,7 @@
 
 #' Tree census data from SCBI ForestGEO plot
 #'
-#' A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st tree census in 2008, 1 hectare).
+#' A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st #'tree census in 2008, 1 hectare).
 #'
 #' * `scbi_stem1`: A dataframe with tree data from the SCBI forest dynamic plot (1ha).
 #'
@@ -180,14 +180,16 @@
 #' [,6]	Family	character
 #'
 #'```
-#' @source Full data sets for tree census data at SCBI can be requested through the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO Data (https://github.com/SCBI-ForestGEO).
+#' @source Full data sets for tree census data at SCBI can be requested through the ForestGEO portal
+#'  (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO
+#'  Data (https://github.com/SCBI-ForestGEO).
 #'
 #' @name scbi_stem1
 
 
 #' Genus and family table for selected ForestGEO sites
 #'
-#' Table with genus and their associated family identified in the ForestGEO sites used in allodb. This dataframe is an input in the weight_allom() function.
+#' Table with genus and their associated family identified in the ForestGEO sites used in allodb. This dataframe is an #'input in the weight_allom() function.
 #'
 #' * `genus_family`: A dataframe with genus and families identified in the extratropical ForestGEO sites used in allodb.
 #'
@@ -202,7 +204,8 @@
 
 #' Family and genus for Gymnosperms identified in selected ForestGEO sites
 #'
-#' Table with genus and their associated family for Gymnosperms identified in the ForestGEO sites used in allodb. This dataframe is particularly important to differentiate conifers as input in the weight_allom() function.
+#' Table with genus and their associated family for Gymnosperms identified in the ForestGEO sites used in allodb.
+#' This dataframe is particularly important to differentiate conifers as input in the weight_allom() function.
 #'
 #' * `gymno_genus`: A dataframe with genus and families for Gymnosperms identified in the extratropical ForestGEO sites used in allodb.
 #'
@@ -218,9 +221,9 @@
 
 #' List of shrub genus/species identified in selected ForestGEO sites
 #'
-#' A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list is an input in the weight_allom() function.
+#' A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list #'is an input in the weight_allom() function.
 #'
-#' * `shrub_species`: A list with genus and species of shrubby plants identified in the extratropical ForestGEO sites used in allodb.
+#' * `shrub_species`: A list with genus and species of shrubby plants identified in the extratropical ForestGEO #'sites used in allodb.
 #'
 #' @format
 #' A vector containing 179 observations
@@ -229,7 +232,7 @@
 
 #' Koppen climate classification matrix
 #'
-#' A table built to facilitate the comparison between the Koppen climate of a site and equation in question. This table is used in the weighting scheme. More details can be found in the accompanying manuscript.
+#' A table built to facilitate the comparison between the Koppen climate of a site and equation in question. This #'table is used in the weighting scheme. More details can be found in the accompanying manuscript.
 #'
 #' * `koppenMatrix`: A dataframe with two columns depicting the 3-letter system of Köppen climate scheme and the given weight when comparing site/equation climate.
 #'
