@@ -183,8 +183,7 @@
 #' @source Full data sets for tree census data at SCBI can be requested through the ForestGEO portal
 #'  (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO
 #'  Data (https://github.com/SCBI-ForestGEO).
-#'
-#' @name scbi_stem1
+
 
 
 #' Genus and family table for selected ForestGEO sites
