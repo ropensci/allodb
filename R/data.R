@@ -139,27 +139,6 @@
 #' @name references
 "references_metadata"
 
-#' Tree census data from SCBI ForestGEO plot
-#'
-#' A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st tree census in 2008, 1 hectare).
-#'
-#' * `scbi_stem1`: A dataframe with tree data from the SCBI forest dynamic plot (1ha).
-#'
-#' @format
-#' A data frame with 2287 observations and 6 variables:
-#' ```
-#' [,1]	treeID	numeric
-#' [,2]	stemID	numeric
-#' [,3]	dbh	numeric
-#' [,4]	genus	character
-#' [,5]	species	character
-#' [,6]	Family	character
-#'
-#'```
-#' @source Full data sets for tree census data at SCBI can be requested through the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO Data (https://github.com/SCBI-ForestGEO).
-#'
-#' @name scbi_stem1
-#'
 
 #' ForestGEO sites used in allodb
 #'
@@ -182,6 +161,28 @@
 "sites_info"
 #'
 #' @name sites_info
+
+
+#' Tree census data from SCBI ForestGEO plot
+#'
+#' A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st tree census in 2008, 1 hectare).
+#'
+#' * `scbi_stem1`: A dataframe with tree data from the SCBI forest dynamic plot (1ha).
+#'
+#' @format
+#' A data frame with 2287 observations and 6 variables:
+#' ```
+#' [,1]	treeID	numeric
+#' [,2]	stemID	numeric
+#' [,3]	dbh	numeric
+#' [,4]	genus	character
+#' [,5]	species	character
+#' [,6]	Family	character
+#'
+#'```
+#' @source Full data sets for tree census data at SCBI can be requested through the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO Data (https://github.com/SCBI-ForestGEO).
+#'
+#' @name scbi_stem1
 
 
 #' Genus and family table for selected ForestGEO sites
