@@ -24,7 +24,7 @@ A list of codes used to indicate missing information in equation table:
 Other database datasets: 
 \code{\link{equations}},
 \code{\link{references}},
-\code{\link{scbi_stem1}},
+\code{\link{sites_info}},
 \code{\link{sitespecies}}
 }
 \concept{database datasets}

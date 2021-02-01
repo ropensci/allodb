@@ -28,15 +28,15 @@ ref_id.
 }
 \details{
 \itemize{
-\item \code{references}: A dataframe listing all references used in equation table. *
-\code{references_metadata}: Table of metadata of \code{reference}.
+\item \code{references}: A dataframe listing all references used in equation table.
+\item \code{references_metadata}: Table of metadata of \code{reference}.
 }
 }
 \seealso{
 Other database datasets: 
 \code{\link{equations}},
 \code{\link{missing_values}},
-\code{\link{scbi_stem1}},
+\code{\link{sites_info}},
 \code{\link{sitespecies}}
 }
 \concept{database datasets}
