@@ -164,7 +164,7 @@
 
 #' ForestGEO sites used in allodb
 #'
-#' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in accompanying manuscript.
+#' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in the accompanying manuscript.
 #'
 #' * `site_info`: A dataframe with geographical data for 24 extratropical ForestGEO sites used in allodb.
 #'
@@ -225,3 +225,20 @@
 #' A list with 179 elements
 #'
 #' @name shrub_species
+
+#' Koppen climate classification matrix
+#'
+#' A table built to facilitate the comparison between the Koppen climate of a site and equation in question. This table is used in the weighting scheme. More details can be found in the accompanying manuscript.
+#'
+#' * `koppenMatrix`: A dataframe with two columns depicting the 3-letter system of Köppen climate scheme and the given weight when comparing site/equation climate.
+#'
+#' @format
+#' A data frame with 900 observations and 3 variables:
+#' ```
+#' [,1]	zone1	character
+#' [,2]	zone2	character
+#' [,3]	wE	decimal
+#'
+#'```
+#' @name koppenMatrix
+
