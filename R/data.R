@@ -6,7 +6,7 @@
 #' above-ground biomass (AGB) per species based on extratropical ForestGEO
 #' sites:
 #'* `equations`: Table of allometric equations.
-#'* `equations_metadata`:Metadata for `equations` table.
+#'* `equations_metadata`: Explanation of columns for `equations` table.
 #'
 #' @details
 #'
@@ -120,7 +120,7 @@
 #' ref_id.
 #'
 #' * `references`: A dataframe listing all references used in equation table.
-#' `references_metadata`: Table of metadata of `reference`.
+#' * `references_metadata`: Table of metadata of `reference`.
 #'
 #' @format
 #' A data frame with 57 rows and 6 variables:
@@ -159,7 +159,7 @@
 #' @source Full data sets for tree census data at SCBI can be requested through the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO Data (https://github.com/SCBI-ForestGEO).
 #'
 #' @name scbi_stem1
-
+#'
 
 #' ForestGEO sites used in allodb
 #'
