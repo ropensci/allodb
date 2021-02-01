@@ -161,7 +161,8 @@
 "scbi_stem1"
 #'
 #' @name scbi_stem1
-#'
+
+
 #' ForestGEO sites used in allodb
 #'
 #' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in the accompanying manuscript.
