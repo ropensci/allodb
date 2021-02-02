@@ -8,8 +8,6 @@
 #'* `equations`: Table of allometric equations.
 #'* `equations_metadata`: Explanation of columns for `equations` table.
 #'
-#' @details
-#'
 #' @format
 #' `equations`: A data frame with 571 rows and 47 variables:
 #' ```
@@ -66,8 +64,11 @@
 #'
 #' @family database datasets
 "equations"
+
 #' @rdname equations
 "equations_metadata"
+
+
 
 #' A table with explanations of missing values codes
 #'
@@ -84,6 +85,8 @@
 #'```
 #' @family database datasets
 "missing_values"
+
+
 
 #' Tables of sites and tree species used in allo-db and associated metadata.
 #'
@@ -109,9 +112,10 @@
 #'```
 #' @family database datasets
 "sitespecies"
-#'
-#' @name sitespecies
+
+#' @rdname sitespecies
 "sitespecies_metadata"
+
 
 
 #' Tables of equation references and associated metadata
@@ -136,8 +140,9 @@
 #' @family database datasets
 "references"
 
-#' @name references
+#' @rdname references
 "references_metadata"
+
 
 
 #' ForestGEO sites used in allodb
@@ -159,8 +164,7 @@
 #'```
 #' @family database datasets
 "sites_info"
-#'
-#' @name sites_info
+
 
 
 #' Tree census data from SCBI ForestGEO plot
@@ -183,8 +187,8 @@
 #' @source Full data sets for tree census data at SCBI can be requested through the ForestGEO portal
 #'  (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO
 #'  Data (https://github.com/SCBI-ForestGEO).
-#'
-#' @name scbi_stem1
+"scbi_stem1"
+
 
 
 #' Genus and family table for selected ForestGEO sites
@@ -200,7 +204,9 @@
 #' [,2]	family	character
 #'
 #'```
-#' @name genus_family
+"genus_family"
+
+
 
 #' Family and genus for Gymnosperms identified in selected ForestGEO sites
 #'
@@ -217,7 +223,9 @@
 #' [,3] conifer logical
 #'
 #'```
-#' @name gymno_genus
+"gymno_genus"
+
+
 
 #' List of shrub genus/species identified in selected ForestGEO sites
 #'
@@ -228,7 +236,9 @@
 #' @format
 #' A vector containing 179 observations
 #'
-#' @name shrub_species
+"shrub_species"
+
+
 
 #' Koppen climate classification matrix
 #'
@@ -244,4 +254,4 @@
 #' [,3]	wE	decimal
 #'
 #'```
-#' @name koppenMatrix
+"koppenMatrix"
