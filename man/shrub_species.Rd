@@ -11,11 +11,13 @@ A vector containing 179 observations
 shrub_species
 }
 \description{
-A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list is an input in the weight_allom() function.
+A list with genus and species of shrubby plants identified in the ForestGEO
+sites used in allodb. The list is an input in the weight_allom() function.
 }
 \details{
 \itemize{
-\item \code{shrub_species}: A list with genus and species of shrubby plants identified in the extratropical ForestGEO #'sites used in allodb.
+\item \code{shrub_species}: A list with genus and species of shrubby plants identified
+in the extratropical ForestGEO #'sites used in allodb.
 }
 }
 \keyword{datasets}

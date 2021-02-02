@@ -15,14 +15,17 @@ A data frame with 2287 observations and 6 variables:\preformatted{[,1]	treeID	nu
 }
 }
 \source{
-Full data sets for tree census data at SCBI can be requested through the ForestGEO portal
-(https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO
-Data (https://github.com/SCBI-ForestGEO).
+Full data sets for tree census data at SCBI can be requested through
+the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also
+be accessed at the public GitHub repository for SCBI-ForestGEO Data
+(https://github.com/SCBI-ForestGEO).
 }
 \usage{
 scbi_stem1
 }
 \description{
-A table with tree data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot. These data is from the first tree census in 2008, and only cover 1 hectare (SCBI is 25 ha).
+A table with tree data from the Smithsonian Conservation Biology Institute,
+USA (SCBI) ForestGEO dynamics plot. These data is from the first tree census
+in 2008, and only cover 1 hectare (SCBI is 25 ha).
 }
 \keyword{datasets}
