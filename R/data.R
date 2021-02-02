@@ -3,8 +3,7 @@
 #' Tables of allometric equations and associated metadata.
 #'
 #' A compilation of best available allometry equations to calculate tree
-#' above-ground biomass (AGB) per species based on extratropical ForestGEO
-#' sites:
+#' above-ground biomass (AGB) per species based on extratropical ForestGEO sites:
 #'* `equations`: Table of allometric equations.
 #'* `equations_metadata`: Explanation of columns for `equations` table.
 #'
@@ -88,11 +87,9 @@
 
 
 
-#' Tables of sites and tree species used in allo-db and associated metadata.
+#' Tables of sites and tree species used in allodb and associated metadata.
 #'
-#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and
-#' their tree species.
-#'
+#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and their tree species.
 #' * `sitespecies_metadata`: Metadata for `sitespecies` table.
 #'
 #' @format
@@ -120,11 +117,9 @@
 
 #' Tables of equation references and associated metadata
 #'
-#' Bibliographical info for sourced equations. Links to equations table by
-#' ref_id.
-#'
-#' * `references`: A dataframe listing all references used in equation table.
-#' * `references_metadata`: Table of metadata of `reference`.
+#' Bibliographical information for sourced equations. Links to the `equations` table by ref_id.
+#' * `references`: A data frame listing all references used in `equation` table.
+#' * `references_metadata`: Metadata for `reference` table.
 #'
 #' @format
 #' A data frame with 57 rows and 6 variables:
@@ -147,9 +142,9 @@
 
 #' ForestGEO sites used in allodb
 #'
-#' Table with geographical information for ForestGEO sites used in allodb (n=24). More details can be found in the #'accompanying manuscript.
+#' Table with geographical information for extratropical ForestGEO sites used in allodb (n=24).
 #'
-#' * `sites_info`: A dataframe with geographical data for 24 extratropical ForestGEO sites used in allodb.
+#' More details on geographical aspects of these ForestGEO sites can be found in the accompanying manuscript.
 #'
 #' @format
 #' A data frame with 24 observations and 6 variables:
@@ -169,9 +164,8 @@
 
 #' Tree census data from SCBI ForestGEO plot
 #'
-#' A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st #'tree census in 2008, 1 hectare).
+#' A table with tree data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot. These data is from the first tree census in 2008, and only cover 1 hectare (SCBI is 25 ha).
 #'
-#' * `scbi_stem1`: A dataframe with tree data from the SCBI forest dynamic plot (1ha).
 #'
 #' @format
 #' A data frame with 2287 observations and 6 variables:
@@ -193,9 +187,9 @@
 
 #' Genus and family table for selected ForestGEO sites
 #'
-#' Table with genus and their associated family identified in the ForestGEO sites used in allodb. This dataframe is an #'input in the weight_allom() function.
+#' Table with genus and their associated family identified in the ForestGEO sites used in allodb. This data frame is an input in the weight_allom() function.
 #'
-#' * `genus_family`: A dataframe with genus and families identified in the extratropical ForestGEO sites used in allodb.
+#' * `genus_family`: A data frame with genus and families identified in the extratropical ForestGEO sites used in allodb.
 #'
 #' @format
 #' A data frame with 248 observations and 2 variables:
@@ -208,12 +202,12 @@
 
 
 
-#' Family and genus for Gymnosperms identified in selected ForestGEO sites
+#' Gymnosperms identified in selected ForestGEO sites
 #'
 #' Table with genus and their associated family for Gymnosperms identified in the ForestGEO sites used in allodb.
-#' This dataframe is particularly important to differentiate conifers as input in the weight_allom() function.
+#' This data frame is particularly important to differentiate conifers as input in the weight_allom() function.
 #'
-#' * `gymno_genus`: A dataframe with genus and families for Gymnosperms identified in the extratropical ForestGEO sites used in allodb.
+#' * `gymno_genus`: A data frame with genus and families for Gymnosperms identified in the extratropical ForestGEO sites used in allodb.
 #'
 #' @format
 #' A data frame with 95 observations and 3 variables:
@@ -227,9 +221,9 @@
 
 
 
-#' List of shrub genus/species identified in selected ForestGEO sites
+#' List of shrub identified in selected ForestGEO sites
 #'
-#' A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list #'is an input in the weight_allom() function.
+#' A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list is an input in the weight_allom() function.
 #'
 #' * `shrub_species`: A list with genus and species of shrubby plants identified in the extratropical ForestGEO #'sites used in allodb.
 #'
@@ -242,9 +236,9 @@
 
 #' Koppen climate classification matrix
 #'
-#' A table built to facilitate the comparison between the Koppen climate of a site and equation in question. This #'table is used in the weighting scheme. More details can be found in the accompanying manuscript.
+#' A table built to facilitate the comparison between the Koppen climate of a site and the allometric equation in question. This table is used in the weighting scheme. More details can be found in the accompanying manuscript.
 #'
-#' * `koppenMatrix`: A dataframe with two columns depicting the 3-letter system of Köppen climate scheme and the given weight when comparing site/equation climate.
+#' * `koppenMatrix`: A data frame with two columns depicting the 3-letter system of the Köppen climate scheme and the given weight when comparing site/equation climate.See the "climatic weight" explanation in the "weighting scheme of allometric equations" section of the accompanying manuscript.
 #'
 #' @format
 #' A data frame with 900 observations and 3 variables:
