@@ -18,10 +18,12 @@ A data frame with 24 observations and 6 variables:\preformatted{[,1]	Site	charac
 sites_info
 }
 \description{
-Table with geographical information for extratropical ForestGEO sites used in allodb (n=24).
+Table with geographical information for extratropical ForestGEO sites used in
+allodb (n=24).
 }
 \details{
-More details on geographical aspects of these ForestGEO sites can be found in the accompanying manuscript.
+More details on geographical aspects of these ForestGEO sites can be found in
+the accompanying manuscript.
 }
 \seealso{
 Other database datasets: 
