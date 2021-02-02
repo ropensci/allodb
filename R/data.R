@@ -1,11 +1,11 @@
 # Database data -------------------------------------------------------------
 
-#' Tables of allometric equations and associated metadata.
+#'Tables of allometric equations and associated metadata.
 #'
-#' A compilation of best available allometry equations to calculate tree
-#' above-ground biomass (AGB) per species based on extratropical ForestGEO sites:
-#'* `equations`: Table of allometric equations.
-#'* `equations_metadata`: Explanation of columns for `equations` table.
+#'A compilation of best available allometry equations to calculate tree
+#'above-ground biomass (AGB) per species based on extratropical ForestGEO sites:
+#'* `equations`: Table of allometric equations. * `equations_metadata`:
+#'Explanation of columns for `equations` table.
 #'
 #' @format
 #' `equations`: A data frame with 571 rows and 47 variables:
@@ -89,12 +89,11 @@
 
 #' Tables of sites and tree species used in allodb and associated metadata.
 #'
-#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and their tree species.
-#' * `sitespecies_metadata`: Metadata for `sitespecies` table.
+#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and
+#' their tree species. * `sitespecies_metadata`: Metadata for `sitespecies`
+#' table.
 #'
-#' @format
-#' A data frame with 1114 rows and 10 variables:
-#' ```
+#' @format A data frame with 1114 rows and 10 variables: ```
 #' [,1]	site	character
 #' [,2]	family	character
 #' [,3]	genus	character
@@ -117,12 +116,11 @@
 
 #' Tables of equation references and associated metadata
 #'
-#' Bibliographical information for sourced equations. Links to the `equations` table by ref_id.
-#' * `references`: A data frame listing all references used in `equation` table.
-#' * `references_metadata`: Metadata for `reference` table.
+#' Bibliographical information for sourced equations. Links to the `equations`
+#' table by ref_id. * `references`: A data frame listing all references used in
+#' `equation` table. * `references_metadata`: Metadata for `reference` table.
 #'
-#' @format
-#' A data frame with 57 rows and 6 variables:
+#' @format A data frame with 57 rows and 6 variables:
 #' ```
 #' [,1]	ref_id	character
 #' [,2]	ref_doi	character
@@ -142,9 +140,11 @@
 
 #' ForestGEO sites used in allodb
 #'
-#' Table with geographical information for extratropical ForestGEO sites used in allodb (n=24).
+#' Table with geographical information for extratropical ForestGEO sites used in
+#' allodb (n=24).
 #'
-#' More details on geographical aspects of these ForestGEO sites can be found in the accompanying manuscript.
+#' More details on geographical aspects of these ForestGEO sites can be found in
+#' the accompanying manuscript.
 #'
 #' @format
 #' A data frame with 24 observations and 6 variables:
@@ -164,7 +164,9 @@
 
 #' Tree census data from SCBI ForestGEO plot
 #'
-#' A table with tree data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot. These data is from the first tree census in 2008, and only cover 1 hectare (SCBI is 25 ha).
+#' A table with tree data from the Smithsonian Conservation Biology Institute,
+#' USA (SCBI) ForestGEO dynamics plot. These data is from the first tree census
+#' in 2008, and only cover 1 hectare (SCBI is 25 ha).
 #'
 #'
 #' @format
@@ -178,43 +180,42 @@
 #' [,6]	Family	character
 #'
 #'```
-#' @source Full data sets for tree census data at SCBI can be requested through the ForestGEO portal
-#'  (https://forestgeo.si.edu/). Census 1 and 2 can also be accessed at the public GitHub repository for SCBI-ForestGEO
-#'  Data (https://github.com/SCBI-ForestGEO).
+#' @source Full data sets for tree census data at SCBI can be requested through
+#'   the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also
+#'   be accessed at the public GitHub repository for SCBI-ForestGEO Data
+#'   (https://github.com/SCBI-ForestGEO).
 "scbi_stem1"
 
 
 
 #' Genus and family table for selected ForestGEO sites
 #'
-#' Table with genus and their associated family identified in the ForestGEO sites used in allodb. This data frame is an input in the weight_allom() function.
+#' Table with genus and their associated family identified in the ForestGEO
+#' sites used in allodb. This data frame is an input in the weight_allom()
+#' function.
 #'
-#' * `genus_family`: A data frame with genus and families identified in the extratropical ForestGEO sites used in allodb.
+#' * `genus_family`: A data frame with genus and families identified in the
+#' extratropical ForestGEO sites used in allodb.
 #'
-#' @format
-#' A data frame with 248 observations and 2 variables:
-#' ```
-#' [,1]	genus	character
-#' [,2]	family	character
+#' @format A data frame with 248 observations and 2 variables: ```
+#' [,1]	genus	character [,2]	family	character
 #'
 #'```
 "genus_family"
 
 
 
-#' Gymnosperms identified in selected ForestGEO sites
+#'Gymnosperms identified in selected ForestGEO sites
 #'
-#' Table with genus and their associated family for Gymnosperms identified in the ForestGEO sites used in allodb.
-#' This data frame is particularly important to differentiate conifers as input in the weight_allom() function.
+#'Table with genus and their associated family for Gymnosperms identified in the
+#'ForestGEO sites used in allodb. This data frame is particularly important to
+#'differentiate conifers as input in the weight_allom() function.
 #'
-#' * `gymno_genus`: A data frame with genus and families for Gymnosperms identified in the extratropical ForestGEO sites used in allodb.
+#'* `gymno_genus`: A data frame with genus and families for Gymnosperms
+#'identified in the extratropical ForestGEO sites used in allodb.
 #'
-#' @format
-#' A data frame with 95 observations and 3 variables:
-#' ```
-#' [,1]	Family	character
-#' [,2]	Genus	character
-#' [,3] conifer logical
+#'@format A data frame with 95 observations and 3 variables: ```
+#'[,1]	Family	character [,2]	Genus	character [,3] conifer logical
 #'
 #'```
 "gymno_genus"
@@ -223,9 +224,11 @@
 
 #' List of shrub identified in selected ForestGEO sites
 #'
-#' A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list is an input in the weight_allom() function.
+#' A list with genus and species of shrubby plants identified in the ForestGEO
+#' sites used in allodb. The list is an input in the weight_allom() function.
 #'
-#' * `shrub_species`: A list with genus and species of shrubby plants identified in the extratropical ForestGEO #'sites used in allodb.
+#' * `shrub_species`: A list with genus and species of shrubby plants identified
+#' in the extratropical ForestGEO #'sites used in allodb.
 #'
 #' @format
 #' A vector containing 179 observations
@@ -236,9 +239,27 @@
 
 #' Koppen climate classification matrix
 #'
-#' A table built to facilitate the comparison between the Koppen climate of a site and the allometric equation in question. This table is used in the weighting scheme. More details can be found in the accompanying manuscript.
+#' A table built to facilitate the comparison between the Koppen climate of a
+#' site and the allometric equation in question. This table is used in the
+#' weighting scheme in the weight_allom() function.
 #'
-#' * `koppenMatrix`: A data frame with two columns depicting the 3-letter system of the Köppen climate scheme and the given weight when comparing site/equation climate.See the "climatic weight" explanation in the "weighting scheme of allometric equations" section of the accompanying manuscript.
+#' * `koppenMatrix`: A data frame with two columns depicting the 3-letter system
+#' of the Koppen climate scheme and the given weight when comparing
+#' site/equation climate.
+#'
+#' The value of column `wE` is the weight given to the combination of
+#' Koppen climates in columns `zone1`and `zone2`; the table is symmetric:
+#' `zone1`and `zone2` can be interchanged. This weight is calculated in 3 steps:
+#' (1) if the main climate group (first letter) is the same, the climate weight
+#' starts at 0.4; if one of the groups is "C" (temperate climate) and the other
+#' is "D" (continental climate), the climate weight starts at 0.2 because the 2
+#' groups are considered similar enough; otherwise, the weight is 0; (2) if the
+#' equation and site belong to the same group, the weight is incremented by an
+#' additional value between 0 and 0.3 based on precipitation pattern similarity
+#' (second letter of the Koppen zone), and (3) by an additional value between 0
+#' and 0.3 based on temperature pattern similarity (third letter of the Koppen
+#' zone). The resulting weight has a value between 0 (different climate groups)
+#' and 1 (exactly the same climate classification).
 #'
 #' @format
 #' A data frame with 900 observations and 3 variables:
