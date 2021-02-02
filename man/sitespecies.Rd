@@ -4,7 +4,7 @@
 \name{sitespecies}
 \alias{sitespecies}
 \alias{sitespecies_metadata}
-\title{Tables of sites and tree species used in allo-db and associated metadata.}
+\title{Tables of sites and tree species used in allodb and associated metadata.}
 \format{
 A data frame with 1114 rows and 10 variables:\preformatted{[,1]	site	character
 [,2]	family	character
@@ -28,12 +28,7 @@ sitespecies_metadata
 }
 \description{
 \itemize{
-\item \code{sitespecies}: Table of extratropical ForestGEO sites in allodb (n=24) and
-their tree species.
-}
-}
-\details{
-\itemize{
+\item \code{sitespecies}: Table of extratropical ForestGEO sites in allodb (n=24) and their tree species.
 \item \code{sitespecies_metadata}: Metadata for \code{sitespecies} table.
 }
 }

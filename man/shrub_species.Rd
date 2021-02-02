@@ -3,7 +3,7 @@
 \docType{data}
 \name{shrub_species}
 \alias{shrub_species}
-\title{List of shrub genus/species identified in selected ForestGEO sites}
+\title{List of shrub identified in selected ForestGEO sites}
 \format{
 A vector containing 179 observations
 }
@@ -11,7 +11,7 @@ A vector containing 179 observations
 shrub_species
 }
 \description{
-A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list #'is an input in the weight_allom() function.
+A list with genus and species of shrubby plants identified in the ForestGEO sites used in allodb. The list is an input in the weight_allom() function.
 }
 \details{
 \itemize{

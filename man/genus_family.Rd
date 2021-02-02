@@ -14,11 +14,11 @@ A data frame with 248 observations and 2 variables:\preformatted{[,1]	genus	char
 genus_family
 }
 \description{
-Table with genus and their associated family identified in the ForestGEO sites used in allodb. This dataframe is an #'input in the weight_allom() function.
+Table with genus and their associated family identified in the ForestGEO sites used in allodb. This data frame is an input in the weight_allom() function.
 }
 \details{
 \itemize{
-\item \code{genus_family}: A dataframe with genus and families identified in the extratropical ForestGEO sites used in allodb.
+\item \code{genus_family}: A data frame with genus and families identified in the extratropical ForestGEO sites used in allodb.
 }
 }
 \keyword{datasets}

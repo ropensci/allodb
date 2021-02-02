@@ -15,11 +15,11 @@ A data frame with 900 observations and 3 variables:\preformatted{[,1]	zone1	char
 koppenMatrix
 }
 \description{
-A table built to facilitate the comparison between the Koppen climate of a site and equation in question. This #'table is used in the weighting scheme. More details can be found in the accompanying manuscript.
+A table built to facilitate the comparison between the Koppen climate of a site and the allometric equation in question. This table is used in the weighting scheme. More details can be found in the accompanying manuscript.
 }
 \details{
 \itemize{
-\item \code{koppenMatrix}: A dataframe with two columns depicting the 3-letter system of Köppen climate scheme and the given weight when comparing site/equation climate.
+\item \code{koppenMatrix}: A data frame with two columns depicting the 3-letter system of the Köppen climate scheme and the given weight when comparing site/equation climate.See the "climatic weight" explanation in the "weighting scheme of allometric equations" section of the accompanying manuscript.
 }
 }
 \keyword{datasets}

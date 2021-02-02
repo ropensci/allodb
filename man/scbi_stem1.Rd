@@ -23,11 +23,6 @@ Data (https://github.com/SCBI-ForestGEO).
 scbi_stem1
 }
 \description{
-A table with data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st #'tree census in 2008, 1 hectare).
-}
-\details{
-\itemize{
-\item \code{scbi_stem1}: A dataframe with tree data from the SCBI forest dynamic plot (1ha).
-}
+A table with tree data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot. These data is from the first tree census in 2008, and only cover 1 hectare (SCBI is 25 ha).
 }
 \keyword{datasets}

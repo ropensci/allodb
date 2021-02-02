@@ -23,13 +23,10 @@ references
 references_metadata
 }
 \description{
-Bibliographical info for sourced equations. Links to equations table by
-ref_id.
-}
-\details{
+Bibliographical information for sourced equations. Links to the \code{equations} table by ref_id.
 \itemize{
-\item \code{references}: A dataframe listing all references used in equation table.
-\item \code{references_metadata}: Table of metadata of \code{reference}.
+\item \code{references}: A data frame listing all references used in \code{equation} table.
+\item \code{references_metadata}: Metadata for \code{reference} table.
 }
 }
 \seealso{
