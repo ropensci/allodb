@@ -179,7 +179,7 @@ plot(
 )
 ```
 
-![](README_files/figure-gfm/resample-acer-1.png)<!-- -->
+![](docs/figures/resample-acer-1.png)
 
 The resampled values are then used to fit the following linear model:
 log(AGB) \~ log(DBH). The parameters (*a* intercept, *b* slope, and
@@ -201,7 +201,7 @@ plot(
 curve(pars_acer$a * x ^ pars_acer$b, add = TRUE, col = 2, lwd = 2)
 ```
 
-![](README_files/figure-gfm/est-params-acer-1.png)<!-- -->
+![](docs/figures/est-params-acer-1.png)
 
 The `est_params` function can be used for all species/site combinations
 in the dataset at once.

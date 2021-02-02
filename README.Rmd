@@ -77,7 +77,7 @@ get_biomass(
 
 Users can modify the set of equations that will be used to estimate the biomass using the `new_equations` function. The default option is the entire _allodb_ equation table. Users can also work on a subset of those equations, or add new equations to the table (see `?allodb::new_equations`). This new equation table should be provided as an argument in the `get_biomass` function.  
 
-```{r }
+```{r}
 show_cols <- c("equation_id", "equation_taxa", "equation_allometry")
 eq_tab_acer <- new_equations(subset_taxa = "Acer")
 head(eq_tab_acer[, show_cols])
@@ -106,7 +106,7 @@ head(equ_tab_acer)
 
 Equations are then resampled within their original DBH range: the number of resampled values for each equation is proportional to its weight (as attributed by the `weight_allom` function). 
 
-```{r resample-acer}
+```{r resample-acer, eval = FALSE}
 df_resample <-
   resample_agb(genus = "Acer",
                species = "rubrum",
@@ -121,9 +121,11 @@ plot(
 )
 ```
 
+![](docs/figures/resample-acer-1.png)
+
 The resampled values are then used to fit the following linear model: log(AGB) ~ log(DBH). The parameters (_a_ intercept, _b_ slope, and _sigma_ standard deviation of residuals) are returned by the `est_params` function. 
 
-```{r est-params-acer}
+```{r est-params-acer, eval = FALSE}
 pars_acer <- est_params(
   genus = "Acer",
   species = "rubrum",
@@ -137,6 +139,8 @@ plot(
 )
 curve(pars_acer$a * x ^ pars_acer$b, add = TRUE, col = 2, lwd = 2)
 ```
+
+![](docs/figures/est-params-acer-1.png)
 
 The `est_params` function can be used for all species/site combinations in the dataset at once. 
 
