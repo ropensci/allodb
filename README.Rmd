@@ -27,8 +27,8 @@ knitr::opts_chunk$set(
 
 Allometric equations for calculation of tree aboveground biomass (AGB) form the basis for estimates of forest carbon storage and exchange with the atmosphere. While standard models exist to calculate forest biomass across the tropics, we lack a standardized tool for computing AGB across the global extratropics.
 
-_allo-db_ was conceived as a framework to standardize and simplify the biomass estimation process across globally distributed extratropical forests. 
-With _allo-db_ we aimed to: a) compile relevant published and unpublished allometries, focusing on AGB but structured to handle other variables (e.g., height and biomass components); b) objectively select and integrate appropriate available equations across the full range  of tree sizes; and c) serve as a platform for future updates and expansion to other research sites globally.
+_allodb_ was conceived as a framework to standardize and simplify the biomass estimation process across globally distributed extratropical forests. 
+With _allodb_ we aimed to: a) compile relevant published and unpublished allometries, focusing on AGB but structured to handle other variables (e.g., height and biomass components); b) objectively select and integrate appropriate available equations across the full range  of tree sizes; and c) serve as a platform for future updates and expansion to other research sites globally.
 
 The _allodb_ package contains a database of systematically selected published allometric equations. The data component of the package is based on 701 woody species identified at 24 large ForestGEO forest dynamic plots representing all major extratropical forest types. A total of 549 parsed allometric equations to estimate individual tree biomass were retrieved, checked, and combined using a weighting function designed to ensure optimal equation selection over the full tree size range with smooth transitions across equations. The equation dataset used can be customized with built-in functions that subset the original dataset and add new equations.
 
@@ -36,7 +36,7 @@ The package also provides functions to estimate biomass based on user-provided c
 
 ## Installation
 
-Install the development version of _allo-db_ from GitHub:
+Install the development version of _allodb_ from GitHub:
 
 ```R
 # install.packages("remotes")
@@ -45,7 +45,7 @@ remotes::install_github("forestgeo/allodb")
 
 ## Examples
 
-Prior to calculating tree biomass using _allo-db_, users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. In the following examples we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees from 1 hectare). Tree census data can be requested through the ForestGEO portal (https://forestgeo.si.edu/)
+Prior to calculating tree biomass using _allodb_, users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. In the following examples we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (1st census in 2008, trees from 1 hectare). Tree census data can be requested through the ForestGEO portal (https://forestgeo.si.edu/)
 
 ```{r open-data}
 library(allodb)
@@ -123,21 +123,21 @@ plot(
 
 ![](docs/figures/resample-acer-1.png)
 
-The resampled values are then used to fit the following linear model: log(AGB) ~ log(DBH). The parameters (_a_ intercept, _b_ slope, and _sigma_ standard deviation of residuals) are returned by the `est_params` function. 
+The resampled values are then used to fit the following linear model: following nonlinear model: $AGB = a \cdot dbh ^ b + e$, with i.i.d. $e \sim \mathcal{N}(0, sigma^2)$. The parameters (_a_, _b_, and _sigma_) are returned by the `est_params()` function.
 
-```{r est-params-acer, eval = FALSE}
+The resampled values (dots) and new fitted equation (red dotted line) can be visualised with the `illustrate_allodb()` function. 
+
+```{r est-params-acer, eval = FALSE, fig.height=4, fig.width=10}
 pars_acer <- est_params(
   genus = "Acer",
   species = "rubrum",
   coords = c(-78, 38)
 )
-plot(
-  df_resample$dbh,
-  df_resample$agb,
-  xlab = "DBH (cm)",
-  ylab = "Resampled AGB values (kg)"
+illustrate_allodb(
+  genus = "Acer",
+  species = "rubrum",
+  coords = c(-78, 38)
 )
-curve(pars_acer$a * x ^ pars_acer$b, add = TRUE, col = 2, lwd = 2)
 ```
 
 ![](docs/figures/est-params-acer-1.png)

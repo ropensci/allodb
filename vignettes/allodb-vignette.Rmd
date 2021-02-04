@@ -155,7 +155,7 @@ plot(
 
 ### Calibrate a new equation for each taxon/location combination
 
-The resampled values are then used to fit the following nonlinear model: $AGB = a \cdot dbh ^ b + e$, with i.i.d. $e \sim \mathcal{N}(0, sigma^2)$. The parameters (_a_ intercept, _b_ slope, and _sigma_ standard deviation of residuals) are returned by the `est_params()` function. 
+The resampled values are then used to fit the following nonlinear model: $AGB = a \cdot dbh ^ b + e$, with i.i.d. $e \sim \mathcal{N}(0, sigma^2)$. The parameters (_a_, _b_, and _sigma_) are returned by the `est_params()` function. 
 
 ```{r est-params-acer, fig.width = 6, fig.height = 5}
 pars_acer <- est_params(

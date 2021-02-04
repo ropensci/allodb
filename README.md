@@ -182,9 +182,12 @@ plot(
 ![](docs/figures/resample-acer-1.png)
 
 The resampled values are then used to fit the following linear model:
-log(AGB) \~ log(DBH). The parameters (*a* intercept, *b* slope, and
-*sigma* standard deviation of residuals) are returned by the
-`est_params` function.
+following nonlinear model: \(AGB = a \cdot dbh ^ b + e\), with i.i.d.
+\(e \sim \mathcal{N}(0, sigma^2)\). The parameters (*a*, *b*, and
+*sigma*) are returned by the `est_params()` function.
+
+The resampled values (dots) and new fitted equation (red dotted line)
+can be visualised with the `illustrate_allodb()` function.
 
 ``` r
 pars_acer <- est_params(
@@ -192,13 +195,11 @@ pars_acer <- est_params(
   species = "rubrum",
   coords = c(-78, 38)
 )
-plot(
-  df_resample$dbh,
-  df_resample$agb,
-  xlab = "DBH (cm)",
-  ylab = "Resampled AGB values (kg)"
+illustrate_allodb(
+  genus = "Acer",
+  species = "rubrum",
+  coords = c(-78, 38)
 )
-curve(pars_acer$a * x ^ pars_acer$b, add = TRUE, col = 2, lwd = 2)
 ```
 
 ![](docs/figures/est-params-acer-1.png)
