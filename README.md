@@ -23,37 +23,37 @@ the atmosphere. While standard models exist to calculate forest biomass
 across the tropics, we lack a standardized tool for computing AGB across
 the global extratropics.
 
-*allo-db* was conceived as a framework to standardize and simplify the
+*allodb* was conceived as a framework to standardize and simplify the
 biomass estimation process across globally distributed extratropical
-forests. With *allo-db* we aimed to: a) compile relevant published and
-unpublished allometries, focusing on AGB but structured to handle other
-variables (e.g., height and biomass components); b) objectively select
-and integrate appropriate available equations across the full range of
-tree sizes; and c) serve as a platform for future updates and expansion
-to other research sites globally.
+forests (mainly temperate and boreal forests). With *allodb* we aimed
+to: a) compile relevant published and unpublished allometries, focusing
+on AGB but structured to handle other variables (e.g., height); b)
+objectively select and integrate appropriate available equations across
+the full range of tree sizes; and c) serve as a platform for future
+updates and expansion to other research sites.
 
-The *allodb* package contains a database of systematically selected
-published allometric equations. The data component of the package is
-based on 701 woody species identified at 24 large ForestGEO forest
-dynamic plots representing all major extratropical forest types. A total
-of 549 parsed allometric equations to estimate individual tree biomass
-were retrieved, checked, and combined using a weighting function
-designed to ensure optimal equation selection over the full tree size
-range with smooth transitions across equations. The equation dataset
-used can be customized with built-in functions that subset the original
-dataset and add new equations.
+The *allodb* package contains a dataset of systematically selected
+published allometric equations. This dataset was built based on 701
+woody species identified at 24 large [ForestGEO forest dynamic
+plots](https://forestgeo.si.edu/) representing all major extratropical
+forest types. A total of 544 parsed allometric equations to estimate
+individual tree biomass were retrieved, checked, and combined using a
+weighting function designed to ensure optimal equation selection over
+the full tree size range with smooth transitions across equations. The
+equation dataset used can be customized with built-in functions that
+subset the original dataset and add new equations.
 
-The package also provides functions to estimate biomass based on
-user-provided census data (tree DBHs, taxonomic identification, and plot
-coordinates). New allometric equations are calibrated for each species
-and location by resampling the original equations; equations with a
-larger sample size and/or higher taxonomic and climatic similarity with
-the species and location in question are given a higher weight in this
-process.
+The package provides functions to estimate tree biomass based on
+user-provided census data (tree diameter, taxonomic identification, and
+plot coordinates). New allometric equations are calibrated for each
+species and location by resampling the original equations; equations
+with a larger sample size and/or higher taxonomic and climatic
+similarity with the species and location in question are given a higher
+weight in this process.
 
 ## Installation
 
-Install the development version of *allo-db* from GitHub:
+Install the development version of *allodb* from GitHub:
 
 ``` r
 # install.packages("remotes")
@@ -62,13 +62,13 @@ remotes::install_github("forestgeo/allodb")
 
 ## Examples
 
-Prior to calculating tree biomass using *allo-db*, users need to provide
+Prior to calculating tree biomass using *allodb*, users need to provide
 a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and
 site(s) coordinates. In the following examples we use data from the
 Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO
-dynamics plot (1st census in 2008, trees from 1 hectare). Tree census
-data can be requested through the ForestGEO portal
-(<https://forestgeo.si.edu/>)
+dynamics plot (trees from 1 hectare surveyed in 2008). Full tree census
+data can be requested through the [ForestGEO
+portal](https://forestgeo.si.edu/explore-data).
 
 ``` r
 library(allodb)
@@ -88,8 +88,8 @@ scbi_stem1$agb <-
   )
 ```
 
-Biomass for a single tree can be estimated given dbh and species Id
-(results in kilograms).
+Biomass for a single tree can be estimated given dbh and species
+identification (results in kilograms).
 
 ``` r
 get_biomass(
@@ -98,7 +98,7 @@ get_biomass(
   species="tulipifera", 
   coords=c(-78.2, 38.9)
 )
-#> [1] 1648.712
+#> [1] 1664.937
 ```
 
 Users can modify the set of equations that will be used to estimate the
@@ -128,7 +128,7 @@ head(eq_tab_acer[, show_cols])
 #> 152 0.0202*(dbh)^1.810+0.0111*(dbh)^2.740+0.1156*(dbh)^2.336
 ```
 
-Within the `get_biomass` function, this equation table is then used to
+Within the `get_biomass` function, this equation table is used to
 calibrate a new allometric equation for all species/site combinations in
 the user-provided dataframe. This is done by attributing a weight to
 each equation based on its sampling size, and taxonomic and climatic
@@ -215,12 +215,12 @@ params <- est_params(
 )
 head(params)
 #>          genus     species  long  lat          a        b    sigma
-#> 1:        Acer     negundo -78.2 38.9 0.09642540 2.507352 415.7038
-#> 2:        Acer      rubrum -78.2 38.9 0.09667325 2.506573 399.8393
-#> 3:   Ailanthus   altissima -78.2 38.9 0.15385947 2.389879 376.4935
-#> 4: Amelanchier     arborea -78.2 38.9 0.09643425 2.490833 374.4586
-#> 5:     Asimina     triloba -78.2 38.9 0.15385947 2.389879 376.4935
-#> 6:    Carpinus caroliniana -78.2 38.9 0.12670717 2.432006 324.7536
+#> 1:        Acer     negundo -78.2 38.9 0.09854099 2.503051 407.3033
+#> 2:        Acer      rubrum -78.2 38.9 0.09875320 2.502359 391.6681
+#> 3:   Ailanthus   altissima -78.2 38.9 0.17065158 2.367212 355.3713
+#> 4: Amelanchier     arborea -78.2 38.9 0.10545838 2.471222 359.5947
+#> 5:     Asimina     triloba -78.2 38.9 0.17065158 2.367212 355.3713
+#> 6:    Carpinus caroliniana -78.2 38.9 0.13687054 2.415046 308.8340
 ```
 
 AGB is then recalculated as `agb = a * dbh^b` within the `get_biomass`
