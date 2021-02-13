@@ -4,7 +4,7 @@
 \name{allodb-package}
 \alias{allodb}
 \alias{allodb-package}
-\title{allodb: Tree Biomass Estimation At Extratropical Forest Plots}
+\title{allodb: Tree Biomass Estimation at Extratropical Forest Plots}
 \description{
 Tool to standardize and simplify the tree biomass
     estimation process across globally distributed extratropical forests.

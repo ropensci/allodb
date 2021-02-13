@@ -1,5 +1,5 @@
 Package: allodb
-Title: Tree Biomass Estimation At Extratropical Forest Plots
+Title: Tree Biomass Estimation at Extratropical Forest Plots
 Version: 1.0.0.9000
 Authors@R: 
     c(person(given = "Erika",
