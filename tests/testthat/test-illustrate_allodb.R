@@ -1,4 +1,3 @@
-context("Test the illustrate_allodb() function")
 library(allodb)
 
 test_that("illustrate_allodb() returns a ggplot object", {

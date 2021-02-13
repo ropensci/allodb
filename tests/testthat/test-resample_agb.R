@@ -1,4 +1,3 @@
-context("Test the resample_agb() function")
 library(allodb)
 
 test_that("resample_agb returns a dataframe of size 1e6 x 3", {

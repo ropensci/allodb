@@ -1,4 +1,3 @@
-context("Test the weigth_allom() function")
 library(allodb)
 
 test_that("weight_allom returns a vector of the same length as the equation table.",

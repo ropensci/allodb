@@ -1,4 +1,3 @@
-context("Test all functionalities of the new_equations() function")
 library(allodb)
 
 test_that("new_equations() returns a dataframe with all necessary information",

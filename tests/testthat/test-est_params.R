@@ -1,4 +1,3 @@
-context("Test the est_params() function")
 library(allodb)
 
 test_that("est_params() returns a dataframe with all combinations of species x locations",
