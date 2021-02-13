@@ -3,7 +3,7 @@
 # <img src="https://i.imgur.com/39pvr4n.png" align="left" height=44 /> allodb: An R package for biomass estimation at extratropical forest plots
 
 <!-- badges: start -->
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![Build Status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb) [![Coverage status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/r/forestgeo/allodb?branch=master) [![CRAN status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb) [![R-CMD-check](https://github.com/forestgeo/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/forestgeo/allodb/actions) <!-- badges: end -->
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html) [![Build Status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb) [![Coverage status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/github/forestgeo/allodb) [![CRAN status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb) [![R-CMD-check](https://github.com/forestgeo/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/forestgeo/allodb/actions) <!-- badges: end -->
 
 ## Introduction
 
