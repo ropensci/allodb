@@ -15,13 +15,13 @@ test_that("est_params() returns a dataframe with all combinations of species x l
               species = test_tab$species,
               coords = test_tab[, c("long", "lat")]
             )
-            expect_is(testall, "data.frame")
+            expect_s3_class(testall, "data.frame")
             expect_equal(nrow(testall), ncombi)
             expect_equal(ncol(testall), 7)
           })
 
 test_that("est_params can be used with a new equation table", {
-  expect_is(est_params(
+  expect_s3_class(est_params(
     genus = c("Quercus", "Fagus"),
     coords = c(-78, 40),
     new_eqtable = new_equations(subset_taxa = "Quercus")

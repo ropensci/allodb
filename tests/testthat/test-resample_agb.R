@@ -5,7 +5,7 @@ test_that("resample_agb returns a dataframe of size 1e6 x 3", {
     resample_agb(genus = "Quercus",
                  species = "alba",
                  coords = c(-78, 40))
-  expect_is(res_test, "data.frame")
+  expect_s3_class(res_test, "data.frame")
   expect_equal(nrow(res_test), 1e6, tolerance = 1e2)
   expect_equal(ncol(res_test), 3)
   expect_is(res_test$equation_id, "character")
@@ -25,7 +25,7 @@ test_that(
 )
 
 test_that("resample_agb can be used with a new equation table", {
-  expect_is(
+  expect_s3_class(
     resample_agb(
       genus = "Quercus",
       coords = c(-78, 40),
