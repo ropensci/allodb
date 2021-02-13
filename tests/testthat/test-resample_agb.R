@@ -9,8 +9,8 @@ test_that("resample_agb returns a dataframe of size 1e6 x 3", {
   expect_equal(nrow(res_test), 1e6, tolerance = 1e2)
   expect_equal(ncol(res_test), 3)
   expect_type(res_test$equation_id, "character")
-  expect_type(res_test$dbh, "numeric")
-  expect_type(res_test$agb, "numeric")
+  expect_type(res_test$dbh, "double")
+  expect_type(res_test$agb, "double")
 })
 
 test_that(

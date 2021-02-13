@@ -10,9 +10,9 @@ test_that("new_equations() returns a dataframe with all necessary information",
             expect_type(tab$independent_variable, "character")
             expect_type(tab$dependent_variable, "character")
             expect_type(tab$koppen, "character")
-            expect_type(tab$dbh_min_cm, "numeric")
-            expect_type(tab$dbh_max_cm, "numeric")
-            expect_type(tab$sample_size, "numeric")
+            expect_type(tab$dbh_min_cm, "double")
+            expect_type(tab$dbh_max_cm, "double")
+            expect_type(tab$sample_size, "double")
             expect_type(tab$dbh_units_original, "character")
             expect_type(tab$output_units_original, "character")
 
