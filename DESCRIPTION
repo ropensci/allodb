@@ -38,7 +38,7 @@ Suggests:
     knitr (>= 1.21),
     purrr,
     spelling,
-    testthat (>= 2.0.1),
+    testthat (>= 3.0.0),
     rmarkdown
 VignetteBuilder: 
     knitr
@@ -47,3 +47,4 @@ Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Config/testthat/edition: 3
