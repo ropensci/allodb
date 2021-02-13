@@ -108,7 +108,6 @@ resample_agb <- function(genus,
 
   df <- data.frame(equation_id,
                    dbh = unlist(list_dbh),
-                   agb = unlist(list_agb),
-                   stringsAsFactors = FALSE)
+                   agb = unlist(list_agb))
   return(df)
 }
