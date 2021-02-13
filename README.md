@@ -1,55 +1,19 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # <img src="https://i.imgur.com/39pvr4n.png" align="left" height=44 /> allodb: An R package for biomass estimation at extratropical forest plots
 
 <!-- badges: start -->
-
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Build
-Status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
-[![Coverage
-status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/r/forestgeo/allodb?branch=master)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb)
-[![R-CMD-check](https://github.com/forestgeo/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/forestgeo/allodb/actions)
-<!-- badges: end -->
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![Build Status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb) [![Coverage status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/r/forestgeo/allodb?branch=master) [![CRAN status](https://www.r-pkg.org/badges/version/allodb)](https://cran.r-project.org/pkg=allodb) [![R-CMD-check](https://github.com/forestgeo/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/forestgeo/allodb/actions) <!-- badges: end -->
 
 ## Introduction
 
-Allometric equations for calculation of tree aboveground biomass (AGB)
-form the basis for estimates of forest carbon storage and exchange with
-the atmosphere. While standard models exist to calculate forest biomass
-across the tropics, we lack a standardized tool for computing AGB across
-the global extratropics.
+Allometric equations for calculation of tree aboveground biomass (AGB) form the basis for estimates of forest carbon storage and exchange with the atmosphere. While standard models exist to calculate forest biomass across the tropics, we lack a standardized tool for computing AGB across the global extratropics.
 
-*allodb* was conceived as a framework to standardize and simplify the
-biomass estimation process across globally distributed extratropical
-forests (mainly temperate and boreal forests). With *allodb* we aimed
-to: a) compile relevant published and unpublished allometries, focusing
-on AGB but structured to handle other variables (e.g., height); b)
-objectively select and integrate appropriate available equations across
-the full range of tree sizes; and c) serve as a platform for future
-updates and expansion to other research sites.
+*allodb* was conceived as a framework to standardize and simplify the biomass estimation process across globally distributed extratropical forests (mainly temperate and boreal forests). With *allodb* we aimed to: a) compile relevant published and unpublished allometries, focusing on AGB but structured to handle other variables (e.g., height); b) objectively select and integrate appropriate available equations across the full range of tree sizes; and c) serve as a platform for future updates and expansion to other research sites.
 
-The *allodb* package contains a dataset of systematically selected
-published allometric equations. This dataset was built based on 701
-woody species identified at 24 large [ForestGEO forest dynamic
-plots](https://forestgeo.si.edu/) representing all major extratropical
-forest types. A total of 544 parsed allometric equations to estimate
-individual tree biomass were retrieved, checked, and combined using a
-weighting function designed to ensure optimal equation selection over
-the full tree size range with smooth transitions across equations. The
-equation dataset used can be customized with built-in functions that
-subset the original dataset and add new equations.
+The *allodb* package contains a dataset of systematically selected published allometric equations. This dataset was built based on 701 woody species identified at 24 large [ForestGEO forest dynamic plots](https://forestgeo.si.edu/) representing all major extratropical forest types. A total of 544 parsed allometric equations to estimate individual tree biomass were retrieved, checked, and combined using a weighting function designed to ensure optimal equation selection over the full tree size range with smooth transitions across equations. The equation dataset used can be customized with built-in functions that subset the original dataset and add new equations.
 
-The package provides functions to estimate tree biomass based on
-user-provided census data (tree diameter, taxonomic identification, and
-plot coordinates). New allometric equations are calibrated for each
-species and location by resampling the original equations; equations
-with a larger sample size and/or higher taxonomic and climatic
-similarity with the species and location in question are given a higher
-weight in this process.
+The package provides functions to estimate tree biomass based on user-provided census data (tree diameter, taxonomic identification, and plot coordinates). New allometric equations are calibrated for each species and location by resampling the original equations; equations with a larger sample size and/or higher taxonomic and climatic similarity with the species and location in question are given a higher weight in this process.
 
 ## Installation
 
@@ -62,21 +26,14 @@ remotes::install_github("forestgeo/allodb")
 
 ## Examples
 
-Prior to calculating tree biomass using *allodb*, users need to provide
-a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and
-site(s) coordinates. In the following examples we use data from the
-Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO
-dynamics plot (trees from 1 hectare surveyed in 2008). Full tree census
-data can be requested through the [ForestGEO
-portal](https://forestgeo.si.edu/explore-data).
+Prior to calculating tree biomass using *allodb*, users need to provide a table (i.e. dataframe) with DBH (cm), parsed species Latin names, and site(s) coordinates. In the following examples we use data from the Smithsonian Conservation Biology Institute, USA (SCBI) ForestGEO dynamics plot (trees from 1 hectare surveyed in 2008). Full tree census data can be requested through the [ForestGEO portal](https://forestgeo.si.edu/explore-data).
 
 ``` r
 library(allodb)
 data(scbi_stem1)
 ```
 
-The biomass of all trees in one (or several) censuses can be estimated
-using the `get_biomass` function.
+The biomass of all trees in one (or several) censuses can be estimated using the `get_biomass` function.
 
 ``` r
 scbi_stem1$agb <-
@@ -88,8 +45,7 @@ scbi_stem1$agb <-
   )
 ```
 
-Biomass for a single tree can be estimated given dbh and species
-identification (results in kilograms).
+Biomass for a single tree can be estimated given dbh and species identification (results in kilograms).
 
 ``` r
 get_biomass(
@@ -101,12 +57,7 @@ get_biomass(
 #> [1] 1664.937
 ```
 
-Users can modify the set of equations that will be used to estimate the
-biomass using the `new_equations` function. The default option is the
-entire *allodb* equation table. Users can also work on a subset of those
-equations, or add new equations to the table (see
-`?allodb::new_equations`). This new equation table should be provided as
-an argument in the `get_biomass` function.
+Users can modify the set of equations that will be used to estimate the biomass using the `new_equations` function. The default option is the entire *allodb* equation table. Users can also work on a subset of those equations, or add new equations to the table (see `?allodb::new_equations`). This new equation table should be provided as an argument in the `get_biomass` function.
 
 ``` r
 show_cols <- c("equation_id", "equation_taxa", "equation_allometry")
@@ -128,11 +79,7 @@ head(eq_tab_acer[, show_cols])
 #> 152 0.0202*(dbh)^1.810+0.0111*(dbh)^2.740+0.1156*(dbh)^2.336
 ```
 
-Within the `get_biomass` function, this equation table is used to
-calibrate a new allometric equation for all species/site combinations in
-the user-provided dataframe. This is done by attributing a weight to
-each equation based on its sampling size, and taxonomic and climatic
-similarity with the species/site combination considered.
+Within the `get_biomass` function, this equation table is used to calibrate a new allometric equation for all species/site combinations in the user-provided dataframe. This is done by attributing a weight to each equation based on its sampling size, and taxonomic and climatic similarity with the species/site combination considered.
 
 ``` r
 allom_weights <-
@@ -160,9 +107,7 @@ head(equ_tab_acer)
 #> 216      ae65ed Trees (Angiosperms)         289 0.2468962
 ```
 
-Equations are then resampled within their original DBH range: the number
-of resampled values for each equation is proportional to its weight (as
-attributed by the `weight_allom` function).
+Equations are then resampled within their original DBH range: the number of resampled values for each equation is proportional to its weight (as attributed by the `weight_allom` function).
 
 ``` r
 df_resample <-
@@ -181,15 +126,9 @@ plot(
 
 ![](docs/figures/resample-acer-1.png)
 
-The resampled values are then used to fit the following nonlinear model:
-<img src="https://render.githubusercontent.com/render/math?math=AGB = a * dbh ^ b %2B e">,
-with i.i.d.
-<img src="https://render.githubusercontent.com/render/math?math=e ~N(0, sigma^2)">.
-The parameters (*a*, *b*, and *sigma*) are returned by the
-`est_params()` function.
+The resampled values are then used to fit the following nonlinear model: <img src="https://render.githubusercontent.com/render/math?math=AGB = a * dbh ^ b %2B e">, with i.i.d. <img src="https://render.githubusercontent.com/render/math?math=e ~N(0, sigma^2)">. The parameters (*a*, *b*, and *sigma*) are returned by the `est_params()` function.
 
-The resampled values (dots) and new fitted equation (red dotted line)
-can be visualized with the `illustrate_allodb()` function.
+The resampled values (dots) and new fitted equation (red dotted line) can be visualized with the `illustrate_allodb()` function.
 
 ``` r
 pars_acer <- est_params(
@@ -206,8 +145,7 @@ illustrate_allodb(
 
 ![](docs/figures/est-params-acer-1.png)
 
-The `est_params` function can be used for all species/site combinations
-in the dataset at once.
+The `est_params` function can be used for all species/site combinations in the dataset at once.
 
 ``` r
 params <- est_params(
@@ -225,5 +163,4 @@ head(params)
 #> 6:    Carpinus caroliniana -78.2 38.9 0.13687054 2.415046 308.8340
 ```
 
-AGB is then recalculated as `agb = a * dbh^b` within the `get_biomass`
-function.
+AGB is then recalculated as `agb = a * dbh^b` within the `get_biomass` function.
