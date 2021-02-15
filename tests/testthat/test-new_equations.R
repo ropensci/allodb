@@ -1,21 +1,20 @@
-context("Test all functionalities of the new_equations() function")
 library(allodb)
 
 test_that("new_equations() returns a dataframe with all necessary information",
           {
             tab <- new_equations()
-            expect_is(tab, "data.frame")
-            expect_is(tab$equation_id, "character")
-            expect_is(tab$equation_taxa, "character")
-            expect_is(tab$equation_allometry, "character")
-            expect_is(tab$independent_variable, "character")
-            expect_is(tab$dependent_variable, "character")
-            expect_is(tab$koppen, "character")
-            expect_is(tab$dbh_min_cm, "numeric")
-            expect_is(tab$dbh_max_cm, "numeric")
-            expect_is(tab$sample_size, "numeric")
-            expect_is(tab$dbh_units_original, "character")
-            expect_is(tab$output_units_original, "character")
+            expect_s3_class(tab, "data.frame")
+            expect_type(tab$equation_id, "character")
+            expect_type(tab$equation_taxa, "character")
+            expect_type(tab$equation_allometry, "character")
+            expect_type(tab$independent_variable, "character")
+            expect_type(tab$dependent_variable, "character")
+            expect_type(tab$koppen, "character")
+            expect_type(tab$dbh_min_cm, "double")
+            expect_type(tab$dbh_max_cm, "double")
+            expect_type(tab$sample_size, "double")
+            expect_type(tab$dbh_units_original, "character")
+            expect_type(tab$output_units_original, "character")
 
           })
 
@@ -34,7 +33,7 @@ test_that("new_equations() can be subsetted by taxa", {
     "dbh_units_original",
     "output_units_original"
   )
-  expect_is(subset_taxa, "data.frame")
+  expect_s3_class(subset_taxa, "data.frame")
   expect_true(all(cols %in% colnames(new_equations())))
   expect_true(all(grepl(
     "Quercus|Acer", subset_taxa$equation_taxa
@@ -56,7 +55,7 @@ test_that("new_equations() can be subsetted by climate", {
     "dbh_units_original",
     "output_units_original"
   )
-  expect_is(subset_koppen, "data.frame")
+  expect_s3_class(subset_koppen, "data.frame")
   expect_true(all(cols %in% colnames(subset_koppen)))
   expect_true(all(grepl("Csb", subset_koppen$koppen)))
 })
@@ -76,7 +75,7 @@ test_that("new_equations() can be subsetted by geographic region", {
     "dbh_units_original",
     "output_units_original"
   )
-  expect_is(subset_geo, "data.frame")
+  expect_s3_class(subset_geo, "data.frame")
   expect_true(all(cols %in% colnames(subset_geo)))
   expect_true(all(grepl("Europe", subset_geo$geographic_area)))
 })
@@ -97,7 +96,7 @@ test_that("new_equations() can be subsetted by equation id", {
     "dbh_units_original",
     "output_units_original"
   )
-  expect_is(subset_id, "data.frame")
+  expect_s3_class(subset_id, "data.frame")
   expect_true(all(cols %in% colnames(subset_id)))
   expect_true(all(subset_id$equation_id %in% ids))
 })
@@ -117,7 +116,7 @@ test_that("new_equations() can be subsetted by type of output", {
     "dbh_units_original",
     "output_units_original"
   )
-  expect_is(subset_h, "data.frame")
+  expect_s3_class(subset_h, "data.frame")
   expect_true(all(cols %in% colnames(subset_h)))
   expect_true(all(grepl("Height", subset_h$dependent_variable)))
 })
@@ -135,7 +134,7 @@ test_that(
         new_sampleSize = c(143, 62)
       )
     new_eq <- subset(all_eqtab, grepl("new", equation_id))
-    expect_is(new_eq, "data.frame")
+    expect_s3_class(new_eq, "data.frame")
     expect_equal(nrow(new_eq), 2)
 
     agb1 <-
