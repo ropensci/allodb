@@ -1,6 +1,7 @@
 library(allodb)
 
-test_that("est_params() returns a dataframe with all combinations of species x locations",
+test_that("est_params() returns a dataframe with all
+          combinations of species x locations",
           {
             test_tab <- allodb::scbi_stem1[1:50, ]
             test_tab$site <- sample(2, 50, TRUE)
