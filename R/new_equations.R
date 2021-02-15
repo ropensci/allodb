@@ -203,7 +203,8 @@ new_equations <- function(subset_taxa = "all",
            vector.")
     }
     if (any(grepl("=|<-", new_allometry)))  {
-      stop("new_allometry should should be written as a function of DBH  (e.g. '0.5 * dbh ^ 2').")
+      stop("new_allometry should should be written as a
+           function of DBH  (e.g. '0.5 * dbh ^ 2').")
     }
     dbh <- 10
     eval(parse(text = tolower(new_allometry)))
