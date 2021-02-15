@@ -1,6 +1,6 @@
-#' Resample allo-db equations to calibrate new allometries.
+#' Resample allodb equations to calibrate new allometries.
 #'
-#' After attributing a weight to each equation in allo-db using the weight_allom
+#' After attributing a weight to each equation in allodb using the weight_allom
 #' function, equations are then resampled within their original DBH range using
 #' `resample_agb`: the number of resampled values for each equation is
 #' proportional to its weight .It creates S3 objects of class "numeric".
