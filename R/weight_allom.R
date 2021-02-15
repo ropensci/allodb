@@ -135,7 +135,8 @@ weight_allom <- function(genus,
   # trees (all)
   dfequation$wT[!paste(genus_obs, species) %in% allodb::shrub_species &
                   !genus_obs %in% shrub_genus &
-                  dfequation$equation_taxa == "trees (angiosperms/gymnosperms)"] <-
+                  dfequation$equation_taxa == "trees
+                (angiosperms/gymnosperms)"] <-
     0.3
   # trees (angio)
   dfequation$wT[!paste(genus_obs, species) %in% allodb::shrub_species &
