@@ -169,7 +169,8 @@ new_equations <- function(subset_taxa = "all",
         is.null(new_maxDBH) |
         is.null(new_sampleSize))
       stop(
-        "You must provide the taxa, coordinates, DBH range and sample size of you new allometries."
+        "You must provide the taxa, coordinates, DBH range
+         and sample size of you new allometries."
       )
 
     if (!is.numeric(new_minDBH) |
@@ -183,7 +184,8 @@ new_equations <- function(subset_taxa = "all",
       ncoords <- length(new_coords)
     }
     if (!is.numeric(new_coords) | ncoords != 2)  {
-      stop("coords should be a numeric vector or matrix, with 2 values or 2 columns.")
+      stop("coords should be a numeric vector or matrix,
+            with 2 values or 2 columns.")
     }
 
     if (length(new_taxa) != length(new_allometry) |
@@ -191,12 +193,14 @@ new_equations <- function(subset_taxa = "all",
         length(new_minDBH) != length(new_maxDBH) |
         length(new_maxDBH) != length(new_sampleSize)) {
       stop(
-        "new_taxa, new_allometry, new_minDBH, new_maxDBH and new_sampleSize must all be the same length."
+        "new_taxa, new_allometry, new_minDBH, new_maxDBH and
+        new_sampleSize must all be the same length."
       )
     }
 
     if (!is.character(new_allometry))  {
-      stop("The equation allometry should be a character vector.")
+      stop("The equation allometry should be a character
+           vector.")
     }
     if (any(grepl("=|<-", new_allometry)))  {
       stop("new_allometry should should be written as a function of DBH  (e.g. '0.5 * dbh ^ 2').")
@@ -221,7 +225,8 @@ new_equations <- function(subset_taxa = "all",
         any(!is.numeric(new_minDBH)) |
         any(!is.numeric(new_maxDBH))) {
       stop(
-        "new_minDBH and new_maxDBH must be positive real numbers, with new_maxDBH > new_minDBH."
+        "new_minDBH and new_maxDBH must be positive real
+        numbers, with new_maxDBH > new_minDBH."
       )
     }
 
@@ -236,20 +241,24 @@ new_equations <- function(subset_taxa = "all",
         !(ncol(new_coords) == 2 &
           nrow(new_coords) == length(new_taxa))) {
       stop(
-        "new_coords must be a numeric vector of length 2 or a matrix with 2 columns (long, lat) and as many rows as the number of equations."
+        "new_coords must be a numeric vector of length 2 or
+        a matrix with 2 columns (long, lat) and as many rows
+        as the number of equations."
       )
     }
 
     if (any(new_coords[, 1] < -180 |
             new_coords[, 1] > 180 |
             new_coords[, 2] < -90 | new_coords[, 2] > 90)) {
-      stop("Longitude must be between -180 and 180, and latitude between 90 and 0.")
+      stop("Longitude must be between -180 and 180, and
+           latitude between 90 and 0.")
     }
 
     new_allometry <- tolower(new_allometry)
 
     if (any(!grepl("dbh", new_allometry))) {
-      stop("At least one of the new allometries does not contain DBH as a dependent variable.")
+      stop("At least one of the new allometries does not
+           contain DBH as a dependent variable.")
     }
 
     equationID <- paste0("new", seq_len(length(new_taxa)))
@@ -263,7 +272,8 @@ new_equations <- function(subset_taxa = "all",
     koppenZones <- as.character(unlist(koppenZones))
     if (length(koppenZones) != nrow(rcoordsEq)) {
       stop(
-        "Impossible to find all koppen climate zones based on coordinates. Please check that they are Long, Lat."
+        "Impossible to find all koppen climate zones based
+        on coordinates. Please check that they are Long, Lat."
       )
     }
 
