@@ -14,7 +14,7 @@
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
 #' @param new_eqtable Optional. An equation table created with the
-#'   add_equation() function. Default is the compiled allo-db equation table.
+#'   add_equation() function. Default is the compiled allodb equation table.
 #' @param wna this parameter is used in the weight_allom() function to determine
 #'   the dbh-related and sample-size related weights attributed to equations
 #'   without a specified dbh range or sample size, respectively. Default is 0.1
