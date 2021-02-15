@@ -8,7 +8,7 @@
 #'
 #' The function can run into some memory problems when used on large datasets
 #' (usually several hundred thousand observations). In that case, see the second
-#' example below for how to apply the function to a splitted dataset.
+#' example below for how to apply the function to a split dataset.
 #'
 #' @param dbh a numerical vector containing tree diameter at breast height (dbh)
 #'   measurements, in cm.
