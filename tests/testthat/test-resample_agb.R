@@ -14,13 +14,15 @@ test_that("resample_agb returns a dataframe of size 1e6 x 3", {
 })
 
 test_that(
-  "resample_agb returns an error message when more than one taxon/location are used at once",
+  "resample_agb returns an error message when more than one
+  taxon/location are used at once",
   {
     expect_error(resample_agb(
       genus = c("Fagus", "Quercus"),
       coords = c(-78, 40)
     ))
-    expect_error(resample_agb(genus = c("Fagus"), coords = rbind(c(-78, 40), c(-85, 45))))
+    expect_error(resample_agb(genus = c("Fagus"), coords =
+                 rbind(c(-78, 40), c(-85, 45))))
   }
 )
 

@@ -1,6 +1,7 @@
 library(allodb)
 
-test_that("weight_allom returns a vector of the same length as the equation table.",
+test_that("weight_allom returns a vector of the same length
+          as the equation table.",
           {
             newtab <- new_equations(subset_taxa = "Quercus")
             weight_test <- weight_allom(
