@@ -23,7 +23,7 @@ Useful links:
 Authors:
 \itemize{
   \item Camille Piponiot \email{camille.piponiot@gmail.com}
-  \item Mauro Lepore \email{maurolepore@gmail.com}
+  \item Mauro Lepore \email{maurolepore@gmail.com} (\href{https://orcid.org/0000-0002-1986-7988}{ORCID})
   \item Kristina Anderson-Teixeira \email{TeixeiraK@si.edu}
 }
 

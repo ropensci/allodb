@@ -2,7 +2,7 @@
 % Please edit documentation in R/resample_agb.R
 \name{resample_agb}
 \alias{resample_agb}
-\title{Resample allo-db equations to calibrate new allometries.}
+\title{Resample allodb equations to calibrate new allometries.}
 \usage{
 resample_agb(
   genus,
@@ -42,7 +42,7 @@ table; the number of  resampled DBHs is proportional to the weight provided
 by the \code{weight_allom} function.
 }
 \description{
-After attributing a weight to each equation in allo-db using the weight_allom
+After attributing a weight to each equation in allodb using the weight_allom
 function, equations are then resampled within their original DBH range using
 \code{resample_agb}: the number of resampled values for each equation is
 proportional to its weight .It creates S3 objects of class "numeric".

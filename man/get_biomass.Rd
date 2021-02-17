@@ -57,7 +57,7 @@ censuses can be estimated using this function.
 \details{
 The function can run into some memory problems when used on large datasets
 (usually several hundred thousand observations). In that case, see the second
-example below for how to apply the function to a splitted dataset.
+example below for how to apply the function to a split dataset.
 }
 \examples{
 data(scbi_stem1)
