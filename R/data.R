@@ -4,7 +4,8 @@
 #'
 #'A compilation of best available allometry equations to calculate tree
 #'above-ground biomass (AGB) per species based on extratropical ForestGEO sites:
-#'* `equations`: Table of allometric equations. * `equations_metadata`:
+#'* `equations`: Table of allometric equations.
+#'* `equations_metadata`:
 #'Explanation of columns for `equations` table.
 #'
 #' @format
@@ -89,11 +90,13 @@
 
 #' Tables of sites and tree species used in allodb and associated metadata.
 #'
-#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and
-#' their tree species. * `sitespecies_metadata`: Metadata for `sitespecies`
+#' * `sitespecies`: Table of extratropical ForestGEO sites
+#' in allodb (n=24) and their tree species.
+#' * `sitespecies_metadata`: Metadata for `sitespecies`
 #' table.
 #'
-#' @format A data frame with 1114 rows and 10 variables: ```
+#' @format A data frame with 1114 rows and 10 variables:
+#' ```
 #' [,1]	site	character
 #' [,2]	family	character
 #' [,3]	genus	character
@@ -116,9 +119,10 @@
 
 #' Tables of equation references and associated metadata
 #'
-#' Bibliographical information for sourced equations. Links to the `equations`
-#' table by ref_id. * `references`: A data frame listing all references used in
-#' `equation` table. * `references_metadata`: Metadata for `reference` table.
+#' Bibliographical information for sourced equations. Links
+#' to the `equations`table by ref_id.
+#' * `references`: A data frame listing all references used in `equation` table.
+#' * `references_metadata`: Metadata for `reference` table.
 #'
 #' @format A data frame with 57 rows and 6 variables:
 #' ```
@@ -140,11 +144,11 @@
 
 #' ForestGEO sites used in allodb
 #'
-#' Table with geographical information for extratropical ForestGEO sites used in
-#' allodb (n=24).
+#' Table with geographical information for extratropical
+#' ForestGEO sites used in allodb (n=24).
 #'
-#' More details on geographical aspects of these ForestGEO sites can be found in
-#' the accompanying manuscript.
+#' More details on geographical aspects of these ForestGEO
+#' sites can be found in the accompanying manuscript.
 #'
 #' @format
 #' A data frame with 24 observations and 6 variables:
@@ -181,7 +185,7 @@
 #'
 #'```
 #' @source Full data sets for tree census data at SCBI can be requested through
-#'   the ForestGEO portal (https://forestgeo.si.edu/). Census 1 and 2 can also
+#'   the ForestGEO portal (https://forestgeo.si.edu/). Census 1, 2, and 3 can also
 #'   be accessed at the public GitHub repository for SCBI-ForestGEO Data
 #'   (https://github.com/SCBI-ForestGEO).
 "scbi_stem1"
@@ -197,8 +201,10 @@
 #' * `genus_family`: A data frame with genus and families identified in the
 #' extratropical ForestGEO sites used in allodb.
 #'
-#' @format A data frame with 248 observations and 2 variables: ```
-#' [,1]	genus	character [,2]	family	character
+#' @format A data frame with 248 observations and 2 variables:
+#' ```
+#' [,1]	genus	character
+#' [,2]	family	character
 #'
 #'```
 "genus_family"
@@ -214,8 +220,11 @@
 #'* `gymno_genus`: A data frame with genus and families for Gymnosperms
 #'identified in the extratropical ForestGEO sites used in allodb.
 #'
-#'@format A data frame with 95 observations and 3 variables: ```
-#'[,1]	Family	character [,2]	Genus	character [,3] conifer logical
+#'@format A data frame with 95 observations and 3 variables:
+#' ```
+#'[,1]	Family	character
+#'[,2]	Genus	character
+#'[,3]  conifer logical
 #'
 #'```
 "gymno_genus"
