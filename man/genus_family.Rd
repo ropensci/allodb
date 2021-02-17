@@ -5,10 +5,9 @@
 \alias{genus_family}
 \title{Genus and family table for selected ForestGEO sites}
 \format{
-A data frame with 248 observations and 2 variables: ```
-[,1]	genus	character [,2]	family	character\preformatted{
-[,1]: R:,1
-[,2]: R:,2
+A data frame with 248 observations and 2 variables:\preformatted{[,1]	genus	character
+[,2]	family	character
+
 }
 }
 \usage{

@@ -6,8 +6,7 @@
 \alias{sitespecies_metadata}
 \title{Tables of sites and tree species used in allodb and associated metadata.}
 \format{
-A data frame with 1114 rows and 10 variables: ```
-[,1]	site	character
+A data frame with 1114 rows and 10 variables:\preformatted{[,1]	site	character
 [,2]	family	character
 [,3]	genus	character
 [,4]	species	character
@@ -16,17 +15,8 @@ A data frame with 1114 rows and 10 variables: ```
 [,7]	latin_name	character
 [,8]	species_code	character
 [,9]	life_form	character
-[,10]	notes	character\preformatted{
-[,1]: R:,1
-[,2]: R:,2
-[,3]: R:,3
-[,4]: R:,4
-[,5]: R:,5
-[,6]: R:,6
-[,7]: R:,7
-[,8]: R:,8
-[,9]: R:,9
-[,10]: R:,10
+[,10]	notes	character
+
 }
 
 An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 10 rows and 4 columns.
@@ -38,8 +28,9 @@ sitespecies_metadata
 }
 \description{
 \itemize{
-\item \code{sitespecies}: Table of extratropical ForestGEO sites in allodb (n=24) and
-their tree species. * \code{sitespecies_metadata}: Metadata for \code{sitespecies}
+\item \code{sitespecies}: Table of extratropical ForestGEO sites
+in allodb (n=24) and their tree species.
+\item \code{sitespecies_metadata}: Metadata for \code{sitespecies}
 table.
 }
 }

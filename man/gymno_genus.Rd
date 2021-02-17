@@ -5,11 +5,10 @@
 \alias{gymno_genus}
 \title{Gymnosperms identified in selected ForestGEO sites}
 \format{
-A data frame with 95 observations and 3 variables: ```
-[,1]	Family	character [,2]	Genus	character [,3] conifer logical\preformatted{
-[,1]: R:,1
-[,2]: R:,2
-[,3]: R:,3
+A data frame with 95 observations and 3 variables:\preformatted{[,1]	Family	character
+[,2]	Genus	character
+[,3]  conifer logical
+
 }
 }
 \usage{
