@@ -18,7 +18,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Erika Gonzalez-Akre \email{GonzalezEB@si.edu}
+\strong{Maintainer}: Erika Gonzalez-Akre \email{GonzalezEB@si.edu} [copyright holder]
 
 Authors:
 \itemize{
