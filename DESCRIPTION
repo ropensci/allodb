@@ -4,7 +4,7 @@ Version: 1.0.0.9000
 Authors@R: 
     c(person(given = "Erika",
              family = "Gonzalez-Akre",
-             role = c("aut", "cre"),
+             role = c("aut", "cre", "cph"),
              email = "GonzalezEB@si.edu"),
       person(given = "Camille",
              family = "Piponiot",
