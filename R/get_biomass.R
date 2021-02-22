@@ -37,26 +37,14 @@
 #'
 #' @examples
 #' data(scbi_stem1)
-#' agb <- get_biomass(
-#'   dbh = scbi_stem1$dbh,
-#'   genus = scbi_stem1$genus,
-#'   species = scbi_stem1$species,
+#' # estimate the biomass of all individuals from the Lauraceae family
+#' data_laur <- subset(scbi_stem1, Family=="Lauraceae")
+#' data_laur$agb <- get_biomass(
+#'   dbh = data_laur$dbh,
+#'   genus = data_laur$genus,
+#'   species = data_laur$species,
 #'   coords = c(-78.2, 38.9)
 #' )
-#'
-#' # split dataset to avoid memory over usage
-#' data_split <- split(scbi_stem1, cut(1:nrow(scbi_stem1),
-#'                                     breaks = 10,
-#'                                     labels = FALSE))
-#' agb <- lapply(data_split, function(df) {
-#'   get_biomass(
-#'     dbh = df$dbh,
-#'     genus = df$genus,
-#'     species = df$species,
-#'     coords = c(-78.2, 38.9)
-#'   )
-#' })
-#' scbi_stem1$agb <- do.call(c, agb)
 #'
 get_biomass <- function(dbh,
                         genus,

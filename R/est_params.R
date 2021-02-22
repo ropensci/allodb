@@ -29,9 +29,11 @@
 #'
 #' @examples
 #' data(scbi_stem1)
+#' # calibrate new allometries for all Lauraceae species
+#' data_laur <- subset(scbi_stem1, Family=="Lauraceae")
 #' est_params(
-#'   genus = scbi_stem1$genus,
-#'   species = scbi_stem1$species,
+#'   genus = data_laur$genus,
+#'   species = data_laur$species,
 #'   coords = c(-78.2, 38.9)
 #' )
 #'
