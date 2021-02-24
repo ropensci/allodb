@@ -8,6 +8,8 @@
 ^codecov\.yml$
 ^README\.Rmd$
 ^\.github$
+^README.md$
+^NEWS.md$
 
 ^review\.md$
 ^koppen climates$
