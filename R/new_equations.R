@@ -68,13 +68,13 @@ new_equations <- function(subset_taxa = "all",
                           new_taxa = NULL,
                           new_allometry = NULL,
                           new_coords = NULL,
-                          new_minDBH = NULL,
-                          new_maxDBH = NULL,
-                          new_sampleSize = NULL,
-                          new_unitDBH = "cm",
-                          new_unitOutput = "kg",
-                          new_inputVar = "DBH",
-                          new_outputVar = "Total aboveground biomass",
+                          new_min_dbh = NULL,
+                          new_max_dbh = NULL,
+                          new_sample_size = NULL,
+                          new_unit_dbh = "cm",
+                          new_unit_output = "kg",
+                          new_input_var = "DBH",
+                          new_output_var = "Total aboveground biomass",
                           use_height_allom = TRUE) {
   ## open the equation table and get it in the right format ####
   new_equations <- allodb::equations
@@ -85,10 +85,10 @@ new_equations <- function(subset_taxa = "all",
                      as.numeric(new_equations$dbh_max_cm))
   suppressWarnings(new_equations$sample_size <-
                      as.numeric(new_equations$sample_size))
-  suppressWarnings(new_equations$dbh_unit_CF <-
-                     as.numeric(new_equations$dbh_unit_CF))
-  suppressWarnings(new_equations$output_units_CF <-
-                     as.numeric(new_equations$output_units_CF))
+  suppressWarnings(new_equations$dbh_unit_cf <-
+                     as.numeric(new_equations$dbh_unit_cf))
+  suppressWarnings(new_equations$output_units_cf <-
+                     as.numeric(new_equations$output_units_cf))
 
   ## replace height with height allometry  ####
   ## from Bohn et al. 2014 in Jansen et al. 1996
@@ -109,8 +109,8 @@ new_equations <- function(subset_taxa = "all",
     ## height allometry will not be substituted)
     eq_jansen <- merge(eq_jansen, hallom, by = "genus")
     # substitute H by its DBH-based estimation
-    toMerge <- eq_jansen[, c("hsub", "equation_allometry")]
-    eq_jansen$equation_allometry <- apply(toMerge, 1, function(X) {
+    to_merge <- eq_jansen[, c("hsub", "equation_allometry")]
+    eq_jansen$equation_allometry <- apply(to_merge, 1, function(X) {
       gsub("\\(h", paste0("((", X[1], ")"), X[2])
     })
     # replace independent_variable column
@@ -178,7 +178,7 @@ new_equations <- function(subset_taxa = "all",
       stop("new_minDBH, new_maxDBH, new_sampleSize should be numeric values.")
     }
 
-    if (is.matrix(new_coords)){
+    if (is.matrix(new_coords)) {
       ncoords <- ncol(new_coords)
     } else {
       ncoords <- length(new_coords)
@@ -262,16 +262,16 @@ new_equations <- function(subset_taxa = "all",
            contain DBH as a dependent variable.")
     }
 
-    equationID <- paste0("new", seq_len(length(new_taxa)))
-    coordsEq <- cbind(long = new_coords[, 1],
+    equation_id <- paste0("new", seq_len(length(new_taxa)))
+    coords_eq <- cbind(long = new_coords[, 1],
                       lat = new_coords[, 2])
-    rcoordsEq <- round(coordsEq * 2 - 0.5) / 2 + 0.25
+    rcoords_eq <- round(coords_eq * 2 - 0.5) / 2 + 0.25
     ## extract koppen climate of every location
-    koppenZones <- apply(rcoordsEq, 1, function(X) {
+    koppen_zones <- apply(rcoords_eq, 1, function(X) {
       subset(kgc::climatezones, Lon == X[1] &  Lat == X[2])$Cls
     })
-    koppenZones <- as.character(unlist(koppenZones))
-    if (length(koppenZones) != nrow(rcoordsEq)) {
+    koppen_zones <- as.character(unlist(koppen_zones))
+    if (length(koppen_zones) != nrow(rcoords_eq)) {
       stop(
         "Impossible to find all koppen climate zones based
         on coordinates. Please check that they are Long, Lat."
@@ -286,7 +286,7 @@ new_equations <- function(subset_taxa = "all",
       dependent_variable = new_outputVar,
       long = new_coords[, 1],
       lat = new_coords[, 2],
-      koppen = koppenZones,
+      koppen = koppen_zones,
       dbh_min_cm = new_minDBH,
       dbh_max_cm = new_maxDBH,
       sample_size = new_sampleSize,
@@ -298,16 +298,16 @@ new_equations <- function(subset_taxa = "all",
                            new_equations[, colnames(added_equations)])
 
     ## add conversion factors
-    dbhCF <-
-      unique(equations[, c("dbh_units_original", "dbh_unit_CF")])
-    outputCF <-
-      unique(equations[, c("output_units_original", "output_units_CF")])
-    suppressWarnings(dbhCF$dbh_unit_CF <-
-                       as.numeric(dbhCF$dbh_unit_CF))
-    suppressWarnings(outputCF$output_units_CF <-
-                       as.numeric(outputCF$output_units_CF))
-    new_equations <- merge(new_equations, dbhCF)
-    new_equations <- merge(new_equations, outputCF)
+    dbh_cf <-
+      unique(equations[, c("dbh_units_original", "dbh_unit_cf")])
+    output_cf <-
+      unique(equations[, c("output_units_original", "output_units_cf")])
+    suppressWarnings(dbh_cf$dbh_unit_cf <-
+                       as.numeric(dbh_cf$dbh_unit_cf))
+    suppressWarnings(output_cf$output_units_cf <-
+                       as.numeric(output_cf$output_units_cf))
+    new_equations <- merge(new_equations, dbh_cf)
+    new_equations <- merge(new_equations, output_cf)
 
     new_equations <- new_equations[, c(
       "equation_id",
