@@ -28,7 +28,7 @@
 #' @param w95 this parameter is used in the weight_allom function to determine
 #'   the value at which the sample-size-related weight reaches 95% of its
 #'   maximum value (max=1). Default is 500.
-#' @param Nres number of resampled values. Default is 1e4.
+#' @param nres number of resampled values. Default is 1e4.
 #'
 #' @return A vector of class "numeric" of the same length as dbh, containing AGB
 #'   value (in kg) for every stem
@@ -53,14 +53,14 @@ get_biomass <- function(dbh,
                         new_eqtable = NULL,
                         wna = 0.1,
                         w95 = 500,
-                        Nres = 1e4) {
+                        nres = 1e4) {
   if (!is.null(new_eqtable)) {
     dfequation <- new_eqtable
   } else
     dfequation <- new_equations()
 
   params <-
-    est_params(genus, species, coords, dfequation, wna, w95, Nres)
+    est_params(genus, species, coords, dfequation, wna, w95, nres)
 
   if (length(unlist(coords)) == 2) {
     coords <- matrix(coords, ncol = 2)
