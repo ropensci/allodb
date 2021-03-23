@@ -22,7 +22,7 @@
 #' @param w95 this parameter is used in the weighting function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
 #'   value (max=1). Default is `500`.
-#' @param Nres number of resampled values. Default is `1e4`.
+#' @param nres number of resampled values. Default is `1e4`.
 #'
 #' @return A ggplot showing all resampled dbh-agb values. The top equations used
 #'   are shown in the legend. The red curve on the graph represents the final
@@ -45,9 +45,9 @@ illustrate_allodb <- function(genus,
                               eqinfo = "equation_taxa",
                               wna = 0.1,
                               w95 = 500,
-                              Nres = 1e4) {
+                              nres = 1e4) {
   dfagb <-
-    resample_agb(genus, species, coords, new_eqtable, wna, w95, Nres)
+    resample_agb(genus, species, coords, new_eqtable, wna, w95, nres)
   params <-
     est_params(genus, species, coords, new_eqtable, wna, w95)
   pred <- function(x) params$a * x ** params$b
