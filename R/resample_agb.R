@@ -18,7 +18,7 @@
 #' @param w95 this parameter is used in the weight_allom function to determine
 #'   the value at which the sample-size-related weight reaches 95% of its
 #'   maximum value (max=1). Default is 500.
-#' @param Nres number of resampled values. Default is 1e4.
+#' @param nres number of resampled values. Default is 1e4.
 #'
 #' @return A data frame of resampled DBHs and associated AGB from the equation
 #'   table; the number of  resampled DBHs is proportional to the weight provided
@@ -38,7 +38,7 @@ resample_agb <- function(genus,
                          new_eqtable = NULL,
                          wna = 0.1,
                          w95 = 500,
-                         Nres = 1e4) {
+                         nres = 1e4) {
   if (length(genus) > 1 | length(unlist(coords)) != 2)
     stop("This function should not be used for several taxa
          and/or locations at once.")
@@ -62,7 +62,7 @@ resample_agb <- function(genus,
     dfequation$weight <- NULL
   dfequation <- merge(dfequation, weights, by = "equation_id")
   dfequation$weight <- dfequation$weight / sum(dfequation$weight)
-  dfequation$resample <- floor(dfequation$weight * Nres)
+  dfequation$resample <- floor(dfequation$weight * nres)
   dfsub <- subset(dfequation, resample > 0)[, c(
     "dbh_min_cm",
     "dbh_max_cm",
@@ -76,7 +76,7 @@ resample_agb <- function(genus,
   dfsub$dbh_min_cm[is.na(dfsub$dbh_min_cm)] <- 1
   dfsub$dbh_max_cm[is.na(dfsub$dbh_max_cm)] <- 200
   list_dbh <- apply(dfsub[, 1:3], 1, function(X) {
-    set.seed(40)
+    set_seed(40)
     stats::runif(X[3], X[1], X[2])
   })
 
