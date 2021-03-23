@@ -21,7 +21,7 @@
 #' @param w95 this parameter is used in the weight_allom() function to determine
 #'   the value at which the sample-size-related weight reaches 95% of its
 #'   maximum value (max=1). Default is 500.
-#' @param Nres number of resampled values. Default is 1e4.
+#' @param nres number of resampled values. Default is 1e4.
 #'
 #' @return A data frame of fitted coefficients (columns) of the non-linear
 #'   least-square regression AGB = a * dbh ^ b + e,  with e ~ N(0, sigma^2)
@@ -43,7 +43,7 @@ est_params <- function(genus,
                        new_eqtable = NULL,
                        wna = 0.1,
                        w95 = 500,
-                       Nres = 1e4
+                       nres = 1e4
 ) {
 
   if (!is.null(new_eqtable)) {
@@ -61,15 +61,15 @@ est_params <- function(genus,
   for (i in seq_len(nrow(dfobs))) {
     df <- resample_agb(genus = dfobs$genus[i],
                        species = dfobs$species[i],
-                       coords = dfobs[i, c("long","lat")],
+                       coords = dfobs[i, c("long", "lat")],
                        new_eqtable = dfequation,
                        wna = wna,
                        w95 = w95,
-                       Nres = Nres)
+                       nres = nres)
     ## special case: only one equation is resampled and it's of the form a*x^b
     ## nls will throw an error: add some 'grain' by adding 1 slightly different
     ## data point (it won't change the final results)
-    if (length(unique(df$equation_id)) == 1) df[1, 3] <- df[1, 3]*1.01
+    if (length(unique(df$equation_id)) == 1) df[1, 3] <- df[1, 3] * 1.01
     reg <- summary(stats::nls(agb ~ a * dbh ** b,
           start = c(a = 0.5, b = 2), data = df))
     coefs <- rbind(coefs, c(reg$coefficients[, "Estimate"], reg$sigma))
