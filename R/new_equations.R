@@ -27,20 +27,20 @@
 #' @param new_allometry a character string with the allometric equation
 #' @param new_coords a vector or matrix of coordinates (longitude, latitude) of
 #'   the calibration data
-#' @param new_minDBH numerical value, minimum DBH for which the equation is
+#' @param new_min_dbh numerical value, minimum DBH for which the equation is
 #'   valid (in cm). Default is NULL (nothing is added).
-#' @param new_maxDBH numerical value, maximum DBH for which the equation is
+#' @param new_max_dbh numerical value, maximum DBH for which the equation is
 #'   valid (in cm). Default is NULL (nothing is added).
-#' @param new_sampleSize number of measurements with which the allometry was
+#' @param new_sample_size number of measurements with which the allometry was
 #'   calibrated. Default is NULL (nothing is added).
-#' @param new_unitDBH character string with unit of DBH in the equation (either
+#' @param new_unit_dbh character string with unit of DBH in the equation (either
 #'   `cm`, `mm` or `inch`). Default is `cm`.
-#' @param new_unitOutput character string with unit of equation output (either
+#' @param new_unit_output character string with unit of equation output (either
 #'   `g`, `kg`, `Mg` or `lbs` if the output is a mass, or `m` if the output is a
 #'   height).
-#' @param new_inputVar independent variable(s) needed in the allometry. Default
+#' @param new_input_var independent variable(s) needed in the allometry. Default
 #'   is `DBH`, other option is `DBH, H`.
-#' @param new_outputVar dependent variable estimated by the allometry. Default
+#' @param new_output_var dependent variable estimated by the allometry. Default
 #'   is `Total aboveground biomass`.
 #' @param use_height_allom a logical value. In allodb we use Bohn et al. (2014)
 #'   for European sites. User need to provide height allometry when needed to
@@ -55,9 +55,9 @@
 #'   new_taxa = "Faga",
 #'   new_allometry = "exp(-2+log(dbh)*2.5)",
 #'   new_coords = c(-0.07, 46.11),
-#'   new_minDBH = 5,
-#'   new_maxDBH = 50,
-#'   new_sampleSize = 50
+#'   new_min_dbh = 5,
+#'   new_max_dbh = 50,
+#'   new_sample_size = 50
 #' )
 new_equations <- function(subset_taxa = "all",
                           subset_climate = "all",
@@ -77,7 +77,9 @@ new_equations <- function(subset_taxa = "all",
                           new_output_var = "Total aboveground biomass",
                           use_height_allom = TRUE) {
   ## open the equation table and get it in the right format ####
-  new_equations <- allodb::equations
+  equations_orig <- allodb::equations
+  colnames(equations_orig) <- tolower(colnames(equations_orig))
+  new_equations <- equations_orig
 
   suppressWarnings(new_equations$dbh_min_cm <-
                      as.numeric(new_equations$dbh_min_cm))
@@ -165,17 +167,17 @@ new_equations <- function(subset_taxa = "all",
     ## check consistency of inputs
     if (is.null(new_taxa) |
         is.null(new_coords) |
-        is.null(new_minDBH) |
-        is.null(new_maxDBH) |
-        is.null(new_sampleSize))
+        is.null(new_min_dbh) |
+        is.null(new_max_dbh) |
+        is.null(new_sample_size))
       stop(
         "You must provide the taxa, coordinates, DBH range
          and sample size of you new allometries."
       )
 
-    if (!is.numeric(new_minDBH) |
-        !is.numeric(new_maxDBH) | !is.numeric(new_sampleSize))  {
-      stop("new_minDBH, new_maxDBH, new_sampleSize should be numeric values.")
+    if (!is.numeric(new_min_dbh) |
+        !is.numeric(new_max_dbh) | !is.numeric(new_sample_size))  {
+      stop("new_min_dbh, new_max_dbh, new_sample_size should be numeric values.")
     }
 
     if (is.matrix(new_coords)) {
@@ -189,12 +191,12 @@ new_equations <- function(subset_taxa = "all",
     }
 
     if (length(new_taxa) != length(new_allometry) |
-        length(new_allometry) != length(new_minDBH) |
-        length(new_minDBH) != length(new_maxDBH) |
-        length(new_maxDBH) != length(new_sampleSize)) {
+        length(new_allometry) != length(new_min_dbh) |
+        length(new_min_dbh) != length(new_max_dbh) |
+        length(new_max_dbh) != length(new_sample_size)) {
       stop(
-        "new_taxa, new_allometry, new_minDBH, new_maxDBH and
-        new_sampleSize must all be the same length."
+        "new_taxa, new_allometry, new_min_dbh, new_max_dbh and
+        new_sample_size must all be the same length."
       )
     }
 
@@ -209,25 +211,25 @@ new_equations <- function(subset_taxa = "all",
     dbh <- 10
     eval(parse(text = tolower(new_allometry)))
 
-    if (!new_unitDBH %in% c("cm", "mm", "inch")) {
-      stop("new_unitDBH must be either cm, mm or inch.")
+    if (!new_unit_dbh %in% c("cm", "mm", "inch")) {
+      stop("new_unit_dbh must be either cm, mm or inch.")
     }
 
-    if (!new_unitOutput %in% c("g", "kg", "Mg", "lbs", "m")) {
-      stop("new_unitOutput must be either `g`, `kg`, `Mg` or `lbs`, or `m`.")
+    if (!new_unit_output %in% c("g", "kg", "Mg", "lbs", "m")) {
+      stop("new_unit_output must be either `g`, `kg`, `Mg` or `lbs`, or `m`.")
     }
 
-    if (new_outputVar == "Height" & new_unitOutput != "m") {
+    if (new_output_var == "Height" & new_unit_output != "m") {
       stop("Height allometries outputs must be in m.")
     }
 
-    if (any(new_maxDBH <= new_minDBH) |
-        any(new_minDBH < 0) |
-        any(!is.numeric(new_minDBH)) |
-        any(!is.numeric(new_maxDBH))) {
+    if (any(new_max_dbh <= new_min_dbh) |
+        any(new_min_dbh < 0) |
+        any(!is.numeric(new_min_dbh)) |
+        any(!is.numeric(new_max_dbh))) {
       stop(
-        "new_minDBH and new_maxDBH must be positive real
-        numbers, with new_maxDBH > new_minDBH."
+        "new_min_dbh and new_max_dbh must be positive real
+        numbers, with new_max_dbh > new_min_dbh."
       )
     }
 
@@ -262,7 +264,7 @@ new_equations <- function(subset_taxa = "all",
            contain DBH as a dependent variable.")
     }
 
-    equation_id <- paste0("new", seq_len(length(new_taxa)))
+    new_equation_id <- paste0("new", seq_len(length(new_taxa)))
     coords_eq <- cbind(long = new_coords[, 1],
                       lat = new_coords[, 2])
     rcoords_eq <- round(coords_eq * 2 - 0.5) / 2 + 0.25
@@ -279,19 +281,19 @@ new_equations <- function(subset_taxa = "all",
     }
 
     added_equations <- data.frame(
-      equation_id = equationID,
+      equation_id = new_equation_id,
       equation_taxa = new_taxa,
       equation_allometry = new_allometry,
-      independent_variable = new_inputVar,
-      dependent_variable = new_outputVar,
+      independent_variable = new_input_var,
+      dependent_variable = new_output_var,
       long = new_coords[, 1],
       lat = new_coords[, 2],
       koppen = koppen_zones,
-      dbh_min_cm = new_minDBH,
-      dbh_max_cm = new_maxDBH,
-      sample_size = new_sampleSize,
-      dbh_units_original = new_unitDBH,
-      output_units_original = new_unitOutput
+      dbh_min_cm = new_min_dbh,
+      dbh_max_cm = new_max_dbh,
+      sample_size = new_sample_size,
+      dbh_units_original = new_unit_dbh,
+      output_units_original = new_unit_output
     )
 
     new_equations <- rbind(added_equations,
@@ -299,9 +301,9 @@ new_equations <- function(subset_taxa = "all",
 
     ## add conversion factors
     dbh_cf <-
-      unique(equations[, c("dbh_units_original", "dbh_unit_cf")])
+      unique(equations_orig[, c("dbh_units_original", "dbh_unit_cf")])
     output_cf <-
-      unique(equations[, c("output_units_original", "output_units_cf")])
+      unique(equations_orig[, c("output_units_original", "output_units_cf")])
     suppressWarnings(dbh_cf$dbh_unit_cf <-
                        as.numeric(dbh_cf$dbh_unit_cf))
     suppressWarnings(output_cf$output_units_cf <-
@@ -322,9 +324,9 @@ new_equations <- function(subset_taxa = "all",
       "dbh_max_cm",
       "sample_size",
       "dbh_units_original",
-      "dbh_unit_CF",
+      "dbh_unit_cf",
       "output_units_original",
-      "output_units_CF"
+      "output_units_cf"
     )]
 
   }

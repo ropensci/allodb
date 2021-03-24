@@ -69,14 +69,14 @@ resample_agb <- function(genus,
     "resample",
     "equation_id",
     "equation_allometry",
-    "dbh_unit_CF",
-    "output_units_CF",
+    "dbh_unit_cf",
+    "dbh_unit_cf",
     "equation_taxa"
   )]
   dfsub$dbh_min_cm[is.na(dfsub$dbh_min_cm)] <- 1
   dfsub$dbh_max_cm[is.na(dfsub$dbh_max_cm)] <- 200
   list_dbh <- apply(dfsub[, 1:3], 1, function(X) {
-    set_seed(40)
+    set.seed(40)
     stats::runif(X[3], X[1], X[2])
   })
 
@@ -88,18 +88,18 @@ resample_agb <- function(genus,
     list_dbh <- c(list_dbh)
     sampled_dbh <- list_dbh
     orig_equation <- dfsub$equation_allometry
-    new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_CF, ")")
+    new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_cf, ")")
     new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
     list_agb <-
-      eval(parse(text = new_equation)) * dfsub$output_units_CF
+      eval(parse(text = new_equation)) * dfsub$dbh_unit_cf
   } else {
     list_agb <- lapply(seq_len(length(list_dbh)), function(j) {
       sampled_dbh <- list_dbh[[j]]
       orig_equation <- dfsub$equation_allometry[j]
-      new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_CF[j], ")")
+      new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_cf[j], ")")
       new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
       agb <-
-        eval(parse(text = new_equation)) * dfsub$output_units_CF[j]
+        eval(parse(text = new_equation)) * dfsub$dbh_unit_cf[j]
     })
   }
 

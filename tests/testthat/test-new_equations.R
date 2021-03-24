@@ -130,9 +130,9 @@ test_that(
         new_taxa = c("Quercus ilex", "Castanea sativa"),
         new_allometry = c("0.12 * dbh ^ 2.5", "0.15*dbh^2.7"),
         new_coords = c(4, 44),
-        new_minDBH = c(5, 10),
-        new_maxDBH = c(35, 68),
-        new_sampleSize = c(143, 62)
+        new_min_dbh = c(5, 10),
+        new_max_dbh = c(35, 68),
+        new_sample_size = c(143, 62)
       )
     new_eq <- subset(all_eqtab, grepl("new", equation_id))
     expect_s3_class(new_eq, "data.frame")
