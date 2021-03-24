@@ -67,10 +67,9 @@ test_that("The top neq equations are displayed", {
   expect_true(all(topfreq %in% legeq))
 })
 
-# test_that("The option logxy = TRUE displays graphs with log scale", {
-#   g <- illustrate_allodb(genus = "Quercus",
-#                     coords = c(-78, 40),
-#                     logxy = TRUE)
-#   expect_s3_class(g, "ggplot")
-#   expect_true(all(topfreq %in% legeq))
-# })
+test_that("The option logxy = TRUE displays graphs with log scale", {
+  g <- illustrate_allodb(genus = "Quercus",
+                    coords = c(-78, 40),
+                    logxy = TRUE)
+  expect_s3_class(g, "ggplot")
+})
