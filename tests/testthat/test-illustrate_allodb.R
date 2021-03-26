@@ -6,8 +6,7 @@ test_that("illustrate_allodb() returns a ggplot object", {
             "ggplot")
 })
 
-test_that("illustrate_allodb() accepts changes in the equation table used",
-          {
+test_that("illustrate_allodb() accepts changes in the equation table used", {
             g <- illustrate_allodb(genus = "Quercus",
                                    coords = c(-78, 40))
             g2 <- illustrate_allodb(
@@ -27,8 +26,7 @@ test_that("illustrate_allodb() accepts changes in the equation table used",
             expect_true(any(grepl("new", g2$data$equation_id)))
           })
 
-test_that("illustrate_allodb() accepts changes in the equation table used",
-          {
+test_that("illustrate_allodb() accepts changes in the equation table used", {
             g <- illustrate_allodb(
               genus = "Quercus",
               coords = c(-78, 40),
