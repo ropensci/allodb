@@ -1,7 +1,6 @@
 library(allodb)
 
-test_that("new_equations() returns a dataframe with all necessary information",
-          {
+test_that("new_equations() returns a dataframe with all necessary information", {
             tab <- new_equations()
             expect_s3_class(tab, "data.frame")
             expect_type(tab$equation_id, "character")
@@ -123,8 +122,7 @@ test_that("new_equations() can be subsetted by type of output", {
 
 test_that(
   "equations can be added to the equation dataframe and then
-  used in the get_biomass function",
-  {
+  used in the get_biomass function", {
     all_eqtab <-
       new_equations(
         new_taxa = c("Quercus ilex", "Castanea sativa"),
