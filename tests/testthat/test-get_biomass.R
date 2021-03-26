@@ -1,8 +1,7 @@
 library(allodb)
 
 test_that("get_biomass works with genus and species
-          information and provides reasonable outputs",
-          {
+          information and provides reasonable outputs", {
             expect_equal(get_biomass(
               dbh = 20,
               genus = "Quercus",
@@ -21,8 +20,7 @@ test_that("get_biomass works with genus and species
           })
 
 test_that("weighting parameters can be easily changed
-          without changing results dramatically",
-          {
+          without changing results dramatically", {
             expect_equal(
               get_biomass(
                 dbh = 20,
@@ -88,8 +86,7 @@ test_that("get_biomass can be used for several individuals and sites", {
 })
 
 test_that("get_biomass gives stable results when run several
-          times with the same inputs",
-          {
+          times with the same inputs", {
             run_1 <-
               get_biomass(dbh = 20,
                           genus = "Quercus",
@@ -102,8 +99,7 @@ test_that("get_biomass gives stable results when run several
           })
 
 test_that("biomass estimates for one individual do not
-          depend on other measurements",
-          {
+          depend on other measurements", {
             agb_alone <-
               get_biomass(dbh = 20,
                           genus = "Quercus",
@@ -118,8 +114,7 @@ test_that("biomass estimates for one individual do not
           })
 
 test_that("get_biomass gives error message when inputs are
-          not the same length",
-          {
+          not the same length", {
             expect_error(get_biomass(
               dbh = c(20, 10, 30),
               genus = c("Quercus", "Fagus"),
