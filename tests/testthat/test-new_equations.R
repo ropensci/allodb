@@ -1,6 +1,7 @@
 library(allodb)
 
-test_that("new_equations() returns a dataframe with all necessary information", {
+test_that("new_equations() returns a dataframe with all
+          necessary information", {
             tab <- new_equations()
             expect_s3_class(tab, "data.frame")
             expect_type(tab$equation_id, "character")
