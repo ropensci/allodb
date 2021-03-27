@@ -13,13 +13,13 @@ new_equations(
   new_taxa = NULL,
   new_allometry = NULL,
   new_coords = NULL,
-  new_minDBH = NULL,
-  new_maxDBH = NULL,
-  new_sampleSize = NULL,
-  new_unitDBH = "cm",
-  new_unitOutput = "kg",
-  new_inputVar = "DBH",
-  new_outputVar = "Total aboveground biomass",
+  new_min_dbh = NULL,
+  new_max_dbh = NULL,
+  new_sample_size = NULL,
+  new_unit_dbh = "cm",
+  new_unit_output = "kg",
+  new_input_var = "DBH",
+  new_output_var = "Total aboveground biomass",
   use_height_allom = TRUE
 )
 }
@@ -51,26 +51,26 @@ which the allometry has been calibrated}
 \item{new_coords}{a vector or matrix of coordinates (longitude, latitude) of
 the calibration data}
 
-\item{new_minDBH}{numerical value, minimum DBH for which the equation is
+\item{new_min_dbh}{numerical value, minimum DBH for which the equation is
 valid (in cm). Default is NULL (nothing is added).}
 
-\item{new_maxDBH}{numerical value, maximum DBH for which the equation is
+\item{new_max_dbh}{numerical value, maximum DBH for which the equation is
 valid (in cm). Default is NULL (nothing is added).}
 
-\item{new_sampleSize}{number of measurements with which the allometry was
+\item{new_sample_size}{number of measurements with which the allometry was
 calibrated. Default is NULL (nothing is added).}
 
-\item{new_unitDBH}{character string with unit of DBH in the equation (either
+\item{new_unit_dbh}{character string with unit of DBH in the equation (either
 \code{cm}, \code{mm} or \code{inch}). Default is \code{cm}.}
 
-\item{new_unitOutput}{character string with unit of equation output (either
+\item{new_unit_output}{character string with unit of equation output (either
 \code{g}, \code{kg}, \code{Mg} or \code{lbs} if the output is a mass, or \code{m} if the output is a
 height).}
 
-\item{new_inputVar}{independent variable(s) needed in the allometry. Default
+\item{new_input_var}{independent variable(s) needed in the allometry. Default
 is \code{DBH}, other option is \verb{DBH, H}.}
 
-\item{new_outputVar}{dependent variable estimated by the allometry. Default
+\item{new_output_var}{dependent variable estimated by the allometry. Default
 is \verb{Total aboveground biomass}.}
 
 \item{use_height_allom}{a logical value. In allodb we use Bohn et al. (2014)
@@ -91,8 +91,8 @@ dfequation <- new_equations(
   new_taxa = "Faga",
   new_allometry = "exp(-2+log(dbh)*2.5)",
   new_coords = c(-0.07, 46.11),
-  new_minDBH = 5,
-  new_maxDBH = 50,
-  new_sampleSize = 50
+  new_min_dbh = 5,
+  new_max_dbh = 50,
+  new_sample_size = 50
 )
 }

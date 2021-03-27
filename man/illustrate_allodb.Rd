@@ -14,7 +14,7 @@ illustrate_allodb(
   eqinfo = "equation_taxa",
   wna = 0.1,
   w95 = 500,
-  Nres = 10000
+  nres = 10000
 )
 }
 \arguments{
@@ -46,7 +46,7 @@ a specified dbh range or sample size, respectively. Default is \code{0.1}.}
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is \code{500}.}
 
-\item{Nres}{number of resampled values. Default is \code{1e4}.}
+\item{nres}{number of resampled values. Default is \code{1e4}.}
 }
 \value{
 A ggplot showing all resampled dbh-agb values. The top equations used

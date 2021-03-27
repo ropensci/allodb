@@ -11,7 +11,7 @@ resample_agb(
   new_eqtable = NULL,
   wna = 0.1,
   w95 = 500,
-  Nres = 10000
+  nres = 10000
 )
 }
 \arguments{
@@ -34,7 +34,7 @@ without a specified dbh range or sample size, respectively. Default is 0.1}
 the value at which the sample-size-related weight reaches 95\% of its
 maximum value (max=1). Default is 500.}
 
-\item{Nres}{number of resampled values. Default is 1e4.}
+\item{nres}{number of resampled values. Default is 1e4.}
 }
 \value{
 A data frame of resampled DBHs and associated AGB from the equation
