@@ -65,9 +65,9 @@ head(eq_tab_acer[, show_cols])
 eq_tab_add <- new_equations(new_taxa = c("Quercus ilex", "Castanea sativa"),
                             new_allometry = c("0.12*dbh^2.5", "0.15*dbh^2.7"),
                             new_coords = c(4, 44),
-                            new_minDBH = c(5, 10),
-                            new_maxDBH = c(35, 68),
-                            new_sampleSize = c(143, 62))
+                            new_min_dbh = c(5, 10),
+                            new_max_dbh = c(35, 68),
+                            new_sample_size = c(143, 62))
 ## show added equations - they contain "new" in their equation_id
 head(eq_tab_add[grepl("new", eq_tab_add$equation_id), ])
 ```
@@ -142,7 +142,7 @@ df_resample <-
   resample_agb(genus = "Acer",
                species = "rubrum",
                coords = c(-78, 38), 
-               Nres = 1e4
+               nres = 1e4
   )
 
 plot(
