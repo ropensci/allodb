@@ -75,9 +75,9 @@ resample_agb <- function(genus,
   )]
   dfsub$dbh_min_cm[is.na(dfsub$dbh_min_cm)] <- 1
   dfsub$dbh_max_cm[is.na(dfsub$dbh_max_cm)] <- 200
-  list_dbh <- apply(dfsub[, 1:3], 1, function(X) {
+  list_dbh <- apply(dfsub[, 1:3], 1, function(x) {
     set.seed(40)
-    stats::runif(X[3], X[1], X[2])
+    stats::runif(x[3], x[1], x[2])
   })
 
   ## if possible, introduce some randomness
