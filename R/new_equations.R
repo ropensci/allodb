@@ -81,15 +81,15 @@ new_equations <- function(subset_taxa = "all",
   colnames(equations_orig) <- tolower(colnames(equations_orig))
   new_equations <- equations_orig
 
-  suppress_warnings(new_equations$dbh_min_cm <-
+  suppressWarnings(new_equations$dbh_min_cm <-
                      as.numeric(new_equations$dbh_min_cm))
-  suppress_warnings(new_equations$dbh_max_cm <-
+  suppressWarnings(new_equations$dbh_max_cm <-
                      as.numeric(new_equations$dbh_max_cm))
-  suppress_warnings(new_equations$sample_size <-
+  suppressWarnings(new_equations$sample_size <-
                      as.numeric(new_equations$sample_size))
-  suppress_warnings(new_equations$dbh_unit_cf <-
+  suppressWarnings(new_equations$dbh_unit_cf <-
                      as.numeric(new_equations$dbh_unit_cf))
-  suppress_warnings(new_equations$output_units_cf <-
+  suppressWarnings(new_equations$output_units_cf <-
                      as.numeric(new_equations$output_units_cf))
 
   ## replace height with height allometry  ####
@@ -305,9 +305,9 @@ new_equations <- function(subset_taxa = "all",
       unique(equations_orig[, c("dbh_units_original", "dbh_unit_cf")])
     output_cf <-
       unique(equations_orig[, c("output_units_original", "output_units_cf")])
-    suppress_warnings(dbh_cf$dbh_unit_cf <-
+    suppressWarnings(dbh_cf$dbh_unit_cf <-
                        as.numeric(dbh_cf$dbh_unit_cf))
-    suppress_warnings(output_cf$output_units_cf <-
+    suppressWarnings(output_cf$output_units_cf <-
                        as.numeric(output_cf$output_units_cf))
     new_equations <- merge(new_equations, dbh_cf)
     new_equations <- merge(new_equations, output_cf)
