@@ -6,7 +6,7 @@ test_that("est_params() returns a dataframe with all
             test_tab$site <- sample(2, 50, TRUE)
             sites <-
               data.frame(site = 1:2,
-                         long = c(-78,-85), lat = c(40, 45))
+                         long = c(-78, -85), lat = c(40, 45))
             test_tab <- merge(test_tab, sites, by = "site")
             ncombi <- nrow(unique(test_tab[, c("genus", "species", "site")]))
             testall <- est_params(
