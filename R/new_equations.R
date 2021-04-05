@@ -112,8 +112,8 @@ new_equations <- function(subset_taxa = "all",
     eq_jansen <- merge(eq_jansen, hallom, by = "genus")
     # substitute H by its DBH-based estimation
     to_merge <- eq_jansen[, c("hsub", "equation_allometry")]
-    eq_jansen$equation_allometry <- apply(to_merge, 1,  function(X) {
-      gsub("\\(h", paste0("((", X[1], ")"), X[2])
+    eq_jansen$equation_allometry <- apply(to_merge, 1,  function(xx) {
+      gsub("\\(h", paste0("((", xx[1], ")"), xx[2])
     })
     # replace independent_variable column
     eq_jansen$independent_variable <- "DBH"
@@ -270,9 +270,8 @@ new_equations <- function(subset_taxa = "all",
                       lat = new_coords[, 2])
     rcoords_eq <- round(coords_eq * 2 - 0.5) / 2 + 0.25
     ## extract koppen climate of every location
-    colnames(climatezones) <- c("lati", "longi", "cls")
-    koppen_zones <- apply(rcoords_eq, 1, function(X) {
-      subset(kgc::climatezones, longi == X[1] &  lati == X[2])$Cls
+      koppen_zones <- apply(rcoords_eq, 1, function(k) {
+      subset(kgc::climatezones, Lon == k[1] &  Lat == k[2])$Cls
     })
     koppen_zones <- as.character(unlist(koppen_zones))
     if (length(koppen_zones) != nrow(rcoords_eq)) {
