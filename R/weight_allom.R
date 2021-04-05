@@ -42,26 +42,27 @@ weight_allom <- function(genus,
 
   ### sample size weight ####
   b <- log(20) / w95
-  suppressWarnings(dfequation$wN <-
+  suppress_warnings(dfequation$wn <-
                      (1 - exp(
                        -b * as.numeric(dfequation$sample_size)
                      )))
-  dfequation$wN[is.na(dfequation$wN)] <- wna
+  dfequation$wn[is.na(dfequation$wn)] <- wna
 
   ### climate weight ####
   # (1) get koppen climate
-  coordsSite <- t(as.numeric(coords))
-  rcoordsSite <- round(coordsSite * 2 - 0.5) / 2 + 0.25
+  coords_site <- t(as.numeric(coords))
+  rcoords_site <- round(coords_site * 2 - 0.5) / 2 + 0.25
   ## extract koppen climate of every location
-  koppenObs <- apply(rcoordsSite, 1, function(X) {
-    subset(kgc::climatezones, Lon == X[1] &  Lat == X[2])$Cls
+  ## colnames(climatezones) <- c("lati", "longi", "cls")
+  koppen_obs <- apply(rcoords_site, 1, function(X) {
+    subset(kgc::climatezones, longi == X[1] &  lati == X[2])$cls
   })
-  kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppenObs)
+  kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppen_obs)
   compare_koppen <- function(kopp) {
     kopp <- tolower(unlist(strsplit(kopp, ", |; |,|;")))
-    max(subset(kopmatrix, tolower(zone2) %in% kopp)$wE)
+    max(subset(kopmatrix, tolower(zone2) %in% kopp)$we)
   }
-  dfequation$wE <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
+  dfequation$we <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
 
   ### taxo weight ####
   ## 'clean' equation taxa column and separate several taxa
@@ -83,20 +84,20 @@ weight_allom <- function(genus,
   family_obs <- tolower(genus_family$family)
 
   ## basic weight = 1e-6 (equations used only if no other is available)
-  dfequation$wT <- 1e-6
+  dfequation$wt <- 1e-6
 
   # same genus
-  dfequation$wT[dfequation$taxa1 == genus_obs] <- 0.8
+  dfequation$wt[dfequation$taxa1 == genus_obs] <- 0.8
   # same genus, different species
   eqtaxaG <- data.table::tstrsplit(dfequation$taxa1, " ")[[1]]
   eqtaxaS <- data.table::tstrsplit(dfequation$taxa1, " ")[[2]]
-  dfequation$wT[eqtaxaG == genus_obs & !is.na(eqtaxaS)] <- 0.7
+  dfequation$wt[eqtaxaG == genus_obs & !is.na(eqtaxaS)] <- 0.7
   # same species
-  dfequation$wT[dfequation$taxa1 == paste(genus_obs, species) |
+  dfequation$wt[dfequation$taxa1 == paste(genus_obs, species) |
                   (dfequation$taxa2 == paste(genus_obs, species) &
                      !is.na(dfequation$taxa2))] <- 1
   # # same family
-  dfequation$wT[dfequation$taxa1 == family_obs |
+  dfequation$wt[dfequation$taxa1 == family_obs |
                   (!is.na(dfequation$taxa2) &
                      dfequation$taxa2 == family_obs) |
                   (!is.na(dfequation$taxa3) &
@@ -111,10 +112,10 @@ weight_allom <- function(genus,
   ## conifers / gymnosperms?
   conifers <- allodb::gymno_genus$Genus[allodb::gymno_genus$conifer]
   # yes
-  dfequation$wT[genus_obs %in% conifers &
+  dfequation$wt[genus_obs %in% conifers &
                   dfequation$equation_taxa == "conifers"] <- 0.3
   # no
-  dfequation$wT[!(genus_obs %in% allodb::gymno_genus$Genus) &
+  dfequation$wt[!(genus_obs %in% allodb::gymno_genus$Genus) &
                   dfequation$equation_taxa == "broad-leaved species"] <-
     0.3
   ## tree or shrub?
@@ -123,23 +124,23 @@ weight_allom <- function(genus,
          "",
          grep(" sp\\.", allodb::shrub_species, value = TRUE))
   # shrubs (all)
-  dfequation$wT[(paste(genus_obs, species) %in% allodb::shrub_species |
+  dfequation$wt[(paste(genus_obs, species) %in% allodb::shrub_species |
                    genus_obs %in% shrub_genus) &
                   dfequation$equation_taxa == "shrubs"] <- 0.3
   # shrubs (angio)
-  dfequation$wT[(paste(genus_obs, species) %in% allodb::shrub_species |
+  dfequation$wt[(paste(genus_obs, species) %in% allodb::shrub_species |
                    genus_obs %in% shrub_genus) &
                   !(genus_obs %in% allodb::gymno_genus$Genus) &
                   dfequation$equation_taxa == "shrubs (angiosperms)"] <-
     0.3
   # trees (all)
-  dfequation$wT[!paste(genus_obs, species) %in% allodb::shrub_species &
+  dfequation$wt[!paste(genus_obs, species) %in% allodb::shrub_species &
                   !genus_obs %in% shrub_genus &
                   dfequation$equation_taxa == "trees
                 (angiosperms/gymnosperms)"] <-
     0.3
   # trees (angio)
-  dfequation$wT[!paste(genus_obs, species) %in% allodb::shrub_species &
+  dfequation$wt[!paste(genus_obs, species) %in% allodb::shrub_species &
                   !genus_obs %in% shrub_genus &
                   !(genus_obs %in% allodb::gymno_genus$Genus) &
                   dfequation$equation_taxa == "trees (angiosperms)"] <-
@@ -147,9 +148,9 @@ weight_allom <- function(genus,
 
   ### final weights ####
   # multiplicative weights: if one is zero, the total weight should be zero too
-  dfequation$w <- dfequation$wN * dfequation$wE * dfequation$wT
+  dfequation$w <- dfequation$wn * dfequation$we * dfequation$wt
 
-  vecW <- dfequation$w
-  names(vecW) <- dfequation$equation_id
-  return(vecW)
+  vec_w <- dfequation$w
+  names(vec_w) <- dfequation$equation_id
+  return(vec_w)
 }
