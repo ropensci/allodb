@@ -53,9 +53,8 @@ weight_allom <- function(genus,
   coords_site <- t(as.numeric(coords))
   rcoords_site <- round(coords_site * 2 - 0.5) / 2 + 0.25
   ## extract koppen climate of every location
-  ## colnames(climatezones) <- c("lati", "longi", "cls")
-  koppen_obs <- apply(rcoords_site, 1, function(X) {
-    subset(kgc::climatezones, longi == X[1] &  lati == X[2])$cls
+    koppen_obs <- apply(rcoords_site, 1, function(X) {
+    subset(kgc::climatezones, Lon == X[1] &  Lat == X[2])$Cls
   })
   kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppen_obs)
   compare_koppen <- function(kopp) {
@@ -89,9 +88,9 @@ weight_allom <- function(genus,
   # same genus
   dfequation$wt[dfequation$taxa1 == genus_obs] <- 0.8
   # same genus, different species
-  eqtaxaG <- data.table::tstrsplit(dfequation$taxa1, " ")[[1]]
-  eqtaxaS <- data.table::tstrsplit(dfequation$taxa1, " ")[[2]]
-  dfequation$wt[eqtaxaG == genus_obs & !is.na(eqtaxaS)] <- 0.7
+  eqtaxa_g <- data.table::tstrsplit(dfequation$taxa1, " ")[[1]]
+  eqtaxa_s <- data.table::tstrsplit(dfequation$taxa1, " ")[[2]]
+  dfequation$wt[eqtaxa_g == genus_obs & !is.na(eqtaxa_s)] <- 0.7
   # same species
   dfequation$wt[dfequation$taxa1 == paste(genus_obs, species) |
                   (dfequation$taxa2 == paste(genus_obs, species) &
