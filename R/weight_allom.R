@@ -59,9 +59,9 @@ weight_allom <- function(genus,
   kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppen_obs)
   compare_koppen <- function(kopp) {
     kopp <- tolower(unlist(strsplit(kopp, ", |; |,|;")))
-    max(subset(kopmatrix, tolower(zone2) %in% kopp)$we)
+    max(subset(kopmatrix, tolower(zone2) %in% kopp)$wE)
   }
-  dfequation$we <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
+  dfequation$wE <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
 
   ### taxo weight ####
   ## 'clean' equation taxa column and separate several taxa
