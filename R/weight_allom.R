@@ -42,7 +42,7 @@ weight_allom <- function(genus,
 
   ### sample size weight ####
   b <- log(20) / w95
-  suppress_warnings(dfequation$wn <-
+  suppressWarnings(dfequation$wn <-
                      (1 - exp(
                        -b * as.numeric(dfequation$sample_size)
                      )))
