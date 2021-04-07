@@ -53,7 +53,7 @@ weight_allom <- function(genus,
   coords_site <- t(as.numeric(coords))
   rcoords_site <- round(coords_site * 2 - 0.5) / 2 + 0.25
   ## extract koppen climate of every location
-    koppen_obs <- apply(rcoords_site, 1, function(xk) {
+  koppen_obs <- apply(rcoords_site, 1, function(xk) {
     subset(kgc::climatezones, Lon == xk[1] &  Lat == xk[2])$Cls
   })
   kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppen_obs)
@@ -147,7 +147,7 @@ weight_allom <- function(genus,
 
   ### final weights ####
   # multiplicative weights: if one is zero, the total weight should be zero too
-  dfequation$w <- dfequation$wn * dfequation$we * dfequation$wt
+  dfequation$w <- dfequation$wn * dfequation$wE * dfequation$wt
 
   vec_w <- dfequation$w
   names(vec_w) <- dfequation$equation_id
