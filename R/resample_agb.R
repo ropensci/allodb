@@ -88,7 +88,7 @@ resample_agb <- function(genus,
     list_dbh <- c(list_dbh)
     sampled_dbh <- list_dbh
     orig_equation <- dfsub$equation_allometry
-    new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_cf, ")")
+    new_dbh <- paste0("(", sampled_dbh, "*", dfsub$dbh_unit_cf, ")")
     new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
     list_agb <-
       eval(parse(text = new_equation)) * dfsub$output_units_cf
@@ -96,7 +96,7 @@ resample_agb <- function(genus,
     list_agb <- lapply(seq_len(length(list_dbh)), function(j) {
       sampled_dbh <- list_dbh[[j]]
       orig_equation <- dfsub$equation_allometry[j]
-      new_dbh <- paste0("(sampled_dbh*", dfsub$dbh_unit_cf[j], ")")
+      new_dbh <- paste0("(", sampled_dbh, "*", dfsub$dbh_unit_cf[j], ")")
       new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
       agb <-
         eval(parse(text = new_equation)) * dfsub$output_units_cf[j]
