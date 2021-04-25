@@ -93,6 +93,15 @@ resample_agb <- function(genus,
     list_agb <-
       eval(parse(text = new_equation)) * dfsub$output_units_cf
   } else {
+    # FIXME: The iteration in this 'else' branch appears to be wrong, likely
+    # because lapply() syntax is mixed with for() syntax. Operations over all
+    # items in a vector appear to be mixed with operations over a single element
+    # of a vector. The result is that the length of `list_dbh` is different from
+    # the length of `list_agb`. Please revise this chunk and write a test to
+    # ensure the result is what you expect and to avoid this bug from comming
+    # back in the future. As an intermediate step to fix this bug it may be
+    # easiest to extract the logic of this chunk in a little helper function
+    # then test that helper in isolation.
     list_agb <- lapply(seq_len(length(list_dbh)), function(j) {
       sampled_dbh <- list_dbh[[j]]
       orig_equation <- dfsub$equation_allometry[j]
