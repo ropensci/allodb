@@ -3,9 +3,7 @@ NULL
 
 # FIXME: Hack to use stringsAsFactors = FALSE everywhere, with all versions of R
 # Can we use tibble() instead? (We are using dplyr, and it exports tibble().)
-data.frame <- function(...) {
-  base::data.frame(..., stringsAsFactors = FALSE)
-}
+
 
 globalVariables(
   c(
