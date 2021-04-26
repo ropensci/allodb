@@ -1,9 +1,6 @@
 #' @importFrom utils data
 NULL
 
-# FIXME: Hack to use stringsAsFactors = FALSE everywhere, with all versions of R
-# Can we use tibble() instead? (We are using dplyr, and it exports tibble().)
-
 
 globalVariables(
   c(
