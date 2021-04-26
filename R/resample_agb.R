@@ -107,7 +107,7 @@ resample_agb <- function(genus,
     unlist(lapply(seq_len(nrow(dfsub)), function(i)
       rep(dfsub$equation_id[i], each = dfsub$resample[i])))
 
-  df <- data.frame(equation_id,
+  df <- tibble(equation_id,
                    dbh = unlist(list_dbh),
                    agb = unlist(list_agb))
   return(df)
