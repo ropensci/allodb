@@ -30,7 +30,6 @@ Imports:
     data.table (>= 1.12.8),
     ggplot2 (>= 3.3.2),
     kgc (>= 1.0.0.2),
-    tidyverse,
     utils
 Suggests: 
     covr (>= 3.2.1),
