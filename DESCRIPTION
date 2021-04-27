@@ -31,7 +31,7 @@ Imports:
     ggplot2 (>= 3.3.2),
     kgc (>= 1.0.0.2),
     utils,
-    usethis::use_package("tibble")
+    use_package("tibble")
 Suggests: 
     covr (>= 3.2.1),
     knitr (>= 1.21),
