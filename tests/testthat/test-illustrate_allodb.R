@@ -54,7 +54,7 @@ test_that("The top neq equations are displayed", {
     illustrate_allodb(genus = "Quercus",
                       coords = c(-78, 40),
                       neq = 15)
-  tab <- data.frame(table(equation_id = g$data$equation_id))
+  tab <- data.frame(stringsAsFactors = FALSE, table(equation_id = g$data$equation_id))
   tab <- tab[order(tab$Freq, decreasing = TRUE), ]
   topfreq <- tab$equation_id[1:15]
   legeq <-
