@@ -281,7 +281,7 @@ new_equations <- function(subset_taxa = "all",
       )
     }
 
-    added_equations <- data.frame(
+    added_equations <- data.frame(stringsAsFactors = FALSE, 
       equation_id = new_equation_id,
       equation_taxa = new_taxa,
       equation_allometry = new_allometry,
