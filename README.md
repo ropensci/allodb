@@ -4,7 +4,6 @@
 
 <!-- badges: start -->
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
-[![Build Status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)
 [![Coverage status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/github/forestgeo/allodb)
 [![R-CMD-check](https://github.com/forestgeo/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/forestgeo/allodb/actions)
 <!-- badges: end -->
