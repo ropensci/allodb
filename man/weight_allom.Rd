@@ -6,8 +6,8 @@
 \usage{
 weight_allom(
   genus,
-  species = NULL,
   coords,
+  species = NULL,
   new_eqtable = NULL,
   wna = 0.1,
   w95 = 500
@@ -17,11 +17,11 @@ weight_allom(
 \item{genus}{a character value, containing the genus (e.g. "Quercus") of the
 tree.}
 
+\item{coords}{a numerical vector of length 2 with longitude and latitude.}
+
 \item{species}{a character vector (same length as genus), containing the
 species (e.g. "rubra") of the tree. Default is NULL, when no species
 identification is available.}
-
-\item{coords}{a numerical vector of length 2 with longitude and latitude.}
 
 \item{new_eqtable}{Optional. An equation table created with the
 new_equations() function.}

@@ -6,8 +6,8 @@
 \usage{
 illustrate_allodb(
   genus,
-  species = NULL,
   coords,
+  species = NULL,
   new_eqtable = NULL,
   logxy = FALSE,
   neq = 10,
@@ -21,10 +21,10 @@ illustrate_allodb(
 \item{genus}{A character value, containing the genus (e.g. "Quercus") of the
 tree.}
 
+\item{coords}{A numerical vector of length 2 with longitude and latitude.}
+
 \item{species}{A character value, containing the species (e.g. "rubra") of
 the tree. Default is \code{NULL}, when no species identification is available.}
-
-\item{coords}{A numerical vector of length 2 with longitude and latitude.}
 
 \item{new_eqtable}{Optional. An equation table created with the
 \code{add_equation()} function. Default is the base allodb equation table.}

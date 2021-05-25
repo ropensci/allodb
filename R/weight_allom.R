@@ -6,10 +6,10 @@
 #'
 #' @param genus a character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
+#' @param coords a numerical vector of length 2 with longitude and latitude.
 #' @param species a character vector (same length as genus), containing the
 #'   species (e.g. "rubra") of the tree. Default is NULL, when no species
 #'   identification is available.
-#' @param coords a numerical vector of length 2 with longitude and latitude.
 #' @param new_eqtable Optional. An equation table created with the
 #'   new_equations() function.
 #' @param wna this parameter is used in the weight_allom function to determine
@@ -30,8 +30,8 @@
 #' )
 #'
 weight_allom <- function(genus,
-                         species = NULL,
                          coords,
+                         species = NULL,
                          new_eqtable = NULL,
                          wna = 0.1,
                          w95 = 500) {

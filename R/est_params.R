@@ -7,12 +7,12 @@
 #' and location in question are given a higher weight in this process.
 #' @param genus a character vector, containing the genus (e.g. "Quercus") of
 #'   each tree.
-#' @param species a character vector (same length as genus), containing the
-#'   species (e.g. "rubra")  of each tree. Default is NULL, when no species
-#'   identification is available.
 #' @param coords a numerical vector of length 2 with longitude and latitude (if
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
+#' @param species a character vector (same length as genus), containing the
+#'   species (e.g. "rubra")  of each tree. Default is NULL, when no species
+#'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
 #'   add_equation() function. Default is the compiled allodb equation table.
 #' @param wna this parameter is used in the weight_allom() function to determine
@@ -38,8 +38,8 @@
 #' )
 #'
 est_params <- function(genus,
-                       species = NULL,
                        coords,
+                       species = NULL,
                        new_eqtable = NULL,
                        wna = 0.1,
                        w95 = 500,

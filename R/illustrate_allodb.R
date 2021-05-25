@@ -5,9 +5,9 @@
 #'
 #' @param genus A character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
+#' @param coords A numerical vector of length 2 with longitude and latitude.
 #' @param species A character value, containing the species (e.g. "rubra") of
 #'   the tree. Default is `NULL`, when no species identification is available.
-#' @param coords A numerical vector of length 2 with longitude and latitude.
 #' @param new_eqtable Optional. An equation table created with the
 #'   `add_equation()` function. Default is the base allodb equation table.
 #' @param logxy Logical: should values be plotted on a log scale? Default is
@@ -37,8 +37,8 @@
 #' )
 #'
 illustrate_allodb <- function(genus,
-                              species = NULL,
                               coords,
+                              species = NULL,
                               new_eqtable = NULL,
                               logxy = FALSE,
                               neq = 10,

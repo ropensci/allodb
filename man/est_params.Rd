@@ -6,8 +6,8 @@
 \usage{
 est_params(
   genus,
-  species = NULL,
   coords,
+  species = NULL,
   new_eqtable = NULL,
   wna = 0.1,
   w95 = 500,
@@ -18,13 +18,13 @@ est_params(
 \item{genus}{a character vector, containing the genus (e.g. "Quercus") of
 each tree.}
 
-\item{species}{a character vector (same length as genus), containing the
-species (e.g. "rubra")  of each tree. Default is NULL, when no species
-identification is available.}
-
 \item{coords}{a numerical vector of length 2 with longitude and latitude (if
 all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree.}
+
+\item{species}{a character vector (same length as genus), containing the
+species (e.g. "rubra")  of each tree. Default is NULL, when no species
+identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
 add_equation() function. Default is the compiled allodb equation table.}
