@@ -90,7 +90,7 @@ resample_agb <- function(genus,
     new_dbh <- paste0("(sampled_dbh * ", dfsub$dbh_unit_cf, ")")
     new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
     list_agb <-
-      eval(parse(text = new_equation)) * dfsub$output_units_cf
+      eval(str2lang(new_equation)) * dfsub$output_units_cf
   } else {
     list_agb <- lapply(seq_len(length(list_dbh)), function(j) {
       sampled_dbh <- list_dbh[[j]]
@@ -98,7 +98,7 @@ resample_agb <- function(genus,
       new_dbh <- paste0("(sampled_dbh * ", dfsub$dbh_unit_cf[j], ")")
       new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
       agb <-
-        eval(parse(text = new_equation)) * dfsub$output_units_cf[j]
+        eval(str2lang(new_equation)) * dfsub$output_units_cf[j]
     })
   }
 
