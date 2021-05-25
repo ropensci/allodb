@@ -76,8 +76,7 @@ resample_agb <- function(genus,
   dfsub$dbh_min_cm[is.na(dfsub$dbh_min_cm)] <- 1
   dfsub$dbh_max_cm[is.na(dfsub$dbh_max_cm)] <- 200
   list_dbh <- apply(dfsub[, 1:3], 1, function(x) {
-    set.seed(40)
-    stats::runif(x[3], x[1], x[2])
+    withr::with_seed(40, stats::runif(x[3], x[1], x[2]))
   })
 
   ## if possible, introduce some randomness
@@ -108,7 +107,7 @@ resample_agb <- function(genus,
       rep(dfsub$equation_id[i], each = dfsub$resample[i])))
 
   df <- tibble::tibble(equation_id,
-                   dbh = unlist(list_dbh),
-                   agb = unlist(list_agb))
+                       dbh = unlist(list_dbh),
+                       agb = unlist(list_agb))
   return(df)
 }

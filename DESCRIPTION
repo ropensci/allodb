@@ -31,7 +31,8 @@ Imports:
     ggplot2 (>= 3.3.2),
     kgc (>= 1.0.0.2),
     tibble,
-    utils
+    utils, 
+    withr
 Suggests: 
     covr (>= 3.2.1),
     knitr (>= 1.21),
