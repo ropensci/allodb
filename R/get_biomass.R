@@ -60,7 +60,13 @@ get_biomass <- function(dbh,
     dfequation <- new_equations()
 
   params <-
-    est_params(genus, species, coords, dfequation, wna, w95, nres)
+    est_params(genus = genus,
+               coords = coords,
+               species = species,
+               new_eqtable = dfequation,
+               wna = wna,
+               w95 = w95,
+               nres = nres)
 
   if (length(unlist(coords)) == 2) {
     coords <- matrix(coords, ncol = 2)

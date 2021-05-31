@@ -47,9 +47,25 @@ illustrate_allodb <- function(genus,
                               w95 = 500,
                               nres = 1e4) {
   dfagb <-
-    resample_agb(genus, species, coords, new_eqtable, wna, w95, nres)
+    resample_agb(
+      genus = genus,
+      coords = coords,
+      species = species,
+      new_eqtable = new_eqtable,
+      wna = wna,
+      w95 = w95,
+      nres = nres
+    )
   params <-
-    est_params(genus, species, coords, new_eqtable, wna, w95)
+    est_params(
+      genus = genus,
+      coords = coords,
+      species = species,
+      new_eqtable = new_eqtable,
+      wna = wna,
+      w95 = w95,
+      nres = nres
+    )
   pred <- function(x) params$a * x ** params$b
 
   if (is.null(new_eqtable)) {
