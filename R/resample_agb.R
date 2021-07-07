@@ -3,7 +3,7 @@
 #' After attributing a weight to each equation in allodb using the weight_allom
 #' function, equations are then resampled within their original DBH range using
 #' `resample_agb`: the number of resampled values for each equation is
-#' proportional to its weight .It creates S3 objects of class "numeric".
+#' proportional to its weight. It creates S3 objects of class "numeric".
 #'
 #' @param genus a character value, containing the genus (e.g. "Quercus") of the
 #'   tree.

@@ -238,7 +238,7 @@
 #' sites used in allodb. The list is an input in the weight_allom() function.
 #'
 #' * `shrub_species`: A list with genus and species of shrubby plants identified
-#' in the extratropical ForestGEO #'sites used in allodb.
+#' in the 24 extratropical ForestGEO sites used in allodb.
 #'
 #' @format
 #' A vector containing 179 observations
