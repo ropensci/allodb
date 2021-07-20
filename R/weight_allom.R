@@ -62,6 +62,14 @@ weight_allom <- function(genus,
     max(subset(kopmatrix, tolower(zone2) %in% kopp)$wE)
   }
   dfequation$wE <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
+  ## error message when the koppen climate of the site does not correspond to
+  ## any equation
+  if (sum(dfequation$wE) < 0.2)
+    warning(paste0("The Koppen climate zone corresponding to coordinates (",
+               paste(coords, collapse = ", "),
+               ") is ",
+               koppen_obs,
+               " and is not represented in your equation table."))
 
   ### taxo weight ####
   ## 'clean' equation taxa column and separate several taxa
