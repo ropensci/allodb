@@ -12,7 +12,6 @@ Tool to standardize and simplify the tree biomass
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://forestgeo.github.io/allodb}
   \item \url{https://github.com/forestgeo/allodb}
   \item Report bugs at \url{https://github.com/forestgeo/allodb/issues}
 }

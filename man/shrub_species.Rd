@@ -17,7 +17,7 @@ sites used in allodb. The list is an input in the weight_allom() function.
 \details{
 \itemize{
 \item \code{shrub_species}: A list with genus and species of shrubby plants identified
-in the 24 extratropical ForestGEO sites used in allodb.
+in the extratropical ForestGEO #'sites used in allodb.
 }
 }
 \keyword{datasets}
