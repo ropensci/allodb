@@ -82,7 +82,7 @@ test_that("new_equations() can be subsetted by geographic region", {
 
 test_that("new_equations() can be subsetted by equation id", {
   ids <- c("13b352", "9c4cc9", "55476a", "74c518", "cde8d1")
-  subset_id <- new_equations(subset_id = ids)
+  subset_id <- new_equations(subset_ids = ids)
   cols <- c(
     "equation_id",
     "equation_taxa",
