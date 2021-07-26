@@ -13,13 +13,13 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,
 12 / L,lat,"Latitude expressed in decimal degrees. Positive latitudes are north of the equator, negative latitudes are south of the equator. Used NOAA for conversion: https://www.ngs.noaa.gov/NCAT/",numeric,NA,NA,XX-XX,Change before publication
 13 / M,long,"Longitude expressed in decimal degrees. Positive longitudes are east of Prime Meridian, negative longitudes are west of the Prime Meridian. Used NOAA for conversion: https://www.ngs.noaa.gov/NCAT/",numeric,NA,NA,XX-XX,Change before publication
 14 / N,elev_m,Elevation in meters above sea level (sometimes a range is given). Data from original publication or estimated by using an online tool to get elevation from coordinates (https://www.maps.ie/coordinates.html),numeric,NA,meters,XX-XX,Change before publication
-15 / O,geography.notes,"Notes pertaining to lat, long, location, or topography",character,NA,NA,NA,
+15 / O,geography_notes,"Notes pertaining to lat, long, location, or topography",character,NA,NA,NA,
 16 / P,mat_C,Mean annual temperature in Celsius degrees as original publication or predicted using the latitude and longitude in the WorldClim database.,numeric,NA,celsius degrees,XX-XX,Change before publication
 17 / Q,min.temp_C,Mean temperature of the coldest month,numeric,NA,celsius degrees,XX-XX,Change before publication
 18 / R,max.temp_C,Mean temperature of the warmest month,numeric,NA,celsius degrees,XX-XX,Change before publication
 19 / S,map_mm,Mean annual precipitation in milimeters (multiply by 25.4 to convert from inch to mm) or predicted using the latitude and longitude in the WorldClim database.,numeric,NA,mm,XX-XX,Change before publication
 20 / T,frost_free_period_days,Frost free period (days) as reported or inferred from original publicacion,numeric,NA,NA,NA,
-21 / U,climate.notes,Climate details not included in equation table,character,NA,NA,NA,
+21 / U,climate_notes,Climate details not included in equation table,character,NA,NA,NA,
 22 / V,stand_age_range_yr,Stand age (or range) as reported or inferred from original publication,numeric,NA,NA,NA,
 23 / W,stand_age_history,Qualitative description of the stand history reported or inferred from original publication,character,NA,NA,NA,
 24 / X,stand_basal_area_m2_ha,Stand basal as reported in original publication (m2 x ha),,NA,NA,NA,tentative field
@@ -45,4 +45,4 @@ Column,Field,Description,Column_type,Field_codes,Units,Range,
 44 / AR,notes_fitting_model,Other details on statistical methods,character,NA,NA,NA,
 45 / AS,original_equation_id,Unique identification or clues given in original publications,character,NA,NA,NA,
 46 / AT,original_data_availability,Indicates whether or not the original source data is available,character,"NRA - Not Readily Available, Yes=data accesible",NA,NA,
-47 / AU,equation.notes,Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation,character,NA,NA,NA,
+47 / AU,equation_notes,Notes or error message to indicate any pitfall that could spoil the AGB estimate based on equation,character,NA,NA,NA,
