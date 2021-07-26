@@ -56,20 +56,28 @@ weight_allom <- function(genus,
   koppen_obs <- apply(rcoords_site, 1, function(xk) {
     subset(kgc::climatezones, Lon == xk[1] &  Lat == xk[2])$Cls
   })
-  kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppen_obs)
-  compare_koppen <- function(kopp) {
-    kopp <- tolower(unlist(strsplit(kopp, ", |; |,|;")))
-    max(subset(kopmatrix, tolower(zone2) %in% kopp)$wE)
+  if (length(koppen_obs) == 0 ) {
+    warning("The coordinates c(",
+            paste(coords,collapse = ","),
+            ") are not associated with a Koppen climate zone.")
+    dfequation$wE <- 1e-6
+  } else {
+    kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppen_obs)
+    compare_koppen <- function(kopp) {
+      kopp <- tolower(unlist(strsplit(kopp, ", |; |,|;")))
+      max(subset(kopmatrix, tolower(zone2) %in% kopp)$wE)
+    }
+    dfequation$wE <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
+    ## error message when the koppen climate of the site does not correspond to
+    ## any equation
+    if (sum(dfequation$wE) < 0.2)
+      warning(paste0("The Koppen climate zone corresponding to coordinates (",
+                     paste(coords, collapse = ", "),
+                     ") is ",
+                     koppen_obs,
+                     " and is not represented in your equation table."))
   }
-  dfequation$wE <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
-  ## error message when the koppen climate of the site does not correspond to
-  ## any equation
-  if (sum(dfequation$wE) < 0.2)
-    warning(paste0("The Koppen climate zone corresponding to coordinates (",
-               paste(coords, collapse = ", "),
-               ") is ",
-               koppen_obs,
-               " and is not represented in your equation table."))
+
 
   ### taxo weight ####
   ## 'clean' equation taxa column and separate several taxa
