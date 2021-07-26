@@ -5,7 +5,7 @@
 \alias{shrub_species}
 \title{List of shrub identified in selected ForestGEO sites}
 \format{
-A vector containing 179 observations
+An object of class \code{character} of length 179.
 }
 \usage{
 shrub_species
@@ -19,5 +19,8 @@ sites used in allodb. The list is an input in the weight_allom() function.
 \item \code{shrub_species}: A list with genus and species of shrubby plants identified
 in the 24 extratropical ForestGEO sites used in allodb.
 }
+}
+\examples{
+shrub_species
 }
 \keyword{datasets}

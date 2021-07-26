@@ -5,20 +5,21 @@
 \alias{missing_values}
 \title{A table with explanations of missing values codes}
 \format{
-A small data frame with 4 rows and 3 variables:\preformatted{	[,1]	Code	character
-	[,2]	Definition	character
-	[,3]	Description	character
-
-}
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 4 rows and 3 columns.
 }
 \usage{
 missing_values
 }
 \description{
-A list of codes used to indicate missing information in equation table:
+A list of codes used to indicate missing information in equation table.
+}
+\details{
 \itemize{
 \item \code{missing_values}: Table with explanations of missing values codes.
 }
+}
+\examples{
+missing_values
 }
 \seealso{
 Other database datasets: 

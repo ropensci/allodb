@@ -5,10 +5,7 @@
 \alias{genus_family}
 \title{Genus and family table for selected ForestGEO sites}
 \format{
-A data frame with 248 observations and 2 variables:\preformatted{[,1]	genus	character
-[,2]	family	character
-
-}
+An object of class \code{data.frame} with 248 rows and 2 columns.
 }
 \usage{
 genus_family
@@ -23,5 +20,8 @@ function.
 \item \code{genus_family}: A data frame with genus and families identified in the
 extratropical ForestGEO sites used in allodb.
 }
+}
+\examples{
+genus_family
 }
 \keyword{datasets}

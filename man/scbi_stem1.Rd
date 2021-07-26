@@ -5,20 +5,12 @@
 \alias{scbi_stem1}
 \title{Tree census data from SCBI ForestGEO plot}
 \format{
-A data frame with 2287 observations and 6 variables:\preformatted{[,1]	treeID	numeric
-[,2]	stemID	numeric
-[,3]	dbh	numeric
-[,4]	genus	character
-[,5]	species	character
-[,6]	Family	character
-
-}
+An object of class \code{data.frame} with 2287 rows and 6 columns.
 }
 \source{
 Full data sets for tree census data at SCBI can be requested through
-the ForestGEO portal (https://forestgeo.si.edu/).
-Census 1, 2, and 3 can also
-be accessed at the public GitHub repository for SCBI-ForestGEO Data
+the ForestGEO portal (https://forestgeo.si.edu/). Census 1, 2, and 3 can
+also be accessed at the public GitHub repository for SCBI-ForestGEO Data
 (https://github.com/SCBI-ForestGEO).
 }
 \usage{
@@ -28,5 +20,8 @@ scbi_stem1
 A table with tree data from the Smithsonian Conservation Biology Institute,
 USA (SCBI) ForestGEO dynamics plot. These data is from the first tree census
 in 2008, and only cover 1 hectare (SCBI is 25 ha).
+}
+\examples{
+scbi_stem1
 }
 \keyword{datasets}
