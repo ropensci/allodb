@@ -60,17 +60,17 @@ weight_allom <- function(genus,
     warning("The coordinates c(",
             paste(coords,collapse = ","),
             ") are not associated with a Koppen climate zone.")
-    dfequation$wE <- 1e-6
+    dfequation$we <- 1e-6
   } else {
     kopmatrix <- subset(allodb::koppenMatrix, zone1 == koppen_obs)
     compare_koppen <- function(kopp) {
       kopp <- tolower(unlist(strsplit(kopp, ", |; |,|;")))
-      max(subset(kopmatrix, tolower(zone2) %in% kopp)$wE)
+      max(subset(kopmatrix, tolower(zone2) %in% kopp)$we)
     }
-    dfequation$wE <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
+    dfequation$we <- vapply(dfequation$koppen, compare_koppen, FUN.VALUE = 0.9)
     ## error message when the koppen climate of the site does not correspond to
     ## any equation
-    if (sum(dfequation$wE) < 0.2)
+    if (sum(dfequation$we) < 0.2)
       warning(paste0("The Koppen climate zone corresponding to coordinates (",
                      paste(coords, collapse = ", "),
                      ") is ",
@@ -163,7 +163,7 @@ weight_allom <- function(genus,
 
   ### final weights ####
   # multiplicative weights: if one is zero, the total weight should be zero too
-  dfequation$w <- dfequation$wn * dfequation$wE * dfequation$wt
+  dfequation$w <- dfequation$wn * dfequation$we * dfequation$wt
 
   vec_w <- dfequation$w
   names(vec_w) <- dfequation$equation_id
