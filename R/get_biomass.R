@@ -59,6 +59,19 @@ get_biomass <- function(dbh,
   } else
     dfequation <- new_equations()
 
+  if (length(unlist(coords)) == 2) {
+    coords <- matrix(coords, ncol = 2)
+  }
+  colnames(coords) <- c("long", "lat")
+
+  ## input data checks
+  if (any(!is.na(dbh) & (dbh < 0 | dbh > 1e3)))
+    stop("Your dbh data contain negative values and/or values > 1000 cm.
+         Please check your data.")
+  if (any(abs(coords[,1]) > 180 | abs(coords[,2]) > 90))
+    stop("Your coords contain longitudes that are not between -180 and 180, or
+         latitudes that are not between -90 and 90. Please check your data.")
+
   params <-
     est_params(genus = genus,
                coords = coords,
@@ -67,11 +80,6 @@ get_biomass <- function(dbh,
                wna = wna,
                w95 = w95,
                nres = nres)
-
-  if (length(unlist(coords)) == 2) {
-    coords <- matrix(coords, ncol = 2)
-  }
-  colnames(coords) <- c("long", "lat")
 
   if (!is.null(species)) {
     df <-

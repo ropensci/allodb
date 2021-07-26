@@ -34,8 +34,7 @@ test_that("weighting parameters can be easily changed
             )
           })
 
-test_that("get_biomass returns zero when dbh = 0 and NA when
-          dbh = NA or dbh < 0", {
+test_that("get_biomass returns zero when dbh = 0 and NA when dbh = NA", {
   expect_equal(get_biomass(
     dbh = 0,
     genus = "Quercus",
@@ -47,13 +46,26 @@ test_that("get_biomass returns zero when dbh = 0 and NA when
     coords = c(-78, 40)
   ),
   NA_integer_)
-  expect_equal(get_biomass(
-    dbh = -10,
-    genus = "Quercus",
-    coords = c(-78, 40)
-  ),
-  NA_integer_)
 })
+
+test_that("get_biomass returns an error message when dbh values are < 0, > 1000,
+          or when coordinates are not in their expected range", {
+            expect_error(get_biomass(
+              dbh = -10,
+              genus = "Quercus",
+              coords = c(-78, 40)
+            ))
+            expect_error(get_biomass(
+              dbh = 10,
+              genus = "Quercus",
+              coords = c(-190, 40)
+            ))
+            expect_error(get_biomass(
+              dbh = 10,
+              genus = "Quercus",
+              coords = c(-78, 100)
+            ))
+          })
 
 test_that("get_biomass accepts new equation table", {
   expect_equal(
@@ -121,3 +133,4 @@ test_that("get_biomass gives error message when inputs are
               coords = c(-78, 40)
             ))
           })
+
