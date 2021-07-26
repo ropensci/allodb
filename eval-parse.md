@@ -1,0 +1,177 @@
+
+The reviewers advice to avoid the call `eval(parse(text = ...))` ([item
+9
+here](https://github.com/ropensci/software-review/issues/436#issuecomment-844578387),
+and [“Code and documentation”
+here](https://github.com/ropensci/software-review/issues/436#issuecomment-860737938)),
+mainly because (a) it can be unsafe, and (b) error prone.
+
+Instead they suggest storing the equations as objects such as
+expressions or functions, and manipulate them with `substitute()`.
+
+We thank the advice and, after considering it carefully, we would like
+to share our updated opinion. We first discuss the problems of
+`eval(parse())` and then the alternative solutions.
+
+To make our discussion concrete we offer some code examples.
+
+``` r
+library(dplyr, warn.conflicts = FALSE)
+library(allodb)
+```
+
+## tl;dr
+
+-   The use of `eval(parse())` as its problems seem to be balanced by
+    the benefits we see in this particular use case, and the alternative
+    solutions seem too complex. This is in line with @jeffreyhanson’s
+    [comment on on Jun
+    17](https://github.com/ropensci/software-review/issues/436#issuecomment-863704236):
+
+> I previously suggested that it would be good to avoid using
+> `eval(parse(...))` if possible. (…) However, \[the alternatives\] seem
+> needlessly complex compared to the current implementation? Maybe this
+> could be one instance where `eval(parse(...))` is not bad idea?
+
+-   We are now testing the equations are correct or will trigger an
+    informative error message.
+
+TODO: LET ME KNOW IF YOU NEED HELP. BELOW I SHOW A GIST OF WHAT A
+`validate_equation()` MIGHT LOOK LIKE.
+
+## Unsafe
+
+[Online we
+found](https://stackoverflow.com/questions/13649979/what-specifically-are-the-dangers-of-evalparse)
+that parsing text would be a risk if we hosted an application on a
+server we own and allow users to input arbitrary text. A malicious user
+could damage our server.
+
+But this is not our case. The allodb package is to be used as an
+analysis tool, directly on the users’s computers. And the input text
+comes mainly not from users but from a dataset we built.
+
+TODO: ERIKA PLEASE CHECK THE LAST STATEMENT.
+
+## Error prone
+
+We acknowledge that bugs can hide in the unevaluated text, as invalid
+code is still a valid text object.
+
+``` r
+valid <- "dbh + 1"
+eval(parse(text = valid), envir = list(dbh = 1))
+#> [1] 2
+
+invalid <- "1 <- dbh"
+try(eval(parse(text = invalid), envir = list(dbh = 1)))
+#> Error in 1 <- dbh : invalid (do_set) left-hand side to assignment
+```
+
+But bugs can also hide in unevaluated expressions. Using `substitute()`
+to manipulate expressions does not ensure an expression is valid.
+
+``` r
+invalid <- quote(1 <- dbh)
+substitute(x, list(x = invalid))
+#> 1 <- dbh
+
+try(eval(substitute(x, list(x = invalid))))
+#> Error in 1 <- dbh : invalid (do_set) left-hand side to assignment
+```
+
+We are comfortable storing and manipulating text. We can inspect
+equations stored as text directly from the dataframe, and we can
+manipulate them with familiar tools.
+
+``` r
+# Storing text
+equation <- "1.2927 * (dbh^2)^1.36723"
+dbh <- "(sampled_dbh * 0.393701)"
+
+# + We can inspect the equations directly from the dataframe
+tibble(equation, dbh)
+#> # A tibble: 1 x 2
+#>   equation                 dbh                     
+#>   <chr>                    <chr>                   
+#> 1 1.2927 * (dbh^2)^1.36723 (sampled_dbh * 0.393701)
+
+# - To manipulate the equations we use familiar tools
+modified <- gsub("dbh", dbh, equation)
+modified
+#> [1] "1.2927 * ((sampled_dbh * 0.393701)^2)^1.36723"
+
+eval(parse(text = modified), list(sampled_dbh = 1))
+#> [1] 0.1010408
+```
+
+In contrast, we are not comfortable storing or manipulating expressions
+with `substitute()`. We found great help in the [first edition of
+Advanced
+R](http://adv-r.had.co.nz/Computing-on-the-language.html#substitute) but
+we still think the approach is difficult to understand, which makes us
+more likely to introduce bugs than with `eval(parse())`.
+
+``` r
+# We need to create an escape hatch because substitute() doesn't work if we
+# already have an expression saved in a variable
+# http://adv-r.had.co.nz/Computing-on-the-language.html#substitute
+substitute_q <- function(x, env) {
+  call <- substitute(substitute(y, env), list(y = x))
+  eval(call)
+}
+
+equation <- quote(1.2927 * (dbh^2)^1.36723)
+dbh <- quote((sampled_dbh * 0.393701))
+
+# - We can't inspect the equations directly from the dataframe :-(
+tibble(equation = list(equation), dbh = list(dbh))
+#> # A tibble: 1 x 2
+#>   equation   dbh       
+#>   <list>     <list>    
+#> 1 <language> <language>
+
+# - To manipulate the equations we need unfamiliar tools
+modified <- substitute_q(equation, list(dbh = dbh))
+modified
+#> 1.2927 * ((sampled_dbh * 0.393701)^2)^1.36723
+
+eval(modified, list(sampled_dbh = 1))
+#> [1] 0.1010408
+```
+
+As @jeffreyhanson advised, instead of using expressions and
+`substitute()` we prefer to ensure all text-equations are valid or throw
+an informative error message.
+
+``` r
+validate_equation <- function(text, envir = parent.frame()) {
+  tryCatch(
+    eval(parse(text = text), envir = envir),
+    error = function(e) {
+      stop("`text` must be valid R code.\nx Invalid: ", text, call. = FALSE)
+    }
+  )
+  
+  invisible(text)
+}
+
+dbh <- 99
+validate_equation(valid)
+try(validate_equation(invalid))
+#> Error : `text` must be valid R code.
+#> x Invalid: <-1dbh
+
+f <- function(text) {
+  validate_equation(text, envir = list(dbh = 1))
+  # Some useful code
+  
+  text
+}
+
+f(valid)
+#> [1] "dbh + 1"
+try(f(invalid))
+#> Error : `text` must be valid R code.
+#> x Invalid: <-1dbh
+```
