@@ -87,7 +87,7 @@ new equations, and choose whether to include equations with a height
 allometry.
 }
 \examples{
-dfequation <- new_equations(
+new_equations(
   new_taxa = "Faga",
   new_allometry = "exp(-2+log(dbh)*2.5)",
   new_coords = c(-0.07, 46.11),

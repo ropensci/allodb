@@ -5,25 +5,21 @@
 \alias{sites_info}
 \title{ForestGEO sites used in allodb}
 \format{
-A data frame with 24 observations and 6 variables:\preformatted{[,1]	Site	character
-[,2]	site	character
-[,3]	lat	decimal
-[,4]	long	decimal
-[,5]	elevation.m	numeric
-[,6]	koppen	character
-
-}
+An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 24 rows and 6 columns.
 }
 \usage{
 sites_info
 }
 \description{
-Table with geographical information for extratropical
-ForestGEO sites used in allodb (n=24).
+Table with geographical information for extratropical ForestGEO sites used in
+allodb (n=24).
 }
 \details{
-More details on geographical aspects of these ForestGEO
-sites can be found in the accompanying manuscript.
+More details on geographical aspects of these ForestGEO sites can be found in
+the accompanying manuscript.
+}
+\examples{
+sites_info
 }
 \seealso{
 Other database datasets: 

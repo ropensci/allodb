@@ -5,23 +5,24 @@
 \alias{genus_family}
 \title{Genus and family table for selected ForestGEO sites}
 \format{
-A data frame with 248 observations and 2 variables:\preformatted{[,1]	genus	character
-[,2]	family	character
-
-}
+An object of class \code{data.frame} with 248 rows and 2 columns.
 }
 \usage{
 genus_family
 }
 \description{
-Table with genus and their associated family identified in the ForestGEO
-sites used in allodb. This data frame is an input in the weight_allom()
-function.
+Genus and their associated family identified in the extratropical ForestGEO
+sites used in allodb.
 }
-\details{
-\itemize{
-\item \code{genus_family}: A data frame with genus and families identified in the
-extratropical ForestGEO sites used in allodb.
+\examples{
+genus_family
 }
+\seealso{
+Other datasets: 
+\code{\link{gymno_genus}},
+\code{\link{koppenMatrix}},
+\code{\link{scbi_stem1}},
+\code{\link{shrub_species}}
 }
+\concept{datasets}
 \keyword{datasets}

@@ -36,16 +36,12 @@
 #' @export
 #'
 #' @examples
-#' data(scbi_stem1)
-#' # estimate the biomass of all individuals from the Lauraceae family
-#' data_laur <- subset(scbi_stem1, Family=="Lauraceae")
-#' data_laur$agb <- get_biomass(
-#'   dbh = data_laur$dbh,
-#'   genus = data_laur$genus,
-#'   species = data_laur$species,
-#'   coords = c(-78.2, 38.9)
-#' )
+#' # Estimate the biomass of all individuals from the Lauraceae family
+#' lauraceae <- subset(scbi_stem1, Family == "Lauraceae")
 #'
+#' transform(
+#'   lauraceae, agb = get_biomass(dbh, genus, species, coords = c(-78.2, 38.9))
+#' )
 get_biomass <- function(dbh,
                         genus,
                         coords,
