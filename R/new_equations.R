@@ -332,5 +332,5 @@ new_equations <- function(subset_taxa = "all",
 
   }
 
-  return(new_equations)
+  return(tibble::as_tibble(new_equations))
 }

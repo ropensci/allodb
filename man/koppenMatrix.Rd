@@ -5,7 +5,7 @@
 \alias{koppenMatrix}
 \title{Koppen climate classification matrix}
 \format{
-An object of class \code{data.frame} with 900 rows and 3 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 900 rows and 3 columns.
 }
 \usage{
 koppenMatrix

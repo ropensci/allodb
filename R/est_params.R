@@ -74,5 +74,5 @@ est_params <- function(genus,
   }
   colnames(coefs) <- c("a", "b", "sigma")
 
-  return(cbind(dfobs, coefs))
+  return(tibble::as_tibble(cbind(dfobs, coefs)))
 }

@@ -5,7 +5,7 @@
 \alias{scbi_stem1}
 \title{Tree census data from SCBI ForestGEO plot}
 \format{
-An object of class \code{data.frame} with 2287 rows and 6 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2287 rows and 6 columns.
 }
 \source{
 Full data sets for tree census data at SCBI can be requested through

@@ -56,14 +56,11 @@ censuses can be estimated using this function.
 }
 \details{
 The function can run into some memory problems when used on large datasets
-(usually several hundred thousand observations). In that case, see the second
-example below for how to apply the function to a split dataset.
+(usually several hundred thousand observations).
 }
 \examples{
 # Estimate the biomass of all individuals from the Lauraceae family
-lauraceae <- subset(scbi_stem1, Family == "Lauraceae")
-
-transform(
-  lauraceae, agb = get_biomass(dbh, genus, species, coords = c(-78.2, 38.9))
-)
+lau <- subset(scbi_stem1, Family == "Lauraceae")
+agb <- get_biomass(lau$dbh, lau$genus, lau$species, coords = c(-78.2, 38.9))
+str(agb)
 }

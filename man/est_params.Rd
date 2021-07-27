@@ -51,13 +51,11 @@ size, and/or higher taxonomic rank, and climatic similarity with the species
 and location in question are given a higher weight in this process.
 }
 \examples{
-data(scbi_stem1)
 # calibrate new allometries for all Lauraceae species
-data_laur <- subset(scbi_stem1, Family=="Lauraceae")
+lauraceae <- subset(scbi_stem1, Family == "Lauraceae")
 est_params(
-  genus = data_laur$genus,
-  species = data_laur$species,
+  genus = lauraceae$genus,
+  species = lauraceae$species,
   coords = c(-78.2, 38.9)
 )
-
 }

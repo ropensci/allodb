@@ -5,7 +5,7 @@
 \alias{genus_family}
 \title{Genus and family table for selected ForestGEO sites}
 \format{
-An object of class \code{data.frame} with 248 rows and 2 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 248 rows and 2 columns.
 }
 \usage{
 genus_family
