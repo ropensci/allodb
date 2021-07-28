@@ -18,6 +18,14 @@ db_ls <- dir_ls(path_db) %>%
 
 list2env(db_ls, globalenv())
 
+# These datasets seem to only exist in data/
+devtools::load_all()
+# They once lacked the tbl subclass
+scbi_stem1 <- tibble::as_tibble(scbi_stem1)
+koppenMatrix <- tibble::as_tibble(koppenMatrix)
+gymno_genus <- tibble::as_tibble(gymno_genus)
+genus_family <- tibble::as_tibble(genus_family)
+
 use_data(
   equations,
   equations_metadata,
@@ -27,5 +35,11 @@ use_data(
   sitespecies,
   sitespecies_metadata,
   sites_info,
+
+  scbi_stem1,
+  koppenMatrix,
+  gymno_genus,
+  genus_family,
+
   overwrite = TRUE
 )

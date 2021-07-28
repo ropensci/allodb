@@ -1,1 +1,15 @@
 url: https://forestgeo.github.io/allodb
+
+reference:
+   - title: Functions
+     contents:
+       - -has_concept("database datasets")
+       - -has_concept("datasets")
+
+   - title: Database datasets
+     contents:
+       - has_concept("database datasets")
+
+   - title: Other datasets
+     contents:
+       - has_concept("datasets")

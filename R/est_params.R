@@ -28,15 +28,13 @@
 #' @export
 #'
 #' @examples
-#' data(scbi_stem1)
 #' # calibrate new allometries for all Lauraceae species
-#' data_laur <- subset(scbi_stem1, Family=="Lauraceae")
+#' lauraceae <- subset(scbi_stem1, Family == "Lauraceae")
 #' est_params(
-#'   genus = data_laur$genus,
-#'   species = data_laur$species,
+#'   genus = lauraceae$genus,
+#'   species = lauraceae$species,
 #'   coords = c(-78.2, 38.9)
 #' )
-#'
 est_params <- function(genus,
                        coords,
                        species = NULL,
@@ -76,5 +74,5 @@ est_params <- function(genus,
   }
   colnames(coefs) <- c("a", "b", "sigma")
 
-  return(cbind(dfobs, coefs))
+  return(tibble::as_tibble(cbind(dfobs, coefs)))
 }

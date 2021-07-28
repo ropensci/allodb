@@ -7,8 +7,7 @@
 #' censuses can be estimated using this function.
 #'
 #' The function can run into some memory problems when used on large datasets
-#' (usually several hundred thousand observations). In that case, see the second
-#' example below for how to apply the function to a split dataset.
+#' (usually several hundred thousand observations).
 #'
 #' @param dbh a numerical vector containing tree diameter at breast height (dbh)
 #'   measurements, in cm.
@@ -36,16 +35,10 @@
 #' @export
 #'
 #' @examples
-#' data(scbi_stem1)
-#' # estimate the biomass of all individuals from the Lauraceae family
-#' data_laur <- subset(scbi_stem1, Family=="Lauraceae")
-#' data_laur$agb <- get_biomass(
-#'   dbh = data_laur$dbh,
-#'   genus = data_laur$genus,
-#'   species = data_laur$species,
-#'   coords = c(-78.2, 38.9)
-#' )
-#'
+#' # Estimate the biomass of all individuals from the Lauraceae family
+#' lau <- subset(scbi_stem1, Family == "Lauraceae")
+#' agb <- get_biomass(lau$dbh, lau$genus, lau$species, coords = c(-78.2, 38.9))
+#' str(agb)
 get_biomass <- function(dbh,
                         genus,
                         coords,
@@ -98,3 +91,4 @@ get_biomass <- function(dbh,
 
   return(agb)
 }
+

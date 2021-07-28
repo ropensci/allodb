@@ -51,7 +51,7 @@
 #' @export
 #'
 #' @examples
-#' dfequation <- new_equations(
+#' new_equations(
 #'   new_taxa = "Faga",
 #'   new_allometry = "exp(-2+log(dbh)*2.5)",
 #'   new_coords = c(-0.07, 46.11),
@@ -281,7 +281,7 @@ new_equations <- function(subset_taxa = "all",
       )
     }
 
-    added_equations <- data.frame(stringsAsFactors = FALSE, 
+    added_equations <- data.frame(stringsAsFactors = FALSE,
       equation_id = new_equation_id,
       equation_taxa = new_taxa,
       equation_allometry = new_allometry,
@@ -332,5 +332,5 @@ new_equations <- function(subset_taxa = "all",
 
   }
 
-  return(new_equations)
+  return(tibble::as_tibble(new_equations))
 }

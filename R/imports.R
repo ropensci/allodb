@@ -1,7 +1,6 @@
 #' @importFrom utils data
 NULL
 
-
 globalVariables(
   c(
     "Lat",

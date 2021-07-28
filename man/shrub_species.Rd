@@ -3,21 +3,28 @@
 \docType{data}
 \name{shrub_species}
 \alias{shrub_species}
-\title{List of shrub identified in selected ForestGEO sites}
+\title{Shrub species identified in selected ForestGEO sites}
 \format{
-A vector containing 179 observations
+An object of class \code{character} of length 179.
 }
 \usage{
 shrub_species
 }
 \description{
-A list with genus and species of shrubby plants identified in the ForestGEO
-sites used in allodb. The list is an input in the weight_allom() function.
+Genus and species of shrubby plants identified in the 24 extratropical
+ForestGEO sites used in allodb.
 }
-\details{
-\itemize{
-\item \code{shrub_species}: A list with genus and species of shrubby plants identified
-in the 24 extratropical ForestGEO sites used in allodb.
+\examples{
+head(shrub_species)
+
+str(shrub_species)
 }
+\seealso{
+Other datasets: 
+\code{\link{genus_family}},
+\code{\link{gymno_genus}},
+\code{\link{koppenMatrix}},
+\code{\link{scbi_stem1}}
 }
+\concept{datasets}
 \keyword{datasets}

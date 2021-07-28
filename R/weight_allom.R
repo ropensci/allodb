@@ -2,7 +2,7 @@
 #'
 #' This function attributes a weight to each equation based on its sampling
 #' size, and taxonomic and climatic similarity with the species/site combination
-#' considered. It creates S3 objects of class "numeric".
+#' considered.
 #'
 #' @param genus a character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
@@ -19,16 +19,17 @@
 #'   sample-size-related weight reaches 95% of its maximum value (max=1).
 #'   Default is 500.
 #'
-#' @return A vector with one weight for each equation.
+#' @return A named numeric vector, with one weight for each equation.
 #' @export
 #'
 #' @examples
-#' weight_allom(
+#' x <- weight_allom(
 #'   genus = "Acer",
 #'   species = "negundo",
 #'   coords = c(-78.2, 38.9)
 #' )
-#'
+#' str(x)
+#' head(x)
 weight_allom <- function(genus,
                          coords,
                          species = NULL,

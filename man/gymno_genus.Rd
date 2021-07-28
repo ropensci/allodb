@@ -5,24 +5,24 @@
 \alias{gymno_genus}
 \title{Gymnosperms identified in selected ForestGEO sites}
 \format{
-A data frame with 95 observations and 3 variables:\preformatted{[,1]	Family	character
-[,2]	Genus	character
-[,3]  conifer logical
-
-}
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 95 rows and 3 columns.
 }
 \usage{
 gymno_genus
 }
 \description{
-Table with genus and their associated family for Gymnosperms identified in the
-ForestGEO sites used in allodb. This data frame is particularly important to
-differentiate conifers as input in the weight_allom() function.
+Table with genus and their associated family for Gymnosperms identified in
+the ForestGEO sites used in allodb.
 }
-\details{
-\itemize{
-\item \code{gymno_genus}: A data frame with genus and families for Gymnosperms
-identified in the extratropical ForestGEO sites used in allodb.
+\examples{
+gymno_genus
 }
+\seealso{
+Other datasets: 
+\code{\link{genus_family}},
+\code{\link{koppenMatrix}},
+\code{\link{scbi_stem1}},
+\code{\link{shrub_species}}
 }
+\concept{datasets}
 \keyword{datasets}
