@@ -36,9 +36,6 @@ library(allodb)
 -   We are now testing the equations are correct or will trigger an
     informative error message.
 
-TODO: LET ME KNOW IF YOU NEED HELP. BELOW I SHOW A GIST OF WHAT A
-`validate_equation()` MIGHT LOOK LIKE.
-
 ## Unsafe
 
 [Online we
@@ -50,8 +47,6 @@ could damage our server.
 But this is not our case. The allodb package is to be used as an
 analysis tool, directly on the users’s computers. And the input text
 comes mainly not from users but from a dataset we built.
-
-TODO: ERIKA PLEASE CHECK THE LAST STATEMENT.
 
 ## Error prone
 
