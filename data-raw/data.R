@@ -18,6 +18,9 @@ db_ls <- dir_ls(path_db) %>%
 
 list2env(db_ls, globalenv())
 
+# Ensure all equations are lowercase
+equations$equation_allometry <- tolower(equations$equation_allometry)
+
 # These datasets seem to only exist in data/
 devtools::load_all()
 # They once lacked the tbl subclass
