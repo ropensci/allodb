@@ -6,9 +6,7 @@
 #'
 #' @return This function is called for its side effect of throwing an error if
 #'   at least one equation is invalid. Valid equations are returned invisibly.
-#' @export
 #'
-#' @examples
 #' @examples
 #' # Good
 #' validate_one_equation("dbh + 1")
@@ -25,6 +23,7 @@
 #' valid <- tolower(equations)
 #'
 #' try(validate_equations(valid))
+#' @noRd
 validate_equations <- function(equations, dbh = 1, h = 1, env = current_env()) {
   walk_apply(equations, validate_one_equation, dbh = dbh, h = h, env = env)
 }
