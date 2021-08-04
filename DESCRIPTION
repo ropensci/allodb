@@ -25,7 +25,7 @@ License: GPL-3
 URL: https://forestgeo.github.io/allodb, https://github.com/forestgeo/allodb
 BugReports: https://github.com/forestgeo/allodb/issues
 Depends: 
-    R (>= 3.6.0)
+    R (>= 3.5.0)
 Imports: 
     data.table (>= 1.12.8),
     ggplot2 (>= 3.3.2),
