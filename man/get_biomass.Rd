@@ -57,6 +57,27 @@ censuses can be estimated using this function.
 \details{
 The function can run into some memory problems when used on large datasets
 (usually several hundred thousand observations).
+
+\code{allodb} estimates AGB by calibrating a new allometric equation for
+each taxon (arguments \code{genus} and  \code{species}) and location (argument
+\code{coords}) in the user-provided census data. The new allometric equation is
+based on a set of allometric equations that can be customized using the
+\code{new_eqtable} argument. Each equation is then given a weight with the
+\code{weight_allom} function, based on: 1) its original sample size (numbers of
+trees used to develop a given allometry), 2) its climatic similarity with
+the target location, and 3) its taxonomic similarity with the target taxon
+(see documentation of the \code{weight_allom} function). The final weight
+attributed to each equation is the product of those three weights.
+Equations are then resampled with the function \code{resample_agb}: the number
+of samples per equation is proportional to its weight, and the total number
+of samples is provided by the argument \code{nres}. The resampling is done by
+drawing DBH values from a uniform distribution on the DBH range of the
+equation, and estimating the AGB with the equation. The couples of values
+(DBH, AGB) obtained are then used in the function \code{est_params} to calibrate
+a new allometric equation, by applying a linear regression to the
+log-transformed data. The parameters of the new allometric equations are
+then used in the \code{get_biomass} function by back-transforming the AGB
+predictions based on the user-provided DBHs.
 }
 \examples{
 # Estimate the biomass of all individuals from the Lauraceae family
