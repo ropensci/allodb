@@ -23,7 +23,7 @@
 #'   maximum value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is 1e4.
 #'
-#' @return A data frame of fitted coefficients (columns) of the non-linear
+#' @return A data frame (`tibble::tibble()` object) of fitted coefficients (columns) of the non-linear
 #'   least-square regression AGB = a * dbh ^ b + e,  with e ~ N(0, sigma^2)
 #' @export
 #'

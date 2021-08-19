@@ -20,7 +20,7 @@
 #'   maximum value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is 1e4.
 #'
-#' @return A data frame of resampled DBHs and associated AGB from the equation
+#' @return A data frame (`tibble::tibble()` object) of resampled DBHs and associated AGB from the equation
 #'   table; the number of  resampled DBHs is proportional to the weight provided
 #'   by the `weight_allom` function.
 #' @export
