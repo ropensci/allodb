@@ -26,7 +26,7 @@ Authors@R:
       person(given = "Jonas",
              family = "Stillhard",
              role = "rev",
-             email = "jonas.stillhard@wsl.ch")
+             email = "jonas.stillhard@wsl.ch"))
 Description: Tool to standardize and simplify the tree biomass
     estimation process across globally distributed extratropical forests.
 License: GPL-3
