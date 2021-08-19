@@ -18,7 +18,15 @@ Authors@R:
       person(given = "Kristina",
              family = "Anderson-Teixeira",
              role = "aut",
-             email = "TeixeiraK@si.edu"))
+             email = "TeixeiraK@si.edu"),
+      person(given = "Jeffrey",
+             family = "Hanson",
+             role = "rev",
+             email = "jeffrey.hanson@uqconnect.edu.au"),
+      person(given = "Jonas",
+             family = "Stillhard",
+             role = "rev",
+             email = "jonas.stillhard@wsl.ch"))      
 Description: Tool to standardize and simplify the tree biomass
     estimation process across globally distributed extratropical forests.
 License: GPL-3
