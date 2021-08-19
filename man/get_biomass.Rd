@@ -16,13 +16,13 @@ get_biomass(
 )
 }
 \arguments{
-\item{dbh}{a numerical vector containing tree diameter at breast height (dbh)
+\item{dbh}{a numeric vector containing tree diameter at breast height (dbh)
 measurements, in cm.}
 
 \item{genus}{a character vector (same length as dbh), containing the genus
 (e.g. "Quercus") of each tree.}
 
-\item{coords}{a numerical vector of length 2 with longitude and latitude (if
+\item{coords}{a numeric vector of length 2 with longitude and latitude (if
 all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree.}
 
@@ -33,11 +33,11 @@ identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 new_equations() function.}
 
-\item{wna}{this parameter is used in the weight_allom function to determine
+\item{wna}{a numeric vector, this parameter is used in the weight_allom function to determine
 the dbh-related weight attributed to equations without a specified dbh
 range. Default is 0.1}
 
-\item{w95}{this parameter is used in the weight_allom function to determine
+\item{w95}{a numeric vector, this parameter is used in the weight_allom function to determine
 the value at which the sample-size-related weight reaches 95\% of its
 maximum value (max=1). Default is 500.}
 

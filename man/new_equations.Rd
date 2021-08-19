@@ -78,7 +78,7 @@ for European sites. User need to provide height allometry when needed to
 calculate AGB. Default is TRUE.}
 }
 \value{
-A new equation dataframe.
+A new equation dataframe (\code{tibble::tibble()} object).
 }
 \description{
 This function modifies the original equation table to be used in other

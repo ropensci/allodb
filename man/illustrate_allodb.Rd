@@ -21,7 +21,7 @@ illustrate_allodb(
 \item{genus}{A character value, containing the genus (e.g. "Quercus") of the
 tree.}
 
-\item{coords}{A numerical vector of length 2 with longitude and latitude.}
+\item{coords}{A numeric vector of length 2 with longitude and latitude.}
 
 \item{species}{A character value, containing the species (e.g. "rubra") of
 the tree. Default is \code{NULL}, when no species identification is available.}
@@ -38,11 +38,11 @@ the 10 equations with the highest weights are shown in the legend.}
 \item{eqinfo}{Which column(s) of the equation table should be used in the
 legend? Default is \code{"equation_taxa"}.}
 
-\item{wna}{this parameter is used in the weighting function to determine the
+\item{wna}{a numeric vector, this parameter is used in the weighting function to determine the
 dbh-related and sample-size related weights attributed to equations without
 a specified dbh range or sample size, respectively. Default is \code{0.1}.}
 
-\item{w95}{this parameter is used in the weighting function to determine the
+\item{w95}{a numeric vector, this parameter is used in the weighting function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is \code{500}.}
 

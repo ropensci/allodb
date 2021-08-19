@@ -18,7 +18,7 @@ resample_agb(
 \item{genus}{a character value, containing the genus (e.g. "Quercus") of the
 tree.}
 
-\item{coords}{a numerical vector of length 2 with longitude and latitude.}
+\item{coords}{a numeric vector of length 2 with longitude and latitude.}
 
 \item{species}{a character value, containing the species (e.g. "rubra") of
 the tree. Default is NULL, when no species identification is available.}
@@ -26,18 +26,18 @@ the tree. Default is NULL, when no species identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 add_equation() function. Default is the original allodb equation table.}
 
-\item{wna}{this parameter is used in the weight_allom function to determine
+\item{wna}{a numeric vector, this parameter is used in the weight_allom function to determine
 the dbh-related and sample-size related weights attributed to equations
 without a specified dbh range or sample size, respectively. Default is 0.1}
 
-\item{w95}{this parameter is used in the weight_allom function to determine
+\item{w95}{a numeric vector, this parameter is used in the weight_allom function to determine
 the value at which the sample-size-related weight reaches 95\% of its
 maximum value (max=1). Default is 500.}
 
 \item{nres}{number of resampled values. Default is 1e4.}
 }
 \value{
-A data frame of resampled DBHs and associated AGB from the equation
+A data frame (\code{tibble::tibble()} object) of resampled DBHs and associated AGB from the equation
 table; the number of  resampled DBHs is proportional to the weight provided
 by the \code{weight_allom} function.
 }

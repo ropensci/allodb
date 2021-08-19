@@ -28,5 +28,11 @@ Authors:
   \item Kristina Anderson-Teixeira \email{TeixeiraK@si.edu}
 }
 
+Other contributors:
+\itemize{
+  \item Jeffrey Hanson \email{jeffrey.hanson@uqconnect.edu.au} [reviewer]
+  \item Jonas Stillhard \email{jonas.stillhard@wsl.ch} [reviewer]
+}
+
 }
 \keyword{internal}

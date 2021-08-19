@@ -17,7 +17,7 @@ weight_allom(
 \item{genus}{a character value, containing the genus (e.g. "Quercus") of the
 tree.}
 
-\item{coords}{a numerical vector of length 2 with longitude and latitude.}
+\item{coords}{a numeric vector of length 2 with longitude and latitude.}
 
 \item{species}{a character vector (same length as genus), containing the
 species (e.g. "rubra") of the tree. Default is NULL, when no species
@@ -26,11 +26,11 @@ identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 new_equations() function.}
 
-\item{wna}{this parameter is used in the \code{weight_allom} function to determine
+\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom} function to determine
 the sample-size related weights attributed to equations without a specified
 sample size. Default is 0.1.}
 
-\item{w95}{this parameter is used to determine the value at which the
+\item{w95}{a numeric vector, this parameter is used to determine the value at which the
 sample-size-related weight reaches 95\% of its maximum value (max=1).
 Default is 500.}
 }
