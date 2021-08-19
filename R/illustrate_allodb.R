@@ -5,7 +5,7 @@
 #'
 #' @param genus A character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
-#' @param coords A numerical vector of length 2 with longitude and latitude.
+#' @param coords A numeric vector of length 2 with longitude and latitude.
 #' @param species A character value, containing the species (e.g. "rubra") of
 #'   the tree. Default is `NULL`, when no species identification is available.
 #' @param new_eqtable Optional. An equation table created with the
@@ -16,10 +16,10 @@
 #'   the 10 equations with the highest weights are shown in the legend.
 #' @param eqinfo Which column(s) of the equation table should be used in the
 #'   legend? Default is `"equation_taxa"`.
-#' @param wna this parameter is used in the weighting function to determine the
+#' @param wna a numeric vector, this parameter is used in the weighting function to determine the
 #'   dbh-related and sample-size related weights attributed to equations without
 #'   a specified dbh range or sample size, respectively. Default is `0.1`.
-#' @param w95 this parameter is used in the weighting function to determine the
+#' @param w95 a numeric vector, this parameter is used in the weighting function to determine the
 #'   value at which the sample-size-related weight reaches 95% of its maximum
 #'   value (max=1). Default is `500`.
 #' @param nres number of resampled values. Default is `1e4`.

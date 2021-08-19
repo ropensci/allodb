@@ -7,15 +7,15 @@
 #'
 #' @param genus a character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
-#' @param coords a numerical vector of length 2 with longitude and latitude.
+#' @param coords a numeric vector of length 2 with longitude and latitude.
 #' @param species a character value, containing the species (e.g. "rubra") of
 #'   the tree. Default is NULL, when no species identification is available.
 #' @param new_eqtable Optional. An equation table created with the
 #'   add_equation() function. Default is the original allodb equation table.
-#' @param wna this parameter is used in the weight_allom function to determine
+#' @param wna a numeric vector, this parameter is used in the weight_allom function to determine
 #'   the dbh-related and sample-size related weights attributed to equations
 #'   without a specified dbh range or sample size, respectively. Default is 0.1
-#' @param w95 this parameter is used in the weight_allom function to determine
+#' @param w95 a numeric vector, this parameter is used in the weight_allom function to determine
 #'   the value at which the sample-size-related weight reaches 95% of its
 #'   maximum value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is 1e4.
