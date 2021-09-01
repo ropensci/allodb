@@ -5,22 +5,22 @@
 #' new equations, and choose whether to include equations with a height
 #' allometry.
 #'
-#' @param subset_taxa character vector with taxa to be kept. Default is `all`,
+#' @param subset_taxa character vector with taxa to be kept. Default is "all",
 #'   in which case all taxa are kept.
 #' @param subset_climate character vector with Koppen climate classification to
-#'   be kept. Default is `all`, in which case all climates are kept.
+#'   be kept. Default is "all", in which case all climates are kept.
 #' @param subset_region character vector with name of location(s) or
-#'   country(ies) or broader region(s) (eg. `Europe`, `North America`) to be
-#'   kept. Default is `all`, in which case all regions/countries are kept.
+#'   country(ies) or broader region(s) (eg. "Europe", "North America") to be
+#'   kept. Default is "all", in which case all regions/countries are kept.
 #' @param subset_ids character vector with equation IDs to be kept. Default is
-#'   `all`, in which case all equations are kept.
+#'   "all", in which case all equations are kept.
 #' @param subset_output What dependent variable(s) should be provided in the
-#'   output? Default is `Total aboveground biomass` and `Whole tree (above
-#'   stump)`, other possible values are: `Bark biomass`, `Branches (dead)`,
-#'   `Branches (live)`, `Branches total (live, dead)`, `Foliage total`,
-#'   `Height`, `Leaves`, `Stem (wood only)`, `Stem biomass`, `Stem biomass (with
-#'   bark)`, `Stem biomass (without bark)`, `Whole tree (above and
-#'   belowground)`. Be aware that currently only a few equations represent those
+#'   output? Default is "Total aboveground biomass" and "Whole tree (above
+#'   stump)", other possible values are: "Bark biomass", "Branches (dead)",
+#'   "Branches (live)", "Branches total (live, dead)", "Foliage total",
+#'   "Height", "Leaves", "Stem (wood only)", "Stem biomass", "Stem biomass (with
+#'   bark)", "Stem biomass (without bark)", "Whole tree (above and
+#'   belowground)". Be aware that currently only a few equations represent those
 #'   other variables, so estimated values might not be very accurate.
 #' @param new_taxa character string or vector specifying the taxon (or taxa) for
 #'   which the allometry has been calibrated
@@ -28,20 +28,20 @@
 #' @param new_coords a vector or matrix of coordinates (longitude, latitude) of
 #'   the calibration data
 #' @param new_min_dbh numerical value, minimum DBH for which the equation is
-#'   valid (in cm). Default is NULL (nothing is added).
+#'   valid (in cm). Default is "NULL" (nothing is added).
 #' @param new_max_dbh numerical value, maximum DBH for which the equation is
-#'   valid (in cm). Default is NULL (nothing is added).
+#'   valid (in cm). Default is "NULL" (nothing is added).
 #' @param new_sample_size number of measurements with which the allometry was
-#'   calibrated. Default is NULL (nothing is added).
+#'   calibrated. Default is "NULL" (nothing is added).
 #' @param new_unit_dbh character string with unit of DBH in the equation (either
-#'   `cm`, `mm` or `inch`). Default is `cm`.
+#'   `cm`, `mm` or `inch`). Default is "cm".
 #' @param new_unit_output character string with unit of equation output (either
-#'   `g`, `kg`, `Mg` or `lbs` if the output is a mass, or `m` if the output is a
+#'   "g", "kg", "Mg" or "lbs" if the output is a mass, or "m" if the output is a
 #'   height).
 #' @param new_input_var independent variable(s) needed in the allometry. Default
-#'   is `DBH`, other option is `DBH, H`.
+#'   is "DBH", other option is "DBH, H".
 #' @param new_output_var dependent variable estimated by the allometry. Default
-#'   is `Total aboveground biomass`.
+#'   is "Total aboveground biomass".
 #' @param use_height_allom a logical value. In allodb we use Bohn et al. (2014)
 #'   for European sites. User need to provide height allometry when needed to
 #'   calculate AGB. Default is TRUE.
