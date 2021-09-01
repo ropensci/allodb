@@ -9,7 +9,7 @@
 #' @param species A character value, containing the species (e.g. "rubra") of
 #'   the tree. Default is "NULL", when no species identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   `add_equation()` function. Default is the base allodb equation table.
+#'   `new_equation()` function. Default is the base allodb equation table.
 #' @param logxy Logical: should values be plotted on a log scale? Default is
 #'   "FALSE".
 #' @param neq Number of top equations in the legend. Default is 10, meaning that
@@ -27,6 +27,9 @@
 #' @return A ggplot showing all resampled dbh-agb values. The top equations used
 #'   are shown in the legend. The red curve on the graph represents the final
 #'   fitted equation.
+#'
+#' @seealso [weight_allom()], [new_equation()]
+#'
 #' @export
 #'
 #' @examples

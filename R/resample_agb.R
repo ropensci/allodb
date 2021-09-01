@@ -11,7 +11,7 @@
 #' @param species a character value, containing the species (e.g. "rubra") of
 #'   the tree. Default is "NULL", when no species identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   add_equation() function. Default is the original allodb equation table.
+#'   `new_equation()` function. Default is the original allodb equation table.
 #' @param wna a numeric vector, this parameter is used in the weight_allom function to determine
 #'   the dbh-related and sample-size related weights attributed to equations
 #'   without a specified dbh range or sample size, respectively. Default is 0.1
@@ -23,6 +23,9 @@
 #' @return A data frame (`tibble::tibble()` object) of resampled DBHs and associated AGB from the equation
 #'   table; the number of  resampled DBHs is proportional to the weight provided
 #'   by the `weight_allom` function.
+#'
+#' @seealso [weight_allom()], [new_equation()]
+#'
 #' @export
 #'
 #' @examples

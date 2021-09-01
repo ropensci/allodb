@@ -11,7 +11,7 @@
 #'   species (e.g. "rubra") of the tree. Default is "NULL", when no species
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   new_equations() function.
+#'   `new_equations()` function.
 #' @param wna a numeric vector, this parameter is used in the `weight_allom` function to determine
 #'   the sample-size related weights attributed to equations without a specified
 #'   sample size. Default is 0.1.
@@ -48,6 +48,9 @@
 #'   prediction only when no other more specific equation is available.
 #'
 #' @return A named numeric vector, with one weight for each equation.
+#'
+#' @seealso [weight_allom()], [new_equations()]
+#'
 #' @export
 #'
 #' @examples
