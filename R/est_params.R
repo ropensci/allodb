@@ -11,7 +11,7 @@
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
 #' @param species a character vector (same length as genus), containing the
-#'   species (e.g. "rubra")  of each tree. Default is NULL, when no species
+#'   species (e.g. "rubra")  of each tree. Default is "NULL", when no species
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
 #'   add_equation() function. Default is the compiled allodb equation table.
@@ -21,7 +21,7 @@
 #' @param w95 a numeric vector, this parameter is used in the weight_allom() function to determine
 #'   the value at which the sample-size-related weight reaches 95% of its
 #'   maximum value (max=1). Default is 500.
-#' @param nres number of resampled values. Default is 1e4.
+#' @param nres number of resampled values. Default is "1e4".
 #'
 #' @return A data frame (`tibble::tibble()` object) of fitted coefficients (columns) of the non-linear
 #'   least-square regression AGB = a * dbh ^ b + e,  with e ~ N(0, sigma^2)

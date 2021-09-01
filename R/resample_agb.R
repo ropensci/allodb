@@ -18,7 +18,7 @@
 #' @param w95 a numeric vector, this parameter is used in the weight_allom function to determine
 #'   the value at which the sample-size-related weight reaches 95% of its
 #'   maximum value (max=1). Default is 500.
-#' @param nres number of resampled values. Default is 1e4.
+#' @param nres number of resampled values. Default is "1e4".
 #'
 #' @return A data frame (`tibble::tibble()` object) of resampled DBHs and associated AGB from the equation
 #'   table; the number of  resampled DBHs is proportional to the weight provided

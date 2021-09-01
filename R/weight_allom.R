@@ -8,7 +8,7 @@
 #'   tree.
 #' @param coords a numeric vector of length 2 with longitude and latitude.
 #' @param species a character vector (same length as genus), containing the
-#'   species (e.g. "rubra") of the tree. Default is NULL, when no species
+#'   species (e.g. "rubra") of the tree. Default is "NULL", when no species
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
 #'   new_equations() function.
