@@ -1,5 +1,3 @@
-library(allodb)
-
 test_that("new_equations() returns a dataframe with all
           necessary information", {
             tab <- new_equations()

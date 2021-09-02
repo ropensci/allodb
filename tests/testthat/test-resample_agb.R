@@ -1,5 +1,3 @@
-library(allodb)
-
 test_that("resample_agb returns a dataframe of size 1e6 x 3", {
   res_test <-
     resample_agb(genus = "Quercus",

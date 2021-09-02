@@ -1,5 +1,4 @@
 test_that("all dataframes are also tibbles", {
-  library(allodb)
   nms <- utils::data(package = "allodb")$results[, "Item"]
   datasets <- lapply(nms, function(x) get(x, "package:allodb"))
   datasets <- setNames(datasets, nms)

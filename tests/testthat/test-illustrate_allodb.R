@@ -1,5 +1,3 @@
-library(allodb)
-
 test_that("illustrate_allodb() returns a ggplot object", {
   expect_s3_class(illustrate_allodb(genus = "Quercus",
                               coords = c(-78, 40)),
