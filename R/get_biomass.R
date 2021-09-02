@@ -53,7 +53,7 @@
 #' @return A vector of class "numeric" of the same length as dbh, containing AGB
 #'   value (in kg) for every stem
 #'
-#' @seealso [weight_allom())], [new_equations()]
+#' @seealso [weight_allom()], [new_equations()]
 #'
 #' @export
 #'

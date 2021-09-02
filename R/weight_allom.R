@@ -49,7 +49,7 @@
 #'
 #' @return A named numeric vector, with one weight for each equation.
 #'
-#' @seealso [weight_allom()], [new_equations()]
+#' @seealso [get_biomass()], [new_equations()]
 #'
 #' @export
 #'

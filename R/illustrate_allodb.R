@@ -28,7 +28,7 @@
 #'   are shown in the legend. The red curve on the graph represents the final
 #'   fitted equation.
 #'
-#' @seealso [weight_allom()], [new_equation()]
+#' @seealso [weight_allom()], [new_equations()]
 #'
 #' @export
 #'
