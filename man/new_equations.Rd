@@ -24,23 +24,26 @@ new_equations(
 )
 }
 \arguments{
-\item{subset_taxa}{character vector with taxa to be kept. Default is \code{all},
+\item{subset_taxa}{character vector with taxa to be kept. Default is "all",
 in which case all taxa are kept.}
 
 \item{subset_climate}{character vector with Koppen climate classification to
-be kept. Default is \code{all}, in which case all climates are kept.}
+be kept. Default is "all", in which case all climates are kept.}
 
 \item{subset_region}{character vector with name of location(s) or
-country(ies) or broader region(s) (eg. \code{Europe}, \verb{North America}) to be
-kept. Default is \code{all}, in which case all regions/countries are kept.}
+country(ies) or broader region(s) (eg. "Europe", "North America") to be
+kept. Default is "all", in which case all regions/countries are kept.}
 
 \item{subset_ids}{character vector with equation IDs to be kept. Default is
-\code{all}, in which case all equations are kept.}
+"all", in which case all equations are kept.}
 
 \item{subset_output}{What dependent variable(s) should be provided in the
-output? Default is \verb{Total aboveground biomass} and \verb{Whole tree (above stump)}, other possible values are: \verb{Bark biomass}, \code{Branches (dead)},
-\code{Branches (live)}, \verb{Branches total (live, dead)}, \verb{Foliage total},
-\code{Height}, \code{Leaves}, \verb{Stem (wood only)}, \verb{Stem biomass}, \verb{Stem biomass (with bark)}, \verb{Stem biomass (without bark)}, \verb{Whole tree (above and belowground)}. Be aware that currently only a few equations represent those
+output? Default is "Total aboveground biomass" and "Whole tree (above
+stump)", other possible values are: "Bark biomass", "Branches (dead)",
+"Branches (live)", "Branches total (live, dead)", "Foliage total",
+"Height", "Leaves", "Stem (wood only)", "Stem biomass", "Stem biomass (with
+bark)", "Stem biomass (without bark)", "Whole tree (above and
+belowground)". Be aware that currently only a few equations represent those
 other variables, so estimated values might not be very accurate.}
 
 \item{new_taxa}{character string or vector specifying the taxon (or taxa) for
@@ -52,30 +55,30 @@ which the allometry has been calibrated}
 the calibration data}
 
 \item{new_min_dbh}{numerical value, minimum DBH for which the equation is
-valid (in cm). Default is NULL (nothing is added).}
+valid (in cm). Default is "NULL" (nothing is added).}
 
 \item{new_max_dbh}{numerical value, maximum DBH for which the equation is
-valid (in cm). Default is NULL (nothing is added).}
+valid (in cm). Default is "NULL" (nothing is added).}
 
 \item{new_sample_size}{number of measurements with which the allometry was
-calibrated. Default is NULL (nothing is added).}
+calibrated. Default is "NULL" (nothing is added).}
 
 \item{new_unit_dbh}{character string with unit of DBH in the equation (either
-\code{cm}, \code{mm} or \code{inch}). Default is \code{cm}.}
+\code{cm}, \code{mm} or \code{inch}). Default is "cm".}
 
 \item{new_unit_output}{character string with unit of equation output (either
-\code{g}, \code{kg}, \code{Mg} or \code{lbs} if the output is a mass, or \code{m} if the output is a
+"g", "kg", "Mg" or "lbs" if the output is a mass, or "m" if the output is a
 height).}
 
 \item{new_input_var}{independent variable(s) needed in the allometry. Default
-is \code{DBH}, other option is \verb{DBH, H}.}
+is "DBH", other option is "DBH, H".}
 
 \item{new_output_var}{dependent variable estimated by the allometry. Default
-is \verb{Total aboveground biomass}.}
+is "Total aboveground biomass".}
 
-\item{use_height_allom}{a logical value. In allodb we use Bohn et al. (2014)
+\item{use_height_allom}{a logical value. In \pkg{allodb} we use Bohn et al. (2014)
 for European sites. User need to provide height allometry when needed to
-calculate AGB. Default is TRUE.}
+calculate AGB. Default is "TRUE".}
 }
 \value{
 A new equation dataframe (\code{tibble::tibble()} object).

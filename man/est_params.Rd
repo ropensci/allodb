@@ -23,11 +23,11 @@ all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree.}
 
 \item{species}{a character vector (same length as genus), containing the
-species (e.g. "rubra")  of each tree. Default is NULL, when no species
+species (e.g. "rubra")  of each tree. Default is "NULL", when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-add_equation() function. Default is the compiled allodb equation table.}
+new_equation() function. Default is the compiled \pkg{allodb}  equation table.}
 
 \item{wna}{a numeric vector, this parameter is used in the weight_allom() function to determine
 the dbh-related and sample-size related weights attributed to equations
@@ -37,7 +37,7 @@ without a specified dbh range or sample size, respectively. Default is 0.1}
 the value at which the sample-size-related weight reaches 95\% of its
 maximum value (max=1). Default is 500.}
 
-\item{nres}{number of resampled values. Default is 1e4.}
+\item{nres}{number of resampled values. Default is "1e4".}
 }
 \value{
 A data frame (\code{tibble::tibble()} object) of fitted coefficients (columns) of the non-linear
@@ -58,4 +58,7 @@ est_params(
   species = lauraceae$species,
   coords = c(-78.2, 38.9)
 )
+}
+\seealso{
+\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equation]{new_equation()}}
 }

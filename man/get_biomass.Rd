@@ -27,7 +27,7 @@ all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree.}
 
 \item{species}{a character vector (same length as dbh), containing the
-species (e.g. "rubra")  of each tree. Default is NULL, when no species
+species (e.g. "rubra")  of each tree. Default is "NULL", when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
@@ -41,7 +41,7 @@ range. Default is 0.1}
 the value at which the sample-size-related weight reaches 95\% of its
 maximum value (max=1). Default is 500.}
 
-\item{nres}{number of resampled values. Default is 1e4.}
+\item{nres}{number of resampled values. Default is "1e4".}
 }
 \value{
 A vector of class "numeric" of the same length as dbh, containing AGB
@@ -84,4 +84,10 @@ predictions based on the user-provided DBHs.
 lau <- subset(scbi_stem1, Family == "Lauraceae")
 agb <- get_biomass(lau$dbh, lau$genus, lau$species, coords = c(-78.2, 38.9))
 str(agb)
+}
+\seealso{
+[weight_allom())], [new_equations()]
+
+[weight_allom())]: R:weight_allom())
+[new_equations()]: R:new_equations()
 }
