@@ -1,6 +1,6 @@
-#' Illustrate the resampling of AGB values used in allodb.
+#' Illustrate the resampling of AGB values used in \pkg{allodb}.
 #'
-#' This function illustrates the resampling of AGB values used in allodb. It
+#' This function illustrates the resampling of AGB values used in \pkg{allodb}. It
 #' creates objects of class "ggplot".
 #'
 #' @param genus A character value, containing the genus (e.g. "Quercus") of the
@@ -9,7 +9,7 @@
 #' @param species A character value, containing the species (e.g. "rubra") of
 #'   the tree. Default is "NULL", when no species identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   `new_equation()` function. Default is the base allodb equation table.
+#'   `new_equation()` function. Default is the base \pkg{allodb}  equation table.
 #' @param logxy Logical: should values be plotted on a log scale? Default is
 #'   "FALSE".
 #' @param neq Number of top equations in the legend. Default is 10, meaning that
