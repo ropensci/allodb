@@ -27,7 +27,7 @@ species (e.g. "rubra")  of each tree. Default is "NULL", when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equation()} function. Default is the compiled \pkg{allodb}  equation table.}
+\code{new_equations()} function. Default is the compiled \pkg{allodb}  equation table.}
 
 \item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()} function to determine
 the dbh-related and sample-size related weights attributed to equations
@@ -60,5 +60,5 @@ est_params(
 )
 }
 \seealso{
-\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equation]{new_equation()}}
+\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}
 }

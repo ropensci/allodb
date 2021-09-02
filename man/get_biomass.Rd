@@ -86,8 +86,5 @@ agb <- get_biomass(lau$dbh, lau$genus, lau$species, coords = c(-78.2, 38.9))
 str(agb)
 }
 \seealso{
-[weight_allom())], [new_equations()]
-
-[weight_allom())]: R:weight_allom())
-[new_equations()]: R:new_equations()
+\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}
 }

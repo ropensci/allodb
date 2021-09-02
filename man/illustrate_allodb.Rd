@@ -66,5 +66,5 @@ illustrate_allodb(
 
 }
 \seealso{
-\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equation]{new_equation()}}
+\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}
 }
