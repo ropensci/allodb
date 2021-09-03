@@ -19,11 +19,13 @@ More details on geographical aspects of these ForestGEO sites can be found in
 the accompanying manuscript.
 }
 \examples{
-sites_info
+#preview the datasets
+print(head(sites_info))
+
 }
 \seealso{
 Other database datasets: 
-\code{\link{equations}},
+\code{\link{equations_metadata}},
 \code{\link{missing_values}},
 \code{\link{references}},
 \code{\link{sitespecies}}

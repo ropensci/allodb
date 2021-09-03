@@ -15,11 +15,12 @@ Explanation of the codes used to indicate missing information in equation
 table.
 }
 \examples{
-missing_values
+#preview the dataset
+print(head(missing_values))
 }
 \seealso{
 Other database datasets: 
-\code{\link{equations}},
+\code{\link{equations_metadata}},
 \code{\link{references}},
 \code{\link{sites_info}},
 \code{\link{sitespecies}}

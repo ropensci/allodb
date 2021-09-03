@@ -22,7 +22,9 @@ USA (SCBI) ForestGEO dynamics plot. These data is from the first tree census
 in 2008, and only cover 1 hectare (SCBI is 25 ha).
 }
 \examples{
-scbi_stem1
+#preview the datasets
+print(head(scbi_stem1))
+
 }
 \seealso{
 Other datasets: 

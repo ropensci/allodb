@@ -26,13 +26,14 @@ Bibliographical information for sourced equations. Links to the
 \code{equations} table by \code{ref_id}.
 }
 \examples{
-references
+#preview the datasets
+print(head(references))
+print(head(references_metadata))
 
-references_metadata
 }
 \seealso{
 Other database datasets: 
-\code{\link{equations}},
+\code{\link{equations_metadata}},
 \code{\link{missing_values}},
 \code{\link{sites_info}},
 \code{\link{sitespecies}}

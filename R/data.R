@@ -13,10 +13,9 @@
 #' @family database datasets
 #'
 #' @examples
-#' equations
-#'
-#' equations_metadata
-"equations"
+#' #preview the datasets
+#' print(head(equations))
+#' print(head(equations_metadata))
 #' @rdname equations
 "equations_metadata"
 
@@ -28,7 +27,8 @@
 #' @family database datasets
 #'
 #' @examples
-#' missing_values
+#' #preview the dataset
+#' print(head(missing_values))
 "missing_values"
 
 #' Sites and tree species used in allodb and associated metadata
@@ -40,9 +40,10 @@
 #' @family database datasets
 #'
 #' @examples
-#' sitespecies
+#' #preview the datasets
+#' print(head(sitespecies))
+#' print(head(sitespecies_metadata))
 #'
-#' sitespecies_metadata
 "sitespecies"
 #' @rdname sitespecies
 "sitespecies_metadata"
@@ -59,9 +60,10 @@
 #' @family database datasets
 #'
 #' @examples
-#' references
+#' #preview the datasets
+#' print(head(references))
+#' print(head(references_metadata))
 #'
-#' references_metadata
 "references"
 #' @rdname references
 "references_metadata"
@@ -77,7 +79,9 @@
 #' @family database datasets
 #'
 #' @examples
-#' sites_info
+#' #preview the datasets
+#' print(head(sites_info))
+#'
 "sites_info"
 
 #' Tree census data from SCBI ForestGEO plot
@@ -94,7 +98,9 @@
 #' @family datasets
 #'
 #' @examples
-#' scbi_stem1
+#' #preview the datasets
+#' print(head(scbi_stem1))
+#'
 "scbi_stem1"
 
 #' Genus and family table for selected ForestGEO sites
@@ -105,7 +111,8 @@
 #' @family datasets
 #'
 #' @examples
-#' genus_family
+#' #preview the dataset
+#' print(head(genus_family))
 "genus_family"
 
 #' Gymnosperms identified in selected ForestGEO sites
@@ -116,7 +123,8 @@
 #' @family datasets
 #'
 #' @examples
-#' gymno_genus
+#' #preview the dataset
+#' print(head(gymno_genus))
 "gymno_genus"
 
 #' Shrub species identified in selected ForestGEO sites
@@ -127,9 +135,9 @@
 #' @family datasets
 #'
 #' @examples
-#' head(shrub_species)
+#' #preview the dataset
+#' print(head(shrub_species))
 #'
-#' str(shrub_species)
 "shrub_species"
 
 #' Koppen climate classification matrix
@@ -154,5 +162,7 @@
 #' @family datasets
 #'
 #' @examples
-#' koppenMatrix
+#' #preview the dataset
+#' print(head(koppenMatrix))
+#'
 "koppenMatrix"
