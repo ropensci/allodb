@@ -41,7 +41,7 @@ maximum value (max=1). Default is 500.}
 }
 \value{
 A data frame (\code{tibble::tibble()} object) of fitted coefficients (columns) of the non-linear
-least-square regression AGB = a * dbh ^ b + e,  with e ~ N(0, sigma^2)
+least-square regression \deqn{AGB = a * dbh ^ b + e,  with e ~ N(0, sigma^2)}
 }
 \description{
 This function calibrates new allometric equations from sampling previous
