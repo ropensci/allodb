@@ -48,7 +48,7 @@ calculated as the product of the following components:
 
 (1) sample-size weight, calculated as:
 
-1-exp(-n*(log(20)/w95))
+\deqn{1-exp(-n*(log(20)/w95))}
 
 where n is the sample size of the equation; the weight given to equations
 with no sample size information is determined by argument \code{wna} (0.1 by
