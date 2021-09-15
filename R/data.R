@@ -16,6 +16,8 @@
 #' #preview the datasets
 #' print(head(equations))
 #' print(head(equations_metadata))
+#'
+"equations"
 #' @rdname equations
 "equations_metadata"
 
