@@ -80,10 +80,16 @@ then used in the \code{get_biomass()} function by back-transforming the AGB
 predictions based on the user-provided DBHs.
 }
 \examples{
-# Estimate the biomass of all individuals from the Lauraceae family
+# Estimate the biomass of all individuals from the Lauraceae family at the SCBI plot
 lau <- subset(scbi_stem1, Family == "Lauraceae")
-agb <- get_biomass(lau$dbh, lau$genus, lau$species, coords = c(-78.2, 38.9))
-str(agb)
+lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species, coords = c(-78.2, 38.9))
+
+# Estimate biomass simultaneously from multiple sites (here using scbi_stem1 data as example with multiple coordinates)
+dat = scbi_stem1[1:100, ]
+dat$long=c(rep(-78,50),rep(-80,50))
+dat$lat = c(rep(40, 50), rep(41, 50))
+dat$biomass<-get_biomass( dbh = dat$dbh, genus=dat$genus, species = dat$species, coords = dat[, c("long", "lat")])
+
 }
 \seealso{
 \code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}
