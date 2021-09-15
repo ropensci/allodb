@@ -30,7 +30,7 @@ print(head(sitespecies_metadata))
 }
 \seealso{
 Other database datasets: 
-\code{\link{equations_metadata}},
+\code{\link{equations}},
 \code{\link{missing_values}},
 \code{\link{references}},
 \code{\link{sites_info}}

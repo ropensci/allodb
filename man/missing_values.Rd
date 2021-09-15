@@ -20,7 +20,7 @@ print(head(missing_values))
 }
 \seealso{
 Other database datasets: 
-\code{\link{equations_metadata}},
+\code{\link{equations}},
 \code{\link{references}},
 \code{\link{sites_info}},
 \code{\link{sitespecies}}
