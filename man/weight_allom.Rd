@@ -20,7 +20,7 @@ tree.}
 \item{coords}{a numeric vector of length 2 with longitude and latitude.}
 
 \item{species}{a character vector (same length as genus), containing the
-species (e.g. "rubra") of the tree. Default is "NULL", when no species
+species (e.g. "rubra") of the tree. Default is \code{NULL}, when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the

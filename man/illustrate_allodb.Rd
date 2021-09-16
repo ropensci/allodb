@@ -24,13 +24,13 @@ tree.}
 \item{coords}{A numeric vector of length 2 with longitude and latitude.}
 
 \item{species}{A character value, containing the species (e.g. "rubra") of
-the tree. Default is "NULL", when no species identification is available.}
+the tree. Default is \code{NULL}, when no species identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
 \code{new_equations()} function. Default is the base \pkg{allodb}  equation table.}
 
 \item{logxy}{Logical: should values be plotted on a log scale? Default is
-"FALSE".}
+\code{FALSE}.}
 
 \item{neq}{Number of top equations in the legend. Default is 10, meaning that
 the 10 equations with the highest weights are shown in the legend.}

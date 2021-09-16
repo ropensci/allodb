@@ -78,7 +78,7 @@ is "Total aboveground biomass".}
 
 \item{use_height_allom}{a logical value. In \pkg{allodb} we use Bohn et al. (2014)
 for European sites. User need to provide height allometry when needed to
-calculate AGB. Default is "TRUE".}
+calculate AGB. Default is \code{TRUE}.}
 }
 \value{
 A new equation dataframe (\code{tibble::tibble()} object).

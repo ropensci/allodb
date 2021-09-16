@@ -23,7 +23,7 @@ all trees were measured in the same location) or a matrix with 2 numerical
 columns giving the coordinates of each tree.}
 
 \item{species}{a character vector (same length as genus), containing the
-species (e.g. "rubra")  of each tree. Default is "NULL", when no species
+species (e.g. "rubra")  of each tree. Default is \code{NULL}, when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
@@ -41,7 +41,7 @@ maximum value (max=1). Default is 500.}
 }
 \value{
 A data frame (\code{tibble::tibble()} object) of fitted coefficients (columns) of the non-linear
-least-square regression \deqn{AGB = a * dbh ^ b + e,  with e ~ N(0, sigma^2)}
+least-square regression \deqn{AGB = a * dbh ^ b + e, \space \mathit{with} \space e ~ N(0, sigma^2)}{AGB = a * dbh ^ b + e, with e ~ N(0, sigma^2)}
 }
 \description{
 This function calibrates new allometric equations from sampling previous
