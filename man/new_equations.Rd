@@ -55,13 +55,13 @@ which the allometry has been calibrated}
 the calibration data}
 
 \item{new_min_dbh}{numerical value, minimum DBH for which the equation is
-valid (in cm). Default is "NULL" (nothing is added).}
+valid (in cm). Default is \code{NULL} (nothing is added).}
 
 \item{new_max_dbh}{numerical value, maximum DBH for which the equation is
-valid (in cm). Default is "NULL" (nothing is added).}
+valid (in cm). Default is \code{NULL} (nothing is added).}
 
 \item{new_sample_size}{number of measurements with which the allometry was
-calibrated. Default is "NULL" (nothing is added).}
+calibrated. Default is \code{NULL} (nothing is added).}
 
 \item{new_unit_dbh}{character string with unit of DBH in the equation (either
 \code{cm}, \code{mm} or \code{inch}). Default is "cm".}
