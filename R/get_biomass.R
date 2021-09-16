@@ -17,7 +17,7 @@
 #'   all trees were measured in the same location) or a matrix with 2 numerical
 #'   columns giving the coordinates of each tree.
 #' @param species a character vector (same length as dbh), containing the
-#'   species (e.g. "rubra")  of each tree. Default is "NULL", when no species
+#'   species (e.g. "rubra")  of each tree. Default is `NULL`, when no species
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
 #'   `new_equations()` function.
