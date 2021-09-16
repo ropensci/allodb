@@ -28,11 +28,11 @@
 #' @param new_coords a vector or matrix of coordinates (longitude, latitude) of
 #'   the calibration data
 #' @param new_min_dbh numerical value, minimum DBH for which the equation is
-#'   valid (in cm). Default is "NULL" (nothing is added).
+#'   valid (in cm). Default is `NULL` (nothing is added).
 #' @param new_max_dbh numerical value, maximum DBH for which the equation is
-#'   valid (in cm). Default is "NULL" (nothing is added).
+#'   valid (in cm). Default is `NULL` (nothing is added).
 #' @param new_sample_size number of measurements with which the allometry was
-#'   calibrated. Default is "NULL" (nothing is added).
+#'   calibrated. Default is `NULL` (nothing is added).
 #' @param new_unit_dbh character string with unit of DBH in the equation (either
 #'   `cm`, `mm` or `inch`). Default is "cm".
 #' @param new_unit_output character string with unit of equation output (either
