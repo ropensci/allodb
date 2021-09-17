@@ -12,9 +12,11 @@
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
 #'   `new_equations()` function.
-#' @param wna a numeric vector, this parameter is used in the `weight_allom()` function to determine
-#'   the sample-size related weights attributed to equations without a specified
-#'   sample size. Default is 0.1.
+#' @param wna a numeric vector, this parameter is used in
+#' the `weight_allom()` function to determine
+#' the sample-size related weights attributed to equations
+#' without a specified
+#' sample size. Default is 0.1.
 #' @param w95 a numeric vector, this parameter is used to determine the value at which the
 #'   sample-size-related weight reaches 95% of its maximum value (max=1).
 #'   Default is 500.
@@ -86,7 +88,7 @@ weight_allom <- function(genus,
   rcoords_site <- round(coords_site * 2 - 0.5) / 2 + 0.25
   ## extract koppen climate of every location
   koppen_obs <- apply(rcoords_site, 1, function(xk) {
-    subset(kgc::climatezones, Lon == xk[1] &  Lat == xk[2])$Cls
+    subset(kgc::climatezones, Lon == xk[1] & Lat == xk[2])$Cls
   })
   if (length(koppen_obs) == 0 ) {
     warning("The coordinates c(",

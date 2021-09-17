@@ -10,63 +10,70 @@
 #' (usually several hundred thousand observations).
 #'
 #' @param dbh a numeric vector containing tree diameter at breast height (dbh)
-#'   measurements, in cm.
+#' measurements, in cm.
 #' @param genus a character vector (same length as dbh), containing the genus
-#'   (e.g. "Quercus") of each tree.
+#' (e.g. "Quercus") of each tree.
 #' @param coords a numeric vector of length 2 with longitude and latitude (if
-#'   all trees were measured in the same location) or a matrix with 2 numerical
-#'   columns giving the coordinates of each tree.
+#' all trees were measured in the same location) or a matrix with 2 numerical
+#' columns giving the coordinates of each tree.
 #' @param species a character vector (same length as dbh), containing the
-#'   species (e.g. "rubra")  of each tree. Default is `NULL`, when no species
-#'   identification is available.
+#' species (e.g. "rubra")  of each tree. Default is `NULL`, when no species
+#' identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   `new_equations()` function.
-#' @param wna a numeric vector, this parameter is used in the `weight_allom()` function to determine
-#'   the dbh-related weight attributed to equations without a specified dbh
-#'   range. Default is 0.1
-#' @param w95 a numeric vector, this parameter is used in the `weight_allom()` function to determine
-#'   the value at which the sample-size-related weight reaches 95% of its
-#'   maximum value (max=1). Default is 500.
+#' `new_equations()` function.
+#' @param wna a numeric vector, this parameter is used in the `weight_allom()`
+#' function to determine
+#' the dbh-related weight attributed to equations without a specified dbh
+#' range. Default is 0.1
+#' @param w95 a numeric vector, this parameter
+#' is used in the `weight_allom()` function to determine
+#' the value at which the sample-size-related weight reaches 95% of its
+#' maximum value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is "1e4".
 #'
 #' @details `allodb` estimates AGB by calibrating a new allometric equation for
-#'   each taxon (arguments `genus` and  `species`) and location (argument
-#'   `coords`) in the user-provided census data. The new allometric equation is
-#'   based on a set of allometric equations that can be customized using the
-#'   `new_eqtable` argument. Each equation is then given a weight with the
-#'   `weight_allom()` function, based on: 1) its original sample size (numbers of
-#'   trees used to develop a given allometry), 2) its climatic similarity with
-#'   the target location, and 3) its taxonomic similarity with the target taxon
-#'   (see documentation of the `weight_allom()` function). The final weight
-#'   attributed to each equation is the product of those three weights.
-#'   Equations are then resampled with the`resample_agb()` funtion: the number
-#'   of samples per equation is proportional to its weight, and the total number
-#'   of samples is provided by the argument `nres`. The resampling is done by
-#'   drawing DBH values from a uniform distribution on the DBH range of the
-#'   equation, and estimating the AGB with the equation. The couples of values
-#'   (DBH, AGB) obtained are then used in the function `est_params()` to calibrate
-#'   a new allometric equation, by applying a linear regression to the
-#'   log-transformed data. The parameters of the new allometric equations are
-#'   then used in the `get_biomass()` function by back-transforming the AGB
-#'   predictions based on the user-provided DBHs.
+#' each taxon (arguments `genus` and  `species`) and location (argument
+#' `coords`) in the user-provided census data. The new allometric equation is
+#' based on a set of allometric equations that can be customized using the
+#' `new_eqtable` argument. Each equation is then given a weight with the
+#' `weight_allom()` function, based on: 1) its original sample size (numbers of
+#' trees used to develop a given allometry), 2) its climatic similarity with
+#' the target location, and 3) its taxonomic similarity with the target taxon
+#' (see documentation of the `weight_allom()` function). The final weight
+#' attributed to each equation is the product of those three weights.
+#' Equations are then resampled with the`resample_agb()` funtion: the number
+#' of samples per equation is proportional to its weight, and the total number
+#' of samples is provided by the argument `nres`. The resampling is done by
+#' drawing DBH values from a uniform distribution on the DBH range of the
+#' equation, and estimating the AGB with the equation. The couples of values
+#' (DBH, AGB) obtained are then used in the
+#' function `est_params()` to calibrate
+#' a new allometric equation, by applying a linear regression to the
+#' log-transformed data. The parameters of the new allometric equations are
+#' then used in the `get_biomass()` function by back-transforming the AGB
+#' predictions based on the user-provided DBHs.
 #'
 #' @return A vector of class "numeric" of the same length as dbh, containing AGB
-#'   value (in kg) for every stem
+#' value (in kg) for every stem
 #'
 #' @seealso [weight_allom()], [new_equations()]
 #'
 #' @export
 #'
 #' @examples
-#' # Estimate biomass of all individuals from the Lauraceae family at the SCBI plot
+#' # Estimate biomass of all individuals from the Lauraceae family
+#' at the SCBI plot
 #' lau <- subset(scbi_stem1, Family == "Lauraceae")
-#' lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species, coords = c(-78.2, 38.9))
+#' lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species,
+#' coords = c(-78.2, 38.9))
 #'
-#' # Estimate biomass from multiple sites (using scbi_stem1 as example with multiple coord)
+#' # Estimate biomass from multiple sites (using scbi_stem1 as
+#' example with multiple coord)
 #' dat = scbi_stem1[1:100, ]
 #' dat$long=c(rep(-78,50),rep(-80,50))
 #' dat$lat = c(rep(40, 50), rep(41, 50))
-#' dat$biomass<-get_biomass( dbh = dat$dbh, genus=dat$genus, species = dat$species, coords = dat[, c("long", "lat")])
+#' dat$biomass<-get_biomass( dbh = dat$dbh, genus=dat$genus,
+#' species = dat$species, coords = dat[, c("long", "lat")])
 #'
 get_biomass <- function(dbh,
                         genus,
@@ -90,7 +97,7 @@ get_biomass <- function(dbh,
   if (any(!is.na(dbh) & (dbh < 0 | dbh > 1e3)))
     stop("Your dbh data contain negative values and/or values > 1000 cm.
          Please check your data.")
-  if (any(abs(coords[,1]) > 180 | abs(coords[,2]) > 90))
+  if (any(abs(coords[, 1]) > 180 | abs(coords[, 2]) > 90))
     stop("Your coords contain longitudes that are not between -180 and 180, or
          latitudes that are not between -90 and 90. Please check your data.")
 
@@ -120,4 +127,3 @@ get_biomass <- function(dbh,
 
   return(agb)
 }
-

@@ -131,4 +131,3 @@ test_that("get_biomass gives error message when inputs are
               coords = c(-78, 40)
             ))
           })
-
