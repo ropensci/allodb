@@ -89,7 +89,8 @@
 #' Tree census data from SCBI ForestGEO plot
 #'
 #' A table with tree data from the Smithsonian Conservation Biology Institute,
-#' USA (SCBI) ForestGEO dynamics plot. This dataset is an extract from the first tree census
+#' USA (SCBI) ForestGEO dynamics plot. This dataset is an extract
+#' from the first tree census
 #' in 2008, only covering 1 hectare (SCBI plot is 25.6 ha). DBH in cm.
 #'
 #' @source Full datasets for tree census data at SCBI can be requested through
