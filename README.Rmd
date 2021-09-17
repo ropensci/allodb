@@ -30,7 +30,7 @@ Allometric equations for calculation of tree aboveground biomass (AGB) form the 
 _allodb_ was conceived as a framework to standardize and simplify the biomass estimation process across globally distributed extratropical forests (mainly temperate and boreal forests). 
 With _allodb_ we aimed to: a) compile relevant published and unpublished allometries, focusing on AGB but structured to handle other variables (e.g., height); b) objectively select and integrate appropriate available equations across the full range  of tree sizes; and c) serve as a platform for future updates and expansion to other research sites.
 
-The _allodb_ package contains a dataset of systematically selected published allometric equations. This dataset was built based on 701 woody species identified at 24 large [ForestGEO forest dynamic plots](https://forestgeo.si.edu/) representing all major extratropical forest types. A total of 544 parsed allometric equations to estimate individual tree biomass were retrieved, checked, and combined using a weighting function designed to ensure optimal equation selection over the full tree size range with smooth transitions across equations. The equation dataset used can be customized with built-in functions that subset the original dataset and add new equations.
+The _allodb_ package contains a dataset of systematically selected published allometric equations. This dataset was built based on 701 woody species identified at 24 large [ForestGEO forest dynamic plots](https://forestgeo.si.edu/) representing all major extratropical forest types. A total of 570 parsed allometric equations to estimate individual tree biomass were retrieved, checked, and combined using a weighting function designed to ensure optimal equation selection over the full tree size range with smooth transitions across equations. The equation dataset used can be customized with built-in functions that subset the original dataset and add new equations.
 
 The package provides functions to estimate tree biomass based on user-provided census data (tree diameter, taxonomic identification, and plot coordinates). New allometric equations are calibrated for each species and location by resampling the original equations; equations with a larger sample size and/or higher taxonomic and climatic similarity with the species and location in question are given a higher weight in this process. 
 
@@ -106,7 +106,7 @@ head(equ_tab_acer)
 
 Equations are then resampled within their original DBH range: the number of resampled values for each equation is proportional to its weight (as attributed by the `weight_allom` function). 
 
-```{r resample-acer, eval = FALSE}
+```{r resample-acer, eval = TRUE}
 df_resample <-
   resample_agb(genus = "Acer",
                species = "rubrum",
@@ -126,7 +126,7 @@ The resampled values are then used to fit the following nonlinear model: <img sr
 
 The resampled values (dots) and new fitted equation (red dotted line) can be visualized with the `illustrate_allodb()` function. 
 
-```{r est-params-acer, eval = FALSE, fig.height=4, fig.width=10}
+```{r est-params-acer, eval = TRUE, fig.height=4, fig.width=10}
 pars_acer <- est_params(
   genus = "Acer",
   species = "rubrum",
@@ -142,7 +142,7 @@ illustrate_allodb(
 
 The `est_params` function can be used for all species/site combinations in the dataset at once. 
 
-```{r est-params-all}
+```{r est-params-all, eval = TRUE}
 params <- est_params(
   genus = scbi_stem1$genus,
   species = scbi_stem1$species,

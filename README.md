@@ -35,7 +35,7 @@ The *allodb* package contains a dataset of systematically selected
 published allometric equations. This dataset was built based on 701
 woody species identified at 24 large [ForestGEO forest dynamic
 plots](https://forestgeo.si.edu/) representing all major extratropical
-forest types. A total of 544 parsed allometric equations to estimate
+forest types. A total of 570 parsed allometric equations to estimate
 individual tree biomass were retrieved, checked, and combined using a
 weighting function designed to ensure optimal equation selection over
 the full tree size range with smooth transitions across equations. The
@@ -175,6 +175,8 @@ plot(
 )
 ```
 
+![](README_files/figure-gfm/resample-acer-1.png)<!-- -->
+
 The resampled values are then used to fit the following nonlinear model:
 <img src="https://render.githubusercontent.com/render/math?math=AGB = a * dbh ^ b %2B e">,
 with i.i.d.
@@ -197,6 +199,8 @@ illustrate_allodb(
   coords = c(-78, 38)
 )
 ```
+
+![](README_files/figure-gfm/est-params-acer-1.png)<!-- -->
 
 The `est_params` function can be used for all species/site combinations
 in the dataset at once.
