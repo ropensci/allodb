@@ -33,11 +33,13 @@ identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 \code{new_equations()} function.}
 
-\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()} function to determine
+\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
+function to determine
 the dbh-related weight attributed to equations without a specified dbh
 range. Default is 0.1}
 
-\item{w95}{a numeric vector, this parameter is used in the \code{weight_allom()} function to determine
+\item{w95}{a numeric vector, this parameter
+is used in the \code{weight_allom()} function to determine
 the value at which the sample-size-related weight reaches 95\% of its
 maximum value (max=1). Default is 500.}
 
@@ -73,22 +75,27 @@ of samples per equation is proportional to its weight, and the total number
 of samples is provided by the argument \code{nres}. The resampling is done by
 drawing DBH values from a uniform distribution on the DBH range of the
 equation, and estimating the AGB with the equation. The couples of values
-(DBH, AGB) obtained are then used in the function \code{est_params()} to calibrate
+(DBH, AGB) obtained are then used in the
+function \code{est_params()} to calibrate
 a new allometric equation, by applying a linear regression to the
 log-transformed data. The parameters of the new allometric equations are
 then used in the \code{get_biomass()} function by back-transforming the AGB
 predictions based on the user-provided DBHs.
 }
 \examples{
-# Estimate biomass of all individuals from the Lauraceae family at the SCBI plot
+# Estimate biomass of all individuals from the Lauraceae family
+at the SCBI plot
 lau <- subset(scbi_stem1, Family == "Lauraceae")
-lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species, coords = c(-78.2, 38.9))
+lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species,
+coords = c(-78.2, 38.9))
 
-# Estimate biomass from multiple sites (using scbi_stem1 as example with multiple coord)
+# Estimate biomass from multiple sites (using scbi_stem1 as
+example with multiple coord)
 dat = scbi_stem1[1:100, ]
 dat$long=c(rep(-78,50),rep(-80,50))
 dat$lat = c(rep(40, 50), rep(41, 50))
-dat$biomass<-get_biomass( dbh = dat$dbh, genus=dat$genus, species = dat$species, coords = dat[, c("long", "lat")])
+dat$biomass<-get_biomass( dbh = dat$dbh, genus=dat$genus,
+species = dat$species, coords = dat[, c("long", "lat")])
 
 }
 \seealso{

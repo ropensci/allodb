@@ -18,8 +18,8 @@ illustrate_allodb(
 )
 }
 \arguments{
-\item{genus}{A character value, containing the genus (e.g. "Quercus") of the
-tree.}
+\item{genus}{A character value, containing the genus (e.g. "Quercus")
+of the tree.}
 
 \item{coords}{A numeric vector of length 2 with longitude and latitude.}
 
@@ -27,7 +27,8 @@ tree.}
 the tree. Default is \code{NULL}, when no species identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function. Default is the base \pkg{allodb}  equation table.}
+\code{new_equations()} function. Default is the base \pkg{allodb}
+equation table.}
 
 \item{logxy}{Logical: should values be plotted on a log scale? Default is
 \code{FALSE}.}
@@ -38,11 +39,13 @@ the 10 equations with the highest weights are shown in the legend.}
 \item{eqinfo}{Which column(s) of the equation table should be used in the
 legend? Default is "equation_taxa".}
 
-\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()} function to determine the
+\item{wna}{a numeric vector, this parameter is used in the
+\code{weight_allom()} function to determine the
 dbh-related and sample-size related weights attributed to equations without
 a specified dbh range or sample size, respectively. Default is 0.1.}
 
-\item{w95}{a numeric vector, this parameter is used in the \code{weight_allom()} function to determine the
+\item{w95}{a numeric vector, this parameter is used in the
+\code{weight_allom()} function to determine the
 value at which the sample-size-related weight reaches 95\% of its maximum
 value (max=1). Default is 500.}
 
@@ -54,8 +57,8 @@ are shown in the legend. The red curve on the graph represents the final
 fitted equation.
 }
 \description{
-This function illustrates the resampling of AGB values used in \pkg{allodb}. It
-creates objects of class "ggplot".
+This function illustrates the resampling of AGB values used in \pkg{allodb}.
+It creates objects of class "ggplot".
 }
 \examples{
 illustrate_allodb(

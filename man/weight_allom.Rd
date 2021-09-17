@@ -26,8 +26,10 @@ identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 \code{new_equations()} function.}
 
-\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()} function to determine
-the sample-size related weights attributed to equations without a specified
+\item{wna}{a numeric vector, this parameter is used in
+the \code{weight_allom()} function to determine
+the sample-size related weights attributed to equations
+without a specified
 sample size. Default is 0.1.}
 
 \item{w95}{a numeric vector, this parameter is used to determine the value at which the
