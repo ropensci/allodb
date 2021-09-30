@@ -12,7 +12,7 @@ Tool to standardize and simplify the tree biomass
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://ropensci.github.io/allodb}
+  \item \url{https://docs.ropensci.org/allodb/}
   \item \url{https://github.com/ropensci/allodb}
   \item Report bugs at \url{https://github.com/ropensci/allodb/issues}
 }
