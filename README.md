@@ -7,10 +7,10 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)  
 [![Build
-Status](https://travis-ci.org/forestgeo/allodb.svg?branch=master)](https://travis-ci.org/forestgeo/allodb)  
+Status](https://travis-ci.org/ropensci/allodb.svg?branch=master)](https://travis-ci.org/ropensci/allodb)  
 [![Coverage
-status](https://coveralls.io/repos/github/forestgeo/allodb/badge.svg)](https://coveralls.io/github/forestgeo/allodb)  
-[![R-CMD-check](https://github.com/forestgeo/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/forestgeo/allodb/actions)  
+status](https://coveralls.io/repos/github/ropensci/allodb/badge.svg)](https://coveralls.io/github/ropensci/allodb)  
+[![R-CMD-check](https://github.com/ropensci/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/allodb/actions)  
 [![peer-review](https://badges.ropensci.org/436_status.svg)](https://github.com/ropensci/software-review/issues/436)
 <!-- badges: end -->
 
@@ -56,7 +56,7 @@ Install the development version of *allodb* from GitHub:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("forestgeo/allodb")
+remotes::install_github("ropensci/allodb")
 ```
 
 ## Examples
