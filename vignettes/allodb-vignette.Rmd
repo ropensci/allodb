@@ -102,7 +102,7 @@ scbi_stem1$agb <-
 plot(
   x = scbi_stem1$dbh,
   y = scbi_stem1$agb,
-  col = scbi_stem1$genus,
+  col = factor(scbi_stem1$genus),
   xlab = "DBH (cm)",
   ylab = "AGB (kg)"
 )
