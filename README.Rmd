@@ -38,7 +38,7 @@ Install the development version of _allodb_ from GitHub:
 
 ```R
 # install.packages("remotes")
-remotes::install_github("forestgeo/allodb")
+remotes::install_github("ropensci/allodb")
 ```
 
 ## Examples
