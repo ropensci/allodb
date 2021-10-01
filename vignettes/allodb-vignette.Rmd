@@ -22,7 +22,7 @@ Install the development version of _allodb_ from GitHub:
 
 ```{r install, eval=FALSE}
 # install.packages("remotes")
-remotes::install_github("forestgeo/allodb")
+remotes::install_github("ropensci/allodb")
 ```
 
 ## Load the census data
