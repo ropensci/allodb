@@ -5,13 +5,10 @@
 
 <!-- badges: start -->
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)  
-[![Build
-Status](https://travis-ci.org/ropensci/allodb.svg?branch=master)](https://travis-ci.org/ropensci/allodb)  
-[![Coverage
-status](https://coveralls.io/repos/github/ropensci/allodb/badge.svg)](https://coveralls.io/github/ropensci/allodb)  
-[![R-CMD-check](https://github.com/ropensci/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/allodb/actions)  
 [![peer-review](https://badges.ropensci.org/436_status.svg)](https://github.com/ropensci/software-review/issues/436)
+[![Codecov test
+coverage](https://codecov.io/gh/ropensci/allodb/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/allodb?branch=master)
+[![R-CMD-check](https://github.com/ropensci/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/allodb/actions)
 <!-- badges: end -->
 
 ## Introduction
@@ -56,7 +53,7 @@ Install the development version of *allodb* from GitHub:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("ropensci/allodb")
+remotes::install_github("forestgeo/allodb")
 ```
 
 ## Examples
@@ -111,15 +108,15 @@ an argument in the `get_biomass` function.
 show_cols <- c("equation_id", "equation_taxa", "equation_allometry")
 eq_tab_acer <- new_equations(subset_taxa = "Acer")
 head(eq_tab_acer[, show_cols])
-#> # A tibble: 6 x 3
+#> # A tibble: 6 × 3
 #>   equation_id equation_taxa       equation_allometry                            
 #>   <chr>       <chr>               <chr>                                         
 #> 1 a4e4d1      Acer saccharum      exp(-2.192-0.011*dbh+2.67*(log(dbh)))         
 #> 2 dfc2c7      Acer rubrum         2.02338*(dbh^2)^1.27612                       
 #> 3 eac63e      Acer rubrum         5.2879*(dbh^2)^1.07581                        
 #> 4 f49bcb      Acer pseudoplatanus exp(-5.644074+(2.5189*(log(pi*dbh))))         
-#> 5 14bf3d      Acer mandshuricum   0.0335*(dbh)^1.606+0.0026*(dbh)^3.323+0.1222*~
-#> 6 0c7cd6      Acer mono           0.0202*(dbh)^1.810+0.0111*(dbh)^2.740+0.1156*~
+#> 5 14bf3d      Acer mandshuricum   0.0335*(dbh)^1.606+0.0026*(dbh)^3.323+0.1222*…
+#> 6 0c7cd6      Acer mono           0.0202*(dbh)^1.810+0.0111*(dbh)^2.740+0.1156*…
 ```
 
 Within the `get_biomass` function, this equation table is used to
@@ -145,7 +142,7 @@ keep_cols <-
 order_weights <- order(equ_tab_acer$weights, decreasing = TRUE)
 equ_tab_acer <- equ_tab_acer[order_weights, keep_cols]
 head(equ_tab_acer)
-#> # A tibble: 6 x 4
+#> # A tibble: 6 × 4
 #>   equation_id equation_taxa        sample_size weights
 #>   <chr>       <chr>                      <dbl>   <dbl>
 #> 1 138258      Acer rubrum                  150   0.415
@@ -212,7 +209,7 @@ params <- est_params(
   coords = c(-78.2, 38.9)
 )
 head(params)
-#> # A tibble: 6 x 7
+#> # A tibble: 6 × 7
 #>   genus       species      long   lat      a     b sigma
 #>   <fct>       <fct>       <dbl> <dbl>  <dbl> <dbl> <dbl>
 #> 1 Acer        negundo     -78.2  38.9 0.0762  2.55  433.
@@ -225,8 +222,3 @@ head(params)
 
 AGB is then recalculated as `agb = a * dbh^b` within the `get_biomass`
 function.
-
-Note: This package is released with a [Contributor
-Code of Conduct](https://ropensci.org/code-of-conduct/). 
-By
-contributing to this project, you agree to abide by its terms.
