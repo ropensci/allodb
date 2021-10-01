@@ -172,7 +172,7 @@ plot(
 )
 ```
 
-<img src="man/figures/README-resample-acer-1.png" width="100%" />
+![](man/figures/README-resample-acer-1.png)<!-- -->
 
 The resampled values are then used to fit the following nonlinear model:
 <img src="https://render.githubusercontent.com/render/math?math=AGB = a * dbh ^ b %2B e">,
@@ -197,7 +197,7 @@ illustrate_allodb(
 )
 ```
 
-<img src="man/figures/README-est-params-acer-1.png" width="100%" />
+![](man/figures/README-est-params-acer-1.png)<!-- -->
 
 The `est_params` function can be used for all species/site combinations
 in the dataset at once.
