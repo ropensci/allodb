@@ -4,12 +4,13 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r setup, echo = FALSE, message=FALSE, warning=FALSE}
-set.seed(1014)
-
+```{r, include = FALSE}
 knitr::opts_chunk$set(
+  collapse = TRUE,
   comment = "#>",
-  collapse = TRUE
+  fig.path = "man/figures/README-",
+  fig.width = 6, 
+  fig.height = 5
 )
 ```
 
@@ -154,5 +155,3 @@ AGB is then recalculated as `agb = a * dbh^b` within the `get_biomass` function.
 Please note that this package is released with a [Contributor
 Code of Conduct](https://ropensci.org/code-of-conduct/). 
 By contributing to this project, you agree to abide by its terms.
-
-
