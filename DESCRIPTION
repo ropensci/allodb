@@ -1,6 +1,6 @@
 Package: allodb
 Title: Tree Biomass Estimation at Extratropical Forest Plots
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     c(person(given = "Erika",
              family = "Gonzalez-Akre",

@@ -1,3 +1,4 @@
-# allodb 0.0.0.9000
+# allodb 0.0.1
 
-* Added a `NEWS.md` file to track changes to the package.
+* Incorporate peer-review suggestions as per
+https://github.com/ropensci/software-review/issues/436.
