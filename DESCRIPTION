@@ -29,7 +29,7 @@ Authors@R:
              email = "jonas.stillhard@wsl.ch"))      
 Description: Tool to standardize and simplify the tree biomass
     estimation process across globally distributed extratropical forests.
-License: GPL-3
+License: MIT + file LICENSE
 URL: https://docs.ropensci.org/allodb/, https://github.com/ropensci/allodb
 BugReports: https://github.com/ropensci/allodb/issues
 Depends: 
