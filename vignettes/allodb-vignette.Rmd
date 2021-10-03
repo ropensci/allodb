@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 ## Installation
 
 Install the development version of _allodb_ from GitHub:
