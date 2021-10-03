@@ -5,7 +5,7 @@
 \alias{shrub_species}
 \title{Shrub species identified in selected ForestGEO sites}
 \format{
-An object of class \code{character} of length 179.
+An object of class \code{character} of length 1.
 }
 \usage{
 shrub_species
