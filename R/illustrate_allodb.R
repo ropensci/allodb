@@ -83,9 +83,12 @@ illustrate_allodb <- function(genus,
   eq_info <- apply(equations[, c("equation_id", eqinfo)], 1,
                    function(x)
                      paste(x, collapse = " - "))
-  eq_info <- data.frame(stringsAsFactors = FALSE, equation_id = equations$equation_id,
-                        equation = eq_info)
-  dfcounts <- data.frame(stringsAsFactors = FALSE, table(equation_id = dfagb$equation_id))
+  eq_info <-
+    tibble::tibble(equation_id = equations$equation_id, equation = eq_info)
+
+  data <- table(equation_id = dfagb$equation_id)
+  dfcounts <- tibble::tibble(equation_id = names(data), Freq = unname(data))
+
   eq_info <- merge(eq_info, dfcounts, by = "equation_id")
   eq_info <- eq_info[order(eq_info$Freq, decreasing = TRUE), ]
   eq_info[(neq + 1):nrow(eq_info), "equation"] <- "other"

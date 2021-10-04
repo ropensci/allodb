@@ -282,7 +282,7 @@ new_equations <- function(subset_taxa = "all",
       )
     }
 
-    added_equations <- data.frame(stringsAsFactors = FALSE,
+    added_equations <- tibble::tibble(
       equation_id = new_equation_id,
       equation_taxa = new_taxa,
       equation_allometry = new_allometry,
