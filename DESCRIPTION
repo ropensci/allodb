@@ -43,7 +43,6 @@ Imports:
 Suggests: 
     covr (>= 3.2.1),
     knitr (>= 1.21),
-    purrr,
     rmarkdown,
     spelling,
     testthat (>= 3.0.0)
