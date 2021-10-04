@@ -18,7 +18,7 @@ Authors@R:
       person(given = "Kristina",
              family = "Anderson-Teixeira",
              role = "aut",
-             email = "TeixeiraK@si.edu"),
+             email = "TeixeiraK@si.edu",
              comment = c(ORCID = "0000-0001-8461-9713")),
       person(given = "Jeffrey",
              family = "Hanson",
