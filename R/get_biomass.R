@@ -68,7 +68,6 @@
 #' coords = c(-78.2, 38.9))
 #' lau
 #'
-#' dat[c("long", "lat", "biomass")]
 #' # Estimate biomass from multiple sites (using scbi_stem1 as example with
 #' # multiple coord)
 #' dat = scbi_stem1[1:100, ]
