@@ -88,7 +88,9 @@ predictions based on the user-provided DBHs.
 lau <- subset(scbi_stem1, Family == "Lauraceae")
 lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species,
 coords = c(-78.2, 38.9))
+lau
 
+dat[c("long", "lat", "biomass")]
 # Estimate biomass from multiple sites (using scbi_stem1 as example with
 # multiple coord)
 dat = scbi_stem1[1:100, ]
@@ -96,6 +98,7 @@ dat$long=c(rep(-78,50),rep(-80,50))
 dat$lat = c(rep(40, 50), rep(41, 50))
 dat$biomass<-get_biomass( dbh = dat$dbh, genus=dat$genus,
 species = dat$species, coords = dat[, c("long", "lat")])
+dat
 
 }
 \seealso{
