@@ -38,11 +38,9 @@ use_data(
   sitespecies,
   sitespecies_metadata,
   sites_info,
-
   scbi_stem1,
   koppenMatrix,
   gymno_genus,
   genus_family,
-
   overwrite = TRUE
 )

@@ -13,10 +13,9 @@
 #' @family database datasets
 #'
 #' @examples
-#' #preview the datasets
+#' # preview the datasets
 #' print(head(equations))
 #' print(head(equations_metadata))
-#'
 "equations"
 #' @rdname equations
 "equations_metadata"
@@ -29,7 +28,7 @@
 #' @family database datasets
 #'
 #' @examples
-#' #preview the dataset
+#' # preview the dataset
 #' print(head(missing_values))
 "missing_values"
 
@@ -42,10 +41,9 @@
 #' @family database datasets
 #'
 #' @examples
-#' #preview the datasets
+#' # preview the datasets
 #' print(head(sitespecies))
 #' print(head(sitespecies_metadata))
-#'
 "sitespecies"
 #' @rdname sitespecies
 "sitespecies_metadata"
@@ -62,10 +60,9 @@
 #' @family database datasets
 #'
 #' @examples
-#' #preview the datasets
+#' # preview the datasets
 #' print(head(references))
 #' print(head(references_metadata))
-#'
 "references"
 #' @rdname references
 "references_metadata"
@@ -81,9 +78,8 @@
 #' @family database datasets
 #'
 #' @examples
-#' #preview the datasets
+#' # preview the datasets
 #' print(head(sites_info))
-#'
 "sites_info"
 
 #' Tree census data from SCBI ForestGEO plot
@@ -101,9 +97,8 @@
 #' @family datasets
 #'
 #' @examples
-#' #preview the datasets
+#' # preview the datasets
 #' print(head(scbi_stem1))
-#'
 "scbi_stem1"
 
 #' Genus and family table for selected ForestGEO sites
@@ -114,7 +109,7 @@
 #' @family datasets
 #'
 #' @examples
-#' #preview the dataset
+#' # preview the dataset
 #' print(head(genus_family))
 "genus_family"
 
@@ -126,7 +121,7 @@
 #' @family datasets
 #'
 #' @examples
-#' #preview the dataset
+#' # preview the dataset
 #' print(head(gymno_genus))
 "gymno_genus"
 
@@ -138,9 +133,8 @@
 #' @family datasets
 #'
 #' @examples
-#' #preview the dataset
+#' # preview the dataset
 #' print(head(shrub_species))
-#'
 "shrub_species"
 
 #' Koppen climate classification matrix
@@ -165,7 +159,6 @@
 #' @family datasets
 #'
 #' @examples
-#' #preview the dataset
+#' # preview the dataset
 #' print(head(koppenMatrix))
-#'
 "koppenMatrix"

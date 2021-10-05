@@ -1,45 +1,27 @@
 Package: allodb
-Title: Tree Biomass Estimation at Extratropical Forest Plots
+Title: Tree Biomass Estimation at Extra-Tropical Forest Plots
 Version: 0.0.1
-Authors@R: 
-    c(person(given = "Erika",
-             family = "Gonzalez-Akre",
-             role = c("aut", "cre", "cph"),
-             email = "GonzalezEB@si.edu"),
-      person(given = "Camille",
-             family = "Piponiot",
-             role = "aut",
-             email = "camille.piponiot@gmail.com"),
-      person(given = "Mauro",
-             family = "Lepore",
-             role = "aut",
-             email = "maurolepore@gmail.com",
-             comment = c(ORCID = "0000-0002-1986-7988")),
-      person(given = "Kristina",
-             family = "Anderson-Teixeira",
-             role = "aut",
-             email = "TeixeiraK@si.edu"),
-      person(given = "Jeffrey",
-             family = "Hanson",
-             role = "rev",
-             email = "jeffrey.hanson@uqconnect.edu.au"),
-      person(given = "Jonas",
-             family = "Stillhard",
-             role = "rev",
-             email = "jonas.stillhard@wsl.ch"))      
-Description: Tool to standardize and simplify the tree biomass
-    estimation process across globally distributed extratropical forests.
+Authors@R: c(
+    person("Erika", "Gonzalez-Akre", , "GonzalezEB@si.edu", role = c("aut", "cre", "cph")),
+    person("Camille", "Piponiot", , "camille.piponiot@gmail.com", role = "aut"),
+    person("Mauro", "Lepore", , "maurolepore@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-1986-7988")),
+    person("Kristina", "Anderson-Teixeira", , "TeixeiraK@si.edu", role = "aut"),
+    person("Jeffrey", "Hanson", , "jeffrey.hanson@uqconnect.edu.au", role = "rev"),
+    person("Jonas", "Stillhard", , "jonas.stillhard@wsl.ch", role = "rev")
+  )
+Description: Standardize and simplify the tree biomass estimation process
+    across globally distributed extratropical forests.
 License: GPL-3
 URL: https://docs.ropensci.org/allodb/, https://github.com/ropensci/allodb
 BugReports: https://github.com/ropensci/allodb/issues
 Depends: 
-    R (>= 3.6.0)
-Imports: 
+    R (>= 3.5) 
+Imports:
     data.table (>= 1.12.8),
     ggplot2 (>= 3.3.2),
     kgc (>= 1.0.0.2),
     tibble,
-    utils, 
     withr
 Suggests: 
     covr (>= 3.2.1),
@@ -47,7 +29,8 @@ Suggests:
     purrr,
     rmarkdown,
     spelling,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    utils
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3

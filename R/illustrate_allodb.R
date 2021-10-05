@@ -41,7 +41,6 @@
 #'   species = "rubra",
 #'   coords = c(-78.2, 38.9)
 #' )
-#'
 illustrate_allodb <- function(genus,
                               coords,
                               species = NULL,
@@ -72,12 +71,13 @@ illustrate_allodb <- function(genus,
       w95 = w95,
       nres = nres
     )
-  pred <- function(x) params$a * x ** params$b
+  pred <- function(x) params$a * x**params$b
 
   if (is.null(new_eqtable)) {
     equations <- new_equations()
-  } else
+  } else {
     equations <- new_eqtable
+  }
 
   ## get equation info
   eq_info <- apply(equations[, c("equation_id", eqinfo)], 1,
@@ -97,10 +97,14 @@ illustrate_allodb <- function(genus,
   dfagb <- merge(dfagb, eq_info, by = "equation_id")
 
   g <- ggplot2::ggplot(dfagb, ggplot2::aes(x = dbh, y = agb)) +
-    ggplot2::geom_point(data = subset(dfagb, equation == "other"),
-                        alpha = 0.2) +
-    ggplot2::geom_point(data = subset(dfagb, equation != "other"),
-                        ggplot2::aes(col = equation)) +
+    ggplot2::geom_point(
+      data = subset(dfagb, equation == "other"),
+      alpha = 0.2
+    ) +
+    ggplot2::geom_point(
+      data = subset(dfagb, equation != "other"),
+      ggplot2::aes(col = equation)
+    ) +
     ggplot2::stat_function(
       fun = pred,
       lwd = 2,
@@ -108,9 +112,11 @@ illustrate_allodb <- function(genus,
       lty = 2
     ) +
     ggplot2::theme_classic() +
-    ggplot2::labs(x = "DBH (cm)",
-                  y = "AGB (kg)",
-                  colour = "Top resampled equations")
+    ggplot2::labs(
+      x = "DBH (cm)",
+      y = "AGB (kg)",
+      colour = "Top resampled equations"
+    )
   if (logxy) {
     g <- g +
       ggplot2::scale_x_log10() +
