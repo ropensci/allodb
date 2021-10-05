@@ -1,20 +1,19 @@
 test_that("new_equations() returns a dataframe with all
           necessary information", {
-            tab <- new_equations()
-            expect_s3_class(tab, "data.frame")
-            expect_type(tab$equation_id, "character")
-            expect_type(tab$equation_taxa, "character")
-            expect_type(tab$equation_allometry, "character")
-            expect_type(tab$independent_variable, "character")
-            expect_type(tab$dependent_variable, "character")
-            expect_type(tab$koppen, "character")
-            expect_type(tab$dbh_min_cm, "double")
-            expect_type(tab$dbh_max_cm, "double")
-            expect_type(tab$sample_size, "double")
-            expect_type(tab$dbh_units_original, "character")
-            expect_type(tab$output_units_original, "character")
-
-          })
+  tab <- new_equations()
+  expect_s3_class(tab, "data.frame")
+  expect_type(tab$equation_id, "character")
+  expect_type(tab$equation_taxa, "character")
+  expect_type(tab$equation_allometry, "character")
+  expect_type(tab$independent_variable, "character")
+  expect_type(tab$dependent_variable, "character")
+  expect_type(tab$koppen, "character")
+  expect_type(tab$dbh_min_cm, "double")
+  expect_type(tab$dbh_max_cm, "double")
+  expect_type(tab$sample_size, "double")
+  expect_type(tab$dbh_units_original, "character")
+  expect_type(tab$output_units_original, "character")
+})
 
 test_that("new_equations() can be subsetted by taxa", {
   subset_taxa <- new_equations(subset_taxa = c("Quercus", "Acer"))
@@ -121,7 +120,8 @@ test_that("new_equations() can be subsetted by type of output", {
 
 test_that(
   "equations can be added to the equation dataframe and then
-  used in the get_biomass function", {
+  used in the get_biomass function",
+  {
     all_eqtab <-
       new_equations(
         new_taxa = c("Quercus ilex", "Castanea sativa"),

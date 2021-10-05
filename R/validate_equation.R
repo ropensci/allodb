@@ -18,8 +18,8 @@
 #' try(validate_equations(equations))
 #'
 #' # FIXME: Some equations use "DBH" in uppercase. Is this intentional?
-#' grep("DBH", equations, value = TRUE)[[1]]  # But we also have uppercase
-#' grep("dbh", equations, value = TRUE)[[1]]  # I expected only lowercase
+#' grep("DBH", equations, value = TRUE)[[1]] # But we also have uppercase
+#' grep("dbh", equations, value = TRUE)[[1]] # I expected only lowercase
 #' valid <- tolower(equations)
 #'
 #' try(validate_equations(valid))

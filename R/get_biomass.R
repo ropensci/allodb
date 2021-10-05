@@ -70,13 +70,16 @@
 #'
 #' # Estimate biomass from multiple sites (using scbi_stem1 as example with
 #' # multiple coord)
-#' dat = scbi_stem1[1:100, ]
-#' dat$long=c(rep(-78,50),rep(-80,50))
-#' dat$lat = c(rep(40, 50), rep(41, 50))
-#' dat$biomass<-get_biomass( dbh = dat$dbh, genus=dat$genus,
-#' species = dat$species, coords = dat[, c("long", "lat")])
+#' dat <- scbi_stem1[1:100, ]
+#' dat$long <- c(rep(-78, 50), rep(-80, 50))
+#' dat$lat <- c(rep(40, 50), rep(41, 50))
+#' dat$biomass <- get_biomass(
+#'   dbh = dat$dbh, 
+#'   genus = dat$genus,
+#'   species = dat$species, 
+#'   coords = dat[, c("long", "lat")]
+#' )
 #' dat
-#'
 get_biomass <- function(dbh,
                         genus,
                         coords,
@@ -87,8 +90,9 @@ get_biomass <- function(dbh,
                         nres = 1e4) {
   if (!is.null(new_eqtable)) {
     dfequation <- new_eqtable
-  } else
+  } else {
     dfequation <- new_equations()
+  }
 
   if (length(unlist(coords)) == 2) {
     coords <- matrix(coords, ncol = 2)
@@ -96,21 +100,25 @@ get_biomass <- function(dbh,
   colnames(coords) <- c("long", "lat")
 
   ## input data checks
-  if (any(!is.na(dbh) & (dbh < 0 | dbh > 1e3)))
+  if (any(!is.na(dbh) & (dbh < 0 | dbh > 1e3))) {
     stop("Your dbh data contain negative values and/or values > 1000 cm.
          Please check your data.")
-  if (any(abs(coords[, 1]) > 180 | abs(coords[, 2]) > 90))
+  }
+  if (any(abs(coords[, 1]) > 180 | abs(coords[, 2]) > 90)) {
     stop("Your coords contain longitudes that are not between -180 and 180, or
          latitudes that are not between -90 and 90. Please check your data.")
+  }
 
   params <-
-    est_params(genus = genus,
-               coords = coords,
-               species = species,
-               new_eqtable = dfequation,
-               wna = wna,
-               w95 = w95,
-               nres = nres)
+    est_params(
+      genus = genus,
+      coords = coords,
+      species = species,
+      new_eqtable = dfequation,
+      wna = wna,
+      w95 = w95,
+      nres = nres
+    )
 
   if (!is.null(species)) {
     df <-
@@ -119,13 +127,15 @@ get_biomass <- function(dbh,
         params,
         by = c("genus", "species", "long", "lat")
       )
-  } else
+  } else {
     df <- merge(data.frame(stringsAsFactors = FALSE, id = seq_len(length(dbh)), dbh, genus, coords),
-                params,
-                by = c("genus", "long", "lat"))
+      params,
+      by = c("genus", "long", "lat")
+    )
+  }
 
   df <- df[order(df$id), ]
-  agb <- df$a * df$dbh ^ df$b
+  agb <- df$a * df$dbh^df$b
 
   return(agb)
 }
