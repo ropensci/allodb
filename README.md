@@ -89,10 +89,10 @@ identification (results in kilograms).
 
 ``` r
 get_biomass(
-  dbh=50, 
-  genus="liriodendron", 
-  species="tulipifera", 
-  coords=c(-78.2, 38.9)
+  dbh = 50,
+  genus = "liriodendron",
+  species = "tulipifera",
+  coords = c(-78.2, 38.9)
 )
 #> [1] 1578.644
 ```
@@ -127,18 +127,22 @@ similarity with the species/site combination considered.
 
 ``` r
 allom_weights <-
-  weight_allom(genus = "Acer",
-               species = "rubrum",
-               coords = c(-78, 38))
+  weight_allom(
+    genus = "Acer",
+    species = "rubrum",
+    coords = c(-78, 38)
+  )
 
 ## visualize weights
 equ_tab_acer <- new_equations()
 equ_tab_acer$weights <- allom_weights
 keep_cols <-
-  c("equation_id",
+  c(
+    "equation_id",
     "equation_taxa",
     "sample_size",
-    "weights")
+    "weights"
+  )
 order_weights <- order(equ_tab_acer$weights, decreasing = TRUE)
 equ_tab_acer <- equ_tab_acer[order_weights, keep_cols]
 head(equ_tab_acer)
@@ -159,9 +163,10 @@ attributed by the `weight_allom` function).
 
 ``` r
 df_resample <-
-  resample_agb(genus = "Acer",
-               species = "rubrum",
-               coords = c(-78, 38)
+  resample_agb(
+    genus = "Acer",
+    species = "rubrum",
+    coords = c(-78, 38)
   )
 
 plot(
