@@ -52,12 +52,12 @@ est_params <- function(genus,
                        new_eqtable = NULL,
                        wna = 0.1,
                        w95 = 500,
-                       nres = 1e4
-) {
-
+                       nres = 1e4) {
   if (!is.null(new_eqtable)) {
     dfequation <- new_eqtable
-  } else dfequation <- new_equations()
+  } else {
+    dfequation <- new_equations()
+  }
 
   ## get all combinations of species x site
   if (length(unlist(coords)) == 2) {
@@ -68,19 +68,22 @@ est_params <- function(genus,
 
   coefs <- c()
   for (i in seq_len(nrow(dfobs))) {
-    df <- resample_agb(genus = dfobs$genus[i],
-                       species = dfobs$species[i],
-                       coords = dfobs[i, c("long", "lat")],
-                       new_eqtable = dfequation,
-                       wna = wna,
-                       w95 = w95,
-                       nres = nres)
+    df <- resample_agb(
+      genus = dfobs$genus[i],
+      species = dfobs$species[i],
+      coords = dfobs[i, c("long", "lat")],
+      new_eqtable = dfequation,
+      wna = wna,
+      w95 = w95,
+      nres = nres
+    )
     ## special case: only one equation is resampled and it's of the form a*x^b
     ## nls will throw an error: add some 'grain' by adding 1 slightly different
     ## data point (it won't change the final results)
     if (length(unique(df$equation_id)) == 1) df[1, 3] <- df[1, 3] * 1.01
-    reg <- summary(stats::nls(agb ~ a * dbh ** b,
-          start = c(a = 0.5, b = 2), data = df))
+    reg <- summary(stats::nls(agb ~ a * dbh**b,
+      start = c(a = 0.5, b = 2), data = df
+    ))
     coefs <- rbind(coefs, c(reg$coefficients[, "Estimate"], reg$sigma))
   }
   colnames(coefs) <- c("a", "b", "sigma")
