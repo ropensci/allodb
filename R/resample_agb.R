@@ -37,7 +37,6 @@
 #'   species = "rubra",
 #'   coords = c(-78.2, 38.9)
 #' )
-#'
 resample_agb <- function(genus,
                          coords,
                          species = NULL,
@@ -45,14 +44,16 @@ resample_agb <- function(genus,
                          wna = 0.1,
                          w95 = 500,
                          nres = 1e4) {
-  if (length(genus) > 1 | length(unlist(coords)) != 2)
+  if (length(genus) > 1 | length(unlist(coords)) != 2) {
     stop("This function should not be used for several taxa
          and/or locations at once.")
+  }
 
   if (!is.null(new_eqtable)) {
     dfequation <- new_eqtable
-  } else
+  } else {
     dfequation <- new_equations()
+  }
 
   weights <- weight_allom(
     genus = genus,
@@ -62,10 +63,13 @@ resample_agb <- function(genus,
     wna = wna,
     w95 = w95
   )
-  weights <- data.table::data.table(weight = weights,
-                                    equation_id = names(weights))
-  if ("weight" %in% colnames(dfequation))
+  weights <- data.table::data.table(
+    weight = weights,
+    equation_id = names(weights)
+  )
+  if ("weight" %in% colnames(dfequation)) {
     dfequation$weight <- NULL
+  }
   dfequation <- merge(dfequation, weights, by = "equation_id")
   dfequation$weight <- dfequation$weight / sum(dfequation$weight)
   dfequation$resample <- floor(dfequation$weight * nres)
@@ -109,11 +113,13 @@ resample_agb <- function(genus,
   }
 
   equation_id <-
-    unlist(lapply(seq_len(nrow(dfsub)), function(i)
-      rep(dfsub$equation_id[i], each = dfsub$resample[i])))
+    unlist(lapply(seq_len(nrow(dfsub)), function(i) {
+      rep(dfsub$equation_id[i], each = dfsub$resample[i])
+    }))
 
   df <- tibble::tibble(equation_id,
-                       dbh = unlist(list_dbh),
-                       agb = unlist(list_agb))
+    dbh = unlist(list_dbh),
+    agb = unlist(list_agb)
+  )
   return(df)
 }
