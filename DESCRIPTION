@@ -40,7 +40,6 @@ Imports:
     ggplot2 (>= 3.3.2),
     kgc (>= 1.0.0.2),
     tibble,
-    utils, 
     withr
 Suggests: 
     covr (>= 3.2.1),
@@ -48,7 +47,8 @@ Suggests:
     purrr,
     rmarkdown,
     spelling,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    utils
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 3
