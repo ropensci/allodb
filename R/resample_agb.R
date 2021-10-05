@@ -104,7 +104,7 @@ resample_agb <- function(genus,
       new_dbh <- paste0("(sampled_dbh * ", dfsub$dbh_unit_cf[j], ")")
       new_equation <- gsub("dbh|DBH", new_dbh, orig_equation)
       agb <-
-        eval(str2lang(new_equation)) * dfsub$output_units_cf[j]
+        eval(parse(text = new_equation)) * dfsub$output_units_cf[j]
     })
   }
 
