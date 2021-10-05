@@ -64,8 +64,10 @@ new_equations <- function(subset_taxa = "all",
                           subset_climate = "all",
                           subset_region = "all",
                           subset_ids = "all",
-                          subset_output = c("Total aboveground biomass",
-                                            "Whole tree (above stump)"),
+                          subset_output = c(
+                            "Total aboveground biomass",
+                            "Whole tree (above stump)"
+                          ),
                           new_taxa = NULL,
                           new_allometry = NULL,
                           new_coords = NULL,
@@ -83,29 +85,31 @@ new_equations <- function(subset_taxa = "all",
   new_equations <- equations_orig
 
   suppressWarnings(new_equations$dbh_min_cm <-
-                     as.numeric(new_equations$dbh_min_cm))
+    as.numeric(new_equations$dbh_min_cm))
   suppressWarnings(new_equations$dbh_max_cm <-
-                     as.numeric(new_equations$dbh_max_cm))
+    as.numeric(new_equations$dbh_max_cm))
   suppressWarnings(new_equations$sample_size <-
-                     as.numeric(new_equations$sample_size))
+    as.numeric(new_equations$sample_size))
   suppressWarnings(new_equations$dbh_unit_cf <-
-                     as.numeric(new_equations$dbh_unit_cf))
+    as.numeric(new_equations$dbh_unit_cf))
   suppressWarnings(new_equations$output_units_cf <-
-                     as.numeric(new_equations$output_units_cf))
+    as.numeric(new_equations$output_units_cf))
 
   ## replace height with height allometry  ####
   ## from Bohn et al. 2014 in Jansen et al. 1996
   if (use_height_allom &
-      "jansen_1996_otvb" %in% new_equations$ref_id) {
+    "jansen_1996_otvb" %in% new_equations$ref_id) {
     eq_jansen <- subset(new_equations, ref_id == "jansen_1996_otvb")
     ## height allometries defined per genus -> get info in Jansen allometries
     eq_jansen$genus <-
       data.table::tstrsplit(eq_jansen$equation_notes, " ")[[5]]
     ## create height allometry dataframe
     hallom <-
-      subset(new_equations,
-             ref_id == "bohn_2014_ocai" &
-               dependent_variable == "Height")
+      subset(
+        new_equations,
+        ref_id == "bohn_2014_ocai" &
+          dependent_variable == "Height"
+      )
     hallom <- hallom[, c("equation_taxa", "equation_allometry")]
     colnames(hallom) <- c("genus", "hsub")
     ## merge with jansen allometries (equations that do not have a corresponding
@@ -113,40 +117,46 @@ new_equations <- function(subset_taxa = "all",
     eq_jansen <- merge(eq_jansen, hallom, by = "genus")
     # substitute H by its DBH-based estimation
     to_merge <- eq_jansen[, c("hsub", "equation_allometry")]
-    eq_jansen$equation_allometry <- apply(to_merge, 1,  function(xx) {
+    eq_jansen$equation_allometry <- apply(to_merge, 1, function(xx) {
       gsub("\\(h", paste0("((", xx[1], ")"), xx[2])
     })
     # replace independent_variable column
     eq_jansen$independent_variable <- "DBH"
     # replace in equation table
     new_equations <-
-      rbind(subset(new_equations, !equation_id %in% eq_jansen$equation_id),
-            eq_jansen[, colnames(new_equations)])
-  } else
+      rbind(
+        subset(new_equations, !equation_id %in% eq_jansen$equation_id),
+        eq_jansen[, colnames(new_equations)]
+      )
+  } else {
     new_equations <-
-    subset(new_equations, independent_variable == "DBH")
+      subset(new_equations, independent_variable == "DBH")
+  }
 
   ## subset equation table ####
   if (any(subset_taxa != "all")) {
     keep <- vapply(new_equations$equation_taxa, function(tax0) {
-      any(vapply(subset_taxa, function(i)
-        grepl(i, tax0), FUN.VALUE = TRUE))
+      any(vapply(subset_taxa, function(i) {
+        grepl(i, tax0)
+      }, FUN.VALUE = TRUE))
     }, FUN.VALUE = TRUE)
     new_equations <- new_equations[keep, ]
   }
 
   if (any(subset_climate != "all")) {
     keep <- vapply(new_equations$koppen, function(clim0) {
-      any(vapply(subset_climate, function(i)
-        grepl(i, clim0), FUN.VALUE = TRUE))
+      any(vapply(subset_climate, function(i) {
+        grepl(i, clim0)
+      }, FUN.VALUE = TRUE))
     }, FUN.VALUE = TRUE)
     new_equations <- new_equations[keep, ]
   }
 
   if (any(subset_region != "all")) {
     keep <- vapply(new_equations$geographic_area, function(reg0) {
-      any(vapply(subset_region, function(i)
-        grepl(i, reg0), FUN.VALUE = TRUE))
+      any(vapply(subset_region, function(i) {
+        grepl(i, reg0)
+      }, FUN.VALUE = TRUE))
     }, FUN.VALUE = TRUE)
     new_equations <- new_equations[keep, ]
   }
@@ -161,23 +171,25 @@ new_equations <- function(subset_taxa = "all",
   ## add new equations ####
   # check that new allometry was added
   if (is.null(new_allometry) &
-      (!is.null(new_taxa) | !is.null(new_coords)))
+    (!is.null(new_taxa) | !is.null(new_coords))) {
     stop("You might have forgotten to add the new allometry.")
+  }
 
   if (!is.null(new_allometry)) {
     ## check consistency of inputs
     if (is.null(new_taxa) |
-        is.null(new_coords) |
-        is.null(new_min_dbh) |
-        is.null(new_max_dbh) |
-        is.null(new_sample_size))
+      is.null(new_coords) |
+      is.null(new_min_dbh) |
+      is.null(new_max_dbh) |
+      is.null(new_sample_size)) {
       stop(
         "You must provide the taxa, coordinates, DBH range
          and sample size of you new allometries."
       )
+    }
 
     if (!is.numeric(new_min_dbh) |
-        !is.numeric(new_max_dbh) | !is.numeric(new_sample_size))  {
+      !is.numeric(new_max_dbh) | !is.numeric(new_sample_size)) {
       stop("new_min_dbh, new_max_dbh, new_sample_size should
            be numeric values.")
     }
@@ -187,26 +199,26 @@ new_equations <- function(subset_taxa = "all",
     } else {
       ncoords <- length(new_coords)
     }
-    if (!is.numeric(new_coords) | ncoords != 2)  {
+    if (!is.numeric(new_coords) | ncoords != 2) {
       stop("coords should be a numeric vector or matrix,
             with 2 values or 2 columns.")
     }
 
     if (length(new_taxa) != length(new_allometry) |
-        length(new_allometry) != length(new_min_dbh) |
-        length(new_min_dbh) != length(new_max_dbh) |
-        length(new_max_dbh) != length(new_sample_size)) {
+      length(new_allometry) != length(new_min_dbh) |
+      length(new_min_dbh) != length(new_max_dbh) |
+      length(new_max_dbh) != length(new_sample_size)) {
       stop(
         "new_taxa, new_allometry, new_min_dbh, new_max_dbh and
         new_sample_size must all be the same length."
       )
     }
 
-    if (!is.character(new_allometry))  {
+    if (!is.character(new_allometry)) {
       stop("The equation allometry should be a character
            vector.")
     }
-    if (any(grepl("=|<-", new_allometry)))  {
+    if (any(grepl("=|<-", new_allometry))) {
       stop("new_allometry should should be written as a
            function of DBH  (e.g. '0.5 * dbh ^ 2').")
     }
@@ -226,9 +238,9 @@ new_equations <- function(subset_taxa = "all",
     }
 
     if (any(new_max_dbh <= new_min_dbh) |
-        any(new_min_dbh < 0) |
-        any(!is.numeric(new_min_dbh)) |
-        any(!is.numeric(new_max_dbh))) {
+      any(new_min_dbh < 0) |
+      any(!is.numeric(new_min_dbh)) |
+      any(!is.numeric(new_max_dbh))) {
       stop(
         "new_min_dbh and new_max_dbh must be positive real
         numbers, with new_max_dbh > new_min_dbh."
@@ -238,13 +250,14 @@ new_equations <- function(subset_taxa = "all",
     if (!is.matrix(new_coords)) {
       new_coords <-
         matrix(rep(new_coords, length(new_taxa)),
-               ncol = 2,
-               byrow = TRUE)
+          ncol = 2,
+          byrow = TRUE
+        )
     }
 
     if (!is.numeric(new_coords) |
-        !(ncol(new_coords) == 2 &
-          nrow(new_coords) == length(new_taxa))) {
+      !(ncol(new_coords) == 2 &
+        nrow(new_coords) == length(new_taxa))) {
       stop(
         "new_coords must be a numeric vector of length 2 or
         a matrix with 2 columns (long, lat) and as many rows
@@ -253,8 +266,8 @@ new_equations <- function(subset_taxa = "all",
     }
 
     if (any(new_coords[, 1] < -180 |
-            new_coords[, 1] > 180 |
-            new_coords[, 2] < -90 | new_coords[, 2] > 90)) {
+      new_coords[, 1] > 180 |
+      new_coords[, 2] < -90 | new_coords[, 2] > 90)) {
       stop("Longitude must be between -180 and 180, and
            latitude between 90 and 0.")
     }
@@ -267,12 +280,14 @@ new_equations <- function(subset_taxa = "all",
     }
 
     new_equation_id <- paste0("new", seq_len(length(new_taxa)))
-    coords_eq <- cbind(long = new_coords[, 1],
-                      lat = new_coords[, 2])
+    coords_eq <- cbind(
+      long = new_coords[, 1],
+      lat = new_coords[, 2]
+    )
     rcoords_eq <- round(coords_eq * 2 - 0.5) / 2 + 0.25
     ## extract koppen climate of every location
       koppen_zones <- apply(rcoords_eq, 1, function(k) {
-      subset(climatezones, Lon == k[1] &  Lat == k[2])$Cls
+      subset(climatezones, Lon == k[1] & Lat == k[2])$Cls
     })
     koppen_zones <- as.character(unlist(koppen_zones))
     if (length(koppen_zones) != nrow(rcoords_eq)) {
@@ -282,7 +297,8 @@ new_equations <- function(subset_taxa = "all",
       )
     }
 
-    added_equations <- data.frame(stringsAsFactors = FALSE,
+    added_equations <- data.frame(
+      stringsAsFactors = FALSE,
       equation_id = new_equation_id,
       equation_taxa = new_taxa,
       equation_allometry = new_allometry,
@@ -298,8 +314,10 @@ new_equations <- function(subset_taxa = "all",
       output_units_original = new_unit_output
     )
 
-    new_equations <- rbind(added_equations,
-                           new_equations[, colnames(added_equations)])
+    new_equations <- rbind(
+      added_equations,
+      new_equations[, colnames(added_equations)]
+    )
 
     ## add conversion factors
     dbh_cf <-
@@ -307,9 +325,9 @@ new_equations <- function(subset_taxa = "all",
     output_cf <-
       unique(equations_orig[, c("output_units_original", "output_units_cf")])
     suppressWarnings(dbh_cf$dbh_unit_cf <-
-                       as.numeric(dbh_cf$dbh_unit_cf))
+      as.numeric(dbh_cf$dbh_unit_cf))
     suppressWarnings(output_cf$output_units_cf <-
-                       as.numeric(output_cf$output_units_cf))
+      as.numeric(output_cf$output_units_cf))
     new_equations <- merge(new_equations, dbh_cf)
     new_equations <- merge(new_equations, output_cf)
 
@@ -330,7 +348,6 @@ new_equations <- function(subset_taxa = "all",
       "output_units_original",
       "output_units_cf"
     )]
-
   }
 
   return(tibble::as_tibble(new_equations))
