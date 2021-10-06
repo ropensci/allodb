@@ -286,8 +286,8 @@ new_equations <- function(subset_taxa = "all",
     )
     rcoords_eq <- round(coords_eq * 2 - 0.5) / 2 + 0.25
     ## extract koppen climate of every location
-    koppen_zones <- apply(rcoords_eq, 1, function(k) {
-      subset(kgc::climatezones, Lon == k[1] & Lat == k[2])$Cls
+      koppen_zones <- apply(rcoords_eq, 1, function(k) {
+      subset(climatezones, Lon == k[1] & Lat == k[2])$Cls
     })
     koppen_zones <- as.character(unlist(koppen_zones))
     if (length(koppen_zones) != nrow(rcoords_eq)) {

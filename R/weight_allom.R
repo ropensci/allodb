@@ -89,7 +89,7 @@ weight_allom <- function(genus,
   rcoords_site <- round(coords_site * 2 - 0.5) / 2 + 0.25
   ## extract koppen climate of every location
   koppen_obs <- apply(rcoords_site, 1, function(xk) {
-    subset(kgc::climatezones, Lon == xk[1] & Lat == xk[2])$Cls
+    subset(climatezones, Lon == xk[1] & Lat == xk[2])$Cls
   })
   if (length(koppen_obs) == 0) {
     warning(
