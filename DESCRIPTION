@@ -6,7 +6,8 @@ Authors@R: c(
     person("Camille", "Piponiot", , "camille.piponiot@gmail.com", role = "aut"),
     person("Mauro", "Lepore", , "maurolepore@gmail.com", role = "aut",
            comment = c(ORCID = "0000-0002-1986-7988")),
-    person("Kristina", "Anderson-Teixeira", , "TeixeiraK@si.edu", role = "aut"),
+    person("Kristina", "Anderson-Teixeira", , "TeixeiraK@si.edu", role = "aut",
+           comment = c(ORCID = "0000-0001-8461-9713")),
     person("Jeffrey", "Hanson", , "jeffrey.hanson@uqconnect.edu.au", role = "rev"),
     person("Jonas", "Stillhard", , "jonas.stillhard@wsl.ch", role = "rev")
   )
