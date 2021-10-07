@@ -2,8 +2,8 @@ Package: allodb
 Title: Tree Biomass Estimation at Extra-Tropical Forest Plots
 Version: 0.0.1
 Authors@R: c(
-    person("Erika", "Gonzalez-Akre", , "GonzalezEB@si.edu", role = c("aut", "cre", "cph")),
-    person("Camille", "Piponiot", , "camille.piponiot@gmail.com", role = "aut"),
+    person("Erika", "Gonzalez-Akre", , "GonzalezEB@si.edu", role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0001-8305-6672")),
+    person("Camille", "Piponiot", , "camille.piponiot@gmail.com", role = "aut", comment = c(ORCID = "0000-0002-3473-1982")),
     person("Mauro", "Lepore", , "maurolepore@gmail.com", role = "aut",
            comment = c(ORCID = "0000-0002-1986-7988")),
     person("Kristina", "Anderson-Teixeira", , "TeixeiraK@si.edu", role = "aut",
