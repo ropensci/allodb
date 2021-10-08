@@ -65,8 +65,8 @@
 #' # plot
 #' lau <- subset(scbi_stem1, Family == "Lauraceae")
 #' lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species,
-#'   coords = c(-78.2, 38.9)
-#' )
+#' coords = c(-78.2, 38.9))
+#' lau
 #'
 #' # Estimate biomass from multiple sites (using scbi_stem1 as example with
 #' # multiple coord)
@@ -74,9 +74,12 @@
 #' dat$long <- c(rep(-78, 50), rep(-80, 50))
 #' dat$lat <- c(rep(40, 50), rep(41, 50))
 #' dat$biomass <- get_biomass(
-#'   dbh = dat$dbh, genus = dat$genus,
-#'   species = dat$species, coords = dat[, c("long", "lat")]
+#'   dbh = dat$dbh, 
+#'   genus = dat$genus,
+#'   species = dat$species, 
+#'   coords = dat[, c("long", "lat")]
 #' )
+#' dat
 get_biomass <- function(dbh,
                         genus,
                         coords,
