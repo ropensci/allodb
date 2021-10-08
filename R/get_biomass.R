@@ -121,9 +121,17 @@ get_biomass <- function(dbh,
     )
 
   if (!is.null(species)) {
+    data <- tibble::tibble(
+      id = seq_len(length(dbh)),
+      dbh,
+      genus,
+      species,
+      long = coords[[1]],
+      lat = coords[[2]]
+    )
     df <-
       merge(
-        data.frame(stringsAsFactors = FALSE, id = seq_len(length(dbh)), dbh, genus, species, coords),
+        data,
         params,
         by = c("genus", "species", "long", "lat")
       )
