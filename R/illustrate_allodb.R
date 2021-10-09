@@ -41,7 +41,6 @@
 #'   species = "rubra",
 #'   coords = c(-78.2, 38.9)
 #' )
-#'
 illustrate_allodb <- function(genus,
                               coords,
                               species = NULL,
@@ -72,20 +71,24 @@ illustrate_allodb <- function(genus,
       w95 = w95,
       nres = nres
     )
-  pred <- function(x) params$a * x ** params$b
+  pred <- function(x) params$a * x**params$b
 
   if (is.null(new_eqtable)) {
     equations <- new_equations()
-  } else
+  } else {
     equations <- new_eqtable
+  }
 
   ## get equation info
   eq_info <- apply(equations[, c("equation_id", eqinfo)], 1,
                    function(x)
                      paste(x, collapse = " - "))
-  eq_info <- data.frame(stringsAsFactors = FALSE, equation_id = equations$equation_id,
-                        equation = eq_info)
-  dfcounts <- data.frame(stringsAsFactors = FALSE, table(equation_id = dfagb$equation_id))
+  eq_info <-
+    tibble::tibble(equation_id = equations$equation_id, equation = eq_info)
+
+  data <- table(equation_id = dfagb$equation_id)
+  dfcounts <- tibble::tibble(equation_id = names(data), Freq = unname(data))
+
   eq_info <- merge(eq_info, dfcounts, by = "equation_id")
   eq_info <- eq_info[order(eq_info$Freq, decreasing = TRUE), ]
   eq_info[(neq + 1):nrow(eq_info), "equation"] <- "other"
@@ -94,10 +97,14 @@ illustrate_allodb <- function(genus,
   dfagb <- merge(dfagb, eq_info, by = "equation_id")
 
   g <- ggplot2::ggplot(dfagb, ggplot2::aes(x = dbh, y = agb)) +
-    ggplot2::geom_point(data = subset(dfagb, equation == "other"),
-                        alpha = 0.2) +
-    ggplot2::geom_point(data = subset(dfagb, equation != "other"),
-                        ggplot2::aes(col = equation)) +
+    ggplot2::geom_point(
+      data = subset(dfagb, equation == "other"),
+      alpha = 0.2
+    ) +
+    ggplot2::geom_point(
+      data = subset(dfagb, equation != "other"),
+      ggplot2::aes(col = equation)
+    ) +
     ggplot2::stat_function(
       fun = pred,
       lwd = 2,
@@ -105,9 +112,11 @@ illustrate_allodb <- function(genus,
       lty = 2
     ) +
     ggplot2::theme_classic() +
-    ggplot2::labs(x = "DBH (cm)",
-                  y = "AGB (kg)",
-                  colour = "Top resampled equations")
+    ggplot2::labs(
+      x = "DBH (cm)",
+      y = "AGB (kg)",
+      colour = "Top resampled equations"
+    )
   if (logxy) {
     g <- g +
       ggplot2::scale_x_log10() +
