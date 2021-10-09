@@ -215,3 +215,149 @@ test_that("equations cannot be added when the input format is not correct", {
     )
   )
 })
+
+test_that("w/ `new_taxa` and `NULL` `new_allometry` errors gracefully", {
+  new_taxa <- "Faga"
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = new_taxa,
+      new_allometry = NULL,
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+})
+
+# FIXME: The same applies for a bunch of other arguments, and testing each
+# combination seems tedious. This suggests a problem in the design.
+test_that("with `new_allometry` and NULL `new_taxa` errors gracefully", {
+  expect_snapshot_error(new_equations(new_allometry = "a", new_taxa = NULL))
+})
+
+test_that("with a `new_coords` 'matrix' 1x2 works", {
+  nrow <- 1
+  ncol <- 2
+  a_matrix <- matrix(c(-0.07, 46.11), ncol = ncol)
+  no_error <- NA
+  expect_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = "exp(-2+log(dbh)*2.5)",
+      new_coords = a_matrix,
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    ),
+    no_error
+  )
+})
+
+test_that("with a `new_coords` 'matrix' 2x1 errors gracefully", {
+  nrow <- 2
+  ncol <- 1
+  a_matrix <- matrix(c(-0.07, 46.11), ncol = ncol)
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = "exp(-2+log(dbh)*2.5)",
+      new_coords = a_matrix,
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+})
+
+test_that("with arguments of different lenght errors gracefully", {
+  too_long <- c("exp(-2+log(dbh)*2.5)", "exp(-2+log(dbh)*2.5)")
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = too_long,
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+
+  too_long <- c(5, 5)
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = "exp(-2+log(dbh)*2.5)",
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = too_long,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+
+  too_long <- c(50, 50)
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = "exp(-2+log(dbh)*2.5)",
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = too_long,
+      new_sample_size = 50
+    )
+  )
+
+  too_long <- c(50, 50)
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = "exp(-2+log(dbh)*2.5)",
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = too_long
+    )
+  )
+})
+
+test_that("if `new_allometry` isn't of type character errors gracefully", {
+  not_character <- 1
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = not_character,
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+})
+
+test_that("if `new_allometry` conains an assignment errors gracefully", {
+  has_assignment <- "a = 1"
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = has_assignment,
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+
+  has_assignment <- "a <- 1"
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = has_assignment,
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+})
+
+# TODO: Continue to test that you get the expected errors
