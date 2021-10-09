@@ -26,10 +26,9 @@ Bibliographical information for sourced equations. Links to the
 \code{equations} table by \code{ref_id}.
 }
 \examples{
-#preview the datasets
+# preview the datasets
 print(head(references))
 print(head(references_metadata))
-
 }
 \seealso{
 Other database datasets: 

@@ -23,9 +23,8 @@ from the first tree census
 in 2008, only covering 1 hectare (SCBI plot is 25.6 ha). DBH in cm.
 }
 \examples{
-#preview the datasets
+# preview the datasets
 print(head(scbi_stem1))
-
 }
 \seealso{
 Other datasets: 

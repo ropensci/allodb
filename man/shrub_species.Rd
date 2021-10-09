@@ -15,9 +15,8 @@ Genus and species of shrubby plants identified in the 24 extratropical
 ForestGEO sites used in allodb.
 }
 \examples{
-#preview the dataset
+# preview the dataset
 print(head(shrub_species))
-
 }
 \seealso{
 Other datasets: 

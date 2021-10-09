@@ -92,13 +92,16 @@ lau
 
 # Estimate biomass from multiple sites (using scbi_stem1 as example with
 # multiple coord)
-dat = scbi_stem1[1:100, ]
-dat$long=c(rep(-78,50),rep(-80,50))
-dat$lat = c(rep(40, 50), rep(41, 50))
-dat$biomass<-get_biomass( dbh = dat$dbh, genus=dat$genus,
-species = dat$species, coords = dat[, c("long", "lat")])
+dat <- scbi_stem1[1:100, ]
+dat$long <- c(rep(-78, 50), rep(-80, 50))
+dat$lat <- c(rep(40, 50), rep(41, 50))
+dat$biomass <- get_biomass(
+  dbh = dat$dbh, 
+  genus = dat$genus,
+  species = dat$species, 
+  coords = dat[, c("long", "lat")]
+)
 dat
-
 }
 \seealso{
 \code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}

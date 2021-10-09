@@ -23,10 +23,9 @@ their tree species.
 }
 }
 \examples{
-#preview the datasets
+# preview the datasets
 print(head(sitespecies))
 print(head(sitespecies_metadata))
-
 }
 \seealso{
 Other database datasets: 

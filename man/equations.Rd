@@ -30,10 +30,9 @@ above-ground biomass (AGB) per species based on extratropical ForestGEO
 sites.
 }
 \examples{
-#preview the datasets
+# preview the datasets
 print(head(equations))
 print(head(equations_metadata))
-
 }
 \seealso{
 Other database datasets: 

@@ -6,7 +6,7 @@
 \alias{allodb-package}
 \title{allodb: Tree Biomass Estimation at Extra-Tropical Forest Plots}
 \description{
-Tool to standardize and simplify the tree biomass estimation process across globally distributed extra-tropical forests.
+Standardize and simplify the tree biomass estimation process across globally distributed extratropical forests.
 }
 \seealso{
 Useful links:
@@ -18,13 +18,13 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Erika Gonzalez-Akre \email{maurolepore@gmail.com} [copyright holder]
+\strong{Maintainer}: Erika Gonzalez-Akre \email{GonzalezEB@si.edu} (\href{https://orcid.org/0000-0001-8305-6672}{ORCID}) [copyright holder]
 
 Authors:
 \itemize{
-  \item Camille Piponiot \email{camille.piponiot@gmail.com}
-  \item Mauro Lepore \email{FIXME@gmail.com} (\href{https://orcid.org/0000-0002-1986-7988}{ORCID})
-  \item Kristina Anderson-Teixeira \email{TeixeiraK@si.edu}
+  \item Camille Piponiot \email{camille.piponiot@gmail.com} (\href{https://orcid.org/0000-0002-3473-1982}{ORCID})
+  \item Mauro Lepore \email{maurolepore@gmail.com} (\href{https://orcid.org/0000-0002-1986-7988}{ORCID})
+  \item Kristina Anderson-Teixeira \email{TeixeiraK@si.edu} (\href{https://orcid.org/0000-0001-8461-9713}{ORCID})
 }
 
 Other contributors:

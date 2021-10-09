@@ -30,9 +30,8 @@ zone). The resulting weight has a value between 0 (different climate groups)
 and 1 (exactly the same climate classification).
 }
 \examples{
-#preview the dataset
+# preview the dataset
 print(head(koppenMatrix))
-
 }
 \seealso{
 Other datasets: 

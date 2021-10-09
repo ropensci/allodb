@@ -66,7 +66,6 @@ illustrate_allodb(
   species = "rubra",
   coords = c(-78.2, 38.9)
 )
-
 }
 \seealso{
 \code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}

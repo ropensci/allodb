@@ -15,7 +15,7 @@ Genus and their associated family identified in the extratropical ForestGEO
 sites used in allodb.
 }
 \examples{
-#preview the dataset
+# preview the dataset
 print(head(genus_family))
 }
 \seealso{

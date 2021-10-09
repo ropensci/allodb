@@ -19,9 +19,8 @@ More details on geographical aspects of these ForestGEO sites can be found in
 the accompanying manuscript.
 }
 \examples{
-#preview the datasets
+# preview the datasets
 print(head(sites_info))
-
 }
 \seealso{
 Other database datasets: 
