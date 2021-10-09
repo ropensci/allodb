@@ -19,8 +19,8 @@ BugReports: https://github.com/ropensci/allodb/issues
 Depends: 
     R (>= 3.5) 
 Imports:
+    ggplot2,
     data.table (>= 1.12.8),
-    ggplot2 (>= 3.3.2),
     tibble,
     withr
 Suggests: 
