@@ -24,8 +24,7 @@ Imports:
     tibble,
     withr
 Suggests: 
-    covr (>= 3.2.1),
-    knitr (>= 1.21),
+    covr,
     rmarkdown,
     spelling,
     testthat (>= 3.0.0),
