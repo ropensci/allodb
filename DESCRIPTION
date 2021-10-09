@@ -24,6 +24,7 @@ Imports:
     tibble,
     withr
 Suggests: 
+    knitr,
     covr,
     rmarkdown,
     spelling,
