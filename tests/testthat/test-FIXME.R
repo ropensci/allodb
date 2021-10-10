@@ -52,3 +52,54 @@ test_that("outputs a dataframe of unstable structure", {
 
   expect_false(identical(ncol(out1), ncol(out2)))
 })
+
+test_that("with bad `new_unit_dbh` throws no error", {
+  # Arguments interact with each other. This error does not work when
+  # new_equations() is called with defaults, but does work when it's passed
+  # some values
+
+  # Unexpected: Error doesn't throw
+  FIXME_none <- NA
+  expect_error(new_equations(new_unit_dbh = "bad "), FIXME_none)
+
+  # Eexpected: Error throws
+  expect_snapshot_error(
+    new_equations(
+      new_unit_dbh = "bad ",
+      new_taxa = "Faga",
+      new_allometry = "exp(-2+log(dbh)*2.5)",
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+})
+
+test_that("with bad `new_unit_output` throws no error", {
+  # Unexpected: Error doesn't throw
+  FIXME_none <- NA
+  expect_error(new_equations(new_unit_output = "bad "), FIXME_none)
+
+  # Eexpected: Error throws
+  expect_snapshot_error(
+    new_equations(
+      new_unit_output = "bad ",
+      new_taxa = "Faga",
+      new_allometry = "exp(-2+log(dbh)*2.5)",
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+})
+
+test_that("height can be anything", {
+  bad <- "BAD"
+  none <- NA
+  expect_error(
+    new_equations(new_output_var = "Height", new_unit_output = bad),
+    none
+  )
+})

@@ -47,3 +47,21 @@
     new_allometry should should be written as a
                function of DBH  (e.g. '0.5 * dbh ^ 2').
 
+# height must be in meters
+
+    Height allometries outputs must be in m.
+
+---
+
+    Height allometries outputs must be in m.
+
+# with bad coordinates errors gracefully
+
+    Longitude must be between -180 and 180, and
+               latitude between 90 and 0.
+
+# with equation not a function of DBH errors gracefully
+
+    At least one of the new allometries does not
+               contain DBH as a dependent variable.
+

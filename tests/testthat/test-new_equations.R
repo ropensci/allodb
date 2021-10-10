@@ -360,4 +360,64 @@ test_that("if `new_allometry` conains an assignment errors gracefully", {
   )
 })
 
+test_that("height must be in meters", {
+  bad <- "g"
+  expect_snapshot_error(
+    new_equations(
+      new_output_var = "Height",
+      new_unit_output = bad,
+      new_taxa = "Faga",
+      new_allometry = "dbh",
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 5,
+      new_max_dbh = 50,
+      new_sample_size = 50
+    )
+  )
+})
+
+test_that("height must be in meters", {
+  bad <- "g"
+  expect_snapshot_error(
+    new_equations(
+      new_output_var = "Height",
+      new_unit_output = bad,
+      new_taxa = "Faga",
+      new_allometry = "dbh",
+      new_coords = c(-0.07, 46.11),
+      new_min_dbh = 1,
+      new_max_dbh = 2,
+      new_sample_size = 50
+    )
+  )
+})
+
+test_that("with bad coordinates errors gracefully", {
+  bad <- c(-999, 999)
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = "dbh",
+      new_coords = bad,
+      new_min_dbh = 1,
+      new_max_dbh = 2,
+      new_sample_size = 50
+    )
+  )
+})
+
+test_that("with equation not a function of DBH errors gracefully", {
+  bad <- "1"
+  expect_snapshot_error(
+    new_equations(
+      new_taxa = "Faga",
+      new_allometry = bad,
+      new_coords = c(0, 0),
+      new_min_dbh = 1,
+      new_max_dbh = 2,
+      new_sample_size = 50
+    )
+  )
+})
+
 # TODO: Continue to test that you get the expected errors

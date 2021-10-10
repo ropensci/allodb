@@ -254,7 +254,7 @@ new_equations <- function(subset_taxa = "all",
           byrow = TRUE
         )
     }
-
+    # FIXME: `!is.numeric(new_coords)` triggers another error at line 202
     if (!is.numeric(new_coords) |
       !(ncol(new_coords) == 2 &
         nrow(new_coords) == length(new_taxa))) {
