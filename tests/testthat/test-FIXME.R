@@ -2,6 +2,21 @@
 
 test_that("w/ `NULL` `new_taxa`, `new_allometry`, and `new_coords, outputs
           identical to `new_equations()` -- with all defaults", {
+
+
+  # Avoid unimportant differences in attributes
+  mini_attr <- function(data) {
+    mini <- names(attributes(data.frame(x = 1)))
+    full <- names(attributes(data))
+    extra <- setdiff(full, mini)
+
+    for (i in seq_along(extra)) {
+      attr(data, extra[[i]]) <- NULL
+    }
+
+    data
+  }
+
   out <- new_equations(
       new_taxa = NULL,
       new_allometry = NULL,
@@ -10,7 +25,8 @@ test_that("w/ `NULL` `new_taxa`, `new_allometry`, and `new_coords, outputs
       new_max_dbh = 50,
       new_sample_size = 50
     )
-  expect_equal(out, new_equations())
+
+  expect_equal(mini_attr(out), mini_attr(new_equations()))
 })
 
 test_that("w/ all defaults, it's insensitive to `new_min_dbh`, `new_max_dbh`,
