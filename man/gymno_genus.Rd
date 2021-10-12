@@ -15,7 +15,7 @@ Table with genus and their associated family for Gymnosperms identified in
 the ForestGEO sites used in allodb.
 }
 \examples{
-#preview the dataset
+# preview the dataset
 print(head(gymno_genus))
 }
 \seealso{

@@ -15,7 +15,7 @@ Explanation of the codes used to indicate missing information in equation
 table.
 }
 \examples{
-#preview the dataset
+# preview the dataset
 print(head(missing_values))
 }
 \seealso{
