@@ -203,8 +203,9 @@ new_equations <- function(subset_taxa = "all",
       ncoords <- length(new_coords)
     }
     if (!is.numeric(new_coords) | ncoords != 2) {
-      abort("coords should be a numeric vector or matrix,
-            with 2 values or 2 columns.")
+      abort(
+        "`coords` must be a numeric vector or matrix, with 2 values or columns."
+      )
     }
 
     if (length(new_taxa) != length(new_allometry) |
