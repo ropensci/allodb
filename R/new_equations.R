@@ -248,7 +248,7 @@ new_equations <- function(subset_taxa = "all",
       any(!is.numeric(new_min_dbh)) |
       any(!is.numeric(new_max_dbh))) {
       abort(
-        "`new_max_dbh` must greater than `new_min_dbh` and both positive numbers"
+        "`new_max_dbh` must greater than `new_min_dbh` and both not negative."
       )
     }
 
