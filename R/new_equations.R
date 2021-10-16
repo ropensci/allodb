@@ -212,10 +212,14 @@ new_equations <- function(subset_taxa = "all",
       length(new_allometry) != length(new_min_dbh) |
       length(new_min_dbh) != length(new_max_dbh) |
       length(new_max_dbh) != length(new_sample_size)) {
-      abort(
-        "new_taxa, new_allometry, new_min_dbh, new_max_dbh and
-        new_sample_size must all be the same length."
-      )
+      abort(c(
+        "All of these arguments must have the same length:",
+        "`new_taxa`",
+        "`new_allometry`",
+        "`new_min_dbh`",
+        "`new_max_dbh`",
+        "`new_sample_size`"
+      ))
     }
 
     if (!is.character(new_allometry)) {
