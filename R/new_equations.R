@@ -192,8 +192,9 @@ new_equations <- function(subset_taxa = "all",
 
     if (!is.numeric(new_min_dbh) |
       !is.numeric(new_max_dbh) | !is.numeric(new_sample_size)) {
-      abort("new_min_dbh, new_max_dbh, new_sample_size should
-           be numeric values.")
+      abort(
+        "`new_min_dbh`, `new_max_dbh`, and `new_sample_size` must be numeric."
+      )
     }
 
     if (is.matrix(new_coords)) {
