@@ -223,22 +223,20 @@ new_equations <- function(subset_taxa = "all",
     }
 
     if (!is.character(new_allometry)) {
-      abort("The equation allometry should be a character
-           vector.")
+      abort("The equation allometry should be a character vector.")
     }
     if (any(grepl("=|<-", new_allometry))) {
-      abort("new_allometry should should be written as a
-           function of DBH  (e.g. '0.5 * dbh ^ 2').")
+      abort("`new_allometry` must be a function of dbh (e.g. '0.5 * dbh^2').")
     }
     dbh <- 10
     eval(parse(text = tolower(new_allometry)))
 
     if (!new_unit_dbh %in% c("cm", "mm", "inch")) {
-      abort("new_unit_dbh must be either cm, mm or inch.")
+      abort("`new_unit_dbh` must be in 'cm', 'mm' or 'inch'.")
     }
 
     if (!new_unit_output %in% c("g", "kg", "Mg", "lbs", "m")) {
-      abort("new_unit_output must be either `g`, `kg`, `Mg` or `lbs`, or `m`.")
+      abort("`new_unit_output` must be 'g', 'kg', 'Mg' or 'lbs', or 'm'.")
     }
 
     if (new_output_var == "Height" & new_unit_output != "m") {
