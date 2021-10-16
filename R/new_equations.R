@@ -272,15 +272,15 @@ new_equations <- function(subset_taxa = "all",
     if (any(new_coords[, 1] < -180 |
       new_coords[, 1] > 180 |
       new_coords[, 2] < -90 | new_coords[, 2] > 90)) {
-      abort("Longitude must be between -180 and 180, and
-           latitude between 90 and 0.")
+      abort(
+        "Longitude must be between -180 and 180, and latitude between 90 and 0."
+      )
     }
 
     new_allometry <- tolower(new_allometry)
 
     if (any(!grepl("dbh", new_allometry))) {
-      abort("At least one of the new allometries does not
-           contain DBH as a dependent variable.")
+      abort("Each new allometry must contain DBH as a dependent variable.")
     }
 
     new_equation_id <- paste0("new", seq_len(length(new_taxa)))
@@ -295,10 +295,10 @@ new_equations <- function(subset_taxa = "all",
     })
     koppen_zones <- as.character(unlist(koppen_zones))
     if (length(koppen_zones) != nrow(rcoords_eq)) {
-      abort(
-        "Impossible to find all koppen climate zones based
-        on coordinates. Please check that they are Long, Lat."
-      )
+      abort(c(
+        "Can't find all koppen climate zones based on coordinates",
+        i = "Do you need to check that they are Long, Lat?"
+      ))
     }
 
     added_equations <- tibble::tibble(

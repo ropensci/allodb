@@ -96,9 +96,9 @@ dat <- scbi_stem1[1:100, ]
 dat$long <- c(rep(-78, 50), rep(-80, 50))
 dat$lat <- c(rep(40, 50), rep(41, 50))
 dat$biomass <- get_biomass(
-  dbh = dat$dbh, 
+  dbh = dat$dbh,
   genus = dat$genus,
-  species = dat$species, 
+  species = dat$species,
   coords = dat[, c("long", "lat")]
 )
 dat
