@@ -170,9 +170,11 @@ new_equations <- function(subset_taxa = "all",
 
   ## add new equations ####
   # check that new allometry was added
-  if (is.null(new_allometry) &
-    (!is.null(new_taxa) | !is.null(new_coords))) {
-    abort("You might have forgotten to add the new allometry.")
+  if (is.null(new_allometry) & (!is.null(new_taxa) | !is.null(new_coords))) {
+    abort(c(
+      "`new_allometry` must not be `NULL`",
+      i = "Did you forget to add the new allometry?"
+    ))
   }
 
   if (!is.null(new_allometry)) {
