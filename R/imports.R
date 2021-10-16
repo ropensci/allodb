@@ -1,3 +1,6 @@
+#' @importFrom rlang abort
+NULL
+
 globalVariables(
   c(
     "Lat",

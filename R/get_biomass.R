@@ -101,11 +101,11 @@ get_biomass <- function(dbh,
 
   ## input data checks
   if (any(!is.na(dbh) & (dbh < 0 | dbh > 1e3))) {
-    stop("Your dbh data contain negative values and/or values > 1000 cm.
+    abort("Your dbh data contain negative values and/or values > 1000 cm.
          Please check your data.")
   }
   if (any(abs(coords[, 1]) > 180 | abs(coords[, 2]) > 90)) {
-    stop("Your coords contain longitudes that are not between -180 and 180, or
+    abort("Your coords contain longitudes that are not between -180 and 180, or
          latitudes that are not between -90 and 90. Please check your data.")
   }
 

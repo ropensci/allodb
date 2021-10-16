@@ -45,7 +45,7 @@ resample_agb <- function(genus,
                          w95 = 500,
                          nres = 1e4) {
   if (length(genus) > 1 | length(unlist(coords)) != 2) {
-    stop("This function should not be used for several taxa
+    abort("This function should not be used for several taxa
          and/or locations at once.")
   }
 
