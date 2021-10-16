@@ -240,7 +240,7 @@ new_equations <- function(subset_taxa = "all",
     }
 
     if (new_output_var == "Height" & new_unit_output != "m") {
-      abort("Height allometries outputs must be in m.")
+      abort("Height allometries outputs must be in 'm'.")
     }
 
     if (any(new_max_dbh <= new_min_dbh) |
@@ -248,8 +248,7 @@ new_equations <- function(subset_taxa = "all",
       any(!is.numeric(new_min_dbh)) |
       any(!is.numeric(new_max_dbh))) {
       abort(
-        "new_min_dbh and new_max_dbh must be positive real
-        numbers, with new_max_dbh > new_min_dbh."
+        "`new_max_dbh` must greater than `new_min_dbh` and both positive numbers"
       )
     }
 
