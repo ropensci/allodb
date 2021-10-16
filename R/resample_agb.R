@@ -45,8 +45,7 @@ resample_agb <- function(genus,
                          w95 = 500,
                          nres = 1e4) {
   if (length(genus) > 1 | length(unlist(coords)) != 2) {
-    abort("This function should not be used for several taxa
-         and/or locations at once.")
+    abort("`genus` must hold a single taxon, and `coords` a single location.")
   }
 
   if (!is.null(new_eqtable)) {

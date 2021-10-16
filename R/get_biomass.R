@@ -74,9 +74,9 @@
 #' dat$long <- c(rep(-78, 50), rep(-80, 50))
 #' dat$lat <- c(rep(40, 50), rep(41, 50))
 #' dat$biomass <- get_biomass(
-#'   dbh = dat$dbh, 
+#'   dbh = dat$dbh,
 #'   genus = dat$genus,
-#'   species = dat$species, 
+#'   species = dat$species,
 #'   coords = dat[, c("long", "lat")]
 #' )
 #' dat
@@ -101,12 +101,16 @@ get_biomass <- function(dbh,
 
   ## input data checks
   if (any(!is.na(dbh) & (dbh < 0 | dbh > 1e3))) {
-    abort("Your dbh data contain negative values and/or values > 1000 cm.
-         Please check your data.")
+    abort(c(
+      "Each value of `dbh` must be positive and < 1000 cm.",
+      i = "Do you need to check your data?"
+    ))
   }
   if (any(abs(coords[, 1]) > 180 | abs(coords[, 2]) > 90)) {
-    abort("Your coords contain longitudes that are not between -180 and 180, or
-         latitudes that are not between -90 and 90. Please check your data.")
+    abort(c(
+      "`coords` longitudes must range -180 to 180, and latitudes -90 to 90.",
+      i = "Do you need to check your data?"
+    ))
   }
 
   params <-
