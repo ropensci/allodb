@@ -263,11 +263,10 @@ new_equations <- function(subset_taxa = "all",
     if (!is.numeric(new_coords) |
       !(ncol(new_coords) == 2 &
         nrow(new_coords) == length(new_taxa))) {
-      abort(
-        "new_coords must be a numeric vector of length 2 or
-        a matrix with 2 columns (long, lat) and as many rows
-        as the number of equations."
-      )
+      abort(paste(
+        "`new_coords` must be a numeric vector of length 2 or a matrix with 2",
+        "columns (long, lat) and as many rows as the number of equations."
+      ))
     }
 
     if (any(new_coords[, 1] < -180 |
