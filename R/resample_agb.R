@@ -1,7 +1,7 @@
 #' Resample *allodb* equations to calibrate new allometries
 #'
 #' After attributing a weight to each equation in *allodb* using the
-#' `weight_allom()` function, equations are then resampled within their original
+#' [weight_allom()] function, equations are then resampled within their original
 #' DBH range using [resample_agb()]: the number of resampled values for each
 #' equation is proportional to its weight. It creates S3 objects of class
 #' "numeric".
@@ -14,18 +14,18 @@
 #' @param new_eqtable Optional. An equation table created with the
 #'   [new_equations()] function. Default is the original *allodb* equation
 #'   table.
-#' @param wna a numeric vector, this parameter is used in the `weight_allom()`
+#' @param wna a numeric vector, this parameter is used in the [weight_allom()]
 #'   function to determine the dbh-related and sample-size related weights
 #'   attributed to equations without a specified dbh range or sample size,
 #'   respectively. Default is 0.1.
-#' @param w95 a numeric vector, this parameter is used in the `weight_allom()`
+#' @param w95 a numeric vector, this parameter is used in the [weight_allom()]
 #'   function to determine the value at which the sample-size-related weight
 #'   reaches 95% of its maximum value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is "1e4".
 #'
 #' @return An object of class "data.frame" of resampled DBHs and associated AGB
 #'   from the equation table; the number of  resampled DBHs is proportional to
-#'   the weight provided by the `weight_allom()` function.
+#'   the weight provided by the [weight_allom()] function.
 #'
 #' @seealso [weight_allom()], [new_equations()].
 #'

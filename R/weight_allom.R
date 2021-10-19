@@ -4,7 +4,7 @@
 #' size, and taxonomic and climatic similarity with the species/site combination
 #' considered.
 #'
-#' Each equation is given a weight by the function `weight_allom()`, calculated
+#' Each equation is given a weight by the function [weight_allom()], calculated
 #' as the product of the following components:
 #'
 #' (1) sample-size weight, calculated as:
@@ -39,7 +39,7 @@
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
 #'   [new_equations()] function.
-#' @param wna a numeric vector, this parameter is used in the `weight_allom()`
+#' @param wna a numeric vector, this parameter is used in the [weight_allom()]
 #'   function to determine the sample-size related weights attributed to
 #'   equations without a specified sample size. Default is 0.1.
 #' @param w95 a numeric vector, this parameter is used to determine the value at

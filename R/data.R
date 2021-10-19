@@ -34,9 +34,9 @@
 
 #' Sites and tree species used in allodb and associated metadata
 #'
-#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and
+#' * [sitespecies]: Table of extratropical ForestGEO sites in allodb (n=24) and
 #' their tree species.
-#' * `sitespecies_metadata`: Metadata for `sitespecies` table.
+#' * [sitespecies_metadata]: Metadata for [sitespecies] table.
 #'
 #' @family database datasets
 #'

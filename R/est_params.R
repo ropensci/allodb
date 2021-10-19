@@ -17,11 +17,11 @@
 #' @param new_eqtable Optional. An equation table created with the
 #'   [new_equations()] function. Default is the compiled *allodb* equation
 #'   table.
-#' @param wna a numeric vector, this parameter is used in the `weight_allom()`
+#' @param wna a numeric vector, this parameter is used in the [weight_allom()]
 #'   function to determine the dbh-related and sample-size related weights
 #'   attributed to equations without a specified dbh range or sample size,
 #'   respectively. Default is 0.1.
-#' @param w95 a numeric vector, this parameter is used in the `weight_allom()`
+#' @param w95 a numeric vector, this parameter is used in the [weight_allom()]
 #'   function to determine the value at which the sample-size-related weight
 #'   reaches 95% of its maximum value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is "1e4".

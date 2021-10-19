@@ -10,11 +10,11 @@
 #' taxon (arguments `genus` and  `species`) and location (argument `coords`) in
 #' the user-provided census data. The new allometric equation is based on a set
 #' of allometric equations that can be customized using the `new_eqtable`
-#' argument. Each equation is then given a weight with the `weight_allom()`
+#' argument. Each equation is then given a weight with the [weight_allom()]
 #' function, based on: 1) its original sample size (numbers of trees used to
 #' develop a given allometry), 2) its climatic similarity with the target
 #' location, and 3) its taxonomic similarity with the target taxon (see
-#' documentation of the `weight_allom()` function). The final weight attributed
+#' documentation of the [weight_allom()] function). The final weight attributed
 #' to each equation is the product of those three weights. Equations are then
 #' resampled with the[resample_agb()] funtion: the number of samples per
 #' equation is proportional to its weight, and the total number of samples is
@@ -42,10 +42,10 @@
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
 #'   [new_equations()] function.
-#' @param wna a numeric vector, this parameter is used in the `weight_allom()`
+#' @param wna a numeric vector, this parameter is used in the [weight_allom()]
 #'   function to determine the dbh-related weight attributed to equations
 #'   without a specified dbh range. Default is 0.1.
-#' @param w95 a numeric vector, this parameter is used in the `weight_allom()`
+#' @param w95 a numeric vector, this parameter is used in the [weight_allom()]
 #'   function to determine the value at which the sample-size-related weight
 #'   reaches 95% of its maximum value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is "1e4".
