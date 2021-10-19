@@ -2,7 +2,7 @@
 % Please edit documentation in R/resample_agb.R
 \name{resample_agb}
 \alias{resample_agb}
-\title{Resample \pkg{allodb} equations to calibrate new allometries}
+\title{Resample \emph{allodb} equations to calibrate new allometries}
 \usage{
 resample_agb(
   genus,
@@ -24,7 +24,7 @@ tree.}
 the tree. Default is "NULL", when no species identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function. Default is the original \pkg{allodb} equation
+\code{new_equations()} function. Default is the original \emph{allodb} equation
 table.}
 
 \item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
@@ -44,7 +44,7 @@ from the equation table; the number of  resampled DBHs is proportional to
 the weight provided by the \code{weight_allom()} function.
 }
 \description{
-After attributing a weight to each equation in \pkg{allodb} using the
+After attributing a weight to each equation in \emph{allodb} using the
 \code{weight_allom()} function, equations are then resampled within their original
 DBH range using \code{resample_agb()}: the number of resampled values for each
 equation is proportional to its weight. It creates S3 objects of class

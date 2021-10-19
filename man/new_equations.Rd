@@ -76,7 +76,7 @@ is "DBH", other option is "DBH, H".}
 \item{new_output_var}{dependent variable estimated by the allometry. Default
 is "Total aboveground biomass".}
 
-\item{use_height_allom}{a logical value. In \pkg{allodb} we use Bohn et al.
+\item{use_height_allom}{a logical value. In \emph{allodb} we use Bohn et al.
 (2014) for European sites. User need to provide height allometry when
 needed to calculate AGB. Default is \code{TRUE}.}
 }

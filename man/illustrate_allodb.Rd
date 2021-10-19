@@ -2,7 +2,7 @@
 % Please edit documentation in R/illustrate_allodb.R
 \name{illustrate_allodb}
 \alias{illustrate_allodb}
-\title{Illustrate the resampling of AGB values used in \pkg{allodb}}
+\title{Illustrate the resampling of AGB values used in \emph{allodb}}
 \usage{
 illustrate_allodb(
   genus,
@@ -27,7 +27,7 @@ tree.}
 the tree. Default is \code{NULL}, when no species identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function. Default is the base \pkg{allodb} equation
+\code{new_equations()} function. Default is the base \emph{allodb} equation
 table.}
 
 \item{logxy}{Logical: should values be plotted on a log scale? Default is
@@ -56,8 +56,8 @@ top equations used are shown in the legend. The red curve on the graph
 represents the final fitted equation.
 }
 \description{
-This function illustrates the resampling of AGB values used in \pkg{allodb}.
-It creates objects of class "ggplot".
+This function illustrates the resampling of AGB values used in \emph{allodb}. It
+creates objects of class "ggplot".
 }
 \examples{
 illustrate_allodb(
