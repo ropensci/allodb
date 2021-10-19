@@ -30,12 +30,12 @@ identification is available.}
 \code{\link[=new_equations]{new_equations()}} function. Default is the compiled \emph{allodb} equation
 table.}
 
-\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
+\item{wna}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
 function to determine the dbh-related and sample-size related weights
 attributed to equations without a specified dbh range or sample size,
 respectively. Default is 0.1.}
 
-\item{w95}{a numeric vector, this parameter is used in the \code{weight_allom()}
+\item{w95}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
 function to determine the value at which the sample-size-related weight
 reaches 95\% of its maximum value (max=1). Default is 500.}
 

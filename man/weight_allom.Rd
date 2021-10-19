@@ -26,7 +26,7 @@ identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 \code{\link[=new_equations]{new_equations()}} function.}
 
-\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
+\item{wna}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
 function to determine the sample-size related weights attributed to
 equations without a specified sample size. Default is 0.1.}
 
@@ -43,7 +43,7 @@ size, and taxonomic and climatic similarity with the species/site combination
 considered.
 }
 \details{
-Each equation is given a weight by the function \code{weight_allom()}, calculated
+Each equation is given a weight by the function \code{\link[=weight_allom]{weight_allom()}}, calculated
 as the product of the following components:
 
 (1) sample-size weight, calculated as:

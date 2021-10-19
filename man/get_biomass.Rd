@@ -33,11 +33,11 @@ identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 \code{\link[=new_equations]{new_equations()}} function.}
 
-\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
+\item{wna}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
 function to determine the dbh-related weight attributed to equations
 without a specified dbh range. Default is 0.1.}
 
-\item{w95}{a numeric vector, this parameter is used in the \code{weight_allom()}
+\item{w95}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
 function to determine the value at which the sample-size-related weight
 reaches 95\% of its maximum value (max=1). Default is 500.}
 
@@ -59,11 +59,11 @@ censuses can be estimated using this function.
 taxon (arguments \code{genus} and  \code{species}) and location (argument \code{coords}) in
 the user-provided census data. The new allometric equation is based on a set
 of allometric equations that can be customized using the \code{new_eqtable}
-argument. Each equation is then given a weight with the \code{weight_allom()}
+argument. Each equation is then given a weight with the \code{\link[=weight_allom]{weight_allom()}}
 function, based on: 1) its original sample size (numbers of trees used to
 develop a given allometry), 2) its climatic similarity with the target
 location, and 3) its taxonomic similarity with the target taxon (see
-documentation of the \code{weight_allom()} function). The final weight attributed
+documentation of the \code{\link[=weight_allom]{weight_allom()}} function). The final weight attributed
 to each equation is the product of those three weights. Equations are then
 resampled with the\code{\link[=resample_agb]{resample_agb()}} funtion: the number of samples per
 equation is proportional to its weight, and the total number of samples is
