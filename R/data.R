@@ -50,8 +50,8 @@
 
 #' Equation references and associated metadata
 #'
-#' Bibliographical information for sourced equations. Links to the
-#' `equations` table by `ref_id`.
+#' Bibliographical information for sourced equations. Links to the `equations`
+#' table by `ref_id`.
 #'
 #' @description
 #' * `references`: A data frame listing all references used in `equation` table.
@@ -85,9 +85,9 @@
 #' Tree census data from SCBI ForestGEO plot
 #'
 #' A table with tree data from the Smithsonian Conservation Biology Institute,
-#' USA (SCBI) ForestGEO dynamics plot. This dataset is an extract
-#' from the first tree census
-#' in 2008, only covering 1 hectare (SCBI plot is 25.6 ha). DBH in cm.
+#' USA (SCBI) ForestGEO dynamics plot. This dataset is an extract from the first
+#' tree census in 2008, only covering 1 hectare (SCBI plot is 25.6 ha). DBH in
+#' cm.
 #'
 #' @source Full datasets for tree census data at SCBI can be requested through
 #'   the ForestGEO portal (<https://forestgeo.si.edu/>). Census 1, 2, and 3 can
