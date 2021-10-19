@@ -9,7 +9,7 @@
 #' @param species A character value, containing the species (e.g. "rubra") of
 #'   the tree. Default is `NULL`, when no species identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   `new_equations()` function. Default is the base *allodb* equation
+#'   [new_equations()] function. Default is the base *allodb* equation
 #'   table.
 #' @param logxy Logical: should values be plotted on a log scale? Default is
 #'   `FALSE`.

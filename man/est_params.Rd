@@ -27,7 +27,7 @@ species (e.g. "rubra")  of each tree. Default is \code{NULL}, when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function. Default is the compiled \emph{allodb} equation
+\code{\link[=new_equations]{new_equations()}} function. Default is the compiled \emph{allodb} equation
 table.}
 
 \item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}

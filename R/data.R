@@ -5,8 +5,8 @@
 #' sites.
 #'
 #' @description
-#'* `equations`: Table of allometric equations.
-#'* `equations_metadata`: Explanation of columns for `equations` table.
+#'* [equations]: Table of allometric equations.
+#'* [equations_metadata]: Explanation of columns for [equations] table.
 #'
 #' @source See [references] for equations original sources.
 #'
@@ -50,7 +50,7 @@
 
 #' Equation references and associated metadata
 #'
-#' Bibliographical information for sourced equations. Links to the `equations`
+#' Bibliographical information for sourced equations. Links to the [equations]
 #' table by `ref_id`.
 #'
 #' @description

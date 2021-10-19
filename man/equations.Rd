@@ -20,8 +20,8 @@ equations_metadata
 }
 \description{
 \itemize{
-\item \code{equations}: Table of allometric equations.
-\item \code{equations_metadata}: Explanation of columns for \code{equations} table.
+\item \link{equations}: Table of allometric equations.
+\item \link{equations_metadata}: Explanation of columns for \link{equations} table.
 }
 }
 \details{

@@ -12,7 +12,7 @@
 #' @param species a character value, containing the species (e.g. "rubra") of
 #'   the tree. Default is "NULL", when no species identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   `new_equations()` function. Default is the original *allodb* equation
+#'   [new_equations()] function. Default is the original *allodb* equation
 #'   table.
 #' @param wna a numeric vector, this parameter is used in the `weight_allom()`
 #'   function to determine the dbh-related and sample-size related weights

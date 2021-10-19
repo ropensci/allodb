@@ -31,7 +31,7 @@ species (e.g. "rubra")  of each tree. Default is \code{NULL}, when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function.}
+\code{\link[=new_equations]{new_equations()}} function.}
 
 \item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
 function to determine the dbh-related weight attributed to equations
@@ -70,9 +70,9 @@ equation is proportional to its weight, and the total number of samples is
 provided by the argument \code{nres}. The resampling is done by drawing DBH values
 from a uniform distribution on the DBH range of the equation, and estimating
 the AGB with the equation. The couples of values (DBH, AGB) obtained are then
-used in the function \code{est_params()} to calibrate a new allometric equation,
+used in the function \code{\link[=est_params]{est_params()}} to calibrate a new allometric equation,
 by applying a linear regression to the log-transformed data. The parameters
-of the new allometric equations are then used in the \code{get_biomass()} function
+of the new allometric equations are then used in the \code{\link[=get_biomass]{get_biomass()}} function
 by back-transforming the AGB predictions based on the user-provided DBHs.
 }
 \section{Warning}{

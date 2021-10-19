@@ -21,9 +21,9 @@
 #' provided by the argument `nres`. The resampling is done by drawing DBH values
 #' from a uniform distribution on the DBH range of the equation, and estimating
 #' the AGB with the equation. The couples of values (DBH, AGB) obtained are then
-#' used in the function `est_params()` to calibrate a new allometric equation,
+#' used in the function [est_params()] to calibrate a new allometric equation,
 #' by applying a linear regression to the log-transformed data. The parameters
-#' of the new allometric equations are then used in the `get_biomass()` function
+#' of the new allometric equations are then used in the [get_biomass()] function
 #' by back-transforming the AGB predictions based on the user-provided DBHs.
 #'
 #' @section Warning:
@@ -41,7 +41,7 @@
 #'   species (e.g. "rubra")  of each tree. Default is `NULL`, when no species
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   `new_equations()` function.
+#'   [new_equations()] function.
 #' @param wna a numeric vector, this parameter is used in the `weight_allom()`
 #'   function to determine the dbh-related weight attributed to equations
 #'   without a specified dbh range. Default is 0.1.
