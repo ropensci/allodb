@@ -2,7 +2,7 @@
 % Please edit documentation in R/illustrate_allodb.R
 \name{illustrate_allodb}
 \alias{illustrate_allodb}
-\title{Illustrate the resampling of AGB values used in \pkg{allodb}.}
+\title{Illustrate the resampling of AGB values used in \pkg{allodb}}
 \usage{
 illustrate_allodb(
   genus,
@@ -18,8 +18,8 @@ illustrate_allodb(
 )
 }
 \arguments{
-\item{genus}{A character value, containing the genus (e.g. "Quercus")
-of the tree.}
+\item{genus}{A character value, containing the genus (e.g. "Quercus") of the
+tree.}
 
 \item{coords}{A numeric vector of length 2 with longitude and latitude.}
 
@@ -27,8 +27,8 @@ of the tree.}
 the tree. Default is \code{NULL}, when no species identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function. Default is the base \pkg{allodb}
-equation table.}
+\code{new_equations()} function. Default is the base \pkg{allodb} equation
+table.}
 
 \item{logxy}{Logical: should values be plotted on a log scale? Default is
 \code{FALSE}.}
@@ -39,15 +39,14 @@ the 10 equations with the highest weights are shown in the legend.}
 \item{eqinfo}{Which column(s) of the equation table should be used in the
 legend? Default is "equation_taxa".}
 
-\item{wna}{a numeric vector, this parameter is used in the
-\code{weight_allom()} function to determine the
-dbh-related and sample-size related weights attributed to equations without
-a specified dbh range or sample size, respectively. Default is 0.1.}
+\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
+function to determine the dbh-related and sample-size related weights
+attributed to equations without a specified dbh range or sample size,
+respectively. Default is 0.1.}
 
-\item{w95}{a numeric vector, this parameter is used in the
-\code{weight_allom()} function to determine the
-value at which the sample-size-related weight reaches 95\% of its maximum
-value (max=1). Default is 500.}
+\item{w95}{a numeric vector, this parameter is used in the \code{weight_allom()}
+function to determine the value at which the sample-size-related weight
+reaches 95\% of its maximum value (max=1). Default is 500.}
 
 \item{nres}{number of resampled values. Default is "1e4".}
 }
@@ -68,5 +67,5 @@ illustrate_allodb(
 )
 }
 \seealso{
-\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}
+\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}.
 }

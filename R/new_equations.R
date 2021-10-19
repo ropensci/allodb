@@ -42,10 +42,9 @@
 #'   is "DBH", other option is "DBH, H".
 #' @param new_output_var dependent variable estimated by the allometry. Default
 #'   is "Total aboveground biomass".
-#' @param use_height_allom a logical value. In \pkg{allodb}
-#' we use Bohn et al. (2014)
-#' for European sites. User need to provide height allometry
-#' when needed to calculate AGB. Default is `TRUE`.
+#' @param use_height_allom a logical value. In \pkg{allodb} we use Bohn et al.
+#'   (2014) for European sites. User need to provide height allometry when
+#'   needed to calculate AGB. Default is `TRUE`.
 #'
 #' @return An object of class "data.frame" of new equations.
 #'
@@ -95,8 +94,8 @@ new_equations <- function(subset_taxa = "all",
   suppressWarnings(new_equations$output_units_cf <-
     as.numeric(new_equations$output_units_cf))
 
-  ## replace height with height allometry  ####
-  ## from Bohn et al. 2014 in Jansen et al. 1996
+  ## replace height with height allometry  #### from Bohn et al. 2014 in Jansen
+  ## et al. 1996
   if (use_height_allom &
     "jansen_1996_otvb" %in% new_equations$ref_id) {
     eq_jansen <- subset(new_equations, ref_id == "jansen_1996_otvb")
