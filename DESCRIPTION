@@ -20,6 +20,7 @@ Depends:
     R (>= 3.4) 
 Imports:
     data.table,
+    rlang,
     ggplot2,
     tibble,
     withr

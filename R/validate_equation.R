@@ -32,11 +32,11 @@ validate_one_equation <- function(equation, dbh = 1, h = 1, env = current_env())
   tryCatch(
     eval(parse(text = equation), envir = env),
     error = function(e) {
-      stop(
-        "`text` must be valid R code.\nx Invalid: ", equation, ".\n",
-        "* Error: ", conditionMessage(e),
-        call. = FALSE
-      )
+      abort(c(
+        "`text` must be valid R code.",
+        x = paste("Invalid:", equation),
+        x = paste("Error:", conditionMessage(e))
+      ))
     }
   )
 
