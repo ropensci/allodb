@@ -52,9 +52,9 @@ value (max=1). Default is 500.}
 \item{nres}{number of resampled values. Default is "1e4".}
 }
 \value{
-A ggplot showing all resampled dbh-agb values. The top equations used
-are shown in the legend. The red curve on the graph represents the final
-fitted equation.
+An object of class "ggplot" showing all resampled dbh-agb values. The
+top equations used are shown in the legend. The red curve on the graph
+represents the final fitted equation.
 }
 \description{
 This function illustrates the resampling of AGB values used in \pkg{allodb}.

@@ -82,7 +82,7 @@ for European sites. User need to provide height allometry
 when needed to calculate AGB. Default is \code{TRUE}.}
 }
 \value{
-A new equation dataframe (\code{tibble::tibble()} object).
+An object of class "data.frame" of new equations.
 }
 \description{
 This function modifies the original equation table to be used in other

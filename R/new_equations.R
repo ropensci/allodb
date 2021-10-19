@@ -47,7 +47,7 @@
 #' for European sites. User need to provide height allometry
 #' when needed to calculate AGB. Default is `TRUE`.
 #'
-#' @return A new equation dataframe (`tibble::tibble()` object).
+#' @return An object of class "data.frame" of new equations.
 #'
 #' @export
 #'

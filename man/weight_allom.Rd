@@ -37,7 +37,7 @@ sample-size-related weight reaches 95\% of its maximum value (max=1).
 Default is 500.}
 }
 \value{
-A named numeric vector, with one weight for each equation.
+A named "numeric" vector with one weight for each equation.
 }
 \description{
 This function attributes a weight to each equation based on its sampling

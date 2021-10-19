@@ -53,8 +53,8 @@
 #' then used in the `get_biomass()` function by back-transforming the AGB
 #' predictions based on the user-provided DBHs.
 #'
-#' @return A vector of class "numeric" of the same length as dbh, containing AGB
-#' value (in kg) for every stem
+#' @return A "numeric" vector of the same length as dbh, containing AGB value
+#'   (in kg) for every stem.
 #'
 #' @seealso [weight_allom()], [new_equations()]
 #'

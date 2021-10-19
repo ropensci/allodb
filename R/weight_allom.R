@@ -49,7 +49,7 @@
 #'   these equations will have a significant relative weight in the final
 #'   prediction only when no other more specific equation is available.
 #'
-#' @return A named numeric vector, with one weight for each equation.
+#' @return A named "numeric" vector with one weight for each equation.
 #'
 #' @seealso [get_biomass()], [new_equations()]
 #'

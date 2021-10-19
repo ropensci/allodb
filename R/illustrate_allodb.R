@@ -27,9 +27,9 @@
 #' value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is "1e4".
 #'
-#' @return A ggplot showing all resampled dbh-agb values. The top equations used
-#' are shown in the legend. The red curve on the graph represents the final
-#'   fitted equation.
+#' @return An object of class "ggplot" showing all resampled dbh-agb values. The
+#'   top equations used are shown in the legend. The red curve on the graph
+#'   represents the final fitted equation.
 #'
 #' @seealso [weight_allom()], [new_equations()]
 #'

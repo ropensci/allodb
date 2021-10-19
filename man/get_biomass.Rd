@@ -46,8 +46,8 @@ maximum value (max=1). Default is 500.}
 \item{nres}{number of resampled values. Default is "1e4".}
 }
 \value{
-A vector of class "numeric" of the same length as dbh, containing AGB
-value (in kg) for every stem
+A "numeric" vector of the same length as dbh, containing AGB value
+(in kg) for every stem.
 }
 \description{
 This function calculates the aboveground biomass (or other tree components)

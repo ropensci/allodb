@@ -28,9 +28,8 @@
 #' maximum value (max=1). Default is 500.
 #' @param nres number of resampled values. Default is "1e4".
 #'
-#' @return A data frame object (`tibble::tibble()`) of fitted
-#' coefficients (columns) of the non-linear
-#' least-square regression:
+#' @return An object of class "data.frame" of fitted coefficients (columns) of
+#'   the non-linear least-square regression:
 #' \deqn{AGB = a * dbh ^ b + e, \space \mathit{with} \space e ~ N(0,
 #' sigma^2)}{AGB = a * dbh ^ b + e, with e ~ N(0, sigma^2)}
 #'

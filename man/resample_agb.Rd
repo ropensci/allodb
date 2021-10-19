@@ -39,9 +39,9 @@ maximum value (max=1). Default is 500.}
 \item{nres}{number of resampled values. Default is "1e4".}
 }
 \value{
-A data frame (\code{tibble::tibble()} object) of resampled DBHs and associated AGB from the equation
-table; the number of  resampled DBHs is proportional to the weight provided
-by the \code{weight_allom()} function.
+An object of class "data.frame" of resampled DBHs and associated AGB
+from the equation table; the number of  resampled DBHs is proportional to
+the weight provided by the \code{weight_allom()} function.
 }
 \description{
 After attributing a weight to each equation in \pkg{allodb}
