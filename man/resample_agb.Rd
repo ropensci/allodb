@@ -46,7 +46,7 @@ the weight provided by the \code{weight_allom()} function.
 \description{
 After attributing a weight to each equation in \emph{allodb} using the
 \code{weight_allom()} function, equations are then resampled within their original
-DBH range using \code{resample_agb()}: the number of resampled values for each
+DBH range using \code{\link[=resample_agb]{resample_agb()}}: the number of resampled values for each
 equation is proportional to its weight. It creates S3 objects of class
 "numeric".
 }

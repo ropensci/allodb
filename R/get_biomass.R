@@ -16,7 +16,7 @@
 #' location, and 3) its taxonomic similarity with the target taxon (see
 #' documentation of the `weight_allom()` function). The final weight attributed
 #' to each equation is the product of those three weights. Equations are then
-#' resampled with the`resample_agb()` funtion: the number of samples per
+#' resampled with the[resample_agb()] funtion: the number of samples per
 #' equation is proportional to its weight, and the total number of samples is
 #' provided by the argument `nres`. The resampling is done by drawing DBH values
 #' from a uniform distribution on the DBH range of the equation, and estimating
