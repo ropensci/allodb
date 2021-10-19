@@ -26,15 +26,13 @@ identification is available.}
 \item{new_eqtable}{Optional. An equation table created with the
 \code{new_equations()} function.}
 
-\item{wna}{a numeric vector, this parameter is used in
-the \code{weight_allom()} function to determine
-the sample-size related weights attributed to equations
-without a specified
-sample size. Default is 0.1.}
+\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
+function to determine the sample-size related weights attributed to
+equations without a specified sample size. Default is 0.1.}
 
-\item{w95}{a numeric vector, this parameter is used to determine the value at which the
-sample-size-related weight reaches 95\% of its maximum value (max=1).
-Default is 500.}
+\item{w95}{a numeric vector, this parameter is used to determine the value at
+which the sample-size-related weight reaches 95\% of its maximum value
+(max=1). Default is 500.}
 }
 \value{
 A named "numeric" vector with one weight for each equation.
@@ -45,8 +43,8 @@ size, and taxonomic and climatic similarity with the species/site combination
 considered.
 }
 \details{
-Each equation is given a weight by the function \code{weight_allom()},
-calculated as the product of the following components:
+Each equation is given a weight by the function \code{weight_allom()}, calculated
+as the product of the following components:
 
 (1) sample-size weight, calculated as:
 
@@ -58,13 +56,12 @@ default).
 
 (2) climate weight, based on the similarity between the climatic conditions
 of the equation site and the target location, using the three-letter system
-of Koppen's climate scheme. Climate weights associated with each
-combination of two Koppen climates are provided in \code{data("koppenMatrix")}.
-The resulting weight has a value between 1e-6 (different climate groups)
-and 1 (exactly the same climate classification). When an equation was
-calibrated with trees from several locations with different Koppen
-climates, the maximum value out of all pairwise equation-site climate
-weights is used.
+of Koppen's climate scheme. Climate weights associated with each combination
+of two Koppen climates are provided in \code{data("koppenMatrix")}. The resulting
+weight has a value between 1e-6 (different climate groups) and 1 (exactly the
+same climate classification). When an equation was calibrated with trees from
+several locations with different Koppen climates, the maximum value out of
+all pairwise equation-site climate weights is used.
 
 (3) taxonomic weight: equal to 1 for same species equations, 0.8 for same
 genus equations, 0.5 for same family equations and for equations calibrated
