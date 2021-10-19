@@ -54,8 +54,8 @@
 #' table by `ref_id`.
 #'
 #' @description
-#' * `references`: A data frame listing all references used in `equation` table.
-#' * `references_metadata`: Metadata for `reference` table.
+#' * [references]: A data frame listing all references used in `equation` table.
+#' * [references_metadata]: Metadata for `reference` table.
 #'
 #' @family database datasets
 #'
