@@ -22,8 +22,8 @@ references_metadata
 }
 }
 \details{
-Bibliographical information for sourced equations. Links to the
-\code{equations} table by \code{ref_id}.
+Bibliographical information for sourced equations. Links to the \code{equations}
+table by \code{ref_id}.
 }
 \examples{
 # preview the datasets
