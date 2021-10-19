@@ -4,7 +4,7 @@
 \name{equations}
 \alias{equations}
 \alias{equations_metadata}
-\title{Tables of allometric equations and associated metadata.}
+\title{Tables of allometric equations and associated metadata}
 \format{
 An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 570 rows and 47 columns.
 

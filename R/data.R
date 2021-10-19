@@ -1,4 +1,4 @@
-#' Tables of allometric equations and associated metadata.
+#' Tables of allometric equations and associated metadata
 #'
 #' A compilation of best available allometry equations to calculate tree
 #' above-ground biomass (AGB) per species based on extratropical ForestGEO

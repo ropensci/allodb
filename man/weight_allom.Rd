@@ -80,5 +80,5 @@ str(x)
 head(x)
 }
 \seealso{
-\code{\link[=get_biomass]{get_biomass()}}, \code{\link[=new_equations]{new_equations()}}
+\code{\link[=get_biomass]{get_biomass()}}, \code{\link[=new_equations]{new_equations()}}.
 }

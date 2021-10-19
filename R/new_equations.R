@@ -23,10 +23,10 @@
 #'   belowground)". Be aware that currently only a few equations represent those
 #'   other variables, so estimated values might not be very accurate.
 #' @param new_taxa character string or vector specifying the taxon (or taxa) for
-#'   which the allometry has been calibrated
-#' @param new_allometry a character string with the allometric equation
+#'   which the allometry has been calibrated.
+#' @param new_allometry a character string with the allometric equation.
 #' @param new_coords a vector or matrix of coordinates (longitude, latitude) of
-#'   the calibration data
+#'   the calibration data.
 #' @param new_min_dbh numerical value, minimum DBH for which the equation is
 #'   valid (in cm). Default is `NULL` (nothing is added).
 #' @param new_max_dbh numerical value, maximum DBH for which the equation is

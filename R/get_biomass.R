@@ -44,7 +44,7 @@
 #'   `new_equations()` function.
 #' @param wna a numeric vector, this parameter is used in the `weight_allom()`
 #'   function to determine the dbh-related weight attributed to equations
-#'   without a specified dbh range. Default is 0.1
+#'   without a specified dbh range. Default is 0.1.
 #' @param w95 a numeric vector, this parameter is used in the `weight_allom()`
 #'   function to determine the value at which the sample-size-related weight
 #'   reaches 95% of its maximum value (max=1). Default is 500.

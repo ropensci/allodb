@@ -30,7 +30,7 @@ table.}
 \item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
 function to determine the dbh-related and sample-size related weights
 attributed to equations without a specified dbh range or sample size,
-respectively. Default is 0.1}
+respectively. Default is 0.1.}
 
 \item{w95}{a numeric vector, this parameter is used in the \code{weight_allom()}
 function to determine the value at which the sample-size-related weight

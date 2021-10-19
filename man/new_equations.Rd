@@ -47,12 +47,12 @@ belowground)". Be aware that currently only a few equations represent those
 other variables, so estimated values might not be very accurate.}
 
 \item{new_taxa}{character string or vector specifying the taxon (or taxa) for
-which the allometry has been calibrated}
+which the allometry has been calibrated.}
 
-\item{new_allometry}{a character string with the allometric equation}
+\item{new_allometry}{a character string with the allometric equation.}
 
 \item{new_coords}{a vector or matrix of coordinates (longitude, latitude) of
-the calibration data}
+the calibration data.}
 
 \item{new_min_dbh}{numerical value, minimum DBH for which the equation is
 valid (in cm). Default is \code{NULL} (nothing is added).}
