@@ -70,7 +70,7 @@ trees used to develop a given allometry), 2) its climatic similarity with
 the target location, and 3) its taxonomic similarity with the target taxon
 (see documentation of the \code{weight_allom()} function). The final weight
 attributed to each equation is the product of those three weights.
-Equations are then resampled with the\code{resample_agb()} funtion: the number
+Equations are then resampled with the\code{resample_agb()} function: the number
 of samples per equation is proportional to its weight, and the total number
 of samples is provided by the argument \code{nres}. The resampling is done by
 drawing DBH values from a uniform distribution on the DBH range of the
@@ -87,7 +87,8 @@ predictions based on the user-provided DBHs.
 # plot
 lau <- subset(scbi_stem1, Family == "Lauraceae")
 lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species,
-coords = c(-78.2, 38.9))
+  coords = c(-78.2, 38.9)
+)
 lau
 
 # Estimate biomass from multiple sites (using scbi_stem1 as example with

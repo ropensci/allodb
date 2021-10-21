@@ -18,13 +18,13 @@ test_that("w/ `NULL` `new_taxa`, `new_allometry`, and `new_coords, outputs
   }
 
   out <- new_equations(
-      new_taxa = NULL,
-      new_allometry = NULL,
-      new_coords = NULL,
-      new_min_dbh = 5,
-      new_max_dbh = 50,
-      new_sample_size = 50
-    )
+    new_taxa = NULL,
+    new_allometry = NULL,
+    new_coords = NULL,
+    new_min_dbh = 5,
+    new_max_dbh = 50,
+    new_sample_size = 50
+  )
 
   expect_equal(mini_attr(out), mini_attr(new_equations()))
 })
