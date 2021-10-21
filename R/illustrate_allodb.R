@@ -79,9 +79,12 @@ illustrate_allodb <- function(genus,
   }
 
   ## get equation info
-  eq_info <- apply(equations[, c("equation_id", eqinfo)], 1,
-                   function(x)
-                     paste(x, collapse = " - "))
+  eq_info <- apply(
+    equations[, c("equation_id", eqinfo)], 1,
+    function(x) {
+      paste(x, collapse = " - ")
+    }
+  )
   eq_info <-
     tibble::tibble(equation_id = equations$equation_id, equation = eq_info)
 

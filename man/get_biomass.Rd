@@ -86,7 +86,8 @@ The function can run into some memory problems when used on large datasets
 # plot
 lau <- subset(scbi_stem1, Family == "Lauraceae")
 lau$agb <- get_biomass(lau$dbh, lau$genus, lau$species,
-coords = c(-78.2, 38.9))
+  coords = c(-78.2, 38.9)
+)
 lau
 
 # Estimate biomass from multiple sites (using scbi_stem1 as example with

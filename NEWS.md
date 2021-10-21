@@ -1,3 +1,5 @@
+# allodb (development version)
+
 # allodb 0.0.1
 
 * Add support for R 3.4.
