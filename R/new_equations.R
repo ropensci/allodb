@@ -23,10 +23,10 @@
 #'   belowground)". Be aware that currently only a few equations represent those
 #'   other variables, so estimated values might not be very accurate.
 #' @param new_taxa character string or vector specifying the taxon (or taxa) for
-#'   which the allometry has been calibrated
-#' @param new_allometry a character string with the allometric equation
+#'   which the allometry has been calibrated.
+#' @param new_allometry a character string with the allometric equation.
 #' @param new_coords a vector or matrix of coordinates (longitude, latitude) of
-#'   the calibration data
+#'   the calibration data.
 #' @param new_min_dbh numerical value, minimum DBH for which the equation is
 #'   valid (in cm). Default is `NULL` (nothing is added).
 #' @param new_max_dbh numerical value, maximum DBH for which the equation is
@@ -42,12 +42,11 @@
 #'   is "DBH", other option is "DBH, H".
 #' @param new_output_var dependent variable estimated by the allometry. Default
 #'   is "Total aboveground biomass".
-#' @param use_height_allom a logical value. In \pkg{allodb}
-#' we use Bohn et al. (2014)
-#' for European sites. User need to provide height allometry
-#' when needed to calculate AGB. Default is `TRUE`.
+#' @param use_height_allom a logical value. In *allodb* we use Bohn et al.
+#'   (2014) for European sites. User need to provide height allometry when
+#'   needed to calculate AGB. Default is `TRUE`.
 #'
-#' @return A new equation dataframe (`tibble::tibble()` object).
+#' @return An object of class "data.frame" of new equations.
 #'
 #' @export
 #'
@@ -95,8 +94,8 @@ new_equations <- function(subset_taxa = "all",
   suppressWarnings(new_equations$output_units_cf <-
     as.numeric(new_equations$output_units_cf))
 
-  ## replace height with height allometry  ####
-  ## from Bohn et al. 2014 in Jansen et al. 1996
+  ## replace height with height allometry  #### from Bohn et al. 2014 in Jansen
+  ## et al. 1996
   if (use_height_allom &
     "jansen_1996_otvb" %in% new_equations$ref_id) {
     eq_jansen <- subset(new_equations, ref_id == "jansen_1996_otvb")

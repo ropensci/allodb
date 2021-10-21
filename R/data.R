@@ -1,12 +1,12 @@
-#' Tables of allometric equations and associated metadata.
+#' Tables of allometric equations and associated metadata
 #'
 #' A compilation of best available allometry equations to calculate tree
 #' above-ground biomass (AGB) per species based on extratropical ForestGEO
 #' sites.
 #'
 #' @description
-#'* `equations`: Table of allometric equations.
-#'* `equations_metadata`: Explanation of columns for `equations` table.
+#'* [equations]: Table of allometric equations.
+#'* [equations_metadata]: Explanation of columns for [equations] table.
 #'
 #' @source See [references] for equations original sources.
 #'
@@ -34,9 +34,9 @@
 
 #' Sites and tree species used in allodb and associated metadata
 #'
-#' * `sitespecies`: Table of extratropical ForestGEO sites in allodb (n=24) and
+#' * [sitespecies]: Table of extratropical ForestGEO sites in allodb (n=24) and
 #' their tree species.
-#' * `sitespecies_metadata`: Metadata for `sitespecies` table.
+#' * [sitespecies_metadata]: Metadata for [sitespecies] table.
 #'
 #' @family database datasets
 #'
@@ -50,12 +50,12 @@
 
 #' Equation references and associated metadata
 #'
-#' Bibliographical information for sourced equations. Links to the
-#' `equations` table by `ref_id`.
+#' Bibliographical information for sourced equations. Links to the [equations]
+#' table by `ref_id`.
 #'
 #' @description
-#' * `references`: A data frame listing all references used in `equation` table.
-#' * `references_metadata`: Metadata for `reference` table.
+#' * [references]: A data frame listing all references used in `equation` table.
+#' * [references_metadata]: Metadata for `reference` table.
 #'
 #' @family database datasets
 #'
@@ -85,9 +85,9 @@
 #' Tree census data from SCBI ForestGEO plot
 #'
 #' A table with tree data from the Smithsonian Conservation Biology Institute,
-#' USA (SCBI) ForestGEO dynamics plot. This dataset is an extract
-#' from the first tree census
-#' in 2008, only covering 1 hectare (SCBI plot is 25.6 ha). DBH in cm.
+#' USA (SCBI) ForestGEO dynamics plot. This dataset is an extract from the first
+#' tree census in 2008, only covering 1 hectare (SCBI plot is 25.6 ha). DBH in
+#' cm.
 #'
 #' @source Full datasets for tree census data at SCBI can be requested through
 #'   the ForestGEO portal (<https://forestgeo.si.edu/>). Census 1, 2, and 3 can

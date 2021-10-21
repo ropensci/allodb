@@ -17,9 +17,9 @@ sitespecies_metadata
 }
 \description{
 \itemize{
-\item \code{sitespecies}: Table of extratropical ForestGEO sites in allodb (n=24) and
+\item \link{sitespecies}: Table of extratropical ForestGEO sites in allodb (n=24) and
 their tree species.
-\item \code{sitespecies_metadata}: Metadata for \code{sitespecies} table.
+\item \link{sitespecies_metadata}: Metadata for \link{sitespecies} table.
 }
 }
 \examples{

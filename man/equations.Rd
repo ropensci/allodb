@@ -4,7 +4,7 @@
 \name{equations}
 \alias{equations}
 \alias{equations_metadata}
-\title{Tables of allometric equations and associated metadata.}
+\title{Tables of allometric equations and associated metadata}
 \format{
 An object of class \code{spec_tbl_df} (inherits from \code{tbl_df}, \code{tbl}, \code{data.frame}) with 570 rows and 47 columns.
 
@@ -20,8 +20,8 @@ equations_metadata
 }
 \description{
 \itemize{
-\item \code{equations}: Table of allometric equations.
-\item \code{equations_metadata}: Explanation of columns for \code{equations} table.
+\item \link{equations}: Table of allometric equations.
+\item \link{equations_metadata}: Explanation of columns for \link{equations} table.
 }
 }
 \details{

@@ -47,12 +47,12 @@ belowground)". Be aware that currently only a few equations represent those
 other variables, so estimated values might not be very accurate.}
 
 \item{new_taxa}{character string or vector specifying the taxon (or taxa) for
-which the allometry has been calibrated}
+which the allometry has been calibrated.}
 
-\item{new_allometry}{a character string with the allometric equation}
+\item{new_allometry}{a character string with the allometric equation.}
 
 \item{new_coords}{a vector or matrix of coordinates (longitude, latitude) of
-the calibration data}
+the calibration data.}
 
 \item{new_min_dbh}{numerical value, minimum DBH for which the equation is
 valid (in cm). Default is \code{NULL} (nothing is added).}
@@ -76,13 +76,12 @@ is "DBH", other option is "DBH, H".}
 \item{new_output_var}{dependent variable estimated by the allometry. Default
 is "Total aboveground biomass".}
 
-\item{use_height_allom}{a logical value. In \pkg{allodb}
-we use Bohn et al. (2014)
-for European sites. User need to provide height allometry
-when needed to calculate AGB. Default is \code{TRUE}.}
+\item{use_height_allom}{a logical value. In \emph{allodb} we use Bohn et al.
+(2014) for European sites. User need to provide height allometry when
+needed to calculate AGB. Default is \code{TRUE}.}
 }
 \value{
-A new equation dataframe (\code{tibble::tibble()} object).
+An object of class "data.frame" of new equations.
 }
 \description{
 This function modifies the original equation table to be used in other

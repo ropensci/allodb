@@ -1,7 +1,7 @@
 #' Validate equations
 #'
 #' @param equations A character vector giving equations to validate.
-#' @param dbh,h Independent variables
+#' @param dbh,h Independent variables.
 #' @param env An environment on which to evaluate the equations.
 #'
 #' @return This function is called for its side effect of throwing an error if

@@ -27,29 +27,26 @@ species (e.g. "rubra")  of each tree. Default is \code{NULL}, when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function. Default is the compiled \pkg{allodb}
-equation table.}
+\code{\link[=new_equations]{new_equations()}} function. Default is the compiled \emph{allodb} equation
+table.}
 
-\item{wna}{a numeric vector, this parameter is used in the
-\code{weight_allom()} function to determine
-the dbh-related and sample-size related weights attributed to equations
-without a specified dbh range or sample size, respectively.
-Default is 0.1}
+\item{wna}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
+function to determine the dbh-related and sample-size related weights
+attributed to equations without a specified dbh range or sample size,
+respectively. Default is 0.1.}
 
-\item{w95}{a numeric vector, this parameter is used in
-the \code{weight_allom()} function
-to determine the value at which the
-sample-size-related weight reaches 95\% of its
-maximum value (max=1). Default is 500.}
+\item{w95}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
+function to determine the value at which the sample-size-related weight
+reaches 95\% of its maximum value (max=1). Default is 500.}
 
 \item{nres}{number of resampled values. Default is "1e4".}
 }
 \value{
-A data frame object (\code{tibble::tibble()}) of fitted
-coefficients (columns) of the non-linear
-least-square regression:
-\deqn{AGB = a * dbh ^ b + e, \space \mathit{with} \space e ~ N(0,
-sigma^2)}{AGB = a * dbh ^ b + e, with e ~ N(0, sigma^2)}
+An object of class "data.frame" of fitted coefficients (columns) of
+the non-linear least-square regression:
+\deqn{AGB = a * dbh ^ b + e, \space
+  \mathit{with} \space e ~ N(0, sigma^2)}{AGB = a * dbh ^ b + e, with e ~
+  N(0, sigma^2)}
 }
 \description{
 This function calibrates new allometric equations from sampling previous
@@ -68,5 +65,5 @@ est_params(
 )
 }
 \seealso{
-\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}
+\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}.
 }

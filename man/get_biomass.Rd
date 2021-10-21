@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_biomass.R
 \name{get_biomass}
 \alias{get_biomass}
-\title{Compute tree aboveground biomass (AGB) based on allometric equations.}
+\title{Compute tree aboveground biomass (AGB) based on allometric equations}
 \usage{
 get_biomass(
   dbh,
@@ -31,23 +31,21 @@ species (e.g. "rubra")  of each tree. Default is \code{NULL}, when no species
 identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function.}
+\code{\link[=new_equations]{new_equations()}} function.}
 
-\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()}
-function to determine
-the dbh-related weight attributed to equations without a specified dbh
-range. Default is 0.1}
+\item{wna}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
+function to determine the dbh-related weight attributed to equations
+without a specified dbh range. Default is 0.1.}
 
-\item{w95}{a numeric vector, this parameter
-is used in the \code{weight_allom()} function to determine
-the value at which the sample-size-related weight reaches 95\% of its
-maximum value (max=1). Default is 500.}
+\item{w95}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
+function to determine the value at which the sample-size-related weight
+reaches 95\% of its maximum value (max=1). Default is 500.}
 
 \item{nres}{number of resampled values. Default is "1e4".}
 }
 \value{
-A vector of class "numeric" of the same length as dbh, containing AGB
-value (in kg) for every stem
+A "numeric" vector of the same length as dbh, containing AGB value
+(in kg) for every stem.
 }
 \description{
 This function calculates the aboveground biomass (or other tree components)
@@ -57,31 +55,32 @@ and site(s) coordinates. The biomass of all trees in one (or several)
 censuses can be estimated using this function.
 }
 \details{
+\code{allodb} estimates AGB by calibrating a new allometric equation for each
+taxon (arguments \code{genus} and  \code{species}) and location (argument \code{coords}) in
+the user-provided census data. The new allometric equation is based on a set
+of allometric equations that can be customized using the \code{new_eqtable}
+argument. Each equation is then given a weight with the \code{\link[=weight_allom]{weight_allom()}}
+function, based on: 1) its original sample size (numbers of trees used to
+develop a given allometry), 2) its climatic similarity with the target
+location, and 3) its taxonomic similarity with the target taxon (see
+documentation of the \code{\link[=weight_allom]{weight_allom()}} function). The final weight attributed
+to each equation is the product of those three weights. Equations are then
+resampled with the\code{\link[=resample_agb]{resample_agb()}} funtion: the number of samples per
+equation is proportional to its weight, and the total number of samples is
+provided by the argument \code{nres}. The resampling is done by drawing DBH values
+from a uniform distribution on the DBH range of the equation, and estimating
+the AGB with the equation. The couples of values (DBH, AGB) obtained are then
+used in the function \code{\link[=est_params]{est_params()}} to calibrate a new allometric equation,
+by applying a linear regression to the log-transformed data. The parameters
+of the new allometric equations are then used in the \code{\link[=get_biomass]{get_biomass()}} function
+by back-transforming the AGB predictions based on the user-provided DBHs.
+}
+\section{Warning}{
+
 The function can run into some memory problems when used on large datasets
 (usually several hundred thousand observations).
-
-\code{allodb} estimates AGB by calibrating a new allometric equation for
-each taxon (arguments \code{genus} and  \code{species}) and location (argument
-\code{coords}) in the user-provided census data. The new allometric equation is
-based on a set of allometric equations that can be customized using the
-\code{new_eqtable} argument. Each equation is then given a weight with the
-\code{weight_allom()} function, based on: 1) its original sample size (numbers of
-trees used to develop a given allometry), 2) its climatic similarity with
-the target location, and 3) its taxonomic similarity with the target taxon
-(see documentation of the \code{weight_allom()} function). The final weight
-attributed to each equation is the product of those three weights.
-Equations are then resampled with the\code{resample_agb()} function: the number
-of samples per equation is proportional to its weight, and the total number
-of samples is provided by the argument \code{nres}. The resampling is done by
-drawing DBH values from a uniform distribution on the DBH range of the
-equation, and estimating the AGB with the equation. The couples of values
-(DBH, AGB) obtained are then used in the
-function \code{est_params()} to calibrate
-a new allometric equation, by applying a linear regression to the
-log-transformed data. The parameters of the new allometric equations are
-then used in the \code{get_biomass()} function by back-transforming the AGB
-predictions based on the user-provided DBHs.
 }
+
 \examples{
 # Estimate biomass of all individuals from the Lauraceae family at the SCBI
 # plot

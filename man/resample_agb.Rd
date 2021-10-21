@@ -2,7 +2,7 @@
 % Please edit documentation in R/resample_agb.R
 \name{resample_agb}
 \alias{resample_agb}
-\title{Resample \pkg{allodb} equations to calibrate new allometries.}
+\title{Resample \emph{allodb} equations to calibrate new allometries}
 \usage{
 resample_agb(
   genus,
@@ -24,31 +24,31 @@ tree.}
 the tree. Default is "NULL", when no species identification is available.}
 
 \item{new_eqtable}{Optional. An equation table created with the
-\code{new_equations()} function. Default is the original \pkg{allodb}
-equation table.}
+\code{\link[=new_equations]{new_equations()}} function. Default is the original \emph{allodb} equation
+table.}
 
-\item{wna}{a numeric vector, this parameter is used in the \code{weight_allom()} function to determine
-the dbh-related and sample-size related weights attributed
-to equations without a specified dbh range or sample size,
-respectively. Default is 0.1}
+\item{wna}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
+function to determine the dbh-related and sample-size related weights
+attributed to equations without a specified dbh range or sample size,
+respectively. Default is 0.1.}
 
-\item{w95}{a numeric vector, this parameter is used in the \code{weight_allom()} function to determine
-the value at which the sample-size-related weight reaches 95\% of its
-maximum value (max=1). Default is 500.}
+\item{w95}{a numeric vector, this parameter is used in the \code{\link[=weight_allom]{weight_allom()}}
+function to determine the value at which the sample-size-related weight
+reaches 95\% of its maximum value (max=1). Default is 500.}
 
 \item{nres}{number of resampled values. Default is "1e4".}
 }
 \value{
-A data frame (\code{tibble::tibble()} object) of resampled DBHs and associated AGB from the equation
-table; the number of  resampled DBHs is proportional to the weight provided
-by the \code{weight_allom()} function.
+An object of class "data.frame" of resampled DBHs and associated AGB
+from the equation table; the number of  resampled DBHs is proportional to
+the weight provided by the \code{\link[=weight_allom]{weight_allom()}} function.
 }
 \description{
-After attributing a weight to each equation in \pkg{allodb}
-using the \code{weight_allom()}
-function, equations are then resampled within their original DBH range using
-\code{resample_agb()}: the number of resampled values for each equation is
-proportional to its weight. It creates S3 objects of class "numeric".
+After attributing a weight to each equation in \emph{allodb} using the
+\code{\link[=weight_allom]{weight_allom()}} function, equations are then resampled within their original
+DBH range using \code{\link[=resample_agb]{resample_agb()}}: the number of resampled values for each
+equation is proportional to its weight. It creates S3 objects of class
+"numeric".
 }
 \examples{
 resample_agb(
@@ -58,5 +58,5 @@ resample_agb(
 )
 }
 \seealso{
-\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}
+\code{\link[=weight_allom]{weight_allom()}}, \code{\link[=new_equations]{new_equations()}}.
 }

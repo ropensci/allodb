@@ -17,13 +17,13 @@ references_metadata
 }
 \description{
 \itemize{
-\item \code{references}: A data frame listing all references used in \code{equation} table.
-\item \code{references_metadata}: Metadata for \code{reference} table.
+\item \link{references}: A data frame listing all references used in \code{equation} table.
+\item \link{references_metadata}: Metadata for \code{reference} table.
 }
 }
 \details{
-Bibliographical information for sourced equations. Links to the
-\code{equations} table by \code{ref_id}.
+Bibliographical information for sourced equations. Links to the \link{equations}
+table by \code{ref_id}.
 }
 \examples{
 # preview the datasets

@@ -4,6 +4,33 @@
 #' size, and taxonomic and climatic similarity with the species/site combination
 #' considered.
 #'
+#' Each equation is given a weight by the function [weight_allom()], calculated
+#' as the product of the following components:
+#'
+#' (1) sample-size weight, calculated as:
+#'
+#' \deqn{1-exp(-n*(log(20)/w95))}
+#'
+#' where n is the sample size of the equation; the weight given to equations
+#' with no sample size information is determined by argument `wna` (0.1 by
+#' default).
+#'
+#' (2) climate weight, based on the similarity between the climatic conditions
+#' of the equation site and the target location, using the three-letter system
+#' of Koppen's climate scheme. Climate weights associated with each combination
+#' of two Koppen climates are provided in `data("koppenMatrix")`. The resulting
+#' weight has a value between 1e-6 (different climate groups) and 1 (exactly the
+#' same climate classification). When an equation was calibrated with trees from
+#' several locations with different Koppen climates, the maximum value out of
+#' all pairwise equation-site climate weights is used.
+#'
+#' (3) taxonomic weight: equal to 1 for same species equations, 0.8 for same
+#' genus equations, 0.5 for same family equations and for equations calibrated
+#' for the same broad functional or taxonomic group (e.g. shrubs, conifers,
+#' angiosperms). All other equations are given a low taxonomic weight of 1e-6:
+#' these equations will have a significant relative weight in the final
+#' prediction only when no other more specific equation is available.
+#'
 #' @param genus a character value, containing the genus (e.g. "Quercus") of the
 #'   tree.
 #' @param coords a numeric vector of length 2 with longitude and latitude.
@@ -11,47 +38,17 @@
 #'   species (e.g. "rubra") of the tree. Default is `NULL`, when no species
 #'   identification is available.
 #' @param new_eqtable Optional. An equation table created with the
-#'   `new_equations()` function.
-#' @param wna a numeric vector, this parameter is used in
-#' the `weight_allom()` function to determine
-#' the sample-size related weights attributed to equations
-#' without a specified
-#' sample size. Default is 0.1.
-#' @param w95 a numeric vector, this parameter is used to determine the value at which the
-#'   sample-size-related weight reaches 95% of its maximum value (max=1).
-#'   Default is 500.
+#'   [new_equations()] function.
+#' @param wna a numeric vector, this parameter is used in the [weight_allom()]
+#'   function to determine the sample-size related weights attributed to
+#'   equations without a specified sample size. Default is 0.1.
+#' @param w95 a numeric vector, this parameter is used to determine the value at
+#'   which the sample-size-related weight reaches 95% of its maximum value
+#'   (max=1). Default is 500.
 #'
-#' @details Each equation is given a weight by the function `weight_allom()`,
-#'   calculated as the product of the following components:
+#' @return A named "numeric" vector with one weight for each equation.
 #'
-#'   (1) sample-size weight, calculated as:
-#'
-#'   \deqn{1-exp(-n*(log(20)/w95))}
-#'
-#'   where n is the sample size of the equation; the weight given to equations
-#'   with no sample size information is determined by argument `wna` (0.1 by
-#'   default).
-#'
-#'   (2) climate weight, based on the similarity between the climatic conditions
-#'   of the equation site and the target location, using the three-letter system
-#'   of Koppen's climate scheme. Climate weights associated with each
-#'   combination of two Koppen climates are provided in `data("koppenMatrix")`.
-#'   The resulting weight has a value between 1e-6 (different climate groups)
-#'   and 1 (exactly the same climate classification). When an equation was
-#'   calibrated with trees from several locations with different Koppen
-#'   climates, the maximum value out of all pairwise equation-site climate
-#'   weights is used.
-#'
-#'   (3) taxonomic weight: equal to 1 for same species equations, 0.8 for same
-#'   genus equations, 0.5 for same family equations and for equations calibrated
-#'   for the same broad functional or taxonomic group (e.g. shrubs, conifers,
-#'   angiosperms). All other equations are given a low taxonomic weight of 1e-6:
-#'   these equations will have a significant relative weight in the final
-#'   prediction only when no other more specific equation is available.
-#'
-#' @return A named numeric vector, with one weight for each equation.
-#'
-#' @seealso [get_biomass()], [new_equations()]
+#' @seealso [get_biomass()], [new_equations()].
 #'
 #' @export
 #'
@@ -120,8 +117,8 @@ weight_allom <- function(genus,
 
 
   ### taxo weight ####
-  ## 'clean' equation taxa column and separate several taxa
-  ## all character strings to lower cases to avoid inconsistencies
+  ## 'clean' equation taxa column and separate several taxa all character
+  ## strings to lower cases to avoid inconsistencies
   dfequation$equation_taxa <- tolower(dfequation$equation_taxa)
   ## remove " sp." from genus in equation taxa
   dfequation$equation_taxa <-
