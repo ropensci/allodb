@@ -23,8 +23,8 @@ measurements, in cm.}
 (e.g. "Quercus") of each tree.}
 
 \item{coords}{a numeric vector of length 2 with longitude and latitude (if
-all trees were measured in the same location) or a matrix with 2 numerical
-columns giving the coordinates of each tree.}
+all trees were measured in the same location) or a matrix or data frame with 2 numerical
+columns in the order longitude, latitude giving the coordinates of each tree.}
 
 \item{species}{a character vector (same length as dbh), containing the
 species (e.g. "rubra")  of each tree. Default is \code{NULL}, when no species

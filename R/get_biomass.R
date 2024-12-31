@@ -35,8 +35,8 @@
 #' @param genus a character vector (same length as dbh), containing the genus
 #'   (e.g. "Quercus") of each tree.
 #' @param coords a numeric vector of length 2 with longitude and latitude (if
-#'   all trees were measured in the same location) or a matrix with 2 numerical
-#'   columns giving the coordinates of each tree.
+#'   all trees were measured in the same location) or a matrix or data frame with 2 numerical
+#'   columns in the order longitude, latitude giving the coordinates of each tree.
 #' @param species a character vector (same length as dbh), containing the
 #'   species (e.g. "rubra")  of each tree. Default is `NULL`, when no species
 #'   identification is available.
@@ -96,6 +96,9 @@ get_biomass <- function(dbh,
     coords <- matrix(coords, ncol = 2)
   }
   colnames(coords) <- c("long", "lat")
+  # works for list, data.frame, and matrix
+  long_c <- unlist(c(coords[,"long"]))
+  lat_c <- unlist(c(coords[,"lat"]))
 
   ## input data checks
   if (any(!is.na(dbh) & (dbh < 0 | dbh > 1e3))) {
@@ -104,7 +107,7 @@ get_biomass <- function(dbh,
       i = "Do you need to check your data?"
     ))
   }
-  if (any(abs(coords[, 1]) > 180 | abs(coords[, 2]) > 90)) {
+  if (any(abs(long_c) > 180 | abs(lat_c) > 90)) {
     abort(c(
       "`coords` longitudes must range -180 to 180, and latitudes -90 to 90.",
       i = "Do you need to check your data?"
@@ -128,8 +131,8 @@ get_biomass <- function(dbh,
       dbh,
       genus,
       species,
-      long = coords[[1]],
-      lat = coords[[2]]
+      long = long_c,
+      lat = lat_c
     )
     df <-
       merge(
