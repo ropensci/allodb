@@ -234,3 +234,124 @@ function.
 Please note that this package is released with a [Contributor Code of
 Conduct](https://ropensci.org/code-of-conduct/). By contributing to this
 project, you agree to abide by its terms.
+
+## Contributors
+
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+All contributions to this project are gratefully acknowledged using the [`allcontributors` package](https://github.com/ropensci/allcontributors) following the [all-contributors](https://allcontributors.org) specification. Contributions of any kind are welcome!
+
+### Code
+
+<table>
+
+<tr>
+<td align="center">
+<a href="https://github.com/gonzalezeb">
+<img src="https://avatars.githubusercontent.com/u/26872628?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/commits?author=gonzalezeb">gonzalezeb</a>
+</td>
+<td align="center">
+<a href="https://github.com/maurolepore">
+<img src="https://avatars.githubusercontent.com/u/5856545?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/commits?author=maurolepore">maurolepore</a>
+</td>
+<td align="center">
+<a href="https://github.com/cpiponiot">
+<img src="https://avatars.githubusercontent.com/u/20208665?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/commits?author=cpiponiot">cpiponiot</a>
+</td>
+<td align="center">
+<a href="https://github.com/teixeirak">
+<img src="https://avatars.githubusercontent.com/u/6355854?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/commits?author=teixeirak">teixeirak</a>
+</td>
+<td align="center">
+<a href="https://github.com/jeroen">
+<img src="https://avatars.githubusercontent.com/u/216319?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/commits?author=jeroen">jeroen</a>
+</td>
+</tr>
+
+</table>
+
+
+### Issue Authors
+
+<table>
+
+<tr>
+<td align="center">
+<a href="https://github.com/ValentineHerr">
+<img src="https://avatars.githubusercontent.com/u/19673377?u=765bd08c7386c158384f7f801bce81bf8384517c&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/issues?q=is%3Aissue+author%3AValentineHerr">ValentineHerr</a>
+</td>
+<td align="center">
+<a href="https://github.com/adamhsparks">
+<img src="https://avatars.githubusercontent.com/u/3195906?u=ff1ca92ae028fe7eb18d006f92cb8a725625e69c&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/issues?q=is%3Aissue+author%3Aadamhsparks">adamhsparks</a>
+</td>
+<td align="center">
+<a href="https://github.com/lucas-johnson">
+<img src="https://avatars.githubusercontent.com/u/10555272?u=b7999b05830a0f3a5b4d1b2d332d7feb8b4ad026&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/issues?q=is%3Aissue+author%3Alucas-johnson">lucas-johnson</a>
+</td>
+</tr>
+
+</table>
+
+
+### Issue Contributors
+
+<table>
+
+<tr>
+<td align="center">
+<a href="https://github.com/ErvanCH">
+<img src="https://avatars.githubusercontent.com/u/20225141?u=c7fa2b3442b355f716873403379f4b8c5eb47230&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/issues?q=is%3Aissue+commenter%3AErvanCH">ErvanCH</a>
+</td>
+<td align="center">
+<a href="https://github.com/laosuz">
+<img src="https://avatars.githubusercontent.com/u/30370734?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/issues?q=is%3Aissue+commenter%3Alaosuz">laosuz</a>
+</td>
+<td align="center">
+<a href="https://github.com/tylerlittlefield">
+<img src="https://avatars.githubusercontent.com/u/35909636?u=4fe1a340b52a9593fc786ac76d18ce2af971ebfd&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/issues?q=is%3Aissue+commenter%3Atylerlittlefield">tylerlittlefield</a>
+</td>
+<td align="center">
+<a href="https://github.com/rudeboybert">
+<img src="https://avatars.githubusercontent.com/u/4574203?u=0f8201cf7d22f17e52c85b215f3e68cecaa734ef&v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/issues?q=is%3Aissue+commenter%3Arudeboybert">rudeboybert</a>
+</td>
+<td align="center">
+<a href="https://github.com/tlbeckham">
+<img src="https://avatars.githubusercontent.com/u/97658753?v=4" width="100px;" alt=""/>
+</a><br>
+<a href="https://github.com/ropensci/allodb/issues?q=is%3Aissue+commenter%3Atlbeckham">tlbeckham</a>
+</td>
+</tr>
+
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
