@@ -1,21 +1,23 @@
 test_that("get_biomass works with genus and species
           information and provides reasonable outputs", {
-  expect_equal(get_biomass(
-    dbh = 20,
-    genus = "Quercus",
-    species = "alba",
-    coords = c(-78, 40)
-  ),
-  240,
-  tolerance = 50
+  expect_equal(
+    get_biomass(
+      dbh = 20,
+      genus = "Quercus",
+      species = "alba",
+      coords = c(-78, 40)
+    ),
+    240,
+    tolerance = 50
   )
-  expect_equal(get_biomass(
-    dbh = 20,
-    genus = "Quercus",
-    coords = c(-78, 40)
-  ),
-  240,
-  tolerance = 50
+  expect_equal(
+    get_biomass(
+      dbh = 20,
+      genus = "Quercus",
+      coords = c(-78, 40)
+    ),
+    240,
+    tolerance = 50
   )
 })
 
