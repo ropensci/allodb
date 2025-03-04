@@ -55,7 +55,7 @@ weight in this process.
 Install the development version of *allodb* from GitHub:
 
 ``` r
-install.packages("pak")
+# install.packages("pak")
 pak::pak("ropensci/allodb")
 ```
 
