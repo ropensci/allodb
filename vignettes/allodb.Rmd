@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 Install the development version of _allodb_ from GitHub:
 
 ```{r install, eval=FALSE}
-install.packages("pak")
+# install.packages("pak")
 pak::pak("ropensci/allodb")
 ```
 
