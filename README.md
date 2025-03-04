@@ -1,4 +1,5 @@
 
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # <img src="https://i.imgur.com/39pvr4n.png" align="left" height=44 /> allodb: An R package for biomass estimation at extratropical forest plots
@@ -180,7 +181,7 @@ plot(
 )
 ```
 
-![](man/figures/README-resample-acer-1.png)<!-- -->
+![](man/figures/README-resample-acer-1.png)
 
 The resampled values are then used to fit the following nonlinear model:
 <img src="https://render.githubusercontent.com/render/math?math=AGB = a * dbh ^ b %2B e">,
@@ -205,7 +206,7 @@ illustrate_allodb(
 )
 ```
 
-![](man/figures/README-est-params-acer-1.png)<!-- -->
+![](man/figures/README-est-params-acer-1.png)
 
 The `est_params` function can be used for all species/site combinations
 in the dataset at once.
@@ -237,51 +238,67 @@ project, you agree to abide by its terms.
 
 ## Contributors
 
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
 <!-- prettier-ignore-start -->
+
 <!-- markdownlint-disable -->
 
-All contributions to this project are gratefully acknowledged using the [`allcontributors` package](https://github.com/ropensci/allcontributors) following the [all-contributors](https://allcontributors.org) specification. Contributions of any kind are welcome!
+All contributions to this project are gratefully acknowledged using the
+[`allcontributors` package](https://github.com/ropensci/allcontributors)
+following the [all-contributors](https://allcontributors.org)
+specification. Contributions of any kind are welcome!
 
 <table>
 
 <tr>
+
 <td align="center">
+
 <a href="https://github.com/gonzalezeb">
 <img src="https://avatars.githubusercontent.com/u/26872628?v=4" width="100px;" alt=""/>
 </a><br>
 <a href="https://github.com/mauro-ixpantia/allodb/commits?author=gonzalezeb">gonzalezeb</a>
 </td>
+
 <td align="center">
+
 <a href="https://github.com/maurolepore">
 <img src="https://avatars.githubusercontent.com/u/5856545?v=4" width="100px;" alt=""/>
 </a><br>
 <a href="https://github.com/mauro-ixpantia/allodb/commits?author=maurolepore">maurolepore</a>
 </td>
+
 <td align="center">
+
 <a href="https://github.com/cpiponiot">
 <img src="https://avatars.githubusercontent.com/u/20208665?v=4" width="100px;" alt=""/>
 </a><br>
 <a href="https://github.com/mauro-ixpantia/allodb/commits?author=cpiponiot">cpiponiot</a>
 </td>
+
 <td align="center">
+
 <a href="https://github.com/teixeirak">
 <img src="https://avatars.githubusercontent.com/u/6355854?v=4" width="100px;" alt=""/>
 </a><br>
 <a href="https://github.com/mauro-ixpantia/allodb/commits?author=teixeirak">teixeirak</a>
 </td>
+
 <td align="center">
+
 <a href="https://github.com/jeroen">
 <img src="https://avatars.githubusercontent.com/u/216319?v=4" width="100px;" alt=""/>
 </a><br>
 <a href="https://github.com/mauro-ixpantia/allodb/commits?author=jeroen">jeroen</a>
 </td>
+
 </tr>
 
 </table>
 
 <!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
