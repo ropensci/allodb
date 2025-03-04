@@ -2,8 +2,6 @@
 
 test_that("w/ `NULL` `new_taxa`, `new_allometry`, and `new_coords, outputs
           identical to `new_equations()` -- with all defaults", {
-
-
   # Avoid unimportant differences in attributes
   mini_attr <- function(data) {
     mini <- names(attributes(data.frame(x = 1)))
