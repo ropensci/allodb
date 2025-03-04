@@ -18,7 +18,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Erika Gonzalez-Akre \email{GonzalezEB@si.edu} (\href{https://orcid.org/0000-0001-8305-6672}{ORCID}) [copyright holder]
+\strong{Maintainer}: Erika Gonzalez-Akre \email{ekagonzalez@gmail.com} (\href{https://orcid.org/0000-0001-8305-6672}{ORCID}) [copyright holder]
 
 Authors:
 \itemize{
