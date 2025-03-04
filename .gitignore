@@ -15,3 +15,5 @@ tmp_files
 .DS_Store
 docs
 Rplots.pdf
+
+/.quarto/

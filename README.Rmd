@@ -40,8 +40,8 @@ The package provides functions to estimate tree biomass based on user-provided c
 Install the development version of _allodb_ from GitHub:
 
 ```R
-# install.packages("remotes")
-remotes::install_github("ropensci/allodb")
+# install.packages("pak")
+pak::pak("ropensci/allodb")
 ```
 
 ## Examples
