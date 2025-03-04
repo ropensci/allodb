@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![peer-review](https://badges.ropensci.org/436_status.svg)](https://github.com/ropensci/software-review/issues/436)
-[![Codecov test coverage](https://codecov.io/gh/ropensci/allodb/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/allodb?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/ropensci/allodb/branch/master/graph/badge.svg)](https://app.codecov.io/gh/ropensci/allodb?branch=master)
 [![R-CMD-check](https://github.com/ropensci/allodb/workflows/R-CMD-check/badge.svg)](https://github.com/ropensci/allodb/actions)
 [![R-CMD-check](https://github.com/ropensci/allodb/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/allodb/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/ropensci/allodb/graph/badge.svg)](https://app.codecov.io/gh/ropensci/allodb)
