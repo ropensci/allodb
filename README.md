@@ -37,13 +37,13 @@ published allometric equations. This dataset was built based on 701
 woody species identified at 24 large [ForestGEO forest dynamic
 plots](https://forestgeo.si.edu/) representing all major extratropical
 forest types. A total of 570 parsed allometric equations to estimate
-individual tree biomass were retrieved, checked, and combined using a
+individual tree *dry* biomass were retrieved, checked, and combined using a
 weighting function designed to ensure optimal equation selection over
 the full tree size range with smooth transitions across equations. The
 equation dataset used can be customized with built-in functions that
 subset the original dataset and add new equations.
 
-The package provides functions to estimate tree biomass based on
+The package provides functions to estimate tree biomass (dry) based on
 user-provided census data (tree diameter, taxonomic identification, and
 plot coordinates). New allometric equations are calibrated for each
 species and location by resampling the original equations; equations
@@ -89,7 +89,7 @@ scbi_stem1$agb <-
 ```
 
 Biomass for a single tree can be estimated given dbh and species
-identification (results in kilograms).
+identification (results in kilograms dry biomass).
 
 ``` r
 get_biomass(
